@@ -46,7 +46,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'IoT Middleware'
-copyright = u'2017, Matheus Magalhaes'
+copyright = u'2017, CPqD'
 author = u'Matheus Magalhaes'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -177,5 +177,3 @@ epub_copyright = copyright
 
 # A list of files that should not be packed into the epub file.
 epub_exclude_files = ['search.html']
-
-
