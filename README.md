@@ -14,3 +14,10 @@ do so, please follow the steps below. Those are actually based off
 $ pip install sphinx sphinx-autobuild sphinx_rtd_theme
 $ make html
 ```
+
+For that to work, you must have pip installed on the machine used to build the documentation.
+To install pip on an ubuntu machine:
+
+```shell
+$ sudo apt-get install python-pip
+```

@@ -27,6 +27,7 @@ pages.
    architecture
    ops_guide
    user_guide
+   install/compose_guide
 
 
 
