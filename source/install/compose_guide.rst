@@ -131,11 +131,9 @@ present at the root of the repository. ::
 User creation
 ^^^^^^^^^^^^^
 
-To be able to use the system's web front-end, a new user must be created. To do
-so, the following command can be used. ::
+To be able to use the system's web front-end and make API calls, a user must be created. To create
+a first `admin` user, the following script can be run on the host machine of the middleware (that 
+is, the machine where docker-compose was run). The script is located at the root of the repository.
+::
 
-  # 'localhost' may be replaced by the IP address or host name of the machine
-  # where the middleware is being run
-  curl localhost:8000/auth/user \
-             -H 'content-type: application/json' \
-             -d '{"username": "admin", "passwd":"admin", "service":"admin"}'
+  ./create.user.sh
