@@ -2,8 +2,8 @@ Installation guide - Docker compose
 ===================================
 
 This document provides instructions on how to create a trivial deployment
-environment on single host of the IoT middleware, using docker-compose as
-the processes orchestration platform.
+environment on single host for dojot, using docker-compose as the processes
+orchestration platform.
 
 While very simple, this deployment option is best suited to development and
 assessment of the platform and should not be used for production environments.
@@ -58,7 +58,7 @@ clients to allow this particular insecure registry.
 To configure the machine's docker client to allow the internal registry, edit
 the docker engine parameters as follows.::
 
-  echo '{ "insecure-registries":["iotmid-docker:5000"] }' | sudo tee /etc/docker/daemon.json
+  echo '{ "insecure-registries":["iotmid-docker.cpqd.com.br:5000"] }' | sudo tee /etc/docker/daemon.json
   sudo service docker stop
   sudo service docker start
 
@@ -71,11 +71,11 @@ commands below.
 The docker-compose enabled deployment scripts and configuration repository
 can be found at:
 
-https://gerrit.cpqd.com.br/#/admin/projects/iot/middleware/deploy/compose
+https://github.com/dojot/docker-compose
 
-or as git clone command (do notice that the user has to be updated):::
+or as git clone command:::
 
-  git clone ssh://[user]@gerrit.cpqd.com.br:29418/iot/middleware/deploy/compose
+  git clone git@github.com:dojot/docker-compose.git
 
 Once the repository is properly cloned, select the version to be used by
 checking out the appropriate tag (do notice that the tagname has to be replaced): ::
@@ -132,7 +132,7 @@ User creation
 ^^^^^^^^^^^^^
 
 To be able to use the system's web front-end and make API calls, a user must be created. To create
-a first `admin` user, the following script can be run on the host machine of the middleware (that 
+a first `admin` user, the following script can be run on the host machine of the middleware (that
 is, the machine where docker-compose was run). The script is located at the root of the repository.
 ::
 

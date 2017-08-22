@@ -1,8 +1,8 @@
 Operations Guide
 ================
 
-This document provides information on how to properly deploy and manage an instance of the IoT Middleware.
-For documentation regarding the usage of the Middleware from the perspective of either an application,
+This document provides information on how to properly deploy and manage an instance of dojot.
+For documentation regarding the usage of the platrom from the perspective of either an application,
 or device developer please refer to the [user guide]().
 
 .. contents:: Table of Contents
@@ -34,7 +34,7 @@ User Management
 ---------------
 
 This section should describe the steps required to configure user roles and role permissions for the
-middleware itself, as well as handle application authentication features.
+platform itself, as well as handle application authentication features.
 
 .. _resourceManagement:
 
