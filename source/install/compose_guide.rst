@@ -45,22 +45,6 @@ be found at the project's documentation:
 
 https://docs.docker.com/compose/install/
 
-Internal Docker registry
-^^^^^^^^^^^^^^^^^^^^^^^^
-
-While the project is not released, an internal docker registry will be used
-to host the docker images built by jenkins as part of our CI/CD workflow.
-
-As of now, that registry has no valid TLS certificate associated with it,
-thus requiring the users of such registry to configure their docker engine
-clients to allow this particular insecure registry.
-
-To configure the machine's docker client to allow the internal registry, edit
-the docker engine parameters as follows.::
-
-  echo '{ "insecure-registries":["iotmid-docker.cpqd.com.br:5000"] }' | sudo tee /etc/docker/daemon.json
-  sudo service docker stop
-  sudo service docker start
 
 Installation
 ------------
@@ -89,12 +73,6 @@ That done, the environment can be brought up by: ::
   # May need sudo to work: sudo docker-compose up -d
   docker-compose up -d
 
-.. note::
-
-  Should the pulling of the container a container image fail, adding the explicit
-  reference to the internal registry may solve the problem.
-
-  Should that suffice or not, be sure to open a JIRA ticket for that error.
 
 To check individual container status, docker's commands may be used, for instance: ::
 
