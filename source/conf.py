@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# IoT Middleware documentation build configuration file, created by
+# dojot documentation build configuration file, created by
 # sphinx-quickstart on Tue Feb 14 17:45:39 2017.
 #
 # This file is execfile()d with the current directory set to its
@@ -45,7 +45,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'IoT Middleware'
+project = u'dojot'
 copyright = u'2017, CPqD'
 author = u'Matheus Magalhaes'
 
@@ -103,7 +103,7 @@ html_static_path = ['_static']
 # -- Options for HTMLHelp output ------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'IoTMiddlewaredoc'
+htmlhelp_basename = 'dojotdoc'
 
 
 # -- Options for LaTeX output ---------------------------------------------
@@ -130,7 +130,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'IoTMiddleware.tex', u'IoT Middleware Documentation',
+    (master_doc, 'dojot.tex', u'dojot Documentation',
      u'Matheus Magalhaes', 'manual'),
 ]
 
@@ -140,7 +140,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'iotmiddleware', u'IoT Middleware Documentation',
+    (master_doc, 'dojot', u'dojot Documentation',
      [author], 1)
 ]
 
@@ -151,8 +151,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'IoTMiddleware', u'IoT Middleware Documentation',
-     author, 'IoTMiddleware', 'One line description of project.',
+    (master_doc, 'dojot', u'dojot Documentation',
+     author, 'dojot', 'One line description of project.',
      'Miscellaneous'),
 ]
 

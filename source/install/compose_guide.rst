@@ -2,8 +2,8 @@ Installation guide - Docker compose
 ===================================
 
 This document provides instructions on how to create a trivial deployment
-environment on single host of the IoT middleware, using docker-compose as
-the processes orchestration platform.
+environment on single host for dojot, using docker-compose as the processes
+orchestration platform.
 
 While very simple, this deployment option is best suited to development and
 assessment of the platform and should not be used for production environments.
@@ -45,22 +45,6 @@ be found at the project's documentation:
 
 https://docs.docker.com/compose/install/
 
-Internal Docker registry
-^^^^^^^^^^^^^^^^^^^^^^^^
-
-While the project is not released, an internal docker registry will be used
-to host the docker images built by jenkins as part of our CI/CD workflow.
-
-As of now, that registry has no valid TLS certificate associated with it,
-thus requiring the users of such registry to configure their docker engine
-clients to allow this particular insecure registry.
-
-To configure the machine's docker client to allow the internal registry, edit
-the docker engine parameters as follows.::
-
-  echo '{ "insecure-registries":["iotmid-docker:5000"] }' | sudo tee /etc/docker/daemon.json
-  sudo service docker stop
-  sudo service docker start
 
 Installation
 ------------
@@ -71,11 +55,11 @@ commands below.
 The docker-compose enabled deployment scripts and configuration repository
 can be found at:
 
-https://gerrit.cpqd.com.br/#/admin/projects/iot/middleware/deploy/compose
+https://github.com/dojot/docker-compose
 
-or as git clone command (do notice that the user has to be updated):::
+or as git clone command:::
 
-  git clone ssh://[user]@gerrit.cpqd.com.br:29418/iot/middleware/deploy/compose
+  git clone git@github.com:dojot/docker-compose.git
 
 Once the repository is properly cloned, select the version to be used by
 checking out the appropriate tag (do notice that the tagname has to be replaced): ::
@@ -89,12 +73,6 @@ That done, the environment can be brought up by: ::
   # May need sudo to work: sudo docker-compose up -d
   docker-compose up -d
 
-.. note::
-
-  Should the pulling of the container a container image fail, adding the explicit
-  reference to the internal registry may solve the problem.
-
-  Should that suffice or not, be sure to open a JIRA ticket for that error.
 
 To check individual container status, docker's commands may be used, for instance: ::
 
@@ -132,7 +110,7 @@ User creation
 ^^^^^^^^^^^^^
 
 To be able to use the system's web front-end and make API calls, a user must be created. To create
-a first `admin` user, the following script can be run on the host machine of the middleware (that 
+a first `admin` user, the following script can be run on the host machine of the platform (that
 is, the machine where docker-compose was run). The script is located at the root of the repository.
 ::
 

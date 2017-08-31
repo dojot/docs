@@ -1,7 +1,7 @@
 Architecture
 ============
 
-This document describes the current architecture that guides the middleware implementation, detailing
+This document describes the current architecture that guides the platform implementation, detailing
 the components that comprise the solution, as well as their functionalities and how each of them
 contribute to the platform as a whole.
 
@@ -49,6 +49,6 @@ should be answered here.
 Comparative analysis
 --------------------
 
-This section should detail the features that differenciate the middleware from a "stock" deployment
+This section should detail the features that differenciate the platform from a "stock" deployment
 of fiware, as well as a feature summary comparing the proposed solution with a reduced set of
 third-party implementations of IoT platforms available.

@@ -1,12 +1,7 @@
-.. IoT Middleware documentation master file, created by
-   sphinx-quickstart on Tue Feb 14 17:45:39 2017.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
-IoT Middleware documentation
+dojot documentation
 ============================
 
-This is the high-level documentation for the IoT Middleware platform developed by CPqD. This platform
+This is the high-level documentation for dojot IoT platform developed by CPqD. This platform
 is largely based on [FIWARE](fiware.org), and aims to provide the application and device developers
 with a more concise and integrated interaction, while benefiting for the highly customizable and
 efficient infrastructure provided by FIWARE.

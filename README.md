@@ -1,6 +1,6 @@
-# CPqD IoT Middleware documentation
+# dojot documentation
 
-This repository contains the high-level documentation for CPqD's IoT Middleware platform.
+This repository contains the high-level documentation for dojot iot platform.
 For specific information regarding each of the sub-components that comprise the solution,
 please check the component's own documentation page.
 
