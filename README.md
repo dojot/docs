@@ -11,7 +11,7 @@ do so, please follow the steps below. Those are actually based off
 [Read The Docs own documentation](https://docs.readthedocs.io/en/latest/getting_started.html).
 
 ```shell
-$ pip install sphinx sphinx-autobuild sphinx_rtd_theme
+$ pip install sphinx sphinx-autobuild sphinx_rtd_theme sphinx-intl
 $ make html
 ```
 
@@ -21,3 +21,32 @@ To install pip on an ubuntu machine:
 ```shell
 $ sudo apt-get install python-pip
 ```
+
+To build the documentation in Brazilian Portuguese language, run the following extra commands:
+
+```shell
+$ sphinx-intl -c source/conf.py build -d source/locale
+$ make html BUILDDIR=build/html-pt_BR O='-d build/doctrees/ -D language=pt_BR'
+```
+
+
+## Update workflow
+
+To update the documentation, follow the steps below:
+
+1. Update the source files for the english version
+
+2. Extract translatable messages from the english version
+
+```shell
+$ make gettext
+```
+3. Update the message catalog (PO Files) for pt_BR language
+
+```shell
+$ sphinx-intl -c source/conf.py update -p build/gettext -l pt_BR
+```
+
+4. Translate the messages in the pt_BR language PO files 
+
+This workflow is based on the [internationalization feature of Sphinx](http://www.sphinx-doc.org/en/stable/intl.html).
