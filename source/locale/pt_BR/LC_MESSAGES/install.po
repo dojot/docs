@@ -1,0 +1,223 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, CPqD
+# This file is distributed under the same license as the dojot package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: dojot 0.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-04 09:22-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.1\n"
+
+#: ../../source/install/compose_guide.rst:2
+msgid "Installation guide - Docker compose"
+msgstr "Guia de Instalação - Docker compose"
+
+#: ../../source/install/compose_guide.rst:4
+msgid ""
+"This document provides instructions on how to create a trivial deployment"
+" environment on single host for dojot, using docker-compose as the "
+"processes orchestration platform."
+msgstr ""
+"Este documento fornece instruções de como criar um ambiente trivial de "
+"implantação para a plataforma dojot em uma única máquina, utilizando o "
+"docker-compose como plataforma de orquestração de processos."
+
+#: ../../source/install/compose_guide.rst:8
+msgid ""
+"While very simple, this deployment option is best suited to development "
+"and assessment of the platform and should not be used for production "
+"environments."
+msgstr ""
+"Embora muito simples, esta opção de implantação é adequada para "
+"desenvolvimento e avaliação da plataforma dojot e não deve ser utilizada "
+"em ambientes de produção."
+
+#: ../../source/install/compose_guide.rst:11
+msgid "This guide has been checked on an Ubuntu 16.04 LTS environment."
+msgstr "Este guia foi validado em ambiente com Ubuntu 16.04 LTS."
+
+#: ../../source/install/compose_guide.rst:17
+msgid "Dependencies"
+msgstr "Dependências"
+
+#: ../../source/install/compose_guide.rst:19
+msgid "This setup has two software requirements docker engine and docker-compose."
+msgstr ""
+"Esta configuração tem dois requisitos de software: docker e docker-"
+"compose."
+
+#: ../../source/install/compose_guide.rst:22
+msgid "Docker engine"
+msgstr "Docker"
+
+#: ../../source/install/compose_guide.rst:24
+msgid ""
+"Up to date information and installation procedures for the docker engine "
+"can be found at the project's documentation:"
+msgstr ""
+"Informações atualizadas do processo de instalação do docker podem ser "
+"encontradas na documentação do seu projeto:"
+
+#: ../../source/install/compose_guide.rst:27
+msgid "https://docs.docker.com/engine/installation/"
+msgstr ""
+
+#: ../../source/install/compose_guide.rst:31
+msgid ""
+"An optional step on the installation and configuration process of docker "
+"on any given machine is the setting of who is eligible for "
+"creating/spawning docker instances."
+msgstr ""
+"Um passo adicional no processo de instação e configuração do docker, "
+"independentemente da máquina, é configurar quem é elegível para "
+"criar/instanciar instâncias de docker."
+
+#: ../../source/install/compose_guide.rst:34
+msgid ""
+"Should the post-installation steps (more specifically the \"Manage docker"
+" as non-root user\") have not been run, all docker and docker-compose "
+"commands should be run by the super user (root), or as sudo."
+msgstr ""
+"Se as etapas de pós instação (mais especificamente de \"Manage docker as "
+"non-root user\") não foram executadas, todos os comandos do docker e "
+"docker-compose devem ser executados com super usário (root) ou com sudo."
+
+#: ../../source/install/compose_guide.rst:38
+#: ../../source/install/compose_guide.rst:91
+msgid "https://docs.docker.com/engine/installation/linux/linux-postinstall/"
+msgstr ""
+
+#: ../../source/install/compose_guide.rst:41
+msgid "Docker Compose"
+msgstr ""
+
+#: ../../source/install/compose_guide.rst:43
+msgid ""
+"Up to date information and installation procedures for the docker-compose"
+" can be found at the project's documentation:"
+msgstr ""
+"Informações atualizadas do processo de instalação do docker-compose podem ser "
+"encontradas na documentação do seu projeto:"
+
+#: ../../source/install/compose_guide.rst:46
+msgid "https://docs.docker.com/compose/install/"
+msgstr ""
+
+#: ../../source/install/compose_guide.rst:50
+msgid "Installation"
+msgstr "Instalação"
+
+#: ../../source/install/compose_guide.rst:52
+msgid ""
+"To setup the environment, merely clone the deployment repository and run "
+"the commands below."
+msgstr ""
+"Para configurar o ambiente, simplesmente clone o repositório de "
+"implantação e execute os comandos abaixo."
+
+#: ../../source/install/compose_guide.rst:55
+msgid ""
+"The docker-compose enabled deployment scripts and configuration "
+"repository can be found at:"
+msgstr ""
+"Os scripts para implantação e configuração via docker-compose podem ser "
+"encontrados no repositório:"
+
+#: ../../source/install/compose_guide.rst:58
+msgid "https://github.com/dojot/docker-compose"
+msgstr ""
+
+#: ../../source/install/compose_guide.rst:60
+msgid "or as git clone command:::"
+msgstr "ou utilizando o comando de clone do git: ::"
+
+#: ../../source/install/compose_guide.rst:64
+msgid ""
+"Once the repository is properly cloned, select the version to be used by "
+"checking out the appropriate tag (do notice that the tagname has to be "
+"replaced): ::"
+msgstr ""
+"Uma vez que o repositório tenha sido corretamente clonado, escolha a "
+"versão que será utilizada. Para isto configure o repositório git para "
+"apontar para a tag apropriada (note que o tag name tem que ser "
+"substituído): ::"
+
+#: ../../source/install/compose_guide.rst:70
+msgid "That done, the environment can be brought up by: ::"
+msgstr "Finalizado, pode-se subir o ambiente: ::"
+
+#: ../../source/install/compose_guide.rst:77
+msgid ""
+"To check individual container status, docker's commands may be used, for "
+"instance: ::"
+msgstr ""
+"Para verificar o estado de cada container, pode-se utilizar comandos do "
+"docker como, por exemplo: ::"
+
+#: ../../source/install/compose_guide.rst:87
+msgid "All docker, docker-compose commands may need sudo to work."
+msgstr ""
+"Todos os comandos do docker e docker-compose podem precisar de sudo para "
+"funcionar."
+
+#: ../../source/install/compose_guide.rst:89
+msgid ""
+"To allow non-root users to manage docker, please check docker's "
+"documentation:"
+msgstr ""
+"Para permitir que usuários não-root utilizem o docker, por favor "
+"verifique a documentação do docker:"
+
+#: ../../source/install/compose_guide.rst:94
+msgid "Configuration"
+msgstr "Configuração"
+
+#: ../../source/install/compose_guide.rst:96
+msgid ""
+"Once the environment is up, a few configuration steps are required to "
+"make it operational."
+msgstr ""
+"Uma vez que o ambiente esteja rodando, algumas configurações são "
+"necessárias para torná-lo operacional."
+
+#: ../../source/install/compose_guide.rst:101
+msgid "API gateway configurarion"
+msgstr "Configuração do API gateway"
+
+#: ../../source/install/compose_guide.rst:103
+msgid ""
+"In order to guarantee the proper mapping of API into processing services,"
+" the API gateway must be configured. To do so, please run kong_config.sh,"
+" present at the root of the repository. ::"
+msgstr ""
+"O API gateway precisa ser configurado para garantir um mapeamento "
+"adequado da API nos serviços de processamento da dojot. Para isso, "
+"execute o script kong_config.sh, presente na raiz do repositório. ::"
+
+#: ../../source/install/compose_guide.rst:110
+msgid "User creation"
+msgstr "Criação de usuário"
+
+#: ../../source/install/compose_guide.rst:112
+msgid ""
+"To be able to use the system's web front-end and make API calls, a user "
+"must be created. To create a first `admin` user, the following script can"
+" be run on the host machine of the platform (that is, the machine where "
+"docker-compose was run). The script is located at the root of the "
+"repository. ::"
+msgstr ""
+"Para que seja possível a utilização da interface gráfica do sistema assim"
+" como chamadas via API, um usuário precisa ser configurado. Para criar o "
+"primeiro usuário `admin`, o seguinte script pode ser executado na máquina"
+" que hospeda a plataforma (isto é, na máquina o\tonde o docker-compose "
+"está rodando). O script está na raiz do repositório. ::"
+

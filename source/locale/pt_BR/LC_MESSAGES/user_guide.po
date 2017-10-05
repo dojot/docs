@@ -1,0 +1,93 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, CPqD
+# This file is distributed under the same license as the dojot package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: dojot 0.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-03 16:44-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.1\n"
+
+#: ../../source/user_guide.rst:2
+msgid "User Guide"
+msgstr ""
+
+#: ../../source/user_guide.rst:4
+msgid ""
+"This document provides information on how to use dojot from a user "
+"perspective. On that regard, this should describe the steps required to "
+"install and operate the platform from a device developer or application "
+"developer point of view. For documentation regarding the operation of the"
+" platform itself, please refer to the [operations guide]()"
+msgstr ""
+
+#: ../../source/user_guide.rst:13
+msgid "Getting Started"
+msgstr ""
+
+#: ../../source/user_guide.rst:15
+msgid ""
+"The idea here is to present the reader with a sample end-to-end usage of "
+"the platform, showcasing a relevant set of the features implemented by "
+"the platform, thus serving as an example of how to use the platform on a "
+"\"real world\" scenario."
+msgstr ""
+
+#: ../../source/user_guide.rst:19
+msgid ""
+"To make things easier for the user, there may be a VM image with a pre-"
+"configured deployment of the platform. Should this be the case, "
+"instructions on how to deploy the solution might reside only on the "
+"Operations Guide."
+msgstr ""
+
+#: ../../source/user_guide.rst:24
+msgid "Device Management"
+msgstr ""
+
+#: ../../source/user_guide.rst:26
+msgid ""
+"This section should detail how to integrate a new device with the system."
+" That should encompass the both the communication requirements imposed on"
+" the device in order to allow its usage with the platform, as well as the"
+" steps (if any, depending on the protocol used) to configure this new "
+"device within the platform."
+msgstr ""
+
+#: ../../source/user_guide.rst:31
+msgid ""
+"This could also explain (if indeed implemented) the device management "
+"functionalities made available by the platform to the device developer."
+msgstr ""
+
+#: ../../source/user_guide.rst:34
+msgid ""
+"Regarding the requirements imposed on the devices, it is forseen that, "
+"for each communication scheme (protocol/serialization format) offically "
+"supported by the platform, a step by step guide on how to \"develop\" a "
+"device is supplied. Such guide can, if applicable, make use of a "
+"platform-provided library or SDK."
+msgstr ""
+
+#: ../../source/user_guide.rst:40
+msgid "Flow Management"
+msgstr ""
+
+#: ../../source/user_guide.rst:42
+msgid ""
+"Moving to the perspective of an aplication developer, this section should"
+" list and explain the usage of the information flow configuration process"
+" within the platform - how to use the provided gui, high level "
+"description of the APIs that can be used to configure such flows, "
+"available actions to be used when building the flows, so on and so forth."
+msgstr ""
+

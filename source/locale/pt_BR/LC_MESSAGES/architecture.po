@@ -1,0 +1,118 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, CPqD
+# This file is distributed under the same license as the dojot package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: dojot 0.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-03 16:44-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.1\n"
+
+#: ../../source/architecture.rst:2
+msgid "Architecture"
+msgstr ""
+
+#: ../../source/architecture.rst:4
+msgid ""
+"This document describes the current architecture that guides the platform"
+" implementation, detailing the components that comprise the solution, as "
+"well as their functionalities and how each of them contribute to the "
+"platform as a whole."
+msgstr ""
+
+#: ../../source/architecture.rst:8
+msgid ""
+"While a brief explanation of each component is provided, this high level "
+"description does not explain (or aims to explain) the minutia of each "
+"component's implementation. For that, please refer to each component's "
+"own documentation."
+msgstr ""
+
+#: ../../source/architecture.rst:16
+msgid "Components"
+msgstr ""
+
+#: ../../source/architecture.rst:18
+msgid ""
+"This section should describe - in high level - the components that "
+"comprise the solution, giving the reader enough detail to understand the "
+"responsabilities of the components, the technologies involved in its "
+"design and implementation and its relation with its peers."
+msgstr ""
+
+#: ../../source/architecture.rst:23
+msgid "Infrastructure"
+msgstr ""
+
+#: ../../source/architecture.rst:25
+msgid ""
+"This section should describe the components that are used as ready-made "
+"pieces of working software that compose the solution, but have no "
+"implementation specific to the project. Relevant topics that might be "
+"discussed here are:"
+msgstr ""
+
+#: ../../source/architecture.rst:29
+msgid "The API gateway"
+msgstr ""
+
+#: ../../source/architecture.rst:30
+msgid "Storage components (mongo, redis, HDFS, CEPH, etc.)"
+msgstr ""
+
+#: ../../source/architecture.rst:31
+msgid ""
+"Processing libraries and environments (Spark, Flink, Storm, kafka-"
+"streaming, map-reduce, etc.)"
+msgstr ""
+
+#: ../../source/architecture.rst:32
+msgid "Broker components (rabbitMQ, mosquitto, kafka, verneMQ, emqtt, etc.)"
+msgstr ""
+
+#: ../../source/architecture.rst:35
+msgid "Communications"
+msgstr ""
+
+#: ../../source/architecture.rst:37
+msgid ""
+"This section should provide the reader with the communication strategy "
+"used to bind together the components that comprise the solution, as well "
+"as the interfaces (protocols, serialization formats) available to the "
+"applications and devices developers."
+msgstr ""
+
+#: ../../source/architecture.rst:42
+msgid "Deployment strategies"
+msgstr ""
+
+#: ../../source/architecture.rst:44
+msgid ""
+"This section should list the deployment requirements and implementation "
+"decisions made to satisfy those requirements. \"Why orchestrator platform"
+" 'x'?\", \"How can this be deployed on commercial cloud environments?\", "
+"\"How can this be deployed on stand-alone environments?\" are all "
+"questions that should be answered here."
+msgstr ""
+
+#: ../../source/architecture.rst:50
+msgid "Comparative analysis"
+msgstr ""
+
+#: ../../source/architecture.rst:52
+msgid ""
+"This section should detail the features that differenciate the platform "
+"from a \"stock\" deployment of fiware, as well as a feature summary "
+"comparing the proposed solution with a reduced set of third-party "
+"implementations of IoT platforms available."
+msgstr ""
+

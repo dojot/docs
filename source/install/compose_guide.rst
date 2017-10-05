@@ -40,7 +40,7 @@ https://docs.docker.com/engine/installation/
 Docker Compose
 ^^^^^^^^^^^^^^
 
-Up to date information and installation procedures for the docker engine can
+Up to date information and installation procedures for the docker-compose can
 be found at the project's documentation:
 
 https://docs.docker.com/compose/install/

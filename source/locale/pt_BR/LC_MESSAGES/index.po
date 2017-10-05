@@ -1,0 +1,52 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, CPqD
+# This file is distributed under the same license as the dojot package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: dojot 0.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-03 16:44-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.1\n"
+
+#: ../../source/index.rst:2
+msgid "dojot documentation"
+msgstr ""
+
+#: ../../source/index.rst:4
+msgid ""
+"This is the high-level documentation for dojot IoT platform developed by "
+"CPqD. This platform is largely based on [FIWARE](fiware.org), and aims to"
+" provide the application and device developers with a more concise and "
+"integrated interaction, while benefiting for the highly customizable and "
+"efficient infrastructure provided by FIWARE."
+msgstr ""
+
+#: ../../source/index.rst:9
+msgid ""
+"While based on FIWARE, this platform actually has a large set of "
+"components of its own, and interaction between components was modified to"
+" allow better packaging and performance for the solution as a whole."
+msgstr ""
+
+#: ../../source/index.rst:12
+msgid ""
+"While this does provide an overall glimpse of the platform, this "
+"documentation is not suited for middleware developers that might want to "
+"better understand the components that compose the solution themselves. "
+"For that, please check the component's own documentation repositories and"
+" ReadTheDocs pages."
+msgstr ""
+
+#: ../../source/index.rst:18
+msgid "Contents:"
+msgstr ""
+

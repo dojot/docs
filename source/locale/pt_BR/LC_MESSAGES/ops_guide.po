@@ -1,0 +1,91 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, CPqD
+# This file is distributed under the same license as the dojot package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: dojot 0.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-03 16:44-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.1\n"
+
+#: ../../source/ops_guide.rst:2
+msgid "Operations Guide"
+msgstr ""
+
+#: ../../source/ops_guide.rst:4
+msgid ""
+"This document provides information on how to properly deploy and manage "
+"an instance of dojot. For documentation regarding the usage of the "
+"platrom from the perspective of either an application, or device "
+"developer please refer to the [user guide]()."
+msgstr ""
+
+#: ../../source/ops_guide.rst:14
+msgid "Deployment"
+msgstr ""
+
+#: ../../source/ops_guide.rst:16
+msgid ""
+"This section should describe the steps required to deploy the solution on"
+" all \"homologated\" environments (e.g. standalone, aws, google cloud, "
+"bluemix, etc.). For each environment, there'll also be a link pointing to"
+" the environment-specific section of the :ref:`resourceManagement` sub-"
+"section that describes how cloud resources are managed (allocated, "
+"released and pertinent configuration)."
+msgstr ""
+
+#: ../../source/ops_guide.rst:24
+msgid "Device Management"
+msgstr ""
+
+#: ../../source/ops_guide.rst:26
+msgid ""
+"This section should describe the steps required to configure a new device"
+" on the platform. While this information will also be presented on the "
+"user guide, here the idea is to give more focus to the specific "
+"infrastructure that has to be managed in order to guarantee the device's "
+"authenticity and communication."
+msgstr ""
+
+#: ../../source/ops_guide.rst:34
+msgid "User Management"
+msgstr ""
+
+#: ../../source/ops_guide.rst:36
+msgid ""
+"This section should describe the steps required to configure user roles "
+"and role permissions for the platform itself, as well as handle "
+"application authentication features."
+msgstr ""
+
+#: ../../source/ops_guide.rst:42
+msgid "Resources Management"
+msgstr ""
+
+#: ../../source/ops_guide.rst:44
+msgid ""
+"For each \"homologated\" deployment scenario, this section should "
+"describe how the deployment is done, as well as which parameters are "
+"available for each of them."
+msgstr ""
+
+#: ../../source/ops_guide.rst:50
+msgid "System Dashboard"
+msgstr ""
+
+#: ../../source/ops_guide.rst:52
+msgid ""
+"This should be a brief description of the system dashboard that is made "
+"available for the system administrator to check the system's overall "
+"status and alerts."
+msgstr ""
+
