@@ -420,7 +420,7 @@ msgid ""
 "difficult to use it."
 msgstr ""
 "A interface dos fluxos é baseada no node-RED, mas a aplicação das regras "
-"e execução das açõe"
+"e execução das ações é feita por um mecanismo próprio da dojot. "
 
 #: ../../source/faq/faq.rst:252
 msgid "Why should I use it?"
@@ -431,9 +431,9 @@ msgid ""
 "It allows one of the coolest things of IoT in an easy and intuitive way, "
 "which is to analyse data for extracting information, then take actions."
 msgstr ""
-"Ele permite uma das coisas mais interessantes do IoT de uma forma simples"
-" e intuitiva que é analisar dados para extração de informações e execução"
-" de ações."
+"Ele permite uma das coisas mais interessantes do IoT de uma forma simples "
+"e intuitiva que é analisar dados para extração de informações e execução "
+"de ações."
 
 #: ../../source/faq/faq.rst:258
 msgid "What can it do, exactly?"
@@ -461,7 +461,7 @@ msgstr "Inferir informações baseadas em regras de detecção de borda."
 
 #: ../../source/faq/faq.rst:269
 msgid "Infer information based on geo-fence rules."
-msgstr "Inferir informações baseadas em georreferências."
+msgstr "Inferir informações através da posição dos dispositivos."
 
 #: ../../source/faq/faq.rst:271
 msgid "Notify through email."
@@ -502,7 +502,7 @@ msgid ""
 "input message, i.e. for each input device."
 msgstr ""
 "Vários dispositivos podem ser utilizados como pontos de entrada e saída "
-"em fluxo de dados.É importante notar que cada fluxo é aplicado a cada "
+"em fluxo de dados. É importante notar que cada fluxo é aplicado a cada "
 "nova mensagem, ou seja, para cada dispositivo de entrada."
 
 #: ../../source/faq/faq.rst:292
@@ -516,8 +516,8 @@ msgid ""
 "virtual device as the input of the flow."
 msgstr ""
 "Uma vez que os fluxos são aplicados individualmente para cada mensagem, "
-"você devecriar um dispositivo virtual para agregar todos os atributos e "
-"então usar este dispositivocomo entrada de um novo fluxo."
+"você deve criar um dispositivo virtual para agregar todos os atributos e "
+"então usar este dispositivo como entrada de um novo fluxo."
 
 #: ../../source/faq/faq.rst:298
 msgid "I want to send an email, what should I do?"
@@ -530,9 +530,9 @@ msgid ""
 "but you’re free to choose your own. For writing an email body, you can "
 "use a template before the email."
 msgstr ""
-"Basicamente, você deve adicionar um nó 'e-mail' e configurá=lo. Este "
-"nótem como servidor pré-definido o gmail-smtp-in-l.google.com, mas você "
-"pode alterá-lo livremente.Para escrever o corpo do email, você deve usar "
+"Basicamente, você deve adicionar um nó 'e-mail' e configurá-lo. Este "
+"nó tem como servidor pré-definido o gmail-smtp-in-l.google.com, mas você "
+"pode alterá-lo livremente. Para escrever o corpo do email, você deve usar "
 "um nó 'template' e associar a variável criada nestenó com o nó de e-mail "
 "através do campo 'source' deste último."
 
@@ -557,10 +557,10 @@ msgid ""
 "output."
 msgstr "Primeiramente, você deve criar um dispositivo virtual com os novos atributos, "
 "para então construir um fluxo de dados para renomeá-los. Isto pode ser feito conectando "
-" um nó 'change' após um dispositivo de entrada para mapear os atributos de entada a seus "
+"um nó 'change' após um dispositivo de entrada para mapear os atributos de entada a seus "
 "correspondentes na saída. Quando todos os atributos já estiverem mapeados, basta conectar "
-" o nó 'change' ao dispositivo virtual, associando-o à variável criada no nó change através "
-" do campo 'source'"
+"o nó 'change' ao dispositivo virtual, associando-o à variável criada no nó change através "
+"do campo 'source'"
 
 #: ../../source/faq/faq.rst:325
 msgid "I want to aggregate the attributes of multiple devices, what should I do?"
@@ -579,7 +579,7 @@ msgstr "Inicialmente, você deve criar um dispositivo virtual para agregar todos
 "dispositivo real de entrada neste dispositivo virtual. Isto pode ser feito em nós 'change' "
 "conectados a cada um dos dispositivos de entrada a fim de criar uma variável contendo todos os "
 "atributos de saída. Todos os nós change devem ser, por fim, conectados ao nó de saída representando "
-" o dispositivo virtual."
+"o dispositivo virtual."
 
 #: ../../source/faq/faq.rst:337
 msgid "It would be cool a WhatsApp node, is it in roadmap?"
@@ -663,7 +663,7 @@ msgid ""
 "every request that is sent to dojot (excluding, of course this request). "
 "Each call for this API will generate a different token."
 msgstr "Este token (o qual é uma sequência alfanumérica extensa) deve ser utilizado em "
-"todas as requisições que são enviadas ao dojot (excluindo as requisições de obtenção de tokens, "
+"todas as requisições que são enviadas à dojot (excluindo as requisições de obtenção de tokens, "
 "obviamente). Cada chamada para esta API irá gerar um token diferente."
 
 #: ../../source/faq/faq.rst:387
@@ -697,7 +697,7 @@ msgstr "Estou interessado(a) em integrar minha aplicação com dojot. O que devo
 msgid ""
 "This should be pretty straightforward. There are two ways that your "
 "application could be integrated with dojot:"
-msgstr "Isto deve ser bastante direto. Há duas formas de integrar sua aplicação ao dojot:"
+msgstr "Isto deve ser bastante direto. Há duas formas de integrar sua aplicação à dojot:"
 
 #: ../../source/faq/faq.rst:410
 msgid ""
@@ -717,7 +717,7 @@ msgid ""
 "created using this API (also, all endpoints should be preceded by "
 "``/metrics/``)."
 msgstr ""
-"**Susbcrição de eventos relacionados a dispositivos**: se sua aplicação é capaz de esperar por eventos, você "
+"**Subscrição de eventos relacionados a dispositivos**: se sua aplicação é capaz de esperar por eventos, você "
 "poderá achar mais interessante usar subscrições, as quais podem ser criadas usando esta API (todos os serviços "
 "deste apiary devem ser precedidos por ``/metrics/``)."
 
