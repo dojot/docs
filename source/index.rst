@@ -23,6 +23,7 @@ pages.
    ops_guide
    user_guide
    install/compose_guide
+   vms/vbox/guide
    faq/faq
 
 
