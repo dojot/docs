@@ -20,7 +20,7 @@ Then, you need to download a virtual machine image with dojot, which is availabl
 
 http://dojot-iso.s3.amazonaws.com/imagem/dojot.0.1.0-dojot.vdi
 
-The next step is to create a virtual machine on VirtualBox. Chick on the New button, 
+The next step is to create a virtual machine on VirtualBox. Click on the New button, 
 then set the name ``as you wish``, type to ``Linux`` and version to ``Debian (64-bit)``.
 
 .. image:: image1.png
