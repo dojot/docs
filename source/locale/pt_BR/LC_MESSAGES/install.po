@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dojot 0.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-04 09:22-0300\n"
+"POT-Creation-Date: 2017-12-01 15:07-0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,8 @@ msgstr ""
 "Generated-By: Babel 2.5.1\n"
 
 #: ../../source/install/compose_guide.rst:2
-msgid "Installation guide - Docker compose"
+#, fuzzy
+msgid "Installation Guide - Docker compose"
 msgstr "Guia de Instalação - Docker compose"
 
 #: ../../source/install/compose_guide.rst:4
@@ -32,6 +33,7 @@ msgstr ""
 "docker-compose como plataforma de orquestração de processos."
 
 #: ../../source/install/compose_guide.rst:8
+#: ../../source/install/kube_guide.rst:10
 msgid ""
 "While very simple, this deployment option is best suited to development "
 "and assessment of the platform and should not be used for production "
@@ -46,6 +48,7 @@ msgid "This guide has been checked on an Ubuntu 16.04 LTS environment."
 msgstr "Este guia foi validado em ambiente com Ubuntu 16.04 LTS."
 
 #: ../../source/install/compose_guide.rst:17
+#: ../../source/install/kube_guide.rst:20
 msgid "Dependencies"
 msgstr "Dependências"
 
@@ -105,8 +108,8 @@ msgid ""
 "Up to date information and installation procedures for the docker-compose"
 " can be found at the project's documentation:"
 msgstr ""
-"Informações atualizadas do processo de instalação do docker-compose podem ser "
-"encontradas na documentação do seu projeto:"
+"Informações atualizadas do processo de instalação do docker-compose podem"
+" ser encontradas na documentação do seu projeto:"
 
 #: ../../source/install/compose_guide.rst:46
 msgid "https://docs.docker.com/compose/install/"
@@ -220,4 +223,115 @@ msgstr ""
 "primeiro usuário `admin`, o seguinte script pode ser executado na máquina"
 " que hospeda a plataforma (isto é, na máquina o\tonde o docker-compose "
 "está rodando). O script está na raiz do repositório. ::"
+
+#: ../../source/install/kube_guide.rst:2
+#, fuzzy
+msgid "Installation Guide - Kubernetes"
+msgstr "Guia de Instalação - Docker compose"
+
+#: ../../source/install/kube_guide.rst:4
+#, fuzzy
+msgid ""
+"This document provides instructions on how to create a simple dojot "
+"deployment environment on a multi-node environment, using kubernetes as "
+"the orchestration platform."
+msgstr ""
+"Este documento fornece instruções de como criar um ambiente trivial de "
+"implantação para a plataforma dojot em uma única máquina, utilizando o "
+"docker-compose como plataforma de orquestração de processos."
+
+#: ../../source/install/kube_guide.rst:7
+#, fuzzy
+msgid ""
+"This deployment option as presented in this document is best suited to "
+"tests and assessment of the platform, but with the appropriate changes "
+"might be evolved for production environments."
+msgstr ""
+"Embora muito simples, esta opção de implantação é adequada para "
+"desenvolvimento e avaliação da plataforma dojot e não deve ser utilizada "
+"em ambientes de produção."
+
+#: ../../source/install/kube_guide.rst:13
+msgid ""
+"This guide has been checked on a Kubernetes cluster with Ceph as the "
+"underlying storage infrastructure, it has also been tested on a "
+"Kubernetes cluster over the Google Cloud Platform"
+msgstr ""
+
+#: ../../source/install/kube_guide.rst:22
+msgid ""
+"This setup has as the first requirement a Kubernetes cluster that is "
+"properly configured and running."
+msgstr ""
+
+#: ../../source/install/kube_guide.rst:24
+msgid ""
+"The second requirement is a Kubernetes client correctly installed on the "
+"machine that will start the deployment process"
+msgstr ""
+
+#: ../../source/install/kube_guide.rst:28
+msgid "Kubernetes Cluster"
+msgstr ""
+
+#: ../../source/install/kube_guide.rst:30
+msgid "For this guide it is advised that you already have a functioning cluster."
+msgstr ""
+
+#: ../../source/install/kube_guide.rst:32
+#, fuzzy
+msgid ""
+"If you desire to prepare a Kubernetes cluster from scratch, up to date "
+"information and installation procedures can be found at the project's "
+"documentation:"
+msgstr ""
+"Informações atualizadas do processo de instalação do docker podem ser "
+"encontradas na documentação do seu projeto:"
+
+#: ../../source/install/kube_guide.rst:35
+msgid "https://kubernetes.io/docs/setup/"
+msgstr ""
+
+#: ../../source/install/kube_guide.rst:38
+msgid "Persistent Storage"
+msgstr ""
+
+#: ../../source/install/kube_guide.rst:44
+msgid "To make sure that all the data"
+msgstr ""
+
+#: ../../source/install/kube_guide.rst:47
+msgid "Kubernetes Client"
+msgstr ""
+
+#: ../../source/install/kube_guide.rst:49
+msgid ""
+"To install the Kubernetes client on your machine before proceeding with "
+"this guide, follow the proper instructions as presented on the Kubernetes"
+" documentation:"
+msgstr ""
+
+#: ../../source/install/kube_guide.rst:52
+msgid "https://kubernetes.io/docs/tasks/tools/install-kubectl/"
+msgstr ""
+
+#: ../../source/install/kube_guide.rst:54
+msgid "Also, verify that your client is capable of connecting to the cluster."
+msgstr ""
+
+#: ../../source/install/kube_guide.rst:56
+msgid "For providing access for a local cluster, follow the documentation below:"
+msgstr ""
+
+#: ../../source/install/kube_guide.rst:58
+msgid ""
+"https://kubernetes.io/docs/tasks/access-application-cluster/access-"
+"cluster/"
+msgstr ""
+
+#: ../../source/install/kube_guide.rst:60
+msgid ""
+"If the Kubernetes cluster is running on a specific cloud platform like "
+"Google Cloud, follow the steps as presented by your cloud provider."
+msgstr ""
 

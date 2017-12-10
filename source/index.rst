@@ -18,11 +18,13 @@ pages.
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
+   :glob:
 
    architecture
    ops_guide
    user_guide
-   install/compose_guide
+   install/*
+
    faq/faq
 
 
