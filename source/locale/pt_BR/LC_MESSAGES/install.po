@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dojot 0.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-01 15:07-0200\n"
+"POT-Creation-Date: 2017-12-11 10:28-0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,7 +33,6 @@ msgstr ""
 "docker-compose como plataforma de orquestração de processos."
 
 #: ../../source/install/compose_guide.rst:8
-#: ../../source/install/kube_guide.rst:10
 msgid ""
 "While very simple, this deployment option is best suited to development "
 "and assessment of the platform and should not be used for production "
@@ -48,7 +47,7 @@ msgid "This guide has been checked on an Ubuntu 16.04 LTS environment."
 msgstr "Este guia foi validado em ambiente com Ubuntu 16.04 LTS."
 
 #: ../../source/install/compose_guide.rst:17
-#: ../../source/install/kube_guide.rst:20
+#: ../../source/install/kube_guide.rst:19
 msgid "Dependencies"
 msgstr "Dependências"
 
@@ -224,12 +223,120 @@ msgstr ""
 " que hospeda a plataforma (isto é, na máquina o\tonde o docker-compose "
 "está rodando). O script está na raiz do repositório. ::"
 
-#: ../../source/install/kube_guide.rst:2
+#: ../../source/install/gcp_guide.rst:2
+#, fuzzy
+msgid "Installation Guide - Google Cloud Platform"
+msgstr "Guia de Instalação - Docker compose"
+
+#: ../../source/install/gcp_guide.rst:4
+#, fuzzy
+msgid ""
+"This document provides instructions on how to prepare a Google Cloud "
+"environment for a dojot deployment using Kubernetes as the orchestrator."
+msgstr ""
+"Este documento fornece instruções de como criar um ambiente trivial de "
+"implantação para a plataforma dojot em uma única máquina, utilizando o "
+"docker-compose como plataforma de orquestração de processos."
+
+#: ../../source/install/gcp_guide.rst:7
+msgid ""
+"This document will provide steps for creating a test and assessment "
+"environment for those who want to learn and experiment with the dojot "
+"platform but prefer to run it on a cloud environment."
+msgstr ""
+
+#: ../../source/install/gcp_guide.rst:10
+msgid ""
+"The steps as presented here can be evolved to real world deployments with"
+" proper changes to fulfill your deployment use case"
+msgstr ""
+
+#: ../../source/install/gcp_guide.rst:17
+msgid "Creating a Project"
+msgstr ""
+
+#: ../../source/install/gcp_guide.rst:19
+msgid ""
+"To prepare an environment to deploy dojot on the Google Cloud Platform, "
+"the first thing that must be done is to create a project for the "
+"deployment."
+msgstr ""
+
+#: ../../source/install/gcp_guide.rst:22
+msgid ""
+"To create a project, go to the page "
+"https://console.cloud.google.com/projectcreate and define the new "
+"project's name."
+msgstr ""
+
+#: ../../source/install/gcp_guide.rst:24
+msgid ""
+"Wait until the project creation is complete. Then, go to the page "
+"https://console.cloud.google.com/projectselector/home/dashboard, click on"
+" the select button and choose the recently created project."
+msgstr ""
+
+#: ../../source/install/gcp_guide.rst:28
+msgid "Creating a Cluster"
+msgstr ""
+
+#: ../../source/install/gcp_guide.rst:30
+msgid ""
+"Having the desired project selected, got to the kubernetes page of the "
+"GCP at the link https://console.cloud.google.com/kubernetes/."
+msgstr ""
+
+#: ../../source/install/gcp_guide.rst:32
+msgid ""
+"Wait for the Kubernetes Engine to be ready and click on the create "
+"cluster button."
+msgstr ""
+
+#: ../../source/install/gcp_guide.rst:34
+msgid ""
+"In the cluster creation page, define a name for your cluster and select "
+"an appropriate region for your deployment. To create an evaluation and "
+"testing environment for dojot a cluster with 3 machines with 1 vCPU is "
+"enough for the sake of experimenting with the kubernetes deployment. With"
+" the options properly set, click on the create button and wait for the "
+"cluster to be created."
+msgstr ""
+
+#: ../../source/install/gcp_guide.rst:40
+msgid "Getting the credentials"
+msgstr ""
+
+#: ../../source/install/gcp_guide.rst:42
+msgid ""
+"With the kubernetes cluster created, the next step is obtaining the "
+"cluster access credentials so your machine is able to access the cluster "
+"and proceed with the deployment."
+msgstr ""
+
+#: ../../source/install/gcp_guide.rst:45
+msgid ""
+"On the kubernetes page, on the list of created clusters, locate the "
+"cluster you just created, on the right side of it click on the "
+"\"Connect\" button. Copy the first command that is provided and run this "
+"on a terminal on your machine, this command will install the credentials."
+" To run this command it is required that the gcloud client is installed "
+"and properly configured on your machine. To install this client follow "
+"the instructions provided by the google documentation at: "
+"https://cloud.google.com/sdk/docs/quickstarts"
+msgstr ""
+
+#: ../../source/install/gcp_guide.rst:51
+msgid ""
+"With the credential configured, proceed to the :ref:`Kubernetes "
+"Deployment Guide <kubernetes>`"
+msgstr ""
+
+#: ../../source/install/kube_guide.rst:4
 #, fuzzy
 msgid "Installation Guide - Kubernetes"
 msgstr "Guia de Instalação - Docker compose"
 
-#: ../../source/install/kube_guide.rst:4
+#: ../../source/install/kube_guide.rst:6
 #, fuzzy
 msgid ""
 "This document provides instructions on how to create a simple dojot "
@@ -240,7 +347,7 @@ msgstr ""
 "implantação para a plataforma dojot em uma única máquina, utilizando o "
 "docker-compose como plataforma de orquestração de processos."
 
-#: ../../source/install/kube_guide.rst:7
+#: ../../source/install/kube_guide.rst:9
 #, fuzzy
 msgid ""
 "This deployment option as presented in this document is best suited to "
@@ -251,34 +358,34 @@ msgstr ""
 "desenvolvimento e avaliação da plataforma dojot e não deve ser utilizada "
 "em ambientes de produção."
 
-#: ../../source/install/kube_guide.rst:13
+#: ../../source/install/kube_guide.rst:12
 msgid ""
 "This guide has been checked on a Kubernetes cluster with Ceph as the "
-"underlying storage infrastructure, it has also been tested on a "
+"underlying storage infrastructure and it has also been tested on a "
 "Kubernetes cluster over the Google Cloud Platform"
 msgstr ""
 
-#: ../../source/install/kube_guide.rst:22
+#: ../../source/install/kube_guide.rst:21
 msgid ""
 "This setup has as the first requirement a Kubernetes cluster that is "
 "properly configured and running."
 msgstr ""
 
-#: ../../source/install/kube_guide.rst:24
+#: ../../source/install/kube_guide.rst:23
 msgid ""
 "The second requirement is a Kubernetes client correctly installed on the "
 "machine that will start the deployment process"
 msgstr ""
 
-#: ../../source/install/kube_guide.rst:28
+#: ../../source/install/kube_guide.rst:27
 msgid "Kubernetes Cluster"
 msgstr ""
 
-#: ../../source/install/kube_guide.rst:30
+#: ../../source/install/kube_guide.rst:29
 msgid "For this guide it is advised that you already have a functioning cluster."
 msgstr ""
 
-#: ../../source/install/kube_guide.rst:32
+#: ../../source/install/kube_guide.rst:31
 #, fuzzy
 msgid ""
 "If you desire to prepare a Kubernetes cluster from scratch, up to date "
@@ -288,50 +395,238 @@ msgstr ""
 "Informações atualizadas do processo de instalação do docker podem ser "
 "encontradas na documentação do seu projeto:"
 
-#: ../../source/install/kube_guide.rst:35
+#: ../../source/install/kube_guide.rst:34
 msgid "https://kubernetes.io/docs/setup/"
 msgstr ""
 
-#: ../../source/install/kube_guide.rst:38
+#: ../../source/install/kube_guide.rst:37
 msgid "Persistent Storage"
 msgstr ""
 
-#: ../../source/install/kube_guide.rst:44
-msgid "To make sure that all the data"
+#: ../../source/install/kube_guide.rst:39
+msgid ""
+"To make sure that all the data from the containers running databases is "
+"persisted when containers fail or are moved to different nodes of the "
+"Kubernetes environment it is necessary to attach persistent storage to "
+"the database pods."
 msgstr ""
 
-#: ../../source/install/kube_guide.rst:47
-msgid "Kubernetes Client"
+#: ../../source/install/kube_guide.rst:42
+msgid ""
+"Kubernetes requires that an infrastructure for persistent storage already"
+" exists on the cluster. As an example for how to configure your "
+"persistent storage we provide files for two different kind of "
+"deployments, the first is for a local deployment where a Ceph Cluster is "
+"used as storage backend, more information on Ceph may be found at: "
+"http://ceph.com/. The second example is based on a Google Cloud "
+"deployment and use the existing persistent storage services that are "
+"provided by Google Cloud. If you're deploying dojot using Kubernetes to a"
+" different cloud provider, some adjustments to fit the different "
+"deployments might be necessary."
 msgstr ""
 
 #: ../../source/install/kube_guide.rst:49
+msgid ""
+"Information about the currently supported persistent storage for "
+"Kubernetes can be found at: https://kubernetes.io/docs/concepts/storage"
+"/persistent-volumes/#types-of-persistent-volumes"
+msgstr ""
+
+#: ../../source/install/kube_guide.rst:53
+msgid "Kubernetes Client"
+msgstr ""
+
+#: ../../source/install/kube_guide.rst:55
 msgid ""
 "To install the Kubernetes client on your machine before proceeding with "
 "this guide, follow the proper instructions as presented on the Kubernetes"
 " documentation:"
 msgstr ""
 
-#: ../../source/install/kube_guide.rst:52
+#: ../../source/install/kube_guide.rst:58
 msgid "https://kubernetes.io/docs/tasks/tools/install-kubectl/"
 msgstr ""
 
-#: ../../source/install/kube_guide.rst:54
+#: ../../source/install/kube_guide.rst:60
 msgid "Also, verify that your client is capable of connecting to the cluster."
 msgstr ""
 
-#: ../../source/install/kube_guide.rst:56
+#: ../../source/install/kube_guide.rst:62
 msgid "For providing access for a local cluster, follow the documentation below:"
 msgstr ""
 
-#: ../../source/install/kube_guide.rst:58
+#: ../../source/install/kube_guide.rst:64
 msgid ""
 "https://kubernetes.io/docs/tasks/access-application-cluster/access-"
 "cluster/"
 msgstr ""
 
-#: ../../source/install/kube_guide.rst:60
+#: ../../source/install/kube_guide.rst:66
 msgid ""
 "If the Kubernetes cluster is running on a specific cloud platform like "
 "Google Cloud, follow the steps as presented by your cloud provider."
 msgstr ""
+
+#: ../../source/install/kube_guide.rst:70
+msgid "Deployment"
+msgstr ""
+
+#: ../../source/install/kube_guide.rst:72
+msgid ""
+"To deploy dojot to a Kubernetes environment, we provide sample scripts "
+"and templates for two kinds of clusters. The examples are for an "
+"environment comprised by Kubernetes with Ceph for storage, the second is "
+"a deployment to a Kubernetes environment running on Google Cloud "
+"Platform."
+msgstr ""
+
+#: ../../source/install/kube_guide.rst:76
+msgid ""
+"For both environment it is necessary to download the scripts and "
+"templates before performing the deployment."
+msgstr ""
+
+#: ../../source/install/kube_guide.rst:78
+msgid "To download the required files using git, run the following command: ::"
+msgstr ""
+
+#: ../../source/install/kube_guide.rst:82
+msgid ""
+"or, to download a compressed zip file containing the data, use the "
+"following link: https://github.com/dojot/kubernetes/archive/master.zip"
+msgstr ""
+
+#: ../../source/install/kube_guide.rst:84
+msgid ""
+"Enter the downloaded folder and follow the instructions in the section "
+"that corresponds to your specific environment."
+msgstr ""
+
+#: ../../source/install/kube_guide.rst:86
+msgid ""
+"All the instructions provided in the following sections assume that the "
+"commands are being run on a linux terminal."
+msgstr ""
+
+#: ../../source/install/kube_guide.rst:89
+msgid "Google Cloud Platform"
+msgstr ""
+
+#: ../../source/install/kube_guide.rst:91
+msgid ""
+"To deploy dojot to a Kubernetes cluster running over Google Cloud the "
+"only requirements are that you have your cluster configured on Google "
+"Cloud and your local Kubernetes client is properly configured to access "
+"that cloud."
+msgstr ""
+
+#: ../../source/install/kube_guide.rst:94
+msgid ""
+"To execute the script to deploy to Google Cloud just run the following "
+"command on the terminal: ::"
+msgstr ""
+
+#: ../../source/install/kube_guide.rst:98
+msgid ""
+"The selected parameters set the type of storage to be used as GCP "
+"persistent storage and also set the external access to use the load "
+"balancers as provided by the Google Cloud Platform."
+msgstr ""
+
+#: ../../source/install/kube_guide.rst:101
+#: ../../source/install/kube_guide.rst:143
+msgid ""
+"Just wait until the script finishes running and then check for when all "
+"the pods have finished starting, to check if all the pods are running "
+"correctly, run the command below and verify that all pods have reached a "
+"\"Running\" state, this may take a while and retries for some pods. ::"
+msgstr ""
+
+#: ../../source/install/kube_guide.rst:107
+msgid ""
+"After all the pods are running, run the following command in order to "
+"obtain the public ip address that is being used by the load balancer ::"
+msgstr ""
+
+#: ../../source/install/kube_guide.rst:111
+msgid ""
+"The command will return the external ip used by the load balancer, with "
+"this IP you can access that ip using any browser at http://EXTERNAL_IP"
+msgstr ""
+
+#: ../../source/install/kube_guide.rst:114
+#: ../../source/install/kube_guide.rst:151
+msgid "The initial user and password are admin and admin."
+msgstr ""
+
+#: ../../source/install/kube_guide.rst:117
+msgid "Cluster with Ceph"
+msgstr ""
+
+#: ../../source/install/kube_guide.rst:119
+msgid ""
+"To deploy dojot to a Kubernetes Cluster where you have as persistent "
+"storage infrastructure a Ceph Cluster you will need the configuration "
+"file for accessing Ceph."
+msgstr ""
+
+#: ../../source/install/kube_guide.rst:122
+msgid ""
+"Also you will need to set some information regarding your Ceph cluster on"
+" the manifest files."
+msgstr ""
+
+#: ../../source/install/kube_guide.rst:124
+msgid ""
+"Edit the file \"manifests/STORAGE/CEPH/rbd-provisioner.yaml\" and change "
+"the values of the pool and the userId to match those of your specific "
+"environment. Also it is necessary to get the key for the admin user and "
+"the client user. With this keys at hand, convert then to base 64, this "
+"may be done at your terminal running the command: ::"
+msgstr ""
+
+#: ../../source/install/kube_guide.rst:130
+msgid ""
+"The value that is returned must be added to the \"manifests/STORAGE/CEPH"
+"/ceph-secret-admin.yaml\" and \"manifests/STORAGE/CEPH/ceph-secret-"
+"user.yaml\" respectively at the field key."
+msgstr ""
+
+#: ../../source/install/kube_guide.rst:133
+msgid ""
+"Also you may choose to deploy with a load balancer if your infrastructure"
+" provide one, otherwise you may deploy selecting a public ip of one of "
+"the kubernetes cluster nodes as the point of access for the environment."
+msgstr ""
+
+#: ../../source/install/kube_guide.rst:136
+msgid ""
+"To execute the script and deploy with Ceph and a public ip just run the "
+"following command on the terminal: ::"
+msgstr ""
+
+#: ../../source/install/kube_guide.rst:140
+msgid ""
+"Wait while the script starts the deployment, you will be prompted for two"
+" parameters during the deployment, the path for the ceph configuration "
+"file and the desired public ip. Enter this parameters and type enter when"
+" prompted."
+msgstr ""
+
+#: ../../source/install/kube_guide.rst:149
+msgid ""
+"After all the pods are runninf, you can access your dojot deployment "
+"using the public ip that was defined http://PUBLIC_IP"
+msgstr ""
+
+#~ msgid ""
+#~ "This guide has been checked on a"
+#~ " Kubernetes cluster with Ceph as the"
+#~ " underlying storage infrastructure, it has"
+#~ " also been tested on a Kubernetes "
+#~ "cluster over the Google Cloud Platform"
+#~ msgstr ""
+
+#~ msgid "To make sure that all the data"
+#~ msgstr ""
 
