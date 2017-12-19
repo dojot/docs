@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dojot 0.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-03 16:44-0300\n"
+"POT-Creation-Date: 2017-12-19 15:20-0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../source/architecture.rst:2
 msgid "Architecture"
-msgstr ""
+msgstr "Arquitetura"
 
 #: ../../source/architecture.rst:4
 msgid ""
@@ -28,6 +28,10 @@ msgid ""
 "well as their functionalities and how each of them contribute to the "
 "platform as a whole."
 msgstr ""
+"Este documento descreve a arquitetura atual que guia a implementação da "
+"plataforma, detalhando os componentes que compõe a solução, assim como as"
+" suas funcionalidades e como cada um deles contribui para a plataforma "
+"como um todo."
 
 #: ../../source/architecture.rst:8
 msgid ""
@@ -36,83 +40,582 @@ msgid ""
 "component's implementation. For that, please refer to each component's "
 "own documentation."
 msgstr ""
+"Enquanto uma breve explicação de cada componente é provida, esta "
+"descrição em alto nível não tem como objetivo explicar os detalhes de "
+"cada um dos componentes da implementação. Para isso, procure a "
+"documentação própria de cada um dos componentes."
 
 #: ../../source/architecture.rst:16
 msgid "Components"
-msgstr ""
+msgstr "Componentes"
 
 #: ../../source/architecture.rst:18
 msgid ""
-"This section should describe - in high level - the components that "
-"comprise the solution, giving the reader enough detail to understand the "
-"responsabilities of the components, the technologies involved in its "
-"design and implementation and its relation with its peers."
+"With the idea of utilizing open-source and consolidated components, as a "
+"starting point for the *dojot* IoT middleware we adopted the european "
+"project Fiware (FIWARE, 2016). The solutions developed from this "
+"framework followed a micro-services architecture, having as the main "
+"component a context broker that is responsible for redistributing events "
+"among services that are part of the middleware."
 msgstr ""
+"Com a ideia de utilizar componentes de software abertos e consolidados, "
+"adotou-se como ponto de partida para o middleware *dojot* o Framework IoT"
+" do projeto europeu Fiware (FIWARE, 2016). As soluções desenvolvidas a "
+"partir deste framework adotam uma arquitetura de micro-serviços, tendo um"
+" broker de contexto como o componente central, que redistribui os eventos"
+" entre os serviços que compõem o middleware."
 
 #: ../../source/architecture.rst:23
-msgid "Infrastructure"
-msgstr ""
-
-#: ../../source/architecture.rst:25
 msgid ""
-"This section should describe the components that are used as ready-made "
-"pieces of working software that compose the solution, but have no "
-"implementation specific to the project. Relevant topics that might be "
-"discussed here are:"
+"The first architecture proposal took into account a basic group of Fiware"
+" services together with new services, developed in the scope of this "
+"project, having as the main purpose, increasing the usability of the "
+"*dojot* platform. This initial architecture can be seen on "
+":numref:`old_arch`."
 msgstr ""
+"A primeira proposta de arquitetura considerou um conjunto básico de "
+"serviços do Fiware junto com alguns novos serviços, desenvolvidos no "
+"escopo deste projeto, cujo objetivo era aumentar a usabilidade do "
+"*dojot*. Esta arquitetura inicial está ilustrada na :numref:`old_arch`."
 
-#: ../../source/architecture.rst:29
+#: ../../source/architecture.rst:33
+msgid "Initial Architecture"
+msgstr "Arquitetura Inicial"
+
+#: ../../source/architecture.rst:35
+msgid ""
+"In this proposal we utilize the following components from Fiware: the "
+"Orion context broker as the communication bus for all the internal "
+"services of the middleware, the history service, STH, for storing IoT "
+"devices data in a non-relational MongoDB database, the Perseo CEP service"
+" that is responsible for treating events in real time and the iot-agent "
+"service as an abstraction layer for integrating MQTT and HTTP devices."
+msgstr ""
+"Nesta proposta, utiliza-se do Fiware: o broker de contexto Orion como o "
+"barramento de comunicação para todos os serviços internos do dojot, o "
+"serviço de histórico STH para armazenamento interno dos dados dos "
+"dispositivos IoT em base de dados não relacional MongoDB, o serviço de "
+"CEP Perseo para tratamento de eventos em tempo real e o serviço iot-agent"
+" como camada de adaptação para integração com dispositivos MQTT e HTTP."
+
+#: ../../source/architecture.rst:40
+msgid ""
+"To this services we added the Kong API Gateway to act as a centralized "
+"point-of-access removing the need of direct communication with each one "
+"of the services, an orchestration service to abstract the middleware "
+"configuration, an authentication service to validate user access "
+"credentials and also an user application with graphical interface with "
+"the purpose of managing the middleware (users, devices and data flows "
+"management)."
+msgstr ""
+"A esses serviços são adicionados o API Gateway Kong para prover um único "
+"ponto de acesso, sem necessidade de comunicação direta com cada um dos "
+"serviços, um serviço de orquestração para abstrair a configuração do "
+"dojot, um serviço de autenticação para validação das credenciais de "
+"acesso dos usuários e uma aplicação de usuário com interface gráfica com "
+"o propósito de gerenciamento do middleware dojot (gestão de usuários, "
+"gestão de dispositivos IoT e gestão de fluxos de processamento de dados)."
+
+#: ../../source/architecture.rst:45
+msgid ""
+"Considering this architecture the basic utilization flow is as follows: "
+"The user configures IoT devices through the GUI or directly using the "
+"REST APIs provided by the API Gateway, he also configures processing "
+"flows to deal with the data generated by the configured devices. As an "
+"example we can generate notifications when the data of a device has one "
+"of its values reaching a threshold or we can add an entry to a database "
+"when a device enters or leaves an specific geographic location. This user"
+" operations on the API result in configurations across the internal "
+"services of the middleware (Broker, CEP and iot-agent), being partially "
+"abstracted by the orchestration service."
+msgstr ""
+"O fluxo básico de utilização do dojot para esta arquitetura é a seguinte:"
+" O usuário, por meio das interfaces gráficas de gerenciamento ou uma "
+"aplicação por meio das APIs REST providas através do API Gateway "
+"configura os dispositivos IoT no dojot e os fluxos para processamento de "
+"dados como, por exemplo, gerar notificação quando um dado limiar é "
+"atingido e registrar em base de dados quando um um dispositivo entra ou "
+"sai de uma dada região geográfica. Essas operações de usuário, resultam "
+"em configurações nos serviços interno do dojot (Broker, iot-agent e CEP),"
+" sendo em parte abstraída pelo serviço de orquestração."
+
+#: ../../source/architecture.rst:52
+msgid ""
+"The user contexts are isolated and there is no data sharing, the access "
+"credentials are validated by the authorization service for each and every"
+" operation (API Request). Once the devices and the flows are configured, "
+"the iot-agent is capable of mapping the data received from devices, "
+"encapsulated on MQTT for example, and send then to the context broker for"
+" internal distribution, reaching, for instance, the historic service so "
+"it can persist the data on a database and the CEP for processing it based"
+" on rules. If certain conditions are matched when rules are being "
+"processed, a new event is generated and sent to the broker service to be "
+"redistributed to the interested services."
+msgstr ""
+"Os contextos dos usuários são isolados, não havendo compartilhamento de "
+"dados, e as credenciais de acesso são validadas pelo serviço de "
+"autorização para toda operação, isto é, toda chamada de API. Uma vez "
+"configurados os dispositivos e os fluxos de processamento de dados, o "
+"iot-agent é capaz de mapear os dados dos dispositivos IoT que foram "
+"recebidos, por exemplo, encapsulados em MQTT para o modelo de contexto "
+"interno, repassando os dados para o broker que redistribui internamente, "
+"repassando ao serviço de histórico para que esses dados sejam persistidos"
+" em base dados e ao CEP para o processamento de regras. No caso do CEP, "
+"se determinadas condições são atingidas, é gerado um evento endereçado ao"
+" broker, que o redistribui aos serviços interessados."
+
+#: ../../source/architecture.rst:59
+msgid ""
+"This architecture made possible the validation of ideas and limitations "
+"and possible improvements were identified, converging to a reviewed "
+"architectural proposition as described on :numref:`new_arch`. This new "
+"proposal is under development and should become part of the solution."
+msgstr ""
+"Esta arquitetura possibilitou a validação de ideias e a identificação de "
+"limitações e possíveis melhorias, convergindo para uma proposta revisada "
+"que está descrita na :numref:`new_arch`. Essa nova proposta é a que se "
+"encontra em desenvolvimento e que deve permanecer na solução.  "
+
+#: ../../source/architecture.rst:69
+msgid "Revised Architecture"
+msgstr "Arquitetura Revisada"
+
+#: ../../source/architecture.rst:71
+msgid ""
+"More detailed and updated information can be found on the `dojot Github "
+"repository <https://github.com/dojot>`_."
+msgstr ""
+"Mais detalhes e informações atualizadas podem ser encontrados no "
+"`repositório dojot no Github <https://github.com/dojot>`_."
+
+#: ../../source/architecture.rst:73
+msgid ""
+"Each one of the components that are part of the architecture are briefly "
+"described on the sub-sections below."
+msgstr ""
+"Cada um dos componentes que compõe a arquitetura são brevemente descritos "
+"nas sessões subsequentes."
+
+#: ../../source/architecture.rst:76
+msgid "Kafka + Subscription Manager + NGSI"
+msgstr "Kafka + Gerenciador de Subscrição + NGSI"
+
+#: ../../source/architecture.rst:78
+msgid ""
+"Using Apache Kafka in conjunction with a subscriptions managers and a "
+"NGSI interface translator we compose a context broker analogous to Fiware"
+" Orion, with the addition of functionalities that are tipical to brokers,"
+" more processing power and scalability. Apache Kafka is a distributed "
+"platform that was consolidated for the construction of data pipelines in "
+"real time and streaming applications, differently from the Fiware Orion "
+"core that is a non-relational DB."
+msgstr ""
+"O Apache Kafka junto com um gerenciador de subscrições e um tradutor de "
+"interface NGSI compõem um broker de contexto análogo ao Fiware Orion, "
+"mas com mais funcionalidades típicas de broker, maior poder de "
+"processamento e mais escalável. O Apache Kafka é uma plataforma distribuída "
+"consolidada para a construção de pipelines de dados em tempo real e "
+"aplicações de streaming, diferentemente do núcleo do Fiware Orion que é "
+"um banco de dados não relacional."
+
+#: ../../source/architecture.rst:83
+msgid ""
+"In Kafka, a specialized topics structure is used to insure isolation "
+"between different users and applications data, enabling a multi-tenant "
+"infrastructure."
+msgstr ""
+"No Kafka, utiliza-se uma estrutura de tópicos especializada para garantir "
+"isolamento de dados de usuários e aplicações, viabilizando uma "
+"arquitetura multi-tenant."
+
+#: ../../source/architecture.rst:86
+msgid ""
+"The subscription manager service makes use of an in-memory database for "
+"efficiency. It adds context to Apache Kafka, making it possible that "
+"internal or even external services are able to subscribe or query data "
+"based on context. The subscription manager is also a distributed service "
+"to avoid it being a single point of failure or even a bottleneck for the "
+"architecture."
+msgstr ""
+"O serviço de gerenciamento de subscrições faz uso de um banco de dados "
+"em memória para ser eficiente. Ele agrega contextos ao Apache Kafka, "
+"permitindo que serviços internos ou até mesmo externos, se subscrevam "
+"ou consultem dados baseados em contexto. O gerenciador de subscrição "
+"também é um componente distribuído para não ser um gargalo ou ainda um "
+"ponto único de falha na arquitetura."
+
+#: ../../source/architecture.rst:91
+msgid ""
+"To keep a certain level of compatibility with Fiware services, meaning, "
+"for using Fiware services and components in the *dojot* platform with the"
+" minimal amount of adaptations, we added a NGSI interface translation "
+"service."
+msgstr ""
+"Para manter um certo nível de compatibilidade com os serviços do Fiware, "
+"isto é, para que serviços/componentes do Fiware possam ser utilizados com "
+"adaptações mínimas, é adicionado um serviço de tradução de interfaces NGSI."
+
+#: ../../source/architecture.rst:95
+msgid "Device Manager"
+msgstr "Gerenciador de Dispositivos"
+
+#: ../../source/architecture.rst:97
+msgid ""
+"The IoT Device manager is a core entity, responsible for maintaining the "
+"devices data models and its abstractions, it is also responsible for "
+"propagating this models to services that are interested in this kind of "
+"information, for example, the iot-agent."
+msgstr ""
+"O gerenciador de dispositivos IoT é uma entidade central responsável por "
+"manter os modelos de dados dos dispositivos e suas abstrações e "
+"disseminá-los para os serviços interessados como, por exemplo, o iot-agent."
+
+#: ../../source/architecture.rst:101
+msgid ""
+"This service is stateless, having its data persisted to a database, with "
+"data isolation for users and applications, making possible a multi-tenant"
+" architecture for the middleware."
+msgstr ""
+"O serviço não mantém estados e tem seus dados persistidos em banco de dados, "
+"onde suporta isolamento de dados por usuários e aplicações, viabilizando uma "
+"arquitetura de middleware com multi-tenancy."
+
+#: ../../source/architecture.rst:105
+msgid "Iot-agent"
+msgstr "Agente IoT"
+
+#: ../../source/architecture.rst:107
+msgid ""
+"The iot-agent is an adaptation service between the data model of the "
+"context broker and the devices data models. The *dojot* platform can have"
+" multiple iot-agents, each one of them being specialized in a specific "
+"protocol like, for instance, MQTT/JSON, CoAP/LWM2M and HTTP/JSON."
+msgstr ""
+"O Agente IoT é um serviço de adaptação entre o modelo de contexto do broker "
+"e o modelo de dados do dispositivo. A plataforma dojot pode ter inúmeros "
+"agentes IoT, cada um deles especializado em um determinado protocolo como, "
+"por exemplo, MQTT/JSON, CoAP/LWM2M e HTTP/JSON."
+
+#: ../../source/architecture.rst:111
+msgid ""
+"Security measures like the management of the secure channel used for the "
+"communication of the platform with the device is also treated by this "
+"service."
+msgstr ""
+"Medidas de segurança como gerenciamento de canal seguro entre a plataforma "
+"e os dispositivo, também são tratadas por este serviço."
+
+#: ../../source/architecture.rst:115
+msgid "User Authorization Service"
+msgstr "Serviço de Autorização de Usuários"
+
+#: ../../source/architecture.rst:117
+msgid ""
+"This service is responsible for managing user profiles and access "
+"control. Basically any API call that reaches the platform via the API "
+"Gateway is validated by this service."
+msgstr ""
+"Serviço que implementa o gerenciamento de perfil de usuários e "
+"controle de acesso. Basicamente qualquer chamada de aplicação através "
+"do API Gateway é validada por este serviço."
+
+#: ../../source/architecture.rst:120
+msgid ""
+"To be able to deal with a high volume of authorization calls, it uses "
+"caching, it is stateless and it is scalable horizontally. Its data is "
+"stored on a database."
+msgstr ""
+"Para ser capaz de atender a um grande volume de chamadas de autorização, "
+"faz uso de cache, não mantém estados e pode ser escalado horizontalmente. "
+"Seus dados são mantidos em banco de dados clusterizável."
+
+#: ../../source/architecture.rst:124
+msgid "Service Orchestrator"
+msgstr "Orquestrador de Serviços"
+
+#: ../../source/architecture.rst:126
+msgid ""
+"This service provides a high level API for configuring the *dojot* with "
+"the objective of reducing the need of knowing how to handle each one of "
+"the services that are part of the platform. More specifically, it is "
+"responsible for modeling different services, exposing a simplified "
+"configuration interface and propagating this configuration to the various"
+" services when requested. It acts as a centralized configuration manager "
+"for multiple services."
+msgstr ""
+"Este serviço provê uma API de alto nível para configuração do *dojot* "
+"com o objetivo de reduzir a necessidade de conhecer os diversos serviços "
+"que o compõem. Mais especificamente, ele é responsável por modelar "
+"diversos serviços de forma a expor uma interface de configuração "
+"simplificada e propagar as configurações para diversos serviços quando "
+"solicitado. Atua como um gerenciador centralizado de configurações para "
+"múltiplos serviços."
+
+#: ../../source/architecture.rst:132
+msgid "Fiware Perseo"
+msgstr "Fiware Perseo"
+
+#: ../../source/architecture.rst:134
+msgid ""
+"The CEP service is responsible for analysing in real time the data "
+"processing flows for selected events and triggering actions when specific"
+" conditions or thresholds are reached. This component is used for "
+"creating notification events from the pure data that is incoming from the"
+" IoT devices. It is integrated with the platform through the context "
+"broker and its configuration is abstracted by the service orchestrator."
+msgstr ""
+"O serviço de CEP é responsável por analisar em tempo real os fluxos "
+"de processamento de eventos configurados e disparar ações quando "
+"determinadas condições são atingidas. Este componente é utilizado "
+"para a geração de eventos de notificação, bem como derivar informações "
+"a partir dos dados brutos de dispositivos IoT. Integra-se ao dojot "
+"a partir do broker e a sua configuração é abstraída pelo orquestrador de serviços."
+
+#: ../../source/architecture.rst:140
+msgid "History (Logstash)"
+msgstr "Histórico (Logstash)"
+
+#: ../../source/architecture.rst:142
+msgid ""
+"The Logstash connects to the context broker and works as a pipeline for "
+"data and events that must be persisted on a database. The data is "
+"converted into an storage structure and is sent to the corresponding "
+"database."
+msgstr ""
+"O Logstash conecta-se ao broker de contexto e funciona como um pipeline "
+"para os dados e eventos a serem persistidos em base de dados. No Logstash, "
+"os dados são transformados conforme a estrutura de armazenamento a ser "
+"adotada e enviados para a base de dados correspondente."
+
+#: ../../source/architecture.rst:145
+msgid ""
+"For internal storage, the MongoDB non-relational database is being used, "
+"it allows a Sharded Cluster configuration that may be required according "
+"to the use case."
+msgstr ""
+"Para armazenamento interno, utiliza-se uma base de dados não-relacional "
+"MongoDB que pode ser configurada em modo Sharded Cluster dependendo do caso de uso."
+
+#: ../../source/architecture.rst:148
+msgid ""
+"The data may also be directed to databases that are external do the "
+"*dojot* platform, requiring only a proper configuration of Logstash and "
+"the data model to be used."
+msgstr ""
+"Os dados também podem ser armazenados em base de dados externa a plataforma dojot. "
+"Para isto, basta configurar o Logstash para enviar os dados para a base "
+"correspondente conforme a estrutura de dados desejada."
+
+#: ../../source/architecture.rst:152
+msgid "Logging and Auditing Service"
+msgstr "Serviço de Registro e Auditoria"
+
+#: ../../source/architecture.rst:154
+msgid ""
+"All the services that are part of the *dojot* platform generate usage "
+"metrics of its resources and make then available to the logging and "
+"auditing service, which process this registers and summarize then based "
+"on users and applications."
+msgstr ""
+"Todos os serviços que compõem o dojot geram métricas de utilização dos "
+"seus recursos e as disponibilizam ao serviço de registro e auditoria, "
+"o qual processa os registros e os sumariza por usuários e aplicações."
+
+#: ../../source/architecture.rst:157
+msgid ""
+"The consolidated data is presented back to the services, allowing then, "
+"for example, to expose this data to the user via a graphical interface, "
+"to limit the usage of the system based on resource consumption and quotas"
+" associated with users or even to be used by billing services to charge "
+"users for the utilization of the platform."
+msgstr ""
+"Os dados consolidados são disponibilizados para outros serviços do próprio "
+"dojot, permitindo-lhes, por exemplo, expor esses dados através de uma interface "
+"gráfica para os usuários, ára limitar o uso do sistema baseado no consumo de "
+"recursos e cotas associadas a usuários ou ainda pode ser usado por serviços "
+"externos de faturamento em função da utilização da plataforma por usuários."
+
+#: ../../source/architecture.rst:162
+msgid "Kong API Gateway"
+msgstr "Kong API Gateway"
+
+#: ../../source/architecture.rst:164
+msgid ""
+"The Kong API Gateways is used as the entry point for applications and "
+"external services to reach the services that are internal to the dojot "
+"platform, resulting in multiple advantages like, for instance, single "
+"access point and ease when applying rules over the API calls like traffic"
+" rate limitation and access control."
+msgstr ""
+"O Kong API Gateway é utilizado como um ponto de fronteira entre as aplicações "
+"e serviços externos e os serviços internos do dojot, isto resulta em inúmeras "
+"vantagens como, por exemplo, ponto único de acesso e facilidade na aplicação "
+"de regras sobre as chamadas de APIs como limitação de tráfego e controle de acesso."
+
+#: ../../source/architecture.rst:169
+msgid "Management Application"
+msgstr "Aplicação de Gerência"
+
+#: ../../source/architecture.rst:171
+msgid ""
+"Web Application responsible for providing responsive interfaces to manage"
+" the *dojot* platform, including functionalities like:"
+msgstr ""
+"Aplicação WEB que provê interfaces responsivas para gerenciamento da plataforma "
+"*dojot*, incluindo funcionalidades como:"
+
+#: ../../source/architecture.rst:174
+msgid ""
+"User Profile Management: define profiles and the API permission "
+"associated to those profiles"
+msgstr ""
+"Gerenciamento de perfil de usuários: definir perfis e quais APIs "
+"podem ou não serem acessadas pelo respectivo perfil."
+
+#: ../../source/architecture.rst:175
+msgid "User Management: Creation, Visualization, Edition and Deletion Operations"
+msgstr ""
+"Gerenciamento de usuários: operações de criação, visualização, edição e remoção."
+
+#: ../../source/architecture.rst:176
+msgid ""
+"Applications Management: Creation, Visualization, Edition and Deletion "
+"Operations"
+msgstr ""
+"Gerenciamento de aplicações: operações de criação, visualização, edição e remoção."
+
+#: ../../source/architecture.rst:177
+msgid ""
+"Device Models Management: Creation, Visualization, Edition and Deletion "
+"Operations"
+msgstr ""
+"Gerenciamento de modelos de dispositivos: operações de criação, visualização, edição e remoção."
+
+#: ../../source/architecture.rst:178
+msgid ""
+"Devices Management: Creation, Visualization (real time data), Edition and"
+" Deletion Operations"
+msgstr ""
+"Gerenciamento de dispositivos: operações de criação, visualização "
+"(dispositivo e dados em tempo real), edição e remoção."
+
+
+#: ../../source/architecture.rst:179
+msgid ""
+"Processing Flows Management: Creation, Visualization, Edition and "
+"Deletion Operations"
+msgstr ""
+"Gerenciamento de fluxo de processamentos: operações de criação, "
+"visualização, edição e remoção de fluxos de processamento de dados."
+
+#: ../../source/architecture.rst:182
+msgid "Elastic Service Controller"
+msgstr "Controlador de Serviços Elástico"
+
+#: ../../source/architecture.rst:184
+msgid ""
+"This is a service specialized for cloud environments, that is capable of "
+"monitoring the utilization of the platform, being able to increase or "
+"decrease its storage and processing capacity in an dynamic and automatic "
+"fashion to adapt to the variability on the demand."
+msgstr ""
+"Serviço especializado para ambientes de nuvem que monitora a utilização "
+"da plataforma, diminuindo ou aumentando a sua capacidade de processamento "
+"e armazenamento de maneira automática e dinâmica de forma a se adaptar a "
+"variação da demanda."
+
+#: ../../source/architecture.rst:188
+msgid ""
+"This controller depends that the dojot platform services are horizontally"
+" scalable, as well as the databases must be clusterizable, which match "
+"with the adopted architecture."
+msgstr ""
+"Este controlador depende que os serviços que compõem o dojot possam ser "
+"escalados horizontalmente, assim como, que os bancos de dados utilizados "
+"sejam clusterizáveis, que é o caso da arquitetura adotada."
+
+#: ../../source/architecture.rst:192
+msgid "Infrastructure"
+msgstr "Infraestrutura"
+
+#: ../../source/architecture.rst:194
+msgid ""
+"**TODO**: This section should describe the components that are used as "
+"ready-made pieces of working software that compose the solution, but have"
+" no implementation specific to the project. Relevant topics that might be"
+" discussed here are:"
+msgstr ""
+"**TODO**: Esta sessão deve descrever os componentes que são usados como "
+"peças de software externo prontos para comport a solução mas não possuem "
+"nenhuma implementação específica feita como parte do projeto. Tópicos "
+"relevantes que podes ser discutidos nesta sessão são: "
+
+#: ../../source/architecture.rst:199
 msgid "The API gateway"
-msgstr ""
+msgstr "O Gateway de APIs"
 
-#: ../../source/architecture.rst:30
+#: ../../source/architecture.rst:200
 msgid "Storage components (mongo, redis, HDFS, CEPH, etc.)"
-msgstr ""
+msgstr "Componentes de Armazenatamento (mongo, redis, HDFS, Ceph, etc.)"
 
-#: ../../source/architecture.rst:31
+#: ../../source/architecture.rst:201
 msgid ""
 "Processing libraries and environments (Spark, Flink, Storm, kafka-"
 "streaming, map-reduce, etc.)"
 msgstr ""
+"Bibliotecas e ambientes de processamentos (Spark, Flink, Storm, "
+"kafka-streaming, map-reduce, etc.)"
 
-#: ../../source/architecture.rst:32
+#: ../../source/architecture.rst:202
 msgid "Broker components (rabbitMQ, mosquitto, kafka, verneMQ, emqtt, etc.)"
-msgstr ""
+msgstr "Componentes Intermediários (rabbitMQ, mosquitto, kafka, verneMQ, etc.)"
 
-#: ../../source/architecture.rst:35
+#: ../../source/architecture.rst:205
 msgid "Communications"
-msgstr ""
+msgstr "Comunicação"
 
-#: ../../source/architecture.rst:37
+#: ../../source/architecture.rst:207
 msgid ""
-"This section should provide the reader with the communication strategy "
-"used to bind together the components that comprise the solution, as well "
-"as the interfaces (protocols, serialization formats) available to the "
-"applications and devices developers."
+"**TODO**: This section should provide the reader with the communication "
+"strategy used to bind together the components that comprise the solution,"
+" as well as the interfaces (protocols, serialization formats) available "
+"to the applications and devices developers."
 msgstr ""
+"**TODO**: Esta sessão deve prover ao leitor estratégias de comunicação "
+"usadas para unir os componentes que compõe a solução, bem como as interfaces "
+"(protocolos, formatos de serialização) disponíveis para a aplicação e "
+"desenvolvedores de dispositivos."
 
-#: ../../source/architecture.rst:42
+#: ../../source/architecture.rst:213
 msgid "Deployment strategies"
-msgstr ""
+msgstr "Estratégias de Implantação"
 
-#: ../../source/architecture.rst:44
+#: ../../source/architecture.rst:215
 msgid ""
-"This section should list the deployment requirements and implementation "
-"decisions made to satisfy those requirements. \"Why orchestrator platform"
-" 'x'?\", \"How can this be deployed on commercial cloud environments?\", "
-"\"How can this be deployed on stand-alone environments?\" are all "
-"questions that should be answered here."
+"**TODO**: This section should list the deployment requirements and "
+"implementation decisions made to satisfy those requirements. \"Why "
+"orchestrator platform 'x'?\", \"How can this be deployed on commercial "
+"cloud environments?\", \"How can this be deployed on stand-alone "
+"environments?\" are all questions that should be answered here."
 msgstr ""
+"**TODO**: Esta sessão deve listar os requisitos de implantação e "
+"decisões de implementação tomadas para satisfazer estes requisitos. \"Por que "
+"a plataforma de orquestração 'x'?\", \"Como a plataforma pode ser implantada "
+"em ambientes de núvem comerciais?\", \"Como a plataforma pode ser implantada "
+"em ambientes isolados?\" são todas questões que devem ser respondidas aqui."
 
-#: ../../source/architecture.rst:50
+#: ../../source/architecture.rst:222
 msgid "Comparative analysis"
-msgstr ""
+msgstr "Análise Comparativa"
 
-#: ../../source/architecture.rst:52
+#: ../../source/architecture.rst:224
 msgid ""
-"This section should detail the features that differenciate the platform "
-"from a \"stock\" deployment of fiware, as well as a feature summary "
-"comparing the proposed solution with a reduced set of third-party "
-"implementations of IoT platforms available."
+"**TODO**: This section should detail the features that differenciate the "
+"platform from a \"stock\" deployment of fiware, as well as a feature "
+"summary comparing the proposed solution with a reduced set of third-party"
+" implementations of IoT platforms available."
 msgstr ""
-
+"**TODO**: Esta sessão deve detalhar as características que diferenciam a "
+"plataforma de uma implantação \"padrão\" do Fiware, bem como um resumo das "
+"características comparando a solução proposta com um conjunto reduzido "
+"de plataformas IoT de terceiros disponíveis no mercado."

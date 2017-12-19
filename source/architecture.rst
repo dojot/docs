@@ -57,7 +57,8 @@ CEP for processing it based on rules. If certain conditions are matched when rul
 generated and sent to the broker service to be redistributed to the interested services.
 
 This architecture made possible the validation of ideas and limitations and possible improvements were identified,
-converging to a reviewed architectural proposition as described on :numref:`new_arch`.
+converging to a reviewed architectural proposition as described on :numref:`new_arch`. This new proposal is under
+development and should become part of the solution.
 
 .. _new_arch:
 .. figure:: images/new_architecture.png
@@ -127,7 +128,7 @@ how to handle each one of the services that are part of the platform. More speci
 different services, exposing a simplified configuration interface and propagating this configuration to the various
 services when requested. It acts as a centralized configuration manager for multiple services.
 
-Firware Perseo
+Fiware Perseo
 **************
 
 The CEP service is responsible for analysing in real time the data processing flows for selected events and triggering
