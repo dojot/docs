@@ -63,7 +63,7 @@ Initialization tells the library which URLs will be used to perform mutual authe
 
 **Initialize Kerberos**
 
-.. code-block: c
+.. code-block:: c
 
     errno_t initializeKerberos(uint8_t* host, uint8_t hostLength, uint8_t* uriRequestAS, uint8_t requestASLength, uint8_t* uriRequestAP, uint8_t requestAPLength)
 
@@ -83,7 +83,7 @@ The arguments used in the function are described below.
 
 The following code snippet shows an example of how the function can be used.
 
-.. code-block: c
+.. code-block:: c
 
     char* host = "http://localhost:8000/"; // dojot URL
     char* reqAS = "kerberos/requestAS";
@@ -100,13 +100,13 @@ This callback function is implemented by the library user and must be registered
 
 **Set Callback**
 
-.. code-block: c
+.. code-block:: c
 
     errno_t setCallback(void (*callback)(int))
 
 The following code shows an example of how the callback function can be created and registered.
 
-.. code-block: c
+.. code-block:: c
 
     void errorCallback(int err){
         // Error handling and logging code
@@ -119,13 +119,13 @@ Call mutual authentication function
 
 After initializing the library with platform URL and registering the callback function, the library is ready to perform the mutual authentication process. The function that is used to perform the process is shown below.
 
-.. code-block: c
+.. code-block:: c
 
     errno_t executeKerberosHandshake()
 
 The code below shows an example of how the function may be used.
 
-.. code-block: c
+.. code-block:: c
 
     errno_t ret = executeKerberosHandshake();
 
@@ -136,7 +136,8 @@ After the mutual authentication process completes, the application may send addi
 
 The following is an example of a call to a dojot API where mutual authentication session identifier is also sent.
 
-.. code-block: http
+::
+
     GET /device HTTP/1.1
     Host: localhost:8000
     ma-session-id: a4cdad05441940c5c07ee9f55b8fafbdc0eba14afce449c9c9ec052bb20f50f4

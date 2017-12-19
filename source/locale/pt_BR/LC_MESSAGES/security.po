@@ -1,0 +1,293 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, CPqD
+# This file is distributed under the same license as the dojot package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: dojot 0.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-12-18 16:28-0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../source/security/mutual-authentication.rst:2
+msgid "Mutual Authentication"
+msgstr ""
+
+#: ../../source/security/mutual-authentication.rst:4
+msgid ""
+"Mutual authentication is the process in which two entities authenticate "
+"each other. In a client-server communication, the client must prove its "
+"identity to the server and the server must prove its identity to the "
+"client. Thus, each entity can ensure that they are communicating with a "
+"legitimate interlocutor."
+msgstr "Autenticação Mútua é o processo no qual duas entidades fazem a "
+"autenticação uma da outra. Numa comunicação cliente-servidor, o cliente "
+"deve provar sua identidade ao servidor e o servidor deve provar sua "
+"identidade ao cliente. Dessa forma, cada entidade pode garantir que está "
+"se comunicando com um interlocutor legítimo."
+
+#: ../../source/security/mutual-authentication.rst:6
+msgid ""
+"Mutual authentication protects access to data the application accesses "
+"from dojot and therefore protects access to data of that application’s "
+"user. It is done by ensuring that only registered applications can access"
+" platform data and functionality. In addition, it ensures that the "
+"platform the application is accessing is legitimate, meaning that no "
+"attacker can pass themselves by the platform and get user or application "
+"data."
+msgstr "A autenticação mútua protege o acesso aos dados que a aplicação acessa "
+"na dojot e, por consequência, protege o acesso ao dados dos usuários dessa "
+"aplicação. Ela faz isso garantindo que somente as próprias aplicações "
+"registradas possam acessar os dados e funcionalidades da plataforma. "
+"Adicionalmente, ela assegura que a plataforma que a aplicação esteja acessando "
+"é legítima, ou seja, que nenhum atacante possa se passar plataforma e obter "
+"dados da aplicação e de seus usuários. "
+
+#: ../../source/security/mutual-authentication.rst:12
+msgid "Using Mutual Authentication"
+msgstr ""
+
+#: ../../source/security/mutual-authentication.rst:14
+msgid ""
+"Applications can access dojot functionality to interact with its "
+"components and connected devices. For an application to ensure that it is"
+" communicating with a legitimate platform (and vice versa), it must make "
+"use of the mutual authentication functionality dojot provides. This is a "
+"simple process and its use requires only three steps to follow:"
+msgstr "Aplicações podem acessar as funcionalidades da dojot para interagir "
+"com seus componentes e com os dispositivos conectados. Para que uma aplicação "
+"possa garantir que está se comunicando com uma plataforma legítima (e "
+"vice-versa), ela deve fazer o uso da funcionalidade de autenticação mútua "
+"que a dojot fornece. Esse é um processo simples e seu uso requer apenas 3 "
+"passos a serem seguidos:"
+
+#: ../../source/security/mutual-authentication.rst:16
+msgid ""
+"Application Registration. When an application is registered in dojot, it "
+"receives an identifier and a key that must be kept secret. This key is "
+"used to authenticate the application on the platform."
+msgstr "Registro da aplicação. Quando uma aplicação é registrada na dojot, ela "
+"recebe um identificador e uma chave que deve ser mantida em segredo. Essa "
+"chave é usada para autenticar a aplicação na plataforma."
+
+#: ../../source/security/mutual-authentication.rst:18
+msgid ""
+"Authentication. At the beginning of the communication between application"
+" and dojot, the application initiates a handshake in which the two "
+"entities will exchange information to ensure they are legitimate."
+msgstr "Autenticação. No início da comunicação entre a aplicação e a dojot, a "
+"aplicação inicia um processo de handshake no qual as duas entidades irão "
+"trocar informações de forma a garantir que são legítimas."
+
+#: ../../source/security/mutual-authentication.rst:20
+msgid ""
+"Using the platform. When accessing dojot interfaces, the platform informs"
+" a session identifier that is obtained at the time of authentication. "
+"Thus, the platform can verify that the mutual authentication process was "
+"performed by the application."
+msgstr "Uso da plataforma. Ao acessar as interfaces da dojot, a plataforma "
+"informa o identificador da sessão que obteve no momento da autenticação. Com "
+"isso, a plataforma pode verificar que a aplicação realizou o processo de "
+"autenticação mútua"
+
+#: ../../source/security/mutual-authentication.rst:23
+msgid "Application Registration"
+msgstr "Registro de aplicação"
+
+#: ../../source/security/mutual-authentication.rst:25
+msgid ""
+"An application that is registered with dojot will receive an identifier "
+"and a key that must be kept secret. The registration indicates that an "
+"application will communicate and use platform features."
+msgstr "Uma aplicação que se registra na dojot irá receber um identificador e "
+"uma chave que deve ser mantida em segredo. O registro indica que uma "
+"aplicação irá se comunicar e utilizar funcionalidades da plataforma."
+
+#: ../../source/security/mutual-authentication.rst:27
+msgid ""
+"Currently, the method used to register an application is through a REST "
+"interface. After making the request for the registration, the application"
+" will receive a unique identifier and a key. The API is described below"
+msgstr "Atualmente, o método utilizado para fazer o registro de uma aplicação "
+"é através de uma interface REST. Após fazer a requisição para o registro, a "
+"aplicação receberá um identificador único e uma chave. A API é descrita abaixo."
+
+#: ../../source/security/mutual-authentication.rst:29
+msgid "**REGISTER COMPONENT** - Register new application"
+msgstr "**REGISTER COMPONENT** - Registro de nova aplicação"
+
+#: ../../source/security/mutual-authentication.rst:46
+msgid ""
+"Received identifier and key will be used at the moment the application "
+"authenticates with dojot. In order to do this, a client library is "
+"provided to perform the authentication process (available in "
+"github.com/dojot/ma-client-libs) and therefore, the library should have "
+"knowledge about the values of the identifier and the key. The file "
+"https://github.com/dojot/ma-client-libs/kerberos/src/protocol/unique.h is"
+" used to store these values and will be used by the library at the moment"
+" of authentication."
+msgstr "O identificador e a chave recebidos serão usados no momento da "
+"autenticação com a dojot. Para isso, uma biblioteca cliente é fornecida para "
+"realizar o processo de autenticação "
+"(disponível em github.com/dojot/ma-client-libs) e, portanto, a biblioteca "
+"deverá ter conhecimento sobre os valores do identificador e chave. O arquivo "
+"https://github.com/dojot/ma-client-libs/kerberos/src/protocol/unique.h é "
+"utilizado para armazenar esses valores e será usado pela biblioteca no "
+"momento da autenticação."
+
+#: ../../source/security/mutual-authentication.rst:49
+msgid "Authentication"
+msgstr "Authentication"
+
+#: ../../source/security/mutual-authentication.rst:51
+msgid ""
+"When communicating with dojot, the application must perform mutual "
+"authentication. This process is done through the library provided in "
+"github.com/dojot/ma-client-libs. By using the library, three steps should"
+" be followed:"
+msgstr "Ao se comunicar com a dojot, a aplicação deve realizar a autenticação "
+"mútua. Esse processo é feito através da biblioteca fornecida em "
+"github.com/dojot/ma-client-libs. Ao utilizar a biblioteca, 3 passos devem "
+"ser seguidos:"
+
+#: ../../source/security/mutual-authentication.rst:53
+msgid "Initialize the library with server addresses"
+msgstr "Inicializar a biblioteca com os endereços do servidor"
+
+#: ../../source/security/mutual-authentication.rst:55
+msgid "Register the callback function"
+msgstr "Registrar a função de callback"
+
+#: ../../source/security/mutual-authentication.rst:57
+#: ../../source/security/mutual-authentication.rst:118
+msgid "Call mutual authentication function"
+msgstr "Chamar a função de autenticação mútua"
+
+#: ../../source/security/mutual-authentication.rst:60
+msgid "Library Initialization"
+msgstr "Inicialização da Biblioteca"
+
+#: ../../source/security/mutual-authentication.rst:62
+msgid ""
+"Initialization tells the library which URLs will be used to perform "
+"mutual authentication. The function to be used is described below:"
+msgstr "A inicialização informa à biblioteca as URLs que serão usadas ao "
+"realizar a autenticação mútua. A função a ser utilizada é descrita abaixo:"
+
+#: ../../source/security/mutual-authentication.rst:64
+msgid "**Initialize Kerberos**"
+msgstr "Initialize Kerberos"
+
+#: ../../source/security/mutual-authentication.rst:70
+msgid "The arguments used in the function are described below."
+msgstr "Os argumentos utilizados na função são descritos a seguir."
+
+#: ../../source/security/mutual-authentication.rst:72
+msgid "host - Platform main URL"
+msgstr "host - URL principal da plataforma"
+
+#: ../../source/security/mutual-authentication.rst:74
+msgid "hostLength - Host string size"
+msgstr "hostLength - Tamanho da string de host"
+
+#: ../../source/security/mutual-authentication.rst:76
+msgid "uriRequestAS - requestAS endpoint"
+msgstr "uriRequestAS - Endpoint de acesso de requestAS"
+
+#: ../../source/security/mutual-authentication.rst:78
+msgid "requestASLength - requestAS string size"
+msgstr "requestASLength - Tamanho da string de requestAS"
+
+#: ../../source/security/mutual-authentication.rst:80
+msgid "uriRequestAP - requestAP endpoint"
+msgstr "uriRequestAP - Endpoint de acesso de requestAP"
+
+#: ../../source/security/mutual-authentication.rst:82
+msgid "requestAPLength - requestAP string Size"
+msgstr "requestAPLength - Tamanho da string de requestAP"
+
+#: ../../source/security/mutual-authentication.rst:84
+msgid ""
+"The following code snippet shows an example of how the function can be "
+"used."
+msgstr "O trecho de código a seguir mostra um exemplo de como a função pode "
+"ser utilizada."
+
+#: ../../source/security/mutual-authentication.rst:95
+msgid "Register callback"
+msgstr "Register callback"
+
+#: ../../source/security/mutual-authentication.rst:97
+msgid ""
+"While the mutual authentication process is carried out, the library "
+"communicates with the server and checks received data. If an error occurs"
+" during this process, the library will call a callback function."
+msgstr "Enquanto o processo de autenticação mútua é realizado, a biblioteca "
+"se comunica com o servidor e verifica os dados recebidos. Se algum erro "
+"ocorrer durante esse processo, a biblioteca vai chamar uma função de callback."
+
+#: ../../source/security/mutual-authentication.rst:99
+msgid ""
+"This callback function is implemented by the library user and must be "
+"registered before the authentication process. The callback function can "
+"include code for error handling and logging, for example."
+msgstr "Essa função de callback é implementada pelo usuário da biblioteca e "
+"deve ser registrada antes do processo de autenticação. A função de callback "
+"pode conter código para tratamento de erro ou logs, por exemplo."
+
+#: ../../source/security/mutual-authentication.rst:101
+msgid "**Set Callback**"
+msgstr "**Set Callback**"
+
+#: ../../source/security/mutual-authentication.rst:107
+msgid ""
+"The following code shows an example of how the callback function can be "
+"created and registered."
+msgstr "O código a seguir mostra um exemplo de como a função de callback pode "
+"ser criada e registrada."
+
+#: ../../source/security/mutual-authentication.rst:120
+msgid ""
+"After initializing the library with platform URL and registering the "
+"callback function, the library is ready to perform the mutual "
+"authentication process. The function that is used to perform the process "
+"is shown below."
+msgstr "Depois de inicializar a biblioteca com os endereços da plataforma e "
+"registrar a função de callback, a biblioteca está pronta para realizar o "
+"processo de autenticação mútua. A função que é usada para realizar o processo "
+"é mostrada abaixo."
+
+#: ../../source/security/mutual-authentication.rst:126
+msgid "The code below shows an example of how the function may be used."
+msgstr "O código abaixo mostra um exemplo de como a função pode ser usada"
+
+#: ../../source/security/mutual-authentication.rst:133
+msgid "Accessing dojot APIs"
+msgstr "Acessando as API da plataforma dojot"
+
+#: ../../source/security/mutual-authentication.rst:135
+msgid ""
+"After the mutual authentication process completes, the application may "
+"send additional data in the calls to the platform interfaces. This data "
+"is the mutual authentication session identifier and is sent through an "
+"HTTP header."
+msgstr "Após o processo de autenticação mútua ser concluído, a aplicação "
+"poderá enviar um dado adicional nas chamadas às interfaces da plataforma. "
+"Esse dado é o identificador de sessão de autenticação mútua e é enviado por "
+"meio de um header HTTP."
+
+#: ../../source/security/mutual-authentication.rst:137
+msgid ""
+"The following is an example of a call to a dojot API where mutual "
+"authentication session identifier is also sent."
+msgstr "A seguir é apresentado um exemplo de uma chamada para uma API da dojot "
+"onde o identificador de sessão da autenticação mútua também é enviado."
+
