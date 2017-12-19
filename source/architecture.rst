@@ -15,17 +15,13 @@ refer to each component's own documentation.
 Components
 ----------
 
-This section should describe - in high level - the components that comprise the solution, giving
-the reader enough detail to understand the responsabilities of the components, the technologies
-involved in its design and implementation and its relation with its peers.
-
-With the idea of utilizing open-source and consolidated components, as a starting point for the dojot IoT middleware we
+With the idea of utilizing open-source and consolidated components, as a starting point for the *dojot* IoT middleware we
 adopted the european project Fiware (FIWARE, 2016). The solutions developed from this framework followed a micro-services
 architecture, having as the main component a context broker that is responsible for redistributing events among services
 that are part of the middleware.
 
 The first architecture proposal took into account a basic group of Fiware services together with new services, developed
-in the scope of this project, having as the main purpose, increasing the usability of the dojot platform. This initial
+in the scope of this project, having as the main purpose, increasing the usability of the *dojot* platform. This initial
 architecture can be seen on :numref:`old_arch`.
 
 .. _old_arch:
@@ -67,16 +63,134 @@ converging to a reviewed architectural proposition as described on :numref:`new_
 .. figure:: images/new_architecture.png
     :width: 100%
     :align: center
-    :alt: Revised dojot Architecture
+    :alt: Revised *dojot* Architecture
 
     Revised Architecture
 
 More detailed and updated information can be found on the `dojot Github repository <https://github.com/dojot>`_.
 
+Each one of the components that are part of the architecture are briefly described on the sub-sections below.
+
+Kafka + Subscription Manager + NGSI
+***********************************
+
+Using Apache Kafka in conjunction with a subscriptions managers and a NGSI interface translator we compose a context
+broker analogous to Fiware Orion, with the addition of functionalities that are tipical to brokers, more processing
+power and scalability. Apache Kafka is a distributed platform that was consolidated for the construction of data
+pipelines in real time and streaming applications, differently from the Fiware Orion core that is a non-relational DB.
+
+In Kafka, a specialized topics structure is used to insure isolation between different users and applications data,
+enabling a multi-tenant infrastructure.
+
+The subscription manager service makes use of an in-memory database for efficiency. It adds context to Apache Kafka,
+making it possible that internal or even external services are able to subscribe or query data based on context. The
+subscription manager is also a distributed service to avoid it being a single point of failure or even a bottleneck for
+the architecture.
+
+To keep a certain level of compatibility with Fiware services, meaning, for using Fiware services and components in the
+*dojot* platform with the minimal amount of adaptations, we added a NGSI interface translation service.
+
+Device Manager
+**************
+
+The IoT Device manager is a core entity, responsible for maintaining the devices data models and its abstractions, it is
+also responsible for propagating this models to services that are interested in this kind of information, for example,
+the iot-agent.
+
+This service is stateless, having its data persisted to a database, with data isolation for users and applications,
+making possible a multi-tenant architecture for the middleware.
+
+Iot-agent
+*********
+
+The iot-agent is an adaptation service between the data model of the context broker and the devices data models. The
+*dojot* platform can have multiple iot-agents, each one of them being specialized in a specific protocol like, for
+instance, MQTT/JSON, CoAP/LWM2M and HTTP/JSON.
+
+Security measures like the management of the secure channel used for the communication of the platform with the device
+is also treated by this service.
+
+User Authorization Service
+**************************
+
+This service is responsible for managing user profiles and access control. Basically any API call that reaches the
+platform via the API Gateway is validated by this service.
+
+To be able to deal with a high volume of authorization calls, it uses caching, it is stateless and it is scalable
+horizontally. Its data is stored on a database.
+
+Service Orchestrator
+********************
+
+This service provides a high level API for configuring the *dojot* with the objective of reducing the need of knowing
+how to handle each one of the services that are part of the platform. More specifically, it is responsible for modeling
+different services, exposing a simplified configuration interface and propagating this configuration to the various
+services when requested. It acts as a centralized configuration manager for multiple services.
+
+Firware Perseo
+**************
+
+The CEP service is responsible for analysing in real time the data processing flows for selected events and triggering
+actions when specific conditions or thresholds are reached. This component is used for creating notification events from
+the pure data that is incoming from the IoT devices. It is integrated with the platform through the context broker and
+its configuration is abstracted by the service orchestrator.
+
+History (Logstash)
+******************
+
+The Logstash connects to the context broker and works as a pipeline for data and events that must be persisted on a
+database. The data is converted into an storage structure and is sent to the corresponding database.
+
+For internal storage, the MongoDB non-relational database is being used, it allows a Sharded Cluster configuration that
+may be required according to the use case.
+
+The data may also be directed to databases that are external do the *dojot* platform, requiring only a proper
+configuration of Logstash and the data model to be used.
+
+Logging and Auditing Service
+****************************
+
+All the services that are part of the *dojot* platform generate usage metrics of its resources and make then available
+to the logging and auditing service, which process this registers and summarize then based on users and applications.
+
+The consolidated data is presented back to the services, allowing then, for example, to expose this data to the user via
+a graphical interface, to limit the usage of the system based on resource consumption and quotas associated with users
+or even to be used by billing services to charge users for the utilization of the platform.
+
+Kong API Gateway
+****************
+
+The Kong API Gateways is used as the entry point for applications and external services to reach the services that are
+internal to the dojot platform, resulting in multiple advantages like, for instance, single access point and ease when
+applying rules over the API calls like traffic rate limitation and access control.
+
+Management Application
+**********************
+
+Web Application responsible for providing responsive interfaces to manage the *dojot* platform, including
+functionalities like:
+
+* User Profile Management: define profiles and the API permission associated to those profiles
+* User Management: Creation, Visualization, Edition and Deletion Operations
+* Applications Management: Creation, Visualization, Edition and Deletion Operations
+* Device Models Management: Creation, Visualization, Edition and Deletion Operations
+* Devices Management: Creation, Visualization (real time data), Edition and Deletion Operations
+* Processing Flows Management: Creation, Visualization, Edition and Deletion Operations
+
+Elastic Service Controller
+**************************
+
+This is a service specialized for cloud environments, that is capable of monitoring the utilization of the platform,
+being able to increase or decrease its storage and processing capacity in an dynamic and automatic fashion to adapt to
+the variability on the demand.
+
+This controller depends that the dojot platform services are horizontally scalable, as well as the databases must
+be clusterizable, which match with the adopted architecture.
 
 Infrastructure
 --------------
 
+**TODO**:
 This section should describe the components that are used as ready-made pieces of working software
 that compose the solution, but have no implementation specific to the project. Relevant topics that
 might be discussed here are:
@@ -89,6 +203,7 @@ might be discussed here are:
 Communications
 --------------
 
+**TODO**:
 This section should provide the reader with the communication strategy used to bind together the
 components that comprise the solution, as well as the interfaces (protocols, serialization formats)
 available to the applications and devices developers.
@@ -96,6 +211,7 @@ available to the applications and devices developers.
 Deployment strategies
 ---------------------
 
+**TODO**:
 This section should list the deployment requirements and implementation decisions made to satisfy
 those requirements. "Why orchestrator platform 'x'?", "How can this be deployed on commercial cloud
 environments?", "How can this be deployed on stand-alone environments?" are all questions that
@@ -104,6 +220,7 @@ should be answered here.
 Comparative analysis
 --------------------
 
+**TODO**:
 This section should detail the features that differenciate the platform from a "stock" deployment
 of fiware, as well as a feature summary comparing the proposed solution with a reduced set of
 third-party implementations of IoT platforms available.
