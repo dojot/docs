@@ -1,9 +1,13 @@
 Mutual Authentication
 =====================
 
+A security role is to ensure that only legitimate users have access to the resources and information they need to perform their duties. Authentication is part of this access control, when validating entities identity. At the same time, another security role is to ensure that an entity accesses legitimate resources and information, thereby avoiding situations such as sending information to fraudulent servers, for example.
+
 Mutual authentication is the process in which two entities authenticate each other. In a client-server communication, the client must prove its identity to the server and the server must prove its identity to the client. Thus, each entity can ensure that they are communicating with a legitimate interlocutor.
 
 Mutual authentication protects access to data the application accesses from *dojot* and therefore protects access to data of that application’s user. It is done by ensuring that only registered applications can access platform data and functionality. In addition, it ensures that the platform the application is accessing is legitimate, meaning that no attacker can pass themselves by the platform and get user or application data.
+
+*Dojot* offers a mutual authentication service through a Docker image. This service runs inside the platform and can be accessed using its interfaces.
 
 .. contents:: Table of Contents
   :local:
@@ -24,7 +28,7 @@ Application Registration
 
 An application that is registered with *dojot* will receive an identifier and a key that must be kept secret. The registration indicates that an application will communicate and use platform features.
 
-Currently, the method used to register an application is through a REST interface. After making the request for the registration, the application will receive a unique identifier and a key. The API is described below
+Currently, the method used to register an application is the use of a REST interface. After making the request for the registration, the application will receive a unique identifier and a key. The API is described below
 
 **REGISTER COMPONENT** - Register new application
 
@@ -91,10 +95,10 @@ The following code snippet shows an example of how the function can be used.
 
     errno_t ret = initializeKerberos(host, strlen(host), reqAS, strlen(reqAS), reqAP, strlen(reqAP));
 
-Register callback
-~~~~~~~~~~~~~~~~~
+Callback Registration
+~~~~~~~~~~~~~~~~~~~~~
 
-While the mutual authentication process is carried out, the library communicates with the server and checks received data. If an error occurs during this process, the library will call a callback function.
+On the mutual authentication process, the library communicates with the server and checks received data. If an error occurs during this process, the library will call a callback function.
 
 This callback function is implemented by the library user and must be registered before the authentication process. The callback function can include code for error handling and logging, for example.
 

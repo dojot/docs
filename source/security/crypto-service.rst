@@ -1,15 +1,12 @@
 Crypto Service
 ==============
 
-.. contents:: Table of Contents
-  :local:
-
-Solution Description
---------------------
-
-Crypto Service provides data encryption and decryption functions to other *dojot* components. Therefore, internal components can protect data communication (both internally and externally) and data storage.
+Crypto Service provides data encryption and decryption functions to other *dojot* components. It is used only by internal services so they can protect data communication (both internally and externally) and data storage.
 
 Available as a Docker image, Crypto Service can be instantiated easily and integrated in a short time. Encrypt and decrypt data functionalities are accessed through REST APIs.
+
+.. contents:: Table of Contents
+  :local:
 
 REST APIs
 ---------

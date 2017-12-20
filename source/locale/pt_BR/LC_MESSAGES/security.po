@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dojot 0.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-20 13:30-0200\n"
+"POT-Creation-Date: 2017-12-20 15:30-0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,102 +21,121 @@ msgstr ""
 msgid "Crypto Service"
 msgstr "Serviço Crypto"
 
-#: ../../source/security/crypto-service.rst:8
-msgid "Solution Description"
-msgstr "Descrição da Solução"
-
-#: ../../source/security/crypto-service.rst:10
+#: ../../source/security/crypto-service.rst:4
 msgid ""
 "Crypto Service provides data encryption and decryption functions to other"
-" *dojot* components. Therefore, internal components can protect data "
-"communication (both internally and externally) and data storage."
-msgstr "O serviço Crypto provê funções criptográficas de cifra e decifra de "
-"dados para os demais componentes da plataforma *dojot*. Com isso, os "
-"componentes internos podem proteger os dados que serão trafegados "
-"internamente/externamente ou os dados que serão armazenados, por exemplo."
+" *dojot* components. It is used only by internal services so they can "
+"protect data communication (both internally and externally) and data "
+"storage."
+msgstr ""
+"O serviço Crypto provê funções criptográficas de cifra e decifra de dados "
+"para os demais componentes da plataforma dojot. Ele é usado somente pelos "
+"serviços internos e, Ccom isso, os componenteseles internos podem proteger os "
+"dados que serão trafegados internamente/externamente ou os dados que serão "
+"armazenados, por exemplo."
 
-#: ../../source/security/crypto-service.rst:12
+#: ../../source/security/crypto-service.rst:6
 msgid ""
 "Available as a Docker image, Crypto Service can be instantiated easily "
 "and integrated in a short time. Encrypt and decrypt data functionalities "
 "are accessed through REST APIs."
-msgstr "Disponível como imagem Docker, o serviço Crypto pode ser instanciado "
-"com facilidade e incorporado em pouco tempo. As funcionalidades para "
+msgstr ""
+"Disponível como imagem Docker, o serviço Crypto pode ser instanciado com "
+"facilidade e incorporado em pouco tempo. As funcionalidades para "
 "cifra/decifra de dados são disponibilizadas através de interface REST."
 
-#: ../../source/security/crypto-service.rst:15
+#: ../../source/security/crypto-service.rst:12
 msgid "REST APIs"
 msgstr "Interface REST"
 
-#: ../../source/security/crypto-service.rst:17
+#: ../../source/security/crypto-service.rst:14
 msgid "Encrypt and decrypt data APIs are described below."
 msgstr "As APIs para cifrar decifrar dados são descritas abaixo"
 
-#: ../../source/security/crypto-service.rst:19
-#: ../../source/security/crypto-service.rst:121
+#: ../../source/security/crypto-service.rst:16
+#: ../../source/security/crypto-service.rst:118
 msgid "**Decrypt**"
 msgstr ""
 
-#: ../../source/security/crypto-service.rst:21
+#: ../../source/security/crypto-service.rst:18
 msgid "POST /crypto/decrypt"
 msgstr ""
 
-#: ../../source/security/crypto-service.rst:23
-#: ../../source/security/crypto-service.rst:64
+#: ../../source/security/crypto-service.rst:20
+#: ../../source/security/crypto-service.rst:61
 msgid "Request"
 msgstr ""
 
-#: ../../source/security/crypto-service.rst:25
-#: ../../source/security/crypto-service.rst:44
-#: ../../source/security/crypto-service.rst:66
-#: ../../source/security/crypto-service.rst:85
+#: ../../source/security/crypto-service.rst:22
+#: ../../source/security/crypto-service.rst:41
+#: ../../source/security/crypto-service.rst:63
+#: ../../source/security/crypto-service.rst:82
 msgid "Headers"
 msgstr ""
 
-#: ../../source/security/crypto-service.rst:31
-#: ../../source/security/crypto-service.rst:50
-#: ../../source/security/crypto-service.rst:72
-#: ../../source/security/crypto-service.rst:91
+#: ../../source/security/crypto-service.rst:28
+#: ../../source/security/crypto-service.rst:47
+#: ../../source/security/crypto-service.rst:69
+#: ../../source/security/crypto-service.rst:88
 msgid "Body"
 msgstr ""
 
-#: ../../source/security/crypto-service.rst:42
-#: ../../source/security/crypto-service.rst:83
+#: ../../source/security/crypto-service.rst:39
+#: ../../source/security/crypto-service.rst:80
 msgid "Response  200"
 msgstr ""
 
-#: ../../source/security/crypto-service.rst:60
-#: ../../source/security/crypto-service.rst:107
+#: ../../source/security/crypto-service.rst:57
+#: ../../source/security/crypto-service.rst:104
 msgid "**Encrypt**"
 msgstr ""
 
-#: ../../source/security/crypto-service.rst:62
+#: ../../source/security/crypto-service.rst:59
 msgid "POST /crypto/encrypt"
 msgstr ""
 
-#: ../../source/security/crypto-service.rst:101
+#: ../../source/security/crypto-service.rst:98
 msgid "Usage Examples"
 msgstr "Exemplos de Uso"
 
-#: ../../source/security/crypto-service.rst:103
+#: ../../source/security/crypto-service.rst:100
 msgid ""
 "In order to use cryptographic functions provided by Crypto Service, one "
 "must access the available REST APIs through a HTTP request."
-msgstr "Para utilizar as funções criptográficas que o Crypto oferece, é "
+msgstr ""
+"Para utilizar as funções criptográficas que o Crypto oferece, é "
 "necessário acessar as interfaces REST através de uma chamada HTTP. "
 
-#: ../../source/security/crypto-service.rst:105
+#: ../../source/security/crypto-service.rst:102
 msgid ""
 "Examples of how those requests can be made are showed bellow using the "
 "command line tool curl."
-msgstr "Abaixo são apresentados exemplos de como essas chamadas podem ser "
-"feitas usando a ferramenta de linha de comando curl."
+msgstr ""
+"Abaixo são apresentados exemplos de como essas chamadas podem ser feitas "
+"usando a ferramenta de linha de comando curl."
 
 #: ../../source/security/mutual-authentication.rst:2
 msgid "Mutual Authentication"
 msgstr "Autenticação Mútua"
 
 #: ../../source/security/mutual-authentication.rst:4
+msgid ""
+"A security role is to ensure that only legitimate users have access to "
+"the resources and information they need to perform their duties. "
+"Authentication is part of this access control, when validating entities "
+"identity. At the same time, another security role is to ensure that an "
+"entity accesses legitimate resources and information, thereby avoiding "
+"situations such as sending information to fraudulent servers, for "
+"example."
+msgstr ""
+"Um papel da segurança é de garantir que somente usuários legítimos tenham o "
+"acesso aos recursos e informações necessárias para realizar suas funções. A "
+"autenticação faz parte deste controle de acessos, ao validar a identidade de "
+"entidades. Ao mesmo tempo, outro papel da segurança é garantir que uma "
+"entidade acesse os recursos e informações legítimas, evitando assim situações "
+"como o envio de informações a servidores fraudulentos, por exemplo."
+
+#: ../../source/security/mutual-authentication.rst:6
 msgid ""
 "Mutual authentication is the process in which two entities authenticate "
 "each other. In a client-server communication, the client must prove its "
@@ -130,7 +149,7 @@ msgstr ""
 "identidade ao cliente. Dessa forma, cada entidade pode garantir que está "
 "se comunicando com um interlocutor legítimo."
 
-#: ../../source/security/mutual-authentication.rst:6
+#: ../../source/security/mutual-authentication.rst:8
 msgid ""
 "Mutual authentication protects access to data the application accesses "
 "from *dojot* and therefore protects access to data of that application’s "
@@ -146,13 +165,22 @@ msgstr ""
 "aplicações registradas possam acessar os dados e funcionalidades da "
 "plataforma. Adicionalmente, ela assegura que a plataforma que a aplicação"
 " esteja acessando é legítima, ou seja, que nenhum atacante possa se "
-"passar plataforma e obter dados da aplicação e de seus usuários. "
+"passar pela plataforma e obter dados da aplicação e de seus usuários."
 
-#: ../../source/security/mutual-authentication.rst:12
+#: ../../source/security/mutual-authentication.rst:10
+msgid ""
+"*Dojot* offers a mutual authentication service through a Docker image. "
+"This service runs inside the platform and can be accessed using its "
+"interfaces."
+msgstr "A *dojot* oferece um serviço de autenticação mútua através de uma "
+"imagem Docker. Esse serviço é executado na plataforma e pode ser acessado "
+"usando as interfaces adequadas."
+
+#: ../../source/security/mutual-authentication.rst:16
 msgid "Using Mutual Authentication"
 msgstr "Usando a Autenticação Mútua"
 
-#: ../../source/security/mutual-authentication.rst:14
+#: ../../source/security/mutual-authentication.rst:18
 msgid ""
 "Applications can access *dojot* functionality to interact with its "
 "components and connected devices. For an application to ensure that it is"
@@ -167,7 +195,7 @@ msgstr ""
 "autenticação mútua que a *dojot* fornece. Esse é um processo simples e "
 "seu uso requer apenas 3 passos a serem seguidos:"
 
-#: ../../source/security/mutual-authentication.rst:16
+#: ../../source/security/mutual-authentication.rst:20
 msgid ""
 "Application Registration. When an application is registered in *dojot*, "
 "it receives an identifier and a key that must be kept secret. This key is"
@@ -177,7 +205,7 @@ msgstr ""
 "recebe um identificador e uma chave que deve ser mantida em segredo. Essa"
 " chave é usada para autenticar a aplicação na plataforma."
 
-#: ../../source/security/mutual-authentication.rst:18
+#: ../../source/security/mutual-authentication.rst:22
 msgid ""
 "Authentication. At the beginning of the communication between application"
 " and *dojot*, the application initiates a handshake in which the two "
@@ -187,7 +215,7 @@ msgstr ""
 "aplicação inicia um processo de handshake no qual as duas entidades irão "
 "trocar informações de forma a garantir que são legítimas."
 
-#: ../../source/security/mutual-authentication.rst:20
+#: ../../source/security/mutual-authentication.rst:24
 msgid ""
 "Using the platform. When accessing *dojot* interfaces, the platform "
 "informs a session identifier that is obtained at the time of "
@@ -199,11 +227,11 @@ msgstr ""
 "Com isso, a plataforma pode verificar que a aplicação realizou o processo"
 " de autenticação mútua"
 
-#: ../../source/security/mutual-authentication.rst:23
+#: ../../source/security/mutual-authentication.rst:27
 msgid "Application Registration"
 msgstr "Registro de aplicação"
 
-#: ../../source/security/mutual-authentication.rst:25
+#: ../../source/security/mutual-authentication.rst:29
 msgid ""
 "An application that is registered with *dojot* will receive an identifier"
 " and a key that must be kept secret. The registration indicates that an "
@@ -213,22 +241,23 @@ msgstr ""
 "uma chave que deve ser mantida em segredo. O registro indica que uma "
 "aplicação irá se comunicar e utilizar funcionalidades da plataforma."
 
-#: ../../source/security/mutual-authentication.rst:27
+#: ../../source/security/mutual-authentication.rst:31
 msgid ""
-"Currently, the method used to register an application is through a REST "
-"interface. After making the request for the registration, the application"
-" will receive a unique identifier and a key. The API is described below"
+"Currently, the method used to register an application is the use of a "
+"REST interface. After making the request for the registration, the "
+"application will receive a unique identifier and a key. The API is "
+"described below"
 msgstr ""
 "Atualmente, o método utilizado para fazer o registro de uma aplicação é "
-"através de uma interface REST. Após fazer a requisição para o registro, a"
+"o uso de uma interface REST. Após fazer a requisição para o registro, a"
 " aplicação receberá um identificador único e uma chave. A API é descrita "
 "abaixo."
 
-#: ../../source/security/mutual-authentication.rst:29
+#: ../../source/security/mutual-authentication.rst:33
 msgid "**REGISTER COMPONENT** - Register new application"
 msgstr "**REGISTER COMPONENT** - Registro de nova aplicação"
 
-#: ../../source/security/mutual-authentication.rst:46
+#: ../../source/security/mutual-authentication.rst:50
 msgid ""
 "Received identifier and key will be used at the moment the application "
 "authenticates with *dojot*. In order to do this, a client library is "
@@ -247,11 +276,11 @@ msgstr ""
 "/ma-client-libs/kerberos/src/protocol/unique.h é utilizado para armazenar"
 " esses valores e será usado pela biblioteca no momento da autenticação."
 
-#: ../../source/security/mutual-authentication.rst:49
+#: ../../source/security/mutual-authentication.rst:53
 msgid "Authentication"
 msgstr "Authenticação"
 
-#: ../../source/security/mutual-authentication.rst:51
+#: ../../source/security/mutual-authentication.rst:55
 msgid ""
 "When communicating with *dojot*, the application must perform mutual "
 "authentication. This process is done through the library provided in "
@@ -263,24 +292,24 @@ msgstr ""
 "github.com/dojot/ma-client-libs. Ao utilizar a biblioteca, 3 passos devem"
 " ser seguidos:"
 
-#: ../../source/security/mutual-authentication.rst:53
+#: ../../source/security/mutual-authentication.rst:57
 msgid "Initialize the library with server addresses"
 msgstr "Inicializar a biblioteca com os endereços do servidor"
 
-#: ../../source/security/mutual-authentication.rst:55
+#: ../../source/security/mutual-authentication.rst:59
 msgid "Register the callback function"
 msgstr "Registrar a função de callback"
 
-#: ../../source/security/mutual-authentication.rst:57
-#: ../../source/security/mutual-authentication.rst:118
+#: ../../source/security/mutual-authentication.rst:61
+#: ../../source/security/mutual-authentication.rst:122
 msgid "Call mutual authentication function"
 msgstr "Chamar a função de autenticação mútua"
 
-#: ../../source/security/mutual-authentication.rst:60
+#: ../../source/security/mutual-authentication.rst:64
 msgid "Library Initialization"
 msgstr "Inicialização da Biblioteca"
 
-#: ../../source/security/mutual-authentication.rst:62
+#: ../../source/security/mutual-authentication.rst:66
 msgid ""
 "Initialization tells the library which URLs will be used to perform "
 "mutual authentication. The function to be used is described below:"
@@ -288,39 +317,39 @@ msgstr ""
 "A inicialização informa à biblioteca as URLs que serão usadas ao realizar"
 " a autenticação mútua. A função a ser utilizada é descrita abaixo:"
 
-#: ../../source/security/mutual-authentication.rst:64
+#: ../../source/security/mutual-authentication.rst:68
 msgid "**Initialize Kerberos**"
 msgstr "Initialize Kerberos"
 
-#: ../../source/security/mutual-authentication.rst:70
+#: ../../source/security/mutual-authentication.rst:74
 msgid "The arguments used in the function are described below."
 msgstr "Os argumentos utilizados na função são descritos a seguir."
 
-#: ../../source/security/mutual-authentication.rst:72
+#: ../../source/security/mutual-authentication.rst:76
 msgid "host - Platform main URL"
 msgstr "host - URL principal da plataforma"
 
-#: ../../source/security/mutual-authentication.rst:74
+#: ../../source/security/mutual-authentication.rst:78
 msgid "hostLength - Host string size"
 msgstr "hostLength - Tamanho da string de host"
 
-#: ../../source/security/mutual-authentication.rst:76
+#: ../../source/security/mutual-authentication.rst:80
 msgid "uriRequestAS - requestAS endpoint"
 msgstr "uriRequestAS - Endpoint de acesso de requestAS"
 
-#: ../../source/security/mutual-authentication.rst:78
+#: ../../source/security/mutual-authentication.rst:82
 msgid "requestASLength - requestAS string size"
 msgstr "requestASLength - Tamanho da string de requestAS"
 
-#: ../../source/security/mutual-authentication.rst:80
+#: ../../source/security/mutual-authentication.rst:84
 msgid "uriRequestAP - requestAP endpoint"
 msgstr "uriRequestAP - Endpoint de acesso de requestAP"
 
-#: ../../source/security/mutual-authentication.rst:82
+#: ../../source/security/mutual-authentication.rst:86
 msgid "requestAPLength - requestAP string Size"
 msgstr "requestAPLength - Tamanho da string de requestAP"
 
-#: ../../source/security/mutual-authentication.rst:84
+#: ../../source/security/mutual-authentication.rst:88
 msgid ""
 "The following code snippet shows an example of how the function can be "
 "used."
@@ -328,22 +357,22 @@ msgstr ""
 "O trecho de código a seguir mostra um exemplo de como a função pode ser "
 "utilizada."
 
-#: ../../source/security/mutual-authentication.rst:95
-msgid "Register callback"
-msgstr "Register callback"
+#: ../../source/security/mutual-authentication.rst:99
+msgid "Callback Registration"
+msgstr "Registro de Callback"
 
-#: ../../source/security/mutual-authentication.rst:97
+#: ../../source/security/mutual-authentication.rst:101
 msgid ""
-"While the mutual authentication process is carried out, the library "
-"communicates with the server and checks received data. If an error occurs"
-" during this process, the library will call a callback function."
+"On the mutual authentication process, the library communicates with the "
+"server and checks received data. If an error occurs during this process, "
+"the library will call a callback function."
 msgstr ""
-"Enquanto o processo de autenticação mútua é realizado, a biblioteca se "
+"No processo de autenticação mútua, a biblioteca se "
 "comunica com o servidor e verifica os dados recebidos. Se algum erro "
 "ocorrer durante esse processo, a biblioteca vai chamar uma função de "
 "callback."
 
-#: ../../source/security/mutual-authentication.rst:99
+#: ../../source/security/mutual-authentication.rst:103
 msgid ""
 "This callback function is implemented by the library user and must be "
 "registered before the authentication process. The callback function can "
@@ -353,11 +382,11 @@ msgstr ""
 "ser registrada antes do processo de autenticação. A função de callback "
 "pode conter código para tratamento de erro ou logs, por exemplo."
 
-#: ../../source/security/mutual-authentication.rst:101
+#: ../../source/security/mutual-authentication.rst:105
 msgid "**Set Callback**"
 msgstr "**Set Callback**"
 
-#: ../../source/security/mutual-authentication.rst:107
+#: ../../source/security/mutual-authentication.rst:111
 msgid ""
 "The following code shows an example of how the callback function can be "
 "created and registered."
@@ -365,7 +394,7 @@ msgstr ""
 "O código a seguir mostra um exemplo de como a função de callback pode ser"
 " criada e registrada."
 
-#: ../../source/security/mutual-authentication.rst:120
+#: ../../source/security/mutual-authentication.rst:124
 msgid ""
 "After initializing the library with platform URL and registering the "
 "callback function, the library is ready to perform the mutual "
@@ -377,15 +406,15 @@ msgstr ""
 "processo de autenticação mútua. A função que é usada para realizar o "
 "processo é mostrada abaixo."
 
-#: ../../source/security/mutual-authentication.rst:126
+#: ../../source/security/mutual-authentication.rst:130
 msgid "The code below shows an example of how the function may be used."
 msgstr "O código abaixo mostra um exemplo de como a função pode ser usada"
 
-#: ../../source/security/mutual-authentication.rst:133
+#: ../../source/security/mutual-authentication.rst:137
 msgid "Accessing *dojot* APIs"
 msgstr "Acessando as API da plataforma *dojot*"
 
-#: ../../source/security/mutual-authentication.rst:135
+#: ../../source/security/mutual-authentication.rst:139
 msgid ""
 "After the mutual authentication process completes, the application may "
 "send additional data in the calls to the platform interfaces. This data "
@@ -397,11 +426,17 @@ msgstr ""
 "dado é o identificador de sessão de autenticação mútua e é enviado por "
 "meio de um header HTTP."
 
-#: ../../source/security/mutual-authentication.rst:137
+#: ../../source/security/mutual-authentication.rst:141
 msgid ""
 "The following is an example of a call to a *dojot* API where mutual "
 "authentication session identifier is also sent."
 msgstr ""
 "A seguir é apresentado um exemplo de uma chamada para uma API da *dojot* "
 "onde o identificador de sessão da autenticação mútua também é enviado."
+
+#~ msgid "Solution Description"
+#~ msgstr "Descrição da Solução"
+
+#~ msgid "Register callback"
+#~ msgstr "Register callback"
 
