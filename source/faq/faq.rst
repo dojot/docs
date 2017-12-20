@@ -8,7 +8,9 @@ Here are some answers to frequently-asked questions from dojot platform.
 Got a question that isn't answered here? Please, open an issue on 
 `dojot's Github repository <http://github.com/dojot/dojot>`_.
 
-.. contents:: Table of Contents
+**Table of Contents**
+
+.. contents::
   :local:
 
 General
@@ -40,7 +42,7 @@ development in different segments.
 Where can I get it?
 ^^^^^^^^^^^^^^^^^^^
 
-All components are available in `dojot's GitHub repositories: <https://github.com/dojot>`_.
+All components are available in dojot's GitHub repositories: `<https://github.com/dojot>`_.
 
 Which repository is the main one?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -85,7 +87,7 @@ And that's it.
 The web interface is available at ``http://localhost:8000``. The user is ``admin``, 
 password ``admin``. 
 
-REST APIs are explained in the `Application`_ section.
+REST APIs are explained in the `Applications`_ section.
 
 Ok, I started it and I logged in. Now what?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -98,14 +100,14 @@ How can I update my deploy to dojot's latest version?
 
 You need to follow some steps:
 
-	#. Update the docker-compose repository to the latest version.
+1. Update the docker-compose repository to the latest version.
 	
 .. code-block:: bash	
 	
 	$ cd <path-to-your-clone-of-docker-compose>
 	$ git checkout master && git pull
-	
-Deploy the latest docker images.
+			
+2. Deploy the latest docker images.
 
 .. code-block:: bash
 	
@@ -309,6 +311,17 @@ It is important to point out that dojot contains no e-mail server. It will gener
 and send them to the specified e-mail server.
 
 
+What about a HTTP POST request, how can I send it?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+It is almost the same process as sending an e-mail. 
+
+.. image:: df_http_request.gif
+        :width: 95%
+        :align: center
+
+One important note: make sure that dojot can access your server. 
+
 I want to rename the attributes of a device, what should I do?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -339,9 +352,9 @@ It would be cool a WhatsApp node, is it in roadmap?
 It’s under analysis. We intend to support other notifications systems besides email, including 
 WhatsApp, Twitter and Telegram. If you also have interest, please help us to develop them.
 
-Application
------------
-.. _application:
+Applications
+------------
+.. _applications:
 
 What APIs are available for applications?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

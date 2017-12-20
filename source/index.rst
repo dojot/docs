@@ -24,7 +24,7 @@ pages.
    ops_guide
    user_guide
    install/*
-
+   vms/vbox/guide
    faq/faq
 
 
