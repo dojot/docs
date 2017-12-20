@@ -32,10 +32,12 @@ architecture can be seen on :numref:`old_arch`.
 
     Initial Architecture
 
-In this proposal we utilize the following components from Fiware: the Orion context broker as the communication bus for
-all the internal services of the middleware, the history service, STH, for storing IoT devices data in a non-relational
-MongoDB database, the Perseo CEP service that is responsible for treating events in real time and the iot-agent service
-as an abstraction layer for integrating MQTT and HTTP devices.
+In this proposal we utilize the following components from Fiware:
+
+    * **Orion**: a context broker used as the communication bus for all the internal services of the middleware
+    * **STH**: the history service used for storing IoT devices data in a MongoDB database
+    * **Perseo CEP**: the service that is responsible for treating events in real time
+    * **Iot-agent**: service used as an abstraction layer for integrating MQTT and HTTP devices
 
 To this services we added the Kong API Gateway to act as a centralized point-of-access removing the need of direct
 communication with each one of the services, an orchestration service to abstract the middleware configuration, an
@@ -52,7 +54,7 @@ middleware (Broker, CEP and iot-agent), being partially abstracted by the orches
 The user contexts are isolated and there is no data sharing, the access credentials are validated by the authorization
 service for each and every operation (API Request). Once the devices and the flows are configured, the iot-agent is
 capable of mapping the data received from devices, encapsulated on MQTT for example, and send then to the context broker
-for internal distribution, reaching, for instance, the historic service so it can persist the data on a database and the
+for internal distribution, reaching, for instance, the history service so it can persist the data on a database and the
 CEP for processing it based on rules. If certain conditions are matched when rules are being processed, a new event is
 generated and sent to the broker service to be redistributed to the interested services.
 
@@ -75,10 +77,11 @@ Each one of the components that are part of the architecture are briefly describ
 Kafka + Subscription Manager + NGSI
 ***********************************
 
-Using Apache Kafka in conjunction with a subscriptions managers and a NGSI interface translator we compose a context
-broker analogous to Fiware Orion, with the addition of functionalities that are tipical to brokers, more processing
-power and scalability. Apache Kafka is a distributed platform that was consolidated for the construction of data
-pipelines in real time and streaming applications, differently from the Fiware Orion core that is a non-relational DB.
+Apache Kafka is a distributed messaging platform that can be used by applications which need to stream data or
+consume/produce data pipelines. In contrast to what Orion is, Kafka seems to be more appropriate to fulfil
+*dojot*'s architectural requirements (responsibility isolation, simplicity, and so on). And using it with a
+subscription manager and a NGSI interface translator, we can compose an entity which is very close to
+the features offered by Orion, in addition to improved speed and easier scalability.
 
 In Kafka, a specialized topics structure is used to insure isolation between different users and applications data,
 enabling a multi-tenant infrastructure.
@@ -171,12 +174,12 @@ Management Application
 Web Application responsible for providing responsive interfaces to manage the *dojot* platform, including
 functionalities like:
 
-* User Profile Management: define profiles and the API permission associated to those profiles
-* User Management: Creation, Visualization, Edition and Deletion Operations
-* Applications Management: Creation, Visualization, Edition and Deletion Operations
-* Device Models Management: Creation, Visualization, Edition and Deletion Operations
-* Devices Management: Creation, Visualization (real time data), Edition and Deletion Operations
-* Processing Flows Management: Creation, Visualization, Edition and Deletion Operations
+* **User Profile Management**: define profiles and the API permission associated to those profiles
+* **User Management**: Creation, Visualization, Edition and Deletion Operations
+* **Applications Management**: Creation, Visualization, Edition and Deletion Operations
+* **Device Models Management**: Creation, Visualization, Edition and Deletion Operations
+* **Devices Management**: Creation, Visualization (real time data), Edition and Deletion Operations
+* **Processing Flows Management**: Creation, Visualization, Edition and Deletion Operations
 
 Elastic Service Controller
 **************************
