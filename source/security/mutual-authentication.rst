@@ -3,7 +3,7 @@ Mutual Authentication
 
 Mutual authentication is the process in which two entities authenticate each other. In a client-server communication, the client must prove its identity to the server and the server must prove its identity to the client. Thus, each entity can ensure that they are communicating with a legitimate interlocutor.
 
-Mutual authentication protects access to data the application accesses from dojot and therefore protects access to data of that application’s user. It is done by ensuring that only registered applications can access platform data and functionality. In addition, it ensures that the platform the application is accessing is legitimate, meaning that no attacker can pass themselves by the platform and get user or application data.
+Mutual authentication protects access to data the application accesses from *dojot* and therefore protects access to data of that application’s user. It is done by ensuring that only registered applications can access platform data and functionality. In addition, it ensures that the platform the application is accessing is legitimate, meaning that no attacker can pass themselves by the platform and get user or application data.
 
 .. contents:: Table of Contents
   :local:
@@ -11,18 +11,18 @@ Mutual authentication protects access to data the application accesses from dojo
 Using Mutual Authentication
 ---------------------------
 
-Applications can access dojot functionality to interact with its components and connected devices. For an application to ensure that it is communicating with a legitimate platform (and vice versa), it must make use of the mutual authentication functionality dojot provides. This is a simple process and its use requires only three steps to follow:
+Applications can access *dojot* functionality to interact with its components and connected devices. For an application to ensure that it is communicating with a legitimate platform (and vice versa), it must make use of the mutual authentication functionality *dojot* provides. This is a simple process and its use requires only three steps to follow:
 
-* Application Registration. When an application is registered in dojot, it receives an identifier and a key that must be kept secret. This key is used to authenticate the application on the platform.
+* Application Registration. When an application is registered in *dojot*, it receives an identifier and a key that must be kept secret. This key is used to authenticate the application on the platform.
 
-* Authentication. At the beginning of the communication between application and dojot, the application initiates a handshake in which the two entities will exchange information to ensure they are legitimate.
+* Authentication. At the beginning of the communication between application and *dojot*, the application initiates a handshake in which the two entities will exchange information to ensure they are legitimate.
 
-* Using the platform. When accessing dojot interfaces, the platform informs a session identifier that is obtained at the time of authentication. Thus, the platform can verify that the mutual authentication process was performed by the application.
+* Using the platform. When accessing *dojot* interfaces, the platform informs a session identifier that is obtained at the time of authentication. Thus, the platform can verify that the mutual authentication process was performed by the application.
 
 Application Registration
 ------------------------
 
-An application that is registered with dojot will receive an identifier and a key that must be kept secret. The registration indicates that an application will communicate and use platform features.
+An application that is registered with *dojot* will receive an identifier and a key that must be kept secret. The registration indicates that an application will communicate and use platform features.
 
 Currently, the method used to register an application is through a REST interface. After making the request for the registration, the application will receive a unique identifier and a key. The API is described below
 
@@ -43,12 +43,12 @@ Currently, the method used to register an application is through a REST interfac
       "AppKey": "000102030405060708090a0b0c0d0e0f000102030405060708090a0b0c0d0e0f"
     }
 
-Received identifier and key will be used at the moment the application authenticates with dojot. In order to do this, a client library is provided to perform the authentication process (available in github.com/dojot/ma-client-libs) and therefore, the library should have knowledge about the values of the identifier and the key. The file https://github.com/dojot/ma-client-libs/kerberos/src/protocol/unique.h is used to store these values and will be used by the library at the moment of authentication.
+Received identifier and key will be used at the moment the application authenticates with *dojot*. In order to do this, a client library is provided to perform the authentication process (available in github.com/dojot/ma-client-libs) and therefore, the library should have knowledge about the values of the identifier and the key. The file https://github.com/dojot/ma-client-libs/kerberos/src/protocol/unique.h is used to store these values and will be used by the library at the moment of authentication.
 
 Authentication
 --------------
 
-When communicating with dojot, the application must perform mutual authentication. This process is done through the library provided in github.com/dojot/ma-client-libs. By using the library, three steps should be followed:
+When communicating with *dojot*, the application must perform mutual authentication. This process is done through the library provided in github.com/dojot/ma-client-libs. By using the library, three steps should be followed:
 
 1. Initialize the library with server addresses
 
@@ -129,12 +129,12 @@ The code below shows an example of how the function may be used.
 
     errno_t ret = executeKerberosHandshake();
 
-Accessing dojot APIs
---------------------
+Accessing *dojot* APIs
+----------------------
 
 After the mutual authentication process completes, the application may send additional data in the calls to the platform interfaces. This data is the mutual authentication session identifier and is sent through an HTTP header.
 
-The following is an example of a call to a dojot API where mutual authentication session identifier is also sent.
+The following is an example of a call to a *dojot* API where mutual authentication session identifier is also sent.
 
 ::
 

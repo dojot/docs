@@ -31,6 +31,7 @@ pages.
    :caption: Security
 
    security/mutual-authentication
+   security/crypto-service
 
 
 .. Indices and tables
