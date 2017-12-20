@@ -1,4 +1,4 @@
-Installation guide - Docker compose
+Installation Guide - Docker compose
 ===================================
 
 This document provides instructions on how to create a trivial deployment
