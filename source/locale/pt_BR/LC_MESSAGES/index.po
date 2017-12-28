@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../source/index.rst:2
 msgid "dojot documentation"
-msgstr ""
+msgstr "Documentação do dojot"
 
 #: ../../source/index.rst:4
 msgid ""
@@ -29,6 +29,11 @@ msgid ""
 "integrated interaction, while benefiting for the highly customizable and "
 "efficient infrastructure provided by FIWARE."
 msgstr ""
+"Esta é uma documentação de alto nível para a plataforma IoT dojot desenvolvida"
+" pelo CPqD. Esta plataforma foi baseada no [FIWARE](fiware.org), e tem como objetivo"
+" prover aos desenvolvedores de aplicações e dispositivos uma interação mais concisa e"
+"integrada, através dos benefícios de uma infraestrutura eficiente e altamente"
+" customizável provida pelo FIWARE"
 
 #: ../../source/index.rst:9
 msgid ""
@@ -36,6 +41,10 @@ msgid ""
 "components of its own, and interaction between components was modified to"
 " allow better packaging and performance for the solution as a whole."
 msgstr ""
+"Apesar de ser baseada no projeto FIWARE, esta plataforma atualmente possui"
+" uma grande quantidade de componentes próprios e a interação entre cada "
+"componente foi modificada para permitir um melhor empacotamente "
+"e performance da solução como um todo"
 
 #: ../../source/index.rst:12
 msgid ""
@@ -45,12 +54,17 @@ msgid ""
 "For that, please check the component's own documentation repositories and"
 " ReadTheDocs pages."
 msgstr ""
+"Apesar desta documentação prove um vislumbre geral da plataforma, esta "
+"documentação não é adequada para desenvolvedores do middleware que desejam "
+"entender melhor os componentes que compõe a solução. Para isso, "
+"por favor consulte as documentações específicas de cada componente em seus repositórios"
+" e páginas no ReadTheDocs."
 
 #: ../../source/index.rst:18
 msgid "Contents:"
-msgstr ""
+msgstr "Conteúdo: "
 
 #: ../../source/index.rst:29
 msgid "Security"
-msgstr ""
+msgstr "Segurança"
 
