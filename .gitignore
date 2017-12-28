@@ -2,3 +2,4 @@ build
 _*
 
 .idea/
+*.mo

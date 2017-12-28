@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dojot 0.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-24 10:55-0200\n"
+"POT-Creation-Date: 2017-12-19 14:49-0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31,9 +31,10 @@ msgid ""
 " docker and just want to learn how to use dojot. We don’t recommend it "
 "for development and much less for experimental or real deployments."
 msgstr ""
-"Você deve rodar a dojot desta maneira somente se você não tiver nenhuma familiaridade "
-"com docker e quiser apenas conhecer a dojot. Não recomendamos rodá-la desta maneira "
-"para desenvolvimento e muito menos para qualquer tipo de implantação."
+"Você deve rodar a dojot desta maneira somente se você não tiver nenhuma "
+"familiaridade com docker e quiser apenas conhecer a dojot. Não "
+"recomendamos rodá-la desta maneira para desenvolvimento e muito menos "
+"para qualquer tipo de implantação."
 
 #: ../../source/vms/vbox/guide.rst:10
 msgid ""
@@ -49,45 +50,50 @@ msgid ""
 "to date information and installation procedures can be found at the "
 "project’s documentation:"
 msgstr ""
-"Primeiramente, se você não tem o VirtualBox, você precisa instalá-lo. Informações "
-"e instruções atualizadas estão disponíveis na documentação do projeto:"
+"Primeiramente, se você não tem o VirtualBox, você precisa instalá-lo. "
+"Informações e instruções atualizadas estão disponíveis na documentação do"
+" projeto:"
 
 #: ../../source/vms/vbox/guide.rst:17
 msgid "https://www.virtualbox.org/"
-msgstr ""
+msgstr "https://www.virtualbox.org/"
 
 #: ../../source/vms/vbox/guide.rst:19
 msgid ""
 "Then, you need to download a virtual machine image with dojot, which is "
 "available at:"
 msgstr ""
-"Em seguida, você precisa baixar a imagem da máquina virtual com a dojot, que está "
-"disponível em: "
+"Em seguida, você precisa baixar a imagem da máquina virtual com a dojot, "
+"que está disponível em: "
 
 #: ../../source/vms/vbox/guide.rst:21
 msgid "http://dojot-iso.s3.amazonaws.com/imagem/dojot.0.1.0-dojot.vdi"
-msgstr ""
+msgstr "http://dojot-iso.s3.amazonaws.com/imagem/dojot.0.1.0-dojot.vdi"
 
 #: ../../source/vms/vbox/guide.rst:23
+#, fuzzy
 msgid ""
-"The next step is to create a virtual machine on VirtualBox. Chick on the "
+"The next step is to create a virtual machine on VirtualBox. Click on the "
 "New button, then set the name ``as you wish``, type to ``Linux`` and "
 "version to ``Debian (64-bit)``."
 msgstr ""
-"O próximo passo é criar no VirtualBox uma máquina virtual. Clique em `New` e "
-"dê o nome que desejar, configure o tipo como ``Linux`` e a versão como ``Debian (64-bit)``."
+"O próximo passo é criar no VirtualBox uma máquina virtual. Clique em "
+"`New` e dê o nome que desejar, configure o tipo como ``Linux`` e a versão"
+" como ``Debian (64-bit)``."
 
 #: ../../source/vms/vbox/guide.rst:30
 msgid "Click on Next, and set the memory size. We recommend at least 2048 MB."
-msgstr "Clique em *Next* e configure o tamanho da memória. Recomendamos pelo menos 2048 MB."
+msgstr ""
+"Clique em *Next* e configure o tamanho da memória. Recomendamos pelo "
+"menos 2048 MB."
 
 #: ../../source/vms/vbox/guide.rst:36
 msgid ""
 "Click on Next, and set the hard disk to use an existing virtual hard disk"
 " file and choose the downloaded image."
 msgstr ""
-"Clique em *Next* e configure o disco com a opção *use an existing virtual hard disk file* e "
-"selecione a imagem que você baixou."
+"Clique em *Next* e configure o disco com a opção *use an existing virtual"
+" hard disk file* e selecione a imagem que você baixou."
 
 #: ../../source/vms/vbox/guide.rst:43
 msgid "Click on Create."
@@ -100,10 +106,10 @@ msgid ""
 "communicate to each other. Write down the MAC Address, you will need it "
 "later."
 msgstr ""
-"Em seguida, clique em *Settings/Network* e verifique se a interface está habilitada e "
-"configure-a para ``Host-only``. Isto era permitir a comunicação entre o *host* e o *guest*. "
-"Anote o *MAC Address*, pois será usado posteriormente.*"
-
+"Em seguida, clique em *Settings/Network* e verifique se a interface está "
+"habilitada e configure-a para ``Host-only``. Isto era permitir a "
+"comunicação entre o *host* e o *guest*. Anote o *MAC Address*, pois será "
+"usado posteriormente.*"
 
 #: ../../source/vms/vbox/guide.rst:53
 msgid "Click on OK and start the virtual machine."
@@ -114,8 +120,9 @@ msgid ""
 "Login in the virtual machine (login/password are ``dojot/dojot``) to set "
 "the network interface. Firstly, get the interface name:"
 msgstr ""
-"Acesse a máquina virtual (*login/password* são ``dojot/dojot``) para configurar "
-"a sua interface de rede. Primeiramente, obtenha o nome da interface:"
+"Acesse a máquina virtual (*login/password* são ``dojot/dojot``) para "
+"configurar a sua interface de rede. Primeiramente, obtenha o nome da "
+"interface:"
 
 #: ../../source/vms/vbox/guide.rst:66
 msgid "Edit the file ``/etc/network/interfaces``, adding ::"
