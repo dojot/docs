@@ -56,7 +56,7 @@ msgstr ""
 
 #: ../../source/vms/vbox/guide.rst:17
 msgid "https://www.virtualbox.org/"
-msgstr ""
+msgstr "https://www.virtualbox.org/"
 
 #: ../../source/vms/vbox/guide.rst:19
 msgid ""
@@ -68,7 +68,7 @@ msgstr ""
 
 #: ../../source/vms/vbox/guide.rst:21
 msgid "http://dojot-iso.s3.amazonaws.com/imagem/dojot.0.1.0-dojot.vdi"
-msgstr ""
+msgstr "http://dojot-iso.s3.amazonaws.com/imagem/dojot.0.1.0-dojot.vdi"
 
 #: ../../source/vms/vbox/guide.rst:23
 #, fuzzy

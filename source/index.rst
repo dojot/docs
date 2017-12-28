@@ -18,11 +18,12 @@ pages.
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
+   :glob:
 
    architecture
    ops_guide
    user_guide
-   install/compose_guide
+   install/*
    vms/vbox/guide
    faq/faq
 

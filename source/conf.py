@@ -180,3 +180,5 @@ epub_exclude_files = ['search.html']
 
 #
 locale_dirs = ['locale/'] # path is example but recommended
+
+numfig = True

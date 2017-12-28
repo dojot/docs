@@ -311,6 +311,17 @@ It is important to point out that dojot contains no e-mail server. It will gener
 and send them to the specified e-mail server.
 
 
+What about a HTTP POST request, how can I send it?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+It is almost the same process as sending an e-mail. 
+
+.. image:: df_http_request.gif
+        :width: 95%
+        :align: center
+
+One important note: make sure that dojot can access your server. 
+
 I want to rename the attributes of a device, what should I do?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
