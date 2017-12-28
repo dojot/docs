@@ -27,6 +27,12 @@ pages.
    vms/vbox/guide
    faq/faq
 
+.. toctree::
+   :maxdepth: 2
+   :caption: Security
+
+   security/mutual-authentication
+   security/crypto-service
 
 
 .. Indices and tables
