@@ -7,11 +7,11 @@ These are all APIs exposed by dojot.
  Endpoint         Purpose                         Component                                                             Repository
 ============= =============================== ===================================================================== ================
  /device       Device management               `DeviceManager <https://dojot.github.io/device-manager/apis.html>`_   `GitHub - device-manager <https://github.com/dojot/device-manager>`_ 
- /template     Template management             `DeviceManager <https://dojot.github.io/device-manager/apis.html>`_   `GitHub - device-manager`_
+ /template     Template management             `DeviceManager`_                                                      `GitHub - device-manager`_
  /flows        Flow management                 mashup                                                                `GitHub - mashup <https://github.com/dojot/mashup>`_ 
- /auth         User authentication             auth                                                                  `GitHub - auth <https://github.com/dojot/auth>`_ 
- /auth/revoke  User authentication             auth                                                                  `GitHub - auth <https://github.com/dojot/auth>`_ 
- /auth/user    User authentication             auth                                                                  `GitHub - auth <https://github.com/dojot/auth>`_ 
+ /auth         User authentication             `auth <https://dojot.github.io/auth/auth.html>`_                      `GitHub - auth <https://github.com/dojot/auth>`_ 
+ /auth/revoke  User authentication             `auth`_                                                               `GitHub - auth <https://github.com/dojot/auth>`_ 
+ /auth/user    User authentication             `auth`_                                                               `GitHub - auth <https://github.com/dojot/auth>`_ 
  /history      Device historical data          STH                                                                   `GitHub - STH <https://github.com/telefonicaid/fiware-sth-comet>`_ 
  /metric       Context broker                  Orion                                                                 `GitHub - Orion <https://github.com/dojot/fiware-orion>`_ 
  /gui          Graphical User Interface        GUI                                                                   `GitHub - GUI <https://github.com/dojot/gui>`_ 
