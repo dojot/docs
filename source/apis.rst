@@ -8,6 +8,7 @@ These are all APIs exposed by dojot.
 .. _GitHub - mashup: https://github.com/dojot/mashup
 .. _auth: https://dojot.github.io/auth/auth.html
 .. _GitHub - auth: https://github.com/dojot/auth
+.. _STH: https://github.com/telefonicaid/fiware-sth-comet/blob/master/doc/manuals/raw-data-retrieval.md
 .. _GitHub - STH: https://github.com/telefonicaid/fiware-sth-comet
 .. _Orion v1: http://telefonicaid.github.io/fiware-orion/api/v1/
 .. _Orion v2: http://telefonicaid.github.io/fiware-orion/api/v2/stable/
@@ -24,7 +25,7 @@ These are all APIs exposed by dojot.
  /auth         User authentication             `auth`_                    `GitHub - auth`_ 
  /auth/revoke  User authentication             `auth`_                    `GitHub - auth`_ 
  /auth/user    User authentication             `auth`_                    `GitHub - auth`_ 
- /history      Device historical data          STH                        `GitHub - STH`_ 
+ /history      Device historical data          `STH`_                     `GitHub - STH`_ 
  /metric       Context broker                  `Orion v1`_, `Orion v2`_   `GitHub - Orion`_
  /gui          Graphical User Interface        GUI                        `GitHub - GUI`_ 
  /sign         Public key signing              ejbca                      `GitHub - ejbca-rest`_ 
