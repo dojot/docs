@@ -23,6 +23,7 @@ pages.
    architecture
    ops_guide
    user_guide
+   apis
    install/*
    vms/vbox/guide
    faq/faq
