@@ -35,18 +35,18 @@ These are all APIs exposed by dojot.
 
 The API gateway used in dojot reroutes some of these endpoints so that they become uniform: all of them are accessible through the same port (default is TCP port 8000) and have the same naming scheme. Each component, though, might have something different in its configuration and API documentation. The following table shows which endpoint exposed by the API gateway is mapped to which component endpoint.
 
-======================== =======================
- Endpoint                 Original endpoint     
-======================== =======================
- host:8000/device         host:5000/device      
- host:8000/template       host:5000/template    
- host:8000/flows          host:3000/            
- host:8000/auth           host:5000/            
- host:8000/auth/revoke    host:5000/auth/revoke 
- host:8000/auth/user      host:5000/user        
- host:8000/history        host:8666/            
- host:8000/metric         host:1026/            
- host:8000/gui            host/                 
- host:8000/sign           host:5583/            
- host:8000/ca             host:5583/            
-======================== =======================
+=========================== ======================== =======================
+ Service                     Original endpoint        Endpoint               
+=========================== ======================== =======================
+ `DeviceManager`_            host:5000/device         host:8000/device       
+ `DeviceManager`_            host:5000/template       host:8000/template     
+ mashup                      host:3000/               host:8000/flows        
+ `auth`_                     host:5000/               host:8000/auth         
+ `auth`_                     host:5000/auth/revoke    host:8000/auth/revoke  
+ `auth`_                     host:5000/user           host:8000/auth/user    
+ `STH`_                      host:8666/               host:8000/history      
+ `Orion v1`_ or `Orion v2`_  host:1026/               host:8000/metric
+ GUI                         host/                    host:8000/gui
+ ejbca                       host:5583/               host:8000/sign
+ ejbca                       host:5583/               host:8000/ca
+=========================== ======================== =======================

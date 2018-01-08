@@ -11,21 +11,8 @@ do so, please follow the steps below. Those are actually based off
 [Read The Docs own documentation](https://docs.readthedocs.io/en/latest/getting_started.html).
 
 ```shell
-$ pip install sphinx sphinx-autobuild sphinx_rtd_theme sphinx-intl
-Collecting sphinx
-  Downloading Sphinx-1.6.5-py2.py3-none-any.whl (1.9MB)
-    100% |████████████████████████████████| 1.9MB 663kB/s
-Collecting sphinx-autobuild
-  Downloading sphinx-autobuild-0.7.1.tar.gz
-...
-...
-
-$ make html
-Running Sphinx v1.6.5
-making output directory...
-loading pickled environment... not yet created
-...
-...
+> pip install sphinx sphinx-autobuild sphinx_rtd_theme sphinx-intl
+> make html
 
 ```
 
@@ -33,35 +20,15 @@ For that to work, you must have pip installed on the machine used to build the d
 To install pip on an ubuntu machine:
 
 ```shell
-$ sudo apt-get install python-pip
-Reading package lists... Done
-Building dependency tree
-Reading state information... Done
-...
-...
-
+> sudo apt-get install python-pip
 ```
 
 To build the documentation in Brazilian Portuguese language, run the following extra commands:
 
 ```shell
-$ sphinx-intl -c source/conf.py build -d source/locale
-Build: source/locale/pt_BR/LC_MESSAGES/architecture.mo
-Build: source/locale/pt_BR/LC_MESSAGES/ops_guide.mo
-Build: source/locale/pt_BR/LC_MESSAGES/vms.mo
-...
-...
-
-$ make html BUILDDIR=build/html-pt_BR O='-d build/doctrees/ -D language=pt_BR'
-Running Sphinx v1.6.5
-making output directory...
-loading translations [pt_BR]... done
-loading pickled environment... done
-...
-...
-
+> sphinx-intl -c source/conf.py build -d source/locale
+> make html BUILDDIR=build/html-pt_BR O='-d build/doctrees/ -D language=pt_BR'
 ```
-
 
 ## Update workflow
 
@@ -71,18 +38,13 @@ To update the documentation, follow the steps below:
 2. Extract translatable messages from the english version
 
 ```shell
-$ make gettext
-Running Sphinx v1.6.5
-loading pickled environment... done
-building [gettext]: targets for 0 template files
-building [gettext]: targets for 7 source files that are out of date
-
+> make gettext
 ```
 
 3. Update the message catalog (PO Files) for pt_BR language
 
 ```shell
-$ sphinx-intl -c source/conf.py update -p build/gettext -l pt_BR
+> sphinx-intl -c source/conf.py update -p build/gettext -l pt_BR
 ```
 
 4. Translate the messages in the pt_BR language PO files 
