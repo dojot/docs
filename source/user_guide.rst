@@ -54,7 +54,7 @@ In fact, templates can represent not only "device models", but it can also abstr
 
 In order to create a device, a user selects which templates are going to compose this new device. All their attributes are merged together and associated to it - they are tightly linked to the original template so that any template update will reflect all associated devices.
 
-The component responsible for managing devices (both real and virtual) and templates is `DeviceManager <https://github.com/dojot/device-manager>`_. It has an online documentation available `here <https://dojot.github.io/device-manager>`_, which lists all the supported messages.
+The component responsible for managing devices (both real and virtual) and templates is `DeviceManager <https://github.com/dojot/device-manager>`_. `DeviceManager documentation <https://dojot.github.io/device-manager>`_ lists all the supported messages.
 
 
 Flows
@@ -92,7 +92,7 @@ Remember that the token must be set in the request header as a whole, not parts 
 Device Management
 -----------------
 
-In order to properly configure a physical device in dojot, you must first create a representation to it in the platform. `Here <https://dojot.github.io/device-manager/using-device-manager.html>`_ you can find a tutorial to how to do that.
+In order to properly configure a physical device in dojot, you must first create a representation to it in the platform. `Device manager how-to <https://dojot.github.io/device-manager/using-device-manager.html>`_ contains a tutorial to how to do that.
 
 
 Integrating physical devices

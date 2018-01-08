@@ -359,15 +359,7 @@ Applications
 What APIs are available for applications?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-- `Authorization and user management <https://github.com/dojot/auth/blob/master/docs/auth.apib>`_
-
-- `Device management <https://github.com/dojot/device-manager/tree/master/doc>`_
-
-- `Subscriptions <https://github.com/dojot/fiware-orion/tree/master/doc>`_
-
-- `Flow management <https://github.com/dojot/mashup/blob/cpqd_master/docs/api.apib>`_
-
-- `History <https://github.com/dojot/history-ws>`_
+You can check all available APIs in the `API Listing page <../apis.html>`_
 
 How can I use them?
 ^^^^^^^^^^^^^^^^^^^
