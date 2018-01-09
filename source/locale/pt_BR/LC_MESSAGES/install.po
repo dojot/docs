@@ -100,7 +100,7 @@ msgstr ""
 
 #: ../../source/install/compose_guide.rst:41
 msgid "Docker Compose"
-msgstr ""
+msgstr "Docker Compose"
 
 #: ../../source/install/compose_guide.rst:43
 msgid ""
@@ -224,19 +224,16 @@ msgstr ""
 "está rodando). O script está na raiz do repositório. ::"
 
 #: ../../source/install/gcp_guide.rst:2
-#, fuzzy
 msgid "Installation Guide - Google Cloud Platform"
-msgstr "Guia de Instalação - Docker compose"
+msgstr "Guia de Instalação - Google Cloud Platform"
 
 #: ../../source/install/gcp_guide.rst:4
-#, fuzzy
 msgid ""
 "This document provides instructions on how to prepare a Google Cloud "
 "environment for a dojot deployment using Kubernetes as the orchestrator."
 msgstr ""
-"Este documento fornece instruções de como criar um ambiente trivial de "
-"implantação para a plataforma dojot em uma única máquina, utilizando o "
-"docker-compose como plataforma de orquestração de processos."
+"Este documento fornece instruções de como preparar um ambiente "
+"Google Cloud para uma implantação dojot usando Kubernetes como orquestrador."
 
 #: ../../source/install/gcp_guide.rst:7
 msgid ""
@@ -244,16 +241,21 @@ msgid ""
 "environment for those who want to learn and experiment with the dojot "
 "platform but prefer to run it on a cloud environment."
 msgstr ""
+"Este documento fornece passos para criar um ambiente de teste e experimentação "
+"para aqueles que desejam aprender e experimentar com a plataforma dojot "
+"mas que preferem executá-la em um ambiente de cloud."
 
 #: ../../source/install/gcp_guide.rst:10
 msgid ""
 "The steps as presented here can be evolved to real world deployments with"
 " proper changes to fulfill your deployment use case"
 msgstr ""
+"Os passos aqui apresentados podem ser evoluídos para um cenário de implantação "
+"real com as devidas adaptações para os casos de uso específicos."
 
 #: ../../source/install/gcp_guide.rst:17
 msgid "Creating a Project"
-msgstr ""
+msgstr "Criando um projeto"
 
 #: ../../source/install/gcp_guide.rst:19
 msgid ""
@@ -261,6 +263,9 @@ msgid ""
 "the first thing that must be done is to create a project for the "
 "deployment."
 msgstr ""
+"Para preparar um ambiente para a implantação do dojot na Google Cloud "
+"Platform, a primeira coisa que deve se feita é a criação de um projeto "
+"para a implantação."
 
 #: ../../source/install/gcp_guide.rst:22
 msgid ""
@@ -268,6 +273,8 @@ msgid ""
 "https://console.cloud.google.com/projectcreate and define the new "
 "project's name."
 msgstr ""
+"Para criar um projeto, va para a página "
+"https://console.cloud.google.com/projectcreate e defina um novo nome de projeto."
 
 #: ../../source/install/gcp_guide.rst:24
 msgid ""
@@ -275,22 +282,29 @@ msgid ""
 "https://console.cloud.google.com/projectselector/home/dashboard, click on"
 " the select button and choose the recently created project."
 msgstr ""
+"Aguarde até que a criação do projeto seja concluída. Então, proceda para a"
+"página https://console.cloud.google.com/projectselector/home/dashboard, "
+" clique no botão de seleção e escolha o projeto recém criado."
 
 #: ../../source/install/gcp_guide.rst:28
 msgid "Creating a Cluster"
-msgstr ""
+msgstr "Criando um Cluster"
 
 #: ../../source/install/gcp_guide.rst:30
 msgid ""
 "Having the desired project selected, got to the kubernetes page of the "
 "GCP at the link https://console.cloud.google.com/kubernetes/."
 msgstr ""
+"Tendo selecionado o projeto desejado, vá para a pagina de gerência do "
+"Kubernetes da GCP no link https://console.cloud.google.com/kubernetes/."
 
 #: ../../source/install/gcp_guide.rst:32
 msgid ""
 "Wait for the Kubernetes Engine to be ready and click on the create "
 "cluster button."
 msgstr ""
+"Espere até que o Kubernetes Engine esteja pronto e clique no botão "
+"para criar um cluster."
 
 #: ../../source/install/gcp_guide.rst:34
 msgid ""
@@ -301,10 +315,16 @@ msgid ""
 " the options properly set, click on the create button and wait for the "
 "cluster to be created."
 msgstr ""
+"Na página de criação de cluster, escolha um nome para seu cluster e selecione "
+"uma região apropriada para a sua implantação. Para criar um ambiente de avaliação e"
+"teste para o dojot, um cluster com 3 máquinas com 1 vCPU é mais do que suficiente "
+"para atender o propósito de experimentação com implantações usando Kubernetes. "
+"Com as opções selecionadas adequadamente, clique no botão para criar o cluster e "
+"aguarde até que a criação seja concluída."
 
 #: ../../source/install/gcp_guide.rst:40
 msgid "Getting the credentials"
-msgstr ""
+msgstr "Obtendo credenciais"
 
 #: ../../source/install/gcp_guide.rst:42
 msgid ""
@@ -312,6 +332,9 @@ msgid ""
 "cluster access credentials so your machine is able to access the cluster "
 "and proceed with the deployment."
 msgstr ""
+"Com o cluster de Kubernetes criado, o próximo passo é obter "
+"as credenciais de acesso ao cluster de forma que sua máquina seja capaz "
+"de acessar remotamente o cluster e proceder com os passos de implantação."
 
 #: ../../source/install/gcp_guide.rst:45
 msgid ""
@@ -324,39 +347,45 @@ msgid ""
 "the instructions provided by the google documentation at: "
 "https://cloud.google.com/sdk/docs/quickstarts"
 msgstr ""
+"Na página do Kubernetes, na lista de clusteres criados, encontre o cluster que "
+"você acabou de criar, logo a sua direita, clique no botão \"Connect\". Copie o primeiro "
+"que é fornecido e execute-o em um terminal na sua máquina, este comando instalará as "
+"credenciais. Para executar este comando é necessário que você tenha o cliente gcloud "
+"corretamente instalado e devidamente configurado. Para instalar este cliente, siga as instruções "
+"conforme fornecidas na documentação do Google Cloud em: "
+"https://cloud.google.com/sdk/docs/quickstarts"
 
 #: ../../source/install/gcp_guide.rst:51
 msgid ""
 "With the credential configured, proceed to the :ref:`Kubernetes "
 "Deployment Guide <kubernetes>`"
 msgstr ""
+"Com a configuração devidamente configurada, proceda para :ref:`Guia "
+"de Implantação com Kubernetes <kubernetes>`"
 
 #: ../../source/install/kube_guide.rst:4
-#, fuzzy
 msgid "Installation Guide - Kubernetes"
-msgstr "Guia de Instalação - Docker compose"
+msgstr "Guia de Instalação - Kubernetes"
 
 #: ../../source/install/kube_guide.rst:6
-#, fuzzy
 msgid ""
 "This document provides instructions on how to create a simple dojot "
 "deployment environment on a multi-node environment, using kubernetes as "
 "the orchestration platform."
 msgstr ""
-"Este documento fornece instruções de como criar um ambiente trivial de "
-"implantação para a plataforma dojot em uma única máquina, utilizando o "
-"docker-compose como plataforma de orquestração de processos."
+"Este documento fornece instruções sobre como criar um ambiente simples com "
+"a plataforma dojot em um ambiente de múltiplos nós, usando Kubernetes como "
+"a plataforma de orquestração."
 
 #: ../../source/install/kube_guide.rst:9
-#, fuzzy
 msgid ""
 "This deployment option as presented in this document is best suited to "
 "tests and assessment of the platform, but with the appropriate changes "
 "might be evolved for production environments."
 msgstr ""
-"Embora muito simples, esta opção de implantação é adequada para "
-"desenvolvimento e avaliação da plataforma dojot e não deve ser utilizada "
-"em ambientes de produção."
+"Esta opção de implantação como é apresentada neste documento é mais indicada "
+"para testes e avaliações da plataforma, mas com modificações apropriadas "
+"pode ser evoluída para ambientes de produção."
 
 #: ../../source/install/kube_guide.rst:12
 msgid ""
@@ -364,36 +393,43 @@ msgid ""
 "underlying storage infrastructure and it has also been tested on a "
 "Kubernetes cluster over the Google Cloud Platform"
 msgstr ""
+"Este guia foi verificado em um cluster Kubernetes utilizando Ceph "
+"como a infraestrutura subjacente de armazenamento e também foi testado "
+"em um cluster Kubernetes sobre a Google Cloud Platform."
 
 #: ../../source/install/kube_guide.rst:21
 msgid ""
 "This setup has as the first requirement a Kubernetes cluster that is "
 "properly configured and running."
 msgstr ""
+"Este guia tem como primeiro requisito um cluster Kubernetes que "
+"esteja funcional e devidamente configurado."
 
 #: ../../source/install/kube_guide.rst:23
 msgid ""
 "The second requirement is a Kubernetes client correctly installed on the "
 "machine that will start the deployment process"
 msgstr ""
+"O segundo requisito é que um cliente Kubernetes esteja instalado na "
+"máquina de onde o processo de implantação sera executado"
 
 #: ../../source/install/kube_guide.rst:27
 msgid "Kubernetes Cluster"
-msgstr ""
+msgstr "Cluster Kubernetes"
 
 #: ../../source/install/kube_guide.rst:29
 msgid "For this guide it is advised that you already have a functioning cluster."
-msgstr ""
+msgstr "Para proceder com este guia é recomendado que você já possua um cluster funcional."
 
 #: ../../source/install/kube_guide.rst:31
-#, fuzzy
 msgid ""
 "If you desire to prepare a Kubernetes cluster from scratch, up to date "
 "information and installation procedures can be found at the project's "
 "documentation:"
 msgstr ""
-"Informações atualizadas do processo de instalação do docker podem ser "
-"encontradas na documentação do seu projeto:"
+"Se você deseja preparar um cluster Kubernetes do zero, informações atualizadas "
+"sobre o procedimento de instalação podem ser encontradas na documentação "
+"do projeto:"
 
 #: ../../source/install/kube_guide.rst:34
 msgid "https://kubernetes.io/docs/setup/"
@@ -401,7 +437,7 @@ msgstr ""
 
 #: ../../source/install/kube_guide.rst:37
 msgid "Persistent Storage"
-msgstr ""
+msgstr "Armazenamento Persistente"
 
 #: ../../source/install/kube_guide.rst:39
 msgid ""
@@ -410,6 +446,10 @@ msgid ""
 "Kubernetes environment it is necessary to attach persistent storage to "
 "the database pods."
 msgstr ""
+"Para garantir que todos os dados dos contêineres que executam bancos de dados "
+"está sendo persistida quando estes contêineres falham ou são movidos para "
+"diferentes nós do ambiente Kubernetes, é necessário anexar armazenamento "
+"persistente aos Pods e banco de dados."
 
 #: ../../source/install/kube_guide.rst:42
 msgid ""
@@ -424,6 +464,17 @@ msgid ""
 " different cloud provider, some adjustments to fit the different "
 "deployments might be necessary."
 msgstr ""
+"O Kubernetes precisa que a infraestrutura de armazenamento persistente já "
+"exista no cluster. Como exemplo sobre como você pode configurar seu "
+"armazenamento persistente nós fornecemos arquivos para dois tipos diferentes "
+"de implantação, o primeiro se refere a um deploy local onde um cluster Ceph "
+"é utilizado como backend de armazenamento, mais informações sobre o Ceph podem "
+"ser encontrados em: http://ceph.com/ . O segundo exemplo é baseado em uma "
+"implantação na Google Cloud Platform e faz uso dos serviços de armazenamento "
+"persistentes que são fornecidos pela Google Cloud. Se você estiver fazendo "
+"a implantação do dojot utilizando Kubernetes em um provedor de nuvem diferente "
+"dos citados aqui, alguns ajustes as configurações de armazenamento podem ser "
+"necessárias para se adaptar às diferentes possibilidades de ambientes."
 
 #: ../../source/install/kube_guide.rst:49
 msgid ""
@@ -431,10 +482,13 @@ msgid ""
 "Kubernetes can be found at: https://kubernetes.io/docs/concepts/storage"
 "/persistent-volumes/#types-of-persistent-volumes"
 msgstr ""
+"Informações sobre os tipos de armazenamento persistente que são atualmente "
+"suportados pelo Kubernetes podem ser encontradas em: "
+"https://kubernetes.io/docs/concepts/storage/persistent-volumes/#types-of-persistent-volumes"
 
 #: ../../source/install/kube_guide.rst:53
 msgid "Kubernetes Client"
-msgstr ""
+msgstr "Cliente Kubernetes"
 
 #: ../../source/install/kube_guide.rst:55
 msgid ""
@@ -442,6 +496,9 @@ msgid ""
 "this guide, follow the proper instructions as presented on the Kubernetes"
 " documentation:"
 msgstr ""
+"Para instalar o cliente Kubernetes na sua máquinas antes de prosseguir "
+"com as instruções deste guia, siga as instruções como apresentadas na "
+"documentação do Kubernetes: "
 
 #: ../../source/install/kube_guide.rst:58
 msgid "https://kubernetes.io/docs/tasks/tools/install-kubectl/"
@@ -449,11 +506,11 @@ msgstr ""
 
 #: ../../source/install/kube_guide.rst:60
 msgid "Also, verify that your client is capable of connecting to the cluster."
-msgstr ""
+msgstr "Além disso, verifique que o seu cliente é capaz de se conectar ao cluster."
 
 #: ../../source/install/kube_guide.rst:62
 msgid "For providing access for a local cluster, follow the documentation below:"
-msgstr ""
+msgstr "Para fornecer acesso para um cluster local, siga a documentação em: "
 
 #: ../../source/install/kube_guide.rst:64
 msgid ""
@@ -466,10 +523,13 @@ msgid ""
 "If the Kubernetes cluster is running on a specific cloud platform like "
 "Google Cloud, follow the steps as presented by your cloud provider."
 msgstr ""
+"Se o cluster Kubernetes está sendo executado em alguma plataforma de "
+"cloud específica como o Google Cloud por exemplo, siga os passos "
+"fornecidos pelo seu provedor de cloud."
 
 #: ../../source/install/kube_guide.rst:70
 msgid "Deployment"
-msgstr ""
+msgstr "Implantação"
 
 #: ../../source/install/kube_guide.rst:72
 msgid ""
@@ -479,38 +539,51 @@ msgid ""
 "a deployment to a Kubernetes environment running on Google Cloud "
 "Platform."
 msgstr ""
+"Para implantar o dojot em ambiente Kubernetes, nós fornecemos scripts "
+"e modelos de exemplo para dois tipos de cluster. Os exemplos são para um "
+"ambiente composto por um Kubernetes com armazenamento em Ceph e para um "
+"ambiente Kubernetes sobre a plataforma de Cloud do Google."
 
 #: ../../source/install/kube_guide.rst:76
 msgid ""
 "For both environment it is necessary to download the scripts and "
 "templates before performing the deployment."
 msgstr ""
+"Para ambos os ambientes é necessário fazer o download dos scripts e modelos "
+"antes de prosseguir com a implantação do dojot"
 
 #: ../../source/install/kube_guide.rst:78
 msgid "To download the required files using git, run the following command: ::"
-msgstr ""
+msgstr "Para fazer o download dos arquivos necessários utilizando o git, siga os"
+"comandos a seguir: ::"
 
 #: ../../source/install/kube_guide.rst:82
 msgid ""
 "or, to download a compressed zip file containing the data, use the "
 "following link: https://github.com/dojot/kubernetes/archive/master.zip"
 msgstr ""
+"ou, para fazer o download de um arquivo comprimido zip contendo os arquivos "
+"necessários, use o link a seguir: https://github.com/dojot/kubernetes/archive/master.zip"
 
 #: ../../source/install/kube_guide.rst:84
 msgid ""
 "Enter the downloaded folder and follow the instructions in the section "
 "that corresponds to your specific environment."
 msgstr ""
+"Entre na pasta que contém o conteúdo do download e siga as instruções da sessão "
+"correspondente ao tipo de ambiente que você utilizará para a implantação."
 
 #: ../../source/install/kube_guide.rst:86
 msgid ""
 "All the instructions provided in the following sections assume that the "
 "commands are being run on a linux terminal."
 msgstr ""
+"Todas as instruções fornecidas nas sessões seguintes assumem que os comandos "
+"estão sendo executados em terminais linux."
 
 #: ../../source/install/kube_guide.rst:89
 msgid "Google Cloud Platform"
-msgstr ""
+msgstr "Google Cloud Platform"
 
 #: ../../source/install/kube_guide.rst:91
 msgid ""
@@ -519,12 +592,18 @@ msgid ""
 "Cloud and your local Kubernetes client is properly configured to access "
 "that cloud."
 msgstr ""
+"Para fazer a implantação do dojot em um cluster Kubernetes sobre a plataforma "
+"de nuvem do Google, os únicos requisitos são que seu cluster esteja criado "
+"e que seu cliente Kubernetes local esteja adequadamente configurado para "
+"acessar a núvem."
 
 #: ../../source/install/kube_guide.rst:94
 msgid ""
 "To execute the script to deploy to Google Cloud just run the following "
 "command on the terminal: ::"
 msgstr ""
+"Para executar o procedimento e executar o dojot na nuvem do Google, rode o "
+"comando a seguir no terminal: ::"
 
 #: ../../source/install/kube_guide.rst:98
 msgid ""
@@ -532,6 +611,9 @@ msgid ""
 "persistent storage and also set the external access to use the load "
 "balancers as provided by the Google Cloud Platform."
 msgstr ""
+"Os parâmetros selecionados definem o tipo de armazenamento que será usado "
+"como GCP e também definem que o acesso externo será feito através de um "
+"balanceador de tráfego da própria plataforma do Google."
 
 #: ../../source/install/kube_guide.rst:101
 #: ../../source/install/kube_guide.rst:143
@@ -541,27 +623,39 @@ msgid ""
 "correctly, run the command below and verify that all pods have reached a "
 "\"Running\" state, this may take a while and retries for some pods. ::"
 msgstr ""
+"Aguarde até que a execução do script seja finalizada e então aguarde até "
+"que todos os pods tenham completado sua inicialização, para verificar se "
+"os pods foram inicializados corretamente, execute o comando abaixo e "
+"veja se todos os Pods chegaram ao estado \"Running\", pode levar um tempo "
+"para que isso aconteça e alguns Pods podem precisar de múltiplas tentativas "
+"até que isso aconteça. ::"
 
 #: ../../source/install/kube_guide.rst:107
 msgid ""
 "After all the pods are running, run the following command in order to "
 "obtain the public ip address that is being used by the load balancer ::"
 msgstr ""
+"Depois que todos os Pods estão rodando corretamente, siga os comandos a "
+"seguir para obter o endereço IP público que está sendo utilizado pelo "
+"balanceador de tráfego: ::"
 
 #: ../../source/install/kube_guide.rst:111
 msgid ""
 "The command will return the external ip used by the load balancer, with "
 "this IP you can access that ip using any browser at http://EXTERNAL_IP"
 msgstr ""
+"Este comando retornará o IP público que está sendo exposto pelo balanceador "
+"de tráfego, utilizando este IP você poderá acessar a plataforma em qualquer "
+"browser através do endereço http://IP_PUBLICO/"
 
 #: ../../source/install/kube_guide.rst:114
 #: ../../source/install/kube_guide.rst:151
 msgid "The initial user and password are admin and admin."
-msgstr ""
+msgstr "Os usuários e senhas iniciais são \"admin\" e \"admin\"."
 
 #: ../../source/install/kube_guide.rst:117
 msgid "Cluster with Ceph"
-msgstr ""
+msgstr "Cluster com Ceph"
 
 #: ../../source/install/kube_guide.rst:119
 msgid ""
@@ -569,12 +663,17 @@ msgid ""
 "storage infrastructure a Ceph Cluster you will need the configuration "
 "file for accessing Ceph."
 msgstr ""
+"Para fazer a implantação de um cluster Kubernetes onde a infraestrutura de"
+" persistência que será utilizada é um cluster Ceph, você precisará do arquivo "
+"de configuração para acessar o Ceph."
 
 #: ../../source/install/kube_guide.rst:122
 msgid ""
 "Also you will need to set some information regarding your Ceph cluster on"
 " the manifest files."
 msgstr ""
+"Além disso, você precisará configurar algumas informações sobre seu cluster "
+"Ceph nos manifestos de configuração de armazenamento."
 
 #: ../../source/install/kube_guide.rst:124
 msgid ""
@@ -584,6 +683,11 @@ msgid ""
 "the client user. With this keys at hand, convert then to base 64, this "
 "may be done at your terminal running the command: ::"
 msgstr ""
+"Edite o arquivo \"manifests/STORAGE/CEPH/rbd-provisioner.yaml\" e mude "
+"os valores \"pool\" e \"userId\" para corresponder com aqueles do seu ambiente. "
+"Além disso é necessário obter a chave para o usuário administrador e para o usuário "
+"cliente. Com essas chaves em mãos, converta-as para base 64, isto pode ser feito no "
+"seu terminal utilizando o comando: ::"
 
 #: ../../source/install/kube_guide.rst:130
 msgid ""
@@ -591,6 +695,9 @@ msgid ""
 "/ceph-secret-admin.yaml\" and \"manifests/STORAGE/CEPH/ceph-secret-"
 "user.yaml\" respectively at the field key."
 msgstr ""
+"O valor retornado pelo comando deve ser adicionado ao arquivo \"manifests/STORAGE/CEPH"
+"/ceph-secret-admin.yaml\" e \"manifests/STORAGE/CEPH/ceph-secret-"
+"user.yaml\" respectivamente no campo \"key\"."
 
 #: ../../source/install/kube_guide.rst:133
 msgid ""
@@ -598,12 +705,18 @@ msgid ""
 " provide one, otherwise you may deploy selecting a public ip of one of "
 "the kubernetes cluster nodes as the point of access for the environment."
 msgstr ""
+"Além disso você pode escolher por fazer a implantação utilizando um balanceador "
+"de tráfego se sua infraestrutura prover um, senão o deploy pode ser feito escolhendo-se "
+"um IP Público de algum dos nós do seu cluster Kubernetes para ser utilizado como ponto "
+"de acesso externo para o ambiente dojot."
 
 #: ../../source/install/kube_guide.rst:136
 msgid ""
 "To execute the script and deploy with Ceph and a public ip just run the "
 "following command on the terminal: ::"
 msgstr ""
+"Para executar o script e fazer a implantação do deploy com Ceph e um IP público "
+"execute o comando a seguir no seu terminal: ::"
 
 #: ../../source/install/kube_guide.rst:140
 msgid ""
@@ -612,21 +725,15 @@ msgid ""
 "file and the desired public ip. Enter this parameters and type enter when"
 " prompted."
 msgstr ""
+"Aguarde até que o script conclua a criação do ambiente dojot, você receberá requisições "
+"por dois parâmetros ao longo da execução do script, o primeiro será o caminho para o "
+"arquivo de configuração do Ceph e o segundo será o IP Público desejado. Entre estes parâmetros "
+"quando solicitado e aperte enter para prosseguir."
 
 #: ../../source/install/kube_guide.rst:149
 msgid ""
 "After all the pods are runninf, you can access your dojot deployment "
 "using the public ip that was defined http://PUBLIC_IP"
 msgstr ""
-
-#~ msgid ""
-#~ "This guide has been checked on a"
-#~ " Kubernetes cluster with Ceph as the"
-#~ " underlying storage infrastructure, it has"
-#~ " also been tested on a Kubernetes "
-#~ "cluster over the Google Cloud Platform"
-#~ msgstr ""
-
-#~ msgid "To make sure that all the data"
-#~ msgstr ""
-
+"Depois que todos os pods estão rodando, você poderá acessar o seu ambiente dojot "
+"usando o IP Público que foi definido, através do link: http://IP_PUBICO/"

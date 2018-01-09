@@ -233,6 +233,25 @@ You might have saved the attribute, but not the device. If you don’t click on 
 the device, the added attributes will be discarded. We’re improving the system messages to caveat 
 the users and remember them to save their configurations.
 
+How can I retrieve historical data for a particular device?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+You can do this by sending a request to /history endpoint, such as:
+
+.. code-block:: bash
+
+	curl -X GET \
+		-H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsIn...' \
+		-H 'Fiware-Service:admin' \
+		-H 'Fiware-ServicePath:/' \
+		http://localhost:8000/history/STH/v1/contextEntities/type/device/id/3ba9/attributes/temperature?lastN=10
+
+
+which will retrieve the last 10 entries of `temperature` attribute from the device `3ba9`. There are more
+operators that could be used to filter entries. Check `STH <https://github.com/telefonicaid/fiware-sth-comet/blob/master/doc/manuals/raw-data-retrieval.md>`_ 
+documentation to check out all possible operators.
+
+
 Data Flows
 ----------
 .. _data_flows:
@@ -359,15 +378,7 @@ Applications
 What APIs are available for applications?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-- `Authorization and user management <https://github.com/dojot/auth/blob/master/docs/auth.apib>`_
-
-- `Device management <https://github.com/dojot/device-manager/tree/master/doc>`_
-
-- `Subscriptions <https://github.com/dojot/fiware-orion/tree/master/doc>`_
-
-- `Flow management <https://github.com/dojot/mashup/blob/cpqd_master/docs/api.apib>`_
-
-- `History <https://github.com/dojot/history-ws>`_
+You can check all available APIs in the `API Listing page <../apis.html>`_
 
 How can I use them?
 ^^^^^^^^^^^^^^^^^^^
