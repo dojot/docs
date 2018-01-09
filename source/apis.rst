@@ -6,7 +6,7 @@ These are all APIs exposed by dojot.
 .. _DeviceManager:  https://dojot.github.io/device-manager/apis.html
 .. _GitHub - device-manager: https://github.com/dojot/device-manager
 .. _GitHub - mashup: https://github.com/dojot/mashup
-.. _auth: https://dojot.github.io/auth/auth.html
+.. _auth: https://dojot.github.io/auth/apis.html
 .. _GitHub - auth: https://github.com/dojot/auth
 .. _STH: https://github.com/telefonicaid/fiware-sth-comet/blob/master/doc/manuals/raw-data-retrieval.md
 .. _GitHub - STH: https://github.com/telefonicaid/fiware-sth-comet
