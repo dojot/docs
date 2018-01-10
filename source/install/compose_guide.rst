@@ -115,3 +115,10 @@ is, the machine where docker-compose was run). The script is located at the root
 ::
 
   ./create.user.sh
+
+Usage
+-----
+
+The web interface is available at ``http://localhost:8000``. The user is ``admin`` and the password is ``admin``. You also can interact with platform using the :doc:`REST API <../apis>`.
+
+Read the :doc:`../user_guide` for more information about how to interact with the platform.

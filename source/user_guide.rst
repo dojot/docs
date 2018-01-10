@@ -108,9 +108,7 @@ You can generate a new token by sending the following request:
          -H 'Content-Type:application/json' \
          -d '{"username": "admin", "passwd" : "admin"}'
 
-  {"jwt": "eyJ0eXAiOiJKV1QiL..."} 
-
-  $
+  {"jwt": "eyJ0eXAiOiJKV1QiL..."}
 
 If you want to generate a token for other user, just change the username and password in 
 the request payload.
@@ -159,5 +157,4 @@ Moving to the perspective of an aplication developer, this section should list a
 of the information flow configuration process within the platform - how to use the provided gui,
 high level description of the APIs that can be used to configure such flows, available actions to
 be used when building the flows, so on and so forth.
-
 
