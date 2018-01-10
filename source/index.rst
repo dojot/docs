@@ -34,6 +34,7 @@ pages.
 
    security/mutual-authentication
    security/crypto-service
+   security/mqtt-tls
 
 
 .. Indices and tables
