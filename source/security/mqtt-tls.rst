@@ -314,7 +314,6 @@ more verbose in error description.
 
 .. code-block:: bash
 
-  :lineno:
   openssl s_client -connect localhost:8883 -CAfile ca.crt -cert device.crt -key device.key
 
 Common errors are shown by openssl_client (and _server as well):
@@ -340,7 +339,6 @@ Mosquitto's log:
 
 .. code-block:: text
 
-  :lineno:
   1514482004: New client connected from 172.20.0.10 as mqttjs_c011c22d (c1, k10, u'deviceName')
 
 If that line shows up, it means that the TLS handshake worked and the device 
