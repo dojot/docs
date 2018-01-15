@@ -79,7 +79,7 @@ there are a few steps to start it up:
 .. code-block:: bash
 
 	$ docker-compose up -d
-	$ ./kong-config.sh
+	$ ./kong.config.sh
 	$ ./create-user.sh
 
 And that's it. 
@@ -446,4 +446,3 @@ integrated with dojot:
 
 All these endpoints should bear an access token, which is retrieved as described in the  
 question `How can I use them?`_.
-	
