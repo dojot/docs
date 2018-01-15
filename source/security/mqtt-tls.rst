@@ -51,7 +51,7 @@ EJBCA-REST
 ----------
 
 EJBCA (https://www.ejbca.org) is a complete Private Key Infrastructure (PKI) 
-capable to manage  CAs, cryptography keys and certificates.
+capable to manage  CAs, cryptographic keys and certificates.
 EJBCA provides a SOAP, web and a command line interface. EJBCA-REST is an 
 wrapper on top of EJBCA that provides modern interfaces, like REST and Kafka.
 
@@ -66,9 +66,9 @@ What is a certificate?
 A certificate contains the public key for an entity (a user, device, website), 
 together with a bunch of information about this entity, about the CA signing the
 certificate, the allowed certificate usage and a checksum.
-When a entity wants a certificate signed, the entity should create a CSR file
+When an entity wants a certificate signed, the entity should create a CSR file
 and send it to the desired CA.
-The CSR file is an 'intention of certification'. The fie contains the 
+The CSR file is an 'intention of certification'. The file contains the 
 information required from the entity and some information about the certificate
 use, hostnames and IPs where the certificate will reside, alternative names for
 the entity and etc.
@@ -93,7 +93,7 @@ I have a CSR. How can I ask EJBCA to sign it for me?
 
 Calm down! EJBCA will not allow strangers to ask for certification. You need to
 authenticate yourself.
-EJBCA use a username+password authentication system. The term 'end entity' will
+EJBCA uses a username+password authentication system. The term 'end entity' will
 be used to refer to EJBCA users to follow the terms on EJBCA documentation and
 to avoid ambiguities between EJBCA users and dojot users.
 An administrator should create the end entity. A just created end entity has
@@ -130,7 +130,7 @@ as update CRL file (certification revogation list). This service is distributed
 as a docker container for easy deploy and its source code repository can be accessed
 in `MQTT-Manager GitHub project <https://github.com/dojot/mqtt-manager>`_.
 
-Mosquitto by itself doesn't generate nor revoke certificates, it only rely upon
+Mosquitto by itself doesn't generate nor revoke certificates, it only relies on
 a CA and implements TLS protocol. The 'creation' of a particular device consists
 only in adding a new rule to ACL file in Mosquitto. Such file looks like:
 
@@ -147,22 +147,21 @@ the example above, the user iotagent can read all topics (# is a wildcard). Also
 the device with ID 24f6 can write to topic /admin/24f6/attrs. The device ID is 
 retrieved in 'Common name' certificate field.
 
-If a device sends data to a topic which it has no write permissions, then all
+If a device sends data to a topic to which it has no write permissions, then all
 data is discarded. Mosquitto won't log any errors related to this.
 
-When the ACL is changes, Mosquitto must be restarted (or a SIGDUP signal can be
-sent to its process). MQTT-Manager does this automatically when creating or 
-removing devices.
+When the ACL is changed, Mosquitto must be restarted (or sent a SIGDUP signal). 
+MQTT-Manager does this automatically when creating or removing devices.
 
 A script is executed when firing the container up. This script will generate a 
-pair of keys to Mosquitto, retrieves the certificate and CRL from a CA and asks
+pair of keys for Mosquitto, retrieve the certificate and CRL from dojot's CA and ask
 it to sign its public key. ALl generated files are placed in /usr/local/src/mosquitto-1.4.13/certs
-(inside the container).
+(within the container).
 
 Mosquitto will only accept device connections that have certificate signed by its
-trusty CA.
+trusted CA.
 
-Also note that MQTT-Manager is used only in case when a TLS-enabled broker is needed.
+Also note that MQTT-Manager is used only when a TLS-enabled broker is needed.
 If this is not the case, then the vanilla `ansi/mosquitto docker image <https://hub.docker.com/r/ansi/mosquitto>`_ can be used.
 
 Mosquitto configuration files
@@ -231,12 +230,13 @@ Other options are:
 - -w or --overwrite: overwrites any certificate files or criptographic keys if 
   already existent.
 - -k or --key KEYLENGTH: size of the criptographic key being generated (in bits).
-- -d or --dns: Hostname where the certificate owner can be reached out. Note that
+- -d or --dns: Hostname where the certificate owner can be reached. Note that
   this has no relation with DNS (Domain Name System) servers - this name was 
   kept because x509 certificates have an attribute that is called DNS.
-- -i or --ip: same as -d, buto to specify IP address.
-- --skip-https-check: if dojot accepts HTTPS connections but it has no valid 
-  certificate, then this option will allow the connection to be made.
+- -i or --ip: same as -d, but to to specify IP address.
+- --skip-https-check: if dojot accepts HTTPS connections but has no valid 
+  certificate (e.g. uses a self-signed certificate), then this option will allow 
+  the connection to be made.
 
 Note that authentication is performed in dojot. The script will ask for user
 credentials and will invoke user authentication automatically. The user needs
@@ -247,8 +247,8 @@ certificate signature. When a new device is created, an end entity is automatica
 created in EJBCA by DeviceManager. This new end entity's name is the device ID
 itself. Its password is 'dojot'.
 
-The script authenticate users with given username and password, retrieve CA certificate,
-generate a key pair as well as a CSR file and asks for certificate signature, in 
+The script authenticates users with given username and password, retrieves CA certificate,
+generates a key pair as well as a CSR file and asks for certificate signature, in 
 this order. Any error in any step will halt its execution.
 
 After successfully executed, all certificates can be found in './certs' folder.
@@ -262,9 +262,9 @@ subjects.
 CRL (Certification Revocation List)
 ===================================
 
-A CRL is a list which contains all revoked certificates. It is used to indicate
-which certificates are no longer valid (administratively set to invalid) as a
-normal certificate can be used for 1 to 5 years. This list is signed by CA and
+A CRL is a list which contains all revoked certificates issued by a given CA. It is used 
+to indicate which certificates are no longer valid (administratively set to invalid) as a
+normal certificate can be used for up to 5 years. This list is signed by CA and
 also has an expiration date - 1 day by default. In TLS protocol, if CRL is expired 
 then the recommended action to be taken is to refuse all incoming connections, 
 as there is no way to check if the certificates used in those connections are invalid
@@ -277,7 +277,7 @@ must be updated.
 Debugging
 =========
 
-TLS error might be not so verbose as other problems. If an error occurrs, the user
+TLS errors might be not so verbose as other problems. If an error occurrs, the user
 might not know what went wrong because no component indicates any problem. In
 this section there are some tips, frequent problems and debugging tools to find
 out what's happening.
@@ -310,7 +310,7 @@ error might appear in Mosquitto's logs:
   1514550332: OpenSSL Error: error:140940E5:SSL routines:ssl3_read_bytes:ssl handshake failure
 
 If this happens, try to establish connection using 'openssl client', as it is
-more verbose in error description.
+more verbose in its error description.
 
 .. code-block:: bash
 
@@ -319,7 +319,7 @@ more verbose in error description.
 Common errors are shown by openssl_client (and _server as well):
 
 - SSL alert number 45: this error indicates that a certificate expired. Keep in
-  mind that CRL also expires.
+  mind that CRLs also expire.
 - SSL alert number 48: received a valid certificate chain or partial chain, 
   but the certificate was not accepted because the CA certificate could not be 
   located or could not be matched with a known, trusted CA. This message is 
@@ -344,5 +344,5 @@ Mosquitto's log:
 If that line shows up, it means that the TLS handshake worked and the device 
 successfully connected to Mosquitto. Check if the device has an ACL entry in 
 Mosquitto to allow it to publish data in the specified topic. Keep in mind that
-if a device publishes something in another topic (which it has no permission 
+if a device publishes something in another topic (to which it has no permission 
 to publish) all data is discarded by Mosquitto with no warnings.
