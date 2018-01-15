@@ -327,7 +327,7 @@ Common errors are shown by openssl_client (and _server as well):
 
 - Alert unknown CA: check whether sent CA certificate is correct. If it is a
   sub-CA, check if all of its certificate chain was sent. This error also occurs
-  if the CA certificate data (specially common name attribute) is the same as 
+  if the CA certificate data (specially common name attribute) is not the same as 
   those from client certificate.
 
 
