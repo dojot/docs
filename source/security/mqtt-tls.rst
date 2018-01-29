@@ -33,7 +33,6 @@ changed:
 
 -  The image for service 'mqtt' must be changed from 'ansi/mosquitto' to
    'dojot/mqtt-manager';
--  A new entry must be added to 'mqtt' service exported port list: "9010:9010"
 -  The public port for 'mqtt' service must be changed from '1883:1883' to
    '8883:8883';
 -  The MQTT\_TLS variable of 'iotagent' service must be set to true (lowercase).
@@ -123,11 +122,11 @@ MQTT Manager
 MQTT-Manager is a helper service used to configure Mosquitto MQTT broker in a
 simple and 'on-the-fly' way. It can be configured using REST interfaces and
 Kakfa. Thus, HTTP requests or Kafka messages can be used to create and remove
-devices, as well as update CRL file (certification revogation list). This
+devices, as well as update CRL file (certification revocation list). This
 service is distributed as a docker container for easy deploy and its source
 code repository can be accessed in `MQTT Manager repository`_.
 
-Mosquitto by itself doesn't generate nor revoke certificates, it only rely upon
+Mosquitto by itself doesn't generate nor revoke certificates, it only relies on
 a CA and implements TLS protocol. The 'creation' of a particular device
 consists only in adding a new rule to ACL file in Mosquitto. Such file looks
 like:
@@ -250,9 +249,10 @@ certificate signature. When a new device is created, an end entity is
 automatically created in EJBCA by DeviceManager. This new end entity's name is
 the device ID itself. Its password is 'dojot'.
 
-The script authenticate users with given username and password, retrieve CA
-certificate, generate a key pair as well as a CSR file and asks for certificate
-signature, in this order. Any error in any step will halt its execution.
+The script authenticates users with given username and password, retrieves CA
+certificate, generates a key pair as well as a CSR file and asks for
+certificate signature, in this order. Any error in any step will halt its
+execution.
 
 After successfully executed, all certificates can be found in './certs'
 folder.
@@ -280,7 +280,7 @@ must be updated.
 Debugging
 ~~~~~~~~~
 
-TLS error might be not so verbose as other problems. If an error occurrs, the
+TLS errors might be not so verbose as other problems. If an error occurrs, the
 user might not know what went wrong because no component indicates any problem.
 In this section there are some tips, frequent problems and debugging tools to
 find out what's happening.

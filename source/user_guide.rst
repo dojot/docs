@@ -68,7 +68,7 @@ called simply as 'device'. If the actual device must be referenced, we'll be
 calling it as 'physical device'.
 
 Consider, for instance, a physical device with temperature and humidity
-sensors; it can be represented into dojot as a device with two attributes (one
+sensors; it can be represented in dojot as a device with two attributes (one
 for each sensor). We call this kind of device as regular device or by its
 communication protocol, for instance, MQTT device or CoAP device.
 
@@ -158,9 +158,9 @@ Device creation
 +++++++++++++++
 
 In order to properly configure a physical device in dojot, you must first
-create a representation to it in the platform. The example presented here is
-just a small part of what is offered by DeviceManager. For more information,
-check the `DeviceManager how-to`_ for more detailed instructions.
+create its representation in the platform. The example presented here is just a
+small part of what is offered by DeviceManager. For more information, check the
+`DeviceManager how-to`_ for more detailed instructions.
 
 First of all, let's create a template for the device - all devices are based
 off of a template, remember.
@@ -283,22 +283,18 @@ Sending messages
 ++++++++++++++++
 
 So far we got an access token and created a template and a device based on it.
-In an actual deploy, the physical device would send messages to dojot with all
-its attributes and their current values. For this tutorial we will send MQTT
-messages by hand to the platform, emulating such physical device. For that, we
-will use mosquitto_pub from Mosquitto project.
+In an actual deployment, the physical device would send messages to dojot with
+all its attributes and their current values. For this tutorial we will send
+MQTT messages by hand to the platform, emulating such physical device. For
+that, we will use mosquitto_pub from Mosquitto project.
 
 .. ATTENTION::
     Some Linux distributions, Ubuntu in particular, have two packages for
-    `mosquitto`_ - one containing tools to access it (such mosquitto_pub and
+    `mosquitto`_ - one containing tools to access it (i.e. mosquitto_pub and
     mosquitto_sub for publishing messages and subscribing to topics) and
     another one containing the MQTT broker. In this tutorial, only the tools
-    are going to be used. There are some reports of problems that were caused
-    because the broker was mistakenly installed and automatically started,
-    which prevents the MQTT broker instance from dojot's docker-compose to be
-    initiated (and therefore used). If you are facing problems such as "I send
-    messages via MQTT but nothing happens", please first check if you are not
-    running an extra instance of mosquitto in your machine outside docker.
+    are going to be used. Please check if MQTT broker is not running before 
+    starting dojot (by running commands like ``ps aux | grep mosquitto``).
 
 
 The dojot compatible format for messages sent by devices is a simple key-value 
@@ -319,8 +315,8 @@ Let's send this message to dojot:
 If there is no output, the message was sent to MQTT broker. The topic is build 
 from the following information:
 
-- admin: user tenant. This is retrieved from user "service" attribute (used
-  when getting the access token).
+- admin: user tenant. This is retrieved from "service" attribute from user
+  configuration.
 - 0998: device ID. This is retrieved from the device itself. It is returned
   when the device is created or read from /device endpoint.
 
