@@ -23,7 +23,7 @@ pages.
    architecture
    ops_guide
    user_guide
-   apis
+   components-and-apis
    install/*
    vms/vbox/guide
    faq/faq
