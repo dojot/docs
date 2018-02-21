@@ -90,32 +90,6 @@ To check individual container status, docker's commands may be used, for instanc
 
   https://docs.docker.com/engine/installation/linux/linux-postinstall/
 
-Configuration
--------------
-
-Once the environment is up, a few configuration steps are required to make it
-operational.
-
-
-API gateway configurarion
-^^^^^^^^^^^^^^^^^^^^^^^^^
-
-In order to guarantee the proper mapping of API into processing services,
-the API gateway must be configured. To do so, please run kong_config.sh,
-present at the root of the repository. ::
-
-  ./kong.config.sh
-
-User creation
-^^^^^^^^^^^^^
-
-To be able to use the system's web front-end and make API calls, a user must be created. To create
-a first `admin` user, the following script can be run on the host machine of the platform (that
-is, the machine where docker-compose was run). The script is located at the root of the repository.
-::
-
-  ./create.user.sh
-
 Usage
 -----
 
