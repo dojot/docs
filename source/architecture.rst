@@ -15,34 +15,17 @@ refer to each component's own documentation.
 Components
 ----------
 
-With the idea of utilizing open-source and consolidated components, as a starting point for the *dojot* IoT middleware we
-adopted the european project Fiware (FIWARE, 2016). The solutions developed from this framework followed a micro-services
-architecture, having as the main component a context broker that is responsible for redistributing events among services
-that are part of the middleware.
+dojot was design to make possible fast solution prototyping and ease of use, along with scalability and robustness. Its
+internal architecture makes use of many well-known open-source components with others designed and implemented by dojot
+team. This architecture is described on :numref:`new_arch`.
 
-The first architecture proposal took into account a basic group of Fiware services together with new services, developed
-in the scope of this project, having as the main purpose, increasing the usability of the *dojot* platform. This initial
-architecture can be seen on :numref:`old_arch`.
-
-.. _old_arch:
-.. figure:: images/old_architecture.png
+.. _new_arch:
+.. figure:: images/new_architecture.png
     :width: 100%
     :align: center
-    :alt: Initial Architecture based on the Fiware project
+    :alt: Revised *dojot* Architecture
 
-    Initial Architecture
-
-In this proposal we utilize the following components from Fiware:
-
-    * **Orion**: a context broker used as the communication bus for all the internal services of the middleware
-    * **STH**: the history service used for storing IoT devices data in a MongoDB database
-    * **Perseo CEP**: the service that is responsible for treating events in real time
-    * **Iot-agent**: service used as an abstraction layer for integrating MQTT and HTTP devices
-
-To this services we added the Kong API Gateway to act as a centralized point-of-access removing the need of direct
-communication with each one of the services, an orchestration service to abstract the middleware configuration, an
-authentication service to validate user access credentials and also an user application with graphical interface with
-the purpose of managing the middleware (users, devices and data flows management).
+    Current Architecture
 
 Considering this architecture the basic utilization flow is as follows: The user configures IoT devices through the
 GUI or directly using the REST APIs provided by the API Gateway, he also configures processing flows to deal with the
@@ -58,18 +41,6 @@ for internal distribution, reaching, for instance, the history service so it can
 CEP for processing it based on rules. If certain conditions are matched when rules are being processed, a new event is
 generated and sent to the broker service to be redistributed to the interested services.
 
-This architecture made possible the validation of ideas and limitations and possible improvements were identified,
-converging to a reviewed architectural proposition as described on :numref:`new_arch`. This new proposal is under
-development and should become part of the solution.
-
-.. _new_arch:
-.. figure:: images/new_architecture.png
-    :width: 100%
-    :align: center
-    :alt: Revised *dojot* Architecture
-
-    Revised Architecture
-
 More detailed and updated information can be found on the `dojot Github repository <https://github.com/dojot>`_.
 
 Each one of the components that are part of the architecture are briefly described on the sub-sections below.
@@ -78,10 +49,8 @@ Kafka + Subscription Manager + NGSI
 ***********************************
 
 Apache Kafka is a distributed messaging platform that can be used by applications which need to stream data or
-consume/produce data pipelines. In contrast to what Orion is, Kafka seems to be more appropriate to fulfil
-*dojot*'s architectural requirements (responsibility isolation, simplicity, and so on). And using it with a
-subscription manager and a NGSI interface translator, we can compose an entity which is very close to
-the features offered by Orion, in addition to improved speed and easier scalability.
+consume/produce data pipelines. In comparison with other open-source messaging solutions, Kafka seems to be more
+appropriate to fulfil *dojot*'s architectural requirements (responsibility isolation, simplicity, and so on). 
 
 In Kafka, a specialized topics structure is used to insure isolation between different users and applications data,
 enabling a multi-tenant infrastructure.
@@ -91,28 +60,28 @@ making it possible that internal or even external services are able to subscribe
 subscription manager is also a distributed service to avoid it being a single point of failure or even a bottleneck for
 the architecture.
 
-To keep a certain level of compatibility with Fiware services, meaning, for using Fiware services and components in the
-*dojot* platform with the minimal amount of adaptations, we added a NGSI interface translation service.
+To keep a certain level of compatibility with NGSI-compatible components, we added a NGSI interface translation
+service.
 
 Device Manager
 **************
 
-The IoT Device manager is a core entity, responsible for maintaining the devices data models and its abstractions, it is
-also responsible for propagating this models to services that are interested in this kind of information, for example,
-the iot-agent.
+DeviceManager is a core entity which is responsible for keeping device and templates data models. It is also
+responsible for publishing any updates to all interested components (namely IoT agents, history and subscription
+manager) through Kafka.
 
 This service is stateless, having its data persisted to a database, with data isolation for users and applications,
 making possible a multi-tenant architecture for the middleware.
 
-Iot-agent
+IoT Agent
 *********
 
-The iot-agent is an adaptation service between the data model of the context broker and the devices data models. The
-*dojot* platform can have multiple iot-agents, each one of them being specialized in a specific protocol like, for
-instance, MQTT/JSON, CoAP/LWM2M and HTTP/JSON.
+An IoT agent is an adaptation service between physical devices and *dojot* core components. It could be understood as a
+*device driver* for a set of devices. The *dojot* platform can have multiple iot-agents, each one of them being
+specialized in a specific protocol like, for instance, MQTT/JSON, CoAP/LWM2M and HTTP/JSON.
 
-Security measures like the management of the secure channel used for the communication of the platform with the device
-is also treated by this service.
+It is also responsible for all security mechanisms used in communication channels between the devices it deals with and
+the component itself.
 
 User Authorization Service
 **************************
@@ -139,11 +108,11 @@ actions when specific conditions or thresholds are reached. This component is us
 the pure data that is incoming from the IoT devices. It is integrated with the platform through the context broker and
 its configuration is abstracted by the service orchestrator.
 
-History (Logstash)
-******************
+History
+*******
 
-The Logstash connects to the context broker and works as a pipeline for data and events that must be persisted on a
-database. The data is converted into an storage structure and is sent to the corresponding database.
+The History component works as a pipeline for data and events that must be persisted on a database. The data is
+converted into an storage structure and is sent to the corresponding database.
 
 For internal storage, the MongoDB non-relational database is being used, it allows a Sharded Cluster configuration that
 may be required according to the use case.

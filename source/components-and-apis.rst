@@ -10,9 +10,9 @@ Components
   * - Component
     - GitHub repository
     - Documentation
-  * - History (STH)
-    - `GitHub - STH`_
-    - `readthedocs - STH`_
+  * - History
+    - `GitHub - history-ws`_
+    - `readthedocs - history-ws`_
   * - mongodb
     - 
     - `mongodb documentation`_
@@ -25,15 +25,15 @@ Components
   * - iotagent-json
     - `GitHub - iotagent-json`_
     - `readthedocs - iotagent-json`_
-  * - Orion
-    - `GitHub - Orion`_
-    - `readthedocs - Orion`_
+  * - data-broker
+    - `GitHub - data-broker`_
+    - 
   * - DeviceManager
     - `GitHub - DeviceManager`_
     - `readthedocs - DeviceManager`_ 
   * - auth
     - `GitHub - auth`_
-    - 
+    - `readthedocs - auth`_
   * - postgres
     - 
     - `postgres documentation`_
@@ -176,17 +176,17 @@ which component endpoint.
 .. _Zookeeper documentation: https://zookeeper.apache.org/documentation.html
 .. _Kafka documentation: http://kafka.apache.org/documentation/
 
-.. _GitHub - STH: https://github.com/telefonicaid/fiware-sth-comet
+.. _GitHub - history-ws: https://github.com/dojot/history-ws
 .. _API - STH: https://github.com/telefonicaid/fiware-sth-comet#api-walkthrough
-.. _readthedocs - STH: http://fiware-sth-comet.readthedocs.io/en/latest/
+.. _readthedocs - history-ws: https://github.com/dojot/history-ws
 
 .. _GitHub - GUI: https://github.com/dojot/gui
 
 .. _GitHub - iotagent-json: https://github.com/dojot/iotagent-json
 .. _readthedocs - iotagent-json: http://dojotdocs.readthedocs.io/projects/iotagent-json/en/latest/
 
-.. _GitHub - Orion: https://github.com/dojot/fiware-orion
-.. _readthedocs - Orion: http://fiware-orion.readthedocs.io/en/latest/
+.. _GitHub - data-broker: https://github.com/dojot/data-broker
+
 .. _Orion v1: http://telefonicaid.github.io/fiware-orion/api/v1/
 .. _Orion v2: http://telefonicaid.github.io/fiware-orion/api/v2/stable/
 
@@ -195,6 +195,7 @@ which component endpoint.
 .. _readthedocs - DeviceManager: http://dojotdocs.readthedocs.io/projects/DeviceManager/en/latest/
 
 .. _GitHub - auth: https://github.com/dojot/auth
+.. _readthedocs - auth: http://dojotdocs.readthedocs.io/projects/auth/en/latest/
 .. _API - auth: https://dojot.github.io/auth/apis.html
 
 .. _GitHub - perseo-core: https://github.com/telefonicaid/perseo-core
