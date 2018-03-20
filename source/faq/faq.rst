@@ -45,11 +45,11 @@ Which repository is the main one?
 
 There are two main ones:
 
-	- `<https://github.com/dojot/dojot>`_: this is where we keep track of all the things 
-	  related to this project as a whole, such as architectural enhancements.
+  - `<https://github.com/dojot/dojot>`_: this is where we keep track of all the things related to this project as a 
+	  whole, such as architectural enhancements.
 	
-	- `<https://github.com/dojot/docker-compose>`_: repository for Docker compose files 
-	  and configurations. This is what we would recommend to use to start with. 
+  - `<https://github.com/dojot/docker-compose>`_: repository for Docker compose files and configurations. This is what 
+	  we would recommend to use to start with. 
 
 So, I found this pesky bug. How can I inform you about it?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -168,8 +168,7 @@ actual device to push the data to dojot. Here, you need to follow some rules:
 
   - MQTT topic must follow the pattern ``/<service-id>/<device-id>/attrs``, where ``<service-id>`` is an identifier
     associated with the user account and the ``<device-id>`` is a unique identifier assigned by dojot. For example,
-    topic ``/admin/882d/attrs`` must be used for user ``admin`` and device ID ``882d``. There are mechanisms to change 
-    this default topic scheme - check `iotagent-json documentation`_ for that.
+    topic ``/admin/882d/attrs`` must be used for user ``admin`` and device ID ``882d``. 
   
  	- MQTT payload must be a JSON with each key being an attribute of the dojot device, such as:
  	  
@@ -177,9 +176,9 @@ actual device to push the data to dojot. Here, you need to follow some rules:
 
 	{ "temperature" : 10.5,"pressure" : 770 }
 	
-	
-It’s worth to point out that we are relaxing these rules so that you’ll have more flexibility to configure both topic
-and payload. This feature will be available in the next official release.
+
+There are a few extra configurations that you could do to change the default topic scheme - check `iotagent-json
+documentation`_ to check them out.
 
 On the dashboard some attributes are shown as tables and others as charts. How are they chosen/set?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -297,8 +296,8 @@ about this.
 Can I apply the same flow to multiple devices?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Multiple devices can be used both as input and output of data flows. It’s worth to point out that the flow is processed
-individually for each new input message, i.e. for each input device.
+You can use a template as input to indicate that the flow should be applied to all devices associated to that template.
+It’s worth to point out that the flow is processed individually for each new input message, i.e. for each input device.
 
 Can I correlate data from different devices in the same flow?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
