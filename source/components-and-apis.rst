@@ -14,53 +14,47 @@ Components
     - `GitHub - history-ws`_
     - `readthedocs - history-ws`_
   * - mongodb
-    - 
+    -
     - `mongodb documentation`_
   * - Mosquitto (MQTT broker)
-    - 
+    -
     - `Mosquitto documentation`_
   * - GUI
     - `GitHub - GUI`_
-    - 
+    -
   * - iotagent-json
     - `GitHub - iotagent-json`_
     - `readthedocs - iotagent-json`_
   * - data-broker
     - `GitHub - data-broker`_
-    - 
+    -
   * - DeviceManager
     - `GitHub - DeviceManager`_
-    - `readthedocs - DeviceManager`_ 
+    - `readthedocs - DeviceManager`_
   * - auth
     - `GitHub - auth`_
     - `readthedocs - auth`_
   * - postgres
-    - 
+    -
     - `postgres documentation`_
   * - Kong API gateway
-    - 
+    -
     - `Kong documentation`_
-  * - Perseo Core
-    - `GitHub - perseo-core`_
-    - `Docs - perseo-core`_
-  * - Perseo Front-End
-    - `GitHub - perseo-fe`_
-    - `Docs - perseo-fe`_
   * - Orchestrator/Mashup
     - `GitHub - mashup`_
-    - 
+    -
   * - redis
-    - 
+    -
     - `Redis documentation`_
   * - zookeeper
-    - 
+    -
     - `Zookeeper documentation`_
   * - Kafka
-    - 
+    -
     - `Kafka documentation`_
   * - EJBCA-REST
     - `GitHub - EJBCA-REST`_
-    - 
+    -
 
 
 
@@ -84,7 +78,7 @@ Exposed APIs
      - `GitHub - DeviceManager`_
    * - /flows
      -  Flow management
-     - 
+     -
      - `GitHub - mashup`_
    * - /auth
      -  User authentication
@@ -108,7 +102,7 @@ Exposed APIs
      - `GitHub - Orion`_
    * - /gui
      -  Graphical User Interface
-     - 
+     -
      - `GitHub - GUI`_
    * - /sign
      -  Public key signing
@@ -191,21 +185,15 @@ which component endpoint.
 .. _Orion v2: http://telefonicaid.github.io/fiware-orion/api/v2/stable/
 
 .. _GitHub - DeviceManager: https://github.com/dojot/device-manager
-.. _API - DeviceManager: http://dojotdocs.readthedocs.io/projects/DeviceManager/en/latest/api.html
+.. _API - DeviceManager: http://dojot.github.io/device-manager/apiary_latest.html
 .. _readthedocs - DeviceManager: http://dojotdocs.readthedocs.io/projects/DeviceManager/en/latest/
 
 .. _GitHub - auth: https://github.com/dojot/auth
 .. _readthedocs - auth: http://dojotdocs.readthedocs.io/projects/auth/en/latest/
-.. _API - auth: https://dojot.github.io/auth/apis.html
-
-.. _GitHub - perseo-core: https://github.com/telefonicaid/perseo-core
-.. _Docs - perseo-core: https://github.com/telefonicaid/perseo-core/tree/master/documentation
-
-.. _GitHub - perseo-fe: https://github.com/dojot/perseo-fe
-.. _Docs - perseo-fe: https://github.com/dojot/perseo-fe/tree/cpqd_master/documentation
+.. _API - auth: http://dojot.github.io/auth/apiary_latest.html
 
 .. _GitHub - mashup: https://github.com/dojot/mashup
 
 .. _GitHub - EJBCA-REST: http://dojotdocs.readthedocs.io/projects/EJBCA-REST/en/latest/
-.. _API - EJBCA-REST: http://dojotdocs.readthedocs.io/projects/EJBCA-REST/en/latest/api.html
+.. _API - EJBCA-REST: http://dojot.github.io/ejbca-rest/apiary_latest.html
 

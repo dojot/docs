@@ -50,7 +50,7 @@ Kafka + Subscription Manager + NGSI
 
 Apache Kafka is a distributed messaging platform that can be used by applications which need to stream data or
 consume/produce data pipelines. In comparison with other open-source messaging solutions, Kafka seems to be more
-appropriate to fulfil *dojot*'s architectural requirements (responsibility isolation, simplicity, and so on). 
+appropriate to fulfil *dojot*'s architectural requirements (responsibility isolation, simplicity, and so on).
 
 In Kafka, a specialized topics structure is used to insure isolation between different users and applications data,
 enabling a multi-tenant infrastructure.
@@ -99,14 +99,6 @@ This service provides a high level API for configuring the *dojot* with the obje
 how to handle each one of the services that are part of the platform. More specifically, it is responsible for modeling
 different services, exposing a simplified configuration interface and propagating this configuration to the various
 services when requested. It acts as a centralized configuration manager for multiple services.
-
-Fiware Perseo
-**************
-
-The CEP service is responsible for analysing in real time the data processing flows for selected events and triggering
-actions when specific conditions or thresholds are reached. This component is used for creating notification events from
-the pure data that is incoming from the IoT devices. It is integrated with the platform through the context broker and
-its configuration is abstracted by the service orchestrator.
 
 History
 *******
