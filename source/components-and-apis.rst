@@ -154,6 +154,9 @@ Exposed APIs
      -  Certification-Auth. functions
      - `API - EJBCA-REST`_
      - `GitHub - EJBCA-REST`_
+   * - /image
+     - Device image management
+     - `API - image-manager`_
 
 
 The API gateway used in dojot reroutes some of these endpoints so that they
