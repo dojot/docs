@@ -68,6 +68,9 @@ For instance: ::
   
   git checkout 0.1.0-dojot
 
+Or if you're brave enough: ::
+
+  git checkout master
 
 That done, the environment can be brought up by: ::
 
