@@ -10,12 +10,10 @@ Components
   * - Component
     - GitHub repository
     - Documentation
-  * - History
-    - `GitHub - history-ws`_
-    - `readthedocs - history-ws`_
   * - mongodb
     -
     - `mongodb documentation`_
+<<<<<<< HEAD
   * - Mosquitto (MQTT broker)
     -
     - `Mosquitto documentation`_
@@ -34,15 +32,20 @@ Components
   * - auth
     - `GitHub - auth`_
     - `readthedocs - auth`_
+=======
+>>>>>>> Updating APIs page
   * - postgres
     -
     - `postgres documentation`_
   * - Kong API gateway
     -
     - `Kong documentation`_
+<<<<<<< HEAD
   * - Orchestrator/Mashup
     - `GitHub - mashup`_
     -
+=======
+>>>>>>> Updating APIs page
   * - redis
     -
     - `Redis documentation`_
@@ -52,10 +55,44 @@ Components
   * - Kafka
     -
     - `Kafka documentation`_
+  * - auth
+    - `GitHub - auth`_
+    - `readthedocs - auth`_
+  * - History
+    - `GitHub - history-ws`_
+    - 
+  * - DeviceManager
+    - `GitHub - DeviceManager`_
+    - `readthedocs - DeviceManager`_ 
+  * - Image manager
+    - `GitHub - image-manager`_
+    - 
+  * - GUI
+    - `GitHub - GUI`_
+    - 
+  * - Flow broker
+    - `GitHub - flowbroker`_
+    - 
+  * - Data broker
+    - `GitHub - data-broker`_
+    - 
+  * - iotagent-json
+    - `GitHub - iotagent-json`_
+    - `readthedocs - iotagent-json`_
+  * - iotagent-mosca
+    - `GitHub - iotagent-mosca`_
+    - 
   * - EJBCA-REST
     - `GitHub - EJBCA-REST`_
+<<<<<<< HEAD
     -
 
+=======
+    - 
+  * - Alarm manager
+    - `GitHub - alarm-manager`_
+    -
+>>>>>>> Updating APIs page
 
 
 Exposed APIs
@@ -78,8 +115,13 @@ Exposed APIs
      - `GitHub - DeviceManager`_
    * - /flows
      -  Flow management
+<<<<<<< HEAD
      -
      - `GitHub - mashup`_
+=======
+     - `API - flowbroker`_
+     - `GitHub - flowbroker`_
+>>>>>>> Updating APIs page
    * - /auth
      -  User authentication
      - `API - auth`_
@@ -94,12 +136,12 @@ Exposed APIs
      - `GitHub - auth`_
    * - /history
      -  Device historical data
-     - `API - STH`_
-     - `GitHub - STH`_
+     - `API - history-ws`_
+     - `GitHub - history-ws`_
    * - /metric
      -  Context broker
-     - `Orion v1`_, `Orion v2`_
-     - `GitHub - Orion`_
+     - `API - data-broker`_
+     - `GitHub - data-broker`_
    * - /gui
      -  Graphical User Interface
      -
@@ -148,7 +190,7 @@ which component endpoint.
    * - STH
      - host:8666/
      - host:8000/history
-   * - `Orion v1`_ or `Orion v2`_
+   * - Data-Broker
      - host:1026/
      - host:8000/metric
    * - GUI
@@ -161,29 +203,41 @@ which component endpoint.
      - host:5583/ca
      - host:8000/ca
 
-
 .. _mongodb documentation: https://docs.mongodb.com/manual/
-.. _Mosquitto documentation: https://www.eclipse.org/mosquitto/man/
 .. _postgres documentation: https://www.postgresql.org/docs/
 .. _Kong documentation: https://getkong.org/docs/
 .. _Redis documentation: https://redis.io/documentation
 .. _Zookeeper documentation: https://zookeeper.apache.org/documentation.html
 .. _Kafka documentation: http://kafka.apache.org/documentation/
 
+
+.. _GitHub - auth: https://github.com/dojot/auth
+.. _API - auth: https://dojot.github.io/auth/apiary_latest.html
+.. _readthedocs - auth: http://dojotdocs.readthedocs.io/projects/auth/en/latest/
+
 .. _GitHub - history-ws: https://github.com/dojot/history-ws
-.. _API - STH: https://github.com/telefonicaid/fiware-sth-comet#api-walkthrough
-.. _readthedocs - history-ws: https://github.com/dojot/history-ws
+.. _API - history-ws: https://dojot.github.io/history-ws/apiary_latest.html
+
+
+.. _GitHub - DeviceManager: https://github.com/dojot/device-manager
+.. _API - DeviceManager: https://dojot.github.io/device-manager/apiary_latest.html
+.. _readthedocs - DeviceManager: http://dojotdocs.readthedocs.io/projects/DeviceManager/en/latest/
+
+.. _GitHub - image-manager: <https://github.com/dojot/image-manager>
+.. _API - image-manager: https://dojot.github.io/image-manager/apiary_latest.html
+
 
 .. _GitHub - GUI: https://github.com/dojot/gui
 
-.. _GitHub - iotagent-json: https://github.com/dojot/iotagent-json
-.. _readthedocs - iotagent-json: http://dojotdocs.readthedocs.io/projects/iotagent-json/en/latest/
+
+.. _GitHub - flowbroker: https://github.com/dojot/flowbroker
+.. _API - flowbroker: https://dojot.github.io/flowbroker/apiary_latest.html
 
 .. _GitHub - data-broker: https://github.com/dojot/data-broker
+.. _API - data-broker: https://dojot.github.io/data-broker/apiary_latest.html
 
-.. _Orion v1: http://telefonicaid.github.io/fiware-orion/api/v1/
-.. _Orion v2: http://telefonicaid.github.io/fiware-orion/api/v2/stable/
 
+<<<<<<< HEAD
 .. _GitHub - DeviceManager: https://github.com/dojot/device-manager
 .. _API - DeviceManager: http://dojot.github.io/device-manager/apiary_latest.html
 .. _readthedocs - DeviceManager: http://dojotdocs.readthedocs.io/projects/DeviceManager/en/latest/
@@ -196,4 +250,18 @@ which component endpoint.
 
 .. _GitHub - EJBCA-REST: http://dojotdocs.readthedocs.io/projects/EJBCA-REST/en/latest/
 .. _API - EJBCA-REST: http://dojot.github.io/ejbca-rest/apiary_latest.html
+=======
+.. _GitHub - iotagent-json: https://github.com/dojot/iotagent-json
+.. _readthedocs - iotagent-json: http://dojotdocs.readthedocs.io/projects/iotagent-json/en/latest/
 
+.. _GitHub - iotagent-mosca: https://github.com/dojot/iotagent-mosca
+
+.. _GitHub - data-broker: https://github.com/dojot/data-broker
+
+.. _GitHub - mashup: https://github.com/dojot/mashup
+
+.. _GitHub - EJBCA-REST: https://github.com/dojot/ejbca-rest
+.. _API - EJBCA-REST: https://dojot.github.io/ejbca-rest/apiary_latest.html
+>>>>>>> Updating APIs page
+
+.. _GitHub - alarm-manager: https://github.com/dojot/alarm-manager
