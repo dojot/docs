@@ -13,39 +13,12 @@ Components
   * - mongodb
     -
     - `mongodb documentation`_
-<<<<<<< HEAD
-  * - Mosquitto (MQTT broker)
-    -
-    - `Mosquitto documentation`_
-  * - GUI
-    - `GitHub - GUI`_
-    -
-  * - iotagent-json
-    - `GitHub - iotagent-json`_
-    - `readthedocs - iotagent-json`_
-  * - data-broker
-    - `GitHub - data-broker`_
-    -
-  * - DeviceManager
-    - `GitHub - DeviceManager`_
-    - `readthedocs - DeviceManager`_
-  * - auth
-    - `GitHub - auth`_
-    - `readthedocs - auth`_
-=======
->>>>>>> Updating APIs page
   * - postgres
     -
     - `postgres documentation`_
   * - Kong API gateway
     -
     - `Kong documentation`_
-<<<<<<< HEAD
-  * - Orchestrator/Mashup
-    - `GitHub - mashup`_
-    -
-=======
->>>>>>> Updating APIs page
   * - redis
     -
     - `Redis documentation`_
@@ -84,15 +57,10 @@ Components
     - 
   * - EJBCA-REST
     - `GitHub - EJBCA-REST`_
-<<<<<<< HEAD
-    -
-
-=======
     - 
   * - Alarm manager
     - `GitHub - alarm-manager`_
     -
->>>>>>> Updating APIs page
 
 
 Exposed APIs
@@ -101,62 +69,58 @@ Exposed APIs
 .. list-table:: APIs
    :header-rows: 1
 
-   * - Endpoint
-     - Purpose
-     - Component API
-     - Repository
-   * - /device
-     -  Device management
-     - `API - DeviceManager`_
-     - `GitHub - DeviceManager`_
-   * - /template
-     -  Template management
-     - `API - DeviceManager`_
-     - `GitHub - DeviceManager`_
-   * - /flows
-     -  Flow management
-<<<<<<< HEAD
-     -
-     - `GitHub - mashup`_
-=======
-     - `API - flowbroker`_
-     - `GitHub - flowbroker`_
->>>>>>> Updating APIs page
-   * - /auth
-     -  User authentication
-     - `API - auth`_
-     - `GitHub - auth`_
-   * - /auth/revoke
-     -  User authentication
-     - `API - auth`_
-     - `GitHub - auth`_
-   * - /auth/user
-     -  User authentication
-     - `API - auth`_
-     - `GitHub - auth`_
-   * - /history
-     -  Device historical data
-     - `API - history-ws`_
-     - `GitHub - history-ws`_
-   * - /metric
-     -  Context broker
-     - `API - data-broker`_
-     - `GitHub - data-broker`_
-   * - /gui
-     -  Graphical User Interface
-     -
-     - `GitHub - GUI`_
-   * - /sign
-     -  Public key signing
-     - `API - EJBCA-REST`_
-     - `GitHub - EJBCA-REST`_
-   * - /ca
-     -  Certification-Auth. functions
-     - `API - EJBCA-REST`_
-     - `GitHub - EJBCA-REST`_
-   * - /image
-     - Device image management
-     - `API - image-manager`_
+  * - Endpoint
+    - Purpose
+    - Component API
+    - Repository
+  * - /device
+    -  Device management
+    - `API - DeviceManager`_
+    - `GitHub - DeviceManager`_
+  * - /template
+    -  Template management
+    - `API - DeviceManager`_
+    - `GitHub - DeviceManager`_
+  * - /flows
+    -  Flow management
+    - `API - flowbroker`_
+    - `GitHub - flowbroker`_
+  * - /auth
+    -  User authentication
+    - `API - auth`_
+    - `GitHub - auth`_
+  * - /auth/revoke
+    -  User authentication
+    - `API - auth`_
+    - `GitHub - auth`_
+  * - /auth/user
+    -  User authentication
+    - `API - auth`_
+    - `GitHub - auth`_
+  * - /history
+    -  Device historical data
+    - `API - history-ws`_
+    - `GitHub - history-ws`_
+  * - /metric
+    -  Context broker
+    - `API - data-broker`_
+    - `GitHub - data-broker`_
+  * - /gui
+    -  Graphical User Interface
+    - 
+    - `GitHub - GUI`_
+  * - /sign
+    -  Public key signing
+    - `API - EJBCA-REST`_
+    - `GitHub - EJBCA-REST`_
+  * - /ca
+    -  Certification-Auth. functions
+    - `API - EJBCA-REST`_
+    - `GitHub - EJBCA-REST`_
+  * - /image
+    - Device image management
+    - `API - image-manager`_
+    - `GitHub - image-manager`_
 
 
 The API gateway used in dojot reroutes some of these endpoints so that they
@@ -240,20 +204,6 @@ which component endpoint.
 .. _API - data-broker: https://dojot.github.io/data-broker/apiary_latest.html
 
 
-<<<<<<< HEAD
-.. _GitHub - DeviceManager: https://github.com/dojot/device-manager
-.. _API - DeviceManager: http://dojot.github.io/device-manager/apiary_latest.html
-.. _readthedocs - DeviceManager: http://dojotdocs.readthedocs.io/projects/DeviceManager/en/latest/
-
-.. _GitHub - auth: https://github.com/dojot/auth
-.. _readthedocs - auth: http://dojotdocs.readthedocs.io/projects/auth/en/latest/
-.. _API - auth: http://dojot.github.io/auth/apiary_latest.html
-
-.. _GitHub - mashup: https://github.com/dojot/mashup
-
-.. _GitHub - EJBCA-REST: http://dojotdocs.readthedocs.io/projects/EJBCA-REST/en/latest/
-.. _API - EJBCA-REST: http://dojot.github.io/ejbca-rest/apiary_latest.html
-=======
 .. _GitHub - iotagent-json: https://github.com/dojot/iotagent-json
 .. _readthedocs - iotagent-json: http://dojotdocs.readthedocs.io/projects/iotagent-json/en/latest/
 
@@ -265,6 +215,5 @@ which component endpoint.
 
 .. _GitHub - EJBCA-REST: https://github.com/dojot/ejbca-rest
 .. _API - EJBCA-REST: https://dojot.github.io/ejbca-rest/apiary_latest.html
->>>>>>> Updating APIs page
 
 .. _GitHub - alarm-manager: https://github.com/dojot/alarm-manager
