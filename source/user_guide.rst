@@ -316,78 +316,61 @@ For more information on how dojot deals with data sent from devices, check the `
 Checking historical data
 ++++++++++++++++++++++++
 
-In order to check all values that were sent from a device for a particular attribute, you could use the `history
-APIs`_. Let's first send a few other values to dojot so we can get a few more interesting results:
+In order to check all values that were sent from a device for a particular
+attribute, you could use the `history APIs`_. Let's first send a few other
+values to dojot so we can get a few more interesting results:
 
 
 .. code-block:: bash
 
-  mosquitto_pub -t /admin/0998/attrs -m '{"temperature": 10.6}'
-  mosquitto_pub -t /admin/0998/attrs -m '{"temperature": 15.6}'
-  mosquitto_pub -t /admin/0998/attrs -m '{"temperature": 36.5}'
+  mosquitto_pub -t /admin/3bb9/attrs -m '{"temperature": 36.5}'
+  mosquitto_pub -t /admin/3bb9/attrs -m '{"temperature": 15.6}'
+  mosquitto_pub -t /admin/3bb9/attrs -m '{"temperature": 10.6}'
 
 
 To retrieve all values sent for temperature attribute of this device:
 
 .. code-block:: bash
 
-  curl -X GET http://localhost:8000/history/STH/v1/contextEntities/type/template_1/id/0998/attributes/temperature?lastN=3 \
-    -H "Authorization: Bearer ${JWT}" \
-    -H "Fiware-Service:admin"\
-    -H "Fiware-ServicePath:/"
+  curl -X GET \
+    -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsIn...' \
+    "http://localhost:8000/history/device/3bb9/history?lastN=3&attr=temperature"
 
 The history endpoint is built from these values:
 
-- ``.../type/template_1/id/0998/...``: the device type is ``template_1`` - this is retrieved from the ``type``
-  attribute from the device. Same for the ID (``0998``)
-
-- ``.../attributes/temperature?lastN=3``: the requested attribute is temperature and it should get the last 3 values.
-  More operators are available in `STH data retrieval`_
+- ``.../device/3bb9/...``: the device ID is ``3bb9`` - this is retrieved from
+  the ``id`` attribute from the device
+- ``.../history?lastN=3&attr=temperature``: the requested attribute is
+  temperature and it should get the last 3 values. More operators are available
+  in `history APIs`_.
 
   The request should result in the following message:
 
 .. code-block:: json
 
-  {
-    "contextResponses": [
+    [
       {
-        "contextElement": {
-          "attributes": [
-            {
-              "name": "temperature",
-              "values": [
-                {
-                  "recvTime": "2018-01-25T14:57:21.027Z",
-                  "attrType": "Number",
-                  "attrValue": 10.6
-                },
-                {
-                  "recvTime": "2018-01-25T14:57:21.063Z",
-                  "attrType": "Number",
-                  "attrValue": 15.6
-                },
-                {
-                  "recvTime": "2018-01-25T14:57:21.701Z",
-                  "attrType": "Number",
-                  "attrValue": 36.5
-                }
-              ]
-            }
-          ],
-          "id": "0998",
-          "isPattern": false,
-          "type": "template_1"
-        },
-        "statusCode": {
-          "code": "200",
-          "reasonPhrase": "OK"
-        }
+        "device_id": "3bb9",
+        "ts": "2018-03-22T13:47:07.050000Z",
+        "value": 10.6,
+        "attr": "temperature"
+      },
+      {
+        "device_id": "3bb9",
+        "ts": "2018-03-22T13:46:42.455000Z",
+        "value": 15.6,
+        "attr": "temperature"
+      },
+      {
+        "device_id": "3bb9",
+        "ts": "2018-03-22T13:46:21.535000Z",
+        "value": 36.5,
+        "attr": "temperature"
       }
     ]
-  }
 
-This message contains all previously sent values. More information about what can be done with historical data can be
-found in `STH documentation`_.
+
+This message contains all previously sent values. 
 
 
 Integrating physical devices
@@ -425,6 +408,4 @@ can be used to configure such flows, available actions to be used when building 
 .. _DeviceManager how-to: http://dojotdocs.readthedocs.io/projects/DeviceManager/en/latest/using-device-manager.html#using-devicemanager
 .. _mashup: https://github.com/dojot/mashup
 .. _mosquitto: https://projects.eclipse.org/projects/technology.mosquitto
-.. _history APIs: https://github.com/telefonicaid/fiware-sth-comet
-.. _STH documentation: https://github.com/telefonicaid/fiware-sth-comet#api-walkthrough
-.. _STH data retrieval: https://github.com/telefonicaid/fiware-sth-comet/blob/master/doc/manuals/raw-data-retrieval.md
+.. _history APIs: https://dojot.github.io/history-ws/apiary_latest.html
