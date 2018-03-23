@@ -16,10 +16,9 @@ component's own documentation repositories and ReadTheDocs pages.
    :glob:
 
    architecture
-   ops_guide
    user_guide
    components-and-apis
-   install/*
+   installation-guide
    vms/vbox/guide
    faq/faq
 
