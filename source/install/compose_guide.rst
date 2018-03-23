@@ -99,6 +99,6 @@ Usage
 -----
 
 The web interface is available at ``http://localhost:8000``. The user is ``admin`` and the password is ``admin``. You
-also can interact with platform using the :doc:`REST API <../apis>`.
+also can interact with platform using the :doc:`REST API <../components-and-apis>`.
 
 Read the :doc:`../user_guide` for more information about how to interact with the platform.
