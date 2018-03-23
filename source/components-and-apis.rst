@@ -33,31 +33,31 @@ Components
     - `readthedocs - auth`_
   * - History
     - `GitHub - history-ws`_
-    - 
+    -
   * - DeviceManager
     - `GitHub - DeviceManager`_
-    - `readthedocs - DeviceManager`_ 
+    - `readthedocs - DeviceManager`_
   * - Image manager
     - `GitHub - image-manager`_
-    - 
+    -
   * - GUI
     - `GitHub - GUI`_
-    - 
+    -
   * - Flow broker
     - `GitHub - flowbroker`_
-    - 
+    -
   * - Data broker
     - `GitHub - data-broker`_
-    - 
+    -
   * - iotagent-json
     - `GitHub - iotagent-json`_
     - `readthedocs - iotagent-json`_
   * - iotagent-mosca
     - `GitHub - iotagent-mosca`_
-    - 
+    -
   * - EJBCA-REST
     - `GitHub - EJBCA-REST`_
-    - 
+    -
   * - Alarm manager
     - `GitHub - alarm-manager`_
     -
@@ -107,7 +107,7 @@ Exposed APIs
     - `GitHub - data-broker`_
   * - /gui
     -  Graphical User Interface
-    - 
+    -
     - `GitHub - GUI`_
   * - /sign
     -  Public key signing
