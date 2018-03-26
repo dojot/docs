@@ -170,6 +170,27 @@ which component endpoint.
      - host:5583/ca
      - host:8000/ca
 
+
+Kafka messages
+--------------
+
+These are the messages sent by components and their subjects. If you are
+developing a new interal component, see `API - data-broker`_ to check how to
+get the actual Kafka topic to listen to in order to receive these messages.
+
+.. list-table:: Original endpoints
+   :header-rows: 1
+
+   * - Component
+     - Message
+     - Subject
+   * - DeviceManager
+     - Device CRUD (`Messages - DeviceManager`_)
+     - ``dojot.device-manager.device``
+   * - iotagent-json
+     - Device data update (`Messages - iotagent-json`_)
+     - ``device-data``
+
 .. _mongodb documentation: https://docs.mongodb.com/manual/
 .. _postgres documentation: https://www.postgresql.org/docs/
 .. _Kong documentation: https://getkong.org/docs/
@@ -189,6 +210,7 @@ which component endpoint.
 .. _GitHub - DeviceManager: https://github.com/dojot/device-manager
 .. _API - DeviceManager: https://dojot.github.io/device-manager/apiary_latest.html
 .. _readthedocs - DeviceManager: http://dojotdocs.readthedocs.io/projects/DeviceManager/en/latest/
+.. _Messages - DeviceManager: http://dojotdocs.readthedocs.io/projects/DeviceManager/en/latest/kafka-messages.html
 
 .. _GitHub - image-manager: <https://github.com/dojot/image-manager>
 .. _API - image-manager: https://dojot.github.io/image-manager/apiary_latest.html
@@ -206,6 +228,7 @@ which component endpoint.
 
 .. _GitHub - iotagent-json: https://github.com/dojot/iotagent-json
 .. _readthedocs - iotagent-json: http://dojotdocs.readthedocs.io/projects/iotagent-json/en/latest/
+.. _Messages - iotagent-json: http://dojotdocs.readthedocs.io/projects/iotagent-json/en/latest/operation.html#sending-messages-to-other-components-via-kafka
 
 .. _GitHub - iotagent-mosca: https://github.com/dojot/iotagent-mosca
 
