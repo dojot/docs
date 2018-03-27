@@ -102,7 +102,7 @@ You need to follow some steps:
   $ cd <path-to-your-clone-of-docker-compose>
   $ git checkout master && git pull
 
-2. Deploy the latest docker images.
+2. Deploy the latest docker images. This command might need ``sudo``. 
 
 .. code-block:: bash
 
@@ -310,8 +310,7 @@ The data flow UI… really looks like node-RED. Are they related in some way?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 It’s based on the Node-RED frontend, but uses its own engine to process the
-messages. If you’re familiar with Node-Red, you won’t have any difficult to use
-it.
+messages. If you’re familiar with Node-Red, it won't be difficult to use it.
 
 Why should I use it?
 ^^^^^^^^^^^^^^^^^^^^

@@ -1,7 +1,7 @@
 User Guide
 ==========
 
-This document provides information on how to use dojot with a device developer
+This document provides information on how to use dojot from a device developer
 or application developer point of view. For documentation regarding the
 operation of the platform itself, please refer to the :doc:`ops_guide`.
 
@@ -28,16 +28,15 @@ dojot basics
 
 Before using dojot, you should be familiar with some basic operations and
 concepts. They are very simple to understand and use, but without them, all
-operations might become obscure and senseless. It is advisable to checkout our
-:doc:`architecture` to get acquainted with all internal components.
+operations might become obscure and senseless.
 
-First of all, you should check out how to acccess dojot through its APIs, which
-is detailed in the next section. After that, there's an explanation of a few
-basic entities in dojot: devices, templates and flows (including a simple
-tutorial on how to create and use them).
+In the next section, there is an explanation of a few basic entities in dojot:
+devices, templates and flows. With these concepts in mind, we present a small
+tutorial to how to use them in dojot - it only covers API access. For a guided
+tour on how to use the web interface, check dojot's `YouTube channel`_.
 
-All these instructions considers only API access. For a guided tour on how to
-use the web interface, check dojot's `YouTube channel`_.
+If you want more information on how dojot works internally, you should checkout
+the :doc:`architecture` to get acquainted with all internal components.
 
 User authentication
 *******************
@@ -49,7 +48,7 @@ like (not limited to these):
 
 - User identity
 - Validation data
-- Timestamp
+- Token expiration date
 
 The component responsible for user authentication is `auth`_. You can find a
 tutorial of how to authenticate a user and how to get an access token in `auth
@@ -332,29 +331,7 @@ from the following information:
 - 0998: device ID. This is retrieved from the device itself. It is returned
   when the device is created or read from /device endpoint.
 
-To check if it was correctly processed by dojot, send the following request:
-
-.. code-block:: bash
-
-    curl -X POST http://localhost:8000/metric/v2/entities/0998 \
-    -H "Authorization: Bearer ${JWT}"
-
-
-This would result in the following message:
-
-.. code-block:: json
-
-    {
-      "id": "0998",
-      "type": "template_1",
-      "temperature": {
-        "type": "Number",
-        "value": 10.6,
-        "metadata": {}
-      }
-    }
-
-.. NOTE:: The device type is a string formed by "template\_" concatenated with all template IDs that form it.
+This topic scheme is customizable, depending on device configuration.
 
 For more information on how dojot deals with data sent from devices, check the
 `Integrating physical devices`_ section.

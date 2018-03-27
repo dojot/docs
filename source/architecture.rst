@@ -17,10 +17,11 @@ documentation.
 Components
 ----------
 
-dojot was design to make possible fast solution prototyping and ease of use,
-along with scalability and robustness. Its internal architecture makes use of
-many well-known open-source components with others designed and implemented by
-dojot team. This architecture is described on :numref:`new_arch`.
+dojot was designed to make fast solution prototyping possible, providing a
+platform that's easy to use, scalable and robust. Its internal architecture
+makes use of many well-known open-source components with others designed and
+implemented by dojot team. This architecture is described on
+:numref:`new_arch`.
 
 .. _new_arch:
 .. figure:: images/new_architecture.png
