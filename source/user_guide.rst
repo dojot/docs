@@ -106,8 +106,21 @@ depth all the available operations.
 Flows
 *****
 
-This section will explain what a flow is and how to use it. It will be filled
-as soon as `mashup`_ documentation is ready.
+A flow is a sequence of blocks that process a particular event or device
+message. It contains:
+
+- entry point: a block representing what is the trigger to start a particular
+  flow;
+- processing blocks: a set of blocks that perform operations using the event.
+  These blocks may or may not use the contents of such event to further process
+  it. The operations might be: testing content for particular values or ranges,
+  geo-positioning analysis, changing message attributes, perform operations on
+  external elements, and so on.
+- exit point: a block representing where the resulting data should be forwarded
+  to. This block might be a database, a virtual device, an external element,
+  and so on.
+
+The component responsible for dealing with such flows is `flowbroker`_. 
 
 Step-by-step device management
 ******************************
@@ -447,3 +460,4 @@ the flows, so on and so forth.
 .. _mashup: https://github.com/dojot/mashup
 .. _mosquitto: https://projects.eclipse.org/projects/technology.mosquitto
 .. _history APIs: https://dojot.github.io/history-ws/apiary_latest.html
+.. _flowbroker: https://github.com/dojot/flowbroker
