@@ -422,17 +422,6 @@ After your device is able to communicate with dojot, you can start using it as
 described in `Step-by-step device management`_.
 
 
-Flow Management
----------------
-
-Moving to the perspective of an aplication developer, this section should list
-and explain the usage of the information flow configuration process within the
-platform - how to use the provided gui, high level description of the APIs that
-can be used to configure such flows, available actions to be used when building
-the flows, so on and so forth.
-
-
-
 .. _YouTube channel: https://www.youtube.com/channel/UCK1iQ-d-K-O2mOLahPOoe6w
 .. _JSON Web Token: https://tools.ietf.org/html/rfc7519
 .. _jwt.io: https://jwt.io/

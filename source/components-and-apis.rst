@@ -175,8 +175,9 @@ Kafka messages
 --------------
 
 These are the messages sent by components and their subjects. If you are
-developing a new interal component, see `API - data-broker`_ to check how to
-get the actual Kafka topic to listen to in order to receive these messages.
+developing a new internal component (such as a new IoT agent), see `API -
+data-broker`_ to check how to get the actual Kafka topic to listen to in order
+to receive these messages.
 
 .. list-table:: Original endpoints
    :header-rows: 1
