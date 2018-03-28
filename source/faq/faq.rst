@@ -433,7 +433,8 @@ If you don't want this node anymore, you could delete it:
     "http://localhost:8000/flows/v1/node/kelvin"
 
 
-And that's it!
+And that's it! In the `flowbroker`_ repository, there is an example of how to
+build a Docker image that could be added to flow node menu.
 
 Applications
 ------------
@@ -476,3 +477,4 @@ described in the question `How can I use them?`_.
 
 .. _Device-Manager how-to - sending actuation messages: http://dojotdocs.readthedocs.io/projects/DeviceManager/en/latest/using-device-manager.html#sending-actuation-messages-to-devices
 .. _iotagent-json documentation: http://dojotdocs.readthedocs.io/projects/iotagent-json/en/latest/
+.. _flowbroker: https://github.com/dojot/flowbroker
