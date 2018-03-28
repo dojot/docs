@@ -408,12 +408,32 @@ virtual device and assigning to it the output.
         :width: 95%
         :align: center
 
-It would be cool a WhatsApp node, is it in roadmap?
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+How can I add a new node type to its menu?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-It’s under analysis. We intend to support other notifications systems besides
-email, including WhatsApp, Twitter and Telegram. If you also have interest,
-please help us to develop them.
+It's pretty easy, actually, although it needs a few commands in bash. To add a
+new node, you should send the following request:
+
+.. code-block:: bash
+
+    curl -H "Authorization: Bearer ${JWT}" http://localhost:8000/flows/v1/node
+    -H "content-type: application/json" -d '{"image": "mmagr/kelvin:latest",
+    "id":"kelvin"}'
+
+This will add a new node called 'kelvin' which is implemented by a docker image
+located at "mmagr/kelvin". There's only one caveat: you should pull this image
+in your target system (where dojot is installed) before adding it to the flow
+menu.
+
+If you don't want this node anymore, you could delete it:
+
+.. code-block:: bash
+
+    curl -X DELETE -H "Authorization: Bearer ${JWT}"
+    "http://localhost:8000/flows/v1/node/kelvin"
+
+
+And that's it!
 
 Applications
 ------------
