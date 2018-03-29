@@ -182,25 +182,26 @@ representation.
 Let’s take as example a weather station which measures temperature and
 humidity, and publishes them periodically through MQTT. First, you create a
 device of type MQTT with two attributes (temperature and humidity). Then you
-set your actual device to push the data to dojot. Here, you need to follow some
-rules:
+set your actual device to push the data to dojot.
 
-  - MQTT topic must follow the pattern ``/<service-id>/<device-id>/attrs``,
-    where ``<service-id>`` is an identifier associated with the user account
-    and the ``<device-id>`` is a unique identifier assigned by dojot. For
-    example, topic ``/admin/882d/attrs`` must be used for user ``admin`` and
-    device ID ``882d``.
+In order to send data to dojot via MQTT (using iotagent-mosca), there are some
+things to keep in mind:
 
-  - MQTT payload must be a JSON with each key being an attribute of the dojot
-    device, such as:
+- If you don't define any topic in device template, it will assume the pattern
+  ``/<service-id>/<device-id>/attrs`` (for instance: ``/admin/efac/attrs``).
+  This should be the topic to which the device will publish its information to.
+
+- If you do define a topic in device template, then your device should publish
+  its data to it and set the client-id parameter. It should follow the
+  following pattern: ``<service>:<deviceid>``, such as ``admin:efac``.
+
+- MQTT payload must be a JSON with each key being an attribute of the dojot
+  device, such as:
 
 .. code-block:: javascript
 
   { "temperature" : 10.5,"pressure" : 770 }
 
-
-There are a few extra configurations that you could do to change the default
-topic scheme - check `iotagent-json documentation`_ to check them out.
 
 On the dashboard some attributes are shown as tables and others as charts. How are they chosen/set?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
