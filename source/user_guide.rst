@@ -322,16 +322,26 @@ Let's send this message to dojot:
 
   mosquitto_pub -t /admin/0998/attrs -m '{"temperature": 10.6}'
 
-If there is no output, the message was sent to MQTT broker. The topic is build
-from the following information:
 
-- admin: user tenant. This is retrieved from "service" attribute from user
-  configuration.
+If there is no output, the message was sent to MQTT broker.
 
-- 0998: device ID. This is retrieved from the device itself. It is returned
-  when the device is created or read from /device endpoint.
+As noted in the `FAQ <./faq/faq.html>`_, there are some considerations
+regarding MQTT topics:
 
-This topic scheme is customizable, depending on device configuration.
+- If you don't define any topic in device template, it will assume the pattern
+  ``/<service-id>/<device-id>/attrs`` (for instance: ``/admin/efac/attrs``).
+  This should be the topic to which the device will publish its information to.
+
+- If you do define a topic in device template, then your device should publish
+  its data to it and set the client-id parameter. It should follow the
+  following pattern: ``<service>:<deviceid>``, such as ``admin:efac``.
+
+- MQTT payload must be a JSON with each key being an attribute of the dojot
+  device, such as:
+
+.. code-block:: javascript
+
+  { "temperature" : 10.5,"pressure" : 770 }
 
 For more information on how dojot deals with data sent from devices, check the
 `Integrating physical devices`_ section.
