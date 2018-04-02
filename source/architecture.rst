@@ -102,16 +102,6 @@ and HTTP/JSON.
 It is also responsible for all security mechanisms used in communication
 channels between the devices it deals with and the component itself.
 
-dojot has a few ready-to-use IoT agents:
-
-- `iotagent-json`_: MQTT agent that makes use of Mosquitto MQTT broker. This
-  IoT agent allows device actuation, usage of translation instructions, sending
-  alarms, and so on.
-- `iotagent-mosca`_: a simpler version of a MQTT IoT agent which implements a
-  MQTT broker (using `Mosca`_ library). This agent will implement interesting
-  features such as client identification and detection (as it doesn't depend on
-  an external MQTT broker), more detailed statistics about devices, and so on.
-
 
 User Authorization Service
 **************************

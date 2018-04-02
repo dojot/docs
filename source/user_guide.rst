@@ -89,8 +89,9 @@ represent all thermometers that will be used in dojot. This template would have
 only one attribute called, let's say, "temperature". While creating the device,
 the user would select its "physical template", let's say *TexasInstr882*, and
 the 'thermometer' template. The user would have also to add translation
-instructions in order to map the temperature reading that will be sent from the
-device to a "temperature" attribute.
+instructions (implemented in terms of data flows, build in flowbuilder) in
+order to map the temperature reading that will be sent from the device to a
+"temperature" attribute.
 
 In order to create a device, a user selects which templates are going to
 compose this new device. All their attributes are merged together and
@@ -416,10 +417,9 @@ messages to the platform. There are two ways to do that:
   MQTT-based devices. If your project is using (or allows changing to) this
   protocol, then it would suffice to check if the device is sending its data
   using a simple key/value JSON. If it isn't, then you might want to use
-  iotagent-json and a few translation instructions while adding the device in
-  dojot (check `iotagent-json`_ documentation to check out how to do that). If
-  it is indeed sending key/value JSON messages, then it can send its messages
-  to dojot's broker and it will be recognized by the platform.
+  iotagent-mosca (check `iotagent-mosca`_ documentation to check out how to do
+  that). If it is indeed sending key/value JSON messages, then it can send its
+  messages to dojot's broker and it will be recognized by the platform.
 
 - Create a new IoT agent to support the protocol used by the device: if your
   device is using another protocol that is not yet supported, then it might be
@@ -445,5 +445,5 @@ described in `Step-by-step device management`_.
 .. _mosquitto: https://projects.eclipse.org/projects/technology.mosquitto
 .. _history APIs: https://dojot.github.io/history-ws/apiary_latest.html
 .. _flowbroker: https://github.com/dojot/flowbroker
-.. _iotagent-json: https://github.com/dojot/iotagent-json
+.. _iotagent-mosca: https://github.com/dojot/iotagent-mosca
 .. _iotagent-nodejs: https://github.com/dojot/iotagent-nodejs
