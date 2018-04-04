@@ -3,7 +3,8 @@
 Frequently Asked Questions
 ==========================
 
-Here are some answers to frequently-asked questions from dojot platform.
+Here are some answers to frequently-asked questions from users of dojot
+platform.
 
 Got a question that isn't answered here? Please, open an issue on `dojot's Github repository
 <http://github.com/dojot/dojot>`_.
@@ -71,7 +72,7 @@ How do I start it? Is it CLI-based or it has a graphical user interface?
 
 dojot can be accessed by a nice web-based interface and by REST APIs.
 Considering that you installed ``docker`` and ``docker-compose`` and cloned the
-``docker-compose`` repository, there are a few steps to start it up:
+``docker-compose`` repository, starting it up is done by just one command:
 
 .. code-block:: bash
 
@@ -95,18 +96,32 @@ How can I update my deploy to dojot's latest version?
 
 You need to follow some steps:
 
-1. Update the docker-compose repository to the latest version.
+1 Update the docker-compose repository to the cutting-edge version (beware the
+  bugs though)
 
 .. code-block:: bash
 
   $ cd <path-to-your-clone-of-docker-compose>
   $ git checkout master && git pull
 
-2. Deploy the latest docker images. This command might need ``sudo``. 
+  If you need a more stable version, you could checkout a tag instead:
 
 .. code-block:: bash
 
-  $ docker-compose pull && docker-compose up -d --build
+  $ git tag
+  0.1.0-dojot
+  0.1.0-dojot-RC1
+  0.1.0-dojot-RC2
+  0.2.0-aikido
+
+  $ git checkout 0.2.0-aikido -b 0.2.0
+
+
+2 Deploy the latest docker images. This command might need ``sudo``.
+
+.. code-block:: bash
+
+  $ docker-compose pull && docker-compose up -d
 
 This procedure also applies to the available virtual machines once they do use
 docker-compose.
@@ -123,25 +138,24 @@ In dojot, a device is a digital representation of an actual device or gateway
 with one or more sensors or of a virtual one with sensors/attributes inferred
 from other devices.
 
-Consider, for instance, an actual device with temperature and humidity sensors;
-it can be represented into dojot as a device with two attributes (one for each
+Consider, for instance, an actual device with thermal and humidity sensors; it
+can be represented inside dojot as a device with two attributes (one for each
 sensor). We call this kind of device as *regular device* or by its
 communication protocol, for instance, *MQTT device* or *CoAP device*.
 
-We can also create devices which don’t directly correspond to their actual
-ones, for instance, we can create one with higher level of information of
-temperature (*is becoming hotter* or *is becoming colder*) whose values are
-inferred from temperature sensors of other devices. This kind of device is
-called *virtual device*.
+We can also create devices which don’t directly correspond to their physical
+counterparts, for instance, we can create one with a higher level of
+temperature information (*is becoming hotter* or *is becoming colder*) whose
+values are inferred from temperature sensors of other devices. This kind of
+device is called *virtual device*.
 
 What is the relationship between this *device* and my actual device?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-It is simple as it seems: the *regular device* for dojot is a mirror (digital
-twin) of your actual device. You can choose which attributes are available for
-applications and other components by adding each one of them at the device
-creation interface. If you don't want some attributes to be available to
-applications or other elements, just don't add them in dojot.
+It is as simple as it seems: the *regular device* for dojot is a mirror
+(digital twin) of your actual device. You can choose which attributes are
+available for applications and other components by adding each one of them at
+the device creation interface.
 
 What are *virtual devices*? How are they different from the other one?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -153,13 +167,12 @@ user has few smoke detectors in a laboratory, each one with different
 attributes.
 
 Wouldn't it be nice if we had one device called *Laboratory* that has one
-attribute *isOnFire*? So, the applications could rely only on this attribute to
-take an action.
+attribute *isOnFire*? Therefore, the applications could rely only on this
+attribute to take an action.
 
 Another difference is how virtual devices are populated. Regular ones will be
 filled with information sent by devices or gateways to the platform and virtual
-ones will be filled by flows or by applications (they won't accept messages
-addressed to them via MQTT, for example).
+ones will be filled by flows or by applications.
 
 
 And what are *templates*?
@@ -303,9 +316,9 @@ Data Flows
 What is data flow?
 ^^^^^^^^^^^^^^^^^^
 
-It’s a processing flow for income messages/data of a device. With a flow you
-can dynamically analyse each new message in order to apply validations, infer
-information, and trigger actions or notifications.
+It’s a sequence of functional blocks to process incoming device messages. With
+a flow you can dynamically analyze each new message in order to apply
+validations, infer information and trigger actions or notifications.
 
 The data flow UI… really looks like node-RED. Are they related in some way?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -317,23 +330,24 @@ Why should I use it?
 ^^^^^^^^^^^^^^^^^^^^
 
 It allows one of the coolest things of IoT in an easy and intuitive way, which
-is to analyse data for extracting information, then take actions.
+is to analyze data for extracting information and then take actions.
 
 What can it do, exactly?
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
 You can do things such as:
 
-  - Create virtual viewers of a device (rename attributes, aggregate
-    attributes, change values, etc).
-  - Infer information based on switch rules.
-  - Infer information based on edge-detection rules.
-  - Infer information based on geo-fence rules.
+  - Create views from a particular device, by renaming, aggregating and
+    changing values, etc).
+  - Infer information based on switch, edge-detection and geo-fence rules.
   - Notify through email.
   - Notify through HTTP.
 
 The data flows component is in constantly development with new features being
 added every new release.
+
+There are mechanisms to add new processing blocks to new flows. Check the `How
+can I add a new node type to its menu?`_ question for more information on that.
 
 So, how can I use it?
 ^^^^^^^^^^^^^^^^^^^^^
@@ -450,9 +464,9 @@ How can I use them?
 ^^^^^^^^^^^^^^^^^^^
 
 There is a very quick and useful tutorial in the `User Guide <../user_guide.html#step-by-step-device-management>`_.
-  
-I'm interested in integrate my application with dojot. How can I do it?
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+I'm interested in integrating my application with dojot. How can I do it?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This should be pretty straightforward. There are two ways that your application
 could be integrated with dojot:

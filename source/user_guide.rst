@@ -2,8 +2,7 @@ User Guide
 ==========
 
 This document provides information on how to use dojot from a device developer
-or application developer point of view. For documentation regarding the
-operation of the platform itself, please refer to the :doc:`ops_guide`.
+or application developer point of view.
 
 .. contents:: Table of Contents
   :local:
@@ -19,7 +18,7 @@ Getting Started
 ---------------
 
 To start, please follow dojot's installation guide in
-:doc:`install/compose_guide`. There you should find how to properly download a
+:doc:`installation-guide`. There you should find how to properly download a
 working copy of the components, how to minimally configure them, how to start
 them up and how to check whether they are working.
 
