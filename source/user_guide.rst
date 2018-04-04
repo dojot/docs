@@ -31,8 +31,8 @@ operations might become obscure and senseless.
 
 In the next section, there is an explanation of a few basic entities in dojot:
 devices, templates and flows. With these concepts in mind, we present a small
-tutorial to how to use them in dojot - it only covers API access. For a guided
-tour on how to use the web interface, check dojot's `YouTube channel`_.
+tutorial to how to use them in dojot - it only covers API access.
+
 
 If you want more information on how dojot works internally, you should checkout
 the :doc:`architecture` to get acquainted with all internal components.
@@ -307,8 +307,9 @@ that, we will use mosquitto_pub from Mosquitto project.
     starting dojot (by running commands like ``ps aux | grep mosquitto``).
 
 
-The dojot compatible format for messages sent by devices is a simple key-value
-JSON, such as:
+The default message format used by dojot is a simple key-value
+JSON (you could translate any message format to this scheme using flows, though), 
+such as:
 
 .. code-block:: json
 
