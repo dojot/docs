@@ -1,11 +1,8 @@
 User Guide
 ==========
 
-This document provides information on how to use dojot. On that regard, this
-should describe the steps required to install and operate the platform from a
-device developer or application developer point of view. For documentation
-regarding the operation of the platform itself, please refer to the
-:doc:`ops_guide`.
+This document provides information on how to use dojot from a device developer
+or application developer point of view.
 
 .. contents:: Table of Contents
   :local:
@@ -21,7 +18,7 @@ Getting Started
 ---------------
 
 To start, please follow dojot's installation guide in
-:doc:`install/compose_guide`. There you should find how to properly download a
+:doc:`installation-guide`. There you should find how to properly download a
 working copy of the components, how to minimally configure them, how to start
 them up and how to check whether they are working.
 
@@ -30,16 +27,15 @@ dojot basics
 
 Before using dojot, you should be familiar with some basic operations and
 concepts. They are very simple to understand and use, but without them, all
-operations might become obscure and senseless. It is advisable to checkout our
-:doc:`architecture` to get acquainted with all internal components.
+operations might become obscure and senseless.
 
-First of all, you should check out how to acccess dojot through its APIs, which
-is detailed in the next section. After that, there's an explanation of a few
-basic entities in dojot: devices, templates and flows (including a simple
-tutorial on how to create and use them).
+In the next section, there is an explanation of a few basic entities in dojot:
+devices, templates and flows. With these concepts in mind, we present a small
+tutorial to how to use them in dojot - it only covers API access.
 
-All these instructions considers only API access. For a guided tour on how to
-use the web interface, check dojot's `YouTube channel`_.
+
+If you want more information on how dojot works internally, you should checkout
+the :doc:`architecture` to get acquainted with all internal components.
 
 User authentication
 *******************
@@ -51,7 +47,7 @@ like (not limited to these):
 
 - User identity
 - Validation data
-- Timestamp
+- Token expiration date
 
 The component responsible for user authentication is `auth`_. You can find a
 tutorial of how to authenticate a user and how to get an access token in `auth
@@ -92,8 +88,9 @@ represent all thermometers that will be used in dojot. This template would have
 only one attribute called, let's say, "temperature". While creating the device,
 the user would select its "physical template", let's say *TexasInstr882*, and
 the 'thermometer' template. The user would have also to add translation
-instructions in order to map the temperature reading that will be sent from the
-device to a "temperature" attribute.
+instructions (implemented in terms of data flows, build in flowbuilder) in
+order to map the temperature reading that will be sent from the device to a
+"temperature" attribute.
 
 In order to create a device, a user selects which templates are going to
 compose this new device. All their attributes are merged together and
@@ -108,8 +105,21 @@ depth all the available operations.
 Flows
 *****
 
-This section will explain what a flow is and how to use it. It will be filled
-as soon as `mashup`_ documentation is ready.
+A flow is a sequence of blocks that process a particular event or device
+message. It contains:
+
+- entry point: a block representing what is the trigger to start a particular
+  flow;
+- processing blocks: a set of blocks that perform operations using the event.
+  These blocks may or may not use the contents of such event to further process
+  it. The operations might be: testing content for particular values or ranges,
+  geo-positioning analysis, changing message attributes, perform operations on
+  external elements, and so on.
+- exit point: a block representing where the resulting data should be forwarded
+  to. This block might be a database, a virtual device, an external element,
+  and so on.
+
+The component responsible for dealing with such flows is `flowbroker`_.
 
 Step-by-step device management
 ******************************
@@ -143,10 +153,10 @@ password in the request payload. The token ("eyJ0eXAiOiJKV1QiL...") should be
 used in every HTTP request sent to dojot in a special header. Such request
 would look like:
 
-.. code-block:: bash 
+.. code-block:: bash
 
    curl -X GET http://localhost:8000/device \
-     -H "Authorization: Bearer eyJ0eXAiOiJKV1QiL..." 
+     -H "Authorization: Bearer eyJ0eXAiOiJKV1QiL..."
 
 Remember that the token must be set in the request header as a whole, not parts
 of it. In the example only the first characters are shown for the sake of
@@ -293,12 +303,13 @@ that, we will use mosquitto_pub from Mosquitto project.
     `mosquitto`_ - one containing tools to access it (i.e. mosquitto_pub and
     mosquitto_sub for publishing messages and subscribing to topics) and
     another one containing the MQTT broker. In this tutorial, only the tools
-    are going to be used. Please check if MQTT broker is not running before 
+    are going to be used. Please check if MQTT broker is not running before
     starting dojot (by running commands like ``ps aux | grep mosquitto``).
 
 
-The dojot compatible format for messages sent by devices is a simple key-value 
-JSON, such as:
+The default message format used by dojot is a simple key-value
+JSON (you could translate any message format to this scheme using flows, though), 
+such as:
 
 .. code-block:: json
 
@@ -312,40 +323,26 @@ Let's send this message to dojot:
 
   mosquitto_pub -t /admin/0998/attrs -m '{"temperature": 10.6}'
 
-If there is no output, the message was sent to MQTT broker. The topic is build 
-from the following information:
 
-- admin: user tenant. This is retrieved from "service" attribute from user
-  configuration.
-- 0998: device ID. This is retrieved from the device itself. It is returned
-  when the device is created or read from /device endpoint.
+If there is no output, the message was sent to MQTT broker.
 
-To check if it was correctly processed by dojot, send the following request:
+As noted in the `FAQ <./faq/faq.html>`_, there are some considerations
+regarding MQTT topics:
 
-.. code-block:: bash
-    
-    curl -X POST http://localhost:8000/metric/v2/entities/0998 \
-    -H "Authorization: Bearer ${JWT}" \
-    -H "Fiware-Service: admin" \
-    -H "Fiware-ServicePath:/"
+- If you don't define any topic in device template, it will assume the pattern
+  ``/<service-id>/<device-id>/attrs`` (for instance: ``/admin/efac/attrs``).
+  This should be the topic to which the device will publish its information to.
 
+- If you do define a topic in device template, then your device should publish
+  its data to it and set the client-id parameter. It should follow the
+  following pattern: ``<service>:<deviceid>``, such as ``admin:efac``.
 
-This would result in the following message:
+- MQTT payload must be a JSON with each key being an attribute of the dojot
+  device, such as:
 
-.. code-block:: json
+.. code-block:: javascript
 
-    {
-      "id": "0998",
-      "type": "template_1",
-      "temperature": {
-        "type": "Number",
-        "value": 10.6,
-        "metadata": {}
-      }
-    }
-
-.. NOTE:: The device type is a string formed by "template\_" concatenated with 
-  all template IDs that form it.
+  { "temperature" : 10.5,"pressure" : 770 }
 
 For more information on how dojot deals with data sent from devices, check the
 `Integrating physical devices`_ section.
@@ -360,102 +357,79 @@ values to dojot so we can get a few more interesting results:
 
 .. code-block:: bash
 
-  mosquitto_pub -t /admin/0998/attrs -m '{"temperature": 10.6}'
-  mosquitto_pub -t /admin/0998/attrs -m '{"temperature": 15.6}'
-  mosquitto_pub -t /admin/0998/attrs -m '{"temperature": 36.5}'
+  mosquitto_pub -t /admin/3bb9/attrs -m '{"temperature": 36.5}'
+  mosquitto_pub -t /admin/3bb9/attrs -m '{"temperature": 15.6}'
+  mosquitto_pub -t /admin/3bb9/attrs -m '{"temperature": 10.6}'
 
 
 To retrieve all values sent for temperature attribute of this device:
 
 .. code-block:: bash
 
-  curl -X GET http://localhost:8000/history/STH/v1/contextEntities/type/template_1/id/0998/attributes/temperature?lastN=3 \
-    -H "Authorization: Bearer ${JWT}" \
-    -H "Fiware-Service:admin"\
-    -H "Fiware-ServicePath:/"
+  curl -X GET \
+    -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsIn...' \
+    "http://localhost:8000/history/device/3bb9/history?lastN=3&attr=temperature"
 
 The history endpoint is built from these values:
 
-- ``.../type/template_1/id/0998/...``: the device type is ``template_1`` - this
-  is retrieved from the ``type`` attribute from the device. Same for the ID
-  (``0998``)
-- ``.../attributes/temperature?lastN=3``: the requested attribute is
+- ``.../device/3bb9/...``: the device ID is ``3bb9`` - this is retrieved from
+  the ``id`` attribute from the device
+- ``.../history?lastN=3&attr=temperature``: the requested attribute is
   temperature and it should get the last 3 values. More operators are available
-  in `STH data retrieval`_
+  in `history APIs`_.
 
   The request should result in the following message:
 
 .. code-block:: json
 
-  {
-    "contextResponses": [
+    [
       {
-        "contextElement": {
-          "attributes": [
-            {
-              "name": "temperature",
-              "values": [
-                {
-                  "recvTime": "2018-01-25T14:57:21.027Z",
-                  "attrType": "Number",
-                  "attrValue": 10.6
-                },
-                {
-                  "recvTime": "2018-01-25T14:57:21.063Z",
-                  "attrType": "Number",
-                  "attrValue": 15.6
-                },
-                {
-                  "recvTime": "2018-01-25T14:57:21.701Z",
-                  "attrType": "Number",
-                  "attrValue": 36.5
-                }
-              ]
-            }
-          ],
-          "id": "0998",
-          "isPattern": false,
-          "type": "template_1"
-        },
-        "statusCode": {
-          "code": "200",
-          "reasonPhrase": "OK"
-        }
+        "device_id": "3bb9",
+        "ts": "2018-03-22T13:47:07.050000Z",
+        "value": 10.6,
+        "attr": "temperature"
+      },
+      {
+        "device_id": "3bb9",
+        "ts": "2018-03-22T13:46:42.455000Z",
+        "value": 15.6,
+        "attr": "temperature"
+      },
+      {
+        "device_id": "3bb9",
+        "ts": "2018-03-22T13:46:21.535000Z",
+        "value": 36.5,
+        "attr": "temperature"
       }
     ]
-  }
 
-This message contains all previously sent values. More information about what
-can be done with historical data can be found in `STH documentation`_.
+
+This message contains all previously sent values.
 
 
 Integrating physical devices
 ----------------------------
 
-This section should detail how to integrate a new device with the system. That
-should encompass the both the communication requirements imposed on the device
-in order to allow its usage with the platform, as well as the steps (if any,
-depending on the protocol used) to configure this new device within the
-platform.
+If you want to integrate your device within dojot, it must be able to send
+messages to the platform. There are two ways to do that:
 
-This could also explain (if indeed implemented) the device management
-functionalities made available by the platform to the device developer.
+- Use one of the available IoT agents: currently, there is support for
+  MQTT-based devices. If your project is using (or allows changing to) this
+  protocol, then it would suffice to check if the device is sending its data
+  using a simple key/value JSON. If it isn't, then you might want to use
+  iotagent-mosca (check `iotagent-mosca`_ documentation to check out how to do
+  that). If it is indeed sending key/value JSON messages, then it can send its
+  messages to dojot's broker and it will be recognized by the platform.
 
-Regarding the requirements imposed on the devices, it is forseen that, for each
-communication scheme (protocol/serialization format) offically supported by the
-platform, a step by step guide on how to "develop" a device is supplied. Such
-guide can, if applicable, make use of a platform-provided library or SDK.
+- Create a new IoT agent to support the protocol used by the device: if your
+  device is using another protocol that is not yet supported, then it might be
+  a good idea to implement a new IoT agent. It's not that hard, but there are a
+  few details that must be taken into account. To help developers to do such
+  thing, there is the `iotagent-nodejs`_ library which deals with most
+  internal mechanisms and messages - check its documentation to know more.
 
-
-Flow Management
----------------
-
-Moving to the perspective of an aplication developer, this section should list
-and explain the usage of the information flow configuration process within the
-platform - how to use the provided gui, high level description of the APIs that
-can be used to configure such flows, available actions to be used when building
-the flows, so on and so forth.
-
+After your device is able to communicate with dojot, you can start using it as
+described in `Step-by-step device management`_.
 
 
 .. _YouTube channel: https://www.youtube.com/channel/UCK1iQ-d-K-O2mOLahPOoe6w
@@ -469,6 +443,7 @@ the flows, so on and so forth.
 .. _DeviceManager how-to: http://dojotdocs.readthedocs.io/projects/DeviceManager/en/latest/using-device-manager.html#using-devicemanager
 .. _mashup: https://github.com/dojot/mashup
 .. _mosquitto: https://projects.eclipse.org/projects/technology.mosquitto
-.. _history APIs: https://github.com/telefonicaid/fiware-sth-comet
-.. _STH documentation: https://github.com/telefonicaid/fiware-sth-comet#api-walkthrough
-.. _STH data retrieval: https://github.com/telefonicaid/fiware-sth-comet/blob/master/doc/manuals/raw-data-retrieval.md
+.. _history APIs: https://dojot.github.io/history-ws/apiary_latest.html
+.. _flowbroker: https://github.com/dojot/flowbroker
+.. _iotagent-mosca: https://github.com/dojot/iotagent-mosca
+.. _iotagent-nodejs: https://github.com/dojot/iotagent-nodejs
