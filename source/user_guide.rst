@@ -440,10 +440,10 @@ described in `Step-by-step device management`_.
 .. _docker-compose: https://github.com/dojot/docker-compose
 .. _DeviceManager: https://github.com/dojot/device-manager
 .. _DeviceManager documentation: http://dojotdocs.readthedocs.io/projects/DeviceManager/
-.. _DeviceManager how-to: http://dojotdocs.readthedocs.io/projects/DeviceManager/en/latest/using-device-manager.html#using-devicemanager
+.. _DeviceManager how-to: http://dojotdocs.readthedocs.io/projects/DeviceManager/en/0.2.0/using-device-manager.html#using-devicemanager
 .. _mashup: https://github.com/dojot/mashup
 .. _mosquitto: https://projects.eclipse.org/projects/technology.mosquitto
-.. _history APIs: https://dojot.github.io/history-ws/apiary_latest.html
+.. _history APIs: https://dojot.github.io/history-ws/apiary_0.2.0.html
 .. _flowbroker: https://github.com/dojot/flowbroker
 .. _iotagent-mosca: https://github.com/dojot/iotagent-mosca
 .. _iotagent-nodejs: https://github.com/dojot/iotagent-nodejs

@@ -349,7 +349,7 @@ if a device publishes something in another topic (which it has no permission to
 publish) all data is discarded by Mosquitto with no warnings.
 
 .. _EJBCA: https://www.ejbca.org 
-.. _User Guide: http://dojotdocs.readthedocs.io/en/latest/user_guide.html#first-steps
+.. _User Guide: http://dojotdocs.readthedocs.io/en/0.2.0/user_guide.html#first-steps
 .. _MQTT Manager repository: https://github.com/dojot/mqtt-manager
 .. _Mosquitto docker image: https://hub.docker.com/r/ansi/mosquitto
 .. _Certificate Retriever GitHub repository: https://github.com/dojot/certificate-retriever
