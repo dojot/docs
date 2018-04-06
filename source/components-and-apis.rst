@@ -49,9 +49,6 @@ Components
   * - Data broker
     - `GitHub - data-broker`_
     -
-  * - iotagent-json
-    - `GitHub - iotagent-json`_
-    - `readthedocs - iotagent-json`_
   * - iotagent-mosca
     - `GitHub - iotagent-mosca`_
     -
@@ -188,8 +185,8 @@ dojot.
    * - DeviceManager
      - Device CRUD (`Messages - DeviceManager`_)
      - ``dojot.device-manager.device``
-   * - iotagent-json
-     - Device data update (`Messages - iotagent-json`_)
+   * - iotagent-mosca
+     - Device data update (`Messages - iotagent-mosca`_)
      - ``device-data``
 
 .. _mongodb documentation: https://docs.mongodb.com/manual/
@@ -201,35 +198,32 @@ dojot.
 
 
 .. _GitHub - auth: https://github.com/dojot/auth
-.. _API - auth: https://dojot.github.io/auth/apiary_latest.html
-.. _readthedocs - auth: http://dojotdocs.readthedocs.io/projects/auth/en/latest/
+.. _API - auth: https://dojot.github.io/auth/apiary_0.2.0.html
+.. _readthedocs - auth: http://dojotdocs.readthedocs.io/projects/auth/en/0.2.0/
 
 .. _GitHub - history-ws: https://github.com/dojot/history-ws
-.. _API - history-ws: https://dojot.github.io/history-ws/apiary_latest.html
+.. _API - history-ws: https://dojot.github.io/history-ws/apiary_0.2.0.html
 
 
 .. _GitHub - DeviceManager: https://github.com/dojot/device-manager
-.. _API - DeviceManager: https://dojot.github.io/device-manager/apiary_latest.html
-.. _readthedocs - DeviceManager: http://dojotdocs.readthedocs.io/projects/DeviceManager/en/latest/
-.. _Messages - DeviceManager: http://dojotdocs.readthedocs.io/projects/DeviceManager/en/latest/kafka-messages.html
+.. _API - DeviceManager: https://dojot.github.io/device-manager/apiary_0.2.0.html
+.. _readthedocs - DeviceManager: http://dojotdocs.readthedocs.io/projects/DeviceManager/en/0.2.0/
+.. _Messages - DeviceManager: http://dojotdocs.readthedocs.io/projects/DeviceManager/en/0.2.0/kafka-messages.html
 
-.. _GitHub - image-manager: <https://github.com/dojot/image-manager>
-.. _API - image-manager: https://dojot.github.io/image-manager/apiary_latest.html
+.. _GitHub - image-manager: https://github.com/dojot/image-manager
+.. _API - image-manager: https://dojot.github.io/image-manager/apiary_0.2.0.html
 
 
 .. _GitHub - GUI: https://github.com/dojot/gui
 
 
 .. _GitHub - flowbroker: https://github.com/dojot/flowbroker
-.. _API - flowbroker: https://dojot.github.io/flowbroker/apiary_latest.html
+.. _API - flowbroker: https://dojot.github.io/flowbroker/apiary_0.2.0.html
 
 .. _GitHub - data-broker: https://github.com/dojot/data-broker
-.. _API - data-broker: https://dojot.github.io/data-broker/apiary_latest.html
+.. _API - data-broker: https://dojot.github.io/data-broker/apiary_0.2.0.html
 
-
-.. _GitHub - iotagent-json: https://github.com/dojot/iotagent-json
-.. _readthedocs - iotagent-json: http://dojotdocs.readthedocs.io/projects/iotagent-json/en/latest/
-.. _Messages - iotagent-json: http://dojotdocs.readthedocs.io/projects/iotagent-json/en/latest/operation.html#sending-messages-to-other-components-via-kafka
+.. _Messages - iotagent-mosca: http://dojotdocs.readthedocs.io/projects/iotagent-mosca/en/latest/operation.html#sending-messages-to-other-components-via-kafka
 
 .. _GitHub - iotagent-mosca: https://github.com/dojot/iotagent-mosca
 
@@ -238,6 +232,6 @@ dojot.
 .. _GitHub - mashup: https://github.com/dojot/mashup
 
 .. _GitHub - EJBCA-REST: https://github.com/dojot/ejbca-rest
-.. _API - EJBCA-REST: https://dojot.github.io/ejbca-rest/apiary_latest.html
+.. _API - EJBCA-REST: https://dojot.github.io/ejbca-rest/apiary_0.2.0.html
 
 .. _GitHub - alarm-manager: https://github.com/dojot/alarm-manager
