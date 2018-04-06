@@ -251,6 +251,5 @@ All components communicate with each other in two ways:
   need to know which component is sending data through a particular topic.
 
 
-.. _iotagent-json: https://github.com/dojot/iotagent-json
 .. _iotagent-mosca: https://github.com/dojot/iotagent-mosca
 .. _Mosca: https://github.com/mcollina/mosca

@@ -49,9 +49,6 @@ Components
   * - Data broker
     - `GitHub - data-broker`_
     -
-  * - iotagent-json
-    - `GitHub - iotagent-json`_
-    - `readthedocs - iotagent-json`_
   * - iotagent-mosca
     - `GitHub - iotagent-mosca`_
     -
@@ -188,8 +185,8 @@ dojot.
    * - DeviceManager
      - Device CRUD (`Messages - DeviceManager`_)
      - ``dojot.device-manager.device``
-   * - iotagent-json
-     - Device data update (`Messages - iotagent-json`_)
+   * - iotagent-mosca
+     - Device data update (`Messages - iotagent-mosca`_)
      - ``device-data``
 
 .. _mongodb documentation: https://docs.mongodb.com/manual/
@@ -213,7 +210,7 @@ dojot.
 .. _readthedocs - DeviceManager: http://dojotdocs.readthedocs.io/projects/DeviceManager/en/0.2.0/
 .. _Messages - DeviceManager: http://dojotdocs.readthedocs.io/projects/DeviceManager/en/0.2.0/kafka-messages.html
 
-.. _GitHub - image-manager: <https://github.com/dojot/image-manager>
+.. _GitHub - image-manager: https://github.com/dojot/image-manager
 .. _API - image-manager: https://dojot.github.io/image-manager/apiary_0.2.0.html
 
 
@@ -226,10 +223,7 @@ dojot.
 .. _GitHub - data-broker: https://github.com/dojot/data-broker
 .. _API - data-broker: https://dojot.github.io/data-broker/apiary_0.2.0.html
 
-
-.. _GitHub - iotagent-json: https://github.com/dojot/iotagent-json
-.. _readthedocs - iotagent-json: http://dojotdocs.readthedocs.io/projects/iotagent-json/en/0.2.0/
-.. _Messages - iotagent-json: http://dojotdocs.readthedocs.io/projects/iotagent-json/en/0.2.0/operation.html#sending-messages-to-other-components-via-kafka
+.. _Messages - iotagent-mosca: http://dojotdocs.readthedocs.io/projects/iotagent-mosca/en/latest/operation.html#receiving-messages-from-devicemanager-via-kafka
 
 .. _GitHub - iotagent-mosca: https://github.com/dojot/iotagent-mosca
 
