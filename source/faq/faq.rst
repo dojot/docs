@@ -305,7 +305,7 @@ device `3bb9`:
     ]
 
 There are more operators that could be used to filter entries.
-Check `history-ws API <https://dojot.github.io/history-ws/apiary_latest.html>`_
+Check `history-ws API <https://dojot.github.io/history-ws/apiary_0.2.0.html>`_
 documentation to check out all possible operators.
 
 
@@ -490,6 +490,6 @@ All these endpoints should bear an access token, which is retrieved as
 described in the question `How can I use them?`_.
 
 
-.. _Device-Manager how-to - sending actuation messages: http://dojotdocs.readthedocs.io/projects/DeviceManager/en/latest/using-device-manager.html#sending-actuation-messages-to-devices
-.. _iotagent-json documentation: http://dojotdocs.readthedocs.io/projects/iotagent-json/en/latest/
+.. _Device-Manager how-to - sending actuation messages: http://dojotdocs.readthedocs.io/projects/DeviceManager/en/0.2.0/using-device-manager.html#sending-actuation-messages-to-devices
+.. _iotagent-json documentation: http://dojotdocs.readthedocs.io/projects/iotagent-json/en/0.2.0/
 .. _flowbroker: https://github.com/dojot/flowbroker
