@@ -223,7 +223,7 @@ dojot.
 .. _GitHub - data-broker: https://github.com/dojot/data-broker
 .. _API - data-broker: https://dojot.github.io/data-broker/apiary_0.2.0.html
 
-.. _Messages - iotagent-mosca: http://dojotdocs.readthedocs.io/projects/iotagent-mosca/en/latest/operation.html#receiving-messages-from-devicemanager-via-kafka
+.. _Messages - iotagent-mosca: http://dojotdocs.readthedocs.io/projects/iotagent-mosca/en/latest/operation.html#sending-messages-to-other-components-via-kafka
 
 .. _GitHub - iotagent-mosca: https://github.com/dojot/iotagent-mosca
 
