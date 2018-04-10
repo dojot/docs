@@ -19,6 +19,13 @@ and efficient infrastructure.
    installation-guide
    faq/faq
 
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Tutorials
+
+   tutorials/using-web-interface
+
 .. Indices and tables
 .. ==================
 ..

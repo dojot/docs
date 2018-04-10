@@ -31,7 +31,8 @@ operations might become obscure and senseless.
 
 In the next section, there is an explanation of a few basic entities in dojot:
 devices, templates and flows. With these concepts in mind, we present a small
-tutorial to how to use them in dojot - it only covers API access.
+tutorial to how to use them in dojot - it only covers API access. There a GUI
+oriented tutorial in `Using web interface`_ tutorial.
 
 
 If you want more information on how dojot works internally, you should checkout
@@ -432,6 +433,7 @@ After your device is able to communicate with dojot, you can start using it as
 described in `Step-by-step device management`_.
 
 
+.. _Using web interface: ./tutorials/using-web-interface.html
 .. _YouTube channel: https://www.youtube.com/channel/UCK1iQ-d-K-O2mOLahPOoe6w
 .. _JSON Web Token: https://tools.ietf.org/html/rfc7519
 .. _jwt.io: https://jwt.io/
