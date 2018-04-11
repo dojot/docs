@@ -463,7 +463,7 @@ You can check all available APIs in the `API Listing page <../components-and-api
 How can I use them?
 ^^^^^^^^^^^^^^^^^^^
 
-There is a very quick and useful tutorial in the `User Guide <../user_guide.html#step-by-step-device-management>`_.
+There is a very quick and useful tutorial in the :ref:`Using API interface`.
 
 I'm interested in integrating my application with dojot. How can I do it?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

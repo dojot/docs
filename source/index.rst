@@ -14,7 +14,7 @@ and efficient infrastructure.
    :glob:
 
    architecture
-   user_guide
+   concepts
    components-and-apis
    installation-guide
    faq/faq
@@ -25,6 +25,12 @@ and efficient infrastructure.
    :caption: Tutorials
 
    tutorials/using-web-interface
+   tutorials/using-api-interface
+   tutorials/flow
+   tutorials/tracking-devices
+   tutorials/integrating-physical-devices
+   tutorials/building-an-application
+   tutorials/tracking-packages
 
 .. Indices and tables
 .. ==================
