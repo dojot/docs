@@ -15,6 +15,12 @@ In order to properly run dojot, the minimum hardware requirements are:
 
 - 4GB of RAM
 - 10GB of free disk space
+- Network access
+- The following ports should be opened:
+   - TCP (incoming connections): 1883 (MQTT), 8883 (Secure MQTT if used), 8000
+     (web interface access)
+   - TCP (outgoing connections): 25 (if send e-mail node is used in a flow)
+
 
 
 Docker compose
@@ -212,7 +218,7 @@ properly setup dojot's containers. There is one file that must be changes:
 example of such file is this:
 
 .. code-block:: yaml
-   :line-nos:
+   :linenos:
 
     ---
     version: 0.2.0-nightly20180319
@@ -261,7 +267,6 @@ many replicas we want to each service and a few other parameters to configure
 that service (for instance, auth taks an ``emailHost`` and ``emailUser``
 parameters).
 
-.. _persistent-volumes page:
-https://kubernetes.io/docs/concepts/storage/persistent-volumes/#types-of-persistent-volumes
+.. _persistent-volumes page: https://kubernetes.io/docs/concepts/storage/persistent-volumes/#types-of-persistent-volumes
 
 .. _Kubernetes documentation: https://kubernetes.io/docs/tasks/tools/install-kubectl/
