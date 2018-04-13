@@ -200,7 +200,7 @@ If the Kubernetes cluster is running on a specific cloud platform like Google
 Cloud, follow the steps as presented by your cloud provider.
 
 Deployment
-----------
+^^^^^^^^^^
 
 To deploy dojot to a Kubernetes environment, we provide a script for clusters
 with Ceph as storage solution.
