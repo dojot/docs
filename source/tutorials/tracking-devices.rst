@@ -7,7 +7,7 @@ we will see a few more GUI functionalities not covered by `Using web
 interface`_.
 
 .. NOTE::
-   - Audience: entry-level users
+   - Who is this for: entry-level users
    - Level: basic
    - Reading time: X m
 

@@ -1,13 +1,11 @@
-.. _Using web interface:
-
-Using dojot's web interface
-===========================
+Using web interface
+===================
 
 This tutorial will show how to do basic operations in dojot, such as creating
 devices, checking its attributes and creating flows.
 
-.. NOTE::
-   - Audience: entry-level users
+.. note::
+   - Who is this for: entry-level users
    - Level: basic
    - Reading time: X m
 
