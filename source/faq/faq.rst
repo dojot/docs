@@ -491,5 +491,4 @@ described in the question `How can I use them?`_.
 
 
 .. _Device-Manager how-to - sending actuation messages: http://dojotdocs.readthedocs.io/projects/DeviceManager/en/latest/using-device-manager.html#sending-actuation-messages-to-devices
-.. _iotagent-json documentation: http://dojotdocs.readthedocs.io/projects/iotagent-json/en/latest/
 .. _flowbroker: https://github.com/dojot/flowbroker
