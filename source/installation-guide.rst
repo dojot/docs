@@ -213,7 +213,7 @@ or, to download a compressed zip file containing the data, use the following
 link: https://github.com/dojot/kubernetes/archive/master.zip
 
 This repository contains all the scripts and deployment files necessary to
-properly setup dojot's containers. There is one file that must be changes:
+properly setup dojot's containers. There is one file that must be changed:
 ``config.yaml``, which contains all the parameters used by these scripts. An
 example of such file is this:
 
@@ -266,6 +266,14 @@ connect to internal components. In ``services`` section, we can configure how
 many replicas we want to each service and a few other parameters to configure
 that service (for instance, auth taks an ``emailHost`` and ``emailUser``
 parameters).
+
+To configure and start the kubernetes cluster, just install all python
+requirements and start the deploy.py script:
+
+.. code-block:: bash
+
+    pip install -r ./requirements.txt
+    python ./deploy.py
 
 .. _persistent-volumes page: https://kubernetes.io/docs/concepts/storage/persistent-volumes/#types-of-persistent-volumes
 
