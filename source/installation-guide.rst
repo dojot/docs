@@ -21,6 +21,15 @@ assessment of the platform and should not be used for production environments.
 
 This guide has been checked on an Ubuntu 16.04 LTS environment.
 
+Hardware requirements
+---------------------
+
+In order to properly run dojot, the minimum hardware requirements are:
+
+- 4GB of RAM
+- 10GB of free disk space
+
+
 Dependencies
 ------------
 
@@ -79,11 +88,11 @@ replaced): ::
 
   # Must be run from within the deployment repo
 
-  git checkout tag_name
+  git checkout tag_name -b branch_name
 
 For instance: ::
 
-  git checkout 0.1.0-dojot
+  git checkout 0.2.0 -b 0.2.0
 
 Or if you're brave enough: ::
 
