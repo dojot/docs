@@ -138,12 +138,12 @@ Kubernetes
 ----------
 
 This section provides instructions on how to create a simple dojot deployment
-environment on a multi-node environment, using kubernetes as the orchestration
+environment on a multi-node environment, using Kubernetes as the orchestration
 platform.
 
-This deployment option as presented in this document is best suited to tests
-and assessment of the platform, but with the appropriate changes might be
-evolved for production environments.
+This deployment option as presented in this document is best suited for testing
+and platform assessment. With appropriate changes, this option can be also be
+used in production environments.
 
 This guide has been checked on a Kubernetes cluster with Ceph as the underlying
 storage infrastructure and it has also been tested on a Kubernetes cluster over
@@ -157,10 +157,8 @@ Kubernetes Cluster
 For this guide it is advised that you already have a working cluster.
 
 If you desire to prepare a Kubernetes cluster from scratch, up to date
-information and installation procedures can be found at the project's
-documentation:
-
-https://kubernetes.io/docs/setup/
+information and installation procedures can be found at `Kubernetes setup
+documentation`_.
 
 Persistent Storage
 ^^^^^^^^^^^^^^^^^^
@@ -259,12 +257,19 @@ example of such file is this:
         emailUser: 'test@test.com'
     emailPassword: 'password'
 
-From line 5 to 14, we have Ceph configuration parameters. Check its Ceph
-documentation for more information about them. In ``externalAccess`` section we
-have what should be exposed to external enviroment so that other elements can
-connect to internal components. In ``services`` section, we can configure how
-many replicas we want to each service and a few other parameters to configure
-that service (for instance, auth taks an ``emailHost`` and ``emailUser``
+From line 5 to 14, we have Ceph configuration parameters. The ``cephMonitors``
+attribute specifies how many monitors are going to be used and by which address
+they can be accessed. For more information about this element, check `ceph
+monitors documentation
+<http://docs.ceph.com/docs/jewel/rados/configuration/mon-config-ref/>`_.
+``cephAdminId``, ``cephAdminKey``, ``cephUserId`` and ``cephUserKey``
+attributes refers to user information. These values are set/generated in user
+creation.
+
+In ``externalAccess`` section we have what addresses and ports should be
+exposed for external access. In ``services`` section, we can configure how many
+replicas we want to each service and a few other parameters to configure that
+service (for instance, auth taks an ``emailHost`` and ``emailUser``
 parameters).
 
 To configure and start the kubernetes cluster, just install all python
@@ -278,3 +283,4 @@ requirements and start the deploy.py script:
 .. _persistent-volumes page: https://kubernetes.io/docs/concepts/storage/persistent-volumes/#types-of-persistent-volumes
 
 .. _Kubernetes documentation: https://kubernetes.io/docs/tasks/tools/install-kubectl/
+.. _Kubernetes setup documentation: https://kubernetes.io/docs/setup/
