@@ -26,11 +26,6 @@ and efficient infrastructure.
 
    tutorials/using-web-interface
    tutorials/using-api-interface
-   tutorials/flow
-   tutorials/tracking-devices
-   tutorials/integrating-physical-devices
-   tutorials/building-an-application
-   tutorials/tracking-packages
 
 .. Indices and tables
 .. ==================
