@@ -7,7 +7,7 @@ devices, checking its attributes and creating flows.
 .. note::
    - Who is this for: entry-level users
    - Level: basic
-   - Reading time: X m
+   - Reading time: 15m
 
 Device management
 -----------------
@@ -73,13 +73,14 @@ must not share an attribute with the same name.
    templates was created and, afterwards a new attribute also called ``level``
    was added to ``ThermTemplate``.
 
-   When this happens, no modification is applied to the template (although it
-   remains in the template card - so the user can figure out what is happening.
+   When this happens, no modification is applied to the template (no attribute
+   named "level" related to the "ThermTemplate" is created). However, it
+   remains in the template card so the user can figure out what is happening.
    If the user refreshes the page, it will be reverted to what it was before
-   the modification).
+   the modification.
 
-Now the physical devices can send messages to dojot. There a few things to pay
-attention to: as we defined the MQTT topic (all devices will send to
+Now the physical devices can send messages to dojot. There are few things to
+pay attention to: as we defined the MQTT topic (all devices will send to
 ``/devices/thermometer`` topic), the devices must identify themselves using the
 ``client-id`` parameter from MQTT protocol. Another way of doing that is to
 just use the default topic scheme (which is ``/{SERVICE}/{DEVICE_ID}/attrs``.
@@ -117,10 +118,10 @@ Flow configuration
 ------------------
 
 
-Once we've created the virtual device, we can add create a flow to implement
-the logic behind the alarm generation. The idea is: if the temperature reading
-is less than 40, then the alarm system will be updated with a notification of
-severity 4 (mildly important) and a message indicating that the kitchen in OK.
+Once we've created the virtual device, we can add a flow to implement the logic
+behind the alarm generation. The idea is: if the temperature reading is less
+than 40, then the alarm system will be updated with a notification of severity
+4 (mildly important) and a message indicating that the kitchen is OK.
 Otherwise, if the temperature is higher than 40, then a notification is sent
 with severity 1 (highest severity) and a message indicating that the kitchen is
 on fire. This is done as shown belown.
@@ -132,10 +133,13 @@ on fire. This is done as shown belown.
     allowfullscreen></iframe>
 
 Note that the "change" nodes have a reference to an "output" entity. This can
-be thought as an ordinary JavaScript variable - it will have a ``message`` and
-a ``severity`` attributes that match those from the virtual device. This
-"object" is referenced in the output node as a data source for the device to be
-updated (in this case, the virtual device we've created).
+be thought as a simple data structure - it will have a ``message`` and a
+``severity`` attributes that match those from the virtual device. This "object"
+is referenced in the output node as a data source for the device to be updated
+(in this case, the virtual device we've created). In other words, you can think
+of this as a piece of information carried from "change" nodes to the "virtual
+device" with names "msg.output.message" and "msg.output.severity", where
+"message" and "severity" are the virtual device attributes.
 
 So, let's send a few more messages and see what will happen to that virtual
 device.
