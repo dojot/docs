@@ -40,7 +40,7 @@ would look like:
 
 Remember that the token must be set in the request header as a whole, not parts
 of it. In the example only the first characters are shown for the sake of
-simplicity. All further requests will use a bash variable called ``bash
+simplicity. All further requests will use an evironment variable called ``bash
 ${JWT}``, which contains the token got from auth component.
 
 
