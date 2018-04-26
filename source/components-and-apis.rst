@@ -202,7 +202,7 @@ dojot.
 .. _readthedocs - auth: http://dojotdocs.readthedocs.io/projects/auth/en/latest/
 
 .. _GitHub - history-ws: https://github.com/dojot/history-ws
-.. _API - history-ws: https://dojot.github.io/history-ws/apiary_latest.html
+.. _API - history-ws: https://dojot.github.io/history/apiary_latest.html
 
 
 .. _GitHub - DeviceManager: https://github.com/dojot/device-manager
