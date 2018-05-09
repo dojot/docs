@@ -11,7 +11,7 @@ necessary components to properly run dojot.
 .. note::
    - Audience: developers
    - Level: basic
-   - Reading time: X m
+   - Reading time: 15 m
 
 
 Getting access token
