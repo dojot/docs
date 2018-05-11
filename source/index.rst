@@ -14,10 +14,18 @@ and efficient infrastructure.
    :glob:
 
    architecture
-   user_guide
+   concepts
    components-and-apis
    installation-guide
    faq/faq
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Tutorials
+
+   tutorials/using-web-interface
+   tutorials/using-api-interface
 
 .. Indices and tables
 .. ==================

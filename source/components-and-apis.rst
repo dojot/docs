@@ -1,3 +1,5 @@
+.. _Components and APIs:
+
 Components and APIs
 ===================
 
