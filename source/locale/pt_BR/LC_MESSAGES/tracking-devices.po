@@ -1,0 +1,87 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, CPqD
+# This file is distributed under the same license as the dojot package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: dojot 0.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-06-22 14:50-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.3\n"
+
+#: ../../source/tracking-devices.rst:2
+msgid "Simple device tracking"
+msgstr ""
+
+#: ../../source/tracking-devices.rst:4
+msgid ""
+"In this tutorial we will focus on how to track devices and how to use "
+"flows to perform specific actions when a device reaches a particular "
+"area. Furthermore, we will see a few more GUI functionalities not covered"
+" by `Using web interface`_."
+msgstr ""
+
+#: ../../source/tracking-devices.rst:10
+msgid "Who is this for: entry-level users"
+msgstr ""
+
+#: ../../source/tracking-devices.rst:11
+msgid "Level: basic"
+msgstr ""
+
+#: ../../source/tracking-devices.rst:12
+msgid "Reading time: X m"
+msgstr ""
+
+#: ../../source/tracking-devices.rst:15
+msgid ""
+"The scenario we'll build in this tutorial will be as follows: a truck is "
+"carrying a container from Campinas to Pouso Alegre and we want to be "
+"notified when it exits Campinas, when passes by Extrema and when it "
+"reaches its destination. The map is shown below to help you better "
+"visualize where everything is located."
+msgstr ""
+
+#: ../../source/tracking-devices.rst:27
+msgid ""
+"So, as done before, let's create a template with all necessary parameters"
+" and a new device based on it."
+msgstr ""
+
+#: ../../source/tracking-devices.rst:30 ../../source/tracking-devices.rst:40
+#: ../../source/tracking-devices.rst:44
+msgid "<< insert youtube video here >>"
+msgstr ""
+
+#: ../../source/tracking-devices.rst:32
+msgid ""
+"Note the ``position`` attribute, which will hold the GPS position "
+"informed by the truck."
+msgstr ""
+
+#: ../../source/tracking-devices.rst:35
+msgid ""
+"In order to properly generate the notification, let's create a flow that "
+"sends a HTTP request to an external element and updates a virtual device "
+"which represents one package that its is carrying. Let's create the "
+"virtual device first."
+msgstr ""
+
+#: ../../source/tracking-devices.rst:42
+msgid "Let's create the flow."
+msgstr ""
+
+#: ../../source/tracking-devices.rst:46
+msgid ""
+"Note that we added ``geofence`` nodes which defines a circle that "
+"represents the area of interest."
+msgstr ""
+

@@ -8,14 +8,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dojot 0.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-20 15:30-0200\n"
+"POT-Creation-Date: 2018-06-22 14:50-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Generated-By: Babel 2.5.3\n"
 
 #: ../../source/security/crypto-service.rst:2
 msgid "Crypto Service"
@@ -28,11 +28,11 @@ msgid ""
 "protect data communication (both internally and externally) and data "
 "storage."
 msgstr ""
-"O serviço Crypto provê funções criptográficas de cifra e decifra de dados "
-"para os demais componentes da plataforma dojot. Ele é usado somente pelos "
-"serviços internos e, Ccom isso, os componenteseles internos podem proteger os "
-"dados que serão trafegados internamente/externamente ou os dados que serão "
-"armazenados, por exemplo."
+"O serviço Crypto provê funções criptográficas de cifra e decifra de dados"
+" para os demais componentes da plataforma dojot. Ele é usado somente "
+"pelos serviços internos e, Ccom isso, os componenteseles internos podem "
+"proteger os dados que serão trafegados internamente/externamente ou os "
+"dados que serão armazenados, por exemplo."
 
 #: ../../source/security/crypto-service.rst:6
 msgid ""
@@ -114,6 +114,531 @@ msgstr ""
 "Abaixo são apresentados exemplos de como essas chamadas podem ser feitas "
 "usando a ferramenta de linha de comando curl."
 
+#: ../../source/security/mqtt-tls.rst:2
+msgid "MQTT-TLS Tutorial"
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:4
+msgid "This document describes how to configure dojot to use MQTT over TLS."
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:10
+msgid "tl;dr"
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:12
+msgid "For a device to connect using TLS with Mosquitto, it must possess:"
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:14
+msgid "A key pair (.key file);"
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:15
+msgid ""
+"A certificate signed by a Certificate Authority (CA) trusted by Mosquitto"
+" (.crt file);"
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:17
+msgid "The certificate of this CA (.crt file);"
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:18
+msgid ""
+"An entry on Mosquitto Access Control List (ACL), allowing the device to "
+"publish on a specific topic;"
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:20
+msgid "(optional) A Certificate Revocation List (CRL)."
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:22
+msgid ""
+"When a device is created, DeviceManager will automatically notify the "
+"following components:"
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:25
+msgid "IoTAgent: will register the new device on its internal cache."
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:26
+msgid ""
+"MQTT-Manager: will create an entry on the ACL, allowing the device to "
+"publish on a specific topic."
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:28
+msgid ""
+"EJBCA: will create an end entity so a certificate can be created on the "
+"future."
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:31
+msgid ""
+"By default, dojot uses clear MQTT. To activate TLS, docker-compose.yml "
+"must be changed:"
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:34
+msgid ""
+"The image for service 'mqtt' must be changed from 'ansi/mosquitto' to "
+"'dojot/mqtt-manager';"
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:36
+msgid ""
+"The public port for 'mqtt' service must be changed from '1883:1883' to "
+"'8883:8883';"
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:38
+msgid ""
+"The MQTT\\_TLS variable of 'iotagent' service must be set to true "
+"(lowercase)."
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:40
+msgid "On the configuration file 'iotagent/config.json':"
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:42
+msgid "The flag 'secure' should be changed to true"
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:45
+msgid "Components"
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:48
+msgid "EJBCA-REST"
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:50
+msgid ""
+"`EJBCA`_ is a complete Private Key Infrastructure (PKI) capable to manage"
+" CAs, cryptography keys and certificates. EJBCA provides a SOAP, web and "
+"a command line interface. EJBCA-REST is an wrapper on top of EJBCA that "
+"provides modern interfaces, like REST and Kafka."
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:55
+msgid ""
+"EJBCA provides SOAP, web and command line interfaces. EJBCA-REST is a "
+"wrapper on top of EJBCA that complements those, allowing the CA to be "
+"configured using REST. When used within dojot, it also listens to Kafka "
+"events, allowing its automatic configuration."
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:61
+msgid "What is a certificate?"
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:63
+msgid ""
+"A certificate contains the public key for an entity (a user, device, "
+"website), along with information about this entity, about the CA which "
+"signs the certificate, the allowed certificate usage and a checksum. When"
+" a entity wants a certificate to be signed, the entity should create a "
+"CSR file and send it to the desired CA. The CSR file is an 'intention of "
+"certification'. The file contains the information required from the "
+"entity and some information about the certificate use, hostnames and IPs "
+"where the certificate will reside, alternative names for the entity, etc."
+" EJBCA can decide, using its configured policies, what information to "
+"keep, to discard and to overwrite of the received CSR. EJBCA can refuse "
+"to sign a CSR if it concludes that it is not safe enough according to its"
+" policies."
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:75
+msgid ""
+"These configurable policies are called 'Certificate Profiles'. One "
+"Certificate profile named CFREE, specialized for MQTT TLS, is provided "
+"out of the box."
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:78
+msgid "In short, CFREE have the following configurations (and many more):"
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:80
+msgid "Cryptography keys must have between 2048 and 8192 bits;"
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:81
+msgid "Certificate expires in 730 days;"
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:82
+msgid "Entities can define hostnames and IPs;"
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:83
+msgid "Key usage is marked as not critical (for now);"
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:84
+msgid "The hash algorithm is SHA256. The sign algorithm is RSA."
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:87
+msgid "I have a CSR. How can I ask EJBCA to sign it for me?"
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:89
+msgid ""
+"Calm down! EJBCA will not allow strangers to ask for certification. You "
+"need to authenticate yourself. EJBCA use a username+password "
+"authentication system. The term 'end entity' will be used to refer to "
+"EJBCA users to follow the terms on EJBCA documentation and to avoid "
+"ambiguities between EJBCA users and dojot users. An administrator should "
+"create the end entity. An entity that was just created has the state "
+"'New' an can generate a certificate. After signing a certificate for an "
+"entity, the end entity's state changes to 'Generated' and will no longer "
+"accept this username and password. EJBCA 'End entities' can create only "
+"one certificate."
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:100
+msgid "So, how does EJBCA work in dojot?"
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:102
+msgid ""
+"When creating a new device, an associated end entity is created in EJBCA."
+" Its name will be the device's ID (like '8fa3') and its password will be "
+"always 'dojot'."
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:106
+msgid ""
+"A certificate can be signed by sending a HTTP POST request to "
+"host:1234/sign/<cname>/pkcs10. CName is the end entity's name (or "
+"device). The payload sent with this request should be a JSON containing "
+"the end entity password and a CSR file (certificate intention) in base64 "
+"format."
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:111
+msgid ""
+"Note that the URL is 'routed' by the API gateway. As in other APIs in "
+"dojot, a JWT is needed. You can find how to generate and how to use such "
+"token in :ref:`Using API interface`."
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:115
+msgid ""
+"In order to create the CSR file and ask for a certificate signature, a "
+"user can use a helper script called 'Certificate Retriever', which is "
+"detailed in `Certificate retriever`_ section."
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:120
+msgid "MQTT Manager"
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:122
+msgid ""
+"MQTT-Manager is a helper service used to configure Mosquitto MQTT broker "
+"in a simple and 'on-the-fly' way. It can be configured using REST "
+"interfaces and Kakfa. Thus, HTTP requests or Kafka messages can be used "
+"to create and remove devices, as well as update CRL file (certification "
+"revocation list). This service is distributed as a docker container for "
+"easy deploy and its source code repository can be accessed in `MQTT "
+"Manager repository`_."
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:129
+msgid ""
+"Mosquitto by itself doesn't generate nor revoke certificates, it only "
+"relies on a CA and implements TLS protocol. The 'creation' of a "
+"particular device consists only in adding a new rule to ACL file in "
+"Mosquitto. Such file looks like:"
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:141
+msgid ""
+"Each rule is composed by two lines: the first one specifies the user "
+"(device) and the second one defines which action (write or read) is "
+"allowed to which topic. In the example above, the user iotagent can read "
+"all topics (# is a wildcard). Also, the device with ID 24f6 can write to "
+"topic /admin/24f6/attrs. The device ID is retrieved in 'Common name' "
+"certificate field."
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:147
+msgid ""
+"If a device sends data to a topic which it has no write permissions, then"
+" all data is discarded. Mosquitto won't log any errors related to this."
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:150
+msgid ""
+"When the ACL is changes, Mosquitto must be restarted (or a SIGDUP signal "
+"can be sent to its process). MQTT-Manager does this automatically when "
+"creating or removing devices."
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:154
+msgid ""
+"A script is executed when firing the container up. This script will "
+"generate a pair of keys to Mosquitto, retrieves the certificate and CRL "
+"from a CA and asks it to sign its public key. ALl generated files are "
+"placed in /usr/local/src/mosquitto-1.4.13/certs (inside the container)."
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:159
+msgid ""
+"Mosquitto will only accept device connections that have certificate "
+"signed by its trusty CA."
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:162
+msgid ""
+"Also note that MQTT-Manager is used only in case when a TLS-enabled "
+"broker is needed. If this is not the case, then the vanilla `Mosquitto "
+"docker image`_ can be used."
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:167
+msgid "Mosquitto configuration files"
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:169
+msgid "Checkout this commented Mosquitto configuration file:"
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:202
+msgid ""
+"Note that for all configuration updates, it is mandatory to restart "
+"Mosquitto or to send a SIGDUP signal to its process."
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:206
+msgid "Certificate retriever"
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:208
+msgid ""
+"This component is a helper script for device certificates creation. It is"
+" available at `Certificate Retriever GitHub repository`_ and it coded "
+"using Python 3."
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:212
+msgid "A user can use it by executing:"
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:218
+msgid "The mandatory parameters are:"
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:220
+msgid "HOST: where dojot is. Example: http://localhost:8000"
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:221
+msgid "DEVICE-NAME: device name that will get a new certificate. Example: ac32"
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:223
+msgid ""
+"CA: CA which will sign the certificate. Example: IOTmidCA (this is the CA"
+" name used in dojot)"
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:226
+msgid "Other options are:"
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:228
+msgid ""
+"-u or --username USERNAME: dojot's username. If this parameter is not "
+"specified here, it will be asked iteratively."
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:230
+msgid ""
+"-w or --overwrite: overwrites any certificate files or criptographic keys"
+" if already existent."
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:232
+msgid ""
+"-k or --key KEYLENGTH: size of the criptographic key being generated (in "
+"bits)."
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:234
+msgid ""
+"-d or --dns: Hostname where the certificate owner can be reached out. "
+"Note that this has no relation with DNS (Domain Name System) servers - "
+"this name was kept because x509 certificates have an attribute that is "
+"called DNS."
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:238
+msgid "-i or --ip: same as -d, buto to specify IP address."
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:239
+msgid ""
+"--skip-https-check: if dojot accepts HTTPS connections but it has no "
+"valid certificate, then this option will allow the connection to be made."
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:243
+msgid ""
+"Note that authentication is performed in dojot. The script will ask for "
+"user credentials and will invoke user authentication automatically. The "
+"user needs permission for certificate signing to be able to use this "
+"script."
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:247
+msgid ""
+"An end entity must exist in EJBCA in 'New' state before asking for a new "
+"certificate signature. When a new device is created, an end entity is "
+"automatically created in EJBCA by DeviceManager. This new end entity's "
+"name is the device ID itself. Its password is 'dojot'."
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:252
+msgid ""
+"The script authenticates users with given username and password, "
+"retrieves CA certificate, generates a key pair as well as a CSR file and "
+"asks for certificate signature, in this order. Any error in any step will"
+" halt its execution."
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:257
+msgid ""
+"After successfully executed, all certificates can be found in './certs' "
+"folder."
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:261
+msgid "Important Notes"
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:263
+msgid ""
+"These are a few but important notes related to device security and "
+"associated subjects."
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:267
+msgid "CRL (Certification Revocation List)"
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:269
+msgid ""
+"A CRL is a list which contains all revoked certificates. It is used to "
+"indicate which certificates are no longer valid (administratively set to "
+"invalid) as a normal certificate can be used for 1 to 5 years. This list "
+"is signed by CA and also has an expiration date - 1 day by default. In "
+"TLS protocol, if CRL is expired then the recommended action to be taken "
+"is to refuse all incoming connections, as there is no way to check if the"
+" certificates used in those connections are invalid or not. This "
+"procedure is implemented in Mosquitto."
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:277
+msgid ""
+"Therefore, CA must generate a new list periodically. All components that "
+"use it must be updated."
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:281
+msgid "Debugging"
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:283
+msgid ""
+"TLS errors might be not so verbose as other problems. If an error "
+"occurrs, the user might not know what went wrong because no component "
+"indicates any problem. In this section there are some tips, frequent "
+"problems and debugging tools to find out what's happening."
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:289
+msgid "How to read a certificate"
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:291
+msgid ""
+"A certificate file can be in two formats: PEM (base64 text) or DER "
+"(binary). OpenSSL offers tools to read such formats:"
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:298
+msgid "To read a CRL:"
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:305
+msgid "Errors in secure connection handshake between device and Mosquitto"
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:307
+msgid ""
+"If any errors occur during connection handshake, something like the "
+"following error might appear in Mosquitto's logs:"
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:315
+msgid ""
+"If this happens, try to establish connection using 'openssl client', as "
+"it is more verbose in error description."
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:322
+msgid "Common errors are shown by openssl\\_client (and \\_server as well):"
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:324
+msgid ""
+"SSL alert number 45: this error indicates that a certificate expired. "
+"Keep in mind that CRL also expires."
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:326
+msgid ""
+"SSL alert number 48: received a valid certificate chain or partial chain,"
+" but the certificate was not accepted because the CA certificate could "
+"not be located or could not be matched with a known, trusted CA. This "
+"message is always fatal."
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:330
+msgid ""
+"Alert unknown CA: check whether sent CA certificate is correct. If it is "
+"a sub-CA, check if all of its certificate chain was sent. This error also"
+" occurs if the CA certificate data (specially common name attribute) is "
+"the same as those from client certificate."
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:336
+msgid "Handshake is OK, but no published data reaches iotagent"
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:338
+msgid ""
+"You can check whether the device could connect to MQTT broker by checking"
+" Mosquitto's log:"
+msgstr ""
+
+#: ../../source/security/mqtt-tls.rst:345
+msgid ""
+"If that line shows up, it means that the TLS handshake worked and the "
+"device successfully connected to Mosquitto. Check if the device has an "
+"ACL entry in Mosquitto to allow it to publish data in the specified "
+"topic. Keep in mind that if a device publishes something in another topic"
+" (which it has no permission to publish) all data is discarded by "
+"Mosquitto with no warnings."
+msgstr ""
+
 #: ../../source/security/mutual-authentication.rst:2
 msgid "Mutual Authentication"
 msgstr "Autenticação Mútua"
@@ -128,12 +653,13 @@ msgid ""
 "situations such as sending information to fraudulent servers, for "
 "example."
 msgstr ""
-"Um papel da segurança é de garantir que somente usuários legítimos tenham o "
-"acesso aos recursos e informações necessárias para realizar suas funções. A "
-"autenticação faz parte deste controle de acessos, ao validar a identidade de "
-"entidades. Ao mesmo tempo, outro papel da segurança é garantir que uma "
-"entidade acesse os recursos e informações legítimas, evitando assim situações "
-"como o envio de informações a servidores fraudulentos, por exemplo."
+"Um papel da segurança é de garantir que somente usuários legítimos tenham"
+" o acesso aos recursos e informações necessárias para realizar suas "
+"funções. A autenticação faz parte deste controle de acessos, ao validar a"
+" identidade de entidades. Ao mesmo tempo, outro papel da segurança é "
+"garantir que uma entidade acesse os recursos e informações legítimas, "
+"evitando assim situações como o envio de informações a servidores "
+"fraudulentos, por exemplo."
 
 #: ../../source/security/mutual-authentication.rst:6
 msgid ""
@@ -172,9 +698,10 @@ msgid ""
 "*Dojot* offers a mutual authentication service through a Docker image. "
 "This service runs inside the platform and can be accessed using its "
 "interfaces."
-msgstr "A *dojot* oferece um serviço de autenticação mútua através de uma "
-"imagem Docker. Esse serviço é executado na plataforma e pode ser acessado "
-"usando as interfaces adequadas."
+msgstr ""
+"A *dojot* oferece um serviço de autenticação mútua através de uma imagem "
+"Docker. Esse serviço é executado na plataforma e pode ser acessado usando"
+" as interfaces adequadas."
 
 #: ../../source/security/mutual-authentication.rst:16
 msgid "Using Mutual Authentication"
@@ -248,9 +775,9 @@ msgid ""
 "application will receive a unique identifier and a key. The API is "
 "described below"
 msgstr ""
-"Atualmente, o método utilizado para fazer o registro de uma aplicação é "
-"o uso de uma interface REST. Após fazer a requisição para o registro, a"
-" aplicação receberá um identificador único e uma chave. A API é descrita "
+"Atualmente, o método utilizado para fazer o registro de uma aplicação é o"
+" uso de uma interface REST. Após fazer a requisição para o registro, a "
+"aplicação receberá um identificador único e uma chave. A API é descrita "
 "abaixo."
 
 #: ../../source/security/mutual-authentication.rst:33
@@ -367,10 +894,9 @@ msgid ""
 "server and checks received data. If an error occurs during this process, "
 "the library will call a callback function."
 msgstr ""
-"No processo de autenticação mútua, a biblioteca se "
-"comunica com o servidor e verifica os dados recebidos. Se algum erro "
-"ocorrer durante esse processo, a biblioteca vai chamar uma função de "
-"callback."
+"No processo de autenticação mútua, a biblioteca se comunica com o "
+"servidor e verifica os dados recebidos. Se algum erro ocorrer durante "
+"esse processo, a biblioteca vai chamar uma função de callback."
 
 #: ../../source/security/mutual-authentication.rst:103
 msgid ""

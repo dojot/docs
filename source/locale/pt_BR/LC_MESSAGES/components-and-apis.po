@@ -1,0 +1,508 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, CPqD
+# This file is distributed under the same license as the dojot package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: dojot 0.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-06-22 14:50-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.3\n"
+
+#: ../../source/components-and-apis.rst:4
+msgid "Components and APIs"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:7
+#: ../../source/components-and-apis.rst:9
+msgid "Components"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:12
+#: ../../source/components-and-apis.rst:184
+msgid "Component"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:13
+msgid "GitHub repository"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:14
+msgid "Documentation"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:15
+msgid "mongodb"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:17
+msgid "`mongodb documentation`_"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:18
+msgid "postgres"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:20
+msgid "`postgres documentation`_"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:21
+msgid "Kong API gateway"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:23
+msgid "`Kong documentation`_"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:24
+msgid "redis"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:26
+msgid "`Redis documentation`_"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:27
+msgid "zookeeper"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:29
+msgid "`Zookeeper documentation`_"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:30
+msgid "Kafka"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:32
+msgid "`Kafka documentation`_"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:33
+#: ../../source/components-and-apis.rst:147
+#: ../../source/components-and-apis.rst:150
+#: ../../source/components-and-apis.rst:153
+msgid "auth"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:34
+#: ../../source/components-and-apis.rst:90
+#: ../../source/components-and-apis.rst:94
+#: ../../source/components-and-apis.rst:98
+msgid "`GitHub - auth`_"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:35
+msgid "`readthedocs - auth`_"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:36
+msgid "History"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:37
+#: ../../source/components-and-apis.rst:102
+msgid "`GitHub - history-ws`_"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:39
+#: ../../source/components-and-apis.rst:138
+#: ../../source/components-and-apis.rst:141
+#: ../../source/components-and-apis.rst:187
+msgid "DeviceManager"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:40
+#: ../../source/components-and-apis.rst:78
+#: ../../source/components-and-apis.rst:82
+msgid "`GitHub - DeviceManager`_"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:41
+msgid "`readthedocs - DeviceManager`_"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:42
+msgid "Image manager"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:43
+#: ../../source/components-and-apis.rst:122
+msgid "`GitHub - image-manager`_"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:45
+#: ../../source/components-and-apis.rst:162
+msgid "GUI"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:46
+#: ../../source/components-and-apis.rst:110
+msgid "`GitHub - GUI`_"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:48
+msgid "Flow broker"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:49
+#: ../../source/components-and-apis.rst:86
+msgid "`GitHub - flowbroker`_"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:51
+msgid "Data broker"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:52
+#: ../../source/components-and-apis.rst:106
+msgid "`GitHub - data-broker`_"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:54
+#: ../../source/components-and-apis.rst:190
+msgid "iotagent-mosca"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:55
+msgid "`GitHub - iotagent-mosca`_"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:57
+msgid "EJBCA-REST"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:58
+#: ../../source/components-and-apis.rst:114
+#: ../../source/components-and-apis.rst:118
+msgid "`GitHub - EJBCA-REST`_"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:60
+msgid "Alarm manager"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:61
+msgid "`GitHub - alarm-manager`_"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:66
+msgid "Exposed APIs"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:68
+msgid "APIs  :header-rows: 1"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:71
+#: ../../source/components-and-apis.rst:137
+msgid "Endpoint"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:72
+msgid "Purpose"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:73
+msgid "Component API"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:74
+msgid "Repository"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:75
+msgid "/device"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:76
+msgid "Device management"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:77
+#: ../../source/components-and-apis.rst:81
+msgid "`API - DeviceManager`_"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:79
+msgid "/template"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:80
+msgid "Template management"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:83
+msgid "/flows"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:84
+msgid "Flow management"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:85
+msgid "`API - flowbroker`_"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:87
+msgid "/auth"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:88
+#: ../../source/components-and-apis.rst:92
+#: ../../source/components-and-apis.rst:96
+msgid "User authentication"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:89
+#: ../../source/components-and-apis.rst:93
+#: ../../source/components-and-apis.rst:97
+msgid "`API - auth`_"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:91
+msgid "/auth/revoke"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:95
+msgid "/auth/user"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:99
+msgid "/history"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:100
+msgid "Device historical data"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:101
+msgid "`API - history-ws`_"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:103
+msgid "/metric"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:104
+msgid "Context broker"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:105
+msgid "`API - data-broker`_"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:107
+msgid "/gui"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:108
+msgid "Graphical User Interface"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:111
+msgid "/sign"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:112
+msgid "Public key signing"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:113
+#: ../../source/components-and-apis.rst:117
+msgid "`API - EJBCA-REST`_"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:115
+msgid "/ca"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:116
+msgid "Certification-Auth. functions"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:119
+msgid "/image"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:120
+msgid "Device image management"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:121
+msgid "`API - image-manager`_"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:125
+msgid ""
+"The API gateway used in dojot reroutes some of these endpoints so that "
+"they become uniform: all of them are accessible through the same port "
+"(default is TCP port 8000) and have the same naming scheme. Each "
+"component, though, might have something different in its configuration "
+"and API documentation. The following table shows which endpoint exposed "
+"by the API gateway is mapped to which component endpoint."
+msgstr ""
+
+#: ../../source/components-and-apis.rst:132
+#: ../../source/components-and-apis.rst:181
+msgid "Original endpoints"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:135
+msgid "Service"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:136
+msgid "Original endpoint"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:139
+msgid "host:5000/device"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:140
+msgid "host:8000/device"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:142
+msgid "host:5000/template"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:143
+msgid "host:8000/template"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:144
+msgid "mashup"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:145
+msgid "host:3000/"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:146
+msgid "host:8000/flows"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:148
+msgid "host:5000/"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:149
+msgid "host:8000/auth"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:151
+msgid "host:5000/auth/revoke"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:152
+msgid "host:8000/auth/revoke"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:154
+msgid "host:5000/user"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:155
+msgid "host:8000/auth/user"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:156
+msgid "STH"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:157
+msgid "host:8666/"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:158
+msgid "host:8000/history"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:159
+msgid "Data-Broker"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:160
+msgid "host:1026/"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:161
+msgid "host:8000/metric"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:163
+msgid "host/"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:164
+msgid "host:8000/gui"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:165
+#: ../../source/components-and-apis.rst:168
+msgid "ejbca"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:166
+msgid "host:5583/sign"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:167
+msgid "host:8000/sign"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:169
+msgid "host:5583/ca"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:170
+msgid "host:8000/ca"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:174
+msgid "Kafka messages"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:176
+msgid ""
+"These are the messages sent by components and their subjects. If you are "
+"developing a new internal component (such as a new IoT agent), see `API -"
+" data-broker`_ to check how to receive messages sent by other components "
+"in dojot."
+msgstr ""
+
+#: ../../source/components-and-apis.rst:185
+msgid "Message"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:186
+msgid "Subject"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:188
+msgid "Device CRUD (`Messages - DeviceManager`_)"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:189
+msgid "``dojot.device-manager.device``"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:191
+msgid "Device data update (`Messages - iotagent-mosca`_)"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:192
+msgid "``device-data``"
+msgstr ""
+

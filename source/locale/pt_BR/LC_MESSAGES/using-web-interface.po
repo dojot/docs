@@ -1,0 +1,270 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, CPqD
+# This file is distributed under the same license as the dojot package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: dojot 0.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-06-19 11:05-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.3\n"
+
+#: ../../source/using-web-interface.rst:2
+msgid "Using web interface"
+msgstr "Usando a interface WEB"
+
+#: ../../source/using-web-interface.rst:4
+msgid ""
+"This tutorial will show how to do basic operations in dojot, such as "
+"creating devices, checking its attributes and creating flows."
+msgstr ""
+"Este tutorial descreve as operações básicas na dojot, como "
+"criar dispositivos, conferir seus atributos e criar fluxos."
+
+#: ../../source/using-web-interface.rst:8re 
+msgid "Who is this for: entry-level users"
+msgstr "Para quem é esse tutorial: usuários iniciantes"
+
+#: ../../source/using-web-interface.rst:9
+msgid "Level: basic"
+msgstr "Nível: básico"
+
+#: ../../source/using-web-interface.rst:10
+msgid "Reading time: 15m"
+msgstr "Tempo de leitura: 15 minutos"
+
+#: ../../source/using-web-interface.rst:13
+msgid "Device management"
+msgstr "Gerenciamento de dispositivo"
+
+#: ../../source/using-web-interface.rst:15
+msgid ""
+"This section will show how to manage device. For this tutorial we will "
+"show how to add two thermometers and a virtual device that will represent"
+" an alarm system that will monitor both sensors."
+msgstr ""
+"Esta seção mostra como gerenciar dispositivos. Para tal, serão utilizados "
+"dois dispositivos sensores de temperatura e um dispositivo virtual, esse "
+"último com a função de observar as temperaturas medidas nos dois primeiros "
+"e gerar alarmes em determinadas condições."
+
+#: ../../source/using-web-interface.rst:19
+msgid ""
+"As described in :ref:`Concepts`, all devices are based on a template. To "
+"create one, you should access the template tab at the left and then "
+"create one new template, as shown below."
+msgstr ""
+"Como descrito em :ref:`Concepts`, todos os dispositivos são baseados em "
+"um ou mais modelos (templates). Para a criação de um modelo, você deve "
+"acessar a opção Modelos (Templates) na lateral esquerda da tela e então "
+"criar um Novo Modelo (New Template), como mostrado abaixo."
+" "
+
+
+#: ../../source/using-web-interface.rst:30
+msgid ""
+"Now we have one template from which devices can be \"instantiated\". All "
+"devices based on it will accept messages via MQTT that are sent to "
+"\"/devices/thermometers\" topic. To create new devices, you should go "
+"back to the devices tab and create a new device, selecting the templates "
+"it will be based on, as shown below."
+msgstr ""
+"Agora há um modelo do qual dispositivos podem ser \"instanciados\". "
+"Todos dispositivos baseados nesse modelo aceitarão mensagens via protocolo "
+"MQTT que serão enviados para o tópico \"/devices/thermometers\"."
+"Para criar novos dispositivos, deve-se voltar para a opção Dispositivos "
+"(Devices) e criar um Novo Dispositivo (New Device), selecionando os modelos "
+"nos quais o dispositivo será baseado, como mostrado abaixo."
+" "
+
+#: ../../source/using-web-interface.rst:42
+msgid ""
+"Note that, when you select the template in the right panel at device "
+"creation screen, all attributes are inherited from that device. You could"
+" add more templates as needed, keeping in mind that templates used to "
+"compose a device must not share an attribute with the same name."
+msgstr ""
+"Note que, quando um modelo é selecionado no painel direito da tela de "
+"criação de dispositivo, todos os atributos são herdados para aquele "
+"dispositivo. É possível adicionar mais de um modelo, tendo em mente que "
+"modelos que compõem o dispositivo não podem compartilhar atributos com "
+"o mesmo nome."
+" "
+
+#: ../../source/using-web-interface.rst:49
+msgid ""
+"As devices are tightly associated to templates, if you want to remove a "
+"template, you should remove all its associated devices first. If such "
+"thing happens the following error message will appear:"
+msgstr ""
+"Os dispositivos são fortemente atrelados aos a modelos. Para remover "
+"um modelo, deve-se remover primeiro todos os dispositivos a ele associados. "
+"Caso contrário, a seguinte mensagerm aparecerá:"
+
+#: ../../source/using-web-interface.rst:60
+msgid ""
+"You can add and remove attributes from templates and they will be "
+"immediately available to devices. In case of new attributes being added, "
+"though, you should keep in mind that there must not be any device with "
+"templates which have attributes with same name. If such thing happens, "
+"the following message will appear:"
+msgstr ""
+"É possível adicionar e remover atributos dos modelos, fazendo com que "
+"as alterações sejam imediatamente refletidas nos dispositivos associados. "
+"No caso de novos adição, no entanto, deve-se observar que os atributos "
+"dos modelos que compõem um determinado dispositivo não podem possuir o mesmo nome. "
+"Se isso acontecer, a seguinte mensagem aparecerá: "
+
+#: ../../source/using-web-interface.rst:71
+msgid ""
+"This snapshot was generated by creating a new template "
+"(``ExtraTemplate``) with one attribute, called ``level``. Then a new "
+"device based on both templates was created and, afterwards a new "
+"attribute also called ``level`` was added to ``ThermTemplate``."
+msgstr ""
+"Essa imagem da tela foi capturada quando um novo modelo foi criado "
+"(``ExtraTemplate``) com um atributo chamado ``level``. Depois um "
+"novo dispositivo baseado em ambos os modelos foi criado e "
+"um novo atributo também chamado ``level`` foi adicionado "
+"ao modelo ``ThermTemplate``."
+
+#: ../../source/using-web-interface.rst:76
+msgid ""
+"When this happens, no modification is applied to the template (no "
+"attribute named \"level\" related to the \"ThermTemplate\" is created). "
+"However, it remains in the template card so the user can figure out what "
+"is happening. If the user refreshes the page, it will be reverted to what"
+" it was before the modification."
+msgstr ""
+"Quando isso ocorre, nenhuma modificação é aplicada ao modelo "
+"(nenhum atributo com nome \"level\" relativo ao \"ThermTemplate\" é criado). "
+"Contudo, o atributo é mantido no cartão do modelo para que o usuário "
+"perceba o que está acontecendo. Se o usuário atualizar a tela, "
+"as informações serão revertidas para o estado que estava antes da modificação."
+
+#: ../../source/using-web-interface.rst:82
+msgid ""
+"Now the physical devices can send messages to dojot. There are few things"
+" to pay attention to: as we defined the MQTT topic (all devices will send"
+" to ``/devices/thermometer`` topic), the devices must identify themselves"
+" using the ``client-id`` parameter from MQTT protocol. Another way of "
+"doing that is to just use the default topic scheme (which is "
+"``/{SERVICE}/{DEVICE_ID}/attrs``."
+msgstr ""
+"Agora os dispositivos físicos podem enviar mensagens à plataforma dojot. "
+"Existem algumas coisas a serem observadas: como foi definido o tópico "
+"MQTT (todos os dispositivos enviarão mensagens para o tópico ``/devices/thermometer``), "
+"os dispositivos devem se identificar utilizando o parâmetro ``client-id`` "
+"do protocolo MQTT. Outra maneira de se fazer isso é utilizar o esquema de tópico default "
+"(que é ``/{SERVICE}/{DEVICE_ID}/attrs``."
+
+#: ../../source/using-web-interface.rst:88
+msgid ""
+"Just for the sake of simplicity, we'll emulate one device using "
+"mosquitto_pub tool. We set the ``client-id`` parameter by using the "
+"``-i`` flag of mosquitto_pub."
+msgstr ""
+"Por questão de simplicidade, será emulado um dispositivo utilizando-se "
+"a ferramenta mosquito_pub. O parâmetro ``client-id`` será configurado utilizando "
+"a opção ``-i`` do mosquito_pub."
+
+
+#: ../../source/using-web-interface.rst:98
+msgid ""
+"Now that we've created the sensors, let's create a virtual one. This will"
+" be the representation of a alarm system that will be triggered whenever "
+"something bad is detected to these sensors. Let's say they are installed "
+"in a kitchen. So it is expected that their temperature readings will be "
+"no more than 40C. If it is more than that, our simple detection system "
+"will conclude that the kitchen is on fire. This alarm representation will"
+" have two attributes: one for a severity level for a particular alarm and"
+" another one for a textual message, so that the user is properly informed"
+" of what's happening."
+msgstr ""
+"Estando criados os sensores de temperatura, falta agora a criação do dispositivo "
+"virtual. Ele será a representação de um alarme de sistema disparado quando "
+"algo ruim for detectado pelos sensores. Por exemplo, se os sensores de "
+"temperatura estivessem instalados em uma cozinha, a medição de uma temperatura "
+"acima de 40ºC poderia indicar que o local estaria em chamas. Essa representação "
+"do alarme poderia ter dois atributos: nível de severidade e mensagem textual, "
+"para que o usuário pudesse ser informado do acontecimento."
+
+
+#: ../../source/using-web-interface.rst:107
+msgid ""
+"Just as for \"regular devices\", virtual devices also are based on "
+"templates. So, let's create one, as shown below."
+msgstr ""
+"Assim como \"dispositivos regulares\", dispositivos virtuais também "
+"são baseados em modelos. Portanto, um modelo será criado, como mostrado abaixo."
+
+#: ../../source/using-web-interface.rst:118
+msgid "Flow configuration"
+msgstr "Configuração de fluxo"
+
+#: ../../source/using-web-interface.rst:121
+msgid ""
+"Once we've created the virtual device, we can add a flow to implement the"
+" logic behind the alarm generation. The idea is: if the temperature "
+"reading is less than 40, then the alarm system will be updated with a "
+"notification of severity 4 (mildly important) and a message indicating "
+"that the kitchen is OK. Otherwise, if the temperature is higher than 40, "
+"then a notification is sent with severity 1 (highest severity) and a "
+"message indicating that the kitchen is on fire. This is done as shown "
+"belown."
+msgstr ""
+"Uma vez criado o dispositivo virtual, pode-se adicionar um fluxo "
+"para implementar a lógica por detrás da geração de alarmes. A ideia é: "
+"se a temperatura medida for menor ou igual a 40ºC, o sistema de alarmes será "
+"atualizado com uma notificação de severidade 4 (média) e uma mensagem "
+"indicando que a cozinha está OK. Caso a temperatura medida seja "
+"maior que os 40ºC, uma notificação de severidade 1 (muito alta) será "
+"enviada com a mensagem que a conzinha está em chamas. Isto é feito como "
+"mostrado abaixo."
+
+#: ../../source/using-web-interface.rst:135
+msgid ""
+"Note that the \"change\" nodes have a reference to an \"output\" entity. "
+"This can be thought as a simple data structure - it will have a "
+"``message`` and a ``severity`` attributes that match those from the "
+"virtual device. This \"object\" is referenced in the output node as a "
+"data source for the device to be updated (in this case, the virtual "
+"device we've created). In other words, you can think of this as a piece "
+"of information carried from \"change\" nodes to the \"virtual device\" "
+"with names \"msg.output.message\" and \"msg.output.severity\", where "
+"\"message\" and \"severity\" are the virtual device attributes."
+msgstr ""
+"É importante notar que os nós do tipo \"change\" têm uma referência a uma "
+"entidade \"output\". Isso pode ser visto como uma simples estrutura de dados, "
+"onde existem os atributos ``message`` e ``severity`` que casam com aqueles "
+"do dispositivo virtual. Este \"objeto\" é referenciado no nó de saída (output) "
+"como uma fonte de dados para o dispositivo que será atualizado (nessa caso, "
+"o dispositivo virtual criado). Em outras palavras, pode-se dizer que há "
+"uma informação que é transferida dos nós do tipo \"change\" para o "
+"\"dispositivo virtual\" com os nomes \"msg.output.message\" e "
+"\"msg.output.severity\", onde \"message\" e \"severity\" são atributos "
+"do dispositivo virtual."
+
+#: ../../source/using-web-interface.rst:144
+msgid ""
+"So, let's send a few more messages and see what will happen to that "
+"virtual device."
+msgstr ""
+"Vamos, agora, enviar mais algumas mensagens e ver o que acontece para aquele "
+"dispositivo virtual."
+
+#: ../../source/using-web-interface.rst:154
+msgid ""
+"If you are interested on how to use the data generated by these devices "
+"in your application, check the :ref:`Building an application` tutorial."
+msgstr ""
+"Se está interessado em como usar os dados gerados por esses dispositivos "
+"em sua aplicação, confira o tutorial :ref:`Building an application`."
