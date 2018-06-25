@@ -1,7 +1,7 @@
-Mosca-TLS Tutorial
-==================
+MQTT-TLS Tutorial
+=================
 
-This document describes how to configure dojot to use Mosca over TLS.
+This document describes how to configure dojot to use MQTT over TLS.
 
 .. contents:: Table of Contents
   :local:
@@ -23,7 +23,7 @@ When a device is created, DeviceManager will automatically notify
 the following components:
 
 -  IoTAgent-Mosca: will register the new device on its internal cache and will create an entry 
-   on the ACL, allowing the device topublish on a specific topic.
+   on the ACL, allowing the device to publish on a specific topic.
 -  EJBCA: will create an end entity so a certificate can be created on
    the future.
 
@@ -59,7 +59,7 @@ CSR. EJBCA can refuse to sign a CSR if it concludes that it is not safe enough
 according to its policies.
 
 These configurable policies are called 'Certificate Profiles'. One Certificate
-profile named CFREE, specialized for Mosca TLS, is provided out of the box.
+profile named CFREE, specialized for MQTT TLS, is provided out of the box.
 
 In short, CFREE have the following configurations (and many more):
 
@@ -106,44 +106,59 @@ Mosca
 ~~~~~~~~~~~~
 Mosca is a node.js mqtt broker. To use the Mosca broker with TLS, you need to allow the broker
 to use TLS as the secure mode of connection. To do this, you need to declare the credentials and
-the secure attributes in the Mosca server conf object.
+the secure attributes in the Mosca server conf object. You can enable the TLS via configuration variable. 
 
 .. code-block:: JavaScript
 
+    if (config.mosca_tls === 'true') {
+
+    var SECURE_CERT = '/opt/mosca/certs/mosquitto.crt';
+    var SECURE_KEY =  '/opt/mosca/certs/mosquitto.key';
+    var CA_CERT = '/opt/mosca/certs/ca.crt';
+
+    //Mosca with TLS
+    moscaSettings = {
+        backend: mosca_backend,
+        persistence: {
+        factory: mosca.persistence.Redis,
+        host: mosca_backend.host
+        },
+        type : "mqtts", // important to only use mqtts, not mqtt
+        credentials :
+        { // contains all security information
+            keyPath: SECURE_KEY,
+            certPath: SECURE_CERT,
+            caPaths : [ CA_CERT ],
+            requestCert : true, // enable requesting certificate from clients
+            rejectUnauthorized : true // only accept clients with valid certificate
+        },
+        secure : {
+            port : 8883  // 8883 is the standard mqtts port
+        }
+    }
+    
     ...
-    type : "mqtts", // important to only use mqtts, not mqtt
-  credentials : { // contains all security information
-      keyPath: SECURE_KEY,
-      certPath: SECURE_CERT,
-      caPaths : [ CA_CERT ],
-      requestCert : true, // enable requesting certificate from clients
-      rejectUnauthorized : true // only accept clients with valid certificate
-  },
-  secure : {
-      port : 8883  // 8883 is the standard mqtts port
-  }
-  ...
 
 All the certificates will be created automatically, 
 not needing to configure manually the certificates into the broker.
 
-Mosca configuration files
+MQTT configuration files
 -----------------------------
 
-Checkout this commented Mosca configuration file:
+Checkout this commented MQTT configuration file:
 
 .. code:: ini
 
-    # network port on which Mosca will accept new connections
+    # network port on which MQTT will accept new connections
     port 8883
 
     # Trusted CA certificate
     cafile //opt/mosca/certs/ca.crt
 
-    # Mosca certificate
+    # MQTT certificate
     certfile /opt/mosca/certs/mosquitto.crt
 
-    # Mosca key par
+    # MQTT key par
     keyfile /opt/mosca/certs/mosquitto.key
 
     # Permission list file
