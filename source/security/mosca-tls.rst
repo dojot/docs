@@ -9,37 +9,23 @@ This document describes how to configure dojot to use MQTT over TLS.
 tl;dr
 -----
 
-For a device to connect using TLS with Mosquitto, it must possess:
+For a device to connect using TLS with Mosca, it must possess:
 
 -  A key pair (.key file);
 -  A certificate signed by a Certificate Authority (CA) trusted by
-   Mosquitto (.crt file);
+   Mosca (.crt file);
 -  The certificate of this CA (.crt file);
--  An entry on Mosquitto Access Control List (ACL), allowing the device
+-  An entry on Mosca Access Control List (ACL), allowing the device
    to publish on a specific topic;
 -  (optional) A Certificate Revocation List (CRL).
 
 When a device is created, DeviceManager will automatically notify
 the following components:
 
--  IoTAgent: will register the new device on its internal cache.
--  MQTT-Manager: will create an entry on the ACL, allowing the device to
-   publish on a specific topic.
+-  IoTAgent-Mosca: will register the new device on its internal cache and will create an entry 
+   on the ACL, allowing the device to publish on a specific topic.
 -  EJBCA: will create an end entity so a certificate can be created on
    the future.
-
-By default, dojot uses clear MQTT. To activate TLS, docker-compose.yml must be
-changed:
-
--  The image for service 'mqtt' must be changed from 'ansi/mosquitto' to
-   'dojot/mqtt-manager';
--  The public port for 'mqtt' service must be changed from '1883:1883' to
-   '8883:8883';
--  The MQTT\_TLS variable of 'iotagent' service must be set to true (lowercase).
-
-On the configuration file 'iotagent/config.json':
-
--  The flag 'secure' should be changed to true
 
 Components
 ----------
@@ -116,91 +102,73 @@ In order to create the CSR file and ask for a certificate signature, a user can
 use a helper script called 'Certificate Retriever', which is detailed in
 `Certificate retriever`_ section.
 
-MQTT Manager
+Mosca
 ~~~~~~~~~~~~
+Mosca is a node.js mqtt broker. To use the Mosca broker with TLS, you need to allow the broker
+to use TLS as the secure mode of connection. To do this, you need to declare the credentials and
+the secure attributes in the Mosca server conf object. You can enable the TLS via configuration variable. 
 
-MQTT-Manager is a helper service used to configure Mosquitto MQTT broker in a
-simple and 'on-the-fly' way. It can be configured using REST interfaces and
-Kakfa. Thus, HTTP requests or Kafka messages can be used to create and remove
-devices, as well as update CRL file (certification revocation list). This
-service is distributed as a docker container for easy deploy and its source
-code repository can be accessed in `MQTT Manager repository`_.
+.. code-block:: JavaScript
 
-Mosquitto by itself doesn't generate nor revoke certificates, it only relies on
-a CA and implements TLS protocol. The 'creation' of a particular device
-consists only in adding a new rule to ACL file in Mosquitto. Such file looks
-like:
+    if (config.mosca_tls === 'true') {
 
-.. code:: ini
+    var SECURE_CERT = '/opt/mosca/certs/mosquitto.crt';
+    var SECURE_KEY =  '/opt/mosca/certs/mosquitto.key';
+    var CA_CERT = '/opt/mosca/certs/ca.crt';
 
-    user iotagent
-    topic read /#
-    user 24f6
-    topic write /admin/24f6/attrs
+    //Mosca with TLS
+    moscaSettings = {
+        backend: mosca_backend,
+        persistence: {
+        factory: mosca.persistence.Redis,
+        host: mosca_backend.host
+        },
+        type : "mqtts", // important to only use mqtts, not mqtt
+        credentials :
+        { // contains all security information
+            keyPath: SECURE_KEY,
+            certPath: SECURE_CERT,
+            caPaths : [ CA_CERT ],
+            requestCert : true, // enable requesting certificate from clients
+            rejectUnauthorized : true // only accept clients with valid certificate
+        },
+        secure : {
+            port : 8883  // 8883 is the standard mqtts port
+        }
+    }
+    
+    ...
 
-Each rule is composed by two lines: the first one specifies the user (device)
-and the second one defines which action (write or read) is allowed to which
-topic. In the example above, the user iotagent can read all topics (# is a
-wildcard). Also, the device with ID 24f6 can write to topic /admin/24f6/attrs.
-The device ID is retrieved in 'Common name' certificate field.
+All the certificates will be created automatically, 
+not needing to configure manually the certificates into the broker.
 
-If a device sends data to a topic which it has no write permissions, then all
-data is discarded. Mosquitto won't log any errors related to this.
-
-When the ACL is changes, Mosquitto must be restarted (or a SIGDUP signal can be
-sent to its process). MQTT-Manager does this automatically when creating or
-removing devices.
-
-A script is executed when firing the container up. This script will generate a
-pair of keys to Mosquitto, retrieves the certificate and CRL from a CA and asks
-it to sign its public key. ALl generated files are placed in
-/usr/local/src/mosquitto-1.4.13/certs (inside the container).
-
-Mosquitto will only accept device connections that have certificate signed by
-its trusty CA.
-
-Also note that MQTT-Manager is used only in case when a TLS-enabled broker is
-needed. If this is not the case, then the vanilla `Mosquitto docker image`_ can
-be used.
-
-Mosquitto configuration files
+MQTT configuration files
 -----------------------------
 
-Checkout this commented Mosquitto configuration file:
+Checkout this commented MQTT configuration file:
 
 .. code:: ini
 
-    # network port on which Mosquitto will accept new connections
+    # network port on which MQTT will accept new connections
     port 8883
 
     # Trusted CA certificate
-    cafile /usr/local/src/mosquitto-1.4.13/certs/ca.crt
+    cafile //opt/mosca/certs/ca.crt
 
-    # Mosquitto certificate
-    certfile /usr/local/src/mosquitto-1.4.13/certs/mosquitto.crt
+    # MQTT certificate
+    certfile /opt/mosca/certs/mosquitto.crt
 
-    # Mosquitto key par
-    keyfile /usr/local/src/mosquitto-1.4.13/certs/mosquitto.key
-
-    tls_version tlsv1.2
-
-    # If false, a device will check Mosquitto certificate, but Mosquitto won't check
-    # the device counterparts.
-    # If true, both checks are performed (2-way TLS)
-    require_certificate true
-
-    # Certificate Common Name field will be used as username.
-    # Thus, a device with 'CN=abc1' will have a 'user abc1' entry in Mosquitto's ACL
-    use_identity_as_username true
+    # MQTT key par
+    keyfile /opt/mosca/certs/mosquitto.key
 
     # Permission list file
-    acl_file /usr/local/src/mosquitto-1.4.13/certs/access.acl
+    acl_file /opt/mosca/certs/access.acl
 
     # CA CRL.
-    crlfile /usr/local/src/mosquitto-1.4.13/certs/ca.crl
+    crlfile /opt/mosca/certs/ca.crl
 
 Note that for all configuration updates, it is mandatory to restart
-Mosquitto or to send a SIGDUP signal to its process.
+Mosca broker or to send a SIGDUP signal to its process.
 
 Certificate retriever
 ---------------------
@@ -257,6 +225,21 @@ execution.
 After successfully executed, all certificates can be found in './certs'
 folder.
 
+Quick Tutorial
+--------------
+
+To publish using the appropriated certificates, you must need to be 
+with the Mosca Broker and the EJBCA running. After creating the dojot 
+environment, the templates and the devices, use the mosquitto to publish 
+in the desired topic:
+
+.. code:: bash
+
+     mosquitto_pub -t <topic> -i <admin:deviceId> -m <message> -p 8883 --cert <your .crt file> --key <your .key file> --cafile IOTmidCA.crt
+
+The .crt, .key and the .cafile can be created with the `Certificate Retriever GitHub repository`_ script.
+
+
 Important Notes
 ---------------
 
@@ -272,7 +255,7 @@ normal certificate can be used for 1 to 5 years. This list is signed by CA and
 also has an expiration date - 1 day by default. In TLS protocol, if CRL is
 expired then the recommended action to be taken is to refuse all incoming
 connections, as there is no way to check if the certificates used in those
-connections are invalid or not. This procedure is implemented in Mosquitto.
+connections are invalid or not. This procedure is implemented in Mosca.
 
 Therefore, CA must generate a new list periodically. All components that use it
 must be updated.
@@ -301,55 +284,29 @@ To read a CRL:
 
     openssl crl -inform PEM -text -noout -in crlFile.crl
 
-Errors in secure connection handshake between device and Mosquitto
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-If any errors occur during connection handshake, something like the
-following error might appear in Mosquitto's logs:
-
-.. code:: text
-
-    1514550332: New connection from 172.20.0.1 on port 8883.
-    1514550332: OpenSSL Error: error:140940E5:SSL routines:ssl3_read_bytes:ssl handshake failure
-
-If this happens, try to establish connection using 'openssl client', as
-it is more verbose in error description.
+How to verify if an entity is created in EJBCA
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+You can check if a entity (device) is created in the EJBCA by checking the EJBCA log:
 
 .. code:: bash
 
-    openssl s_client -connect localhost:8883 -CAfile ca.crt -cert device.crt -key device.key
+    user 3b987 created
 
-Common errors are shown by openssl\_client (and \_server as well):
+in the example above, we created a device with id 3b987. After the device was created, 
+the ejbca add the device has an entity.
 
--  SSL alert number 45: this error indicates that a certificate expired.
-   Keep in mind that CRL also expires.
--  SSL alert number 48: received a valid certificate chain or partial
-   chain, but the certificate was not accepted because the CA
-   certificate could not be located or could not be matched with a
-   known, trusted CA. This message is always fatal.
--  Alert unknown CA: check whether sent CA certificate is correct. If it
-   is a sub-CA, check if all of its certificate chain was sent. This
-   error also occurs if the CA certificate data (specially common name
-   attribute) is the same as those from client certificate.
+How to verify if a device has published in the topic
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+You can check if your device has successfully published into Mosca broker by checking the Mosca log:
 
-Handshake is OK, but no published data reaches iotagent
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. code:: bash
 
-You can check whether the device could connect to MQTT broker by
-checking Mosquitto's log:
+    Published /devices/termo { temperature: 62.4 } admin:87852f undefined undefined
 
-::
-
-    1514482004: New client connected from 172.20.0.10 as mqttjs_c011c22d (c1, k10, u'deviceName')
-
-If that line shows up, it means that the TLS handshake worked and the device
-successfully connected to Mosquitto. Check if the device has an ACL entry in
-Mosquitto to allow it to publish data in the specified topic. Keep in mind that
-if a device publishes something in another topic (which it has no permission to
-publish) all data is discarded by Mosquitto with no warnings.
+if a message like this did not appear, there was probably a failure to authenticate the certificates. 
+Try to recreate the certificates with the `Certificate Retriever GitHub repository`_ script.
 
 .. _EJBCA: https://www.ejbca.org 
 .. _User Guide: http://dojotdocs.readthedocs.io/en/latest/user_guide.html#first-steps
-.. _MQTT Manager repository: https://github.com/dojot/mqtt-manager
-.. _Mosquitto docker image: https://hub.docker.com/r/ansi/mosquitto
+.. _Mosca repository: https://github.com/mcollina/mosca
 .. _Certificate Retriever GitHub repository: https://github.com/dojot/certificate-retriever
