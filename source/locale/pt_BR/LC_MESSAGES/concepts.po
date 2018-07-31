@@ -1,0 +1,211 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, CPqD
+# This file is distributed under the same license as the dojot package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: dojot 0.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-06-22 14:50-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.3\n"
+
+#: ../../source/concepts.rst:4
+msgid "Concepts"
+msgstr ""
+
+#: ../../source/concepts.rst:6
+msgid ""
+"This document provides information about dojot's concepts and "
+"abstractions."
+msgstr ""
+
+#: ../../source/concepts.rst:15
+msgid "Audience"
+msgstr ""
+
+#: ../../source/concepts.rst:15
+msgid "Users that want to take a look at how dojot works;"
+msgstr ""
+
+#: ../../source/concepts.rst:16
+msgid "Application developers."
+msgstr ""
+
+#: ../../source/concepts.rst:17
+msgid "Level: basic"
+msgstr ""
+
+#: ../../source/concepts.rst:21
+msgid "dojot basics"
+msgstr ""
+
+#: ../../source/concepts.rst:23
+msgid ""
+"Before using dojot, you should be familiar with some basic operations and"
+" concepts. They are very simple to understand and use, but without them, "
+"all operations might become obscure and senseless."
+msgstr ""
+
+#: ../../source/concepts.rst:27
+msgid ""
+"In the next section, there is an explanation of a few basic entities in "
+"dojot: devices, templates and flows. With these concepts in mind, we "
+"present a small tutorial to how to use them in dojot - it only covers API"
+" access. There a GUI oriented tutorial in :doc:`tutorials/using-web-"
+"interface` tutorial."
+msgstr ""
+
+#: ../../source/concepts.rst:33
+msgid ""
+"If you want more information on how dojot works internally, you should "
+"checkout the :doc:`architecture` to get acquainted with all internal "
+"components."
+msgstr ""
+
+#: ../../source/concepts.rst:39
+msgid "User authentication"
+msgstr ""
+
+#: ../../source/concepts.rst:41
+msgid ""
+"All HTTP requests supported by dojot are sent to the API gateway. In "
+"order to control which user should access which endpoints and resources, "
+"dojot makes uses of `JSON Web Token`_ (a useful tool is `jwt.io`_) which "
+"encodes things like (not limited to these):"
+msgstr ""
+
+#: ../../source/concepts.rst:46
+msgid "User identity"
+msgstr ""
+
+#: ../../source/concepts.rst:47
+msgid "Validation data"
+msgstr ""
+
+#: ../../source/concepts.rst:48
+msgid "Token expiration date"
+msgstr ""
+
+#: ../../source/concepts.rst:50
+msgid ""
+"The component responsible for user authentication is `auth`_. You can "
+"find a tutorial of how to authenticate a user and how to get an access "
+"token in `auth documentation`_."
+msgstr ""
+
+#: ../../source/concepts.rst:56
+msgid "Devices and templates"
+msgstr ""
+
+#: ../../source/concepts.rst:58
+msgid ""
+"In dojot, a device is a digital representation of an actual device or "
+"gateway with one or more sensors or of a virtual one with "
+"sensors/attributes inferred from other devices. Throughout the "
+"documentation, this kind of device will be called simply as 'device'. If "
+"the actual device must be referenced, we'll be calling it as 'physical "
+"device'."
+msgstr ""
+
+#: ../../source/concepts.rst:64
+msgid ""
+"Consider, for instance, a physical device with temperature and humidity "
+"sensors; it can be represented in dojot as a device with two attributes "
+"(one for each sensor). We call this kind of device as regular device or "
+"by its communication protocol, for instance, MQTT device or CoAP device."
+msgstr ""
+
+#: ../../source/concepts.rst:69
+msgid ""
+"We can also create devices which don’t directly correspond to their "
+"physical counterparts, for instance, we can create one with higher level "
+"of information of temperature (is becoming hotter or is becoming colder) "
+"whose values are inferred from temperature sensors of other devices. This"
+" kind of device is called virtual device."
+msgstr ""
+
+#: ../../source/concepts.rst:75
+msgid ""
+"All devices are created based on a *template*, which can be thought as a "
+"model of a device. As \"model\" we could think of part numbers or product"
+" models - one *prototype* from which devices are created. Templates in "
+"dojot have one label (any alphanumeric sequence), a list of attributes "
+"which will hold all the device emitted information, and optionally a few "
+"special attributes which will indicate how the device communicates, "
+"including transmission methods (protocol, ports, etc.) and message "
+"formats."
+msgstr ""
+
+#: ../../source/concepts.rst:83
+msgid ""
+"In fact, templates can represent not only \"device models\", but it can "
+"also abstract a \"class of devices\". For instance, we could have one "
+"template to represent all thermometers that will be used in dojot. This "
+"template would have only one attribute called, let's say, "
+"\"temperature\". While creating the device, the user would select its "
+"\"physical template\", let's say *TexasInstr882*, and the 'thermometer' "
+"template. The user would have also to add translation instructions "
+"(implemented in terms of data flows, build in flowbuilder) in order to "
+"map the temperature reading that will be sent from the device to a "
+"\"temperature\" attribute."
+msgstr ""
+
+#: ../../source/concepts.rst:93
+msgid ""
+"In order to create a device, a user selects which templates are going to "
+"compose this new device. All their attributes are merged together and "
+"associated to it - they are tightly linked to the original template so "
+"that any template update will reflect all associated devices."
+msgstr ""
+
+#: ../../source/concepts.rst:98
+msgid ""
+"The component responsible for managing devices (both real and virtual) "
+"and templates is `DeviceManager`_. `DeviceManager documentation`_ "
+"explains in more depth all the available operations."
+msgstr ""
+
+#: ../../source/concepts.rst:104
+msgid "Flows"
+msgstr ""
+
+#: ../../source/concepts.rst:106
+msgid ""
+"A flow is a sequence of blocks that process a particular event or device "
+"message. It contains:"
+msgstr ""
+
+#: ../../source/concepts.rst:109
+msgid ""
+"entry point: a block representing what is the trigger to start a "
+"particular flow;"
+msgstr ""
+
+#: ../../source/concepts.rst:111
+msgid ""
+"processing blocks: a set of blocks that perform operations using the "
+"event. These blocks may or may not use the contents of such event to "
+"further process it. The operations might be: testing content for "
+"particular values or ranges, geo-positioning analysis, changing message "
+"attributes, perform operations on external elements, and so on."
+msgstr ""
+
+#: ../../source/concepts.rst:116
+msgid ""
+"exit point: a block representing where the resulting data should be "
+"forwarded to. This block might be a database, a virtual device, an "
+"external element, and so on."
+msgstr ""
+
+#: ../../source/concepts.rst:120
+msgid "The component responsible for dealing with such flows is `flowbroker`_."
+msgstr ""
+
