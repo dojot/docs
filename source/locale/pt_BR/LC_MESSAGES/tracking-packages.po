@@ -1,0 +1,84 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, CPqD
+# This file is distributed under the same license as the dojot package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: dojot 0.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-06-22 14:50-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.3\n"
+
+#: ../../source/tracking-packages.rst:2
+msgid "Tracking packages"
+msgstr ""
+
+#: ../../source/tracking-packages.rst:4
+msgid ""
+"This tutorial will show how to develop new pluggable modules to dojot to "
+"perform specific tasks. These modules are:"
+msgstr ""
+
+#: ../../source/tracking-packages.rst:7
+msgid "New nodes in flow palette (stateless procedures)"
+msgstr ""
+
+#: ../../source/tracking-packages.rst:8
+msgid "New modules in dojot (stateful procedures)"
+msgstr ""
+
+#: ../../source/tracking-packages.rst:10
+msgid ""
+"The scenario is: we have a courier delivery services company and we need "
+"to track individual packages. The current package tracking is based only "
+"on manually scanning each device's bar code at departure and arrival in "
+"distribution centers. What we want is a more fine-grained system that "
+"allows checking where a particular package is (or it should be) in the "
+"meantime."
+msgstr ""
+
+#: ../../source/tracking-packages.rst:16
+msgid ""
+"Each package is equipped with a RFID and all courier vehicules have RFID "
+"scanners, LTE connection and GPS."
+msgstr ""
+
+#: ../../source/tracking-packages.rst:21
+msgid "Who is this for: developers, solution architects"
+msgstr ""
+
+#: ../../source/tracking-packages.rst:22
+msgid "Level: advanced"
+msgstr ""
+
+#: ../../source/tracking-packages.rst:23
+msgid "Reading time: X m"
+msgstr ""
+
+#: ../../source/tracking-packages.rst:27
+msgid "Implementation details"
+msgstr ""
+
+#: ../../source/tracking-packages.rst:29
+msgid ""
+"The idea behind this is: associate each package to a vehicule and, "
+"whenever an update from the vehicule is received, this solution also "
+"updates all associated packages. The association could be done by the "
+"vehicule itself - each time a new device is registered by its RFID "
+"scanners, it sends a message to dojot indicating that the device is now "
+"associated to it. This message would be processed by a new software "
+"component (to be developed in this tutorial) that performs this "
+"association, as currently there is no module responsible for \"device "
+"associations\". When a vehicule sends a new location, this update is also"
+" processed by the association module, which in turn will update the "
+"location from all associated packages."
+msgstr ""
+

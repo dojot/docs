@@ -24,8 +24,8 @@ and efficient infrastructure.
    :maxdepth: 2
    :caption: Tutorials
 
-   tutorials/using-web-interface
-   tutorials/using-api-interface
+   using-web-interface
+   using-api-interface
 
 .. Indices and tables
 .. ==================
