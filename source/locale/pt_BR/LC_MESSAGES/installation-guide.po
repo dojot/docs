@@ -27,7 +27,7 @@ msgid ""
 "compose. Kubernetes and Google Cloud Platform support is on track to be "
 "implemented."
 msgstr ""
-"Esta página contém informação�de como instalar a dojot utilizando o "
+"Esta página contém informação de como instalar a dojot utilizando o "
 "docker-compose. O suporte à instalação em ambientes Kubernetes e Google Cloud "
 "estão em andamento no projeto."
 
@@ -61,7 +61,7 @@ msgid ""
 "TCP (incoming connections): 1883 (MQTT), 8883 (Secure MQTT if used), 8000"
 " (web interface access)"
 msgstr ""
-"TCP (conex�es de entrada): 1883 (MQTT), 8883 (MQTT seguro, se utilizado), "
+"TCP (conexões de entrada): 1883 (MQTT), 8883 (MQTT seguro, se utilizado), "
 "8000 (acesso à interface web)"
 
 #: ../../source/installation-guide.rst:22
@@ -80,7 +80,7 @@ msgid ""
 "processes orchestration platform."
 msgstr ""
 "Este documento contém instruções de como criar um ambiente para instalação "
-"trivial da dojot em um �nico host utilizando o docker-compose como "
+"trivial da dojot em um único host utilizando o docker-compose como "
 "o processo de orquestração da plataforma."
 
 #: ../../source/installation-guide.rst:33
@@ -269,7 +269,7 @@ msgstr ""
 
 #: ../../source/installation-guide.rst:145
 msgid "Kubernetes"
-msgstr "Kubernetes - em construção"
+msgstr "Kubernetes"
 
 #: ../../source/installation-guide.rst:147
 msgid ""
