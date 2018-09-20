@@ -96,15 +96,17 @@ How can I update my deploy to dojot's latest version?
 
 You need to follow some steps:
 
-1 Update the docker-compose repository to the cutting-edge version (beware the
-  bugs though)
+1 Update the docker-compose repository to the cutting-edge version 
+ (beware the bug)
 
 .. code-block:: bash
 
   $ cd <path-to-your-clone-of-docker-compose>
   $ git checkout master && git pull
 
-  If you need a more stable version, you could checkout a tag instead:
+
+If you need a more stable version, you could checkout a tag instead:
+
 
 .. code-block:: bash
 
@@ -204,10 +206,10 @@ set your actual device to push the data to dojot.
 In order to send data to dojot via MQTT (using iotagent-mosca), there are some
 things to keep in mind:
 
--  The topic should look like ``/<service-id>/<device-id>/attrs`` (for instance:
+- The topic should look like ``/<service-id>/<device-id>/attrs`` (for instance:
   ``/admin/efac/attrs``). Depending on how IoT agent MQTT was started (more
-  strict or more permissive), the client ID must also be set to
-  "<tenant>:<deviceid>", such as "admin:efac".
+  strict), the client ID must also be set to "<tenant>:<deviceid>", such as
+  "admin:efac".
   
 - MQTT payload must be a JSON with each key being an attribute of the dojot
   device, such as:

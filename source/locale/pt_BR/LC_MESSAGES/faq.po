@@ -3,26 +3,24 @@
 # This file is distributed under the same license as the dojot package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: dojot 0.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-22 14:50-0300\n"
+"POT-Creation-Date: 2018-09-20 17:05-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.3\n"
+"Generated-By: Babel 2.6.0\n"
 
 #: ../../source/faq/faq.rst:4
 msgid "Frequently Asked Questions"
 msgstr "Dúvidas Mais Frequentes"
 
 #: ../../source/faq/faq.rst:6
-#, fuzzy
 msgid ""
 "Here are some answers to frequently-asked questions from users of dojot "
 "platform."
@@ -52,7 +50,6 @@ msgid "What is dojot? Why should I use it? Why open source it?"
 msgstr "O que é a dojot? Por que eu deveria utilizá-la? Por que abrir o código?"
 
 #: ../../source/faq/faq.rst:24
-#, fuzzy
 msgid ""
 "It’s a brazilian IoT platform launched as open source software with aims "
 "to ease the development of solutions and the IoT ecosystem with local "
@@ -60,12 +57,11 @@ msgid ""
 msgstr ""
 "É uma plataforma brasileira para IoT que surgiu com uma proposta de "
 "código aberto, para facilitar o desenvolvimento de soluções e o "
-"ecossistema IoT com conteúdo local voltado às necessidades brasileiras, "
-"assumindo um papel habilitador com:"
+"ecossistema IoT com conteúdo local voltado às necessidades brasileiras."
 
 #: ../../source/faq/faq.rst:28
 msgid "It takes a role as an enabler platform with:"
-msgstr ""
+msgstr "Ela oferece"
 
 #: ../../source/faq/faq.rst:30
 msgid "Open APIs which makes the access to the platform resources easy."
@@ -85,23 +81,23 @@ msgstr "Conectores para diferentes tipos de dispositivos."
 
 #: ../../source/faq/faq.rst:33
 msgid ""
-"Graphical user interface with flow builder to prototype IoT solutions "
-"very quickly."
+"Graphical user interface with flow builder to quicly prototype IoT "
+"solutions."
 msgstr ""
 "Construção de fluxos de dados e regras de forma visual, permitindo a "
 "rápida prototipação e validação de cenários de aplicações IoT."
 
-#: ../../source/faq/faq.rst:35
+#: ../../source/faq/faq.rst:34
 msgid "Real time event processing with customizable rules."
 msgstr ""
 "Processamento de eventos em tempo real aplicando regras definidas pelo "
 "desenvolvedor."
 
-#: ../../source/faq/faq.rst:38
+#: ../../source/faq/faq.rst:37
 msgid "Where can I get it?"
 msgstr "Onde eu posso baixar?"
 
-#: ../../source/faq/faq.rst:40
+#: ../../source/faq/faq.rst:39
 msgid ""
 "All components are available in dojot's GitHub repositories: "
 "`<https://github.com/dojot>`_."
@@ -109,15 +105,15 @@ msgstr ""
 "Todos os componentes estão disponíveis no repositório da dojot no GitHub:"
 " `<https://github.com/dojot>`_."
 
-#: ../../source/faq/faq.rst:43
+#: ../../source/faq/faq.rst:42
 msgid "Which repository is the main one?"
 msgstr "Qual é o principal repositório?"
 
-#: ../../source/faq/faq.rst:45
+#: ../../source/faq/faq.rst:44
 msgid "There are two main ones:"
 msgstr "Existem dois repositórios principais:"
 
-#: ../../source/faq/faq.rst:47
+#: ../../source/faq/faq.rst:46
 msgid ""
 "`<https://github.com/dojot/dojot>`_: this is where we keep track of all "
 "the things related to this project as a whole, such as architectural "
@@ -127,7 +123,7 @@ msgstr ""
 "acompanhamento de tudo relacionado a este projeto como decisões de "
 "arquitetura e melhorias."
 
-#: ../../source/faq/faq.rst:51
+#: ../../source/faq/faq.rst:50
 msgid ""
 "`<https://github.com/dojot/docker-compose>`_: repository for Docker "
 "compose files and configurations. This is what we would recommend to use "
@@ -137,11 +133,11 @@ msgstr ""
 " e configurações para o docker-compose. Este é o repositório que "
 "recomendamos para começar com a dojot."
 
-#: ../../source/faq/faq.rst:56
+#: ../../source/faq/faq.rst:55
 msgid "So, I found this pesky bug. How can I inform you about it?"
 msgstr "Então, encontrei um probleminha chato. Como posso informá-lo sobre isso?"
 
-#: ../../source/faq/faq.rst:58
+#: ../../source/faq/faq.rst:57
 msgid ""
 "We ask you to open an issue in `dojot's Github repository "
 "<http://github.com/dojot/dojot>`_. If you know exactly which component is"
@@ -153,7 +149,7 @@ msgstr ""
 "qual componente está com o problema, você pode abrir a `issue` no "
 "respectivo repositório (funcionará do mesmo modo)."
 
-#: ../../source/faq/faq.rst:63
+#: ../../source/faq/faq.rst:62
 msgid ""
 "If you are able to analyze and fix this bug, please do so. Create a pull-"
 "request with a quick description of what you've done."
@@ -161,18 +157,17 @@ msgstr ""
 "Se você puder analisar e resolver o problema, por favor faça isso e crie "
 "um `pull-request` com uma breve descrição do que foi feito."
 
-#: ../../source/faq/faq.rst:67
+#: ../../source/faq/faq.rst:66
 msgid "Usage"
 msgstr "Uso"
 
-#: ../../source/faq/faq.rst:71
+#: ../../source/faq/faq.rst:70
 msgid "How do I start it? Is it CLI-based or it has a graphical user interface?"
 msgstr ""
 "Por onde eu começo? É baseado em CLI ou possui uma interface gráfica de "
 "usuário\t?"
 
-#: ../../source/faq/faq.rst:73
-#, fuzzy
+#: ../../source/faq/faq.rst:72
 msgid ""
 "dojot can be accessed by a nice web-based interface and by REST APIs. "
 "Considering that you installed ``docker`` and ``docker-compose`` and "
@@ -181,14 +176,14 @@ msgid ""
 msgstr ""
 "A dojot pode ser acessada via interface Web ou APIs REST. Considerando "
 "que você já tenha instalado o ``docker`` e o ``docker-compose`` e tenha "
-"clonado o repositório dojot para o ``docker-compose``, ainda resta alguns"
-" passos antes de sair usando:"
+"clonado o repositório dojot para o ``docker-compose``, para iniciar todos"
+" os serviços, basta executar o comando abaixo:"
 
-#: ../../source/faq/faq.rst:81
+#: ../../source/faq/faq.rst:80
 msgid "And that's it."
 msgstr "E é isto."
 
-#: ../../source/faq/faq.rst:83
+#: ../../source/faq/faq.rst:82
 msgid ""
 "The web interface is available at ``http://localhost:8000``. The user is "
 "``admin``, password ``admin``."
@@ -196,23 +191,23 @@ msgstr ""
 "A interface Web está disponível em ``http://localhost:8000``. O usuário é"
 " ``admin`` e a senha é ``admin``."
 
-#: ../../source/faq/faq.rst:86
+#: ../../source/faq/faq.rst:85
 msgid "REST APIs are explained in the `Applications`_ section."
 msgstr "APIs REST são explicadas na seção `Aplicações`_."
 
-#: ../../source/faq/faq.rst:89
+#: ../../source/faq/faq.rst:88
 msgid "Ok, I started it and I logged in. Now what?"
 msgstr "Pronto, já iniciei e fiz o `login`. E agora?"
 
-#: ../../source/faq/faq.rst:91
+#: ../../source/faq/faq.rst:90
 msgid ""
-"Nice! Now you can add your first devices, described in `Devices`_, build "
-"some flows and subscribing to device events, both described in `Data "
-"Flows`_."
+"Nice! Now you can add your templates and devices, described in "
+"`Devices`_, build some flows and subscribing to device events, both "
+"described in `Data Flows`_."
 msgstr ""
-"Legal! Agora você pode criar seus primeiros dispositivos, descrito em "
-"`Dispositivos`_, criar alguns fluxos e registrar-se para eventos de "
-"dispositivos, ambos descritos em `Fluxos de Dados`_."
+"Legal! Agora você pode criar seus primeiros templates e dispositivos, "
+"descrito em `Dispositivos`_, criar alguns fluxos e registrar-se para "
+"eventos de dispositivos, ambos descritos em `Fluxos de Dados`_."
 
 #: ../../source/faq/faq.rst:95
 msgid "How can I update my deploy to dojot's latest version?"
@@ -223,22 +218,37 @@ msgid "You need to follow some steps:"
 msgstr "Basta seguir alguns passos:"
 
 #: ../../source/faq/faq.rst:100
-#, fuzzy
-msgid ""
-"1 Update the docker-compose repository to the cutting-edge version "
-"(beware the"
-msgstr "Atualize o repositório do docker-compose da dojot com a última versão."
+msgid "1 Update the docker-compose repository to the cutting-edge version"
+msgstr "1 Atualize o repositório do docker compose com a última versão."
 
 #: ../../source/faq/faq.rst:100
-msgid "bugs though)"
-msgstr ""
+msgid "(beware the bug)"
+msgstr "(cuidado: bug bravo)"
 
-#: ../../source/faq/faq.rst:120
-#, fuzzy
+#: ../../source/faq/faq.rst:108
+msgid "If you need a more stable version, you could checkout a tag instead:"
+msgstr ""
+"Se você precisar de uma versão mais estável, você pode fazer checkoutde "
+"uma tag:"
+
+#: ../../source/faq/faq.rst:121
+msgid ""
+"Once in a while we'll release new versions for dojot components. They "
+"might be independently released (although we tend to synchronize all of "
+"them). Once we end up with a stable set of component versions, we'll "
+"update the docker-compose repository."
+msgstr ""
+"De tempos em tempos nós lançaremos novas versões para componentes "
+"dadojot. Eles podem ser lançados individualmente (no entanto, "
+"tentaremossincronizar todos os lançamentos). Uma vez que nós tenhamos um "
+"conjunto decomponentes que opere de forma estável, atualizaremos o "
+"repositório do docker-compose"
+
+#: ../../source/faq/faq.rst:126
 msgid "2 Deploy the latest docker images. This command might need ``sudo``."
 msgstr "Atualize o ambiente com as imagens dockers mais recentes."
 
-#: ../../source/faq/faq.rst:126
+#: ../../source/faq/faq.rst:132
 msgid ""
 "This procedure also applies to the available virtual machines once they "
 "do use docker-compose."
@@ -246,15 +256,15 @@ msgstr ""
 "Este procedimento também se aplica para as máquinas virtuais dojot uma "
 "vez que as mesmas utilizam `docker-compose`."
 
-#: ../../source/faq/faq.rst:131
+#: ../../source/faq/faq.rst:137
 msgid "Devices"
 msgstr "Dispositivos"
 
-#: ../../source/faq/faq.rst:135
+#: ../../source/faq/faq.rst:141
 msgid "What are *devices* for dojot?"
 msgstr "O que são dispositivos para a dojot?"
 
-#: ../../source/faq/faq.rst:137
+#: ../../source/faq/faq.rst:143
 msgid ""
 "In dojot, a device is a digital representation of an actual device or "
 "gateway with one or more sensors or of a virtual one with "
@@ -265,7 +275,7 @@ msgstr ""
 "dispositivo virtual com sensores/atributos inferidos de outros "
 "dispositivos."
 
-#: ../../source/faq/faq.rst:141
+#: ../../source/faq/faq.rst:147
 msgid ""
 "Consider, for instance, an actual device with thermal and humidity "
 "sensors; it can be represented inside dojot as a device with two "
@@ -273,9 +283,13 @@ msgid ""
 " device* or by its communication protocol, for instance, *MQTT device* or"
 " *CoAP device*."
 msgstr ""
+"Considere, por exemplo, um dispositivo real com um termômetro e "
+"umhigrômetro; ele pode ser representado na dojot como um dispositivo com "
+"doisatributos (um para cada sensor). Chamamos este tipo de dispositivo "
+"de*dispositivo normal* ou usando o seu protocolo de comunicação, "
+"como*dispositivo MQTT* ou *dispositivo CoAP*."
 
-#: ../../source/faq/faq.rst:146
-#, fuzzy
+#: ../../source/faq/faq.rst:152
 msgid ""
 "We can also create devices which don’t directly correspond to their "
 "physical counterparts, for instance, we can create one with a higher "
@@ -290,12 +304,11 @@ msgstr ""
 "sensores de temperatura de outros dispositivos. Este tipo de dispositivo "
 "é denominado de *dispositivo virtual*."
 
-#: ../../source/faq/faq.rst:153
+#: ../../source/faq/faq.rst:159
 msgid "What is the relationship between this *device* and my actual device?"
 msgstr "Qual é a relação entre este *dispositivo* e um dispositivo real?"
 
-#: ../../source/faq/faq.rst:155
-#, fuzzy
+#: ../../source/faq/faq.rst:161
 msgid ""
 "It is as simple as it seems: the *regular device* for dojot is a mirror "
 "(digital twin) of your actual device. You can choose which attributes are"
@@ -306,15 +319,12 @@ msgstr ""
 "(gêmeo/cópia digital) do dispositivo real. Você pode escolher quais "
 "atributos são disponibilizados para as aplicações e outros componentes, "
 "adicionando cada um deles através da interface de criação de dispositivo."
-" Se você não quiser disponibilizar alguns dos atributos, basta não "
-"adicioná-los na dojot."
 
-#: ../../source/faq/faq.rst:161
+#: ../../source/faq/faq.rst:167
 msgid "What are *virtual devices*? How are they different from the other one?"
 msgstr "O que são *dispositivos virtuais*? Como se diferenciam dos demais?"
 
-#: ../../source/faq/faq.rst:163
-#, fuzzy
+#: ../../source/faq/faq.rst:169
 msgid ""
 "*Regular devices* are created to serve as a mirror (digital twin) for the"
 " actual devices and sensors. A *virtual device* is an abstraction that "
@@ -326,36 +336,34 @@ msgstr ""
 " dos dispositivos e sensores reais. Um *dispositivo virtual* é uma "
 "abstração que modela coisas que não são factíveis no mundo real. Por "
 "exemplo, digamos que um usuário tenha alguns sensores para detectar "
-"fumaça em um laboratório, sendo que cada um tem diferentes atributos. Não"
-" seria interessante se tivessemos um único dispositivo chamado "
-"*Laboratório* com apenas um atributo *emChamas*? Assim as aplicações "
-"poderiam considerar apenas esse atributo para tomar uma ação."
+"fumaça em um laboratório, sendo que cada um tem diferentes atributos."
 
-#: ../../source/faq/faq.rst:169
+#: ../../source/faq/faq.rst:175
 msgid ""
 "Wouldn't it be nice if we had one device called *Laboratory* that has one"
 " attribute *isOnFire*? Therefore, the applications could rely only on "
 "this attribute to take an action."
 msgstr ""
+"Não seria bom se exisitisse um dispositivo chamado *Laboratório* "
+"quepossui um atributo *emChamas*? Assim a aplicação dependeria apenas "
+"desteatributo para tomar alguma ação."
 
-#: ../../source/faq/faq.rst:173
-#, fuzzy
+#: ../../source/faq/faq.rst:179
 msgid ""
 "Another difference is how virtual devices are populated. Regular ones "
 "will be filled with information sent by devices or gateways to the "
 "platform and virtual ones will be filled by flows or by applications."
 msgstr ""
 "Uma outra diferença é a maneira como os dados dos dispositivos virtuais "
-"são populados. Os dispositivos são preenchidos com informações enviadas a"
-" plataforma dojot por dispositivos ou gateways e os virtuais são "
-"preenchidos por fluxos ou por aplicações. Por exemplo, não aceitam "
-"mensagens endereçadas a eles via MQTT."
+"são populados. Os dispositivos são preenchidos com informações enviadas "
+"aplataforma dojot por dispositivos ou gateways e os virtuais são "
+"preenchidos por fluxos ou por aplicações."
 
-#: ../../source/faq/faq.rst:179
+#: ../../source/faq/faq.rst:185
 msgid "And what are *templates*?"
-msgstr ""
+msgstr "E o que são *templates*?"
 
-#: ../../source/faq/faq.rst:181
+#: ../../source/faq/faq.rst:187
 msgid ""
 "Templates, simply put, are \"blueprints for devices\" which serve as "
 "basis to create a new device. A single device is built using a set of "
@@ -363,14 +371,20 @@ msgid ""
 "names must not be exactly the same, though). If one template is changed, "
 "then all associated devices will also be changed."
 msgstr ""
+"Templates são \"modelos para dispositivos\" que servem como base para "
+"acriação de um novo dispositivo. Um dispositivo é construído usando um "
+"conjuntode templates - seus atributos serão herdados de cada template "
+"(não deve havernenhum atributo com mesmo nome, no entanto). Se um "
+"template é alterado, todosos dispositivos associados àquele template "
+"serão também alteradosautomaticamente."
 
-#: ../../source/faq/faq.rst:189
+#: ../../source/faq/faq.rst:195
 msgid "How can I send MQTT data to dojot so that it appears on the dashboard?"
 msgstr ""
 "Como posso enviar dados via MQTT para a dojot de forma que apareçam no "
 "`dashboard`?"
 
-#: ../../source/faq/faq.rst:191
+#: ../../source/faq/faq.rst:197
 msgid ""
 "First of all, you create a digital representation for your actual device."
 " Then, you configure it to send data to dojot so that it matches its "
@@ -381,8 +395,7 @@ msgstr ""
 "dojot de maneira que os dados possam ser associados ao seu representante "
 "digital."
 
-#: ../../source/faq/faq.rst:195
-#, fuzzy
+#: ../../source/faq/faq.rst:201
 msgid ""
 "Let’s take as example a weather station which measures temperature and "
 "humidity, and publishes them periodically through MQTT. First, you create"
@@ -393,31 +406,28 @@ msgstr ""
 " umidade e publica essas medidas via MQTT periodicamente. Inicialmente, "
 "cria-se um dispositivo do tipo MQTT com dois atributos (temperatura e "
 "umidade) e, em seguida, configura-se a estação meteorológica para "
-"publicar os dados para a dojot. Aqui, é necessário seguir algumas regras:"
-" "
+"publicar os dados para a dojot."
 
-#: ../../source/faq/faq.rst:200
+#: ../../source/faq/faq.rst:206
 msgid ""
 "In order to send data to dojot via MQTT (using iotagent-mosca), there are"
 " some things to keep in mind:"
 msgstr ""
+"Para enviar dados para a dojot via MQTT (usando o iotagent-mosca),existem"
+" algumas coisas para se ter em mente:"
 
-#: ../../source/faq/faq.rst:203
+#: ../../source/faq/faq.rst:209
 msgid ""
-"If you don't define any topic in device template, it will assume the "
-"pattern ``/<service-id>/<device-id>/attrs`` (for instance: "
-"``/admin/efac/attrs``). This should be the topic to which the device will"
-" publish its information to."
+"The topic should look like ``/<service-id>/<device-id>/attrs`` (for "
+"instance: ``/admin/efac/attrs``). Depending on how IoT agent MQTT was "
+"started (more strict), the client ID must also be set to "
+"\"<tenant>:<deviceid>\", such as \"admin:efac\"."
 msgstr ""
+"``/admin/efac/attrs``). Dependendo de como o IoT agent foi inicializado "
+"(mais restritivo), o ``client ID`` deve ser também configurado "
+"para``<tenant>:<deviceid>``, como ``\"admin:efac\"``."
 
-#: ../../source/faq/faq.rst:207
-msgid ""
-"If you do define a topic in device template, then your device should "
-"publish its data to it and set the client-id parameter. It should follow "
-"the following pattern: ``<service>:<deviceid>``, such as ``admin:efac``."
-msgstr ""
-
-#: ../../source/faq/faq.rst:211
+#: ../../source/faq/faq.rst:214
 msgid ""
 "MQTT payload must be a JSON with each key being an attribute of the dojot"
 " device, such as:"
@@ -425,7 +435,7 @@ msgstr ""
 "O `payload` MQTT precisa ser um JSON com as chaves correspondendo aos "
 "atributos definidos para o dispositivo na dojot, como:"
 
-#: ../../source/faq/faq.rst:220
+#: ../../source/faq/faq.rst:223
 msgid ""
 "On the dashboard some attributes are shown as tables and others as "
 "charts. How are they chosen/set?"
@@ -433,7 +443,7 @@ msgstr ""
 "No `dashboard` alguns atributos são exibidos como tabelas e outros como "
 "gráficos. Como são escolhidos/configurados?"
 
-#: ../../source/faq/faq.rst:222
+#: ../../source/faq/faq.rst:225
 msgid ""
 "The type of an attribute determines how the data is shown on the "
 "dashboard as follows:"
@@ -441,19 +451,19 @@ msgstr ""
 "O tipo do atributo determina o modo de exibição dos dados no `dashboard` "
 "como segue:"
 
-#: ../../source/faq/faq.rst:225
+#: ../../source/faq/faq.rst:228
 msgid "``Geo``: geo map."
 msgstr "``Geo``: mapa georreferenciado."
 
-#: ../../source/faq/faq.rst:226
+#: ../../source/faq/faq.rst:229
 msgid "``Boolean`` and ``Text``: table."
 msgstr "``Boolean`` e ``Text``: tabela"
 
-#: ../../source/faq/faq.rst:227
+#: ../../source/faq/faq.rst:230
 msgid "``Integer`` and ``Float``: line chart."
 msgstr "``Integer`` e ``Float``: gráfico de linha."
 
-#: ../../source/faq/faq.rst:230
+#: ../../source/faq/faq.rst:233
 msgid ""
 "I'm interested in integrating my super cool device with dojot. How can I "
 "do it?"
@@ -461,7 +471,7 @@ msgstr ""
 "Estou interessado em integrar à dojot o meu dispositivo que é super "
 "legal. Como eu faço isso?"
 
-#: ../../source/faq/faq.rst:232
+#: ../../source/faq/faq.rst:235
 msgid ""
 "If your device is able to send messages using MQTT (with JSON payload), "
 "CoAP or HTTP, there is a good chance that your device can be integrated "
@@ -475,7 +485,7 @@ msgstr ""
 " descritos na questão `Como posso enviar dados via MQTT para a dojot de "
 "forma que apareçam no dashboard`_?."
 
-#: ../../source/faq/faq.rst:239
+#: ../../source/faq/faq.rst:242
 msgid ""
 "Is there any restrictions about the message my device will send to dojot?"
 " Format, size, frequency?"
@@ -483,7 +493,7 @@ msgstr ""
 "Existem restrições para as mensagens enviadas pelo meu dispositivo para a"
 " dojot? Formato, tamanho, frequência?"
 
-#: ../../source/faq/faq.rst:241
+#: ../../source/faq/faq.rst:244
 msgid ""
 "None but format, which is described in the question `How can I send MQTT "
 "data to dojot so that it appears on the dashboard?`_."
@@ -491,19 +501,23 @@ msgstr ""
 "Nenhuma com exceção do formato, que é descrito na questão `How can I send"
 " MQTT data to dojot so that it appears on the dashboard?`_."
 
-#: ../../source/faq/faq.rst:245
+#: ../../source/faq/faq.rst:248
 msgid "How can I send some commands to my device through dojot?"
 msgstr "Como posso enviar comandos para o meu dispositivo através da dojot?"
 
-#: ../../source/faq/faq.rst:247
+#: ../../source/faq/faq.rst:250
 msgid ""
 "For now, you can send HTTP requests to dojot containing a few "
 "instructions about which device should be configured and the actuation "
 "payload itself. More details on that can be found in `Device-Manager how-"
 "to - sending actuation messages`_."
 msgstr ""
+"Por enquanto, você pode enviar requisições HTTP para a dojot "
+"contendoalgumas instruções sobre qual dispositivo deve ser configurado e "
+"os dados paraatuação. Mais detalhes podem ser encontrados na seção "
+"`Device-Manager how-to - sending actuation messages`_."
 
-#: ../../source/faq/faq.rst:254
+#: ../../source/faq/faq.rst:257
 msgid ""
 "I didn’t find the protocol supported by my device in the type list, is "
 "there anything I can do?"
@@ -511,7 +525,7 @@ msgstr ""
 "Não encontrei o protocolo suportado pelo meu dispositivo na lista de "
 "tipos, existe algo que eu possa fazer?"
 
-#: ../../source/faq/faq.rst:256
+#: ../../source/faq/faq.rst:259
 msgid ""
 "There are some possibilities. The first one is to develop a proxy to "
 "translate your protocol to one supported by dojot. The second one is to "
@@ -521,11 +535,11 @@ msgstr ""
 "traduzir o seu protocolo para um dos suportados pela dojot. A segunda é "
 "desenvolver um conector similar as existentes para MQTT, CoAP e HTTP."
 
-#: ../../source/faq/faq.rst:262
+#: ../../source/faq/faq.rst:265
 msgid "I saved an attribute, but it disappeared from the device. Is it a bug?"
 msgstr "Eu salvei um atributo, mas o mesmo sumiu do dispositivo. É um defeito?"
 
-#: ../../source/faq/faq.rst:264
+#: ../../source/faq/faq.rst:267
 msgid ""
 "You might have saved the attribute, but not the device. If you don’t "
 "click on the save button for the device, the added attributes will be "
@@ -537,37 +551,41 @@ msgstr ""
 "descartado. Estamos melhorando as mensagens da plataforma para avisar e "
 "lembrar os usuários de salvarem as suas configurações."
 
-#: ../../source/faq/faq.rst:270
+#: ../../source/faq/faq.rst:273
 msgid "How can I retrieve historical data for a particular device?"
-msgstr ""
+msgstr "Compo eu posso obter dados históricos para um dispositivo em particular?"
 
-#: ../../source/faq/faq.rst:272
+#: ../../source/faq/faq.rst:275
 msgid "You can do this by sending a request to /history endpoint, such as:"
-msgstr ""
+msgstr "Você pode fazer isto enviando uma requisição para `/history/`, como:"
 
-#: ../../source/faq/faq.rst:281
+#: ../../source/faq/faq.rst:284
 msgid ""
 "which will retrieve the last 3 entries of `temperature` attribute from "
 "the device `3bb9`:"
 msgstr ""
+"o qual retornará as últimas 3 entradas do atributo `temperature` "
+"dodispositivo `3bb9`"
 
-#: ../../source/faq/faq.rst:307
+#: ../../source/faq/faq.rst:310
 msgid ""
 "There are more operators that could be used to filter entries. Check "
-"`history-ws API <https://dojot.github.io/history-ws/apiary_latest.html>`_"
-" documentation to check out all possible operators."
+"`History API <https://dojot.github.io/history/apiary_latest.html>`_ "
+"documentation to check out all possible operators and other filters."
 msgstr ""
+"Há mais operadores que podem ser usados para filtrar entradas. Check "
+"`History API <https://dojot.github.io/history/apiary_latest.html>`_ para "
+"ver todas os possíveis operadores e outros filtros."
 
-#: ../../source/faq/faq.rst:313
+#: ../../source/faq/faq.rst:316
 msgid "Data Flows"
 msgstr "Fluxos de Dados"
 
-#: ../../source/faq/faq.rst:317
+#: ../../source/faq/faq.rst:320
 msgid "What is data flow?"
 msgstr "O que é um fluxo?"
 
-#: ../../source/faq/faq.rst:319
-#, fuzzy
+#: ../../source/faq/faq.rst:322
 msgid ""
 "It’s a sequence of functional blocks to process incoming device messages."
 " With a flow you can dynamically analyze each new message in order to "
@@ -575,9 +593,10 @@ msgid ""
 "notifications."
 msgstr ""
 "É um processamento de mensagens de um dispositivo. Com um fluxo, você "
-"pode analisar dinamicamente cada nova mensagem"
+"pode analisar dinamicamente cada nova mensagem para fazer validações, "
+"inferirinformações e tomar ações ou gerar notificações."
 
-#: ../../source/faq/faq.rst:324
+#: ../../source/faq/faq.rst:327
 msgid ""
 "The data flow UI… really looks like node-RED. Are they related in some "
 "way?"
@@ -585,22 +604,21 @@ msgstr ""
 "A interface dos fluxos... ela se parece com o node-RED. Eles tem alguma "
 "relação?"
 
-#: ../../source/faq/faq.rst:326
-#, fuzzy
+#: ../../source/faq/faq.rst:329
 msgid ""
 "It’s based on the Node-RED frontend, but uses its own engine to process "
 "the messages. If you’re familiar with Node-Red, it won't be difficult to "
 "use it."
 msgstr ""
 "A interface dos fluxos é baseada no node-RED, mas a aplicação das regras "
-"e execução das ações é feita por um mecanismo próprio da dojot. "
+"e execução das ações é feita por um mecanismo próprio da dojot. Se o "
+"node-REDfor familiar para você, não será difícil usar o flowbroker."
 
-#: ../../source/faq/faq.rst:330
+#: ../../source/faq/faq.rst:333
 msgid "Why should I use it?"
 msgstr "Por que eu deveria usar um fluxo?"
 
-#: ../../source/faq/faq.rst:332
-#, fuzzy
+#: ../../source/faq/faq.rst:335
 msgid ""
 "It allows one of the coolest things of IoT in an easy and intuitive way, "
 "which is to analyze data for extracting information and then take "
@@ -610,16 +628,15 @@ msgstr ""
 " e intuitiva que é analisar dados para extração de informações e execução"
 " de ações."
 
-#: ../../source/faq/faq.rst:336
+#: ../../source/faq/faq.rst:339
 msgid "What can it do, exactly?"
 msgstr "O que ele pode fazer, exatamente?"
 
-#: ../../source/faq/faq.rst:338
+#: ../../source/faq/faq.rst:341
 msgid "You can do things such as:"
 msgstr "Você pode fazer coisas como:"
 
-#: ../../source/faq/faq.rst:340
-#, fuzzy
+#: ../../source/faq/faq.rst:343
 msgid ""
 "Create views from a particular device, by renaming, aggregating and "
 "changing values, etc)."
@@ -627,20 +644,21 @@ msgstr ""
 "Criar visões para um dispositivo (renomear atributos, agregá-los, "
 "alterá-los, etc.)"
 
-#: ../../source/faq/faq.rst:342
-#, fuzzy
+#: ../../source/faq/faq.rst:345
 msgid "Infer information based on switch, edge-detection and geo-fence rules."
-msgstr "Inferir informações baseadas em regras de detecção de borda."
+msgstr ""
+"Inferir informações baseadas em regras de detecção de borda e "
+"georreferenciamento."
 
-#: ../../source/faq/faq.rst:343
+#: ../../source/faq/faq.rst:346
 msgid "Notify through email."
 msgstr "Enviar notificações via email."
 
-#: ../../source/faq/faq.rst:344
+#: ../../source/faq/faq.rst:347
 msgid "Notify through HTTP."
 msgstr "Enviar notificações via HTTP."
 
-#: ../../source/faq/faq.rst:346
+#: ../../source/faq/faq.rst:349
 msgid ""
 "The data flows component is in constantly development with new features "
 "being added every new release."
@@ -648,18 +666,21 @@ msgstr ""
 "O componente responsável pelo fluxo de dados está em desenvolvimento "
 "constante e novas funcionalidades são adicionadas a cada versão."
 
-#: ../../source/faq/faq.rst:349
+#: ../../source/faq/faq.rst:352
 msgid ""
 "There are mechanisms to add new processing blocks to new flows. Check the"
 " `How can I add a new node type to its menu?`_ question for more "
 "information on that."
 msgstr ""
+"Há mecanismos para adicionar novos blocos de processamento a fluxos. Veja"
+" `How can I add a new node type to its menu?`_ para mais informações "
+"sobreisto."
 
-#: ../../source/faq/faq.rst:353
+#: ../../source/faq/faq.rst:356
 msgid "So, how can I use it?"
 msgstr "Pois bem, como eu posso usá-lo?"
 
-#: ../../source/faq/faq.rst:355
+#: ../../source/faq/faq.rst:358
 msgid ""
 "It follows the basic usage flow as node-RED. You can check its "
 "`documentation <https://nodered.org>`_ for more details about this."
@@ -667,23 +688,26 @@ msgstr ""
 "Ele segue o modo de uso do node-RED. Você pode ler a `documentação "
 "<https://nodered.org>`_ para mais detalhes."
 
-#: ../../source/faq/faq.rst:359
+#: ../../source/faq/faq.rst:362
 msgid "Can I apply the same flow to multiple devices?"
 msgstr "Posso aplicar o mesmo fluxo para múltiplos dispositivos?"
 
-#: ../../source/faq/faq.rst:361
+#: ../../source/faq/faq.rst:364
 msgid ""
 "You can use a template as input to indicate that the flow should be "
 "applied to all devices associated to that template. It’s worth to point "
 "out that the flow is processed individually for each new input message, "
 "i.e. for each input device."
 msgstr ""
+"Você pode usar um template como entrada para indicar que ele deve "
+"serexecutado para todos os dispositivos associados àquele template. É "
+"válidoindicar que o fluxo é sempre executado para cada mensagem."
 
-#: ../../source/faq/faq.rst:367
+#: ../../source/faq/faq.rst:370
 msgid "Can I correlate data from different devices in the same flow?"
 msgstr "Posso correlacionar dados de diferentes dispositivos no mexmo fluxo?"
 
-#: ../../source/faq/faq.rst:369
+#: ../../source/faq/faq.rst:372
 msgid ""
 "As the data flow is processed individually for each message, you need to "
 "create a virtual device to aggregate all attributes, then use this "
@@ -693,11 +717,21 @@ msgstr ""
 "você deve criar um dispositivo virtual para agregar todos os atributos e "
 "então usar este dispositivo como entrada de um novo fluxo."
 
-#: ../../source/faq/faq.rst:374
+#: ../../source/faq/faq.rst:376
+msgid ""
+"Another thing that you could do is to build a flowbroker node to deal "
+"with contexts, which can be used to store and retrieve data related to a "
+"flow or node."
+msgstr ""
+"Outra coisa que pode ser feita é construir um nó do flowbroker paralidar "
+"com contextos, os quais podem ser usados para armazenar e obter "
+"dadosrelacionados a um fluxo ou nó."
+
+#: ../../source/faq/faq.rst:381
 msgid "I want to send an email, what should I do?"
 msgstr "Eu quero enviar uma notificação por e-mail, como devo fazer?"
 
-#: ../../source/faq/faq.rst:376
+#: ../../source/faq/faq.rst:383
 msgid ""
 "Basically, you need to add an email node and configure it. This node is "
 "pre-configured to use the Gmail server ``gmail-smtp-in.l.google.com``, "
@@ -710,7 +744,7 @@ msgstr ""
 " um nó 'template' e associar a variável criada nestenó com o nó de e-mail"
 " através do campo 'source' deste último."
 
-#: ../../source/faq/faq.rst:385
+#: ../../source/faq/faq.rst:392
 msgid ""
 "It is important to point out that dojot contains no e-mail server. It "
 "will generate SMTP commands and send them to the specified e-mail server."
@@ -718,26 +752,25 @@ msgstr ""
 "É importante notar que a dojot não contém um servidor de e-mail. A "
 "plataforma gera os comandos SMTP e os envia ao servidor especificado."
 
-#: ../../source/faq/faq.rst:390
+#: ../../source/faq/faq.rst:397
 msgid "What about a HTTP POST request, how can I send it?"
 msgstr "E se eu quiser enviar um HTTP POST?"
 
-#: ../../source/faq/faq.rst:392
+#: ../../source/faq/faq.rst:399
 msgid "It is almost the same process as sending an e-mail."
 msgstr "É quase a mesma coisa de enviar um e-mail."
 
-#: ../../source/faq/faq.rst:398
+#: ../../source/faq/faq.rst:405
 msgid "One important note: make sure that dojot can access your server."
 msgstr ""
 "Um aviso importante: assegure-se de que a dojot consegue acessar seu "
 "servidor."
 
-#: ../../source/faq/faq.rst:401
+#: ../../source/faq/faq.rst:408
 msgid "I want to rename the attributes of a device, what should I do?"
 msgstr "Eu quero renomear os atributos de um dispositivo. O que eu devo fazer?"
 
-#: ../../source/faq/faq.rst:403
-#, fuzzy
+#: ../../source/faq/faq.rst:410
 msgid ""
 "First of all, you need to create a virtual device with the new "
 "attributes, then you build a data flow to rename them. This can be done "
@@ -750,15 +783,12 @@ msgstr ""
 "atributos, para então construir um fluxo de dados para renomeá-los. Isto "
 "pode ser feito conectando um nó 'change' após um dispositivo de entrada "
 "para mapear os atributos de entada a seus correspondentes na saída. "
-"Quando todos os atributos já estiverem mapeados, basta conectar o nó "
-"'change' ao dispositivo virtual, associando-o à variável criada no nó "
-"change através do campo 'source'"
 
-#: ../../source/faq/faq.rst:414
+#: ../../source/faq/faq.rst:421
 msgid "I want to aggregate the attributes of multiple devices, what should I do?"
 msgstr "Quero agregar os atributos de múltiplos dispositivos. O que eu devo fazer?"
 
-#: ../../source/faq/faq.rst:416
+#: ../../source/faq/faq.rst:423
 msgid ""
 "First of all, you need to create a virtual device to aggregate all "
 "attributes, then you build a data flow to map the attributes of each "
@@ -775,66 +805,74 @@ msgstr ""
 "todos os atributos de saída. Todos os nós change devem ser, por fim, "
 "conectados ao nó de saída representando o dispositivo virtual."
 
-#: ../../source/faq/faq.rst:427
+#: ../../source/faq/faq.rst:434
 msgid "How can I add a new node type to its menu?"
-msgstr ""
+msgstr "Como eu posso adicionar um novo tipo de nó no menu?"
 
-#: ../../source/faq/faq.rst:429
+#: ../../source/faq/faq.rst:436
 msgid ""
 "It's pretty easy, actually, although it needs a few commands in bash. To "
 "add a new node, you should send the following request:"
 msgstr ""
+"É simples, embora necessite de alguns comandos no terminal. Paraadicionar"
+" um nó novo, você deve executar o seguinte comando."
 
-#: ../../source/faq/faq.rst:438
+#: ../../source/faq/faq.rst:445
 msgid ""
 "This will add a new node called 'kelvin' which is implemented by a docker"
 " image located at \"mmagr/kelvin\". There's only one caveat: you should "
 "pull this image in your target system (where dojot is installed) before "
 "adding it to the flow menu."
 msgstr ""
+"Este comando aidciona um novo nó chamado 'kelvin' o qual é implementadoem"
+" uma imagem do docker localizada no repositório \"mmagr/kelvin\"."
 
-#: ../../source/faq/faq.rst:443
+#: ../../source/faq/faq.rst:450
 msgid "If you don't want this node anymore, you could delete it:"
-msgstr ""
+msgstr "Se você não quiser mais este nó, é possível removê-lo:"
 
-#: ../../source/faq/faq.rst:451
+#: ../../source/faq/faq.rst:458
 msgid ""
 "And that's it! In the `flowbroker`_ repository, there is an example of "
 "how to build a Docker image that could be added to flow node menu."
 msgstr ""
+"E é isso! No repositório do `flowbroker`_, há um exemplo de como "
+"construiruma imagem do Docker que pode ser adicionada ao menu de nós do "
+"flowbroker."
 
-#: ../../source/faq/faq.rst:455
+#: ../../source/faq/faq.rst:462
 msgid "Applications"
 msgstr "Aplicações"
 
-#: ../../source/faq/faq.rst:459
+#: ../../source/faq/faq.rst:466
 msgid "What APIs are available for applications?"
 msgstr "Quais APIs estão disponíveis para aplicações?"
 
-#: ../../source/faq/faq.rst:461
+#: ../../source/faq/faq.rst:468
 msgid ""
 "You can check all available APIs in the `API Listing page <../components-"
 "and-apis.html>`_"
 msgstr ""
+"Você pode ver todas as APIs disponíveis na página `API Listing page "
+"<../components-and-apis.html>`_"
 
-#: ../../source/faq/faq.rst:464
+#: ../../source/faq/faq.rst:471
 msgid "How can I use them?"
 msgstr "Como posso usá-los?"
 
-#: ../../source/faq/faq.rst:466
+#: ../../source/faq/faq.rst:473
 msgid ""
 "There is a very quick and useful tutorial in the :ref:`Using API "
 "interface`."
-msgstr ""
+msgstr "Há um tutorial simples e rápido na in the :ref:`Using API interface`."
 
-#: ../../source/faq/faq.rst:469
-#, fuzzy
+#: ../../source/faq/faq.rst:476
 msgid "I'm interested in integrating my application with dojot. How can I do it?"
 msgstr ""
 "Estou interessado(a) em integrar minha aplicação com dojot. O que devo "
 "fazer?"
 
-#: ../../source/faq/faq.rst:471
+#: ../../source/faq/faq.rst:478
 msgid ""
 "This should be pretty straightforward. There are two ways that your "
 "application could be integrated with dojot:"
@@ -842,7 +880,7 @@ msgstr ""
 "Isto deve ser bastante direto. Há duas formas de integrar sua aplicação à"
 " dojot:"
 
-#: ../../source/faq/faq.rst:474
+#: ../../source/faq/faq.rst:481
 msgid ""
 "**Retrieving historical data**: you might want to periodically read all "
 "historical data related to a device. This can be done by using this API "
@@ -854,24 +892,12 @@ msgstr ""
 " feito usando esta API (um lembrete apenas: todos os serviços descritos "
 "neste apiary deve ser precedido de ``/history/``)."
 
-#: ../../source/faq/faq.rst:478
+#: ../../source/faq/faq.rst:485
 msgid ""
-"**Subscribing to events related to devices**: if your application is able"
-" to listen to events, you might rather use subscriptions, which can be "
-"created using this API (also, all endpoints should be preceded by "
-"``/metrics/``)."
-msgstr ""
-"**Subscrição de eventos relacionados a dispositivos**: se sua aplicação é"
-" capaz de esperar por eventos, você poderá achar mais interessante usar "
-"subscrições, as quais podem ser criadas usando esta API (todos os "
-"serviços deste apiary devem ser precedidos por ``/metrics/``)."
-
-#: ../../source/faq/faq.rst:482
-msgid ""
-"**Using mashup to pre-process data**: if you want to do something more, "
-"you could use flows. They can help process and transform data so that "
-"they can be properly sent to your application via HTTP request, by e-mail"
-" or stored in a virtual device (which can be used to generate "
+"**Using flowbroker to pre-process data**: if you want to do something "
+"more, you could use flows. They can help process and transform data so "
+"that they can be properly sent to your application via HTTP request, by "
+"e-mail or stored in a virtual device (which can be used to generate "
 "notifications as previously described)."
 msgstr ""
 "**Usar os fluxos de dados para pré-processar dados**: se for necessário "
@@ -881,244 +907,10 @@ msgstr ""
 " dados em dispositivos virtuais e criar subscrições para enviar "
 "notificações toda vez que acontecer uma alteração em seus atributos."
 
-#: ../../source/faq/faq.rst:489
+#: ../../source/faq/faq.rst:492
 msgid ""
 "All these endpoints should bear an access token, which is retrieved as "
 "described in the question `How can I use them?`_."
 msgstr ""
 "Todas as requisições devem carregar um token de acesso, o qual pode ser "
 "obtido como descrito na pergunta `Como posso usá-los?`_."
-
-#~ msgid "REST APIs are explained in the `Application`_ section."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "dojot is based on Fiware, also an"
-#~ " open source project, compromised to "
-#~ "build an open and sustainable ecosystem"
-#~ " grounded on open standards with the"
-#~ " aim of easing the application "
-#~ "development in different segments."
-#~ msgstr ""
-#~ "A base da dojot é o Fiware, "
-#~ "projeto também de código aberto, "
-#~ "comprometido com a construção de um "
-#~ "ecossistema aberto e sustentável em "
-#~ "torno de padrões abertos, destinados a"
-#~ " facilitar a criação de aplicações em"
-#~ " diversos segmentos."
-
-#~ msgid ""
-#~ "Consider, for instance, an actual device"
-#~ " with temperature and humidity sensors; "
-#~ "it can be represented into dojot "
-#~ "as a device with two attributes "
-#~ "(one for each sensor). We call "
-#~ "this kind of device as *regular "
-#~ "device* or by its communication "
-#~ "protocol, for instance, *MQTT device* or"
-#~ " *CoAP device*."
-#~ msgstr ""
-#~ "Considere, por exemplo, um dispositivo "
-#~ "real com sensores de temperatura e "
-#~ "umidade; ele pode ser representado na"
-#~ " dojot como um dispositivo com dois"
-#~ " atributos (um para cada sensor). Nós"
-#~ " denominamos este tipo de dispositivo "
-#~ "como apenas *dispositivo* ou pelo seu"
-#~ " protocolo de comunicação, por exemplo, "
-#~ "*dispositivo MQTT* ou *dispositivo CoAP*."
-
-#~ msgid ""
-#~ "MQTT topic must follow the pattern "
-#~ "``/<service-id>/<device-id>/attrs``, where "
-#~ "``<service-id>`` is an identifier "
-#~ "associated with the user account and "
-#~ "the ``<device-id>`` is a unique "
-#~ "identifier assigned by dojot. For "
-#~ "example, topic ``/admin/882d/attrs`` must be"
-#~ " used for user ``admin`` and device"
-#~ " ID ``882d``."
-#~ msgstr ""
-#~ "O tópico MQTT precisa obedecer a "
-#~ "regra ``/<service-id>/<device-id>/attrs``, em"
-#~ " que ``<service-id>`` é um "
-#~ "identificador associado a conta do "
-#~ "usuário, e `<device-id>` é um "
-#~ "identificador único atribuido ao dispositivo"
-#~ " pela dojot. Por exemplo, o tópico"
-#~ " MQTT  ``/admin/882d/attrs`` deve ser usado"
-#~ " para o usuário ``admin`` e "
-#~ "dispositivo com identificador ``882d``."
-
-#~ msgid ""
-#~ "It’s worth to point out that we"
-#~ " are relaxing these rules so that "
-#~ "you’ll have more flexibility to "
-#~ "configure both topic and payload. This"
-#~ " feature will be available in the "
-#~ "next official release."
-#~ msgstr ""
-#~ "Vale ressaltar que estamos relaxando "
-#~ "essas restrições de forma que será "
-#~ "possível configurar tanto tópicos quanto "
-#~ "`payloads` de uma maneira mais flexível."
-#~ " Esta funcionalidade será disponibilizada "
-#~ "na próxima versão oficial da plataforma."
-
-#~ msgid ""
-#~ "This feature is not supported right "
-#~ "now, but it is in roadmap and "
-#~ "will be available in the next "
-#~ "official release. If you are craving "
-#~ "for this feature, please help us "
-#~ "to develop it."
-#~ msgstr ""
-#~ "Esta funcionalidade ainda não é "
-#~ "suportada, mas está no `roadmap` e "
-#~ "estará disponível na próxima versão "
-#~ "oficial da dojot. Se você está "
-#~ "ávido for essa funcionalidade, por favor"
-#~ " ajude-nos a implementá-la."
-
-#~ msgid "Infer information based on switch rules."
-#~ msgstr "Inferir informações baseadas em regras simples."
-
-#~ msgid "Infer information based on geo-fence rules."
-#~ msgstr "Inferir informações através da posição dos dispositivos."
-
-#~ msgid ""
-#~ "Multiple devices can be used both "
-#~ "as input and output of data flows."
-#~ " It’s worth to point out that "
-#~ "the flow is processed individually for"
-#~ " each new input message, i.e. for "
-#~ "each input device."
-#~ msgstr ""
-#~ "Vários dispositivos podem ser utilizados "
-#~ "como pontos de entrada e saída em"
-#~ " fluxo de dados. É importante notar"
-#~ " que cada fluxo é aplicado a "
-#~ "cada nova mensagem, ou seja, para "
-#~ "cada dispositivo de entrada."
-
-#~ msgid "It would be cool a WhatsApp node, is it in roadmap?"
-#~ msgstr "Seria legal ter um nó 'Whatsapp'. Está no roadmap?"
-
-#~ msgid ""
-#~ "It’s under analysis. We intend to "
-#~ "support other notifications systems besides"
-#~ " email, including WhatsApp, Twitter and "
-#~ "Telegram. If you also have interest, "
-#~ "please help us to develop them."
-#~ msgstr ""
-#~ "Está sob análise. Nossa intenção é "
-#~ "de suportar outros sistemas de "
-#~ "notificação além de e-mail, incluindo "
-#~ "Whatsapp, Twitter e Telegram. Se você"
-#~ " tem interesse, sua ajuda é muito "
-#~ "bem-vinda!"
-
-#~ msgid ""
-#~ "`Authorization and user management "
-#~ "<https://github.com/dojot/auth/blob/master/docs/auth.apib>`_"
-#~ msgstr ""
-#~ "`Autorização e gerenciamento de usuário "
-#~ "<https://github.com/dojot/auth/blob/master/docs/auth.apib>`_"
-
-#~ msgid ""
-#~ "`Device management <https://github.com/dojot/device-"
-#~ "manager/tree/master/doc>`_"
-#~ msgstr ""
-#~ "`Gerenciamento de dispositivos "
-#~ "<https://github.com/dojot/device-manager/tree/master/doc>`_"
-
-#~ msgid ""
-#~ "`Subscriptions <https://github.com/dojot/fiware-"
-#~ "orion/tree/master/doc>`_"
-#~ msgstr "`Subscrições <https://github.com/dojot/fiware-orion/tree/master/doc>`_"
-
-#~ msgid ""
-#~ "`Flow management "
-#~ "<https://github.com/dojot/mashup/blob/cpqd_master/docs/api.apib>`_"
-#~ msgstr ""
-#~ "`Gerenciamento de fluxos "
-#~ "<https://github.com/dojot/mashup/blob/cpqd_master/docs/api.apib>`_"
-
-#~ msgid "`History <https://github.com/dojot/history-ws>`_"
-#~ msgstr "`Histórico <https://github.com/dojot/history-ws>`_"
-
-#~ msgid ""
-#~ "First, you will need an access "
-#~ "token, which can be retrieved sending"
-#~ " a HTTP POST request to ``/auth`` "
-#~ "endpoint with the following JSON "
-#~ "content:"
-#~ msgstr ""
-#~ "Você precisará de um token de "
-#~ "acesso, o qual pode ser obtido "
-#~ "enviando uma requisição POST para "
-#~ "``/auth`` com o seguinte conteúdo JSON"
-
-#~ msgid ""
-#~ "Obviously the values of each attribute"
-#~ " should be correctly filled in. An"
-#~ " example of such request using "
-#~ "``curl`` would be:"
-#~ msgstr ""
-#~ "Obviamente os valores de cada um "
-#~ "dos atributos devem ser corretamente "
-#~ "preenchdios. Um exemplo de requisição "
-#~ "usando o curl empregando o token "
-#~ "obtido é: "
-
-#~ msgid "which gives us back:"
-#~ msgstr "o que nos devolve:"
-
-#~ msgid ""
-#~ "This token (which is a lengthy "
-#~ "alpha-numeric string) should be used "
-#~ "in every request that is sent to"
-#~ " dojot (excluding, of course this "
-#~ "request). Each call for this API "
-#~ "will generate a different token."
-#~ msgstr ""
-#~ "Este token (o qual é uma sequência"
-#~ " alfanumérica extensa) deve ser utilizado"
-#~ " em todas as requisições que são "
-#~ "enviadas à dojot (excluindo as "
-#~ "requisições de obtenção de tokens, "
-#~ "obviamente). Cada chamada para esta API"
-#~ " irá gerar um token diferente."
-
-#~ msgid ""
-#~ "This token should be placed in a"
-#~ " ``Authorization`` HTTP header, such as:"
-#~ msgstr ""
-#~ "Este token deve ser colocado em um"
-#~ " cabeçalho ``Authorization``, tal como:"
-
-#~ msgid ""
-#~ "A few endpoints requires two more "
-#~ "headers, the ``Fiware-Service`` and "
-#~ "``Fiware-ServicePath``. They are: ``/metrics/``,"
-#~ " ``/iot/`` and ``/history/``"
-#~ msgstr ""
-#~ "Alguns serviços necessitam de dois "
-#~ "cabeçalhos extras, o ``Fiware-Service`` "
-#~ "e ``Fiware-ServicePath``. São eles: "
-#~ "``/metrics/``, ``/iot/`` e ``/history/``"
-
-#~ msgid ""
-#~ "``Fiware-Service`` header should contain "
-#~ "the service name associated to the "
-#~ "user. In general, it should be the"
-#~ " username. ``Fiware-ServicePath`` is always"
-#~ " a forward slash (``/``). An example:"
-#~ msgstr ""
-#~ "O cabeçalho ``Fiware-Service`` deve "
-#~ "conter o nome do serviço associado "
-#~ "ao usuário. Já o ``Fiware-ServicePath``"
-#~ " é sempre uma barra (``/``). Um "
-#~ "exemplo:"
-
