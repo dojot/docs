@@ -1,4 +1,4 @@
-# SOME DESCRIPTIVE TITLE.
+﻿# SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018, CPqD
 # This file is distributed under the same license as the dojot package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../source/installation-guide.rst:2
 msgid "Installation Guide"
-msgstr ""
+msgstr "Guia de instalação"
 
 #: ../../source/installation-guide.rst:4
 msgid ""
@@ -27,44 +27,51 @@ msgid ""
 "compose. Kubernetes and Google Cloud Platform support is on track to be "
 "implemented."
 msgstr ""
+"Esta página contém informação de como instalar a dojot utilizando o "
+"docker-compose. O suporte à instalação em ambientes Kubernetes e Google Cloud "
+"estão em andamento no projeto."
+
 
 #: ../../source/installation-guide.rst:12
 msgid "Hardware requirements"
-msgstr ""
+msgstr "Requisitos de hardware"
 
 #: ../../source/installation-guide.rst:14
 msgid "In order to properly run dojot, the minimum hardware requirements are:"
-msgstr ""
+msgstr "Para que a dojot seja executada apropriadamente, os requisitos mínimos de hardware são: "
 
 #: ../../source/installation-guide.rst:16
 msgid "4GB of RAM"
-msgstr ""
+msgstr "4GB de RAM"
 
 #: ../../source/installation-guide.rst:17
 msgid "10GB of free disk space"
-msgstr ""
+msgstr "10GB de espaço livre em disco"
 
 #: ../../source/installation-guide.rst:18
 msgid "Network access"
-msgstr ""
+msgstr "Acesso à rede"
 
 #: ../../source/installation-guide.rst:24
 msgid "The following ports should be opened:"
-msgstr ""
+msgstr "As seguintes portas devem estar abertas:"
 
 #: ../../source/installation-guide.rst:20
 msgid ""
 "TCP (incoming connections): 1883 (MQTT), 8883 (Secure MQTT if used), 8000"
 " (web interface access)"
 msgstr ""
+"TCP (conexões de entrada): 1883 (MQTT), 8883 (MQTT seguro, se utilizado), "
+"8000 (acesso à interface web)"
 
 #: ../../source/installation-guide.rst:22
 msgid "TCP (outgoing connections): 25 (if send e-mail node is used in a flow)"
 msgstr ""
+"TCP (conexões de saída): 25 (se envio de email nos fluxos for utilizado)"
 
 #: ../../source/installation-guide.rst:27
 msgid "Docker compose"
-msgstr ""
+msgstr "Docker-compose"
 
 #: ../../source/installation-guide.rst:29
 msgid ""
@@ -72,6 +79,9 @@ msgid ""
 " environment on single host for *dojot*, using docker-compose as the "
 "processes orchestration platform."
 msgstr ""
+"Este documento contém instruções de como criar um ambiente para instalação "
+"trivial da dojot em um único host utilizando o docker-compose como "
+"o processo de orquestração da plataforma."
 
 #: ../../source/installation-guide.rst:33
 msgid ""
@@ -79,24 +89,29 @@ msgid ""
 "and assessment of the platform and should not be used for production "
 "environments."
 msgstr ""
+"Muito simples, esta opção de instalação é a que melhor se "
+"adapta para desenvolvimento e verificação da plataforma dojot, mas não é "
+"aconselhável para ambientes de produção."
 
 #: ../../source/installation-guide.rst:36
 msgid "This guide has been checked on an Ubuntu 16.04 LTS environment."
-msgstr ""
+msgstr "Este guia foi verificado utilizando-se o sistema operacional Ubuntu 16.04 LTS."
 
 #: ../../source/installation-guide.rst:38
 msgid "The following sections describe all Docker compose dependencies."
-msgstr ""
+msgstr "As seções seguintes descrevem todas as dependências do docker-compose."
 
 #: ../../source/installation-guide.rst:41
 msgid "Docker engine"
-msgstr ""
+msgstr "Docker engine (motor do docker)"
 
 #: ../../source/installation-guide.rst:43
 msgid ""
 "Up to date information and installation procedures for the docker engine "
 "can be found at the project's documentation:"
 msgstr ""
+"Informações atualizadas e procedimentos de instalação para o "
+"docker engine podem ser encontrados na documentação do projeto:"
 
 #: ../../source/installation-guide.rst:46
 msgid "https://docs.docker.com/engine/installation/"
@@ -108,6 +123,9 @@ msgid ""
 "on any given machine is the setting of who is eligible for "
 "creating/spawning docker instances."
 msgstr ""
+"Um passo adicional no processo de instalação e configuração do docker "
+"em um determinado equipamento é definir quem será elegível para "
+"criar/iniciar instâncias do docker."
 
 #: ../../source/installation-guide.rst:54
 msgid ""
@@ -115,6 +133,10 @@ msgid ""
 " as non-root user\") have not been run, all docker and docker-compose "
 "commands should be run by the super user (root), or as sudo."
 msgstr ""
+"Caso os passos pós-instalação não tiverem sido executados (mais "
+"especificamente o \"Manage docker como usuário não-root\"), todos os "
+"comandos do docker e do docker-compose devem ser executados pelo "
+"super usuário (root), ou invocando o sudo."
 
 #: ../../source/installation-guide.rst:58
 #: ../../source/installation-guide.rst:131
@@ -123,13 +145,15 @@ msgstr ""
 
 #: ../../source/installation-guide.rst:61
 msgid "Docker Compose"
-msgstr ""
+msgstr "Docker-compose"
 
 #: ../../source/installation-guide.rst:63
 msgid ""
 "Up to date information and installation procedures for the docker-compose"
 " can be found at the project's documentation:"
 msgstr ""
+"Informações atualizadas sobre procedimentos de instalação para o "
+"docker-compose podem ser encontradas na documentação do projeto:"
 
 #: ../../source/installation-guide.rst:66
 msgid "https://docs.docker.com/compose/install/"
@@ -137,19 +161,23 @@ msgstr ""
 
 #: ../../source/installation-guide.rst:70
 msgid "Installation"
-msgstr ""
+msgstr "Instalação"
 
 #: ../../source/installation-guide.rst:72
 msgid ""
 "To setup the environment, merely clone the deployment repository and run "
 "the commands below."
 msgstr ""
+"Para construir o ambiente, simplesmente clone o repositório e execute "
+"os comandos abaixo." 
 
 #: ../../source/installation-guide.rst:75
 msgid ""
 "The docker-compose enabled deployment scripts and configuration "
 "repository can be found at:"
 msgstr ""
+"O repositório com os scripts de instalação e configuração "
+"do docker-compose podem ser encontrados em:" 
 
 #: ../../source/installation-guide.rst:78
 msgid "https://github.com/dojot/docker-compose"
@@ -157,7 +185,7 @@ msgstr ""
 
 #: ../../source/installation-guide.rst:80
 msgid "or as git clone command:::"
-msgstr ""
+msgstr "ou com o comando git clone:::"
 
 #: ../../source/installation-guide.rst:87
 msgid ""
@@ -165,14 +193,17 @@ msgid ""
 "checking out the appropriate tag (do notice that the tagname has to be "
 "replaced): ::"
 msgstr ""
+"Uma vez que o repositório esteja propriamente clonado, selecione a "
+"versão a ser utilizada por meio da tag apropriada (note que o "
+"tagname deve ser substituído): ::"
 
 #: ../../source/installation-guide.rst:95
 msgid "For instance: ::"
-msgstr ""
+msgstr "Por exemplo: ::"
 
 #: ../../source/installation-guide.rst:99
 msgid "Or if you're brave enough: ::"
-msgstr ""
+msgstr "Ou se você for muito ousado: ::"
 
 #: ../../source/installation-guide.rst:103
 msgid ""
@@ -181,30 +212,40 @@ msgid ""
 "before using the platform. These modules can be retrieved by executing "
 "the following command: ::"
 msgstr ""
+"Depois que o repositório estiver clonado e uma versão (tag) ou branch "
+"tiver sido selecionado, haverá ainda alguns módulos que devem ser instalados "
+"antes de utilizar a plataforma. Esses módulos podem ser obtidos executando "
+"o seguinte comando: ::"
 
 #: ../../source/installation-guide.rst:109
 msgid "That done, the environment can be brought up by: ::"
-msgstr ""
+msgstr "Feito isso, o ambiente pode ser iniciado assim: ::"
 
 #: ../../source/installation-guide.rst:116
 msgid ""
 "To check individual container status, docker's commands may be used, for "
 "instance: ::"
 msgstr ""
+"Para verfificar o estado de um container individual, comandos do docker "
+"podem ser utilizados, como por exemplo: ::"
 
 #: ../../source/installation-guide.rst:127
 msgid "All docker, docker-compose commands may need sudo to work."
 msgstr ""
+"Todos os comandos para docker e docker-compose podem requerer "
+"credenciais de super usuário (root) ou sudo."
 
 #: ../../source/installation-guide.rst:129
 msgid ""
 "To allow non-root users to manage docker, please check docker's "
 "documentation:"
 msgstr ""
+"Para permitir usuários "não-root" gerenciar o docker, confira a "
+"documentação do docker:"
 
 #: ../../source/installation-guide.rst:134
 msgid "Usage"
-msgstr ""
+msgstr "Utilização"
 
 #: ../../source/installation-guide.rst:136
 msgid ""
@@ -212,6 +253,9 @@ msgid ""
 "``admin`` and the password is ``admin``. You also can interact with "
 "platform using the :ref:`Components and APIs`."
 msgstr ""
+"A interface web está disponível em ``http://localhost:8000``. O usuário "
+"é ``admin`` e a senha é ``admin``. Você também pode interagir com a "
+"plataforma utilizando o :ref:`Components and APIs`."
 
 #: ../../source/installation-guide.rst:140
 msgid ""
@@ -219,10 +263,13 @@ msgid ""
 "web-interface` for more information about how to interact with the "
 "platform."
 msgstr ""
+"Leia o :doc:`tutorials/using-api-interface` e :doc:`tutorials/using-"
+"web-interface` para maiores informações sobre como interagir com "
+"a plataforma dojot."
 
 #: ../../source/installation-guide.rst:145
 msgid "Kubernetes"
-msgstr ""
+msgstr "Kubernetes"
 
 #: ../../source/installation-guide.rst:147
 msgid ""
