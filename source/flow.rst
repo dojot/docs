@@ -19,16 +19,16 @@ Dojot nodes
   :local:
 
 Device in
-*********
+****
 
 .. _device_in_node:
 .. figure:: images/nodes/device_node.png
-    :width: 60%
+    :width: 80%
     :align: left
-    :alt: devicein_node
+    :alt: device_node
 
-This node determine an especific device to be the entry-point of a flow.
-To configure the device in node, a window like :numref:`device_in_cfg` will be
+| This node determine an especific device to be the entry-point of a flow.
+| To configure the device in node, a window like :numref:`device_in_cfg` will be
 displayed.
 
 .. _device_in_cfg:
@@ -37,7 +37,7 @@ displayed.
     :align: center
     :alt: devicein_node_cfg
 
-    Figure 1: Device in configuration window
+    : Device in configuration window
 
 Fileds:
 
@@ -53,7 +53,7 @@ Device template in
 
 .. _devicetemplate_in_node:
 .. figure:: images/nodes/devicetemplate_node.png
-    :width: 60%
+    :width: 80%
     :align: left
     :alt: devicetemplatein_node
 
@@ -69,7 +69,7 @@ that are composed with template A will trigger the flow. For example: *device1* 
     :align: center
     :alt: devicetemplatein_node
 
-    Figure 2: Device template in configuration window
+    : Device template in configuration window
 
 Fields:
 
@@ -82,21 +82,36 @@ http
 
 .. _http_node:
 .. figure:: images/nodes/http_node.png
-    :width: 70%
+    :width: 80%
     :align: left
     :alt: http_node
 
-BLALBALBLALBALBLALBLALBALBLABLALBALBLALBALBLALBALBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASASD
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+Sends an http request to a given address and forward its response.
+
+.. _http_in_node:
+.. figure:: images/nodes/http_node_cfg.png
+    :width: 50%
+    :align: center
+    :alt: httpin_node
+
+    : Device template in configuration window
+
+Fields:
+
+* **Method** *(required)*: The http method (GET, POST, etc...).
+* **URL** *(required)*: The URL that will receive the http request
+* **Request body** *(required)*: Variable that contains the request body. This value can be assigned to the variable using the **template node**.
+* **Response** *(required)*: Variable that will receive the http response.
+* **Return** *(required)*: Type of the return.
+* **Name** *(required)*: Name of the node.
+
 
 Device out
 **********
 
 .. _deviceout_node:
 .. figure:: images/nodes/deviceout_node.png
-    :width: 70%
+    :width: 80%
     :align: left
     :alt: deviceout_node
 
@@ -111,13 +126,14 @@ device out is a *virtual device*, which is a device that exists only on *dojot*.
     :align: center
     :alt: deviceout_node_cfg
 
-    Figure 3: Device out config window
+    : Device out config window
 
 Fields:
 
 - **Name** *(optional)*: Name of the node.
 - **Device** *(required)*: Select *The device that triggered the flow* will make the device that was the entry-point
-  be the end-point of the flow. *Specific device* any chosen device wil be the output of the flow and *a device defined during the flow* will make a device that the flow selected during the execution the endpoint.
+  be the end-point of the flow. *Specific device* any chosen device wil be the output of the flow and *a device 
+  defined during the flow* will make a device that the flow selected during the execution the endpoint.
 - **Source** *(required)*: Data structure that will be mapped as message to device out
 
 Actuate
@@ -125,7 +141,7 @@ Actuate
 
 .. _actuate_node:
 .. figure:: images/nodes/actuate_node.png
-    :width: 50%
+    :width: 80%
     :align: left
     :alt: actuate_node
 
@@ -138,7 +154,7 @@ to a real device, like telling a lamp to turn the light off and etc...
     :align: center
     :alt: actuate_node_cfg
 
-    Figure 4: Actuate configuration
+    : Actuate configuration
 
 Fields:
 
@@ -151,7 +167,7 @@ Change
 
 .. _change_node:
 .. figure:: images/nodes/change_node.png
-    :width: 50%
+    :width: 80%
     :align: left
     :alt: change_node
 
@@ -166,28 +182,28 @@ virtual device
     :align: center
     :alt: change_node_cfg
 
-    Figure 5: Change configuration
+    : Change configuration
 
 Fields:
 
 * **Name** *(optional)*: Name of the node
-* **msg** *(required)*: Definition of the data structure that will be sent to the next node and will receive the value set on the *to* field 
+* **msg** *(required)*: Definition of the data structure that will be sent to the next node and will
+  receive the value set on the *to* field 
 * **to** *(required)*: Assignment or copy of values
 
 .. note::
     More than one rule can be assign by clicking on *+add* below the rules box.
 
-switch
+Switch
 *******
 
 .. _switch_node:
 .. figure:: images/nodes/switch_node.png
-    :width: 50%
+    :width: 80%
     :align: left
     :alt: switch_node
 
-                                                                                    
-                                                                                
+The Switch node allows messages to be routed to different branches of a flow by evaluating a set of rules against each message.
 
 .. _switch_node_cfg:
 .. figure:: images/nodes/switch_node_cfg.png
@@ -195,14 +211,102 @@ switch
     :align: center
     :alt: switch_node_cfg
 
-    Figure 5: Switch configuration
+    : Switch configuration
 
 Fields:
 
 * **Name** *(optional)*: Name of the node
-* **msg** *(required)*: Definition of the data structure that will be sent to the next node and will receive the value set on the *to* field 
-* **to** *(required)*: Assignment or copy of values
+* **Property** *(required)*: Variable that will be evaluated 
+* **Rule box** *(required)*: Rules that will determine the outputch branch of the node.
+  Also, it can be configured to stop checking rules when it finds one that matches other
+  or check all the rules and route the message to the corresponding output.
 
 .. note::
     - More than one rule can be assign by clicking on *+add* below the rules box.
-    - Each condition should have an corresponding output
+    - Each condition should have an corresponding output.
+
+Template
+********
+
+.. note::
+    Despite the name, this node has nothing to do with dojot templates
+
+.. _template_node:
+.. figure:: images/nodes/template_node.png
+    :width: 80%
+    :align: left
+    :alt: template_node
+
+This node will assign a value to a target variable. This value can be a constant,
+the value of an attribute that came from the entry device and etc...
+
+It uses the `mustache`_ template language.
+Check :numref:`template_node_cfg` as example:
+the field **a** of payload will be replaced with the value of the **payload.b**
+
+
+
+.. _template_node_cfg:
+.. figure:: images/nodes/template_node_cfg.png
+    :width: 50%
+    :align: center
+    :alt: template_node_cfg
+
+Fields:
+
+* **Name** *(optional)*: Name of the node
+* **Set Property** *(required)*: Variable that will receive the value
+* **Format** *(required)*: Format template will be writen
+* **Template** *(required)*: Value that will be assigned to the target variable set on **Set property**
+* **Output as** *(required)*: The format of the output
+
+Email
+*****
+
+.. _email_node:
+.. figure:: images/nodes/email_node.png
+    :width: 80%
+    :align: left
+    :alt: email_node
+
+Sends an e-mail for a given address.
+
+.. _email_node_cfg:
+.. figure:: images/nodes/email_node_cfg.png
+    :width: 50%
+    :align: center
+    :alt: email_node_cfg
+
+Fields:
+
+* **From** *(required)*: The source email.
+* **To** *(required)*: Destination email.
+* **Server** *(required)*: The server of the email destination.
+* **Subject** *(required)*: Subject of the email.
+* **Body** *(required)*: Message on the email. The message can be writen in a variable using the **template node**.
+* **Name** *(optional)*: Name of the node.
+
+Geofence
+********
+
+.. _geofence_node:
+.. figure:: images/nodes/geofence_node.png
+    :width: 80%
+    :align: left
+    :alt: geofence_node
+
+Select an interest area to determine wich devices will actuate the flow
+
+.. _geofence_node_cfg:
+.. figure:: images/nodes/geofence_node_cfg.png
+    :width: 50%
+    :align: center
+    :alt: geofence_node_cfg
+
+Fields:
+
+* **Area** *(required)*: Area that will be selected. It can be selected with an square or with a pentagon.
+* **Filter** *(required)*: Select wich side of the area will be selected: inside or outside the area demercated in the field above.
+* **Name** *(optional)*: Name of the node
+
+.. _mustache: https://mustache.github.io/mustache.5.html
