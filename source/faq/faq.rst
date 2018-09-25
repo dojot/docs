@@ -30,8 +30,7 @@ It takes a role as an enabler platform with:
   - Open APIs which makes the access to the platform resources easy.
   - Capacity to store large volumes of data in different formats.
   - Connectors to different types of devices.
-  - Graphical user interface with flow builder to prototype IoT solutions very
-    quickly.
+  - Graphical user interface with flow builder to quicly prototype IoT solutions.
   - Real time event processing with customizable rules.
 
 Where can I get it?
@@ -88,23 +87,26 @@ REST APIs are explained in the `Applications`_ section.
 Ok, I started it and I logged in. Now what?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Nice! Now you can add your first devices, described in `Devices`_, build some
-flows and subscribing to device events, both described in `Data Flows`_.
+Nice! Now you can add your templates and devices, described in `Devices`_,
+build some flows and subscribing to device events, both described in `Data
+Flows`_.
 
 How can I update my deploy to dojot's latest version?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 You need to follow some steps:
 
-1 Update the docker-compose repository to the cutting-edge version (beware the
-  bugs though)
+1 Update the docker-compose repository to the cutting-edge version 
+ (beware the bug)
 
 .. code-block:: bash
 
   $ cd <path-to-your-clone-of-docker-compose>
   $ git checkout master && git pull
 
-  If you need a more stable version, you could checkout a tag instead:
+
+If you need a more stable version, you could checkout a tag instead:
+
 
 .. code-block:: bash
 
@@ -116,6 +118,10 @@ You need to follow some steps:
 
   $ git checkout 0.2.0-aikido -b 0.2.0
 
+Once in a while we'll release new versions for dojot components. They might be
+independently released (although we tend to synchronize all of them). Once we
+end up with a stable set of component versions, we'll update the docker-compose
+repository.
 
 2 Deploy the latest docker images. This command might need ``sudo``.
 
@@ -200,14 +206,11 @@ set your actual device to push the data to dojot.
 In order to send data to dojot via MQTT (using iotagent-mosca), there are some
 things to keep in mind:
 
-- If you don't define any topic in device template, it will assume the pattern
-  ``/<service-id>/<device-id>/attrs`` (for instance: ``/admin/efac/attrs``).
-  This should be the topic to which the device will publish its information to.
-
-- If you do define a topic in device template, then your device should publish
-  its data to it and set the client-id parameter. It should follow the
-  following pattern: ``<service>:<deviceid>``, such as ``admin:efac``.
-
+- The topic should look like ``/<service-id>/<device-id>/attrs`` (for instance:
+  ``/admin/efac/attrs``). Depending on how IoT agent MQTT was started (more
+  strict), the client ID must also be set to "<tenant>:<deviceid>", such as
+  "admin:efac".
+  
 - MQTT payload must be a JSON with each key being an attribute of the dojot
   device, such as:
 
@@ -305,8 +308,8 @@ device `3bb9`:
     ]
 
 There are more operators that could be used to filter entries.
-Check `history-ws API <https://dojot.github.io/history-ws/apiary_latest.html>`_
-documentation to check out all possible operators.
+Check `History API <https://dojot.github.io/history/apiary_latest.html>`_
+documentation to check out all possible operators and other filters.
 
 
 Data Flows
@@ -369,6 +372,10 @@ Can I correlate data from different devices in the same flow?
 As the data flow is processed individually for each message, you need to create
 a virtual device to aggregate all attributes, then use this virtual device as
 the input of the flow.
+
+Another thing that you could do is to build a flowbroker node to deal with
+contexts, which can be used to store and retrieve data related to a flow or
+node.
 
 I want to send an email, what should I do?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -475,11 +482,7 @@ could be integrated with dojot:
     historical data related to a device. This can be done by using this API
     (one side-note: all endpoints described in this apiary should be preceded
     by ``/history/``).
-  - **Subscribing to events related to devices**: if your application is able
-    to listen to events, you might rather use subscriptions, which can be
-    created using this API (also, all endpoints should be preceded by
-    ``/metrics/``).
-  - **Using mashup to pre-process data**: if you want to do something more, you
+  - **Using flowbroker to pre-process data**: if you want to do something more, you
     could use flows. They can help process and transform data so that they can
     be properly sent to your application via HTTP request, by e-mail or stored
     in a virtual device (which can be used to generate notifications as

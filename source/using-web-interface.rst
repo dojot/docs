@@ -50,7 +50,7 @@ must not share an attribute with the same name.
    template, you should remove all its associated devices first. If such thing
    happens the following error message will appear:
 
-   .. image:: ../images/template-removal-error.png
+   .. image:: images/template-removal-error.png
       :scale: 40%
       :align: center
       :alt: Error message when removing an used template
@@ -63,7 +63,7 @@ must not share an attribute with the same name.
    templates which have attributes with same name. If such thing happens, the
    following message will appear:
 
-   .. image:: ../images/template-conflict.png
+   .. image:: images/template-conflict.png
       :scale: 40%
       :align: center
       :alt: Error while adding overlapping attributes
