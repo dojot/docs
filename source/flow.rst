@@ -39,7 +39,7 @@ displayed.
 
     : Device in configuration window
 
-Fileds:
+Fields:
 
 * **Name** *(optional)*: Name of the node
 * **Device** *(required)*: The *dojot* device that will trigger the flow
@@ -86,7 +86,7 @@ http
     :align: left
     :alt: http_node
 
-This node sends an http request to a given address, and, then, it can forward the response to use in somewhere of the flow.
+This node sends an http request to a given address, and, then, it can forward the response to the next node in the flow.
 
 .. _http_in_node:
 .. figure:: images/nodes/http_node_cfg.png
@@ -217,13 +217,14 @@ Fields:
 
 * **Name** *(optional)*: Name of the node
 * **Property** *(required)*: Variable that will be evaluated 
-* **Rule box** *(required)*: Rules that will determine the outputch branch of the node.
+* **Rule box** *(required)*: Rules that will determine the output branch of the node.
   Also, it can be configured to stop checking rules when it finds one that matches other
   or check all the rules and route the message to the corresponding output.
 
 .. note::
     - More than one rule can be assign by clicking on *+add* below the rules box.
-    - Each condition should have an corresponding output.
+    - The rules are mapped one-to-one to the output conectors. Then the first rule is related
+      to the first output, the second rule to the second output and etc...
 
 Template
 ********
@@ -295,7 +296,7 @@ Geofence
     :align: left
     :alt: geofence_node
 
-Select an interest area to determine wich devices will actuate the flow
+Select an interest area to determine wich devices will activate the flow
 
 .. _geofence_node_cfg:
 .. figure:: images/nodes/geofence_node_cfg.png
@@ -305,8 +306,8 @@ Select an interest area to determine wich devices will actuate the flow
 
 Fields:
 
-* **Area** *(required)*: Area that will be selected. It can be selected with an square or with a pentagon.
-* **Filter** *(required)*: Select wich side of the area will be selected: inside or outside the area demercated in the field above.
+* **Area** *(required)*: Area that will be selected. It can be chosen with an square or with a pentagon.
+* **Filter** *(required)*: Which side of the area will be picked: inside or outside the marked area in the field above.
 * **Name** *(optional)*: Name of the node
 
 .. _mustache: https://mustache.github.io/mustache.5.html
