@@ -253,6 +253,8 @@ the field **a** of payload will be replaced with the value of the **payload.b**
     :align: center
     :alt: template_node_cfg
 
+    : Template configuration
+
 Fields:
 
 * **Name** *(optional)*: Name of the node
@@ -277,6 +279,8 @@ Sends an e-mail for a given address.
     :width: 50%
     :align: center
     :alt: email_node_cfg
+
+    : Email configuration
 
 Fields:
 
@@ -304,10 +308,140 @@ Select an interest area to determine wich devices will activate the flow
     :align: center
     :alt: geofence_node_cfg
 
+    : Geofence configuration
+
 Fields:
 
 * **Area** *(required)*: Area that will be selected. It can be chosen with an square or with a pentagon.
 * **Filter** *(required)*: Which side of the area will be picked: inside or outside the marked area in the field above.
 * **Name** *(optional)*: Name of the node
+
+
+Learn by examples
+-----------
+
+Using template and email nodes
+******************************
+
+To explain these nodes, the flow below will be used:
+
+.. _using_email_node_flow:
+.. figure:: images/nodes/using_email_node_flow.png
+    :width: 80%
+    :align: center
+    :alt: using_email_node_flow
+
+    : Flow using template and email nodes
+
+Wonder a system that sends an email to somebody when an order arrive at his mail box.
+The email would be sent with the name of the sender, his phone number and the content of the order.
+A device with the order finder template has the attributes: *sender*, *phone* and *content*.
+
+The template node will fill the message with the attributes that came in the message.
+The attributes sent by the entry-point device can be accessed on the variable **payload**.
+So, using the `mustache`_ template language, the node configuration would be like :numref:`using_email_node_template`.
+
+.. _using_email_node_template:
+.. figure:: images/nodes/using_email_node_template.png
+    :width: 80%
+    :align: center
+    :alt: using_email_node_template
+
+    : Template configuration
+
+Then, the email body on the email node should be assigned to the variable that is on the field *Set property* on 
+:numref:`using_email_node_template`:
+
+.. _using_email_node_email:
+.. figure:: images/nodes/using_email_node_email.png
+    :width: 80%
+    :align: center
+    :alt: using_email_node_email
+
+    : Email node configuration
+
+Then, the result of the flow, is an email arrive, problably at the spam box, to the destination address:
+
+.. _using_email_node:
+.. figure:: images/nodes/using_email_node.png
+    :width: 120%
+    :align: center
+    :alt: using_email_node
+
+    : Sent email
+
+Using http node
+***************
+
+Imagine this scenario: a device sends an *username* and a *password*, and from these attrs, the flow
+will request to a server an authentication token that will be sent to a virtual device that has a *token* attribute.
+
+.. _using_http_node_flow:
+.. figure:: images/nodes/using_http_node_flow.png
+    :width: 120%
+    :align: center
+    :alt: using_http_node_flow
+
+    : Flow used to explain http node
+
+To send that request to the server, the http method should be a POST and the parameters should be within the requisition.
+So, in the template node, a JSON object will be assigned to a variable. The body (parameters *username* and *password*) of the requisition 
+will be assigned to the **payload** key of the JSON object. And, if needed, this object can have a *headers* key as well.
+
+.. _using_http_node_template:
+.. figure:: images/nodes/using_http_node_template.png
+    :width: 80%
+    :align: center
+    :alt: using_http_node_template
+
+    : Template node configuration
+
+Then, on the http node, the Requisition field will receive the value of the object created at the template node. And, the
+response will be assigned to any variable, in this case, this is *msg.res* .
+
+.. note::
+    If UTF-8 String buffer is chosen in the return field, the body of the response body will be a string. If JSON object
+    is chosen, the body will be an object.
+
+.. _using_http_node_http:
+.. figure:: images/nodes/using_http_node_http.png
+    :width: 80%
+    :align: center
+    :alt: using_http_node_http
+
+    : Template node configuration
+
+As seen, the response of the server is *req.res* and the response body can be accessed on **msg.res.payload**. So, the keys 
+of the object that came on the responsy can be accessed by: **msg.res.payload.key**.
+On figure FIG REF the token that came in the response is assigned to the attribute token of the virtual device.
+
+.. _using_http_node_change:
+.. figure:: images/nodes/using_http_node_change.png
+    :width: 80%
+    :align: center
+    :alt: using_http_node_change
+
+    : Template node configuration
+
+.. _using_http_node_deviceout:
+.. figure:: images/nodes/using_http_node_deviceout.png
+    :width: 80%
+    :align: center
+    :alt: using_http_node_deviceout
+
+    : Device out configuration
+
+Then, the result of the flow is the attribute *token* of the virtual device be updated with the token that came in the response
+of the http request:
+
+.. _using_http_node_result:
+.. figure:: images/nodes/using_http_node_result.png
+    :width: 80%
+    :align: center
+    :alt: using_http_node_result
+
+    : Device updated
+
+
 
 .. _mustache: https://mustache.github.io/mustache.5.html
