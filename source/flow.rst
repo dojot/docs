@@ -320,6 +320,9 @@ Fields:
 Learn by examples
 -----------
 
+.. contents::
+  :local:
+
 Using template and email nodes
 ******************************
 
@@ -442,6 +445,57 @@ of the http request:
 
     : Device updated
 
+Using geofence node
+*******************
 
+A good example to learn how geofence node works ia studying the flow below:
+
+.. _using_geofence_node_flow:
+.. figure:: images/nodes/using_geofence_node_flow.png
+    :width: 80%
+    :align: center
+    :alt: using_geofence_node_flow
+
+    : Flow using geofence
+
+The geofence node named *in area* is set like seem in :numref:`using_geofence_node_geofence`. The only thing
+that diffs the geofence nodes *in area* from *out of the area* is the field **Filter** that, in the first, is configured to *only points inside* and *only points outside*
+in the second, respectively.
+
+.. _using_geofence_node_geofence:
+.. figure:: images/nodes/using_geofence_node_geofence.png
+    :width: 80%
+    :align: center
+    :alt: using_geofence_node_geofence
+
+    : Geofence node configuration
+
+Then, if the device that is set as *device in* sends a messagem with a geo attribute the geofence node will evaluate the
+geo point acoording to its rule and if it matches the rule, the node forward the information to the next node and, if not,
+the execution of the branch, which has the geofence that the rule didn't match, stops.
+
+.. note::
+    To geofence node work, the messege received **should** have a geo attribute, if not, the branches of the flow will stop
+    at the geofence nodes.
+
+Back to the example, if the car sends a message that he is in the marked area, like ``{ "position": "-22.820156,-47.2682535" }``, the
+message received in device out will be "Car is inside the marked area", and, if it sends ``{"position": "0,0"}`` device out will
+receive "Car is out of the marked area"
+
+.. _using_geofence_node_template:
+.. figure:: images/nodes/using_geofence_node_template.png
+    :width: 50%
+    :align: center
+    :alt: using_geofence_node_template
+
+    : Template node configuration if the car is in the marked area
+
+.. _using_geofence_node_result:
+.. figure:: images/nodes/using_geofence_node_result.png
+    :width: 80%
+    :align: center
+    :alt: using_geofence_node_result
+
+    : Output in device out
 
 .. _mustache: https://mustache.github.io/mustache.5.html
