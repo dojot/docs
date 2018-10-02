@@ -316,6 +316,35 @@ Fields:
 * **Filter** *(required)*: Which side of the area will be picked: inside or outside the marked area in the field above.
 * **Name** *(optional)*: Name of the node
 
+Get Context
+***********
+
+.. _getcontext_node:
+.. image:: images/nodes/getcontext_node.png
+    :width: 20%
+    :align: left
+    :alt: getcontext_node
+
+
+This node is used to get a variable that is in the context and assign its value to a variable that will be used
+in the flow
+
+.. _getcontext_node_cfg:
+.. figure:: images/nodes/getcontext_node_cfg.png
+    :width: 50%
+    :align: center
+    :alt: getcontext_node_cfg
+
+Fields:
+
+* **Name** *(optional)**: Name of the node
+* **Context layer** *(required)**: The layer of the context that que variable is at
+* **Context name** *(required)**: The variable that is in the context
+* **Context content** *(required)**: The variable in the flow that will receive the value of the context 
+
+
+
+
 
 Learn by examples
 -----------
