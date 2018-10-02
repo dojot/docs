@@ -18,7 +18,7 @@ and efficient infrastructure.
    components-and-apis
    installation-guide
    faq/faq
-
+   releases
 
 .. toctree::
    :maxdepth: 2

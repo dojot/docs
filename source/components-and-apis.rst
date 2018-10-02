@@ -34,14 +34,11 @@ Components
     - `GitHub - auth`_
     - `readthedocs - auth`_
   * - History
-    - `GitHub - history-ws`_
+    - `GitHub - history`_
     -
   * - DeviceManager
     - `GitHub - DeviceManager`_
     - `readthedocs - DeviceManager`_
-  * - Image manager
-    - `GitHub - image-manager`_
-    -
   * - GUI
     - `GitHub - GUI`_
     -
@@ -56,9 +53,6 @@ Components
     -
   * - EJBCA-REST
     - `GitHub - EJBCA-REST`_
-    -
-  * - Alarm manager
-    - `GitHub - alarm-manager`_
     -
 
 
@@ -98,8 +92,8 @@ Exposed APIs
     - `GitHub - auth`_
   * - /history
     -  Device historical data
-    - `API - history-ws`_
-    - `GitHub - history-ws`_
+    - `API - history`_
+    - `GitHub - history`_
   * - /metric
     -  Context broker
     - `API - data-broker`_
@@ -116,10 +110,6 @@ Exposed APIs
     -  Certification-Auth. functions
     - `API - EJBCA-REST`_
     - `GitHub - EJBCA-REST`_
-  * - /image
-    - Device image management
-    - `API - image-manager`_
-    - `GitHub - image-manager`_
 
 
 The API gateway used in dojot reroutes some of these endpoints so that they
@@ -141,7 +131,7 @@ which component endpoint.
    * - DeviceManager
      - host:5000/template
      - host:8000/template
-   * - mashup
+   * - flowbroker
      - host:3000/
      - host:8000/flows
    * - auth
@@ -200,40 +190,31 @@ dojot.
 
 
 .. _GitHub - auth: https://github.com/dojot/auth
-.. _API - auth: https://dojot.github.io/auth/apiary_latest.html
-.. _readthedocs - auth: http://dojotdocs.readthedocs.io/projects/auth/en/latest/
+.. _API - auth: https://dojot.github.io/auth/apiary_v0.3.0.html
+.. _readthedocs - auth: https://dojotdocs.readthedocs.io/projects/auth/en/v0.3.0/
 
-.. _GitHub - history-ws: https://github.com/dojot/history-ws
-.. _API - history-ws: https://dojot.github.io/history/apiary_latest.html
+.. _GitHub - history: https://github.com/dojot/history
+.. _API - history: https://dojot.github.io/history/apiary_v1.0.0.html
 
 
 .. _GitHub - DeviceManager: https://github.com/dojot/device-manager
-.. _API - DeviceManager: https://dojot.github.io/device-manager/apiary_latest.html
-.. _readthedocs - DeviceManager: http://dojotdocs.readthedocs.io/projects/DeviceManager/en/latest/
-.. _Messages - DeviceManager: http://dojotdocs.readthedocs.io/projects/DeviceManager/en/latest/kafka-messages.html
-
-.. _GitHub - image-manager: <https://github.com/dojot/image-manager>
-.. _API - image-manager: https://dojot.github.io/image-manager/apiary_latest.html
+.. _API - DeviceManager: https://dojot.github.io/device-manager/apiary_v0.3.0.html
+.. _readthedocs - DeviceManager: http://dojotdocs.readthedocs.io/projects/DeviceManager/en/v0.3.0/
+.. _Messages - DeviceManager: http://dojotdocs.readthedocs.io/projects/DeviceManager/en/v0.3.0/kafka-messages.html
 
 
 .. _GitHub - GUI: https://github.com/dojot/gui
 
 
 .. _GitHub - flowbroker: https://github.com/dojot/flowbroker
-.. _API - flowbroker: https://dojot.github.io/flowbroker/apiary_latest.html
+.. _API - flowbroker: https://dojot.github.io/flowbroker/apiary_v0.3.0.html
 
 .. _GitHub - data-broker: https://github.com/dojot/data-broker
-.. _API - data-broker: https://dojot.github.io/data-broker/apiary_latest.html
+.. _API - data-broker: https://dojot.github.io/data-broker/apiary_v0.3.0.html
 
-.. _Messages - iotagent-mosca: http://dojotdocs.readthedocs.io/projects/iotagent-mosca/en/latest/operation.html#sending-messages-to-other-components-via-kafka
+.. _Messages - iotagent-mosca: http://dojotdocs.readthedocs.io/projects/iotagent-mosca/en/v0.3.0/operation.html#sending-messages-to-other-components-via-kafka
 
 .. _GitHub - iotagent-mosca: https://github.com/dojot/iotagent-mosca
 
-.. _GitHub - data-broker: https://github.com/dojot/data-broker
-
-.. _GitHub - mashup: https://github.com/dojot/mashup
-
 .. _GitHub - EJBCA-REST: https://github.com/dojot/ejbca-rest
-.. _API - EJBCA-REST: https://dojot.github.io/ejbca-rest/apiary_latest.html
-
-.. _GitHub - alarm-manager: https://github.com/dojot/alarm-manager
+.. _API - EJBCA-REST: https://dojot.github.io/ejbca-rest/apiary_v0.1.0.html
