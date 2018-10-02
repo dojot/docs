@@ -100,7 +100,7 @@ Fields:
 
 * **Method** *(required)*: The http method (GET, POST, etc...).
 * **URL** *(required)*: The URL that will receive the http request
-* **Request body** *(required)*: Variable that contains the request body. This value can be assigned to the variable using the **template node**.
+* **Request body** *(required)*: Variable that contains the request body. This value can be assigned to the variable using the **template node**, for example.
 * **Response** *(required)*: Variable that will receive the http response.
 * **Return** *(required)*: Type of the return.
 * **Name** *(required)*: Name of the node.
@@ -131,9 +131,9 @@ device out is a *virtual device*, which is a device that exists only on *dojot*.
 Fields:
 
 - **Name** *(optional)*: Name of the node.
-- **Device** *(required)*: Select *The device that triggered the flow* will make the device that was the entry-point
-  be the end-point of the flow. *Specific device* any chosen device wil be the output of the flow and *a device 
-  defined during the flow* will make a device that the flow selected during the execution the endpoint.
+- **Device** *(required)*: Select "The device that triggered the flow" will make the device that was the entry-point
+  be the end-point of the flow. "Specific device" any chosen device wil be the output of the flow and "a device 
+  defined during the flow" will make a device that the flow selected during the execution the endpoint.
 - **Source** *(required)*: Data structure that will be mapped as message to device out
 
 Actuate
@@ -288,7 +288,7 @@ Fields:
 * **To** *(required)*: Destination email.
 * **Server** *(required)*: The server of the email destination.
 * **Subject** *(required)*: Subject of the email.
-* **Body** *(required)*: Message on the email. The message can be writen in a variable using the **template node**.
+* **Body** *(required)*: Message on the email. The message can be writen in a variable using the **template node**, for example.
 * **Name** *(optional)*: Name of the node.
 
 Geofence
