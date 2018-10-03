@@ -8,7 +8,7 @@ battojutsu - 2018.10.03
 - IoT agents:
 
   - Support for `sigfox devices <http://github.com/dojot/iotagent-sigfox>`_
-  - Support for `LoRa devices <http://github.com/dojot/iotagetn-lora-everynet>`_ to be
+  - Support for `LoRa devices <http://github.com/dojot/iotagent-lora-everynet>`_ to be
     used with EveryNet networks.
   - Many improvements for IoT agent MQTT - performance, stability and documentation.
 
