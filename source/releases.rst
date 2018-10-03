@@ -26,9 +26,9 @@ battojutsu - 2018.10.03
     to deal with contexts within a flow. They can be thought as data chunks that
     can be stored and retrieved by ContextManager when invoked within a flow node.
     They are split into four different access levels: tenant, flow, node and node
-    instance. Check `flowbroker node library <https://github.com/dojot/flowbroker/blob/master/lib/ContextManagerClient.js>`_
+    instance. Check `flowbroker node library <https://github.com/dojot/flowbroker/blob/master/lib/ContextHandler.js>`_
     to check how to use context within nodes or check `flowbroker's get-context node <https://github.com/dojot/flowbroker/tree/master/orchestrator/nodes/get-context>`_
-    to use it directly from flowbroker GUI you could just open the new
+    to use it directly from flowbroker GUI  you could just open the new
     flowbroker UI and check it in the node palette)
   - New configuration options for device actuation: send actuation message to the
     same device that triggered the flow or set which is the targed device dynamically,
