@@ -94,7 +94,7 @@ replaced): ::
 
 For instance: ::
 
-  git checkout 0.2.0 -b 0.2.0
+  git checkout v0.3.1 -b v0.3.1
 
 Or if you're brave enough: ::
 
