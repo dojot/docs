@@ -137,9 +137,8 @@ The web interface is available at ``http://localhost:8000``. The user is
 ``admin`` and the password is ``admin``. You also can interact with platform
 using the :ref:`Components and APIs`.
 
-Read the :doc:`tutorials/using-api-interface` and
-:doc:`tutorials/using-web-interface` for more information about how to
-interact with the platform.
+Read the :doc:`using-api-interface` and :doc:`using-web-interface` for more
+information about how to interact with the platform.
 
 Kubernetes
 ----------
