@@ -40,8 +40,8 @@ would look like:
 
 Remember that the token must be set in the request header as a whole, not parts
 of it. In the example only the first characters are shown for the sake of
-simplicity. All further requests will use an evironment variable called ``bash
-${JWT}``, which contains the token got from auth component.
+simplicity. All further requests will use an evironment variable called
+``${JWT}``, which contains the token got from auth component.
 
 
 Device creation
@@ -216,9 +216,6 @@ topics:
   used to publish messages. The topic should assume the pattern
   ``/<service-id>/<device-id>/attrs`` (for instance: ``/admin/efac/attrs``).
 
-- If you do define a topic in device template, then your device should publish
-  its data to it and set the client-id parameter.
-
 - MQTT payload must be a JSON with each key being an attribute of the dojot
   device, such as:
 
@@ -241,9 +238,9 @@ values to dojot so we can get a few more interesting results:
 
 .. code-block:: bash
 
-  mosquitto_pub -t /admin/3bb9/attrs -m '{"temperature": 36.5}'
-  mosquitto_pub -t /admin/3bb9/attrs -m '{"temperature": 15.6}'
-  mosquitto_pub -t /admin/3bb9/attrs -m '{"temperature": 10.6}'
+  mosquitto_pub -t /admin/0998/attrs -m '{"temperature": 36.5}'
+  mosquitto_pub -t /admin/0998/attrs -m '{"temperature": 15.6}'
+  mosquitto_pub -t /admin/0998/attrs -m '{"temperature": 10.6}'
 
 
 To retrieve all values sent for temperature attribute of this device:
@@ -251,12 +248,12 @@ To retrieve all values sent for temperature attribute of this device:
 .. code-block:: bash
 
   curl -X GET \
-    -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsIn...' \
-    "http://localhost:8000/history/device/3bb9/history?lastN=3&attr=temperature"
+    -H "Authorization: Bearer ${JWT}" \
+    "http://localhost:8000/history/device/0998/history?lastN=3&attr=temperature"
 
 The history endpoint is built from these values:
 
-- ``.../device/3bb9/...``: the device ID is ``3bb9`` - this is retrieved from
+- ``.../device/0998/...``: the device ID is ``0998`` - this is retrieved from
   the ``id`` attribute from the device
 - ``.../history?lastN=3&attr=temperature``: the requested attribute is
   temperature and it should get the last 3 values. More operators are available
@@ -268,19 +265,19 @@ The history endpoint is built from these values:
 
     [
       {
-        "device_id": "3bb9",
+        "device_id": "0998",
         "ts": "2018-03-22T13:47:07.050000Z",
         "value": 10.6,
         "attr": "temperature"
       },
       {
-        "device_id": "3bb9",
+        "device_id": "0998",
         "ts": "2018-03-22T13:46:42.455000Z",
         "value": 15.6,
         "attr": "temperature"
       },
       {
-        "device_id": "3bb9",
+        "device_id": "0998",
         "ts": "2018-03-22T13:46:21.535000Z",
         "value": 36.5,
         "attr": "temperature"
