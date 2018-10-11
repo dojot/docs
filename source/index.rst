@@ -23,6 +23,7 @@ and efficient infrastructure.
 .. toctree::
    :maxdepth: 2
    :caption: Tutorials
+   :numbered:
 
    using-web-interface
    using-api-interface

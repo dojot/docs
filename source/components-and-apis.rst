@@ -10,31 +10,31 @@ Components
   :header-rows: 1
 
   * - Component
-    - GitHub repository
+    - Repository / Main site
     - Documentation
-  * - mongodb
-    -
-    - `mongodb documentation`_
+  * - MongoDB
+    - `MongoDB official site`_
+    - `MongoDB documentation`_
   * - postgres
-    -
-    - `postgres documentation`_
-  * - Kong API gateway
-    -
+    - `PostgreSQL official site`_
+    - `PostgreSQL documentation`_
+  * - Kong API gateway (Community Edition)
+    - `Kong official site`_
     - `Kong documentation`_
   * - redis
-    -
+    - `Redis official site`_
     - `Redis documentation`_
   * - zookeeper
-    -
+    - `Zookeeper official site`_
     - `Zookeeper documentation`_
   * - Kafka
-    -
+    - `Kafka official site`_
     - `Kafka documentation`_
   * - auth
     - `GitHub - auth`_
     - `readthedocs - auth`_
   * - History
-    - `GitHub - history-ws`_
+    - `GitHub - history`_
     -
   * - DeviceManager
     - `GitHub - DeviceManager`_
@@ -98,12 +98,8 @@ Exposed APIs
     - `GitHub - auth`_
   * - /history
     -  Device historical data
-    - `API - history-ws`_
-    - `GitHub - history-ws`_
-  * - /metric
-    -  Context broker
-    - `API - data-broker`_
-    - `GitHub - data-broker`_
+    - `API - history`_
+    - `GitHub - history`_
   * - /gui
     -  Graphical User Interface
     -
@@ -156,9 +152,6 @@ which component endpoint.
    * - STH
      - host:8666/
      - host:8000/history
-   * - Data-Broker
-     - host:1026/
-     - host:8000/metric
    * - GUI
      - host/
      - host:8000/gui
@@ -190,21 +183,31 @@ dojot.
    * - iotagent-mosca
      - Device data update (`Messages - iotagent-mosca`_)
      - ``device-data``
+   * - auth
+     - Tenants creation/removal (`Messages - auth`_)
+     - ``dojot.tenancy``
 
-.. _mongodb documentation: https://docs.mongodb.com/manual/
-.. _postgres documentation: https://www.postgresql.org/docs/
+.. _MongoDB documentation: https://docs.mongodb.com/manual/
+.. _MongoDB official site: https://www.mongodb.com/
+.. _PostgreSQL documentation: https://www.postgresql.org/docs/
+.. _PostgreSQL official site: https://www.postgresql.org
+.. _Kong official site: https://konghq.com/kong-community-edition/
 .. _Kong documentation: https://getkong.org/docs/
+.. _Redis official site: https://redis.io/
 .. _Redis documentation: https://redis.io/documentation
+.. _Zookeeper official site: https://zookeeper.apache.org/
 .. _Zookeeper documentation: https://zookeeper.apache.org/documentation.html
+.. _Kafka official site: https://kafka.apache.org/
 .. _Kafka documentation: http://kafka.apache.org/documentation/
 
 
 .. _GitHub - auth: https://github.com/dojot/auth
 .. _API - auth: https://dojot.github.io/auth/apiary_latest.html
 .. _readthedocs - auth: http://dojotdocs.readthedocs.io/projects/auth/en/latest/
+.. _Messages - auth: https://dojotdocs.readthedocs.io/projects/auth/en/latest/kafka-messages.html
 
-.. _GitHub - history-ws: https://github.com/dojot/history-ws
-.. _API - history-ws: https://dojot.github.io/history/apiary_latest.html
+.. _GitHub - history: https://github.com/dojot/history
+.. _API - history: https://dojot.github.io/history/apiary_latest.html
 
 
 .. _GitHub - DeviceManager: https://github.com/dojot/device-manager
@@ -212,7 +215,7 @@ dojot.
 .. _readthedocs - DeviceManager: http://dojotdocs.readthedocs.io/projects/DeviceManager/en/latest/
 .. _Messages - DeviceManager: http://dojotdocs.readthedocs.io/projects/DeviceManager/en/latest/kafka-messages.html
 
-.. _GitHub - image-manager: <https://github.com/dojot/image-manager>
+.. _GitHub - image-manager: https://github.com/dojot/image-manager
 .. _API - image-manager: https://dojot.github.io/image-manager/apiary_latest.html
 
 

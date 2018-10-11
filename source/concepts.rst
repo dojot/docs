@@ -27,7 +27,7 @@ operations might become obscure and senseless.
 In the next section, there is an explanation of a few basic entities in dojot:
 devices, templates and flows. With these concepts in mind, we present a small
 tutorial to how to use them in dojot - it only covers API access. There a GUI
-oriented tutorial in :doc:`tutorials/using-web-interface` tutorial.
+oriented tutorial in :doc:`using-web-interface` tutorial.
 
 
 If you want more information on how dojot works internally, you should checkout

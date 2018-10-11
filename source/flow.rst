@@ -19,16 +19,16 @@ Dojot nodes
   :local:
 
 Device in
-****
+*********
 
 .. _device_in_node:
 .. image:: images/nodes/device_node.png
     :width: 20%
-    :align: left
+    :align: center
     :alt: device_node
 
-| This node determine an especific device to be the entry-point of a flow.
-| To configure the device in node, a window like :numref:`device_in_cfg` will be
+This node determine an especific device to be the entry-point of a flow. To
+configure the device in node, a window like :numref:`device_in_cfg` will be
 displayed.
 
 .. _device_in_cfg:
@@ -43,13 +43,15 @@ Fields:
 
 * **Name** *(optional)*: Name of the node
 * **Device** *(required)*: The *dojot* device that will trigger the flow
-* **Status** *(required)*: *exclude device status changes* will not use device status changes (online, offline) to trigger the flow. On the other hand, *include devices status changes* will use these status to trigger the flow.
+* **Status** *(required)*: *exclude device status changes* will not use device
+  status changes (online, offline) to trigger the flow. On the other hand,
+  *include devices status changes* will use these status to trigger the flow.
 
 .. note::
     If the the device that triggers a flow is removed, the flow becomes invalid.
 
 Device template in
-***********
+******************
 
 .. _devicetemplate_in_node:
 .. image:: images/nodes/devicetemplate_node.png
@@ -57,13 +59,15 @@ Device template in
     :align: left
     :alt: devicetemplatein_node
 
-This node will make that a flow get triggered by devices that are composed by a certain
-template. If the device template that is configured in **device template in** node is template A, all devices 
-that are composed with template A will trigger the flow. For example: *device1* is composed by templates [A,B], 
-*device2* by template A and *device3* by template B. Then, in that scenario, only messages from *device1* and
-*device2* will initiate the flow, because template A is one of the templates that compose those devices.
+This node will make that a flow get triggered by devices that are composed by a
+certain template. If the device template that is configured in **device
+template in** node is template A, all devices that are composed with template A
+will trigger the flow. For example: *device1* is composed by templates [A,B],
+*device2* by template A and *device3* by template B. Then, in that scenario,
+only messages from *device1* and *device2* will initiate the flow, because
+template A is one of the templates that compose those devices.
 
-.. _devicetemplate_in_node:
+.. _devicetemplate_node_cfg:
 .. figure:: images/nodes/devicetemplate_node_cfg.png
     :width: 50%
     :align: center
@@ -75,7 +79,8 @@ Fields:
 
 * **Name** *(optional)*: Name of the node.
 * **Device** *(required)*: The *dojot* device that will trigger the flow.
-* **Status** *(required)*: Choose if devices status changes will trigger or not the flow.
+* **Status** *(required)*: Choose if devices status changes will trigger or not
+  the flow.
 
 http
 ****
@@ -86,7 +91,8 @@ http
     :align: left
     :alt: http_node
 
-This node sends an http request to a given address, and, then, it can forward the response to the next node in the flow.
+This node sends an http request to a given address, and, then, it can forward
+the response to the next node in the flow.
 
 .. _http_in_node:
 .. figure:: images/nodes/http_node_cfg.png
@@ -100,7 +106,9 @@ Fields:
 
 * **Method** *(required)*: The http method (GET, POST, etc...).
 * **URL** *(required)*: The URL that will receive the http request
-* **Request body** *(required)*: Variable that contains the request body. This value can be assigned to the variable using the **template node**, for example.
+* **Request body** *(required)*: Variable that contains the request body. This
+  value can be assigned to the variable using the **template node**, for
+  example.
 * **Response** *(required)*: Variable that will receive the http response.
 * **Return** *(required)*: Type of the return.
 * **Name** *(required)*: Name of the node.
@@ -115,11 +123,12 @@ Device out
     :align: left
     :alt: deviceout_node
 
-Device out will determine wich device will have its attributes updated on *dojot* according
-to the result of the flow. Bear in mind that this node doesn't send messages to your
-device, it will only update the attributes on the platform. Normally, the chosen
-device out is a *virtual device*, which is a device that exists only on *dojot*.
-    
+Device out will determine wich device will have its attributes updated on
+*dojot* according to the result of the flow. Bear in mind that this node
+doesn't send messages to your device, it will only update the attributes on the
+platform. Normally, the chosen device out is a *virtual device*, which is a
+device that exists only on *dojot*.
+
 .. _deviceout_node_cfg:
 .. figure:: images/nodes/deviceout_node_cfg.png
     :width: 50%
@@ -130,11 +139,14 @@ device out is a *virtual device*, which is a device that exists only on *dojot*.
 
 Fields:
 
-- **Name** *(optional)*: Name of the node.
-- **Device** *(required)*: Select "The device that triggered the flow" will make the device that was the entry-point
-  be the end-point of the flow. "Specific device" any chosen device wil be the output of the flow and "a device 
-  defined during the flow" will make a device that the flow selected during the execution the endpoint.
-- **Source** *(required)*: Data structure that will be mapped as message to device out
+* **Name** *(optional)*: Name of the node.
+* **Device** *(required)*: Select "The device that triggered the flow" will
+  make the device that was the entry-point be the end-point of the flow.
+  "Specific device" any chosen device wil be the output of the flow and "a
+  device defined during the flow" will make a device that the flow selected
+  during the execution the endpoint.
+* **Source** *(required)*: Data structure that will be mapped as message to
+  device out
 
 Actuate
 *******
@@ -145,8 +157,9 @@ Actuate
     :align: left
     :alt: actuate_node
 
-Actuate node is, basically, the same thing of **device out** node. But, it can send messages
-to a real device, like telling a lamp to turn the light off and etc...
+Actuate node is, basically, the same thing of **device out** node. But, it can
+send messages to a real device, like telling a lamp to turn the light off and
+etc.
 
 .. _actuate_node_cfg:
 .. figure:: images/nodes/actuate_node_cfg.png
@@ -160,10 +173,11 @@ Fields:
 
 * **Name** *(optional)*: Name of the node.
 * **Device** *(required)*: A real device on dojot
-* **Source** *(required)*: Data structure that will be mapped as message to device out
+* **Source** *(required)*: Data structure that will be mapped as message to
+  device out
 
 Change
-*******
+******
 
 .. _change_node:
 .. image:: images/nodes/change_node.png
@@ -173,8 +187,8 @@ Change
 
 Change node is used to copy or assign values to an output, i. e., copy
 values of a message attributes to a dictionary that will be assigned to
-virtual device                                                                                      
-                                                                                
+virtual device.
+
 
 .. _change_node_cfg:
 .. figure:: images/nodes/change_node_cfg.png
@@ -187,8 +201,8 @@ virtual device
 Fields:
 
 * **Name** *(optional)*: Name of the node
-* **msg** *(required)*: Definition of the data structure that will be sent to the next node and will
-  receive the value set on the *to* field 
+* **msg** *(required)*: Definition of the data structure that will be sent to
+  the next node and will receive the value set on the *to* field
 * **to** *(required)*: Assignment or copy of values
 
 .. note::
@@ -203,7 +217,8 @@ Switch
     :align: left
     :alt: switch_node
 
-The Switch node allows messages to be routed to different branches of a flow by evaluating a set of rules against each message.
+The Switch node allows messages to be routed to different branches of a flow by
+evaluating a set of rules against each message.
 
 .. _switch_node_cfg:
 .. figure:: images/nodes/switch_node_cfg.png
@@ -216,10 +231,11 @@ The Switch node allows messages to be routed to different branches of a flow by 
 Fields:
 
 * **Name** *(optional)*: Name of the node
-* **Property** *(required)*: Variable that will be evaluated 
-* **Rule box** *(required)*: Rules that will determine the output branch of the node.
-  Also, it can be configured to stop checking rules when it finds one that matches other
-  or check all the rules and route the message to the corresponding output.
+* **Property** *(required)*: Variable that will be evaluated
+* **Rule box** *(required)*: Rules that will determine the output branch of the
+  node. Also, it can be configured to stop checking rules when it finds one
+  that matches other or check all the rules and route the message to the
+  corresponding output.
 
 .. note::
     - More than one rule can be assign by clicking on *+add* below the rules box.
@@ -238,8 +254,8 @@ Template
     :align: left
     :alt: template_node
 
-This node will assign a value to a target variable. This value can be a constant,
-the value of an attribute that came from the entry device and etc...
+This node will assign a value to a target variable. This value can be a
+constant, the value of an attribute that came from the entry device and etc...
 
 It uses the `mustache`_ template language.
 Check :numref:`template_node_cfg` as example:
@@ -260,7 +276,8 @@ Fields:
 * **Name** *(optional)*: Name of the node
 * **Set Property** *(required)*: Variable that will receive the value
 * **Format** *(required)*: Format template will be writen
-* **Template** *(required)*: Value that will be assigned to the target variable set on **Set property**
+* **Template** *(required)*: Value that will be assigned to the target variable
+  set on **Set property**
 * **Output as** *(required)*: The format of the output
 
 Email
@@ -288,7 +305,8 @@ Fields:
 * **To** *(required)*: Destination email.
 * **Server** *(required)*: The server of the email destination.
 * **Subject** *(required)*: Subject of the email.
-* **Body** *(required)*: Message on the email. The message can be writen in a variable using the **template node**, for example.
+* **Body** *(required)*: Message on the email. The message can be writen in a
+  variable using the **template node**, for example.
 * **Name** *(optional)*: Name of the node.
 
 Geofence
@@ -312,8 +330,10 @@ Select an interest area to determine wich devices will activate the flow
 
 Fields:
 
-* **Area** *(required)*: Area that will be selected. It can be chosen with an square or with a pentagon.
-* **Filter** *(required)*: Which side of the area will be picked: inside or outside the marked area in the field above.
+* **Area** *(required)*: Area that will be selected. It can be chosen with an
+  square or with a pentagon.
+* **Filter** *(required)*: Which side of the area will be picked: inside or
+  outside the marked area in the field above.
 * **Name** *(optional)*: Name of the node
 
 Get Context
@@ -326,8 +346,8 @@ Get Context
     :alt: getcontext_node
 
 
-This node is used to get a variable that is in the context and assign its value to a variable that will be used
-in the flow
+This node is used to get a variable that is in the context and assign its value
+to a variable that will be used in the flow.
 
 .. _getcontext_node_cfg:
 .. figure:: images/nodes/getcontext_node_cfg.png
@@ -338,16 +358,16 @@ in the flow
 Fields:
 
 * **Name** *(optional)**: Name of the node
-* **Context layer** *(required)**: The layer of the context that que variable is at
+* **Context layer** *(required)**: The layer of the context that que variable
+  is at
 * **Context name** *(required)**: The variable that is in the context
-* **Context content** *(required)**: The variable in the flow that will receive the value of the context 
-
-
+* **Context content** *(required)**: The variable in the flow that will receive
+  the value of the context
 
 
 
 Learn by examples
------------
+-----------------
 
 .. contents::
   :local:
@@ -365,13 +385,15 @@ To explain these nodes, the flow below will be used:
 
     : Flow using template and email nodes
 
-Wonder a system that sends an email to somebody when an order arrive at his mail box.
-The email would be sent with the name of the sender, his phone number and the content of the order.
-A device with the order finder template has the attributes: *sender*, *phone* and *content*.
+Wonder a system that sends an email to somebody when an order arrive at his
+mail box. The email would be sent with the name of the sender, his phone number
+and the content of the order. A device with the order finder template has the
+attributes: *sender*, *phone* and *content*.
 
-The template node will fill the message with the attributes that came in the message.
-The attributes sent by the entry-point device can be accessed on the variable **payload**.
-So, using the `mustache`_ template language, the node configuration would be like :numref:`using_email_node_template`.
+The template node will fill the message with the attributes that came in the
+message. The attributes sent by the entry-point device can be accessed on the
+variable **payload**. So, using the `mustache`_ template language, the node
+configuration would be like :numref:`using_email_node_template`.
 
 .. _using_email_node_template:
 .. figure:: images/nodes/using_email_node_template.png
@@ -381,8 +403,8 @@ So, using the `mustache`_ template language, the node configuration would be lik
 
     : Template configuration
 
-Then, the email body on the email node should be assigned to the variable that is on the field *Set property* on 
-:numref:`using_email_node_template`:
+Then, the email body on the email node should be assigned to the variable that
+is on the field *Set property* on :numref:`using_email_node_template`:
 
 .. _using_email_node_email:
 .. figure:: images/nodes/using_email_node_email.png
@@ -392,7 +414,8 @@ Then, the email body on the email node should be assigned to the variable that i
 
     : Email node configuration
 
-Then, the result of the flow, is an email arrive, problably at the spam box, to the destination address:
+Then, the result of the flow, is an email arrive, problably at the spam box, to
+the destination address:
 
 .. _using_email_node:
 .. figure:: images/nodes/using_email_node.png
@@ -405,8 +428,9 @@ Then, the result of the flow, is an email arrive, problably at the spam box, to 
 Using http node
 ***************
 
-Imagine this scenario: a device sends an *username* and a *password*, and from these attrs, the flow
-will request to a server an authentication token that will be sent to a virtual device that has a *token* attribute.
+Imagine this scenario: a device sends an *username* and a *password*, and from
+these attrs, the flow will request to a server an authentication token that
+will be sent to a virtual device that has a *token* attribute.
 
 .. _using_http_node_flow:
 .. figure:: images/nodes/using_http_node_flow.png
@@ -416,9 +440,11 @@ will request to a server an authentication token that will be sent to a virtual 
 
     : Flow used to explain http node
 
-To send that request to the server, the http method should be a POST and the parameters should be within the requisition.
-So, in the template node, a JSON object will be assigned to a variable. The body (parameters *username* and *password*) of the requisition 
-will be assigned to the **payload** key of the JSON object. And, if needed, this object can have a *headers* key as well.
+To send that request to the server, the http method should be a POST and the
+parameters should be within the requisition. So, in the template node, a JSON
+object will be assigned to a variable. The body (parameters *username* and
+*password*) of the requisition will be assigned to the **payload** key of the
+JSON object. And, if needed, this object can have a *headers* key as well.
 
 .. _using_http_node_template:
 .. figure:: images/nodes/using_http_node_template.png
@@ -428,12 +454,14 @@ will be assigned to the **payload** key of the JSON object. And, if needed, this
 
     : Template node configuration
 
-Then, on the http node, the Requisition field will receive the value of the object created at the template node. And, the
-response will be assigned to any variable, in this case, this is *msg.res* .
+Then, on the http node, the Requisition field will receive the value of the
+object created at the template node. And, the response will be assigned to any
+variable, in this case, this is *msg.res* .
 
 .. note::
-    If UTF-8 String buffer is chosen in the return field, the body of the response body will be a string. If JSON object
-    is chosen, the body will be an object.
+    If UTF-8 String buffer is chosen in the return field, the body of the
+    response body will be a string. If JSON object is chosen, the body will be
+    an object.
 
 .. _using_http_node_http:
 .. figure:: images/nodes/using_http_node_http.png
@@ -443,9 +471,11 @@ response will be assigned to any variable, in this case, this is *msg.res* .
 
     : Template node configuration
 
-As seen, the response of the server is *req.res* and the response body can be accessed on **msg.res.payload**. So, the keys 
-of the object that came on the responsy can be accessed by: **msg.res.payload.key**.
-On figure FIG REF the token that came in the response is assigned to the attribute token of the virtual device.
+As seen, the response of the server is *req.res* and the response body can be
+accessed on **msg.res.payload**. So, the keys of the object that came on the
+responsy can be accessed by: **msg.res.payload.key**. On figure
+:numref:`using_http_node_change` the token that came in the response is
+assigned to the attribute token of the virtual device.
 
 .. _using_http_node_change:
 .. figure:: images/nodes/using_http_node_change.png
@@ -463,8 +493,8 @@ On figure FIG REF the token that came in the response is assigned to the attribu
 
     : Device out configuration
 
-Then, the result of the flow is the attribute *token* of the virtual device be updated with the token that came in the response
-of the http request:
+Then, the result of the flow is the attribute *token* of the virtual device be
+updated with the token that came in the response of the http request:
 
 .. _using_http_node_result:
 .. figure:: images/nodes/using_http_node_result.png
@@ -487,9 +517,11 @@ A good example to learn how geofence node works ia studying the flow below:
 
     : Flow using geofence
 
-The geofence node named *in area* is set like seem in :numref:`using_geofence_node_geofence`. The only thing
-that diffs the geofence nodes *in area* from *out of the area* is the field **Filter** that, in the first, is configured to *only points inside* and *only points outside*
-in the second, respectively.
+The geofence node named *in area* is set like seem in
+:numref:`using_geofence_node_geofence`. The only thing that diffs the geofence
+nodes *in area* from *out of the area* is the field **Filter** that, in the
+first, is configured to *only points inside* and *only points outside* in the
+second, respectively.
 
 .. _using_geofence_node_geofence:
 .. figure:: images/nodes/using_geofence_node_geofence.png
@@ -499,17 +531,20 @@ in the second, respectively.
 
     : Geofence node configuration
 
-Then, if the device that is set as *device in* sends a messagem with a geo attribute the geofence node will evaluate the
-geo point acoording to its rule and if it matches the rule, the node forward the information to the next node and, if not,
-the execution of the branch, which has the geofence that the rule didn't match, stops.
+Then, if the device that is set as *device in* sends a messagem with a geo
+attribute the geofence node will evaluate the geo point acoording to its rule
+and if it matches the rule, the node forward the information to the next node
+and, if not, the execution of the branch, which has the geofence that the rule
+didn't match, stops.
 
 .. note::
     To geofence node work, the messege received **should** have a geo attribute, if not, the branches of the flow will stop
     at the geofence nodes.
 
-Back to the example, if the car sends a message that he is in the marked area, like ``{ "position": "-22.820156,-47.2682535" }``, the
-message received in device out will be "Car is inside the marked area", and, if it sends ``{"position": "0,0"}`` device out will
-receive "Car is out of the marked area"
+Back to the example, if the car sends a message that he is in the marked area,
+like ``{ "position": "-22.820156,-47.2682535" }``, the message received in
+device out will be "Car is inside the marked area", and, if it sends
+``{"position": "0,0"}`` device out will receive "Car is out of the marked area"
 
 .. _using_geofence_node_template:
 .. figure:: images/nodes/using_geofence_node_template.png
