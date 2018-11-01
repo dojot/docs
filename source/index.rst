@@ -11,11 +11,13 @@ and efficient infrastructure.
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
+   :numbered:
    :glob:
 
    architecture
    concepts
    components-and-apis
+   internal-communication
    installation-guide
    faq/faq
    releases
