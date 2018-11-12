@@ -7,8 +7,12 @@ This page describes how each service in dojot communicate with each other.
 Components
 ----------
 
+Current dojot components are shown in :numref:`dojot_components`.
 
+.. _dojot_components:
 .. uml::
+    :caption: dojot components
+    :align: center
 
 
     [Auth]
@@ -38,10 +42,17 @@ Components
 
 
 
-List of services:
+They are:
 
-- Auth + API gateway (Kong)
-- Device Manager
+- Auth: authentication mechanism
+- DeviceManager: device and template storage.
+- Persister: component that stores all device-generated data.
+- History: component that exposes all device-generated data.
+- DataBroker: deals with subjects and Kafka topics, as well as socket.io
+  connections.
+- Flowbroker: handles flows (both CRUD and flow execution)
+- IoT agents: agents for different protocols.
+
 
 Each service will be briefly described in this page. More information can be
 found in each component documentation.
