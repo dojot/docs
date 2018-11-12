@@ -69,11 +69,10 @@ information about particular resources, such as list of devices or tenants. For
 that, they must know which component has which resource in order to retrieve
 them correctly. This means - and this is a very important thing that drives
 architectural choices in dojot - that only a single service is responsible for
-storing and retrieving data models for a particular resource (note that a
-service might have multiple instances, though). For example, DeviceManager is
-responsible for storing and retrieving information model for devices and
-templates, FlowBroker for flow descriptions, History for historical data, and
-so on.
+retrieving data models for a particular resource (note that a service might
+have multiple instances, though). For example, DeviceManager is responsible for
+storing and retrieving information model for devices and templates, FlowBroker
+for flow descriptions, History for historical data, and so on.
 
 Kafka, in the other hand, allows loosely coupled communication between
 instances of services. This means that a producer (whoever sends a message)
