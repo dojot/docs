@@ -51,14 +51,30 @@ Messaging and authentication
 
 There are two forms through which dojot components can talk to each other: via
 HTTP REST requests and via Kafka. They are intended for different purposes,
-though. HTTP requests can be sent at boot time when a component want, for
-instance, information about particular resources, such as list of devices or
-tenants. For that, they must know which component has which resource in order
-to retrieve them correctly. Kafka, in the other hand, allows a component to not
-know which component generated a particular message - therefore more services
-can be added with no modification in the publishing service. This is useful,
-for instance, when many IoT agents are used in a dojot deploy, as DeviceManager
-can't know how many instances are there and where they are.
+though.
+
+HTTP requests can be sent at boot time when a component want, for instance,
+information about particular resources, such as list of devices or tenants. For
+that, they must know which component has which resource in order to retrieve
+them correctly. This means - and this is a very important thing that drives
+architectural choices in dojot - that only a single service is responsible for
+storing and retrieving data models for a particular resource (note that a
+service might have multiple instances, though). For example, DeviceManager is
+responsible for storing and retrieving information model for devices and
+templates, FlowBroker for flow descriptions, History for historical data, and
+so on.
+
+Kafka, in the other hand, allows loosely coupled communication between
+instances of services. This means that a producer (whoever sends a message)
+does not know which components will receive its message. Furthermore, any
+consumer doesn't know who generated the message that it being ingested. This
+allows data to be transmitted based on "interests": a consumer is interested in
+ingesting messages with a particular `subject` (more on that later) and
+producers will send messages to all components that are interested in it. Note
+that this mechanism allows multiple services to emit messages with the same
+"subject", as well as multiple services ingesting messages with the same
+"subject" with no tricky workarounds whatsoever.
+
 
 Sending HTTP requests
 +++++++++++++++++++++
@@ -68,6 +84,8 @@ described here. There is no further considerations beoynd following the API
 description associated to each service. This can be seen in figure
 :numref:`initial_authentication`. Note that all interactions depicted here are
 abstractions of the actual ones.
+
+This is a test
 
 .. _initial_authentication:
 .. uml::
@@ -87,7 +105,8 @@ abstractions of the actual ones.
 
 In this figure, a client retrieves an access token for user `admin` whose
 password is `p4ssw0rd`. After that, a user can send a request to HTTP APIs
-using it. This is shown in :numref:`sending_requests`.
+using it. This is shown in :numref:`sending_requests`. Note: the actual authorization
+mechanism is detailed in `Auth + API gateway (Kong)`_.
 
 .. _sending_requests:
 .. uml::
@@ -100,7 +119,7 @@ using it. This is shown in :numref:`sending_requests`.
    control DeviceManager
    database PostgreSQL
 
-   Client -> Kong: POST /device \nHeaders="Authorization: JWT"\nBody={ device }
+   Client -> Kong: POST /device \nHeaders="Authorization: Bearer JWT"\nBody={ device }
    activate Kong
    Kong -> Auth: POST /pep \nBody={"admin", "/device"}
    Auth --> Kong: OK 200
@@ -117,10 +136,7 @@ In this figure, a client creates a new device using the token retrieved in
 :numref:`initial_authentication`. This request is analyzed by Kong, which will
 invoke Auth to check whether the user set in the token is allowed to ``POST``
 to ``/device`` endpoint. Only after the approval of such request, Kong will
-forward it to DeviceManager. It is important to note that a service must know
-where to find a particular resource. It is highly recommended that a service
-relies only on basic data from dojot (devices or tenants) so that no spurious
-dependencies are created.
+forward it to DeviceManager. 
 
 
 Sending Kafka messages
@@ -139,7 +155,7 @@ subject and a tenant. This is show in :numref:`retrieving_topics`;
    database Redis
    control Kafka
 
-   DeviceManager -> DataBroker: GET /topic/dojot.device-manager.devices \nHeaders="Authorization: JWT"
+   DeviceManager -> DataBroker: GET /topic/dojot.device-manager.devices \nHeaders="Authorization: Bearer JWT"
    note left
      JWT contains the
      service associated
@@ -148,14 +164,14 @@ subject and a tenant. This is show in :numref:`retrieving_topics`;
    end note
    activate DataBroker
    DataBroker -> Redis: GET KEY\n"admin:dojot.device-manager.devices "
-   Redis --> DataBroker: 9d0352b7-d195-4852...
-   DataBroker -> Redis: GET KEY\n"profile-admin:dojot.device-manager.devices "
    note left
      If the key does
      not exist, then
      it will be
      created.
    end note
+   Redis --> DataBroker: 9d0352b7-d195-4852...
+   DataBroker -> Redis: GET KEY\n"profile-admin:dojot.device-manager.devices "
    Redis --> DataBroker: { "topic-profile": { ... } }
    DataBroker -> Kafka: CREATE TOPIC \n9d0352b7-d195-4852...\n{ "topic-profile": { ... } }
    note left
@@ -171,11 +187,11 @@ subject and a tenant. This is show in :numref:`retrieving_topics`;
    Kafka --> DeviceManager: OK
 
 In this example, DeviceManager needs to publish a message about a new device.
-In order to do that, it sends a request to DataBroker, indicating which tenant
-(in JWT token) and which subject (``dojot.device-manager.devices``) it wants to
-use to send the message. DataBroker will invoke Redis to check whether this
-topic is already created and check whether dojot administrator had created a
-profile to this particular tuple ``{tenant, subject}``.
+In order to do so, it sends a request to DataBroker, indicating which tenant
+(within JWT token) and which subject (``dojot.device-manager.devices``) it
+wants to use to send the message. DataBroker will invoke Redis to check whether
+this topic is already created and check whether dojot administrator had created
+a profile to this particular tuple ``{tenant, subject}``.
 
 The two profile schemes available are shown in :numref:`automatic_scheme` and
 :numref:`assigned_scheme`.
@@ -219,14 +235,14 @@ either send messages or receive messages from Kafka. As dojot groups Kafka
 topics and tenants into subjects (a subject will be composed by one or more
 Kafka topics, each one transmitting messages for a particular tenant), the
 component must bootstrap each tenant before sending or receiving messages. This
-is done in two phases: component startup time and .
+is done in two phases: component boot time and component runtime.
 
 In the first phase, a component asks Auth in order to retrieve all currently
-configured tenants. It is interested, let's say, in consuming messages from `device-data` and
-`dojot.device-manager.devices` subjects. Therefore, it will request DataBroker
-a topic for each tenant for each subject. With that list of topics, it can
-create Producers and Consumers to send and receives messages through those
-topics. This is shown by :numref:`Tenant bootstrapping startup`.
+configured tenants. It is interested, let's say, in consuming messages from
+`device-data` and `dojot.device-manager.devices` subjects. Therefore, it will
+request DataBroker a topic for each tenant for each subject. With that list of
+topics, it can create Producers and Consumers to send and receives messages
+through those topics. This is shown by :numref:`Tenant bootstrapping startup`.
 
 .. _Tenant bootstrapping startup:
 .. uml::
@@ -253,10 +269,10 @@ topics. This is shown by :numref:`Tenant bootstrapping startup`.
      Kafka --> Component: OK
    end
 
-The second phase starts after startup and its purpose is to process all messages
-received through Kafka. This will include any tenant that is created after all
-services are up and running. :numref:`Tenant bootstrapping` shows how to deal
-with these messages.
+The second phase starts after startup and its purpose is to process all
+messages received through Kafka. This will include any tenant that is created
+after all services are up and running. :numref:`Tenant bootstrapping` shows how
+to deal with these messages.
 
 .. _Tenant bootstrapping:
 .. uml::
@@ -358,7 +374,8 @@ Device Manager
 
 DeviceManager stores and retrieves information models for devices and templates
 and a few static information about them as well. Whenever a device is created,
-removed or just edited, it will publish a message through Kafka.
+removed or just edited, it will publish a message through Kafka. It depends
+only on DataBroker and Kafka for reasons already explained in this document.
 
 IoT agent
 ---------
@@ -431,11 +448,12 @@ Such message would be:
 Persister
 ---------
 
-Persister is a very simple service which only purpose is to receive messages from
-devices (using ``device-data`` subject) and store them into MongoDB. For that, the
-bootstrapping procedure (detailed in `Bootstrapping tenants`_) is performed and,
-whenever a new message is received, it will create a new Mongo document and store
-it into the device's collection. This is show 
+Persister is a very simple service which only purpose is to receive messages
+from devices (using ``device-data`` subject) and store them into MongoDB. For
+that, the bootstrapping procedure (detailed in `Bootstrapping tenants`_) is
+performed and, whenever a new message is received, it will create a new Mongo
+document and store it into the device's collection. This is shown in
+:numref:`Persister`.
 
 .. _Persister:
 .. uml::
@@ -486,8 +504,16 @@ to the user/application. This is shown in :numref:`History`.
 Data Broker
 -----------
 
-DataBroker has a few more functionalities than only generate topics for ``{tenant, subject}``
-pairs. It will also serve socket.io connections to emit messages in real time.
+DataBroker has a few more functionalities than only generate topics for
+``{tenant, subject}`` pairs. It will also serve socket.io connections to emit
+messages in real time. In order to do so, it retrieves all topics for
+`device-data` subject, just as in any other component interested in data
+received from devices. As soon as it receives a message, it will then forward
+it to a 'room' (using socket.io vocabulary) associated to the device and to the
+associated tenant. Thus, all client connected to it (such as graphical user
+interfaces) will receive a new message containing all the received data. For
+more information about how to open a socket.io connection with DataBroker,
+check `DataBroker documentation`_.
 
 
 Flowbroker
@@ -496,6 +522,7 @@ Flowbroker
 
 .. _API - data-broker: https://dojot.github.io/data-broker/apiary_latest.html
 .. _Kafka partitions and replicas: https://sookocheff.com/post/kafka/kafka-in-a-nutshell/#what-is-kafka
+.. _DataBroker documentation: https://dojot.github.io/data-broker/apiary_latest.html
 .. _Kafka's official documentation: https://kafka.apache.org/documentation/
 .. _Kong's documentation: https://docs.konghq.com/0.14.x/getting-started/configuring-a-service/
 .. _Kong JWT plugin page: https://docs.konghq.com/hub/kong-inc/jwt/
