@@ -14,6 +14,7 @@ and efficient infrastructure.
    :glob:
 
    architecture
+   iotagent-architecture
    concepts
    components-and-apis
    installation-guide
