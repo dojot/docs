@@ -280,7 +280,7 @@ To do so, run the following command:
 
 .. code:: bash
 
-  ansible-playbook -K -k inventories/YOUR_INVENTORY deploy.yaml
+  ansible-playbook -K -k -i inventories/YOUR_INVENTORY deploy.yaml
 
 Wait for the playbook execution to finish without errors.
 
