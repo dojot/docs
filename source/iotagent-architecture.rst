@@ -23,14 +23,15 @@ Introduction
 
 Using dojot involves dealing with the following entities:
 
-- **physical devices**: devices that emits readings to other services. They
+- **physical devices**: devices that sends messages to IoT agents. They
   might have sensors and might be configurable, but this is not mandatory.
   Also, they must have some kind of connectivity to other services so that they
   can send their readings to these services.
 - **users**: whoever sends requests to dojot in order to manage resources,
   retrieve historical device data, create subscriptions, manage flows, and so
   on.
-- **tenants**: groups of users that share resources.
+- **tenants**: logical separation between resources that might be associated
+  with multiple users.
 - **resources**: elements that are associated to a particular entity. They are:
 
    - *devices*: representation of a element which has attributes. This element
@@ -38,8 +39,8 @@ Using dojot involves dealing with the following entities:
      attribute updates directly by a device.
    - *templates*: device blueprints that contain a list of attributes
      associated to that class of devices. All devices are created based on a
-     templates, from which it will inherit attributes.
-   - *topics*: Kafka communication channels that is used to send and receive
+     template, from which it will inherit attributes.
+   - *topics*: Kafka communication channels that are used to send and receive
      messages between dojot services.
    - *flows*: Sequence of processing blocks that are created by a user or an
      application and are used to analyze and preprocess data.
@@ -54,9 +55,9 @@ agent and they are categorized in the following groups:
 
 #. **Device security**: IoT agents must be able to check whether a device
    connection is valid or not. A valid device connection is defined as one
-   originated by a trusty physical device (or any representative element, such
+   originated by a trusted physical device (or any representative element, such
    as gateways) which is allowed to connect to the IoT agent. A device is
-   deemed as trusty by: (1) creating a device associated to it (which may
+   deemed as trusted by: (1) creating a device associated with it (which may
    include security information such as cryptographic keys) or (2) indicating
    directly to IoT agent that a device or a representative element is allowed
    to connect to it (so that elements that serves as relay connections can be
@@ -81,9 +82,9 @@ agent and they are categorized in the following groups:
    messages (if allowed by the protocol) to devices and, therefore, send
    updates to other dojot services based on received device messages. All
    messages received from a particular device and sent to other dojot services
-   must have the same order as it was received. IoT agents should also be able
-   to enable or disable message processing from a particular device and detect
-   device liveness.
+   must be sent in the same order as it was received. IoT agents should also be
+   able to enable or disable message processing from a particular device and
+   detect device liveness.
 
    An extra feature that an IoT agent might implement is firmware updates.
    Depending on is underlying protocol, it might be possible to do such thing
@@ -159,11 +160,11 @@ Communication security
 With a valid certificate, a device can create a communication channel with
 dojot. For connection-oriented channels, this certificate should be used
 alongside cryptographic keys in order to provide an encrypted channel. For
-other channel types (such exchanging messages through a device gateway, such as
-LoRa or sigfox), it suffice to be sure that the connection between dojot and
-the backend server is secure. The backend identity should be asserted
-beforehand. Once it is known to be trusted, all its messages can be processed
-with no major concern.
+other channel types (such as channels for exchanging messages through a
+gateway, such as LoRa or sigfox), it suffice to be sure that the connection
+between dojot and the backend server is secure. The backend identity should be
+asserted beforehand. Once it is known to be trusted, all its messages can be
+processed with no major concern.
 
 Certificate revocation
 ----------------------
@@ -177,12 +178,12 @@ Information context separation
 ==============================
 
 A tenant could be thought simply as a group of users that share some resources.
-But its meaning goes beyond that - it implies that these resources do not share
-any common infrastructure (considering anything that transmits, processes or
-stores data) with resources belonging to other tenants. One might want to have
-separate software instances to process data from different tenants so that
-processing data from one tenant will not affect processing data from the other,
-achieving a higher level of context separation.
+But its meaning might go beyond that - it might implies that these resources
+would not share any common infrastructure (considering anything that transmits,
+processes or stores data) with resources belonging to other tenants. One might
+want to have separate software instances to process data from different tenants
+so that processing data from one tenant will not affect processing data from
+the other, achieving a higher level of context separation.
 
 Although this is desirable, some deployment scenarios might force using some of
 the same infrastructure for different tenants (for instance, when the
@@ -192,7 +193,7 @@ should use everything it can to separate them, such as using different threads,
 queues, sockets, etc., and should not rely solely in deployment scenarios
 features (such as different IoT agents for different tenants). For instance,
 for topic based protocols, such as MQTT, one might want to force different
-topics for different tenants. Should a device publishes data to a particular
+topics for different tenants. Should a device publish data to a particular
 topic that is owned by other tenant, this message is ignored or blocked
 (sending an error back to the device might be an optional behavior). Therefore
 no device from one tenant can send messages to any device from other tenant.
@@ -216,18 +217,18 @@ should expose:
   used to publish its device template is detailed in `Device Template message`_
   section.
 - **Management APIs**: an IoT agent should be manageable and should expose its
-  APIs to to that. The minimum set of management APIs that an IoT agent should
+  APIs to do that. The minimum set of management APIs that an IoT agent should
   offer are:
 
-  - *Logging*: there should be a way to changing the log level of an IoT agent;
+  - *Logging*: there should be a way to change the log level of an IoT agent;
   - *Statistics*: an IoT agent may expose an API to let a user or application
     retrieve statistical information about its execution. An administrator
-    might want to trigger on or off the generation of a particular statistical
+    might want to switch on or off the generation of a particular statistical
     variable, such as processing time.
 
 An IoT agent should also be able to gather statistics information related to
-its execution. Furthermore, it should let an administrator to set quotas on
-those measured quantities. These quantities might include, but not limited to:
+its execution. Furthermore, it should let an administrator set quotas on those
+measured quantities. These quantities might include, but are not limited to:
 
 - transmission statistics
 
