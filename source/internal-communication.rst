@@ -60,8 +60,8 @@ found in each component documentation.
 Messaging and authentication
 ----------------------------
 
-There are two forms through which dojot components can talk to each other: via
-HTTP REST requests and via Kafka. They are intended for different purposes,
+There are two methods through which dojot components can talk to each other:
+via HTTP REST requests and via Kafka. They are intended for different purposes,
 though.
 
 HTTP requests can be sent at boot time when a component want, for instance,
@@ -90,10 +90,12 @@ Sending HTTP requests
 +++++++++++++++++++++
 
 In order to send requests via HTTP, a service must create an access token,
-described here. There is no further considerations beoynd following the API
+described here. There is no further considerations beyond following the API
 description associated to each service. This can be seen in figure
 :numref:`initial_authentication`. Note that all interactions depicted here are
-abstractions of the actual ones.
+abstractions of the actual ones. Also, it should be noted that these interactions
+are valid only for internal components. Any external service should use Kong
+as entrypoint.
 
 This is a test
 
@@ -146,7 +148,7 @@ In this figure, a client creates a new device using the token retrieved in
 :numref:`initial_authentication`. This request is analyzed by Kong, which will
 invoke Auth to check whether the user set in the token is allowed to ``POST``
 to ``/device`` endpoint. Only after the approval of such request, Kong will
-forward it to DeviceManager. 
+forward it to DeviceManager.
 
 
 Sending Kafka messages
@@ -366,6 +368,14 @@ selected endpoints:
    will invoke Auth in order to authenticate requests. This plugin is available
    in `PEP-Kong repository`_.
 
+The following request install these two plugins in data-broker API:
+
+
+.. code-block:: bash
+
+  curl -o /dev/null -sS -X POST ${kong}/apis/data-broker/plugins -d "name=jwt"
+  curl -o /dev/null -sS -X POST ${kong}/apis/data-broker/plugins -d "name=pepkong" -d "config.pdpUrl=http://auth:5000/pdp"
+
 
 Emitted messages
 ****************
@@ -386,6 +396,9 @@ DeviceManager stores and retrieves information models for devices and templates
 and a few static information about them as well. Whenever a device is created,
 removed or just edited, it will publish a message through Kafka. It depends
 only on DataBroker and Kafka for reasons already explained in this document.
+
+All messages published by Device Manager to Kafka can be seen in `Device
+Manager messages`_.
 
 IoT agent
 ---------
@@ -514,7 +527,7 @@ to the user/application. This is shown in :numref:`History`.
 Data Broker
 -----------
 
-DataBroker has a few more functionalities than only generate topics for
+DataBroker has a few more functionalities than only generating topics for
 ``{tenant, subject}`` pairs. It will also serve socket.io connections to emit
 messages in real time. In order to do so, it retrieves all topics for
 `device-data` subject, just as in any other component interested in data
@@ -529,10 +542,12 @@ check `DataBroker documentation`_.
 Flowbroker
 ----------
 
+TODO!
 
 .. _API - data-broker: https://dojot.github.io/data-broker/apiary_latest.html
 .. _Kafka partitions and replicas: https://sookocheff.com/post/kafka/kafka-in-a-nutshell/#what-is-kafka
 .. _DataBroker documentation: https://dojot.github.io/data-broker/apiary_latest.html
+.. _Device Manager messages: https://dojotdocs.readthedocs.io/projects/DeviceManager/en/latest/kafka-messages.html
 .. _Kafka's official documentation: https://kafka.apache.org/documentation/
 .. _Kong's documentation: https://docs.konghq.com/0.14.x/getting-started/configuring-a-service/
 .. _Kong JWT plugin page: https://docs.konghq.com/hub/kong-inc/jwt/
