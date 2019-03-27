@@ -12,7 +12,7 @@ TODO
 - Build a list of terms (so that I can just say "blingblong" meaning "physical devices or its representative elements)
 - Find a better term for "representative elements"
 - Fill the Device identity section
-- Select what SHOULD be done, what MAY be implemented or SHALL be presented 
+- Select what SHOULD be done, what MAY be implemented or SHALL be presented
 
 Who should read this?
 =====================
@@ -60,7 +60,7 @@ agent and they are categorized in the following groups:
    include security information such as cryptographic keys) or (2) indicating
    directly to IoT agent that a device or a representative element is allowed
    to connect to it (so that elements that serves as relay connections can be
-   properly and securely used). 
+   properly and securely used).
 #. **Information context separation**: each resource (device, templates, topics
    and flows) is associated to a particular tenant and entities that don't
    belong to that tenant must not be allowed to access its resources. This is
@@ -84,6 +84,10 @@ agent and they are categorized in the following groups:
    must have the same order as it was received. IoT agents should also be able
    to enable or disable message processing from a particular device and detect
    device liveness.
+
+   An extra feature that an IoT agent might implement is firmware updates.
+   Depending on is underlying protocol, it might be possible to do such thing
+   in a easy, secure and reliable way.
 
 Each one of these groups is going to be detailed in the following sections.
 
@@ -346,7 +350,7 @@ The following subjects should be used by IoT agents:
 Each one will be detailed in the following sections
 
 dojot.tenancy
-=============
+^^^^^^^^^^^^^
 
 The topic related to this subject will be used to receive tenant lifecycle
 events. Whenever a new tenant is created or delete, the following message will
@@ -373,7 +377,7 @@ A sample message received by this topic is:
     }
 
 dojot.device-manager.device-template
-====================================
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 +------------------------------------------------------+
 | Subject: dojot.device-manager.device-template        |
@@ -390,7 +394,7 @@ dojot.device-manager.device-template
 
 
 dojot.device-manager.devices
-============================
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 the topic related to this subject will be used to receive device lifecycle
 events for a particular tenant. Its format is:
@@ -488,7 +492,7 @@ A sample message received by this topic is:
     }
 
 device-data
-===========
+^^^^^^^^^^^
 
 The topic related to this subject will be used to publish data retrieved from a
 physical device to other dojot services. Its format is:
@@ -528,6 +532,16 @@ A sample message received by this topic is:
         "humidity": 60
       }
     }
+
+Firmware update
+---------------
+
+An IoT agent might implement mechanisms in order to update firmware in devices.
+
+The firmware update process should be:
+
+-
+
 
 Behavior
 ========
