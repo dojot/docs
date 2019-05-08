@@ -18,21 +18,43 @@ Dojot nodes
 .. contents::
   :local:
 
-Device in
-*********
+Device Event in
+***************
 
-.. _device_in_node:
-.. image:: images/nodes/device_node.png
+.. _event-device-in:
+.. image:: images/nodes/event-device-in.png
     :width: 20%
-    :align: center
+    :align: left
     :alt: device_node
 
-This node determine an especific device to be the entry-point of a flow. To
-configure the device in node, a window like :numref:`device_in_cfg` will be
-displayed.
+This node specifies that messages received from or sent to a particular device.
+The message created by this node is somewhat different than the one created by
+DeviceIn node:
 
-.. _device_in_cfg:
-.. figure:: images/nodes/device_node_cfg.png
+.. code-block:: json
+
+    {
+        "data": {
+            "attrs": {
+                "temperature": 10,
+                "some-static-attr": "efac"
+            }
+        }
+    }
+
+This structure can be referenced in nodes like `Template`_ such as:
+
+.. code-block:: handlebars
+
+    Sample message {{payload.data.attrs.temperature}}
+
+
+
+To configure the device in node, a window like :numref:`event-device-in-panel`
+will be displayed.
+
+.. _event-device-in-panel:
+.. figure:: images/nodes/event-device-in-panel.png
     :width: 50%
     :align: center
     :alt: devicein_node_cfg
@@ -43,32 +65,34 @@ Fields:
 
 * **Name** *(optional)*: Name of the node
 * **Device** *(required)*: The *dojot* device that will trigger the flow
-* **Status** *(required)*: *exclude device status changes* will not use device
-  status changes (online, offline) to trigger the flow. On the other hand,
-  *include devices status changes* will use these status to trigger the flow.
+* **Events** *(required)*: Select which events will trigger this flow. The
+  `Actuation` option will select actuation messages (those sent to the device)
+  and `Publication` will select all messages published by the device.
 
 .. note::
-    If the the device that triggers a flow is removed, the flow becomes invalid.
+    If the the device that triggers a flow is removed, the flow won't work
+    anymore.
 
-Device template in
-******************
+Device template event in
+************************
 
-.. _devicetemplate_in_node:
-.. image:: images/nodes/devicetemplate_node.png
+.. _event-template-in:
+.. image:: images/nodes/event-template-in.png
     :width: 20%
     :align: left
     :alt: devicetemplatein_node
 
-This node will make that a flow get triggered by devices that are composed by a
-certain template. If the device template that is configured in **device
-template in** node is template A, all devices that are composed with template A
-will trigger the flow. For example: *device1* is composed by templates [A,B],
+This node will specifies that messages from devices composed by a particular
+template will trigger this flow. For instance, if the device template set in
+this node is template A, all devices that are composed with template A will
+trigger the flow. For example: *device1* is composed by templates [A,B],
 *device2* by template A and *device3* by template B. Then, in that scenario,
 only messages from *device1* and *device2* will initiate the flow, because
 template A is one of the templates that compose those devices.
 
-.. _devicetemplate_node_cfg:
-.. figure:: images/nodes/devicetemplate_node_cfg.png
+
+.. _event-template-in-panel:
+.. figure:: images/nodes/event-template-in-panel.png
     :width: 50%
     :align: center
     :alt: devicetemplatein_node
@@ -79,8 +103,92 @@ Fields:
 
 * **Name** *(optional)*: Name of the node.
 * **Device** *(required)*: The *dojot* device that will trigger the flow.
-* **Status** *(required)*: Choose if devices status changes will trigger or not
-  the flow.
+* **Events** *(required)*: Select which event will trigger this flow.
+  `Creation`, `Update`, `Removal` are related to device management operations.
+  `Actuation` will trigger this flow in case of sending actuation messages to
+  the device and `Publication` will trigger this flow whenever a device
+  publishes a message to dojot.
+
+
+Multi device out
+****************
+
+.. _multi-device-out:
+.. image:: images/nodes/multi-device-out.png
+    :width: 20%
+    :align: left
+    :alt: deviceout_node
+
+Device out will determine wich device (or devices) will have its attributes
+updated on *dojot* according to the result of the flow. Bear in mind that this
+node doesn't send messages to your device, it will only update the attributes
+on the platform. Normally, the chosen device out is a *virtual device*, which
+is a device that exists only on *dojot*.
+
+.. _multi-device-out-panel:
+.. figure:: images/nodes/multi-device-out-panel.png
+    :width: 50%
+    :align: center
+    :alt: deviceout_node_cfg
+
+    : Device out config window
+
+Fields:
+
+* **Name** *(optional)*: Name of the node.
+* **Action** *(required)*: Which node will receive the update. Options are:
+   - `The device that triggered the flow`: this will update the same device
+     that sent the message which triggered this flow.
+   - `Specific device(s)`: which nodes that will receive the update.
+   - `Device(s) defined during the flow`: which nodes that will receive the
+     update. This is referenced by a list of values, just as with output
+     values (msg.list_of_devices).
+* **Device** *(required)*: Select "The device that triggered the flow" will
+  make the device that was the entry-point be the end-point of the flow.
+  "Specific device" any chosen device wil be the output of the flow and "a
+  device defined during the flow" will make a device that the flow selected
+  during the execution the endpoint.
+* **Source** *(required)*: Data structure that will be mapped as message to
+  device out
+
+Multi actuate
+*************
+
+.. _multi-actuate:
+.. image:: images/nodes/multi-actuate.png
+    :width: 20%
+    :align: left
+    :alt: actuate_node
+
+Actuate node is, basically, the same thing of **device out** node. But, it can
+send messages to a real device, like telling a lamp to turn the light off and
+etc.
+
+.. _multi-actuate-panel:
+.. figure:: images/nodes/multi-actuate-panel.png
+    :width: 50%
+    :align: center
+    :alt: actuate_node_cfg
+
+    : Actuate configuration
+
+Fields:
+
+* **Name** *(optional)*: Name of the node.
+* **Action** *(required)*: which device a message will be sent to. Options are:
+   - `The device that triggered the flow`: this will send a message to
+     the same device that sent the message which triggered this flow.
+   - `Specific device(s)`: which node the message will be sent to.
+   - `Device(s) defined during the flow`: which nodes the message will be
+     sent to. This is referenced by a list of values, just as with output
+     values (msg.list_of_devices).
+* **Device** *(required)*: Select "The device that triggered the flow" will
+  make the device that was the entry-point be the end-point of the flow.
+  "Specific device" any chosen device wil be the output of the flow and "a
+  device defined during the flow" will make a device that the flow selected
+  during the execution the endpoint.
+* **Source** *(required)*: Data structure that will be mapped as message to
+  device out
 
 http
 ****
@@ -113,68 +221,43 @@ Fields:
 * **Return** *(required)*: Type of the return.
 * **Name** *(required)*: Name of the node.
 
+ftp
+***
 
-Device out
-**********
-
-.. _deviceout_node:
-.. image:: images/nodes/deviceout_node.png
+.. _ftp-request:
+.. image:: images/nodes/ftp-request.png
     :width: 20%
     :align: left
-    :alt: deviceout_node
+    :alt: http_node
 
-Device out will determine wich device will have its attributes updated on
-*dojot* according to the result of the flow. Bear in mind that this node
-doesn't send messages to your device, it will only update the attributes on the
-platform. Normally, the chosen device out is a *virtual device*, which is a
-device that exists only on *dojot*.
+This node sends or retrieves a file from/to a FTP server. When uploading a
+file, its name can be set by setting the "Filename" field in the same way as
+other output variables (it should refer to a variable set in the flow). The
+file encoding will set the file enconding, which could be, for instance,
+"base64" or "utf-8".
 
-.. _deviceout_node_cfg:
-.. figure:: images/nodes/deviceout_node_cfg.png
+
+.. _ftp-request-panel:
+.. figure:: images/nodes/ftp-request-panel.png
     :width: 50%
     :align: center
-    :alt: deviceout_node_cfg
+    :alt: httpin_node
 
-    : Device out config window
+    : Device template in configuration window
 
 Fields:
 
-* **Name** *(optional)*: Name of the node.
-* **Device** *(required)*: Select "The device that triggered the flow" will
-  make the device that was the entry-point be the end-point of the flow.
-  "Specific device" any chosen device wil be the output of the flow and "a
-  device defined during the flow" will make a device that the flow selected
-  during the execution the endpoint.
-* **Source** *(required)*: Data structure that will be mapped as message to
-  device out
+* **Method** *(required)*: The FTP action to be taken (PUT, GET).
+* **URL** *(required)*: the FTP server
+* **Authentication** *(required)*: Username and password to access this server.
+* **File name** *(required)*: Variable containing the file name to be uploaded
+  or downloaded.
+* **File content** *(required)*: In case of uploading a file, this variable
+  should hold the file content.
+* **File encoding** *(required)*: How the file is encoded
+* **Response** *(required)*: Variable that will receive the FTP response
+  (or file)
 
-Actuate
-*******
-
-.. _actuate_node:
-.. image:: images/nodes/actuate_node.png
-    :width: 20%
-    :align: left
-    :alt: actuate_node
-
-Actuate node is, basically, the same thing of **device out** node. But, it can
-send messages to a real device, like telling a lamp to turn the light off and
-etc.
-
-.. _actuate_node_cfg:
-.. figure:: images/nodes/actuate_node_cfg.png
-    :width: 50%
-    :align: center
-    :alt: actuate_node_cfg
-
-    : Actuate configuration
-
-Fields:
-
-* **Name** *(optional)*: Name of the node.
-* **Device** *(required)*: A real device on dojot
-* **Source** *(required)*: Data structure that will be mapped as message to
-  device out
 
 Change
 ******
@@ -280,35 +363,6 @@ Fields:
   set on **Set property**
 * **Output as** *(required)*: The format of the output
 
-Email
-*****
-
-.. _email_node:
-.. image:: images/nodes/email_node.png
-    :width: 20%
-    :align: left
-    :alt: email_node
-
-Sends an e-mail for a given address.
-
-.. _email_node_cfg:
-.. figure:: images/nodes/email_node_cfg.png
-    :width: 50%
-    :align: center
-    :alt: email_node_cfg
-
-    : Email configuration
-
-Fields:
-
-* **From** *(required)*: The source email.
-* **To** *(required)*: Destination email.
-* **Server** *(required)*: The server of the email destination.
-* **Subject** *(required)*: Subject of the email.
-* **Body** *(required)*: Message on the email. The message can be writen in a
-  variable using the **template node**, for example.
-* **Name** *(optional)*: Name of the node.
-
 Geofence
 ********
 
@@ -364,6 +418,141 @@ Fields:
 * **Context content** *(required)**: The variable in the flow that will receive
   the value of the context
 
+
+
+Deprecated nodes
+****************
+
+These nodes are scheduled to be removed in future versions. They will work
+with no problems with current flows.
+
+
+Device in
++++++++++
+
+.. _device_in_node:
+.. image:: images/nodes/device_node.png
+    :width: 20%
+    :align: center
+    :alt: device_node
+
+This node determine an especific device to be the entry-point of a flow. To
+configure the device in node, a window like :numref:`device_in_cfg` will be
+displayed.
+
+.. _device_in_cfg:
+.. figure:: images/nodes/device_node_cfg.png
+    :width: 50%
+    :align: center
+    :alt: devicein_node_cfg
+
+    : Device in configuration window
+
+Fields:
+
+* **Name** *(optional)*: Name of the node
+* **Device** *(required)*: The *dojot* device that will trigger the flow
+* **Status** *(required)*: *exclude device status changes* will not use device
+  status changes (online, offline) to trigger the flow. On the other hand,
+  *include devices status changes* will use these status to trigger the flow.
+
+.. note::
+    If the the device that triggers a flow is removed, the flow becomes invalid.
+
+Device template in
+++++++++++++++++++
+
+.. _devicetemplate_in_node:
+.. image:: images/nodes/devicetemplate_node.png
+    :width: 20%
+    :align: left
+    :alt: devicetemplatein_node
+
+This node will make that a flow get triggered by devices that are composed by a
+certain template. If the device template that is configured in **device
+template in** node is template A, all devices that are composed with template A
+will trigger the flow. For example: *device1* is composed by templates [A,B],
+*device2* by template A and *device3* by template B. Then, in that scenario,
+only messages from *device1* and *device2* will initiate the flow, because
+template A is one of the templates that compose those devices.
+
+.. _devicetemplate_node_cfg:
+.. figure:: images/nodes/devicetemplate_node_cfg.png
+    :width: 50%
+    :align: center
+    :alt: devicetemplatein_node
+
+    : Device template in configuration window
+
+Fields:
+
+* **Name** *(optional)*: Name of the node.
+* **Device** *(required)*: The *dojot* device that will trigger the flow.
+* **Status** *(required)*: Choose if devices status changes will trigger or not
+  the flow.
+
+
+Device out
+++++++++++
+
+.. _deviceout_node:
+.. image:: images/nodes/deviceout_node.png
+    :width: 20%
+    :align: left
+    :alt: deviceout_node
+
+Device out will determine wich device will have its attributes updated on
+*dojot* according to the result of the flow. Bear in mind that this node
+doesn't send messages to your device, it will only update the attributes on the
+platform. Normally, the chosen device out is a *virtual device*, which is a
+device that exists only on *dojot*.
+
+.. _deviceout_node_cfg:
+.. figure:: images/nodes/deviceout_node_cfg.png
+    :width: 50%
+    :align: center
+    :alt: deviceout_node_cfg
+
+    : Device out config window
+
+Fields:
+
+* **Name** *(optional)*: Name of the node.
+* **Device** *(required)*: Select "The device that triggered the flow" will
+  make the device that was the entry-point be the end-point of the flow.
+  "Specific device" any chosen device wil be the output of the flow and "a
+  device defined during the flow" will make a device that the flow selected
+  during the execution the endpoint.
+* **Source** *(required)*: Data structure that will be mapped as message to
+  device out
+
+Actuate
++++++++
+
+.. _actuate_node:
+.. image:: images/nodes/actuate_node.png
+    :width: 20%
+    :align: left
+    :alt: actuate_node
+
+Actuate node is, basically, the same thing of **device out** node. But, it can
+send messages to a real device, like telling a lamp to turn the light off and
+etc.
+
+.. _actuate_node_cfg:
+.. figure:: images/nodes/actuate_node_cfg.png
+    :width: 50%
+    :align: center
+    :alt: actuate_node_cfg
+
+    : Actuate configuration
+
+Fields:
+
+* **Name** *(optional)*: Name of the node.
+* **Device** *(required)*: A real device on dojot
+* **Source** *(required)*: Data structure that will be mapped as message to
+  device out
 
 
 Learn by examples
