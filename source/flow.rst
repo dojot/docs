@@ -259,6 +259,42 @@ Fields:
   (or file)
 
 
+notification
+************
+
+.. _notification-request:
+.. image:: images/nodes/notification.png
+    :width: 20%
+    :align: left
+    :alt: http_node
+
+This node sends a user notification to other services in dojot. This might be
+useful to generate application notifications that could be consumed by a
+front-end application. The user can set a static message to be sent or, as
+other output nodes, configure a variable set in a previous node which will be
+resolved at runtime. Also, metadata can be added to the message: it can be
+a simple key-value object containing arbitrary data.
+
+.. _notification-panel:
+.. figure:: images/nodes/notification-panel.png
+    :width: 50%
+    :align: center
+    :alt: httpin_node
+
+    : Device template in configuration window
+
+Fields:
+
+* **Name** *(optional)*: Name of the node
+* **Message** *(required)*: Static, if the notification should contain a static
+  text, or dynamic, which will enable a variable to be set as output to this
+  node. This variable will be substituted in runtime.
+* **Value** *(required)*: message content (either static text or a variable
+  reference).
+* **Metadata** *(required)*: variable reference containing a simple dictionary
+  (key-value pairs) containing the metadata to be added to the message
+
+
 Change
 ******
 
