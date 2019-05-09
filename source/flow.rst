@@ -597,59 +597,6 @@ Learn by examples
 .. contents::
   :local:
 
-Using template and email nodes
-******************************
-
-To explain these nodes, the flow below will be used:
-
-.. _using_email_node_flow:
-.. figure:: images/nodes/using_email_node_flow.png
-    :width: 80%
-    :align: center
-    :alt: using_email_node_flow
-
-    : Flow using template and email nodes
-
-Wonder a system that sends an email to somebody when an order arrive at his
-mail box. The email would be sent with the name of the sender, his phone number
-and the content of the order. A device with the order finder template has the
-attributes: *sender*, *phone* and *content*.
-
-The template node will fill the message with the attributes that came in the
-message. The attributes sent by the entry-point device can be accessed on the
-variable **payload**. So, using the `mustache`_ template language, the node
-configuration would be like :numref:`using_email_node_template`.
-
-.. _using_email_node_template:
-.. figure:: images/nodes/using_email_node_template.png
-    :width: 80%
-    :align: center
-    :alt: using_email_node_template
-
-    : Template configuration
-
-Then, the email body on the email node should be assigned to the variable that
-is on the field *Set property* on :numref:`using_email_node_template`:
-
-.. _using_email_node_email:
-.. figure:: images/nodes/using_email_node_email.png
-    :width: 80%
-    :align: center
-    :alt: using_email_node_email
-
-    : Email node configuration
-
-Then, the result of the flow, is an email arrive, problably at the spam box, to
-the destination address:
-
-.. _using_email_node:
-.. figure:: images/nodes/using_email_node.png
-    :width: 120%
-    :align: center
-    :alt: using_email_node
-
-    : Sent email
-
 Using http node
 ***************
 
