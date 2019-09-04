@@ -23,7 +23,7 @@ new template, as shown below.
 .. raw:: html
 
     <iframe id="ytplayer" type="text/html" width="720" height="405"
-    src="https://www.youtube.com/embed/C-P_SfeNA_A?rel=0" frameborder="0"
+    src="https://www.youtube.com/embed/0vrBUNluwy4?rel=0" frameborder="0"
     allowfullscreen></iframe>
 
 
@@ -36,7 +36,7 @@ on, as shown below.
 .. raw:: html
 
     <iframe id="ytplayer" type="text/html" width="720" height="405"
-    src="https://www.youtube.com/embed/RgeQPd7QSjg?rel=0" frameborder="0"
+    src="https://www.youtube.com/embed/4A5IUiZfAnY?rel=0" frameborder="0"
     allowfullscreen></iframe>
 
 Note that, when you select the template in the right panel at device creation
@@ -92,7 +92,7 @@ mosquitto_pub.
 .. raw:: html
 
     <iframe id="ytplayer" type="text/html" width="720" height="405"
-    src="https://www.youtube.com/embed/PwKMD02mH88?rel=0" frameborder="0"
+    src="https://www.youtube.com/embed/0LKuWzuvm9s?rel=0" frameborder="0"
     allowfullscreen></iframe>
 
 Now that we've created the sensors, let's create a virtual one. This will be
@@ -110,7 +110,7 @@ let's create one, as shown below.
 .. raw:: html
 
     <iframe id="ytplayer" type="text/html" width="720" height="405"
-    src="https://www.youtube.com/embed/qb64f4PAhEo?rel=0" frameborder="0"
+    src="https://www.youtube.com/embed/BGdBwxYqig8?rel=0" frameborder="0"
     allowfullscreen></iframe>
 
 
@@ -129,7 +129,7 @@ on fire. This is done as shown belown.
 .. raw:: html
 
     <iframe id="ytplayer" type="text/html" width="720" height="405"
-    src="https://www.youtube.com/embed/7r5demA3rr0?rel=0" frameborder="0"
+    src="https://www.youtube.com/embed/BDeUJymCTsc?rel=0" frameborder="0"
     allowfullscreen></iframe>
 
 Note that the "change" nodes have a reference to an "output" entity. This can
@@ -147,7 +147,7 @@ device.
 .. raw:: html
 
     <iframe id="ytplayer" type="text/html" width="720" height="405"
-    src="https://www.youtube.com/embed/mXrgSfclxI0?rel=0" frameborder="0"
+    src="https://www.youtube.com/embed/g_n9C6EXJ5g?rel=0" frameborder="0"
     allowfullscreen></iframe>
 
 
