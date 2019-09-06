@@ -17,7 +17,6 @@ For a device to connect using TLS with Mosca, it must possess:
 -  The certificate of this CA (.crt file);
 -  An entry on Mosca Access Control List (ACL), allowing the device
    to publish on a specific topic;
--  (optional) A Certificate Revocation List (CRL).
 
 When a device is created, DeviceManager will automatically notify
 the following components:
@@ -246,19 +245,6 @@ Important Notes
 These are a few but important notes related to device security and
 associated subjects.
 
-CRL (Certification Revocation List)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-A CRL is a list which contains all revoked certificates. It is used to indicate
-which certificates are no longer valid (administratively set to invalid) as a
-normal certificate can be used for 1 to 5 years. This list is signed by CA and
-also has an expiration date - 1 day by default. In TLS protocol, if CRL is
-expired then the recommended action to be taken is to refuse all incoming
-connections, as there is no way to check if the certificates used in those
-connections are invalid or not. This procedure is implemented in Mosca.
-
-Therefore, CA must generate a new list periodically. All components that use it
-must be updated.
 
 Debugging
 ~~~~~~~~~
@@ -278,11 +264,6 @@ A certificate file can be in two formats: PEM (base64 text) or DER
 
     openssl x509 -noout -text -in certFile.crt
 
-To read a CRL:
-
-.. code:: bash
-
-    openssl crl -inform PEM -text -noout -in crlFile.crl
 
 How to verify if an entity is created in EJBCA
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

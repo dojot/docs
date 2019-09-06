@@ -1,9 +1,11 @@
 Release history
 ===============
 
-battojutsu - 2018.10.03
+caratê - 2019.09.09
 -----------------------
 
+
+//TODO: 
 
 - IoT agents:
 
@@ -11,6 +13,7 @@ battojutsu - 2018.10.03
   - Support for `LoRa devices <http://github.com/dojot/iotagent-lora-everynet>`_ to be
     used with EveryNet networks.
   - Many improvements for IoT agent MQTT - performance, stability and documentation.
+
 
 - GUI:
 
