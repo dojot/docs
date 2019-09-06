@@ -14,7 +14,7 @@ Hardware requirements
 In order to properly run dojot, the minimum hardware requirements are:
 
 - 4GB of RAM
-- 10GB of free disk space
+- 20GB of free disk space
 - Network access
 - The following ports should be opened:
    - TCP (incoming connections): 1883 (MQTT), 8883 (Secure MQTT if used), 8000
@@ -94,15 +94,16 @@ replaced): ::
 
 For instance: ::
 
-  git checkout v0.3.1 -b v0.3.1
+  git checkout v0.4.0 -b v0.4.0
 
 Or if you're brave enough: ::
 
   git checkout master
 
 After the repository is cloned, and a release (or branch) has been selected,
-there are still a few external modules that must be gathered before using the
-platform. These modules can be retrieved by executing the following command: ::
+there are still a few external modules (without this the authentication
+service will not work) that must be gathered before using the platform.
+These modules can be retrieved by executing the following command: ::
 
   git submodule update --init --recursive
 
