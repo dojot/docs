@@ -98,7 +98,7 @@ For instance: ::
 
 Or if you're brave enough: ::
 
-  git checkout master
+  git checkout development
 
 After the repository is cloned, and a release (or branch) has been selected,
 there are still a few external modules (without this the authentication
@@ -189,6 +189,7 @@ The first deployment step is cloning the repository. To do so,
 execute the command: ::
 
   git clone https://github.com/dojot/ansible-dojot
+  //TODO SET SOME VERSION?
 
 2. Installing dependencies
 ..........................

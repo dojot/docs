@@ -30,6 +30,7 @@ Using dojot involves dealing with the following entities:
 - **users**: whoever sends requests to dojot in order to manage resources,
   retrieve historical device data, create subscriptions, manage flows, and so
   on.
+- **profiles**: //TODO
 - **tenants**: logical separation between resources that might be associated
   with multiple users.
 - **resources**: elements that are associated to a particular entity. They are:
@@ -254,8 +255,9 @@ The main purpose of an IoT agent is to publish data from a particular device to
 other dojot services. Its operation is two fold: receive and process messages
 related to device management from other services as well as receive messages
 from the devices themselves (or their representative elements) and publish
-these data to other services. This is shown in the figure below.
+these data to other services. ~~This is shown in the figure below.~~ ??
 
+//TODO
 << a figure should be here >>
 
 The following sections describe how an IoT agent can send and receive messages
@@ -264,6 +266,8 @@ account when receiving messages from physical devices.
 
 Messages
 --------
+//Aqui ele explica muita coisas q as libs ja fornecem, é interessante estar aqui mesmo?
+//Nao deveria estar por exemplo no readme do databroker? Ou algo assim?
 
 At start, all IoT agents (in fact, all services that need to receive or send
 messages related to devices) must know the list of configured tenants. This is
@@ -540,7 +544,7 @@ Firmware update
 An IoT agent might implement mechanisms in order to update firmware in devices.
 
 The firmware update process should be:
-
+//TODO
 -
 
 

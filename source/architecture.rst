@@ -23,6 +23,7 @@ makes use of many well-known open-source components with others designed and
 implemented by dojot team. This architecture is described on
 :numref:`new_arch`.
 
+//TODO remove ALARM MANAGER in fig 1.1
 .. _new_arch:
 .. figure:: images/new_architecture.png
     :width: 100%
@@ -142,6 +143,11 @@ The data may also be directed to databases that are external do the *dojot*
 platform, requiring only a proper configuration of Logstash and the data model
 to be used.
 
+Cron
+*******
+
+//TODO
+
 Logging and Auditing Service
 ****************************
 
@@ -173,32 +179,16 @@ GUI
 The Graphical User Interface in *dojot* is responsible for providing responsive
 interfaces to manage the platform, including functionalities like:
 
-* **User Profile Management**: define profiles and the API permission
+* **User Profile Management**: Define profiles and the API permission
   associated to those profiles
 * **User Management**: Creation, Visualization, Edition and Deletion Operations
-* **Applications Management**: Creation, Visualization, Edition and Deletion
-  Operations
-* **Device Models Management**: Creation, Visualization, Edition and Deletion
+* **Templates Management**: Creation, Visualization, Edition and Deletion
   Operations
 * **Devices Management**: Creation, Visualization (real time data), Edition and
   Deletion Operations
 * **Processing Flows Management**: Creation, Visualization, Edition and
   Deletion Operations
-
-Elastic Service Controller
-**************************
-
-This is a service specialized for cloud environments, that is capable of
-monitoring the utilization of the platform, being able to increase or decrease
-its storage and processing capacity in an dynamic and automatic fashion to
-adapt to the variability on the demand.
-
-This controller depends that the dojot platform services are horizontally
-scalable, as well as the databases must be clusterizable, which match with the
-adopted architecture.
-
-This component is currently scheduled for development.
-
+* **Notifications**: View system notifications (unified real time and history)
 
 Image manager
 *************
