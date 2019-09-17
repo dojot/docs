@@ -254,9 +254,7 @@ The main purpose of an IoT agent is to publish data from a particular device to
 other dojot services. Its operation is two fold: receive and process messages
 related to device management from other services as well as receive messages
 from the devices themselves (or their representative elements) and publish
-these data to other services. This is shown in the figure below.
-
-<< a figure should be here >>
+these data to other services.
 
 The following sections describe how an IoT agent can send and receive messages
 to/from other dojot services and what are the considerations it must take into
@@ -538,10 +536,6 @@ Firmware update
 ---------------
 
 An IoT agent might implement mechanisms in order to update firmware in devices.
-
-The firmware update process should be:
-
--
 
 
 Behavior
