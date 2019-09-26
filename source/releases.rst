@@ -35,7 +35,7 @@ carate - 2019.09.11
   - New node Cumulative Sum
   - New node Merge data
   - Internacionalization
-  - Handlebars template, new message format
+  - Support to handlebars template on template node
 
 - History:
 
