@@ -57,9 +57,7 @@ Components
   * - EJBCA-REST
     - `GitHub - EJBCA-REST`_
     -
-  * - Alarm manager
-    - `GitHub - alarm-manager`_
-    -
+
 
 
 Exposed APIs
@@ -239,4 +237,3 @@ dojot.
 .. _GitHub - EJBCA-REST: https://github.com/dojot/ejbca-rest
 .. _API - EJBCA-REST: https://dojot.github.io/ejbca-rest/apiary_latest.html
 
-.. _GitHub - alarm-manager: https://github.com/dojot/alarm-manager
