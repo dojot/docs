@@ -4,7 +4,6 @@ Release history
 carate - 2019.09.11
 -----------------------
 
-
 - IoT agents:
 
   - Support for 

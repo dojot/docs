@@ -17,8 +17,8 @@ In order to properly run dojot, the minimum hardware requirements are:
 - 20GB of free disk space
 - Network access
 - The following ports should be opened:
-   - TCP (incoming connections): 1883 (MQTT), 8883 (Secure MQTT if used), 8000
-     (web interface access)
+   - TCP (incoming connections): 1883 (MQTT), 8000 (web interface access)
+   - TLS (incoming connections): 8883 (Secure MQTT if used)
    - TCP (outgoing connections): 25 (if send e-mail node is used in a flow)
 
 
@@ -102,8 +102,8 @@ Or if you're brave enough: ::
 
 After the repository is cloned, and a release (or branch) has been selected,
 there are still a few external modules (without this the authentication
-service will not work) that must be gathered before using the
-platform. These modules can be retrieved by executing the following command: ::
+service will not work) that must be gathered before using the platform.
+These modules can be retrieved by executing the following command: ::
 
   git submodule update --init --recursive
 
@@ -153,6 +153,9 @@ creating production environments.
 
 The following sections describe all dependencies and steps required
 for this deployment.
+
+.. attention::
+  At this moment, we only support Kubernetes in version 1.15 with dojot v0.3.1 (battojutsu.1)
 
 Kubernetes Cluster
 ^^^^^^^^^^^^^^^^^^
