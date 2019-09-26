@@ -23,7 +23,7 @@ carate - 2019.09.11
   - View details with Actuator Attributes
   - Devices Filter on Map
 
-- Flows
+- Flows:
 
   - New node Event Device In 
   - New node Event Template Device
@@ -38,7 +38,7 @@ carate - 2019.09.11
   - Internacionalization
   - Handlebars template, new message format
 
-- History
+- History:
 
   - New endpoint to query notifications
 
@@ -62,7 +62,7 @@ carate - 2019.09.11
     you to schedule events to be emitted 
     to other microservices.
 
-- New libraries 
+- New libraries:
 
   - To accelerate development: 
     `Dojot Module Java <https://github.com/dojot/dojot-module-java>`_  
