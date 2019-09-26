@@ -17,19 +17,10 @@ documentation.
 Components
 ----------
 
-dojot was designed to make fast solution prototyping possible, providing a
+Dojot was designed to make fast solution prototyping possible, providing a
 platform that's easy to use, scalable and robust. Its internal architecture
 makes use of many well-known open-source components with others designed and
-implemented by dojot team. This architecture is described on
-:numref:`new_arch`.
-
-.. _new_arch:
-.. figure:: images/new_architecture.png
-    :width: 100%
-    :align: center
-    :alt: Revised *dojot* Architecture
-
-    Current Architecture
+implemented by dojot team.
 
 Using dojot is as follows: a user configures IoT devices through the GUI or
 directly using the REST APIs provided by the API Gateway. Data processing flows
@@ -127,9 +118,13 @@ This service provides mechanisms to build data processing flows to perform a
 set of actions. These flows can be extended using external processing blocks
 (which can be added using REST APIs).
 
+Data Manager
+*******
+This service manages the dojot's data configuration, making possible to import and export configuration.
+
 Cron
 *******
-Descrever serviço do cron
+Cron is a dojot's microservice that allows you to schedule events to be emitted to other microservices.
 
 History
 *******

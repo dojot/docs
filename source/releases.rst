@@ -4,7 +4,6 @@ Release history
 carate - 2019.09.11
 -----------------------
 
-
 - IoT agents:
 
   - Support for 
@@ -36,7 +35,7 @@ carate - 2019.09.11
   - New node Cumulative Sum
   - New node Merge data
   - Internacionalization
-  - Handlebars template, new message format
+  - Support to handlebars template on template node
 
 - History:
 
@@ -68,7 +67,8 @@ carate - 2019.09.11
     `Dojot Module Java <https://github.com/dojot/dojot-module-java>`_  
     and `Dojot Module Python <https://github.com/dojot/dojot-module-python>`_ 
   - HealthCheck: 
-    `HealthCheck Python <https://github.com/dojot/healthcheck-python>`_  e `healthcheck-nodejs <https://github.com/dojot/healthcheck-nodejs>`_ 
+    `HealthCheck Python <https://github.com/dojot/healthcheck-python>`_  
+    e `Healthcheck NodeJs <https://github.com/dojot/healthcheck-nodejs>`_ 
   - IoTAgent: 
     `IoTAgent Java <https://github.com/dojot/iotagent-java>`_ 
 
