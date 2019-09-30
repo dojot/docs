@@ -264,8 +264,8 @@ dojot.
 .. _API - EJBCA-REST: https://dojot.github.io/ejbca-rest/apiary_latest.html
 
 .. _GitHub - Data Manager: https://github.com/dojot/data-manager
-.. _API - Data Manager: https://dojot.github.io/data-manager/apiary_v0.4.0.html
+.. _API - Data Manager: https://dojot.github.io/data-manager/apiary_latest.html
 
 .. _GitHub - Cron: https://github.com/dojot/cron
-.. _API - Cron: #
+.. _API - Cron: https://dojot.github.io/cron/apiary_latest.html
 
