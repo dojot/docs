@@ -98,7 +98,7 @@ For instance: ::
 
 Or if you're brave enough: ::
 
-  git checkout master
+  git checkout development
 
 After the repository is cloned, and a release (or branch) has been selected,
 there are still a few external modules (without this the authentication

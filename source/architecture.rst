@@ -175,8 +175,6 @@ interfaces to manage the platform, including functionalities like:
 * **User Profile Management**: Define profiles and the API permission
   associated to those profiles
 * **User Management**: Creation, Visualization, Edition and Deletion Operations
-* **Applications Management**: Creation, Visualization, Edition and Deletion
-  Operations
 * **Templates Management**: Creation, Visualization, Edition and Deletion
   Operations
 * **Devices Management**: Creation, Visualization (real time data), Edition and
