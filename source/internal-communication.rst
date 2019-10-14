@@ -7,7 +7,7 @@ This page describes how each service in dojot communicate with each other.
 Components
 ----------
 
-Current dojot components are shown in :numref:`dojot_components`.
+The main components current in dojot are shown in :numref:`dojot_components`.
 
 .. _dojot_components:
 .. uml::
@@ -96,8 +96,6 @@ description associated to each service. This can be seen in figure
 abstractions of the actual ones. Also, it should be noted that these interactions
 are valid only for internal components. Any external service should use Kong
 as entrypoint.
-
-This is a test
 
 .. _initial_authentication:
 .. uml::

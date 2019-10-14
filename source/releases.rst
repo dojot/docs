@@ -6,24 +6,24 @@ carate - 2019.09.11
 
 - IoT agents:
 
-  - Support for 
+  - Support for
     `LWM2M devices <https://github.com/dojot/iotagent-leshan>`_
 
 - GUI: 
 
-  - New interface for managment devices
-  - New interface for managment templates 
+  - New interface for devices management
+  - New interface for templates management
   - Attribute Metadata Management
   - Import and export
   - Firmware update
   - Profiles
-  - Noticiations
-  - Internacionalization
+  - Notifications
+  - Internationalization
   - View details with Actuator Attributes
   - Devices Filter on Map
 
-- Flows:
 
+- Flows:
   - New node Event Device In 
   - New node Event Template Device
   - New node FTP
@@ -42,34 +42,37 @@ carate - 2019.09.11
   - New endpoint to query notifications
 
 - ImageManager:
-  
+
   - Improvements to support Firmware Update
 
+- DataBroker:
+
+  - Support notifications in socket-io
+
 - DataManager:
 
-  - New support for notifications
+  - It's new a dojot's microservice that manages
+    the dojot's data configuration,
+    making possible to import and export configuration.
 
-- DataManager:
-
-  - It's new a dojot's microservice that manages 
-    the dojot's data configuration, 
-    making possible to import and export configuration. 
 
 - Cron:
 
-  - It's new a dojot's microservice that allows 
-    you to schedule events to be emitted 
+  - It's new a dojot's microservice that allows
+    you to schedule events to be emitted
     to other microservices.
+
 
 - New libraries:
 
-  - To accelerate development: 
-    `Dojot Module Java <https://github.com/dojot/dojot-module-java>`_  
-    and `Dojot Module Python <https://github.com/dojot/dojot-module-python>`_ 
-  - HealthCheck: 
-    `HealthCheck Python <https://github.com/dojot/healthcheck-python>`_  
-    e `Healthcheck NodeJs <https://github.com/dojot/healthcheck-nodejs>`_ 
-  - IoTAgent: 
-    `IoTAgent Java <https://github.com/dojot/iotagent-java>`_ 
+  - To accelerate development:
+    `Dojot Module Java <https://github.com/dojot/dojot-module-java>`_
+    and `Dojot Module Python <https://github.com/dojot/dojot-module-python>`_
+  - HealthCheck:
+    `HealthCheck Python <https://github.com/dojot/healthcheck-python>`_
+    e `Healthcheck NodeJs <https://github.com/dojot/healthcheck-nodejs>`_
+  - IoTAgent:
+    `IoTAgent Java <https://github.com/dojot/iotagent-java>`_
+
 
 

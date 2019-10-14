@@ -129,7 +129,7 @@ Exposed APIs
     - `API - Data Manager`_
     - `GitHub - Data Manager`_
   * - /cron
-    - Data Manager
+    - Cron
     - `API - Cron`_
     - `GitHub - Cron`_
 
