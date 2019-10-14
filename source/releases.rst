@@ -9,8 +9,7 @@ carate - 2019.09.11
   - Support for
     `LWM2M devices <https://github.com/dojot/iotagent-leshan>`_
 
-
-- GUI:
+- GUI: 
 
   - New interface for devices management
   - New interface for templates management
@@ -25,8 +24,7 @@ carate - 2019.09.11
 
 
 - Flows:
-
-  - New node Event Device
+  - New node Event Device In 
   - New node Event Template Device
   - New node FTP
   - New node Multi Device Out
@@ -39,11 +37,9 @@ carate - 2019.09.11
   - Internacionalization
   - Support to handlebars template on template node
 
-
 - History:
 
   - New endpoint to query notifications
-
 
 - ImageManager:
 
@@ -77,5 +73,6 @@ carate - 2019.09.11
     e `Healthcheck NodeJs <https://github.com/dojot/healthcheck-nodejs>`_
   - IoTAgent:
     `IoTAgent Java <https://github.com/dojot/iotagent-java>`_
+
 
 
