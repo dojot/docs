@@ -171,7 +171,7 @@ documentation`_.
 Kubernetes Requirements
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-- The minimum Kubernetes supported version is **v1.11**.
+- The Kubernetes supported version is **v1.11**.
 - Access to Docker Hub repositories
 - (optional) a storage class that will be used for persistent storage
 

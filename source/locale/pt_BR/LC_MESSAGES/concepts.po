@@ -49,14 +49,14 @@ msgstr "Nível: básico"
 
 #: ../../source/concepts.rst:21
 msgid "dojot basics"
-msgstr "noções básicas de dojot"
+msgstr "noções básicas da dojot"
 
 #: ../../source/concepts.rst:23
 msgid ""
 "Before using dojot, you should be familiar with some basic operations and"
 " concepts. They are very simple to understand and use, but without them, "
 "all operations might become obscure and senseless."
-msgstr "Antes de usar dojot, você deve estar familiarizado com algumas operações e conceitos básicos. Eles são muito simples de entender e usar, mas sem eles, todas as operações podem se tornar obscuras e sem sentido."
+msgstr "Antes de usar a dojot, você deve estar familiarizado com algumas operações e conceitos básicos. Eles são muito simples de entender e usar, mas sem eles, todas as operações podem se tornar obscuras e sem sentido."
 
 #: ../../source/concepts.rst:27
 msgid ""

@@ -594,7 +594,6 @@ msgid "Data Broker"
 msgstr ""
 
 #: ../../source/internal-communication.rst:528
-#, fuzzy
 msgid ""
 "DataBroker has a few more functionalities than only generating topics for"
 " ``{tenant, subject}`` pairs. It will also serve socket.io connections to"
