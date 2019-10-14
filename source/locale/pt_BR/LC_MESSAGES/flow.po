@@ -45,7 +45,7 @@ msgstr "Nós da dojot"
 
 #: ../../source/flow.rst:22
 msgid "Device Event in"
-msgstr "Evento dispositivo - entrada"
+msgstr "Evento dispositivo (entrada) [Device Event in]"
 
 #: ../../source/flow.rst:30
 msgid ""
@@ -292,7 +292,7 @@ msgstr "Este nó envia ou recupera um arquivo de/para um servidor FTP. Ao fazer 
 
 #: ../../source/flow.rst:250
 msgid "**Method** *(required)*: The FTP action to be taken (PUT, GET)."
-msgstr "**Método** *(obrigatório)*: a ação do FTP a ser executada (PUT, GET)."
+msgstr "**Método (Method)** *(obrigatório)*: a ação do FTP a ser executada (PUT, GET)."
 
 #: ../../source/flow.rst:251
 msgid "**URL** *(required)*: the FTP server"

@@ -73,7 +73,6 @@ msgstr ""
 "seria algo desse tipo:"
 
 #: ../../source/using-api-interface.rst:41
-#, fuzzy
 msgid ""
 "Remember that the token must be set in the request header as a whole, not"
 " parts of it. In the example only the first characters are shown for the "
