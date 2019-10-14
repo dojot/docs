@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dojot 0.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-14 09:29-0300\n"
+"POT-Creation-Date: 2019-10-14 14:48-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -35,132 +35,133 @@ msgstr ""
 "Suporte para `dispositivos LWM2M <https://github.com/dojot/iotagent-"
 "leshan>`_"
 
-#: ../../source/releases.rst:13
+#: ../../source/releases.rst:12
 msgid "GUI:"
 msgstr ""
 
-#: ../../source/releases.rst:15
+#: ../../source/releases.rst:14
 msgid "New interface for devices management"
 msgstr "Nova interface para gerenciamento de dispositivos"
 
-#: ../../source/releases.rst:16
+#: ../../source/releases.rst:15
 msgid "New interface for templates management"
 msgstr "Nova interface para gerenciamento de modelos de dispositivos"
 
-#: ../../source/releases.rst:17
+#: ../../source/releases.rst:16
 msgid "Attribute Metadata Management"
 msgstr "Gerenciamento de metadados de atributo"
 
-#: ../../source/releases.rst:18
+#: ../../source/releases.rst:17
 msgid "Import and export"
 msgstr "Importar e exportar"
 
-#: ../../source/releases.rst:19
+#: ../../source/releases.rst:18
 msgid "Firmware update"
 msgstr "Atualização de Firmware"
 
-#: ../../source/releases.rst:20
+#: ../../source/releases.rst:19
 msgid "Profiles"
 msgstr "Perfis"
 
-#: ../../source/releases.rst:21
+#: ../../source/releases.rst:20
 msgid "Notifications"
 msgstr "Notificações"
 
-#: ../../source/releases.rst:22
+#: ../../source/releases.rst:21
 msgid "Internationalization"
 msgstr "Internacionalização"
 
-#: ../../source/releases.rst:23
+#: ../../source/releases.rst:22
 msgid "View details with Actuator Attributes"
 msgstr "Exibir detalhes de atributos de atuação"
 
-#: ../../source/releases.rst:24
+#: ../../source/releases.rst:23
 msgid "Devices Filter on Map"
 msgstr "Filtro de dispositivos no mapa"
 
-#: ../../source/releases.rst:27
+#: ../../source/releases.rst:26
 msgid "Flows:"
 msgstr ""
 
+#: ../../source/releases.rst:28
+msgid "New node Event Device In"
+msgstr ""
+
 #: ../../source/releases.rst:29
-msgid "New node Event Device"
-msgstr "Novo nó evento do dispositivo"
+msgid "New node Event Template Device"
+msgstr ""
 
 #: ../../source/releases.rst:30
-msgid "New node Event Template Device"
-msgstr "Novo nó Modelo do dispositivo (eventos)"
+msgid "New node FTP"
+msgstr ""
 
 #: ../../source/releases.rst:31
-msgid "New node FTP"
-msgstr "Novo nó FTP"
+msgid "New node Multi Device Out"
+msgstr ""
 
 #: ../../source/releases.rst:32
-msgid "New node Multi Device Out"
-msgstr "Novo nó Multi dispositivo Out"
+#, fuzzy
+msgid "New node Notification"
+msgstr "Notificações"
 
 #: ../../source/releases.rst:33
-msgid "New node Notification"
-msgstr "Novo nó Notificação"
+msgid "New node Multi Actuate"
+msgstr ""
 
 #: ../../source/releases.rst:34
-msgid "New node Multi Actuate"
-msgstr "Novo nó  multi atuador"
+msgid "New node Cron"
+msgstr ""
 
 #: ../../source/releases.rst:35
-msgid "New node Cron"
-msgstr "Novo nó Cron "
+msgid "New node Cron Batch"
+msgstr ""
 
 #: ../../source/releases.rst:36
-msgid "New node Cron Batch"
-msgstr "Novo nó Cron Batch"
+msgid "New node Cumulative Sum"
+msgstr ""
 
 #: ../../source/releases.rst:37
-msgid "New node Cumulative Sum"
-msgstr "Novo nó valor acumulado"
+msgid "New node Merge data"
+msgstr ""
 
 #: ../../source/releases.rst:38
-msgid "New node Merge data"
-msgstr "Novo nó mesclar dados"
-
-#: ../../source/releases.rst:39
 #, fuzzy
 msgid "Internacionalization"
 msgstr "Internacionalização"
 
-#: ../../source/releases.rst:40
+#: ../../source/releases.rst:39
 msgid "Support to handlebars template on template node"
-msgstr "Suporte a *handlebars* no nó de modelo"
+msgstr ""
 
-#: ../../source/releases.rst:43
+#: ../../source/releases.rst:41
 msgid "History:"
 msgstr ""
 
-#: ../../source/releases.rst:45
+#: ../../source/releases.rst:43
 msgid "New endpoint to query notifications"
 msgstr "Novo endpoint para consultar notificações"
 
-#: ../../source/releases.rst:48
+#: ../../source/releases.rst:45
 msgid "ImageManager:"
 msgstr ""
 
-#: ../../source/releases.rst:50
+#: ../../source/releases.rst:47
 msgid "Improvements to support Firmware Update"
 msgstr "Melhorias para dar suporte à atualização de firmware"
 
-#: ../../source/releases.rst:53
+#: ../../source/releases.rst:49
 msgid "DataBroker:"
 msgstr ""
 
-#: ../../source/releases.rst:55
+#: ../../source/releases.rst:51
 msgid "Support notifications in socket-io"
 msgstr "Suporte a Notificações no socket-io"
 
-#: ../../source/releases.rst:58
+#: ../../source/releases.rst:53
 msgid "DataManager:"
 msgstr ""
 
-#: ../../source/releases.rst:60
+#: ../../source/releases.rst:55
 msgid ""
 "It's new a dojot's microservice that manages the dojot's data "
 "configuration, making possible to import and export configuration."
@@ -168,11 +169,11 @@ msgstr ""
 "É um novo microsserviço da dojot que gerencia a configuração de dados da "
 "dojot, tornando possível importar e exportar as configurações."
 
-#: ../../source/releases.rst:65
+#: ../../source/releases.rst:60
 msgid "Cron:"
 msgstr ""
 
-#: ../../source/releases.rst:67
+#: ../../source/releases.rst:62
 msgid ""
 "It's new a dojot's microservice that allows you to schedule events to be "
 "emitted to other microservices."
@@ -180,11 +181,11 @@ msgstr ""
 "É um novo microsserviço da dojot que permite agendar eventos a serem "
 "emitidos para outros microsserviços."
 
-#: ../../source/releases.rst:72
+#: ../../source/releases.rst:67
 msgid "New libraries:"
 msgstr "Novas bibliotecas:"
 
-#: ../../source/releases.rst:74
+#: ../../source/releases.rst:69
 msgid ""
 "To accelerate development: `Dojot Module Java <https://github.com/dojot"
 "/dojot-module-java>`_ and `Dojot Module Python <https://github.com/dojot"
@@ -194,14 +195,66 @@ msgstr ""
 "<https://github.com/dojot/dojot-module-java>`_ e `Dojot Module Python "
 "<https://github.com/dojot/dojot-module-python>`_"
 
-#: ../../source/releases.rst:77
+#: ../../source/releases.rst:72
 msgid ""
 "HealthCheck: `HealthCheck Python <https://github.com/dojot/healthcheck-"
 "python>`_ e `Healthcheck NodeJs <https://github.com/dojot/healthcheck-"
 "nodejs>`_"
 msgstr ""
 
-#: ../../source/releases.rst:80
+#: ../../source/releases.rst:75
 msgid "IoTAgent: `IoTAgent Java <https://github.com/dojot/iotagent-java>`_"
 msgstr ""
+
+#~ msgid "Flows:"
+#~ msgstr ""
+
+#~ msgid "New node Event Device"
+#~ msgstr "Novo nó evento do dispositivo"
+
+#~ msgid "New node Event Template Device"
+#~ msgstr "Novo nó Modelo do dispositivo (eventos)"
+
+#~ msgid "New node FTP"
+#~ msgstr "Novo nó FTP"
+
+#~ msgid "New node Multi Device Out"
+#~ msgstr "Novo nó Multi dispositivo Out"
+
+#~ msgid "New node Notification"
+#~ msgstr "Novo nó Notificação"
+
+#~ msgid "New node Multi Actuate"
+#~ msgstr "Novo nó  multi atuador"
+
+#~ msgid "New node Cron"
+#~ msgstr "Novo nó Cron "
+
+#~ msgid "New node Cron Batch"
+#~ msgstr "Novo nó Cron Batch"
+
+#~ msgid "New node Cumulative Sum"
+#~ msgstr "Novo nó valor acumulado"
+
+#~ msgid "New node Merge data"
+#~ msgstr "Novo nó mesclar dados"
+
+#~ msgid "Internacionalization"
+#~ msgstr "Internacionalização"
+
+#~ msgid "Support to handlebars template on template node"
+#~ msgstr "Suporte a *handlebars* no nó de modelo"
+
+#~ msgid ""
+#~ "Flows: - New node Event Device In"
+#~ " - New node Event Template Device "
+#~ "- New node FTP - New node "
+#~ "Multi Device Out - New node "
+#~ "Notification - New node Multi Actuate"
+#~ " - New node Cron - New node "
+#~ "Cron Batch - New node Cumulative "
+#~ "Sum - New node Merge data - "
+#~ "Internacionalization - Support to handlebars"
+#~ " template on template node"
+#~ msgstr ""
 
