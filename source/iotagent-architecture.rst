@@ -6,14 +6,6 @@ This document describes the IoT agent architecture used by dojot. It defines a
 set of basic features and choices that must be followed in order to be aligned
 with dojot architecture.
 
-TODO
-====
-- Sanitize "device" and "physical device" terms. Sometimes they are used interchangeably.
-- Build a list of terms (so that I can just say "blingblong" meaning "physical devices or its representative elements)
-- Find a better term for "representative elements"
-- Fill the Device identity section
-- Select what SHOULD be done, what MAY be implemented or SHALL be presented
-
 Who should read this?
 =====================
 Developers that want to create new IoT agents to be used with dojot.
@@ -213,9 +205,8 @@ should expose:
   template to other dojot services. There should be a mechanism so that
   different instances of the same IoT agent publishes the same device template
   (including any template IDs). If the device template is updated in a newer
-  version of an IoT agent, the device template ID should change. The messages
-  used to publish its device template is detailed in `Device Template message`_
-  section.
+  version of an IoT agent, the device template ID should change.
+
 - **Management APIs**: an IoT agent should be manageable and should expose its
   APIs to do that. The minimum set of management APIs that an IoT agent should
   offer are:
@@ -254,9 +245,7 @@ The main purpose of an IoT agent is to publish data from a particular device to
 other dojot services. Its operation is two fold: receive and process messages
 related to device management from other services as well as receive messages
 from the devices themselves (or their representative elements) and publish
-these data to other services. This is shown in the figure below.
-
-<< a figure should be here >>
+these data to other services.
 
 The following sections describe how an IoT agent can send and receive messages
 to/from other dojot services and what are the considerations it must take into
@@ -538,10 +527,6 @@ Firmware update
 ---------------
 
 An IoT agent might implement mechanisms in order to update firmware in devices.
-
-The firmware update process should be:
-
--
 
 
 Behavior

@@ -7,7 +7,7 @@ This page describes how each service in dojot communicate with each other.
 Components
 ----------
 
-Current dojot components are shown in :numref:`dojot_components`.
+The main components current in dojot are shown in :numref:`dojot_components`.
 
 .. _dojot_components:
 .. uml::
@@ -96,8 +96,6 @@ description associated to each service. This can be seen in figure
 abstractions of the actual ones. Also, it should be noted that these interactions
 are valid only for internal components. Any external service should use Kong
 as entrypoint.
-
-This is a test
 
 .. _initial_authentication:
 .. uml::
@@ -538,11 +536,6 @@ interfaces) will receive a new message containing all the received data. For
 more information about how to open a socket.io connection with DataBroker,
 check `DataBroker documentation`_.
 
-
-Flowbroker
-----------
-
-TODO!
 
 .. _API - data-broker: https://dojot.github.io/data-broker/apiary_latest.html
 .. _Kafka partitions and replicas: https://sookocheff.com/post/kafka/kafka-in-a-nutshell/#what-is-kafka

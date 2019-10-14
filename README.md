@@ -11,7 +11,7 @@ do so, please follow the steps below. Those are actually based off
 [Read The Docs own documentation](https://docs.readthedocs.io/en/latest/getting_started.html).
 
 ```shell
-> pip install sphinx sphinx-autobuild sphinx_rtd_theme sphinx-intl
+> pip install sphinx sphinx-autobuild sphinx_rtd_theme sphinx-intl sphinxcontrib-plantuml
 > make html
 
 ```

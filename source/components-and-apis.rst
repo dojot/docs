@@ -57,9 +57,13 @@ Components
   * - EJBCA-REST
     - `GitHub - EJBCA-REST`_
     -
-  * - Alarm manager
-    - `GitHub - alarm-manager`_
+  * - Data Manager
+    - `GitHub - Data Manager`_
     -
+  * - Cron
+    - `GitHub - Cron`_
+    -
+
 
 
 Exposed APIs
@@ -116,7 +120,18 @@ Exposed APIs
     - Device image management
     - `API - image-manager`_
     - `GitHub - image-manager`_
-
+  * - /import
+    - Data Manager
+    - `API - Data Manager`_
+    - `GitHub - Data Manager`_
+  * - /export
+    - Data Manager
+    - `API - Data Manager`_
+    - `GitHub - Data Manager`_
+  * - /cron
+    - Cron
+    - `API - Cron`_
+    - `GitHub - Cron`_
 
 The API gateway used in dojot reroutes some of these endpoints so that they
 become uniform: all of them are accessible through the same port (default is
@@ -161,6 +176,15 @@ which component endpoint.
    * - ejbca
      - host:5583/ca
      - host:8000/ca
+   * - DataManager
+     - host:3000/import
+     - host:8000/import
+   * - DataManager
+     - host:3000/export
+     - host:8000/export
+   * - Cron
+     - host:5000/cron
+     - host:8000/cron
 
 
 Kafka messages
@@ -239,4 +263,9 @@ dojot.
 .. _GitHub - EJBCA-REST: https://github.com/dojot/ejbca-rest
 .. _API - EJBCA-REST: https://dojot.github.io/ejbca-rest/apiary_latest.html
 
-.. _GitHub - alarm-manager: https://github.com/dojot/alarm-manager
+.. _GitHub - Data Manager: https://github.com/dojot/data-manager
+.. _API - Data Manager: https://dojot.github.io/data-manager/apiary_latest.html
+
+.. _GitHub - Cron: https://github.com/dojot/cron
+.. _API - Cron: https://dojot.github.io/cron/apiary_latest.html
+

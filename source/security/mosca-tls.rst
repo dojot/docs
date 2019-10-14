@@ -17,12 +17,11 @@ For a device to connect using TLS with Mosca, it must possess:
 -  The certificate of this CA (.crt file);
 -  An entry on Mosca Access Control List (ACL), allowing the device
    to publish on a specific topic;
--  (optional) A Certificate Revocation List (CRL).
 
 When a device is created, DeviceManager will automatically notify
 the following components:
 
--  IoTAgent-Mosca: will register the new device on its internal cache and will create an entry 
+-  IoTAgent-Mosca: will register the new device on its internal cache and will create an entry
    on the ACL, allowing the device to publish on a specific topic.
 -  EJBCA: will create an end entity so a certificate can be created on
    the future.
@@ -106,7 +105,7 @@ Mosca
 ~~~~~~~~~~~~
 Mosca is a node.js mqtt broker. To use the Mosca broker with TLS, you need to allow the broker
 to use TLS as the secure mode of connection. To do this, you need to declare the credentials and
-the secure attributes in the Mosca server conf object. You can enable the TLS via configuration variable. 
+the secure attributes in the Mosca server conf object. You can enable the TLS via configuration variable.
 
 .. code-block:: JavaScript
 
@@ -136,10 +135,10 @@ the secure attributes in the Mosca server conf object. You can enable the TLS vi
             port : 8883  // 8883 is the standard mqtts port
         }
     }
-    
+
     ...
 
-All the certificates will be created automatically, 
+All the certificates will be created automatically,
 not needing to configure manually the certificates into the broker.
 
 MQTT configuration files
@@ -164,8 +163,6 @@ Checkout this commented MQTT configuration file:
     # Permission list file
     acl_file /opt/mosca/certs/access.acl
 
-    # CA CRL.
-    crlfile /opt/mosca/certs/ca.crl
 
 Note that for all configuration updates, it is mandatory to restart
 Mosca broker or to send a SIGDUP signal to its process.
@@ -228,9 +225,9 @@ folder.
 Quick Tutorial
 --------------
 
-To publish using the appropriated certificates, you must need to be 
-with the Mosca Broker and the EJBCA running. After creating the dojot 
-environment, the templates and the devices, use the mosquitto to publish 
+To publish using the appropriated certificates, you must need to be
+with the Mosca Broker and the EJBCA running. After creating the dojot
+environment, the templates and the devices, use the mosquitto to publish
 in the desired topic:
 
 .. code:: bash
@@ -245,20 +242,6 @@ Important Notes
 
 These are a few but important notes related to device security and
 associated subjects.
-
-CRL (Certification Revocation List)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-A CRL is a list which contains all revoked certificates. It is used to indicate
-which certificates are no longer valid (administratively set to invalid) as a
-normal certificate can be used for 1 to 5 years. This list is signed by CA and
-also has an expiration date - 1 day by default. In TLS protocol, if CRL is
-expired then the recommended action to be taken is to refuse all incoming
-connections, as there is no way to check if the certificates used in those
-connections are invalid or not. This procedure is implemented in Mosca.
-
-Therefore, CA must generate a new list periodically. All components that use it
-must be updated.
 
 Debugging
 ~~~~~~~~~
@@ -278,12 +261,6 @@ A certificate file can be in two formats: PEM (base64 text) or DER
 
     openssl x509 -noout -text -in certFile.crt
 
-To read a CRL:
-
-.. code:: bash
-
-    openssl crl -inform PEM -text -noout -in crlFile.crl
-
 How to verify if an entity is created in EJBCA
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 You can check if a entity (device) is created in the EJBCA by checking the EJBCA log:
@@ -292,7 +269,7 @@ You can check if a entity (device) is created in the EJBCA by checking the EJBCA
 
     user 3b987 created
 
-in the example above, we created a device with id 3b987. After the device was created, 
+in the example above, we created a device with id 3b987. After the device was created,
 the ejbca add the device has an entity.
 
 How to verify if a device has published in the topic
@@ -303,10 +280,10 @@ You can check if your device has successfully published into Mosca broker by che
 
     Published /devices/termo { temperature: 62.4 } admin:87852f undefined undefined
 
-if a message like this did not appear, there was probably a failure to authenticate the certificates. 
+if a message like this did not appear, there was probably a failure to authenticate the certificates.
 Try to recreate the certificates with the `Certificate Retriever GitHub repository`_ script.
 
-.. _EJBCA: https://www.ejbca.org 
+.. _EJBCA: https://www.ejbca.org
 .. _User Guide: http://dojotdocs.readthedocs.io/en/latest/user_guide.html#first-steps
 .. _Mosca repository: https://github.com/mcollina/mosca
 .. _Certificate Retriever GitHub repository: https://github.com/dojot/certificate-retriever
