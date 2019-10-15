@@ -487,11 +487,9 @@ msgstr "Infraestrutura"
 
 #: ../../source/architecture.rst:194
 msgid ""
-"A few extra components are used in dojot that were not shown in "
-":numref:`new_arch`. They are:"
+"A few extra components are used in dojot,they are:"
 msgstr ""
-"Alguns outros componentes são utilizados na dojot e não estão "
-"representados em :numref:`new_arch`. São eles:"
+"Alguns outros componentes são utilizados na dojot, são eles:"
 
 #: ../../source/architecture.rst:197
 msgid ""
