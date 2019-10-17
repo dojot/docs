@@ -19,8 +19,6 @@ In order to properly run dojot, the minimum hardware requirements are:
 - The following ports should be opened:
    - TCP (incoming connections): 1883 (MQTT), 8000 (web interface access)
    - TLS (incoming connections): 8883 (Secure MQTT if used)
-   - TCP (outgoing connections): 25 (if send e-mail node is used in a flow)
-
 
 
 Docker compose
@@ -155,7 +153,7 @@ The following sections describe all dependencies and steps required
 for this deployment.
 
 .. attention::
-  At this moment, we only support Kubernetes in version 1.15 with dojot v0.3.1 (battojutsu.1)
+  At this moment, we only support Kubernetes util version 1.15 with dojot v0.3.1 (battojutsu.1)
 
 Kubernetes Cluster
 ^^^^^^^^^^^^^^^^^^
@@ -171,7 +169,7 @@ documentation`_.
 Kubernetes Requirements
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-- The Kubernetes supported version is **v1.11**.
+- The Kubernetes supported version is between **v1.11** and **v1.15** .
 - Access to Docker Hub repositories
 - (optional) a storage class that will be used for persistent storage
 
