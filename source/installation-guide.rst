@@ -153,7 +153,7 @@ The following sections describe all dependencies and steps required
 for this deployment.
 
 .. attention::
-  At this moment, we only support Kubernetes util version 1.15 with dojot v0.3.1 (battojutsu.1)
+  At this moment, we only support Kubernetes with dojot v0.3.1 (battojutsu.1)
 
 Kubernetes Cluster
 ^^^^^^^^^^^^^^^^^^
