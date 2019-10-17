@@ -202,7 +202,7 @@ msgstr ""
 
 #: ../../source/architecture.rst:79
 msgid "DeviceManager"
-msgstr "Gerenciador de Dispositivos"
+msgstr "DeviceManager"
 
 #: ../../source/architecture.rst:81
 msgid ""
@@ -211,7 +211,7 @@ msgid ""
 "updates to all interested components (namely IoT agents, history and "
 "subscription manager) through Kafka."
 msgstr ""
-"O Gerenciador de Dispositivos é uma entidade central responsável por "
+"O DeviceManager é uma entidade central responsável por "
 "manter as estruturas de dados de dispositivos e modelos (templates). "
 "Também é responsável por publicar quaisquer atualizações para todos os "
 "componentes interessados (agentes IoT, histórico e gerenciador de "
@@ -279,7 +279,7 @@ msgstr ""
 
 #: ../../source/architecture.rst:115
 msgid "Flowbroker"
-msgstr ""
+msgstr "Flowbroker"
 
 #: ../../source/architecture.rst:117
 msgid ""
@@ -293,8 +293,8 @@ msgstr ""
 "incluído utilizando APIs REST)."
 
 #: ../../source/architecture.rst:122
-msgid "Data Manager"
-msgstr "Data Manager"
+msgid "DataManager"
+msgstr "DataManager"
 
 #: ../../source/architecture.rst:123
 msgid ""
@@ -306,7 +306,7 @@ msgstr ""
 
 #: ../../source/architecture.rst:126
 msgid "Cron"
-msgstr ""
+msgstr "Cron"
 
 #: ../../source/architecture.rst:127
 msgid ""
@@ -318,7 +318,7 @@ msgstr ""
 
 #: ../../source/architecture.rst:130
 msgid "History"
-msgstr "Histórico"
+msgstr "History"
 
 #: ../../source/architecture.rst:132
 msgid ""
@@ -326,7 +326,7 @@ msgid ""
 "be persisted on a database. The data is converted into an storage "
 "structure and is sent to the corresponding database."
 msgstr ""
-"O componente histórico funciona como um condutor de dados e eventos que "
+"O componente History funciona como um condutor de dados e eventos que "
 "devemser persistidos em um banco de dados. Os dados são convertidos em "
 "uma estrutura de armazenamento que é enviada para o banco de dados "
 "correspondente."
@@ -406,7 +406,7 @@ msgstr ""
 
 #: ../../source/architecture.rst:170
 msgid "GUI"
-msgstr "Interface Gráfica de Usuário"
+msgstr "GUI"
 
 #: ../../source/architecture.rst:172
 msgid ""
@@ -414,7 +414,7 @@ msgid ""
 "responsive interfaces to manage the platform, including functionalities "
 "like:"
 msgstr ""
-"A Interface Gráfica de Usuário na *dojot* é uma aplicação WEB que provê "
+"A Interface Gráfica de Usuário (GUI) na *dojot* é uma aplicação WEB que provê "
 "interfaces responsivas para gerenciamento da plataforma, incluindo "
 "funcionalidades como:"
 

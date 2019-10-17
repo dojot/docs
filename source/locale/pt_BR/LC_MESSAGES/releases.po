@@ -97,7 +97,7 @@ msgstr "Novo nó FTP"
 
 #: ../../source/releases.rst:31
 msgid "New node Multi Device Out"
-msgstr "Novo nó de Saída para  vários dispositivos (Multi Device Out)"
+msgstr "Novo nó de Saída para vários dispositivos (Multi Device Out)"
 
 #: ../../source/releases.rst:32
 msgid "New node Notification"
@@ -105,7 +105,7 @@ msgstr "Novo nó de Notificações"
 
 #: ../../source/releases.rst:33
 msgid "New node Multi Actuate"
-msgstr "Novo nó de multiplias atuações (Multi Actuate)"
+msgstr "Novo nó de atuação para vários dispositivos (Multi Actuate)"
 
 #: ../../source/releases.rst:34
 msgid "New node Cron"
