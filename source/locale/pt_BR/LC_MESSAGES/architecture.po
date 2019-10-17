@@ -293,8 +293,7 @@ msgstr ""
 "incluído utilizando APIs REST)."
 
 #: ../../source/architecture.rst:122
-#, fuzzy
-msgid "Data Manager"
+msgid "DataManager"
 msgstr "DataManager"
 
 #: ../../source/architecture.rst:123
