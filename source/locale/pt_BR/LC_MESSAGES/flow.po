@@ -18,7 +18,7 @@ msgstr ""
 
 #: ../../source/flow.rst:4
 msgid "Using flow builder"
-msgstr "Usando o construtor de fluxos (Using flow builder)"
+msgstr "Usando o construtor de fluxos (Flow)"
 
 #: ../../source/flow.rst:7
 msgid ""
@@ -46,7 +46,7 @@ msgstr "Nós da dojot"
 
 #: ../../source/flow.rst:22
 msgid "Device Event in"
-msgstr "Evento dispositivo (entrada) [Device Event in]"
+msgstr "Evento dispositivo - entrada (Device Event in)"
 
 #: ../../source/flow.rst:30
 msgid ""
@@ -119,7 +119,7 @@ msgstr ""
 
 #: ../../source/flow.rst:77
 msgid "Device template event in"
-msgstr "Modelo de dispositivo (Eventos) entrada [event device template]"
+msgstr "Modelo de dispositivo - Eventos - entrada (event device template)"
 
 #: ../../source/flow.rst:85
 msgid ""
@@ -177,7 +177,7 @@ msgstr ""
 
 #: ../../source/flow.rst:114
 msgid "Multi device out"
-msgstr "Multi dispositivo out (Multi device out)"
+msgstr "Saída para multiplos dispositivos (Multi device out)"
 
 #: ../../source/flow.rst:122
 msgid ""
@@ -418,7 +418,7 @@ msgstr ""
 
 #: ../../source/flow.rst:263
 msgid "notification"
-msgstr "notificação (notification)"
+msgstr "Notificação (notification)"
 
 #: ../../source/flow.rst:271
 msgid ""
@@ -719,7 +719,7 @@ msgstr ""
 
 #: ../../source/flow.rst:499
 msgid "Device template in"
-msgstr "Modelo de dispositivo (entrada) [Device template in]"
+msgstr "Modelo de dispositivo - entrada (Device template in)"
 
 #: ../../source/flow.rst:507
 msgid ""
