@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dojot 0.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-09 15:44-0300\n"
+"POT-Creation-Date: 2019-10-17 10:36-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -202,7 +202,7 @@ msgstr ""
 
 #: ../../source/architecture.rst:79
 msgid "DeviceManager"
-msgstr "Gerenciador de Dispositivos"
+msgstr "DeviceManager"
 
 #: ../../source/architecture.rst:81
 msgid ""
@@ -211,11 +211,11 @@ msgid ""
 "updates to all interested components (namely IoT agents, history and "
 "subscription manager) through Kafka."
 msgstr ""
-"O Gerenciador de Dispositivos é uma entidade central responsável por "
-"manter as estruturas de dados de dispositivos e modelos (templates). "
-"Também é responsável por publicar quaisquer atualizações para todos os "
-"componentes interessados (agentes IoT, histórico e gerenciador de "
-"subscrição) através do Kafka."
+"O DeviceManager é uma entidade central responsável por manter as "
+"estruturas de dados de dispositivos e modelos (templates). Também é "
+"responsável por publicar quaisquer atualizações para todos os componentes"
+" interessados (agentes IoT, histórico e gerenciador de subscrição) "
+"através do Kafka."
 
 #: ../../source/architecture.rst:86
 msgid ""
@@ -279,7 +279,7 @@ msgstr ""
 
 #: ../../source/architecture.rst:115
 msgid "Flowbroker"
-msgstr ""
+msgstr "Flowbroker"
 
 #: ../../source/architecture.rst:117
 msgid ""
@@ -293,8 +293,9 @@ msgstr ""
 "incluído utilizando APIs REST)."
 
 #: ../../source/architecture.rst:122
+#, fuzzy
 msgid "Data Manager"
-msgstr "Data Manager"
+msgstr "DataManager"
 
 #: ../../source/architecture.rst:123
 msgid ""
@@ -306,7 +307,7 @@ msgstr ""
 
 #: ../../source/architecture.rst:126
 msgid "Cron"
-msgstr ""
+msgstr "Cron"
 
 #: ../../source/architecture.rst:127
 msgid ""
@@ -318,7 +319,7 @@ msgstr ""
 
 #: ../../source/architecture.rst:130
 msgid "History"
-msgstr "Histórico"
+msgstr "History"
 
 #: ../../source/architecture.rst:132
 msgid ""
@@ -326,7 +327,7 @@ msgid ""
 "be persisted on a database. The data is converted into an storage "
 "structure and is sent to the corresponding database."
 msgstr ""
-"O componente histórico funciona como um condutor de dados e eventos que "
+"O componente History funciona como um condutor de dados e eventos que "
 "devemser persistidos em um banco de dados. Os dados são convertidos em "
 "uma estrutura de armazenamento que é enviada para o banco de dados "
 "correspondente."
@@ -406,7 +407,7 @@ msgstr ""
 
 #: ../../source/architecture.rst:170
 msgid "GUI"
-msgstr "Interface Gráfica de Usuário"
+msgstr "GUI"
 
 #: ../../source/architecture.rst:172
 msgid ""
@@ -414,8 +415,8 @@ msgid ""
 "responsive interfaces to manage the platform, including functionalities "
 "like:"
 msgstr ""
-"A Interface Gráfica de Usuário na *dojot* é uma aplicação WEB que provê "
-"interfaces responsivas para gerenciamento da plataforma, incluindo "
+"A Interface Gráfica de Usuário (GUI) na *dojot* é uma aplicação WEB que "
+"provê interfaces responsivas para gerenciamento da plataforma, incluindo "
 "funcionalidades como:"
 
 #: ../../source/architecture.rst:175
@@ -469,7 +470,7 @@ msgstr ""
 
 #: ../../source/architecture.rst:187
 msgid "Image manager"
-msgstr "Gerenciador de Imagens (Image manager)"
+msgstr "Image manager"
 
 #: ../../source/architecture.rst:189
 msgid "This component is responsible for device image storage and retrieval."
@@ -482,12 +483,10 @@ msgid "Infrastructure"
 msgstr "Infraestrutura"
 
 #: ../../source/architecture.rst:194
-msgid ""
-"A few extra components are used in dojot,they are:"
-msgstr ""
-"Alguns outros componentes são utilizados na dojot, são eles:"
+msgid "A few extra components are used in dojot,they are:"
+msgstr "Alguns outros componentes são utilizados na dojot, são eles:"
 
-#: ../../source/architecture.rst:197
+#: ../../source/architecture.rst:196
 msgid ""
 "postgres: this database is used to persist data from many components, "
 "such as Device Manager."
@@ -495,7 +494,7 @@ msgstr ""
 "postgres: esse banco de dados é utilizado para persistir informações de "
 "vários componenentes, como do gerenciador de dispositivos."
 
-#: ../../source/architecture.rst:200
+#: ../../source/architecture.rst:199
 msgid ""
 "redis: in-memory database used as cache in many components, such as "
 "service orchestrator, subscription manager, IoT agents, and so on. It is "
@@ -505,7 +504,7 @@ msgstr ""
 "componentes, como o serviço de osquestração, gerenciador de subscrição, "
 "agentes IoT e outros. É bem leve e fácil de usar."
 
-#: ../../source/architecture.rst:204
+#: ../../source/architecture.rst:203
 msgid ""
 "rabbitMQ: message broker used in service orchestrator in order to "
 "implement action flows related that should be applied to messages "
@@ -515,7 +514,7 @@ msgstr ""
 " para implementar fluxos de ações relacionados que podem ser aplicados a "
 "mensagens recebidas dos componentes."
 
-#: ../../source/architecture.rst:208
+#: ../../source/architecture.rst:207
 msgid ""
 "mongo database: widly used database solution that is easy to use and "
 "doesn't add a considerable access overhead (where it was employed in "
@@ -525,19 +524,19 @@ msgstr ""
 "é fácil de usar e não adiciona esforço de acesso considerável (nos locais"
 " onde foi empregado na dojot)."
 
-#: ../../source/architecture.rst:211
+#: ../../source/architecture.rst:210
 msgid "zookeeper: keeps replicated services within a cluster under control."
 msgstr "zookeeper: mantém sob controle serviços replicados em cluster."
 
-#: ../../source/architecture.rst:215
+#: ../../source/architecture.rst:214
 msgid "Communications"
 msgstr "Comunicação"
 
-#: ../../source/architecture.rst:217
+#: ../../source/architecture.rst:216
 msgid "All components communicate with each other in two ways:"
 msgstr "Todos os componentes se comunicam de duas maneiras:"
 
-#: ../../source/architecture.rst:219
+#: ../../source/architecture.rst:218
 msgid ""
 "Using HTTP requests: if one component needs to retrieve data from other "
 "one, say an IoT agent needs the list of currently configured devices from"
@@ -548,7 +547,7 @@ msgstr ""
 "configurados do gerenciador de dispositivos, ele pode enviar uma "
 "requisição HTTP para o componente apropriado."
 
-#: ../../source/architecture.rst:223
+#: ../../source/architecture.rst:222
 msgid ""
 "Using Kafka messages: if one component needs to send new information "
 "about a resource controlled by it (such as new devices created in Device "

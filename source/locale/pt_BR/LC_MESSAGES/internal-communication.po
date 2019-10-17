@@ -243,7 +243,7 @@ msgstr ""
 ".device-manager.devices``) deseja usar para enviar a mensagem. O "
 "DataBroker chamará o Redis para verificar se este tópico já foi criado e "
 "se o administrador dojot criou um perfil para essa tupla "
-"específica``{tenant, subject}``."
+"específica ``{tenant, subject}``."
 
 #: ../../source/internal-communication.rst:206
 msgid ""
@@ -459,7 +459,7 @@ msgstr "O Auth emitirá apenas uma mensagem via Kafka para a criação do tenant
 
 #: ../../source/internal-communication.rst:391
 msgid "Device Manager"
-msgstr "Gerenciador de Dispositivos"
+msgstr "Device Manager"
 
 #: ../../source/internal-communication.rst:393
 msgid ""
