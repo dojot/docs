@@ -119,15 +119,15 @@ set of actions. These flows can be extended using external processing blocks
 (which can be added using REST APIs).
 
 Data Manager
-*******
+************
 This service manages the dojot's data configuration, making possible to import and export configuration.
 
 Cron
-*******
+**********
 Cron is a dojot's microservice that allows you to schedule events to be emitted to other microservices.
 
 History
-*******
+**********
 
 The History component works as a pipeline for data and events that must be
 persisted on a database. The data is converted into an storage structure and is
@@ -191,8 +191,7 @@ This component is responsible for device image storage and retrieval.
 Infrastructure
 --------------
 
-A few extra components are used in dojot that were not shown in
-:numref:`new_arch`. They are:
+A few extra components are used in dojot,they are:
 
 - postgres: this database is used to persist data from many components, such as
   Device Manager.

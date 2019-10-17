@@ -3,7 +3,6 @@
 # This file is distributed under the same license as the dojot package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: dojot 0.2.0\n"
@@ -584,7 +583,6 @@ msgid "``device-data``"
 msgstr ""
 
 #: ../../source/components-and-apis.rst:211
-#, fuzzy
 msgid "Tenants creation/removal (`Messages - auth`_)"
 msgstr "Criação/remoção de *Tenants* (`Mensagens - auth`_)"
 

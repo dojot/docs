@@ -3,7 +3,6 @@
 # This file is distributed under the same license as the dojot package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: dojot 0.0.0\n"
@@ -162,7 +161,6 @@ msgid "Kafka + DataBroker"
 msgstr ""
 
 #: ../../source/architecture.rst:63
-#, fuzzy
 msgid ""
 "Apache Kafka is a distributed messaging platform that can be used by "
 "applications which need to stream data or consume/produce data pipelines."
@@ -295,9 +293,8 @@ msgstr ""
 "incluído utilizando APIs REST)."
 
 #: ../../source/architecture.rst:122
-#, fuzzy
 msgid "Data Manager"
-msgstr "Gerenciador de Imagens"
+msgstr "Data Manager"
 
 #: ../../source/architecture.rst:123
 msgid ""
@@ -471,9 +468,8 @@ msgstr ""
 "histórico unificados)"
 
 #: ../../source/architecture.rst:187
-#, fuzzy
 msgid "Image manager"
-msgstr "Gerenciador de Imagens"
+msgstr "Gerenciador de Imagens (Image manager)"
 
 #: ../../source/architecture.rst:189
 msgid "This component is responsible for device image storage and retrieval."
@@ -487,11 +483,9 @@ msgstr "Infraestrutura"
 
 #: ../../source/architecture.rst:194
 msgid ""
-"A few extra components are used in dojot that were not shown in "
-":numref:`new_arch`. They are:"
+"A few extra components are used in dojot,they are:"
 msgstr ""
-"Alguns outros componentes são utilizados na dojot e não estão "
-"representados em :numref:`new_arch`. São eles:"
+"Alguns outros componentes são utilizados na dojot, são eles:"
 
 #: ../../source/architecture.rst:197
 msgid ""

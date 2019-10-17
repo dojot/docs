@@ -3,7 +3,6 @@
 # This file is distributed under the same license as the dojot package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: dojot 0.0.0\n"
@@ -18,7 +17,6 @@ msgstr ""
 "Generated-By: Babel 2.5.1\n"
 
 #: ../../source/install/compose_guide.rst:2
-#, fuzzy
 msgid "Installation Guide - Docker compose"
 msgstr "Guia de Instalação - Docker compose"
 

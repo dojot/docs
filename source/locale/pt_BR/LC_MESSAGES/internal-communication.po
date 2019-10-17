@@ -3,7 +3,6 @@
 # This file is distributed under the same license as the dojot package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: dojot 0.4.0\n"
@@ -38,9 +37,8 @@ msgstr ""
 ":numref:`dojot_components`."
 
 #: ../../source/internal-communication.rst:13
-#, fuzzy
 msgid "dojot components"
-msgstr "Componentes"
+msgstr "Componentes da Dojot"
 
 #: ../../source/internal-communication.rst:45
 msgid "They are:"
@@ -217,7 +215,6 @@ msgid "Sending Kafka messages"
 msgstr "Enviando mensagens via Kafka"
 
 #: ../../source/internal-communication.rst:155
-#, fuzzy
 msgid ""
 "Kafka uses a quite different approach. Each message should be associated "
 "to a subject and a tenant. This is show in :numref:`retrieving_topics`;"
@@ -340,13 +337,13 @@ msgstr "Inicialização do *tenants* no início"
 msgid ""
 "The second phase starts after startup and its purpose is to process all "
 "messages received through Kafka. This will include any tenant that is "
-"created after all services are up and running. :numref:`Tenant "
-"bootstrapping` shows how to deal with these messages."
+"created after all services are up and running. :numref:`Tenant bootstrapping`"
+" shows how to deal with these messages."
 msgstr ""
 "A segunda fase inicia após a inicialização e seu objetivo é processar "
 "todas as mensagens recebidas pelo Kafka. Isso incluirá qualquer *tenant* "
-"criado após todos os serviços estarem em funcionamento. :numref:`Tenant "
-"bootstrapping`mostra como lidar com essas mensagens"
+"criado após todos os serviços estarem em funcionamento. :numref:`Tenant bootstrapping`"
+" mostra como lidar com essas mensagens."
 
 #: ../../source/internal-communication.rst:288
 msgid "Tenant bootstrapping"

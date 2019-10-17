@@ -3,7 +3,6 @@
 # This file is distributed under the same license as the dojot package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: dojot 0.0.0\n"
@@ -71,7 +70,6 @@ msgid "http://dojot-iso.s3.amazonaws.com/imagem/dojot.0.1.0-dojot.vdi"
 msgstr "http://dojot-iso.s3.amazonaws.com/imagem/dojot.0.1.0-dojot.vdi"
 
 #: ../../source/vms/vbox/guide.rst:23
-#, fuzzy
 msgid ""
 "The next step is to create a virtual machine on VirtualBox. Click on the "
 "New button, then set the name ``as you wish``, type to ``Linux`` and "
