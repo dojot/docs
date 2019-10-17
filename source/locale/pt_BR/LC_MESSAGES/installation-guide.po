@@ -304,10 +304,10 @@ msgstr ""
 
 #: ../../source/installation-guide.rst:156
 msgid ""
-"At this moment, we only support Kubernetes util version 1.15 with dojot "
+"At this moment, we only support Kubernetes with dojot "
 "v0.3.1 (battojutsu.1)"
 msgstr ""
-"No momento, só oferecemos suporte ao Kubernetes até versão 1.15 com dojot "
+"No momento, só oferecemos suporte ao Kubernetes com dojot "
 "v0.3.1 (battojutsu.1)"
 
 #: ../../source/installation-guide.rst:159

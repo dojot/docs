@@ -25,7 +25,7 @@ msgid ""
 "This document provides information about dojot's concepts and "
 "abstractions."
 msgstr ""
-"Este documento fornece informações sobre os conceitos e abstrações do "
+"Este documento fornece informações sobre os conceitos e abstrações da "
 "dojot."
 
 #: ../../source/concepts.rst:10
