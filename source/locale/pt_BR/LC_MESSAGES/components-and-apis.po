@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dojot 0.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-11 13:22-0300\n"
+"POT-Creation-Date: 2019-10-17 10:36-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -633,5 +633,8 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "host:8000/metric"
+#~ msgstr ""
+
+#~ msgid "Importação/Exportação de dados de configuração"
 #~ msgstr ""
 

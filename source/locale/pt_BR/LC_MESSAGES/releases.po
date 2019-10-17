@@ -125,7 +125,7 @@ msgstr "Novo nó de Mesclar dados "
 
 #: ../../source/releases.rst:38
 msgid "Node email has been removed"
-msgstr "Node email has been removed"
+msgstr "Nó de email foi removido"
 
 #: ../../source/releases.rst:39
 msgid "Internacionalization"
