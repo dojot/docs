@@ -3,12 +3,11 @@
 # This file is distributed under the same license as the dojot package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: dojot 0.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-14 14:48-0300\n"
+"POT-Creation-Date: 2019-10-17 11:00-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -85,83 +84,86 @@ msgstr ""
 
 #: ../../source/releases.rst:28
 msgid "New node Event Device In"
-msgstr ""
+msgstr "Novo Nó Evento Dispositivo (Entrada)"
 
 #: ../../source/releases.rst:29
+#, fuzzy
 msgid "New node Event Template Device"
-msgstr ""
+msgstr "Novo nó Evento de modelos de dispositivo (Entrada)"
 
 #: ../../source/releases.rst:30
 msgid "New node FTP"
-msgstr ""
+msgstr "Novo nó FTP"
 
 #: ../../source/releases.rst:31
 msgid "New node Multi Device Out"
-msgstr ""
+msgstr "Novo nó de Saída para  vários dispositivos (Multi Device Out)"
 
 #: ../../source/releases.rst:32
-#, fuzzy
 msgid "New node Notification"
-msgstr "Notificações"
+msgstr "Novo nó de Notificações"
 
 #: ../../source/releases.rst:33
 msgid "New node Multi Actuate"
-msgstr ""
+msgstr "Novo nó de multiplias atuações (Multi Actuate)"
 
 #: ../../source/releases.rst:34
 msgid "New node Cron"
-msgstr ""
+msgstr "Novo nó Cron"
 
 #: ../../source/releases.rst:35
 msgid "New node Cron Batch"
-msgstr ""
+msgstr "Novo nó Cron Batch"
 
 #: ../../source/releases.rst:36
 msgid "New node Cumulative Sum"
-msgstr ""
+msgstr "Novo nó de Soma acumulada"
 
 #: ../../source/releases.rst:37
 msgid "New node Merge data"
-msgstr ""
+msgstr "Novo nó de Mesclar dados "
 
 #: ../../source/releases.rst:38
-#, fuzzy
+msgid "Node email has been removed"
+msgstr "Node email has been removed"
+
+#: ../../source/releases.rst:39
 msgid "Internacionalization"
 msgstr "Internacionalização"
 
-#: ../../source/releases.rst:39
+#: ../../source/releases.rst:40
 msgid "Support to handlebars template on template node"
-msgstr ""
+msgstr "Suporte a *handlebars template*  no nó de template"
 
-#: ../../source/releases.rst:41
+#: ../../source/releases.rst:42
 msgid "History:"
-msgstr ""
+msgstr "History:"
 
-#: ../../source/releases.rst:43
+#: ../../source/releases.rst:44
 msgid "New endpoint to query notifications"
 msgstr "Novo endpoint para consultar notificações"
 
-#: ../../source/releases.rst:45
+#: ../../source/releases.rst:46
 msgid "ImageManager:"
-msgstr ""
+msgstr "ImageManager:"
 
-#: ../../source/releases.rst:47
+#: ../../source/releases.rst:48
 msgid "Improvements to support Firmware Update"
 msgstr "Melhorias para dar suporte à atualização de firmware"
 
-#: ../../source/releases.rst:49
+#: ../../source/releases.rst:50
 msgid "DataBroker:"
 msgstr ""
 
-#: ../../source/releases.rst:51
+#: ../../source/releases.rst:52
 msgid "Support notifications in socket-io"
 msgstr "Suporte a Notificações no socket-io"
 
-#: ../../source/releases.rst:53
+#: ../../source/releases.rst:54
 msgid "DataManager:"
 msgstr ""
 
-#: ../../source/releases.rst:55
+#: ../../source/releases.rst:56
 msgid ""
 "It's new a dojot's microservice that manages the dojot's data "
 "configuration, making possible to import and export configuration."
@@ -169,11 +171,11 @@ msgstr ""
 "É um novo microsserviço da dojot que gerencia a configuração de dados da "
 "dojot, tornando possível importar e exportar as configurações."
 
-#: ../../source/releases.rst:60
+#: ../../source/releases.rst:61
 msgid "Cron:"
 msgstr ""
 
-#: ../../source/releases.rst:62
+#: ../../source/releases.rst:63
 msgid ""
 "It's new a dojot's microservice that allows you to schedule events to be "
 "emitted to other microservices."
@@ -181,11 +183,11 @@ msgstr ""
 "É um novo microsserviço da dojot que permite agendar eventos a serem "
 "emitidos para outros microsserviços."
 
-#: ../../source/releases.rst:67
+#: ../../source/releases.rst:68
 msgid "New libraries:"
 msgstr "Novas bibliotecas:"
 
-#: ../../source/releases.rst:69
+#: ../../source/releases.rst:70
 msgid ""
 "To accelerate development: `Dojot Module Java <https://github.com/dojot"
 "/dojot-module-java>`_ and `Dojot Module Python <https://github.com/dojot"
@@ -195,14 +197,14 @@ msgstr ""
 "<https://github.com/dojot/dojot-module-java>`_ e `Dojot Module Python "
 "<https://github.com/dojot/dojot-module-python>`_"
 
-#: ../../source/releases.rst:72
+#: ../../source/releases.rst:73
 msgid ""
 "HealthCheck: `HealthCheck Python <https://github.com/dojot/healthcheck-"
 "python>`_ e `Healthcheck NodeJs <https://github.com/dojot/healthcheck-"
 "nodejs>`_"
 msgstr ""
 
-#: ../../source/releases.rst:75
+#: ../../source/releases.rst:76
 msgid "IoTAgent: `IoTAgent Java <https://github.com/dojot/iotagent-java>`_"
 msgstr ""
 

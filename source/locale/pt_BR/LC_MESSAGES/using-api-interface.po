@@ -2,7 +2,6 @@
 # This file is distributed under the same license as the dojot package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: dojot 0.2.0\n"
@@ -272,12 +271,11 @@ msgid "The history endpoint is built from these values:"
 msgstr "O endpoint do histórico é construído por meio desses valores:"
 
 #: ../../source/using-api-interface.rst:256
-#, fuzzy
 msgid ""
 "``.../device/0998/...``: the device ID is ``0998`` - this is retrieved "
 "from the ``id`` attribute from the device"
 msgstr ""
-"``.../device/3bb9/...``: o ID do dispositivo é ``3bb9`` - isso é obtido "
+"``.../device/0998/...``: o ID do dispositivo é ``0998`` - isso é obtido "
 "do atributo ``id`` do próprio dispositivo"
 
 #: ../../source/using-api-interface.rst:258

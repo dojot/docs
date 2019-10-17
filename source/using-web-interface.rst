@@ -162,8 +162,8 @@ application, check the :ref:`Building an application` tutorial.
 Import and Export
 ------------------
 
-This section shows how to use the Import and Export functionality. The Import and Export options allow your configuration data to be saved to a JSON file, for Export, and loaded to Dojot for Import. This JSON file contains data from templates, devices, flows, remote nodes, and scheduling tasks that were entered in your tenant.
-To export data configuration, expand the menu at the top right of the page, click “Import / Export” and then “Export” as shown below:
+This section shows how to use the Import and Export features. These options allow your configuration data to be saved to a file, for Export, and loaded to dojot, for Import. This file has the JSON format and it contains the data from templates, devices, flows, remote nodes, and scheduling tasks that were entered in your tenant.
+To perform data configuration export procedure, expand the menu at the top right of the page, click “Import / Export” and then “Export” as shown below:
 
 .. raw:: html
 
@@ -175,8 +175,7 @@ To export data configuration, expand the menu at the top right of the page, clic
 
 The exported file can be stored as a backup and later imported back into Dojot.
 
-To import a file, expand the menu in the upper right corner of the page, click "Import / Export" and then "Import." In the window that appears it is possible to drag and drop your file or browse to the destination folder and select it, being only allowed to add a JSON extension file, in the expected format, as shown below:
-
+To perform data configuration import procedure,, expand the menu in the upper right corner of the page, click "Import / Export" and then "Import." In the window that appears it is possible to drag and drop your file or browse to the destination folder and select it. It is only allowed to add a JSON extension file, in the expected format, as illustrated in the following video:
 
 .. raw:: html
 
@@ -185,16 +184,23 @@ To import a file, expand the menu in the upper right corner of the page, click "
     allowfullscreen></iframe>
 
 .. attention::
-    When you import a JSON file, any data that exists on the user tenant, such as devices, templates, flows, remote nodes and scheduling tasks, will be permanently deleted;
-
+    When performing the import procedure all current tenant configuration, such as: devices, templates, flows, remote nodes and scheduling tasks, will be permanently deleted, so that new ones are created.
 
 Firmware update
 ------------------
 
 During the lifetime of a device, you may need to update control software (firmware) to correct some issues you encounter while using it, or even add new features.
-If your device has implemented the `LwM2M`_ firmware update status machine, you can use the Dojot GUI to update its firmware.
-To learn more about the available features and the upgrade process, consult your device manual and the LwM2M specification.
-In order to enable the firmware management you must create a template and, once saved, enable the firmware manager. After that, you can upload the firmware images to the Dojot repository that are associated with this template. The image extension must be ".hex".
+Dojot currently supports the firmware upgrade procedure via the LwM2M communication protocol. For details regarding the procedure for integrating with your device please check the LwM2M protocol specification. If your device communicates via this protocol and has the firmware update procedure in place, you can follow the steps below to update your device version.
+
+The firmware upgrade process consists of three steps:
+
+- image management;
+- image transfer to device;
+- image application on device;
+
+The details of their implementation are as follows.
+
+In order to enable the firmware management you must create a template and, once saved, enable the firmware manager. After that, you can upload the firmware images to the Dojot repository that are associated with this template. Attention: the image extension must be ".hex".
 
 .. raw:: html
 
@@ -208,7 +214,7 @@ Note that when Firmware Manager is enabled, five attributes are assigned to the 
 
 - Device State:
 
-        - Current state of firmware update;
+        - Current state of firmware update
 
 - Result of apply version:
 
@@ -216,15 +222,15 @@ Note that when Firmware Manager is enabled, five attributes are assigned to the 
 
 - Sets which version to transfer:
 
-    - Indicates to the IoT agent responsible for the device, what is the name and version of the firmware image to be downloaded and updated on the device;
+    - Indicates to the IoT agent responsible for the device, what is the name and version of the firmware image to be downloaded and updated on the device
 
 - Trigger version update:
 
-    - Actuator used to initiate firmware update procedure;
+    - Actuator used to initiate firmware update procedure
 
 - Current version of the image:
 
-    - Current version of the firmware image, provided by the device.
+    - Current version of the firmware image, provided by the device
 
 After you create the template with the Firmware management option enabled, you can associate it with a device. So, you can then transfer an image and apply it to the device, as shown in the video below:
 
@@ -233,7 +239,6 @@ After you create the template with the Firmware management option enabled, you c
     <iframe id="ytplayer" type="text/html" width="720" height="405"
     src="https://www.youtube.com/embed/#" frameborder="0"
     allowfullscreen></iframe>
-
 
 
 

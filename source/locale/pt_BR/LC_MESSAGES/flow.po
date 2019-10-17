@@ -3,7 +3,6 @@
 # This file is distributed under the same license as the dojot package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: dojot 0.2.0\n"
@@ -38,9 +37,8 @@ msgid "Level: basic"
 msgstr "Nível: básico"
 
 #: ../../source/flow.rst:13
-#, fuzzy
 msgid "Reading time: 15 min"
-msgstr "Tempo de leitura: 10 min"
+msgstr "Tempo de leitura: 15 min"
 
 #: ../../source/flow.rst:16
 msgid "Dojot nodes"
@@ -121,7 +119,7 @@ msgstr ""
 
 #: ../../source/flow.rst:77
 msgid "Device template event in"
-msgstr " 'Modelo de dispositivo (Eventos)' (entrada) [event device template]"
+msgstr "Modelo de dispositivo (Eventos) entrada [event device template]"
 
 #: ../../source/flow.rst:85
 msgid ""

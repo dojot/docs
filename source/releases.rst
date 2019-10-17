@@ -35,6 +35,7 @@ carate - 2019.09.11
   - New node Cron Batch
   - New node Cumulative Sum
   - New node Merge data
+  - Node email has been removed
   - Internacionalization
   - Support to handlebars template on template node
 
