@@ -96,7 +96,9 @@ associated to it - they are tightly linked to the original template so that any
 template update will reflect all associated devices.
 
 The component responsible for managing devices (both real and virtual) and
-templates is `DeviceManager`_. `DeviceManager documentation`_ explains in more
+templates is `DeviceManager`_ . 
+
+`DeviceManager documentation`_ explains in more
 depth all the available operations.
 
 

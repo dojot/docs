@@ -7,3 +7,4 @@ _*
 
 # Pipenv files
 Pipfile*
+.doctrees

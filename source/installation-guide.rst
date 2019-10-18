@@ -14,13 +14,11 @@ Hardware requirements
 In order to properly run dojot, the minimum hardware requirements are:
 
 - 4GB of RAM
-- 10GB of free disk space
+- 20GB of free disk space
 - Network access
 - The following ports should be opened:
-   - TCP (incoming connections): 1883 (MQTT), 8883 (Secure MQTT if used), 8000
-     (web interface access)
-   - TCP (outgoing connections): 25 (if send e-mail node is used in a flow)
-
+   - TCP (incoming connections): 1883 (MQTT), 8000 (web interface access)
+   - TLS (incoming connections): 8883 (Secure MQTT if used)
 
 
 Docker compose
@@ -94,15 +92,16 @@ replaced): ::
 
 For instance: ::
 
-  git checkout v0.3.1 -b v0.3.1
+  git checkout v0.4.0 -b v0.4.0
 
 Or if you're brave enough: ::
 
-  git checkout master
+  git checkout development
 
 After the repository is cloned, and a release (or branch) has been selected,
-there are still a few external modules that must be gathered before using the
-platform. These modules can be retrieved by executing the following command: ::
+there are still a few external modules (without this the authentication
+service will not work) that must be gathered before using the platform.
+These modules can be retrieved by executing the following command: ::
 
   git submodule update --init --recursive
 
@@ -153,6 +152,9 @@ creating production environments.
 The following sections describe all dependencies and steps required
 for this deployment.
 
+.. attention::
+  At this moment, we only support Kubernetes with dojot v0.3.1 (battojutsu.1)
+
 Kubernetes Cluster
 ^^^^^^^^^^^^^^^^^^
 
@@ -167,7 +169,7 @@ documentation`_.
 Kubernetes Requirements
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-- The minimum Kubernetes supported version is **v1.11**.
+- The Kubernetes supported version is between **v1.11** and **v1.15** .
 - Access to Docker Hub repositories
 - (optional) a storage class that will be used for persistent storage
 
