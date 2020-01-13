@@ -189,7 +189,7 @@ its playbooks.
 The first deployment step is cloning the repository. To do so,
 execute the command: ::
 
-  git clone https://github.com/dojot/ansible-dojot
+  git clone -b master https://github.com/dojot/ansible-dojot
 
 2. Installing dependencies
 ..........................
