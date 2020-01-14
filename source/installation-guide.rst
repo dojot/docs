@@ -98,13 +98,6 @@ Or if you're brave enough: ::
 
   git checkout development
 
-After the repository is cloned, and a release (or branch) has been selected,
-there are still a few external modules (without this the authentication
-service will not work) that must be gathered before using the platform.
-These modules can be retrieved by executing the following command: ::
-
-  git submodule update --init --recursive
-
 That done, the environment can be brought up by: ::
 
   # Must be run from the root of the deployment repo.
