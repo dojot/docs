@@ -92,18 +92,11 @@ replaced): ::
 
 For instance: ::
 
-  git checkout v0.4.0 -b v0.4.0
+  git checkout v0.4.1 -b v0.4.1
 
 Or if you're brave enough: ::
 
   git checkout development
-
-After the repository is cloned, and a release (or branch) has been selected,
-there are still a few external modules (without this the authentication
-service will not work) that must be gathered before using the platform.
-These modules can be retrieved by executing the following command: ::
-
-  git submodule update --init --recursive
 
 That done, the environment can be brought up by: ::
 
@@ -189,7 +182,7 @@ its playbooks.
 The first deployment step is cloning the repository. To do so,
 execute the command: ::
 
-  git clone https://github.com/dojot/ansible-dojot
+  git clone -b master https://github.com/dojot/ansible-dojot
 
 2. Installing dependencies
 ..........................
