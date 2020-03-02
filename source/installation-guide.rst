@@ -92,7 +92,7 @@ replaced): ::
 
 For instance: ::
 
-  git checkout v0.4.1 -b v0.4.1
+  git checkout v0.4.2 -b v0.4.2
 
 Or if you're brave enough: ::
 
@@ -145,8 +145,6 @@ creating production environments.
 The following sections describe all dependencies and steps required
 for this deployment.
 
-.. attention::
-  At this moment, we only support Kubernetes with dojot v0.3.1 (battojutsu.1)
 
 Kubernetes Cluster
 ^^^^^^^^^^^^^^^^^^
@@ -182,7 +180,7 @@ its playbooks.
 The first deployment step is cloning the repository. To do so,
 execute the command: ::
 
-  git clone -b master https://github.com/dojot/ansible-dojot
+  git clone -b v0.4.2 https://github.com/dojot/ansible-dojot
 
 2. Installing dependencies
 ..........................
