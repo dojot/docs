@@ -1,3 +1,8 @@
+### See this documenation in:
+
+- English: https://dojotdocs.readthedocs.io/
+- Portuguese: https://dojotdocs.readthedocs.io/pt_BR
+
 # dojot documentation
 
 This repository contains the high-level documentation for dojot iot platform.
