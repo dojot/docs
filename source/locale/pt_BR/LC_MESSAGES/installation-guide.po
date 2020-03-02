@@ -6,14 +6,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dojot 0.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-17 10:21-0300\n"
+"POT-Creation-Date: 2020-02-21 16:06-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.7.0\n"
+"Generated-By: Babel 2.8.0\n"
 
 #: ../../source/installation-guide.rst:2
 msgid "Installation Guide"
@@ -143,7 +143,7 @@ msgstr ""
 "usuário (root), ou invocando o sudo."
 
 #: ../../source/installation-guide.rst:56
-#: ../../source/installation-guide.rst:130
+#: ../../source/installation-guide.rst:123
 msgid "https://docs.docker.com/engine/installation/linux/linux-postinstall/"
 msgstr ""
 
@@ -210,24 +210,10 @@ msgid "Or if you're brave enough: ::"
 msgstr "Ou se você for muito ousado: ::"
 
 #: ../../source/installation-guide.rst:101
-msgid ""
-"After the repository is cloned, and a release (or branch) has been "
-"selected, there are still a few external modules (without this the "
-"authentication service will not work) that must be gathered before using "
-"the platform. These modules can be retrieved by executing the following "
-"command: ::"
-msgstr ""
-"Depois que o repositório estiver clonado e uma versão (tag) ou branch "
-"tiver sido selecionado, haverá ainda alguns módulos  (sem isso, o serviço"
-" de autenticação não funcionará) que devem ser instalados antes de "
-"utilizar a plataforma. Esses módulos podem ser obtidos executando o "
-"seguinte comando: ::"
-
-#: ../../source/installation-guide.rst:108
 msgid "That done, the environment can be brought up by: ::"
 msgstr "Feito isso, o ambiente pode ser iniciado assim: ::"
 
-#: ../../source/installation-guide.rst:115
+#: ../../source/installation-guide.rst:108
 msgid ""
 "To check individual container status, docker's commands may be used, for "
 "instance: ::"
@@ -235,13 +221,13 @@ msgstr ""
 "Para verfificar o estado de um container individual, comandos do docker "
 "podem ser utilizados, como por exemplo: ::"
 
-#: ../../source/installation-guide.rst:126
+#: ../../source/installation-guide.rst:119
 msgid "All docker, docker-compose commands may need sudo to work."
 msgstr ""
 "Todos os comandos para docker e docker-compose podem requerer credenciais"
 " de super usuário (root) ou sudo."
 
-#: ../../source/installation-guide.rst:128
+#: ../../source/installation-guide.rst:121
 msgid ""
 "To allow non-root users to manage docker, please check docker's "
 "documentation:"
@@ -249,11 +235,11 @@ msgstr ""
 "Para permitir usuários \"não-root\" gerenciar o docker, confira a "
 "documentação do docker:"
 
-#: ../../source/installation-guide.rst:133
+#: ../../source/installation-guide.rst:126
 msgid "Usage"
 msgstr "Utilização"
 
-#: ../../source/installation-guide.rst:135
+#: ../../source/installation-guide.rst:128
 msgid ""
 "The web interface is available at ``http://localhost:8000``. The user is "
 "``admin`` and the password is ``admin``. You also can interact with "
@@ -263,20 +249,19 @@ msgstr ""
 " ``admin`` e a senha é ``admin``. Você também pode interagir com a "
 "plataforma utilizando o :ref:`Components and APIs`."
 
-#: ../../source/installation-guide.rst:139
+#: ../../source/installation-guide.rst:132
 msgid ""
 "Read the :doc:`using-api-interface` and :doc:`using-web-interface` for "
 "more information about how to interact with the platform."
 msgstr ""
-"Leia o :doc:`using-api-interface` e :doc:`using-web-"
-"interface` para maiores informações sobre como interagir com a plataforma"
-" dojot."
+"Leia o :doc:`using-api-interface` e :doc:`using-web-interface` para "
+"maiores informações sobre como interagir com a plataforma dojot."
 
-#: ../../source/installation-guide.rst:143
+#: ../../source/installation-guide.rst:136
 msgid "Kubernetes"
 msgstr "Kubernetes"
 
-#: ../../source/installation-guide.rst:145
+#: ../../source/installation-guide.rst:138
 msgid ""
 "This section provides instructions on how to create a dojot deployment on"
 " a multi-node environment, using Kubernetes as the orchestration "
@@ -286,7 +271,7 @@ msgstr ""
 " a multi-node environment, using Kubernetes as the orchestration "
 "platform."
 
-#: ../../source/installation-guide.rst:149
+#: ../../source/installation-guide.rst:142
 msgid ""
 "This deployment option when properly configured can be used for creating "
 "production environments."
@@ -294,7 +279,7 @@ msgstr ""
 "Esta opção de implantação, quando configurada corretamente, pode ser "
 "usada para criar ambientes de produção."
 
-#: ../../source/installation-guide.rst:152
+#: ../../source/installation-guide.rst:145
 msgid ""
 "The following sections describe all dependencies and steps required for "
 "this deployment."
@@ -302,25 +287,25 @@ msgstr ""
 "As seções a seguir descrevem todas as dependências e etapas necessárias "
 "para esta implantação."
 
-#: ../../source/installation-guide.rst:156
+#: ../../source/installation-guide.rst:149
 msgid ""
-"At this moment, we only support Kubernetes with dojot "
-"v0.3.1 (battojutsu.1)"
+"At this moment, we only support Kubernetes with dojot v0.3.1 "
+"(battojutsu.1)"
 msgstr ""
-"No momento, só oferecemos suporte ao Kubernetes com dojot "
-"v0.3.1 (battojutsu.1)"
+"No momento, só oferecemos suporte ao Kubernetes com dojot v0.3.1 "
+"(battojutsu.1)"
 
-#: ../../source/installation-guide.rst:159
+#: ../../source/installation-guide.rst:152
 msgid "Kubernetes Cluster"
 msgstr "Cluster Kubernetes"
 
-#: ../../source/installation-guide.rst:161
+#: ../../source/installation-guide.rst:154
 msgid "For this guide it is advised that you already have a working K8s cluster."
 msgstr ""
 "Para este guia, é recomendável que você já tenha um cluster K8s "
 "funcionando."
 
-#: ../../source/installation-guide.rst:163
+#: ../../source/installation-guide.rst:156
 msgid ""
 "If you need to build a Kubernetes cluster from scratch, up to date "
 "information and installation procedures can be found at `Kubernetes setup"
@@ -330,29 +315,29 @@ msgstr ""
 "atualizadas e procedimentos de instalação podem ser encontrados na "
 "`documentação de instalação do Kubernetes`_."
 
-#: ../../source/installation-guide.rst:170
+#: ../../source/installation-guide.rst:163
 msgid "Kubernetes Requirements"
 msgstr "Kubernetes Requisitos"
 
-#: ../../source/installation-guide.rst:172
+#: ../../source/installation-guide.rst:165
 msgid "The Kubernetes supported version is between **v1.11** and **v1.15** ."
 msgstr "A versão suportada pelo Kubernetes é entre **v1.11** e **v1.15**."
 
-#: ../../source/installation-guide.rst:173
+#: ../../source/installation-guide.rst:166
 msgid "Access to Docker Hub repositories"
 msgstr "Acesso aos repositórios do Docker Hub"
 
-#: ../../source/installation-guide.rst:174
+#: ../../source/installation-guide.rst:167
 msgid "(optional) a storage class that will be used for persistent storage"
 msgstr ""
 "(opcional) uma classe de armazenamento que será usada para armazenamento "
 "persistente"
 
-#: ../../source/installation-guide.rst:177
+#: ../../source/installation-guide.rst:170
 msgid "dojot Deployment"
 msgstr "Implantação dojot"
 
-#: ../../source/installation-guide.rst:179
+#: ../../source/installation-guide.rst:172
 msgid ""
 "To deploy dojot to Kubernetes it is advised the use of ansible playbooks "
 "developed for dojot. The playbooks and all the related code can be found "
@@ -362,17 +347,17 @@ msgstr ""
 " *ansible* desenvolvidos para o dojot. Os manuais e todo o código "
 "relacionado podem ser encontrados no repositório `*Ansible* dojot`_."
 
-#: ../../source/installation-guide.rst:183
+#: ../../source/installation-guide.rst:176
 msgid ""
 "The following steps will describe how to use this repository and its "
 "playbooks."
 msgstr "As etapas a seguir descreverão como usar este repositório e o *ansible*."
 
-#: ../../source/installation-guide.rst:187
+#: ../../source/installation-guide.rst:180
 msgid "1. Cloning the repository"
 msgstr "1.  Clonando o repositório"
 
-#: ../../source/installation-guide.rst:189
+#: ../../source/installation-guide.rst:182
 msgid ""
 "The first deployment step is cloning the repository. To do so, execute "
 "the command: ::"
@@ -380,11 +365,11 @@ msgstr ""
 "A primeira etapa da implantação é a clonagem do repositório. Para fazer "
 "isso, execute o comando: ::"
 
-#: ../../source/installation-guide.rst:195
+#: ../../source/installation-guide.rst:188
 msgid "2. Installing dependencies"
 msgstr "2. Instalando dependências"
 
-#: ../../source/installation-guide.rst:197
+#: ../../source/installation-guide.rst:190
 msgid ""
 "The next step is installing the dependencies for running the ansible "
 "playbook, this dependencies include ansible itself with other modules "
@@ -394,7 +379,7 @@ msgstr ""
 "essas dependências incluem o próprio *ansible* com outros módulos que "
 "serão usados para analisar modelos e se comunicar com os kubernetes."
 
-#: ../../source/installation-guide.rst:202
+#: ../../source/installation-guide.rst:195
 msgid ""
 "Enter the folder where the repository was downloaded and install the pip "
 "packages with the following commands: ::"
@@ -402,11 +387,11 @@ msgstr ""
 "Digite a pasta em que o repositório foi baixado e instale os pacotes pip "
 "com os seguintes comandos:"
 
-#: ../../source/installation-guide.rst:209
+#: ../../source/installation-guide.rst:202
 msgid "3. Configuring the inventory"
 msgstr "3. Configurando o inventário"
 
-#: ../../source/installation-guide.rst:211
+#: ../../source/installation-guide.rst:204
 msgid ""
 "For deploying kubernetes with ansible, it is necessary to model your "
 "desired environment on an ansible inventory."
@@ -414,7 +399,7 @@ msgstr ""
 "Para implantar o kubernetes com *ansible*, é necessário modelar o "
 "ambiente desejado em um inventário *ansible*."
 
-#: ../../source/installation-guide.rst:214
+#: ../../source/installation-guide.rst:207
 msgid ""
 "In the repository there is an '*inventory*' folder containing an example "
 "inventory called '*example_local*' that can be used as the starting point"
@@ -424,7 +409,7 @@ msgstr ""
 "inventário chamado 'example_local' que pode ser usado como ponto de "
 "partida para criar o inventário do ambiente real."
 
-#: ../../source/installation-guide.rst:218
+#: ../../source/installation-guide.rst:211
 msgid ""
 "The first file that requires changes is the hosts.yaml. This file "
 "describes the nodes that will be accessed by ansible to perform the "
@@ -436,7 +421,7 @@ msgstr ""
 "implantação. Como a implantação do dojot é feita diretamente nos K8s, "
 "apenas um nó com acesso ao cluster kubernetes é realmente necessário."
 
-#: ../../source/installation-guide.rst:223
+#: ../../source/installation-guide.rst:216
 msgid ""
 "The node that will access the cluster might be a kubernetes cluster node "
 "that is accessible via SSH or event your local machine if it can reach "
@@ -446,7 +431,7 @@ msgstr ""
 "acessível via SSH ou evento sua máquina local se puder alcançar o cluster"
 " kubernetes com um arquivo de configuração."
 
-#: ../../source/installation-guide.rst:227
+#: ../../source/installation-guide.rst:220
 msgid ""
 "On the example file, the access is done via a local node, where the "
 "ansible script is executed. This node is described as localhost in the "
@@ -456,15 +441,15 @@ msgstr ""
 "*script* *ansible* é executado. Este nó é descrito como localhost no item"
 " de hosts do grupo **all**."
 
-#: ../../source/installation-guide.rst:231
+#: ../../source/installation-guide.rst:224
 msgid "These same nodes must be added as children of the group dojot-k8s."
 msgstr "Esses mesmos nós devem ser adicionados como filhos do grupo dojot-k8s."
 
-#: ../../source/installation-guide.rst:233
+#: ../../source/installation-guide.rst:226
 msgid "To configure a local access on the hosts file, follow the example below:"
 msgstr "Para configurar um acesso local no arquivo hosts, siga o exemplo abaixo:"
 
-#: ../../source/installation-guide.rst:248
+#: ../../source/installation-guide.rst:241
 msgid ""
 "To configure remote access via ssh to a node of the cluster, follow this "
 "other example:"
@@ -472,7 +457,7 @@ msgstr ""
 "Para configurar o acesso remoto via ssh para um nó do cluster, siga este "
 "outro exemplo:"
 
-#: ../../source/installation-guide.rst:263
+#: ../../source/installation-guide.rst:256
 msgid ""
 "The next step is configuring the mandatory and optional variables "
 "required for deploying dojot."
@@ -480,7 +465,7 @@ msgstr ""
 "A próxima etapa é configurar as variáveis obrigatórias e opcionais "
 "necessárias para implementar a dojot."
 
-#: ../../source/installation-guide.rst:266
+#: ../../source/installation-guide.rst:259
 msgid ""
 "There is a document describing each of the variables that can be "
 "configured at `Ansible dojot variables`_."
@@ -488,7 +473,7 @@ msgstr ""
 "Há um documento descrevendo cada uma das variáveis que podem ser "
 "configuradas nas `variáveis *Ansible* dojot`_."
 
-#: ../../source/installation-guide.rst:269
+#: ../../source/installation-guide.rst:262
 msgid ""
 "This variables must be set for the group '*dojot-k8s*', to do so set "
 "their values on the file dojot.yaml on the folder '**group_vars/dojot-"
@@ -498,11 +483,11 @@ msgstr ""
 "isso, defina seus valores no arquivo dojot.yaml na pasta '**group_vars"
 "/dojot-k8s/**'"
 
-#: ../../source/installation-guide.rst:276
+#: ../../source/installation-guide.rst:269
 msgid "4. Executing the deployment playbook"
 msgstr "4. Executando a implantação"
 
-#: ../../source/installation-guide.rst:278
+#: ../../source/installation-guide.rst:271
 msgid ""
 "Now that the inventory is set, the next step is executing the deployment "
 "playbook."
@@ -510,19 +495,19 @@ msgstr ""
 "Agora que o inventário está definido, a próxima etapa é executar o "
 "*playbook* de implantação"
 
-#: ../../source/installation-guide.rst:281
+#: ../../source/installation-guide.rst:274
 msgid "To do so, run the following command:"
 msgstr "Para fazer isso, execute o seguinte comando:"
 
-#: ../../source/installation-guide.rst:287
+#: ../../source/installation-guide.rst:280
 msgid "Wait for the playbook execution to finish without errors."
 msgstr "Aguarde a execução do *playbook* terminar sem erros."
 
-#: ../../source/installation-guide.rst:290
+#: ../../source/installation-guide.rst:283
 msgid "5. Accessing the deployed dojot environment"
 msgstr "5. Acessando o ambiente dojot implantado"
 
-#: ../../source/installation-guide.rst:292
+#: ../../source/installation-guide.rst:285
 msgid ""
 "Dojot access will be set using NodePorts, to view the proper ports to "
 "access the environment it is necessary to check service configuration."
@@ -531,7 +516,7 @@ msgstr ""
 "portas apropriadas para acessar o ambiente, é necessário verificar a "
 "configuração do serviço."
 
-#: ../../source/installation-guide.rst:299
+#: ../../source/installation-guide.rst:292
 msgid ""
 "This command will return the port used for external access to both the "
 "REST API and GUI via kong and the MQTT port via iotagent-mosca."
@@ -719,4 +704,25 @@ msgstr ""
 #~ "TCP (conexões de saída): 25 (se "
 #~ "envio de email nos fluxos for "
 #~ "utilizado)"
+
+#~ msgid ""
+#~ "After the repository is cloned, and "
+#~ "a release (or branch) has been "
+#~ "selected, there are still a few "
+#~ "external modules (without this the "
+#~ "authentication service will not work) "
+#~ "that must be gathered before using "
+#~ "the platform. These modules can be "
+#~ "retrieved by executing the following "
+#~ "command: ::"
+#~ msgstr ""
+#~ "Depois que o repositório estiver clonado"
+#~ " e uma versão (tag) ou branch "
+#~ "tiver sido selecionado, haverá ainda "
+#~ "alguns módulos  (sem isso, o serviço "
+#~ "de autenticação não funcionará) que "
+#~ "devem ser instalados antes de utilizar"
+#~ " a plataforma. Esses módulos podem "
+#~ "ser obtidos executando o seguinte "
+#~ "comando: ::"
 
