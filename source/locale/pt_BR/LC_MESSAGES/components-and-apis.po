@@ -291,7 +291,7 @@ msgstr ""
 
 #: ../../source/components-and-apis.rst:93
 msgid "Exposed APIs (API Gateway)"
-msgstr "APIS espostas (API Gateway)"
+msgstr "APIS expostas (API Gateway)"
 
 #: ../../source/components-and-apis.rst:95
 msgid ""
