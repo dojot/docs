@@ -168,7 +168,7 @@ To perform data configuration export procedure, expand the menu at the top right
 .. raw:: html
 
     <iframe id="ytplayer" type="text/html" width="720" height="405"
-    src="https://www.youtube.com/embed/#" frameborder="0"
+    src="https://www.youtube.com/embed/-Z0JBcsSmGs?rel=0" frameborder="0"
     allowfullscreen></iframe>
 
 
@@ -180,7 +180,7 @@ To perform data configuration import procedure,, expand the menu in the upper ri
 .. raw:: html
 
     <iframe id="ytplayer" type="text/html" width="720" height="405"
-    src="https://www.youtube.com/embed/#" frameborder="0"
+    src="https://www.youtube.com/embed/3curTvbpPR0?rel=0" frameborder="0"
     allowfullscreen></iframe>
 
 .. attention::
@@ -205,7 +205,7 @@ In order to enable the firmware management you must create a template and, once 
 .. raw:: html
 
     <iframe id="ytplayer" type="text/html" width="720" height="405"
-    src="https://www.youtube.com/embed/#" frameborder="0"
+    src="https://www.youtube.com/embed/bXRWjstAMas?rel=0" frameborder="0"
     allowfullscreen></iframe>
 
 
@@ -237,7 +237,7 @@ After you create the template with the Firmware management option enabled, you c
 .. raw:: html
 
     <iframe id="ytplayer" type="text/html" width="720" height="405"
-    src="https://www.youtube.com/embed/#" frameborder="0"
+    src="https://www.youtube.com/embed/G1ZFfCLUT6A?rel=0" frameborder="0"
     allowfullscreen></iframe>
 
 

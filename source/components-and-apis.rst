@@ -90,7 +90,8 @@ Components
 
 
 Exposed APIs (API Gateway)
-------------
+--------------------------
+
 
 The API gateway used in dojot reroutes some of endpoints from component.
 The following table shows which **endpoint exposed
