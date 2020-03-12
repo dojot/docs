@@ -1,7 +1,7 @@
 Tutorials
 =========
 
-The following tutorials show you how to use the core features of IoT dojot Platform in an easy to follow way. You’ll learn how to manage MQTT devices in the GUI, to use the Rest API to develop your own application and to configure your business logic using the Flow Broker.
+The following tutorials show you how to use the core features of IoT dojot Platform in an easy to follow way. You’ll learn how to manage MQTT devices in the GUI, to use the Rest API to develop your own application and to configure your business logic using the flow builder.
 
 .. toctree::
    :maxdepth: 2
