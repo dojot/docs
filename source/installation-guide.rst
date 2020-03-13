@@ -1,8 +1,7 @@
 Installation Guide
 ==================
 
-This page contains information about how to deploy dojot using Docker compose.
-Kubernetes and Google Cloud Platform support is on track to be implemented.
+This page contains information about how to deploy dojot using Docker compose and Kubernetes.
 
 .. contents:: Table of Contents
   :local:
@@ -11,18 +10,50 @@ Kubernetes and Google Cloud Platform support is on track to be implemented.
 Hardware requirements
 ---------------------
 
-In order to properly run dojot, the minimum hardware requirements are:
+The estimated hardware requirements for 500 devices with updates every 15s are:
 
-- 4GB of RAM
-- 20GB of free disk space
+.. list-table:: Hardware requirements for 500 devices
+   :header-rows: 1
+
+   *  - Deployment
+      -
+      - CPU
+      - RAM
+      - Free disk space
+   *  - **Docker-compose**
+      -
+      - 4 Cores
+      - 4GB
+      - 10GB
+   *  - **Kubernetes**
+      - Master
+      - 2 Cores
+      - 2GB
+      - 2GB
+   *  - **Kubernetes**
+      - Worker
+      - 4 Cores
+      - 4GB
+      - 10GB
+
+
+In addition, you need:
+
 - Network access
 - The following ports should be opened:
    - TCP (incoming connections): 1883 (MQTT), 8000 (web interface access)
    - TLS (incoming connections): 8883 (Secure MQTT if used)
 
+Note: The above cores are approximately 3.5 GHz (x86-64)
 
 Docker compose
 --------------
+
+.. raw:: html
+
+    <iframe id="ytplayer" type="text/html" width="720" height="405"
+    src="https://www.youtube.com/embed/aZ-Wtcd_Ydw?rel=0" frameborder="0"
+    allowfullscreen></iframe><br/>
 
 This document provides instructions on how to create a trivial deployment
 environment on single host for *dojot*, using docker-compose as the processes
@@ -134,6 +165,14 @@ information about how to interact with the platform.
 
 Kubernetes
 ----------
+
+.. raw:: html
+
+    <iframe id="ytplayer" type="text/html" width="720" height="405"
+    src="https://www.youtube.com/embed/qGUlBCmmIao?rel=0" frameborder="0"
+    allowfullscreen></iframe>
+
+
 
 This section provides instructions on how to create a dojot deployment
 on a multi-node environment, using Kubernetes as the orchestration
