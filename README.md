@@ -1,4 +1,4 @@
-### See this documenation in:
+### See the documentation at:
 
 - English: https://dojotdocs.readthedocs.io/
 - Portuguese: https://dojotdocs.readthedocs.io/pt_BR
