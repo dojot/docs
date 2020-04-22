@@ -230,7 +230,7 @@ ftp
     :align: left
     :alt: http_node
 
-This node sends or retrieves a file from/to a FTP server. When uploading a
+This node sends a file from/to a FTP server. When uploading a
 file, its name can be set by setting the "Filename" field in the same way as
 other output variables (it should refer to a variable set in the flow). The
 file encoding will set the file enconding, which could be, for instance,
