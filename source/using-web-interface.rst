@@ -244,5 +244,6 @@ After you create the template with the Firmware management option enabled, you c
 
 Note that in each step, the status and result of image processing are shown.
 
+Add report
 
 .. _LwM2M: https://openmobilealliance.org/release/LightweightM2M/V1_1-20180710-A/OMA-TS-LightweightM2M_Core-V1_1-20180710-A.pdf
