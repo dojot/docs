@@ -123,7 +123,7 @@ replaced): ::
 
 For instance: ::
 
-  git checkout v0.4.2 -b v0.4.2
+  git checkout v0.4.3 -b v0.4.3
 
 Or if you're brave enough: ::
 
@@ -219,7 +219,7 @@ its playbooks.
 The first deployment step is cloning the repository. To do so,
 execute the command: ::
 
-  git clone -b v0.4.2 https://github.com/dojot/ansible-dojot
+  git clone -b v0.4.3 https://github.com/dojot/ansible-dojot
 
 2. Installing dependencies
 ..........................

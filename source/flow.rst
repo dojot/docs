@@ -190,11 +190,11 @@ Fields:
 * **Source** *(required)*: Data structure that will be mapped as message to
   device out
 
-http
-****
+HTTP request
+************
 
 .. _http_node:
-.. image:: images/nodes/http_node.png
+.. image:: images/nodes/http-request-node.png
     :width: 20%
     :align: left
     :alt: http_node
@@ -208,7 +208,7 @@ the response to the next node in the flow.
     :align: center
     :alt: httpin_node
 
-    : Device template in configuration window
+    : Http Request configuration
 
 Fields:
 
@@ -219,10 +219,10 @@ Fields:
   example.
 * **Response** *(required)*: Variable that will receive the http response.
 * **Return** *(required)*: Type of the return.
-* **Name** *(required)*: Name of the node.
+* **Name** *(optional)*: Name of the node.
 
-ftp
-***
+Ftp request
+***********
 
 .. _ftp-request:
 .. image:: images/nodes/ftp-request.png
@@ -230,7 +230,7 @@ ftp
     :align: left
     :alt: http_node
 
-This node sends a file from/to a FTP server. When uploading a
+This node sends a file to a FTP server. When uploading a
 file, its name can be set by setting the "Filename" field in the same way as
 other output variables (it should refer to a variable set in the flow). The
 file encoding will set the file enconding, which could be, for instance,
@@ -247,19 +247,16 @@ file encoding will set the file enconding, which could be, for instance,
 
 Fields:
 
-* **Method** *(required)*: The FTP action to be taken (PUT, GET).
+* **Method** *(required)*: The FTP action to be taken (PUT).
 * **URL** *(required)*: the FTP server
 * **Authentication** *(required)*: Username and password to access this server.
-* **File name** *(required)*: Variable containing the file name to be uploaded
-  or downloaded.
-* **File content** *(required)*: In case of uploading a file, this variable
-  should hold the file content.
+* **File name** *(required)*: Variable containing the file name to be uploaded.
+* **File content** *(required)*: This variable should hold the file content.
 * **File encoding** *(required)*: How the file is encoded
-* **Response** *(required)*: Variable that will receive the FTP response
-  (or file)
+* **Response** *(optinal)*: Variable that will receive the FTP response
+* **Name** *(optional)*: Name of the node.
 
-
-notification
+Notification
 ************
 
 .. _notification-request:
@@ -380,8 +377,6 @@ It uses the `mustache`_ template language.
 Check :numref:`template_node_cfg` as example:
 the field **a** of payload will be replaced with the value of the **payload.b**
 
-
-
 .. _template_node_cfg:
 .. figure:: images/nodes/template_node_cfg.png
     :width: 50%
@@ -398,6 +393,96 @@ Fields:
 * **Template** *(required)*: Value that will be assigned to the target variable
   set on **Set property**
 * **Output as** *(required)*: The format of the output
+
+Cron
+****
+
+.. _cron_node:
+.. image:: images/nodes/cron-node.png
+    :width: 20%
+    :align: left
+    :alt: cron_node
+
+Processing node to create/remove cron jobs.
+Cron allowing to schedule tasks to: send events to the data broker or execute a http request.
+
+.. _cron_node_cfg:
+.. figure:: images/nodes/cron-node-config.png
+    :width: 50%
+    :align: center
+    :alt: cron_node_cfg
+
+    : Cron configuration
+
+Fields:
+
+* **Operation** *(required)*: Defines the type of processing if creating or removing cron jobs (CREATE, REMOVE).
+* **CRON Time Expression** *(required)*: CRON Time Expression, eg. `* * * * * *`. Required when using CREATE type operation.
+* **JOB Name** *(optional)*: Name of Job.
+* **JOB Description** *(optional)*: Description of Job.
+* **JOB Type** *(required)*: Options are EVENT REQUEST or HTTP REQUEST.
+* **JOB Action** *(required)*:  Variable that contains the JSON to JOB Action. This value can be assigned to the variable using the template node, for example.
+* **JOB Identifier (output to)** *(required)*: Variable that will receive the JOB Identifier.
+* **Name** *(optional)*: Name of the node
+
+Example of `JOB Action` when `JOB Type` is **HTTP REQUEST**:
+
+.. code-block:: json
+
+    {
+        "method": "PUT",
+        "headers": {
+                      "Authorization": "Bearer ${JWT}",
+                      "Content-Type": "application/json"
+                    },
+        "url": "http://device-manager:5000/device/${DEVICE_ID}/actuate",
+        "body": {
+                    "attrs": {"message": "keepalive"}
+                }
+    }
+
+Example of `JOB Action` when `JOB Type` is **EVENT REQUEST**:
+
+.. code-block:: json
+
+    {
+        "subject": "dojot.device-manager.device",
+        "message": {
+                      "event": "configure",
+                      "data": { "attrs": { "message": "keepalive"},
+                                "id": "6a1213"
+                               },
+                      "meta": { "service": "admin"}
+                    }
+    }
+
+
+Cron batch
+**********
+
+.. _cron_batch_node:
+.. image:: images/nodes/cron-batch-node.png
+    :width: 20%
+    :align: left
+    :alt: cron_batch_node
+
+It works like the `cron node`, but here you can use a batch of schedules.
+
+.. _cron_batch_node_cfg:
+.. figure:: images/nodes/cron-batch-node-config.png
+    :width: 50%
+    :align: center
+    :alt: cron_batch_node_cfg
+
+    : Cron batch configuration
+
+Fields:
+
+* **Operation** *(required)*: Defines the types of processings if creating or removing cron jobs (CREATE, REMOVE).
+* **JOB requests** *(required)*:  Variable that contains the array of JSONs to JOB Actions.
+* **JOB identifiers** *(required)*: Variable that will receive the array of job identifiers.
+* **Name** *(optional)*: Name of the node
+
 
 Geofence
 ********
@@ -439,6 +524,10 @@ Get Context
 This node is used to get a variable that is in the context and assign its value
 to a variable that will be used in the flow.
 
+Note: Context is a mechanism that allows a given set of data to persist
+beyond the life of the event, thus making it possible to store a state for the
+elements of the solution.
+
 .. _getcontext_node_cfg:
 .. figure:: images/nodes/getcontext_node_cfg.png
     :width: 50%
@@ -454,6 +543,58 @@ Fields:
 * **Context content** *(required)**: The variable in the flow that will receive
   the value of the context
 
+
+Merge data
+***********
+
+.. _merge_data_node:
+.. image:: images/nodes/merge-data-node.png.png
+    :width: 20%
+    :align: left
+    :alt: merge_data_node
+
+This node allows objects to be merged in the context.
+
+.. _merge_data_node_cfg:
+.. figure:: images/nodes/merge-data-node-config.png
+    :width: 50%
+    :align: center
+    :alt: merge_data_node_cfg
+
+    : Merge data configuration
+
+Fields:
+
+* **Target data (JSON)** *(required)*: Variable that contains the data to be merged.
+* **Merged data (JSON)** *(required)*: Variable that will receive the new data merged with your existing data.
+* **Name** *(optional)*: Name of the node
+
+Cumulative sum
+**************
+
+.. _cumulative_sum_node:
+.. image:: images/nodes/cumulative-sun-node.png
+    :width: 20%
+    :align: left
+    :alt: cumulative_sum_node
+
+The cumulative sum node accumulates the data for an attribute in a temporal window and keeping this in  the context.
+
+.. _cumulative_sum_node_cfg:
+.. figure:: images/nodes/cum-sum-node-config.png
+    :width: 50%
+    :align: center
+    :alt: cumulative_sum_node_cfg
+
+    : Cumulative sum configuration
+
+Fields:
+
+* **Time period (min)** *(required)*: Time in minutes to keep the sum.
+* **Target attribute** *(required)*: Variable that contains the value to be sum.
+* **Timestamp** *(required)*:  Variable containing the timestamp for the value of the target attribute.
+* **Sum** *(required)*:  Variable that will receive the sum.
+* **Name** *(optional)*: Name of the node
 
 
 Deprecated nodes

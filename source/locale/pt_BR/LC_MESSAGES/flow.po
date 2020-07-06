@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dojot 0.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-14 14:30-0300\n"
+"POT-Creation-Date: 2020-07-06 11:02-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.7.0\n"
+"Generated-By: Babel 2.8.0\n"
 
 #: ../../source/flow.rst:4
 msgid "Using flow builder"
@@ -70,28 +70,32 @@ msgstr ""
 "Para configurar o dispositivo no nó, uma janela como a :numref:`event-"
 "device-in-panel` será exibida."
 
-#: ../../source/flow.rst:62 ../../source/flow.rst:485
+#: ../../source/flow.rst:62 ../../source/flow.rst:626
 msgid ": Device in configuration window"
 msgstr ": Dispositivo na janela de configuração"
 
 #: ../../source/flow.rst:64 ../../source/flow.rst:102 ../../source/flow.rst:136
 #: ../../source/flow.rst:175 ../../source/flow.rst:213
-#: ../../source/flow.rst:248 ../../source/flow.rst:286
-#: ../../source/flow.rst:320 ../../source/flow.rst:350
-#: ../../source/flow.rst:393 ../../source/flow.rst:421
-#: ../../source/flow.rst:448 ../../source/flow.rst:487
-#: ../../source/flow.rst:523 ../../source/flow.rst:554
-#: ../../source/flow.rst:586
+#: ../../source/flow.rst:248 ../../source/flow.rst:283
+#: ../../source/flow.rst:317 ../../source/flow.rst:347
+#: ../../source/flow.rst:388 ../../source/flow.rst:417
+#: ../../source/flow.rst:479 ../../source/flow.rst:506
+#: ../../source/flow.rst:537 ../../source/flow.rst:566
+#: ../../source/flow.rst:591 ../../source/flow.rst:628
+#: ../../source/flow.rst:664 ../../source/flow.rst:695
+#: ../../source/flow.rst:727
 msgid "Fields:"
 msgstr "Campos"
 
-#: ../../source/flow.rst:66 ../../source/flow.rst:288 ../../source/flow.rst:322
-#: ../../source/flow.rst:352 ../../source/flow.rst:395
-#: ../../source/flow.rst:427 ../../source/flow.rst:489
+#: ../../source/flow.rst:66 ../../source/flow.rst:285 ../../source/flow.rst:319
+#: ../../source/flow.rst:349 ../../source/flow.rst:390
+#: ../../source/flow.rst:426 ../../source/flow.rst:484
+#: ../../source/flow.rst:512 ../../source/flow.rst:570
+#: ../../source/flow.rst:597 ../../source/flow.rst:630
 msgid "**Name** *(optional)*: Name of the node"
 msgstr "**Nome (Name)** *(opcional)*: Nome do nó"
 
-#: ../../source/flow.rst:67 ../../source/flow.rst:490
+#: ../../source/flow.rst:67 ../../source/flow.rst:631
 msgid "**Device** *(required)*: The *dojot* device that will trigger the flow"
 msgstr ""
 "**Dispositivo (Device)** *(obrigatório)*: o dispositivo *dojot* que "
@@ -141,19 +145,19 @@ msgstr ""
 "e do dispositivo2 iniciarão o fluxo, porque o modelo A é um dos modelos "
 "que compor esses dispositivos."
 
-#: ../../source/flow.rst:100 ../../source/flow.rst:211
-#: ../../source/flow.rst:246 ../../source/flow.rst:284
-#: ../../source/flow.rst:521
+#: ../../source/flow.rst:100 ../../source/flow.rst:246
+#: ../../source/flow.rst:281 ../../source/flow.rst:662
 msgid ": Device template in configuration window"
 msgstr ": Modelo de dispositivo janela de configuração"
 
 #: ../../source/flow.rst:104 ../../source/flow.rst:138
-#: ../../source/flow.rst:177 ../../source/flow.rst:525
-#: ../../source/flow.rst:556 ../../source/flow.rst:588
+#: ../../source/flow.rst:177 ../../source/flow.rst:222
+#: ../../source/flow.rst:257 ../../source/flow.rst:666
+#: ../../source/flow.rst:697 ../../source/flow.rst:729
 msgid "**Name** *(optional)*: Name of the node."
 msgstr "**Nome (Name)** *(opcional)*: Nome do nó."
 
-#: ../../source/flow.rst:105 ../../source/flow.rst:526
+#: ../../source/flow.rst:105 ../../source/flow.rst:667
 msgid "**Device** *(required)*: The *dojot* device that will trigger the flow."
 msgstr ""
 "**Dispositivo (Device)** *(obrigatório)*: o dispositivo *dojot* que "
@@ -194,7 +198,7 @@ msgstr ""
 " o dispositivo escolhido é um dispositivo virtual, que existe apenas no "
 "dojot."
 
-#: ../../source/flow.rst:134 ../../source/flow.rst:552
+#: ../../source/flow.rst:134 ../../source/flow.rst:693
 msgid ": Device out config window"
 msgstr ": Janela de configuração do dispositivo"
 
@@ -230,7 +234,7 @@ msgstr ""
 "(msg.list_of_devices)."
 
 #: ../../source/flow.rst:146 ../../source/flow.rst:185
-#: ../../source/flow.rst:557
+#: ../../source/flow.rst:698
 msgid ""
 "**Device** *(required)*: Select \"The device that triggered the flow\" "
 "will make the device that was the entry-point be the end-point of the "
@@ -246,7 +250,7 @@ msgstr ""
 " execução o ponto final."
 
 #: ../../source/flow.rst:151 ../../source/flow.rst:190
-#: ../../source/flow.rst:562 ../../source/flow.rst:590
+#: ../../source/flow.rst:703 ../../source/flow.rst:731
 msgid ""
 "**Source** *(required)*: Data structure that will be mapped as message to"
 " device out"
@@ -258,7 +262,7 @@ msgstr ""
 msgid "Multi actuate"
 msgstr "Multi atuador (Multi actuate)"
 
-#: ../../source/flow.rst:163 ../../source/flow.rst:574
+#: ../../source/flow.rst:163 ../../source/flow.rst:715
 msgid ""
 "Actuate node is, basically, the same thing of **device out** node. But, "
 "it can send messages to a real device, like telling a lamp to turn the "
@@ -268,7 +272,7 @@ msgstr ""
 "(saída). Mas pode enviar mensagens para um dispositivo real, como dizer a"
 " uma lâmpada para desligar a luz e etc."
 
-#: ../../source/flow.rst:173 ../../source/flow.rst:584
+#: ../../source/flow.rst:173 ../../source/flow.rst:725
 msgid ": Actuate configuration"
 msgstr ": Configuração de atuação"
 
@@ -306,7 +310,7 @@ msgstr ""
 "(msg.list_of_devices)."
 
 #: ../../source/flow.rst:194
-msgid "http"
+msgid "HTTP request"
 msgstr ""
 
 #: ../../source/flow.rst:202
@@ -316,6 +320,10 @@ msgid ""
 msgstr ""
 "Este nó envia uma solicitação http para um determinado endereço e, em "
 "seguida, pode encaminhar a resposta para o próximo nó no fluxo."
+
+#: ../../source/flow.rst:211
+msgid ": Http Request configuration"
+msgstr ": Configuração do Http Request"
 
 #: ../../source/flow.rst:215
 msgid "**Method** *(required)*: The http method (GET, POST, etc...)."
@@ -345,34 +353,28 @@ msgstr ""
 msgid "**Return** *(required)*: Type of the return."
 msgstr "**Retorno (Return)** *(obrigatório)*: Tipo do retorno."
 
-#: ../../source/flow.rst:222
-msgid "**Name** *(required)*: Name of the node."
-msgstr "**Nome (Name)** *(obrigatório)*: Nome do nó."
-
 #: ../../source/flow.rst:225
-msgid "ftp"
+msgid "Ftp request"
 msgstr ""
 
 #: ../../source/flow.rst:233
 msgid ""
-"This node sends or retrieves a file from/to a FTP server. When uploading "
-"a file, its name can be set by setting the \"Filename\" field in the same"
-" way as other output variables (it should refer to a variable set in the "
-"flow). The file encoding will set the file enconding, which could be, for"
-" instance, \"base64\" or \"utf-8\"."
+"This node sends a file to a FTP server. When uploading a file, its name "
+"can be set by setting the \"Filename\" field in the same way as other "
+"output variables (it should refer to a variable set in the flow). The "
+"file encoding will set the file enconding, which could be, for instance, "
+"\"base64\" or \"utf-8\"."
 msgstr ""
-"Este nó envia ou recupera um arquivo de/para um servidor FTP. Ao fazer "
-"upload de um arquivo, seu nome pode ser definido configurando o campo "
-"\"Nome do arquivo\" da mesma maneira que outras variáveis de saída (ele "
-"deve se referir a uma variável definida no fluxo). A codificação do "
-"arquivo definirá o encconding do arquivo, que pode ser, por exemplo, "
-"\"base64\" ou \"utf-8\"."
+"Este nó envia um arquivo para um servidor FTP. Ao fazer upload de um "
+"arquivo, seu nome pode ser definido configurando o campo \"Nome do "
+"arquivo\" da mesma maneira que outras variáveis de saída (ele deve se "
+"referir a uma variável definida no fluxo). A codificação do arquivo "
+"definirá o encconding do arquivo, que pode ser, por exemplo, \"base64\" "
+"ou \"utf-8\"."
 
 #: ../../source/flow.rst:250
-msgid "**Method** *(required)*: The FTP action to be taken (PUT, GET)."
-msgstr ""
-"**Método (Method)** *(obrigatório)*: a ação do FTP a ser executada (PUT, "
-"GET)."
+msgid "**Method** *(required)*: The FTP action to be taken (PUT)."
+msgstr "**Método (Method)** *(obrigatório)*: a ação do FTP a ser executada (PUT )."
 
 #: ../../source/flow.rst:251
 msgid "**URL** *(required)*: the FTP server"
@@ -389,38 +391,34 @@ msgstr ""
 #: ../../source/flow.rst:253
 msgid ""
 "**File name** *(required)*: Variable containing the file name to be "
-"uploaded or downloaded."
+"uploaded."
 msgstr ""
 "**Nome do arquivo (File name)** *(obrigatório)*: variável que contém o "
-"nome do arquivo a ser carregado ou baixado."
+"nome do arquivo a ser carregado."
+
+#: ../../source/flow.rst:254
+msgid "**File content** *(required)*: This variable should hold the file content."
+msgstr ""
+"**Conteúdo do arquivo (File content)** *(obrigatório)*: Essa variável "
+"deve conter o conteúdo do arquivo."
 
 #: ../../source/flow.rst:255
-msgid ""
-"**File content** *(required)*: In case of uploading a file, this variable"
-" should hold the file content."
-msgstr ""
-"**Conteúdo do arquivo (File content)** *(obrigatório)*: no caso de upload"
-" de um arquivo, essa variável deve conter o conteúdo do arquivo."
-
-#: ../../source/flow.rst:257
 msgid "**File encoding** *(required)*: How the file is encoded"
 msgstr ""
 "**Codificação de arquivo (File encoding)** *(obrigatório)*: como o "
 "arquivo é codificado"
 
-#: ../../source/flow.rst:258
-msgid ""
-"**Response** *(required)*: Variable that will receive the FTP response "
-"(or file)"
+#: ../../source/flow.rst:256
+msgid "**Response** *(optinal)*: Variable that will receive the FTP response"
 msgstr ""
-"**Resposta (Response)** *(obrigatório)*: Variável que receberá a resposta"
-" (ou arquivo) do FTP"
+"**Resposta (Response)** *(obrigatório)*: variável que receberá a resposta"
+" http."
 
-#: ../../source/flow.rst:263
-msgid "notification"
+#: ../../source/flow.rst:260
+msgid "Notification"
 msgstr "Notificação (notification)"
 
-#: ../../source/flow.rst:271
+#: ../../source/flow.rst:268
 msgid ""
 "This node sends a user notification to other services in dojot. This "
 "might be useful to generate application notifications that could be "
@@ -438,7 +436,7 @@ msgstr ""
 " execução. Além disso, os metadados podem ser adicionados à mensagem: "
 "pode ser um objeto de valor-chave simples que contém dados arbitrários."
 
-#: ../../source/flow.rst:289
+#: ../../source/flow.rst:286
 msgid ""
 "**Message** *(required)*: Static, if the notification should contain a "
 "static text, or dynamic, which will enable a variable to be set as output"
@@ -449,7 +447,7 @@ msgstr ""
 "seja configurada como saída para este nó. Essa variável será substituída "
 "no tempo de execução."
 
-#: ../../source/flow.rst:292
+#: ../../source/flow.rst:289
 msgid ""
 "**Value** *(required)*: message content (either static text or a variable"
 " reference)."
@@ -457,7 +455,7 @@ msgstr ""
 "**Valor (Value)** *(obrigatório)*: conteúdo da mensagem (texto estático "
 "ou referência variável)."
 
-#: ../../source/flow.rst:294
+#: ../../source/flow.rst:291
 msgid ""
 "**Metadata** *(required)*: variable reference containing a simple "
 "dictionary (key-value pairs) containing the metadata to be added to the "
@@ -467,11 +465,11 @@ msgstr ""
 "contém um dicionário simples (pares de valores-chave) que contém os "
 "metadados a serem adicionados à mensagem"
 
-#: ../../source/flow.rst:299
+#: ../../source/flow.rst:296
 msgid "Change"
 msgstr "Definir valor (Change)"
 
-#: ../../source/flow.rst:307
+#: ../../source/flow.rst:304
 msgid ""
 "Change node is used to copy or assign values to an output, i. e., copy "
 "values of a message attributes to a dictionary that will be assigned to "
@@ -481,11 +479,11 @@ msgstr ""
 "saída, por exemplo, copie valores de atributos de uma mensagem para um "
 "dicionário que será atribuído ao dispositivo virtual."
 
-#: ../../source/flow.rst:318
+#: ../../source/flow.rst:315
 msgid ": Change configuration"
 msgstr ": Definir valor (Change) configuração"
 
-#: ../../source/flow.rst:323
+#: ../../source/flow.rst:320
 msgid ""
 "**msg** *(required)*: Definition of the data structure that will be sent "
 "to the next node and will receive the value set on the *to* field"
@@ -493,11 +491,11 @@ msgstr ""
 "**msg** *(obrigatório)*: definição da estrutura de dados que será enviada"
 " para o próximo nó e receberá o valor definido no campo para"
 
-#: ../../source/flow.rst:325
+#: ../../source/flow.rst:322
 msgid "**to** *(required)*: Assignment or copy of values"
 msgstr "**para (to)** *(obrigatório)*: atribuição ou cópia de valores"
 
-#: ../../source/flow.rst:328 ../../source/flow.rst:360
+#: ../../source/flow.rst:325 ../../source/flow.rst:357
 msgid ""
 "More than one rule can be assign by clicking on *+add* below the rules "
 "box."
@@ -505,11 +503,11 @@ msgstr ""
 "Mais de uma regra pode ser atribuída clicando em *+adicionar* abaixo da "
 "caixa de regras"
 
-#: ../../source/flow.rst:331
+#: ../../source/flow.rst:328
 msgid "Switch"
 msgstr "Interruptor (Switch)"
 
-#: ../../source/flow.rst:339
+#: ../../source/flow.rst:336
 msgid ""
 "The Switch node allows messages to be routed to different branches of a "
 "flow by evaluating a set of rules against each message."
@@ -518,15 +516,15 @@ msgstr ""
 "ramificações de um fluxo avaliando um conjunto de regras em relação a "
 "cada mensagem."
 
-#: ../../source/flow.rst:348
+#: ../../source/flow.rst:345
 msgid ": Switch configuration"
 msgstr ": Switch configurações"
 
-#: ../../source/flow.rst:353
+#: ../../source/flow.rst:350
 msgid "**Property** *(required)*: Variable that will be evaluated"
 msgstr "**Propriedade (Property)** *(obrigatório)*: variável que será avaliada"
 
-#: ../../source/flow.rst:354
+#: ../../source/flow.rst:351
 msgid ""
 "**Rule box** *(required)*: Rules that will determine the output branch of"
 " the node. Also, it can be configured to stop checking rules when it "
@@ -539,7 +537,7 @@ msgstr ""
 "a outra ou verificar todas as regras e rotear a mensagem para a saída "
 "correspondente."
 
-#: ../../source/flow.rst:361
+#: ../../source/flow.rst:358
 msgid ""
 "The rules are mapped one-to-one to the output conectors. Then the first "
 "rule is related to the first output, the second rule to the second output"
@@ -549,17 +547,17 @@ msgstr ""
 " primeira regra está relacionada à primeira saída, a segunda regra à "
 "segunda saída e etc…"
 
-#: ../../source/flow.rst:365
+#: ../../source/flow.rst:362
 msgid "Template"
 msgstr "Modelo (Template)"
 
-#: ../../source/flow.rst:368
+#: ../../source/flow.rst:365
 msgid "Despite the name, this node has nothing to do with dojot templates"
 msgstr ""
 "Apesar do nome, este nó não tem nada a ver com modelos  de dispostivos da"
 " dojot"
 
-#: ../../source/flow.rst:376
+#: ../../source/flow.rst:373
 msgid ""
 "This node will assign a value to a target variable. This value can be a "
 "constant, the value of an attribute that came from the entry device and "
@@ -569,7 +567,7 @@ msgstr ""
 " uma constante, o valor de um atributo que veio do dispositivo de entrada"
 " e etc."
 
-#: ../../source/flow.rst:379
+#: ../../source/flow.rst:376
 msgid ""
 "It uses the `mustache`_ template language. Check "
 ":numref:`template_node_cfg` as example: the field **a** of payload will "
@@ -579,21 +577,21 @@ msgstr ""
 "como exemplo: o campo **a** da *payload* será substituído pelo valor de "
 "**payload.b**"
 
-#: ../../source/flow.rst:391
+#: ../../source/flow.rst:386
 msgid ": Template configuration"
 msgstr ": Configurações do Modelo"
 
-#: ../../source/flow.rst:396
+#: ../../source/flow.rst:391
 msgid "**Set Property** *(required)*: Variable that will receive the value"
 msgstr ""
 "**Propriedade (Set Property)** *(obrigatório)*: variável que receberá o "
 "valor"
 
-#: ../../source/flow.rst:397
+#: ../../source/flow.rst:392
 msgid "**Format** *(required)*: Format template will be writen"
 msgstr "**Formato (Format)** *(obrigatório)*: o modelo de formato que será gravado"
 
-#: ../../source/flow.rst:398
+#: ../../source/flow.rst:393
 msgid ""
 "**Template** *(required)*: Value that will be assigned to the target "
 "variable set on **Set property**"
@@ -601,23 +599,137 @@ msgstr ""
 "**Modelo (Template)** *(obrigatório *: valor que será atribuído à "
 "variável de destino definida em **Propriedade** "
 
-#: ../../source/flow.rst:400
+#: ../../source/flow.rst:395
 msgid "**Output as** *(required)*: The format of the output"
 msgstr "**Saída (Output as)** *(obrigatório)*: o formato da saída"
 
-#: ../../source/flow.rst:403
+#: ../../source/flow.rst:398
+msgid "Cron"
+msgstr "Cron"
+
+#: ../../source/flow.rst:406
+msgid ""
+"Processing node to create/remove cron jobs. Cron allowing to schedule "
+"tasks to: send events to the data broker or execute a http request."
+msgstr ""
+"Nó de processamento para criar/remover tarefas cron. Cron permiti agendar"
+" tarefas para: enviar eventos para o data broker ou executar uma "
+"requisição http."
+
+#: ../../source/flow.rst:415
+msgid ": Cron configuration"
+msgstr ": Cron configuração"
+
+#: ../../source/flow.rst:419
+msgid ""
+"**Operation** *(required)*: Defines the type of processing if creating or"
+" removing cron jobs (CREATE, REMOVE)."
+msgstr ""
+"**Operação** *(obrigatório)*: define o tipo de processamento ao criar ou "
+"remover trabalhos cron (CREATE, REMOVE)."
+
+#: ../../source/flow.rst:420
+msgid ""
+"**CRON Time Expression** *(required)*: CRON Time Expression, eg. `* * * *"
+" * *`. Required when using CREATE type operation."
+msgstr ""
+"**Expressão de Tempo do CRON** *(obrigatório)*: Expressão de Tempo do "
+"CRON, por exemplo `* * * * * *`. Obrigatório ao usar a operação do tipo "
+"CREATE."
+
+#: ../../source/flow.rst:421
+msgid "**JOB Name** *(optional)*: Name of Job."
+msgstr "**Nome do Trabalho** *(opcional)*: Nome do JOB."
+
+#: ../../source/flow.rst:422
+msgid "**JOB Description** *(optional)*: Description of Job."
+msgstr "**Descrição do Trabalho** *(opcional)*: Descrição do Trabalho."
+
+#: ../../source/flow.rst:423
+msgid "**JOB Type** *(required)*: Options are EVENT REQUEST or HTTP REQUEST."
+msgstr ""
+"**Tipo do Trabalho** *(obrigatório)*: As opções são EVENT REQUEST ou HTTP"
+" REQUEST."
+
+#: ../../source/flow.rst:424
+msgid ""
+"**JOB Action** *(required)*:  Variable that contains the JSON to JOB "
+"Action. This value can be assigned to the variable using the template "
+"node, for example."
+msgstr ""
+"**Ação do Trabalho** *(obrigatório)*:  Variável que contém o JSON para "
+"Ação do Trabalho. Este valor pode ser atribuído à variável usando o nó do"
+" modelo, por exemplo."
+
+#: ../../source/flow.rst:425
+msgid ""
+"**JOB Identifier (output to)** *(required)*: Variable that will receive "
+"the JOB Identifier."
+msgstr ""
+"**Identificador do Trabalho (saída para)** *(obrigatório)*: Variável que "
+"receberá o Identificador do Trabalho."
+
+#: ../../source/flow.rst:428
+msgid "Example of `JOB Action` when `JOB Type` is **HTTP REQUEST**:"
+msgstr ""
+"Exemplo de `Ação do Trabalho` quando `Tipo do Trabalho` é **HTTP "
+"REQUEST**:"
+
+#: ../../source/flow.rst:444
+msgid "Example of `JOB Action` when `JOB Type` is **EVENT REQUEST**:"
+msgstr ""
+"Exemplo de `Ação do Trabalho` quando `Tipo do Trabalho` é **EVENT "
+"REQUEST**:"
+
+#: ../../source/flow.rst:461
+msgid "Cron batch"
+msgstr "Cron em lote (Cron batch)"
+
+#: ../../source/flow.rst:469
+msgid "It works like the `cron node`, but here you can use a batch of schedules."
+msgstr "Funciona como o `cron node`, mas aqui você pode usar agendamentos em lote."
+
+#: ../../source/flow.rst:477
+msgid ": Cron batch configuration"
+msgstr ": Cron batch configurações"
+
+#: ../../source/flow.rst:481
+msgid ""
+"**Operation** *(required)*: Defines the types of processings if creating "
+"or removing cron jobs (CREATE, REMOVE)."
+msgstr ""
+"**Operação** *(obrigatório)*: define o tipo de processamento ao criar ou "
+"remover trabalhos cron (CREATE, REMOVE)."
+
+#: ../../source/flow.rst:482
+msgid ""
+"**JOB requests** *(required)*:  Variable that contains the array of JSONs"
+" to JOB Actions."
+msgstr ""
+"**Requisições de trabalho** *(obrigatório)*:  Variável que contém o "
+"*array* de JSONs para ações de trabalho"
+
+#: ../../source/flow.rst:483
+msgid ""
+"**JOB identifiers** *(required)*: Variable that will receive the array of"
+" job identifiers."
+msgstr ""
+"**Identificadores de trabalho** *(obrigatório)*: Variável que receberá o "
+"*array* de identificadores de trabalho."
+
+#: ../../source/flow.rst:488
 msgid "Geofence"
 msgstr "Geo referência (Geofence)"
 
-#: ../../source/flow.rst:411
+#: ../../source/flow.rst:496
 msgid "Select an interest area to determine wich devices will activate the flow"
 msgstr "Select an interest area to determine wich devices will activate the flow"
 
-#: ../../source/flow.rst:419
+#: ../../source/flow.rst:504
 msgid ": Geofence configuration"
 msgstr ": Geo referência (Geofence) configuração"
 
-#: ../../source/flow.rst:423
+#: ../../source/flow.rst:508
 msgid ""
 "**Area** *(required)*: Area that will be selected. It can be chosen with "
 "an square or with a pentagon."
@@ -625,7 +737,7 @@ msgstr ""
 "**Área (Area)** *(obrigatório)*: Área que será selecionada. Pode ser "
 "escolhido com um quadrado ou um pentago"
 
-#: ../../source/flow.rst:425
+#: ../../source/flow.rst:510
 msgid ""
 "**Filter** *(required)*: Which side of the area will be picked: inside or"
 " outside the marked area in the field above."
@@ -633,11 +745,11 @@ msgstr ""
 "**Filtro (Filter)** *(obrigatório)*: Qual lado da área será selecionado: "
 "dentro ou fora da área marcada no campo acima."
 
-#: ../../source/flow.rst:430
+#: ../../source/flow.rst:515
 msgid "Get Context"
 msgstr "Obter contexto (Get Context)"
 
-#: ../../source/flow.rst:439
+#: ../../source/flow.rst:524
 msgid ""
 "This node is used to get a variable that is in the context and assign its"
 " value to a variable that will be used in the flow."
@@ -645,11 +757,18 @@ msgstr ""
 "Este nó é usado para obter uma variável que está no contexto e atribuir "
 "seu valor a uma variável que será usada no fluxo."
 
-#: ../../source/flow.rst:450
+#: ../../source/flow.rst:527
+msgid ""
+"Note: Context is a mechanism that allows a given set of data to persist "
+"beyond the life of the event, thus making it possible to store a state "
+"for the elements of the solution."
+msgstr "Nota: O contexto é um mecanismo que permite que um determinado conjunto de dados persista além da vida do evento, possibilitando o armazenamento de um estado para os elementos da solução."
+
+#: ../../source/flow.rst:539
 msgid "**Name** *(optional)**: Name of the node"
 msgstr "**Nome (Name)** *(opcional)**: Nome do nó"
 
-#: ../../source/flow.rst:451
+#: ../../source/flow.rst:540
 msgid ""
 "**Context layer** *(required)**: The layer of the context that que "
 "variable is at"
@@ -657,13 +776,13 @@ msgstr ""
 "**Camada de contexto (Context layer)** *(obrigatório)**: a camada do "
 "contexto em que a variável está"
 
-#: ../../source/flow.rst:453
+#: ../../source/flow.rst:542
 msgid "**Context name** *(required)**: The variable that is in the context"
 msgstr ""
 "**Nome do contexto (Context name)** *(obrigatório)**: a variável que está"
 " no contexto"
 
-#: ../../source/flow.rst:454
+#: ../../source/flow.rst:543
 msgid ""
 "**Context content** *(required)**: The variable in the flow that will "
 "receive the value of the context"
@@ -671,11 +790,79 @@ msgstr ""
 "**Conteúdo do contexto (Context content)** *(obrigatório)**: a variável "
 "no fluxo que receberá o valor do contexto"
 
-#: ../../source/flow.rst:460
+#: ../../source/flow.rst:548
+msgid "Merge data"
+msgstr "Mesclar dados (Merge data)"
+
+#: ../../source/flow.rst:556
+msgid "This node allows objects to be merged in the context."
+msgstr "Este nó permite que os objetos sejam mesclados no contexto."
+
+#: ../../source/flow.rst:564
+msgid ": Merge data configuration"
+msgstr ": Configuração de Mesclar dados"
+
+#: ../../source/flow.rst:568
+msgid ""
+"**Target data (JSON)** *(required)*: Variable that contains the data to "
+"be merged."
+msgstr ""
+"**Dado alvo (JSON)** *(required)*: Variável que contém os dados a serem "
+"mesclados."
+
+#: ../../source/flow.rst:569
+msgid ""
+"**Merged data (JSON)** *(required)*: Variable that will receive the new "
+"data merged with your existing data."
+msgstr ""
+"**Dado mesclado (JSON) (JSON)** *(required)*: Variável que receberá os "
+"novos dados mesclados com os dados existentes."
+
+#: ../../source/flow.rst:573
+msgid "Cumulative sum"
+msgstr "Soma acumulada (Cumulative sum)"
+
+#: ../../source/flow.rst:581
+msgid ""
+"The cumulative sum node accumulates the data for an attribute in a "
+"temporal window and keeping this in  the context."
+msgstr ""
+"O nó de soma cumulativa acumula os dados para um atributo em uma janela "
+"temporal e mantém isso no contexto."
+
+#: ../../source/flow.rst:589
+msgid ": Cumulative sum configuration"
+msgstr ": Configuração de Soma acumulada"
+
+#: ../../source/flow.rst:593
+msgid "**Time period (min)** *(required)*: Time in minutes to keep the sum."
+msgstr ""
+"**Período de tempo (min)** *(obrigatório)*: Tempo em minutos para manter "
+"a soma."
+
+#: ../../source/flow.rst:594
+msgid ""
+"**Target attribute** *(required)*: Variable that contains the value to be"
+" sum."
+msgstr "**Atributo alvo** *(obrigatório)*: Variável que contém o valor a ser soma."
+
+#: ../../source/flow.rst:595
+msgid ""
+"**Timestamp** *(required)*:  Variable containing the timestamp for the "
+"value of the target attribute."
+msgstr ""
+"**Tempo do evento** *(Obrigatório)*:  Variável que contém o registro de "
+"data e hora para o valor do atributo de destino."
+
+#: ../../source/flow.rst:596
+msgid "**Sum** *(required)*:  Variable that will receive the sum."
+msgstr "**Somatório** *(Obrigatório)*:  Variável que receberá a soma."
+
+#: ../../source/flow.rst:601
 msgid "Deprecated nodes"
 msgstr "Nós descontinuados"
 
-#: ../../source/flow.rst:462
+#: ../../source/flow.rst:603
 msgid ""
 "These nodes are scheduled to be removed in future versions. They will "
 "work with no problems with current flows."
@@ -683,11 +870,11 @@ msgstr ""
 "Esses nós estão programados para serem removidos em versões futuras. Eles"
 " funcionarão sem problemas com os fluxos atuais."
 
-#: ../../source/flow.rst:467
+#: ../../source/flow.rst:608
 msgid "Device in"
 msgstr "Dispositivo (entrada) [Device in]"
 
-#: ../../source/flow.rst:475
+#: ../../source/flow.rst:616
 msgid ""
 "This node determine an especific device to be the entry-point of a flow. "
 "To configure the device in node, a window like :numref:`device_in_cfg` "
@@ -697,7 +884,7 @@ msgstr ""
 "de um fluxo. Para configurar o dispositivo no nó, uma janela como a "
 ":numref:`device_in_cfg` será exibida."
 
-#: ../../source/flow.rst:491
+#: ../../source/flow.rst:632
 msgid ""
 "**Status** *(required)*: *exclude device status changes* will not use "
 "device status changes (online, offline) to trigger the flow. On the other"
@@ -709,7 +896,7 @@ msgstr ""
 "offline) para acionar o fluxo. Por outro lado, incluir alterações de "
 "status dos dispositivos usará esses status para acionar o fluxo."
 
-#: ../../source/flow.rst:496
+#: ../../source/flow.rst:637
 msgid ""
 "If the the device that triggers a flow is removed, the flow becomes "
 "invalid."
@@ -717,11 +904,11 @@ msgstr ""
 "Se o dispositivo que aciona um fluxo for removido, o fluxo se tornará "
 "inválido."
 
-#: ../../source/flow.rst:499
+#: ../../source/flow.rst:640
 msgid "Device template in"
 msgstr "Modelo de dispositivo - entrada (Device template in)"
 
-#: ../../source/flow.rst:507
+#: ../../source/flow.rst:648
 msgid ""
 "This node will make that a flow get triggered by devices that are "
 "composed by a certain template. If the device template that is configured"
@@ -741,7 +928,7 @@ msgstr ""
 "do *dispositivo1* e do *dispositivo2* iniciarão o fluxo, porque o modelo "
 "A é um dos modelos que compor esses dispositivos."
 
-#: ../../source/flow.rst:527
+#: ../../source/flow.rst:668
 msgid ""
 "**Status** *(required)*: Choose if devices status changes will trigger or"
 " not the flow."
@@ -749,11 +936,11 @@ msgstr ""
 "**Estado (Status)** *(obrigatório)*: escolha se as alterações de status "
 "dos dispositivos acionarão ou não o fluxo."
 
-#: ../../source/flow.rst:532
+#: ../../source/flow.rst:673
 msgid "Device out"
 msgstr "Dispositivo (saída) [Device out]"
 
-#: ../../source/flow.rst:540
+#: ../../source/flow.rst:681
 msgid ""
 "Device out will determine wich device will have its attributes updated on"
 " *dojot* according to the result of the flow. Bear in mind that this node"
@@ -767,23 +954,23 @@ msgstr ""
 "os atributos na plataforma. Normalmente, o dispositivo escolhido é um "
 "dispositivo virtual, que existe apenas na dojot."
 
-#: ../../source/flow.rst:566
+#: ../../source/flow.rst:707
 msgid "Actuate"
 msgstr "Atuar (Actuate)"
 
-#: ../../source/flow.rst:589
+#: ../../source/flow.rst:730
 msgid "**Device** *(required)*: A real device on dojot"
 msgstr "**Dispositivo (Device)** *(obrigatório)*: um dispositivo real no dojot"
 
-#: ../../source/flow.rst:595
+#: ../../source/flow.rst:736
 msgid "Learn by examples"
 msgstr "Aprenda por exemplos"
 
-#: ../../source/flow.rst:601
+#: ../../source/flow.rst:742
 msgid "Using http node"
 msgstr "Usando nó http"
 
-#: ../../source/flow.rst:603
+#: ../../source/flow.rst:744
 msgid ""
 "Imagine this scenario: a device sends an *username* and a *password*, and"
 " from these attrs, the flow will request to a server an authentication "
@@ -794,11 +981,11 @@ msgstr ""
 "autenticação que será enviado a um dispositivo virtual que possua um "
 "atributo de *token*."
 
-#: ../../source/flow.rst:613
+#: ../../source/flow.rst:754
 msgid ": Flow used to explain http node"
 msgstr ": Fluxo usado para explicar o nó http"
 
-#: ../../source/flow.rst:615
+#: ../../source/flow.rst:756
 msgid ""
 "To send that request to the server, the http method should be a POST and "
 "the parameters should be within the requisition. So, in the template "
@@ -814,12 +1001,12 @@ msgstr ""
 "do objeto JSON. E, se necessário, esse objeto também pode ter um "
 "*headers* como chave."
 
-#: ../../source/flow.rst:627 ../../source/flow.rst:644
-#: ../../source/flow.rst:658
+#: ../../source/flow.rst:768 ../../source/flow.rst:785
+#: ../../source/flow.rst:799
 msgid ": Template node configuration"
 msgstr ": Configuração do nó do modelo"
 
-#: ../../source/flow.rst:629
+#: ../../source/flow.rst:770
 msgid ""
 "Then, on the http node, the Requisition field will receive the value of "
 "the object created at the template node. And, the response will be "
@@ -829,7 +1016,7 @@ msgstr ""
 "criado no nó do modelo. E, a resposta será atribuída a qualquer variável,"
 " neste caso, é *msg.res*."
 
-#: ../../source/flow.rst:634
+#: ../../source/flow.rst:775
 msgid ""
 "If UTF-8 String buffer is chosen in the return field, the body of the "
 "response body will be a string. If JSON object is chosen, the body will "
@@ -839,7 +1026,7 @@ msgstr ""
 "corpo da resposta será uma string. Se o objeto JSON for escolhido, o "
 "corpo será um objeto."
 
-#: ../../source/flow.rst:646
+#: ../../source/flow.rst:787
 msgid ""
 "As seen, the response of the server is *req.res* and the response body "
 "can be accessed on **msg.res.payload**. So, the keys of the object that "
@@ -853,11 +1040,11 @@ msgstr ""
 "figura :numref:`using_http_node_change`, o token que veio na resposta é "
 "atribuído ao token de atributo do dispositivo virtual."
 
-#: ../../source/flow.rst:666
+#: ../../source/flow.rst:807
 msgid ": Device out configuration"
 msgstr ": Configuração do dispositivo de saída"
 
-#: ../../source/flow.rst:668
+#: ../../source/flow.rst:809
 msgid ""
 "Then, the result of the flow is the attribute *token* of the virtual "
 "device be updated with the token that came in the response of the http "
@@ -867,15 +1054,15 @@ msgstr ""
 "dispositivo virtual seja atualizado com o token que veio na resposta da "
 "solicitação http:"
 
-#: ../../source/flow.rst:677
+#: ../../source/flow.rst:818
 msgid ": Device updated"
 msgstr ": Dispositivo atualizado"
 
-#: ../../source/flow.rst:680
+#: ../../source/flow.rst:821
 msgid "Using geofence node"
 msgstr "Usando o nó de geo referência (geofence)"
 
-#: ../../source/flow.rst:682
+#: ../../source/flow.rst:823
 msgid ""
 "A good example to learn how geofence node works ia studying the flow "
 "below:"
@@ -883,11 +1070,11 @@ msgstr ""
 "Um bom exemplo para aprender como o nó geo referência (geofence) funciona"
 " é com o fluxo abaixo:"
 
-#: ../../source/flow.rst:690
+#: ../../source/flow.rst:831
 msgid ": Flow using geofence"
 msgstr ": Fluxo usando geo referência"
 
-#: ../../source/flow.rst:692
+#: ../../source/flow.rst:833
 msgid ""
 "The geofence node named *in area* is set like seem in "
 ":numref:`using_geofence_node_geofence`. The only thing that diffs the "
@@ -901,11 +1088,11 @@ msgstr ""
 "que, no primeiro, é configurado para apontar apenas para dentro e para "
 "fora no segundo, respectivamente."
 
-#: ../../source/flow.rst:704
+#: ../../source/flow.rst:845
 msgid ": Geofence node configuration"
 msgstr ": Configuração do nó  de geo referência"
 
-#: ../../source/flow.rst:706
+#: ../../source/flow.rst:847
 msgid ""
 "Then, if the device that is set as *device in* sends a messagem with a "
 "geo attribute the geofence node will evaluate the geo point acoording to "
@@ -920,7 +1107,7 @@ msgstr ""
 "ramificação, que possui a geo referência que a regra não corresponde, "
 "para."
 
-#: ../../source/flow.rst:713
+#: ../../source/flow.rst:854
 msgid ""
 "To geofence node work, the messege received **should** have a geo "
 "attribute, if not, the branches of the flow will stop at the geofence "
@@ -930,7 +1117,7 @@ msgstr ""
 "atributo geográfico; caso contrário, as ramificações do fluxo serão "
 "interrompidas nos nós de  geo referência."
 
-#: ../../source/flow.rst:716
+#: ../../source/flow.rst:857
 msgid ""
 "Back to the example, if the car sends a message that he is in the marked "
 "area, like ``{ \"position\": \"-22.820156,-47.2682535\" }``, the message "
@@ -944,14 +1131,11 @@ msgstr ""
 "marcada\" e se enviar ``{\"position\": \"0,0\"}`` o dispositivo receberá "
 "\"O carro está fora da área marcada\""
 
-#: ../../source/flow.rst:727
+#: ../../source/flow.rst:868
 msgid ": Template node configuration if the car is in the marked area"
 msgstr ": Configuração do nó do modelo se o carro estiver na área marcada"
 
-#: ../../source/flow.rst:735
+#: ../../source/flow.rst:876
 msgid ": Output in device out"
 msgstr ": Saída no dispositivo"
-
-#~ msgid "Reading time: X m"
-#~ msgstr ""
 
