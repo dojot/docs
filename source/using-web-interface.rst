@@ -88,6 +88,7 @@ just use the default topic scheme (which is ``/{SERVICE}/{DEVICE_ID}/attrs``.
 Just for the sake of simplicity, we'll emulate one device using mosquitto_pub
 tool. We set the ``client-id`` parameter by using the ``-i`` flag of
 mosquitto_pub.
+This examples are using MQTT without TLS, we recommend :doc:`mosca-tls`. 
 
 .. raw:: html
 

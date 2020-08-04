@@ -5,7 +5,6 @@ Integrating physical devices
 .. note::
    - Who is this for: developers
    - Level: intermediate
-   - Reading time: X m
 
 
 If you want to integrate your device within dojot, it must be able to send
@@ -26,6 +25,8 @@ messages to the platform. There are two ways to do that:
   thing, there is the `iotagent-nodejs`_ library which deals with most
   internal mechanisms and messages - check its documentation to know more.
 
+
+See more about :doc:`mosca-tls`.
 
 .. _iotagent-mosca: https://github.com/dojot/iotagent-mosca
 .. _iotagent-nodejs: https://github.com/dojot/iotagent-nodejs

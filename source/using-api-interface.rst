@@ -67,6 +67,11 @@ off of a template, remember.
           "label": "temperature",
           "type": "dynamic",
           "value_type": "float"
+        },
+        {
+          "label": "fan",
+          "type": "actuator",
+          "value_type": "float"
         }
       ]
     }'
@@ -101,6 +106,14 @@ This request should give back this message:
             "value_type": "float",
             "type": "dynamic",
             "id": 1
+          },
+          {
+            "template_id": "1",
+            "created": "2018-01-25T12:30:42.167126+00:00",
+            "label": "fan",
+            "value_type": "actuator",
+            "type": "float",
+            "id": 2
           }
         ],
         "id": 1
@@ -159,7 +172,15 @@ Which should give back:
                 "value_type": "float",
                 "type": "dynamic",
                 "id": 1
-              }
+              },
+              {
+                "template_id": "1",
+                "created": "2018-01-25T12:30:42.167126+00:00",
+                "label": "fan",
+                "value_type": "actuator",
+                "type": "float",
+                "id": 2
+             }
             ]
           },
           "id": "0998",
@@ -177,14 +198,18 @@ In an actual deployment, the physical device would send messages to dojot with
 all its attributes and their current values. For this tutorial we will send
 MQTT messages by hand to the platform, emulating such physical device. For
 that, we will use mosquitto_pub from Mosquitto project.
+To install on Ubuntu mosquitto_pub and mosquitto_sub,
+run `sudo apt-get install mosquitto-clients`.
+
 
 .. ATTENTION::
     Some Linux distributions, Ubuntu in particular, have two packages for
     `mosquitto`_ - one containing tools to access it (i.e. mosquitto_pub and
     mosquitto_sub for publishing messages and subscribing to topics) and
-    another one containing the MQTT broker. In this tutorial, only the tools
-    are going to be used. Please check if MQTT broker is not running before
-    starting dojot (by running commands like ``ps aux | grep mosquitto``).
+    another one containing the MQTT broker. In this tutorial, only the tools incledes
+    in `mosquitto-clients` are going to be used.
+    Please check if MQTT broker is not running before starting dojot
+    (by running commands like ``ps aux | grep mosquitto``).
 
 
 The default message format used by dojot is a simple key-value JSON (you could
@@ -200,10 +225,33 @@ Let's send this message to dojot:
 
 .. code-block:: bash
 
-  mosquitto_pub -t /admin/0998/attrs -m '{"temperature": 10.6}'
+  mosquitto_pub -h localhost -t /admin/0998/attrs -p 1883 -m '{"temperature": 10.6}'
 
 
 If there is no output, the message was sent to MQTT broker.
+
+
+**Also you can send a configuration message from dojot to the device to change some of its attributes.
+The target attribute must be of type “actuator”.**
+
+To simulate receiving the message on a device, we can use the mosquitto_sub:
+
+.. code-block:: bash
+
+  mosquitto_sub -h localhost -p 1883 -t /admin/0998/config
+
+Triggering the sending of the message from the dojot to the device.
+
+
+.. code-block:: bash
+
+  curl -X PUT \
+      http://localhost:8000/device/0998/actuate \
+      -H "Authorization: Bearer ${JWT}" \
+      -H 'Content-Type:application/json' \
+      -d '{"attrs": {"fan" : 100}}'
+
+
 
 As noted in the :doc:`../faq/faq`, there are some considerations regarding MQTT
 topics:
@@ -227,6 +275,8 @@ For more information on how dojot deals with data sent from devices, check the
 :doc:`integrating-physical-devices` tutorial. There you can find how to deal
 with devices that don't publish messages in such format and how to translate
 them.
+
+This examples are using MQTT without TLS, we recommend :doc:`mosca-tls`.
 
 Checking historical data
 ------------------------

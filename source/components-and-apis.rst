@@ -121,22 +121,22 @@ See more about how using API in :ref:`Using API interface`.
    * - Device Manager
      - /device
      - /device
-     - `See more <https://dojot.github.io/device-manager/apiary_latest.html#devices>`_
+     - `API - DeviceManager`_
      - Yes
    * - Device Manager
      - /template
      - /template
-     - `See more <https://dojot.github.io/device-manager/apiary_latest.html#templates>`_
+     - `API - DeviceManager`_
      - Yes
    * - Flowbroker
      - **/flows**
      - /
-     - `See more <https://dojot.github.io/flowbroker/apiary_latest.html#flows>`_
+     - `API - flowbroker`_
      - Yes
    * - Auth
      - **/auth**
      - /
-     - `See more <https://dojot.github.io/auth/apiary_latest.html#auth-session-management-post>`_
+     - `API - auth`_
      - No
    * - Auth
      - **/auth**/revoke
@@ -146,52 +146,52 @@ See more about how using API in :ref:`Using API interface`.
    * - Auth
      - **/auth**/user
      - /user
-     - `See more <https://dojot.github.io/auth/apiary_latest.html#auth-known-users-manipulation-get>`_
+     - `API - auth`_
      - Yes
    * - Auth
      - **/auth**/pap
      - /pap
-     - `See more <https://dojot.github.io/auth/apiary_latest.html#crud-permissions-and-group>`_
+     - `API - auth`_
      - Yes
    * - History
      - **/history**
      - /
-     - `See more <https://dojot.github.io/history/apiary_latest.html>`_
+     - `API - history`_
      - Yes
    * - EJBCA REST
      - /sign
      - /sign
-     - `See more <https://dojot.github.io/ejbca-rest/apiary_teste_release.html#ejbca-user-management-sign-a-certificate-for-a-user-post>`_
+     - `API - EJBCA-REST`_
      - Yes
    * - EJBCA REST
      - /ca
      - /ca
-     - `See more <https://dojot.github.io/ejbca-rest/apiary_latest.html#ejbca-ca-management>`_
+     - `API - EJBCA-REST`_
      - Yes
    * - EJBCA REST
      - /user
      - /user
-     - `See more <https://dojot.github.io/ejbca-rest/apiary_latest.html#ejbca-user-management-user-crud>`_
+     - `API - EJBCA-REST`_
      - Yes
    * - Data Manager
      - /import
      - /import
-     - `See more <https://dojot.github.io/data-manager/apiary_latest.html#import-post>`_
+     - `API - Data Manager`_
      - Yes
    * - Data Manager
      - /export
      - /export
-     - `See more <https://dojot.github.io/data-manager/apiary_latest.html#export-get>`_
+     - `API - Data Manager`_
      - Yes
    * - Cron
      - /cron
      - /cron
-     - `See more <https://dojot.github.io/cron/apiary_latest.html>`_
+     - `API - Cron`_
      - Yes
    * - Image Manager
      - **/fw-image**
      - /
-     - `See more <https://dojot.github.io/image-manager/apiary_latest.html>`_
+     - `API - image-manager`_
      - Yes
    * - Data Broker
      - | /device/
@@ -215,7 +215,7 @@ See more about how using API in :ref:`Using API interface`.
    * - Data Broker
      - /socket.io
      - /socket.io
-     - `See more <https://dojot.github.io/data-broker/apiary_latest.html#websockets-socket-io-based-realtime-events-get>`_
+     - `API - data-broker`_
      - No
 
 **NOTE: Some of the endpoints from component aren't exposed, but are used internally.**
@@ -328,41 +328,41 @@ dojot.
 
 
 .. _GitHub - auth: https://github.com/dojot/auth
-.. _API - auth: https://dojot.github.io/auth/apiary_latest.html
+.. _API - auth: https://dojot.github.io/auth/apiary_v0.4.3.html
 .. _Auth  doc.: http://dojotdocs.readthedocs.io/projects/auth/en/latest/
 .. _Messages - auth: https://dojotdocs.readthedocs.io/projects/auth/en/latest/kafka-messages.html
 
 .. _GitHub - history: https://github.com/dojot/history
-.. _API - history: https://dojot.github.io/history/apiary_latest.html
+.. _API - history: https://dojot.github.io/history/apiary_v0.4.3.html
 
 
 .. _GitHub - DeviceManager: https://github.com/dojot/device-manager
-.. _API - DeviceManager: https://dojot.github.io/device-manager/apiary_latest.html
+.. _API - DeviceManager: https://dojot.github.io/device-manager/apiary_v0.4.3.html
 .. _DeviceManager doc.: http://dojotdocs.readthedocs.io/projects/DeviceManager/en/latest/
 .. _Messages - DeviceManager: http://dojotdocs.readthedocs.io/projects/DeviceManager/en/latest/kafka-messages.html
 
 .. _GitHub - image-manager: https://github.com/dojot/image-manager
-.. _API - image-manager: https://dojot.github.io/image-manager/apiary_latest.html
+.. _API - image-manager: https://dojot.github.io/image-manager/apiary_v0.4.3.html
 
 
 .. _GitHub - GUI: https://github.com/dojot/gui
 
 
 .. _GitHub - flowbroker: https://github.com/dojot/flowbroker
-.. _API - flowbroker: https://dojot.github.io/flowbroker/apiary_latest.html
+.. _API - flowbroker: https://dojot.github.io/flowbroker/apiary_v0.4.3.html
 
 .. _GitHub - data-broker: https://github.com/dojot/data-broker
-.. _API - data-broker: https://dojot.github.io/data-broker/apiary_latest.html
+.. _API - data-broker: https://dojot.github.io/data-broker/apiary_v0.4.3.html
 
 .. _Messages - iotagent-mosca: http://dojotdocs.readthedocs.io/projects/iotagent-mosca/en/latest/operation.html#sending-messages-to-other-components-via-kafka
 .. _GitHub - iotagent-mosca: https://github.com/dojot/iotagent-mosca
 
 .. _GitHub - EJBCA-REST: https://github.com/dojot/ejbca-rest
-.. _API - EJBCA-REST: https://dojot.github.io/ejbca-rest/apiary_latest.html
+.. _API - EJBCA-REST: https://dojot.github.io/ejbca-rest/apiary_v0.4.3.html
 
 .. _GitHub - Data Manager: https://github.com/dojot/data-manager
-.. _API - Data Manager: https://dojot.github.io/data-manager/apiary_latest.html
+.. _API - Data Manager: https://dojot.github.io/data-manager/apiary_v0.4.3.html
 
 .. _GitHub - Cron: https://github.com/dojot/cron
-.. _API - Cron: https://dojot.github.io/cron/apiary_latest.html
+.. _API - Cron: https://dojot.github.io/cron/apiary_v0.4.3.html
 

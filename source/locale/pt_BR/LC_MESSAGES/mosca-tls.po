@@ -1,0 +1,441 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, CPqD
+# This file is distributed under the same license as the dojot package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: dojot 0.4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-04 16:36-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../source/mosca-tls.rst:4
+msgid "Using MQTT over TLS"
+msgstr ""
+
+#: ../../source/mosca-tls.rst:7
+msgid "Audience: developers"
+msgstr ""
+
+#: ../../source/mosca-tls.rst:8
+msgid "Level: intermediate"
+msgstr ""
+
+#: ../../source/mosca-tls.rst:9
+msgid "Reading time: 15 m"
+msgstr ""
+
+#: ../../source/mosca-tls.rst:12
+msgid ""
+"This document describes how to configure dojot to use MQTT over TLS when "
+"using the microservice `IotAgent-Mosca`_"
+msgstr ""
+"Este documento descreve como configurar o dojot para usar o MQTT sobre TLS quando"
+"usando o microsserviço `IotAgent-Mosca`_ "
+
+#: ../../source/mosca-tls.rst:16
+msgid "Table of Contents"
+msgstr "Índice"
+
+#: ../../source/mosca-tls.rst:18
+msgid "For a device to connect using TLS with Mosca, it must possess:"
+msgstr "Para que um dispositivo se conecte usando o TLS com o Mosca, ele deve possuir:"
+
+#: ../../source/mosca-tls.rst:20
+msgid "A key pair (.key file);"
+msgstr "Um par de chaves (arquivo .key);
+
+#: ../../source/mosca-tls.rst:21
+msgid ""
+"A certificate signed by a Certificate Authority (CA) trusted by Mosca "
+"(.crt file);"
+msgstr ""
+"Um certificado assinado por uma Autoridade de Certificação (CA) confiável por Mosca"
+"(arquivo .crt);"
+
+#: ../../source/mosca-tls.rst:23
+msgid "The certificate of this CA (.crt file);"
+msgstr "O certificado desta CA (arquivo .crt);"
+
+#: ../../source/mosca-tls.rst:26
+msgid ""
+"When a device is created, DeviceManager will automatically notify the "
+"following components:"
+msgstr ""
+"Quando um dispositivo é criado, o DeviceManager notifica automaticamente o"
+"seguintes componentes:"
+
+#: ../../source/mosca-tls.rst:29
+msgid ""
+"IoTAgent-Mosca: will register the new device on its internal cache and "
+"will create an entry, allowing the device to publish on a "
+"specific topic."
+msgstr ""
+"IoTAgent-Mosca: registrará o novo dispositivo em seu cache interno e"
+"criará uma entrada, permitindo que o dispositivo publique em um"
+"Tópico especifico."
+
+#: ../../source/mosca-tls.rst:31
+msgid ""
+"EJBCA: will create an end entity so a certificate can be created on the "
+"future."
+msgstr ""
+"EJBCA: criará uma entidade final para que um certificado possa ser criado no"
+"futuro."
+
+#: ../../source/mosca-tls.rst:35
+msgid "Components"
+msgstr "Componentes"
+
+#: ../../source/mosca-tls.rst:38
+msgid "EJBCA-REST"
+msgstr ""
+
+#: ../../source/mosca-tls.rst:40
+msgid ""
+"`EJBCA`_ is a complete Private Key Infrastructure (PKI) capable to manage"
+" CAs, cryptography keys and certificates. EJBCA provides a SOAP, web and "
+"a command line interface. EJBCA-REST is an wrapper on top of EJBCA that "
+"provides modern interfaces, like REST and Kafka."
+msgstr ""
+"O EJBCA`_ é uma infraestrutura de chave privada (PKI) completa capaz de "
+"gerenciarCAs, chaves de criptografia e certificados. O EJBCA fornece "
+"SOAP, web euma interface de linha de comandos. O EJBCA-REST é um wrapper "
+"no topo do EJBCA quefornece interface moderna como REST ."
+
+#: ../../source/mosca-tls.rst:45
+msgid ""
+"EJBCA provides SOAP, web and command line interfaces. `EJBCA-Rest`_ is a "
+"wrapper on top of EJBCA that complements those, allowing the CA to be "
+"configured using REST. When used within dojot, it also listens to Kafka "
+"events, allowing its automatic configuration."
+msgstr ""
+"O EJBCA fornece interfaces SOAP, web e de linha de comando.` EJBCA-Rest`_"
+" é um wrapper na parte superior do EJBCA que os complementa, permitindo "
+"que a CA sejaconfigurado usando REST. Quando usado no dojot, ele também "
+"escuta eventos Kafka,permitindo sua configuração automática."
+
+#: ../../source/mosca-tls.rst:51
+msgid "What is a certificate?"
+msgstr "O que é um certificado?"
+
+#: ../../source/mosca-tls.rst:53
+msgid ""
+"A certificate contains the public key for an entity (a user, device, "
+"website), along with information about this entity, about the CA which "
+"signs the certificate, the allowed certificate usage and a checksum. When"
+" a entity wants a certificate to be signed, the entity should create a "
+"CSR file and send it to the desired CA. The CSR file is an 'intention of "
+"certification'. The file contains the information required from the "
+"entity and some information about the certificate use, hostnames and IPs "
+"where the certificate will reside, alternative names for the entity, etc."
+" EJBCA can decide, using its configured policies, what information to "
+"keep, to discard and to overwrite of the received CSR. EJBCA can refuse "
+"to sign a CSR if it concludes that it is not safe enough according to its"
+" policies."
+msgstr ""
+"Um certificado contém a chave pública de uma entidade (um usuário, "
+"dispositivo\"website), juntamente com informações sobre essa entidade, "
+"sobre a CA queassina o certificado, o uso permitido do certificado e uma "
+"soma de verificação. Quandouma entidade deseja que um certificado seja "
+"assinado, a entidade deve criar umArquivo CSR e envie-o para a CA "
+"desejada. O arquivo CSR é uma 'intenção decertificação\". O arquivo "
+"contém as informações necessárias do entidade e algumas informações sobre"
+" o uso do certificado, nomes de host e IPsonde o certificado residirá, "
+"nomes alternativos para a entidade etc.A EJBCA pode decidir, usando suas "
+"políticas configuradas, quais informaçõesmanter, descartar e substituir o"
+" CSR recebido. EJBCA pode recusarassinar um CSR se concluir que não é "
+"seguro o suficiente de acordo com suapolíticas\""
+
+#: ../../source/mosca-tls.rst:65
+msgid ""
+"These configurable policies are called 'Certificate Profiles'. One "
+"Certificate profile named CFREE, specialized for MQTT TLS, is provided "
+"out of the box."
+msgstr ""
+"Essas políticas configuráveis são chamadas de 'Perfis de certificado'. "
+"UmO perfil do certificado chamado CFREE, especializado para MQTT TLS, é "
+"fornecidosai da caixa."
+
+#: ../../source/mosca-tls.rst:68
+msgid "In short, CFREE have the following configurations (and many more):"
+msgstr "Em resumo, o CFREE tem as seguintes configurações (e muitas mais):"
+
+#: ../../source/mosca-tls.rst:70
+msgid "Cryptography keys must have between 2048 and 8192 bits;"
+msgstr "As chaves de criptografia devem ter entre 2048 e 8192 bits;"
+
+#: ../../source/mosca-tls.rst:71
+msgid "Entities can define hostnames and IPs;"
+msgstr "As entidades podem definir nomes de host e IPs;"
+
+#: ../../source/mosca-tls.rst:72
+msgid "Key usage is marked as not critical (for now);"
+msgstr "O uso da chave está marcado como não crítico (por enquanto);"
+
+#: ../../source/mosca-tls.rst:73
+msgid "The hash algorithm is SHA256. The sign algorithm is RSA."
+msgstr "O algoritmo de hash é SHA256. O algoritmo de sinal é RSA."
+
+#: ../../source/mosca-tls.rst:77
+msgid "So, how does EJBCA work in dojot?"
+msgstr "Então, como o EJBCA funciona no dojot?"
+
+#: ../../source/mosca-tls.rst:79
+msgid ""
+"When creating a new device, an associated end entity is created in EJBCA."
+" Its name will be the device's ID (like 'f60c28') and its password will "
+"be always 'dojot'."
+msgstr ""
+"Ao criar um novo dispositivo, uma entidade  associada é criada no "
+"EJBCA.Seu nome será o ID do dispositivo (como 'f60c28') e sua senha "
+"seráseja sempre 'dojot'."
+
+#: ../../source/mosca-tls.rst:83
+msgid ""
+"A certificate can be signed by sending a HTTP POST request to "
+"host:8000/sign/<cname>/pkcs10. CName is the end entity's name (or "
+"device). The payload sent with this request should be a JSON containing "
+"the end entity password and a CSR file (certificate intention) in base64 "
+"format."
+msgstr ""
+"Um certificado pode ser assinado enviando uma solicitação HTTP POST "
+"parahost:8000/sign/<cname>/pkcs10. CName é o nome da entidade final "
+"(oudevice). O payload enviada com esta solicitação deve ser um JSON "
+"contendoa senha da entidade final e um arquivo CSR (intenção de "
+"certificado) em base64formato."
+
+#: ../../source/mosca-tls.rst:88
+msgid ""
+"Note that the URL is 'routed' by the API gateway. As in other APIs in "
+"dojot, a JWT is needed. You can find how to generate and how to use such "
+"token in :ref:`Using API interface`."
+msgstr ""
+"Observe que a URL é 'roteado' pelo gateway da API. Como em outras APIs "
+"nadojot, é necessário um JWT. Você pode descobrir como gerar e como usar "
+"taistoken in :ref:`Using API interface`. "
+
+#: ../../source/mosca-tls.rst:92
+msgid ""
+"In order to create the CSR file and ask for a certificate signature, a "
+"user can use a helper script called 'Certificate Retriever', which is "
+"detailed in `Certificate retriever`_ section."
+msgstr ""
+"Para criar o arquivo CSR e solicitar uma assinatura de certificado, umo "
+"usuário pode usar um script auxiliar chamado 'Certificate Retriever', que"
+" édetalhado na seção `Certificate retriever`_. "
+
+#: ../../source/mosca-tls.rst:97
+msgid "Mosca"
+msgstr ""
+
+#: ../../source/mosca-tls.rst:98
+msgid ""
+"Mosca is a node.js mqtt broker. To using Mosca you need do some "
+"configurations by environment variable:"
+msgstr ""
+"Mosca é um broker mqtt node.js. Para usar o Mosca, você precisa fazer alguns"
+"configurações por variável de ambiente:"
+
+#: ../../source/mosca-tls.rst:100
+msgid ""
+"MOSCA_TLS_DNS_LIST: TLS DNS list, Servers hostnames, the host to connect "
+"external (separated by a comma). Example: localhost, mydomain.com"
+msgstr ""
+"MOSCA_TLS_DNS_LIST: lista de TLS DNS, nomes de host de Servidores, o host para conectar"
+"externo (separado por vírgula). Exemplo: localhost, meudominio.com"
+
+#: ../../source/mosca-tls.rst:102
+msgid ""
+"All the certificates will be created automatically, not needing to "
+"configure manually the certificates into the broker."
+msgstr ""
+"Todos os certificados serão criados automaticamente, sem a necessidade de"
+"configurar manualmente os certificados no broker."
+
+#: ../../source/mosca-tls.rst:105
+msgid ""
+"Note: To use Mosca without TLS too you need set "
+"ALLOW_UNSECURED_MODE='true'."
+msgstr ""
+"Nota: Para usar o Mosca sem TLS também é necessário definir"
+"ALLOW_UNSECURED_MODE = 'verdadeiro'."
+
+#: ../../source/mosca-tls.rst:108
+msgid "Certificate retriever"
+msgstr ""
+
+#: ../../source/mosca-tls.rst:110
+msgid ""
+"This component is a helper script for device certificates creation. It is"
+" available at `Certificate Retriever GitHub repository`_ and it coded "
+"using Python 3."
+msgstr ""
+"Este componente é um script auxiliar para a criação de certificados de dispositivo. É"
+"disponível no `Certificate Retriever GitHub repository`_ e codificado"
+"usando Python 3."
+
+#: ../../source/mosca-tls.rst:114
+msgid "A user can use it by executing:"
+msgstr "Um usuário pode usá-lo executando:"
+
+#: ../../source/mosca-tls.rst:130
+msgid "The mandatory parameters are:"
+msgstr "Os parâmetros obrigatórios são:"
+
+#: ../../source/mosca-tls.rst:132
+msgid "DOJOT_HOST: where dojot is. Example: http://localhost:8000"
+msgstr "DOJOT_HOST: onde está o dojot. Exemplo: http://localhost:8000"
+
+#: ../../source/mosca-tls.rst:133
+msgid "DEVICE_ID: device id that will get a new certificate. Example: f60c28"
+msgstr "DEVICE_ID: ID do dispositivo que receberá um novo certificado. Exemplo: f60c28"
+
+#: ../../source/mosca-tls.rst:135
+msgid ""
+"Note that authentication is performed in dojot. The script will ask for "
+"user credentials and will invoke user authentication automatically. The "
+"user needs permission for certificate signing to be able to use this "
+"script."
+msgstr ""
+"Observe que a autenticação é realizada no dojot. O script solicitará"
+"credenciais do usuário e invocará a autenticação do usuário automaticamente. O"
+"o usuário precisa de permissão para assinar o certificado para poder usar isso"
+"roteiro."
+
+#: ../../source/mosca-tls.rst:139
+msgid ""
+"An end entity must exist in EJBCA in 'New' state before asking for a new "
+"certificate signature. When a new device is created, an end entity is "
+"automatically created in EJBCA by DeviceManager. This new end entity's "
+"name is the device ID itself. Its password is 'dojot'."
+msgstr ""
+"Uma entidade final deve existir na EJBCA no estado 'Novo' antes de solicitar um novo"
+"assinatura de certificado. Quando um novo dispositivo é criado, uma entidade final é"
+"criado automaticamente no EJBCA pelo DeviceManager. Esta nova entidade final"
+"name é o próprio ID do dispositivo. Sua senha é 'dojot'."
+
+#: ../../source/mosca-tls.rst:144
+msgid ""
+"The script authenticates users with given username and password, "
+"retrieves CA certificate, generates a key pair as well as a CSR file and "
+"asks for certificate signature, in this order. Any error in any step will"
+" halt its execution."
+msgstr ""
+"O script autentica os usuários com nome de usuário e senha",
+"recupera o certificado da CA, gera um par de chaves e um arquivo CSR e"
+"solicita a assinatura do certificado, nesta ordem. Qualquer erro em qualquer etapa será"
+"interrompa sua execução."
+
+#: ../../source/mosca-tls.rst:149
+msgid ""
+"After successfully executed, all certificates can be found in './certs' "
+"folder."
+msgstr ""
+"Após executado com sucesso, todos os certificados podem ser encontrados em './certs'"
+"pasta."
+
+#: ../../source/mosca-tls.rst:153
+msgid "Simulating a device with mosquitto"
+msgstr "Simulando um dispositivo com mosquito"
+
+#: ../../source/mosca-tls.rst:155
+msgid ""
+"To publish and subscribe using the appropriated certificates, you must "
+"need to be with the Mosca Broker and the EJBCA running. After creating "
+"the dojot environment, the templates and the devices, use the mosquitto "
+"emulate a device and to publish and subscribe in the desired topics:"
+msgstr ""
+"Para publicar e assinar usando os certificados apropriados, você deve"
+"precisa estar com o Mosca Broker e o EJBCA em execução. Depois de criar"
+"o ambiente dojot, os modelos e os dispositivos, usam o mosquito"
+"emule um dispositivo e publique e assine os tópicos desejados:"
+
+#: ../../source/mosca-tls.rst:161
+msgid ""
+"Before install mosquitto-clients and access the folder certs, if "
+"necessary:"
+msgstr ""
+"Antes de instalar mosquito-clientes e acesse a pasta certs, se"
+"necessário:"
+
+#: ../../source/mosca-tls.rst:167
+msgid "How to publish:"
+msgstr "Como publicar:"
+
+#: ../../source/mosca-tls.rst:173
+msgid "How to subscribe:"
+msgstr "Como se subscrever:"
+
+#: ../../source/mosca-tls.rst:180
+msgid ""
+"The <your .crt file>, <your .key file> and the cafile can be created with"
+" the `Certificate Retriever GitHub repository`_ script. Where <tenant> is"
+" a context identifier into dojot and <deviceId> is a identifier for the "
+"device in the corresponding context."
+msgstr ""
+"O <seu arquivo .crt>, <seu arquivo .key> e o cafile podem ser criados com"
+"o script do `Certificate Retriever GitHub repository`_. Onde <tenant> é"
+"um identificador de contexto no dojot e <deviceId> é um identificador para o"
+"dispositivo no contexto correspondente."
+
+#: ../../source/mosca-tls.rst:183
+msgid ""
+"Note: In this case, the message is a publication with an attribute, this "
+"attribute has the label `attr_example` and a new value 10, you need to "
+"change this for your case."
+msgstr ""
+"Nota: neste caso, a mensagem é uma publicação com um atributo, este"
+"atributo tem o rótulo `attr_example` e um novo valor 10, você precisará "
+"mudar isso para o seu caso."
+
+#: ../../source/mosca-tls.rst:187
+msgid "Important Notes"
+msgstr "Anotações importantes"
+
+#: ../../source/mosca-tls.rst:189
+msgid ""
+"These are a few but important notes related to device security and "
+"associated subjects."
+msgstr ""
+"Estas são algumas notas importantes, mas importantes, relacionadas à segurança do dispositivo e"
+"assuntos associados."
+
+#: ../../source/mosca-tls.rst:193
+msgid "Debugging"
+msgstr ""
+
+#: ../../source/mosca-tls.rst:195
+msgid ""
+"TLS errors might be not so verbose as other problems. If an error "
+"occurrs, the user might not know what went wrong because no component "
+"indicates any problem. In this section there are some tips, frequent "
+"problems and debugging tools to find out what's happening."
+msgstr ""
+"Os erros do TLS podem não ser tão detalhados quanto outros problemas. Se houver um erro"
+"Ocorrências, o usuário pode não saber o que deu errado porque nenhum componente"
+"indica algum problema. Nesta seção, existem algumas dicas, frequentes"
+"problemas e ferramentas de depuração para descobrir o que está acontecendo."
+
+#: ../../source/mosca-tls.rst:201
+msgid "How to read a certificate"
+msgstr "Como ler um certificado"
+
+#: ../../source/mosca-tls.rst:203
+msgid ""
+"A certificate file can be in two formats: PEM (base64 text) or DER "
+"(binary). OpenSSL offers tools to read such formats:"
+msgstr ""
+"Um arquivo de certificado pode estar em dois formatos: PEM (texto base64) ou DER"
+"(binário). O OpenSSL oferece ferramentas para ler esses formatos:"
+
+
+
