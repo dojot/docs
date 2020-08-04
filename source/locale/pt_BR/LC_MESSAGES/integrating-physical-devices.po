@@ -7,38 +7,36 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dojot 0.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-22 14:50-0300\n"
+"POT-Creation-Date: 2020-08-04 16:21-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.3\n"
+"Generated-By: Babel 2.8.0\n"
 
 #: ../../source/integrating-physical-devices.rst:2
 msgid "Integrating physical devices"
-msgstr ""
+msgstr "Integrando dispositivos físicos"
 
 #: ../../source/integrating-physical-devices.rst:6
 msgid "Who is this for: developers"
-msgstr ""
+msgstr "Para quem é: desenvolvedores"
 
 #: ../../source/integrating-physical-devices.rst:7
 msgid "Level: intermediate"
-msgstr ""
+msgstr "Nível: intermedário"
 
-#: ../../source/integrating-physical-devices.rst:8
-msgid "Reading time: X m"
-msgstr ""
-
-#: ../../source/integrating-physical-devices.rst:11
+#: ../../source/integrating-physical-devices.rst:10
 msgid ""
 "If you want to integrate your device within dojot, it must be able to "
 "send messages to the platform. There are two ways to do that:"
 msgstr ""
+"Se você deseja integrar seu dispositivo a dojot, ele deve poderenvie "
+"mensagens para a plataforma. Existem duas maneiras de fazer isso:"
 
-#: ../../source/integrating-physical-devices.rst:14
+#: ../../source/integrating-physical-devices.rst:13
 msgid ""
 "Use one of the available IoT agents: currently, there is support for "
 "MQTT-based devices. If your project is using (or allows changing to) this"
@@ -49,8 +47,17 @@ msgid ""
 " can send its messages to dojot's broker and it will be recognized by the"
 " platform."
 msgstr ""
+"Use um dos IoT agents disponíveis: atualmente, há suporte para "
+"dispositivos baseados em MQTT.Se o seu projeto estiver usando (ou "
+"permitir a alteração) deste protocolo, seria suficiente verificarse o "
+"dispositivo está enviando seus dados usando uma chave/valor JSON "
+"simples.Caso contrário, convém usar o iotagent-mosca(consulte a "
+"documentação do `iotagent-mosca`_ para verificar como fazer isso).Se "
+"estiver realmente enviando mensagens JSON de chave/valor,ele poderá "
+"enviar suas mensagens para o corretor do dojot eserá reconhecido pela "
+"plataforma."
 
-#: ../../source/integrating-physical-devices.rst:22
+#: ../../source/integrating-physical-devices.rst:21
 msgid ""
 "Create a new IoT agent to support the protocol used by the device: if "
 "your device is using another protocol that is not yet supported, then it "
@@ -60,4 +67,18 @@ msgid ""
 "which deals with most internal mechanisms and messages - check its "
 "documentation to know more."
 msgstr ""
+"Crie um novo IoT agent para dar suporte ao protocolo usado "
+"pelodispositivo: se o dispositivo estiver usando outro protocolo ainda "
+"não suportado,será uma boa ideia implementar um novo agente de IoT. Não é"
+" tão difícil,mas há alguns detalhes que devem ser levados em "
+"consideração.Para ajudar os desenvolvedores a fazer isso, existe a "
+"biblioteca `iotagent-nodejs`_,que lida com a maioria dos mecanismos e "
+"mensagens internos - consulte adocumentação para saber mais."
+
+#: ../../source/integrating-physical-devices.rst:29
+msgid "See more about :doc:`mosca-tls`."
+msgstr "Veja mais sobre :doc:`mosca-tls`."
+
+#~ msgid "Reading time: X m"
+#~ msgstr ""
 

@@ -27,10 +27,12 @@ and efficient infrastructure.
    :maxdepth: 2
    :caption: Tutorials
    :numbered:
+   :glob:
 
    using-web-interface
    using-api-interface
    flow
+   mosca-tls
 
 .. Indices and tables
 .. ==================

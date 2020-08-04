@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dojot 0.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-02 14:16-0300\n"
+"POT-Creation-Date: 2020-08-10 14:53-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -706,5 +706,20 @@ msgstr ""
 #~ "your own application and to configure"
 #~ " your business logic using the Flow"
 #~ " Broker."
+#~ msgstr ""
+
+#~ msgid "Introdução à plataforma dojot - Instalação e configuração"
+#~ msgstr ""
+
+#~ msgid "Simulação de dispositivos na plataforma dojot"
+#~ msgstr ""
+
+#~ msgid "Configurando fluxos de processamento de dados da plataforma dojot"
+#~ msgstr ""
+
+#~ msgid "Configurando conexão segura com o uso de TLS na plataforma dojot"
+#~ msgstr ""
+
+#~ msgid "Trocando informações com uma Raspberry Pi e plataforma dojot"
 #~ msgstr ""
 
