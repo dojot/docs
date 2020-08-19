@@ -9,7 +9,7 @@ carate - 2019.09.11
   - Support for
     `LWM2M devices <https://github.com/dojot/iotagent-leshan>`_
 
-- GUI: 
+- GUI:
 
   - New interface for devices management
   - New interface for templates management

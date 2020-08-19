@@ -1,7 +1,5 @@
-.. _Using MQTT over TLS:
-
-Using MQTT over TLS
-===================
+Using MQTT with security (TLS)
+==============================
 
 .. note::
    - Audience: developers
@@ -101,7 +99,7 @@ Mosca is a node.js mqtt broker. To using Mosca you need do some configurations b
 All the certificates will be created automatically,
 not needing to configure manually the certificates into the broker.
 
-Note: To use Mosca without TLS too you need set ALLOW_UNSECURED_MODE='true'.
+Note: To use Mosca without TLS too, you need set the environment variable ALLOW_UNSECURED_MODE to 'true' and to use 1883 port. **It is not recommended!**
 
 Certificate retriever
 ---------------------
@@ -130,8 +128,8 @@ And to finally get the certificate for the device:
 
 The mandatory parameters are:
 
--  DOJOT_HOST: where dojot is (No / at the end). Example: http://localhost:8000
--  DEVICE_ID: device id that will get a new certificate. Example: f60c28
+-  ${DOJOT_HOST}: where dojot is (No / at the end). Example: http://localhost:8000
+-  ${DEVICE_ID}: device id that will get a new certificate. Example: f60c28
 
 Note that authentication is performed in dojot. The script will ask for user
 credentials and will invoke user authentication automatically. The user needs

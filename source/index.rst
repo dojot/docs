@@ -1,5 +1,5 @@
 dojot documentation
-============================
+===================
 
 This is the high-level documentation for dojot IoT platform developed by CPqD.
 This platform aims to provide the application and device developers with a more

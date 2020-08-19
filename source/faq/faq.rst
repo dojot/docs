@@ -41,7 +41,7 @@ All components are available in dojot's GitHub repositories: `<https://github.co
 Which repository is the main one?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-There are two main ones:
+There are 3 main ones:
 
 - `<https://github.com/dojot/dojot>`_: this is where we keep track of all the
   things related to this project as a whole, such as architectural
@@ -51,13 +51,14 @@ There are two main ones:
   files and configurations. This is what we would recommend to use to start
   with.
 
+- `<https://github.com/dojot/ansible-dojot>`_: repository for ansible (kubernetes)
+  files and configurations.
+
 So, I found this pesky bug. How can I inform you about it?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 We ask you to open an issue in `dojot's Github repository
-<http://github.com/dojot/dojot>`_. If you know exactly which component is
-failing, you could open the issue in its repository (it will work the same
-way).
+<http://github.com/dojot/dojot>`_.
 
 If you are able to analyze and fix this bug, please do so. Create a
 pull-request with a quick description of what you've done.
@@ -96,8 +97,7 @@ How can I update my deploy to dojot's latest version?
 
 You need to follow some steps:
 
-1 Update the docker-compose repository to the cutting-edge version 
- (beware the bug)
+1 Update the docker-compose repository to the latest version.
 
 .. code-block:: bash
 
@@ -105,18 +105,28 @@ You need to follow some steps:
   $ git checkout master && git pull
 
 
-If you need a more stable version, you could checkout a tag instead:
-
+If you need another version, you could checkout a tag instead:
 
 .. code-block:: bash
 
   $ git tag
-  0.1.0-dojot
-  0.1.0-dojot-RC1
-  0.1.0-dojot-RC2
-  0.2.0-aikido
+    0.1.0-dojot
+    0.1.0-dojot-RC1
+    0.1.0-dojot-RC2
+    0.2.0
+    v0.3.0-beta.1
+    v0.3.1
+    v0.4.0
+    v0.4.1
+    v0.4.1_rc2
+    v0.4.2
+    v0.4.2-rc.1
+    v0.4.3-rc.1
+    v0.4.3-rc.2
+    v0.4.3
 
-  $ git checkout 0.2.0-aikido -b 0.2.0
+
+  $ git checkout v0.4.2
 
 Once in a while we'll release new versions for dojot components. They might be
 independently released (although we tend to synchronize all of them). Once we
@@ -206,11 +216,11 @@ set your actual device to push the data to dojot.
 In order to send data to dojot via MQTT (using iotagent-mosca), there are some
 things to keep in mind:
 
-- The topic should look like ``/<service-id>/<device-id>/attrs`` (for instance:
+- The topic should look like ``/<tenant>/<device-id>/attrs`` (for instance:
   ``/admin/efac/attrs``). Depending on how IoT agent MQTT was started (more
   strict), the client ID must also be set to "<tenant>:<deviceid>", such as
   "admin:efac".
-  
+
 - MQTT payload must be a JSON with each key being an attribute of the dojot
   device, such as:
 
@@ -234,9 +244,7 @@ I'm interested in integrating my super cool device with dojot. How can I do it?
 
 If your device is able to send messages using MQTT (with JSON payload), CoAP or
 HTTP, there is a good chance that your device can be integrated with minor or
-no modifications whatsoever. The requirements for such integration is described
-in the question `How can I send MQTT data to dojot so that it appears on the
-dashboard?`_.
+no modifications whatsoever.
 
 Is there any restrictions about the message my device will send to dojot? Format, size, frequency?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -257,8 +265,9 @@ I didn’t find the protocol supported by my device in the type list, is there a
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 There are some possibilities. The first one is to develop a proxy to translate
-your protocol to one supported by dojot. The second one is to develop a
-connector similar to the existing ones for MQTT, CoAP and HTTP.
+your protocol to one supported by dojot. The second one is to develop a IotAgent, a
+connector, similar to the existing ones
+for MQTT, CoAP and HTTP. Take a look at https://github.com/dojot/iotagent-nodejs
 
 
 I saved an attribute, but it disappeared from the device. Is it a bug?
@@ -377,26 +386,10 @@ Another thing that you could do is to build a flowbroker node to deal with
 contexts, which can be used to store and retrieve data related to a flow or
 node.
 
-I want to send an email, what should I do?
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Basically, you need to add an email node and configure it. This node is
-pre-configured to use the Gmail server ``gmail-smtp-in.l.google.com``, but
-you’re free to choose your own. For writing an email body, you can use a
-template before the email.
-
-.. image:: df_email.gif
-        :width: 95%
-        :align: center
-
-It is important to point out that dojot contains no e-mail server. It will
-generate SMTP commands and send them to the specified e-mail server.
-
 
 What about a HTTP POST request, how can I send it?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-It is almost the same process as sending an e-mail.
 
 .. image:: df_http_request.gif
         :width: 95%
@@ -433,30 +426,8 @@ virtual device and assigning to it the output.
 How can I add a new node type to its menu?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-It's pretty easy, actually, although it needs a few commands in bash. To add a
-new node, you should send the following request:
-
-.. code-block:: bash
-
-    curl -H "Authorization: Bearer ${JWT}" http://localhost:8000/flows/v1/node
-    -H "content-type: application/json" -d '{"image": "mmagr/kelvin:latest",
-    "id":"kelvin"}'
-
-This will add a new node called 'kelvin' which is implemented by a docker image
-located at "mmagr/kelvin". There's only one caveat: you should pull this image
-in your target system (where dojot is installed) before adding it to the flow
-menu.
-
-If you don't want this node anymore, you could delete it:
-
-.. code-block:: bash
-
-    curl -X DELETE -H "Authorization: Bearer ${JWT}"
-    "http://localhost:8000/flows/v1/node/kelvin"
-
-
-And that's it! In the `flowbroker`_ repository, there is an example of how to
-build a Docker image that could be added to flow node menu.
+And that's it! In the https://github.com/dojot/flowbroker/tree/master/lib,
+there is two examples of how to build a Docker image that could be added to flow node menu.
 
 Applications
 ------------
@@ -484,7 +455,7 @@ could be integrated with dojot:
     by ``/history/``).
   - **Using flowbroker to pre-process data**: if you want to do something more, you
     could use flows. They can help process and transform data so that they can
-    be properly sent to your application via HTTP request, by e-mail or stored
+    be properly sent to your application via HTTP request, or stored
     in a virtual device (which can be used to generate notifications as
     previously described).
 

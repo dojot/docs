@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dojot 0.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-13 16:42-0300\n"
+"POT-Creation-Date: 2020-08-19 15:33-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -109,34 +109,48 @@ msgid "In addition, you need:"
 msgstr "Além disso, são necessários:"
 
 #: ../../source/installation-guide.rst:42
-msgid "Network access"
-msgstr "Acesso à rede"
+msgid "**Network access**"
+msgstr "**Acesso à rede**"
 
-#: ../../source/installation-guide.rst:45
+#: ../../source/installation-guide.rst:46
 msgid "The following ports should be opened:"
 msgstr "As seguintes portas devem estar abertas:"
 
 #: ../../source/installation-guide.rst:44
-msgid "TCP (incoming connections): 1883 (MQTT), 8000 (web interface access)"
+msgid ""
+"**TCP**: 8000 *(web interface access)*; 1883 *(MQTT, If you are going to "
+"use MQTT)*; 5896 *(LW2M, If you are going to use LW2M file server via "
+"HTTP instead of coap, UDP)*."
 msgstr ""
-"TCP (conexões de entrada): 1883 (MQTT), 8883 (MQTT seguro, se utilizado),"
-" 8000 (acesso à interface web)"
 
 #: ../../source/installation-guide.rst:45
-msgid "TLS (incoming connections): 8883 (Secure MQTT if used)"
+msgid ""
+"**TLS**: 8883 *(MQTTS, If you are going to use MQTT with TLS, in secure "
+"mode.)*."
 msgstr ""
-"TCP (conexões de entrada): 1883 (MQTT), 8883 (MQTT seguro, se utilizado),"
-" 8000 (acesso à interface web)"
 
-#: ../../source/installation-guide.rst:47
+#: ../../source/installation-guide.rst:46
+msgid ""
+"**UDP**: 5683 and 5693 *(LW2M, If you are going to use LW2M)*; 5684 and "
+"5694 *(LW2M, If you are going to use LW2M with DTLS)*."
+msgstr ""
+
+#: ../../source/installation-guide.rst:48
 msgid "Note: The above cores are approximately 3.5 GHz (x86-64)"
 msgstr "Nota: Os núcles acima são de aproximadamente 3.5 GHz (x86-64)"
 
-#: ../../source/installation-guide.rst:50
+#: ../../source/installation-guide.rst:51
 msgid "Docker compose"
 msgstr "Docker-compose"
 
-#: ../../source/installation-guide.rst:58
+#: ../../source/installation-guide.rst:59
+msgid ""
+"In this video tutorial above, version v0.4.2 is used, but the same video "
+"is valid for the current version, it is only necessary to change to "
+"version v0.4.3."
+msgstr "Neste video tutorial acima é utilizada a versão v0.4.2, mas o mesmo video é válido para a versão atual, apenas é necessário mudar pra a versão v0.4.3"
+
+#: ../../source/installation-guide.rst:61
 msgid ""
 "This document provides instructions on how to create a trivial deployment"
 " environment on single host for *dojot*, using docker-compose as the "
@@ -146,7 +160,7 @@ msgstr ""
 "instalação trivial da dojot em um único host utilizando o docker-compose "
 "como o processo de orquestração da plataforma."
 
-#: ../../source/installation-guide.rst:62
+#: ../../source/installation-guide.rst:65
 msgid ""
 "While very simple, this deployment option is best suited to development "
 "and assessment of the platform and should not be used for production "
@@ -156,21 +170,23 @@ msgstr ""
 "desenvolvimento e verificação da plataforma dojot, mas não é aconselhável"
 " para ambientes de produção."
 
-#: ../../source/installation-guide.rst:65
-msgid "This guide has been checked on an Ubuntu 16.04 LTS environment."
+#: ../../source/installation-guide.rst:68
+msgid ""
+"This guide has been checked on an Ubuntu 16.04, 18.04 and 20.04 LTS "
+"environment."
 msgstr ""
-"Este guia foi verificado utilizando-se o sistema operacional Ubuntu 16.04"
+"Este guia foi verificado utilizando-se o sistema operacional Ubuntu 16.04, 18.04 e 20.04"
 " LTS."
 
-#: ../../source/installation-guide.rst:67
+#: ../../source/installation-guide.rst:70
 msgid "The following sections describe all Docker compose dependencies."
 msgstr "As seções seguintes descrevem todas as dependências do docker-compose."
 
-#: ../../source/installation-guide.rst:70
+#: ../../source/installation-guide.rst:73
 msgid "Docker engine"
 msgstr "Docker engine (motor do docker)"
 
-#: ../../source/installation-guide.rst:72
+#: ../../source/installation-guide.rst:75
 msgid ""
 "Up to date information and installation procedures for the docker engine "
 "can be found at the project's documentation:"
@@ -178,11 +194,11 @@ msgstr ""
 "Informações atualizadas e procedimentos de instalação para o docker "
 "engine podem ser encontrados na documentação do projeto:"
 
-#: ../../source/installation-guide.rst:75
-msgid "https://docs.docker.com/engine/installation/"
+#: ../../source/installation-guide.rst:78
+msgid "https://docs.docker.com/engine/install/ubuntu/"
 msgstr ""
 
-#: ../../source/installation-guide.rst:79
+#: ../../source/installation-guide.rst:82
 msgid ""
 "An optional step on the installation and configuration process of docker "
 "on any given machine is the setting of who is eligible for "
@@ -192,7 +208,7 @@ msgstr ""
 "um determinado equipamento é definir quem será elegível para "
 "criar/iniciar instâncias do docker."
 
-#: ../../source/installation-guide.rst:83
+#: ../../source/installation-guide.rst:86
 msgid ""
 "Should the post-installation steps (more specifically the \"Manage docker"
 " as non-root user\") have not been run, all docker and docker-compose "
@@ -203,16 +219,16 @@ msgstr ""
 "comandos do docker e do docker-compose devem ser executados pelo super "
 "usuário (root), ou invocando o sudo."
 
-#: ../../source/installation-guide.rst:87
+#: ../../source/installation-guide.rst:90
 #: ../../source/installation-guide.rst:154
 msgid "https://docs.docker.com/engine/installation/linux/linux-postinstall/"
 msgstr ""
 
-#: ../../source/installation-guide.rst:90
+#: ../../source/installation-guide.rst:93
 msgid "Docker Compose"
 msgstr "Docker-compose"
 
-#: ../../source/installation-guide.rst:92
+#: ../../source/installation-guide.rst:95
 msgid ""
 "Up to date information and installation procedures for the docker-compose"
 " can be found at the project's documentation:"
@@ -220,15 +236,15 @@ msgstr ""
 "Informações atualizadas sobre procedimentos de instalação para o docker-"
 "compose podem ser encontradas na documentação do projeto:"
 
-#: ../../source/installation-guide.rst:95
+#: ../../source/installation-guide.rst:98
 msgid "https://docs.docker.com/compose/install/"
 msgstr ""
 
-#: ../../source/installation-guide.rst:99
+#: ../../source/installation-guide.rst:102
 msgid "Installation"
 msgstr "Instalação"
 
-#: ../../source/installation-guide.rst:101
+#: ../../source/installation-guide.rst:104
 msgid ""
 "To setup the environment, merely clone the deployment repository and run "
 "the commands below."
@@ -236,7 +252,7 @@ msgstr ""
 "Para construir o ambiente, simplesmente clone o repositório e execute os "
 "comandos abaixo."
 
-#: ../../source/installation-guide.rst:104
+#: ../../source/installation-guide.rst:107
 msgid ""
 "The docker-compose enabled deployment scripts and configuration "
 "repository can be found at:"
@@ -244,15 +260,15 @@ msgstr ""
 "O repositório com os scripts de instalação e configuração do docker-"
 "compose podem ser encontrados em:"
 
-#: ../../source/installation-guide.rst:107
+#: ../../source/installation-guide.rst:110
 msgid "https://github.com/dojot/docker-compose"
 msgstr ""
 
-#: ../../source/installation-guide.rst:109
+#: ../../source/installation-guide.rst:112
 msgid "or as git clone command:::"
 msgstr "ou com o comando git clone::"
 
-#: ../../source/installation-guide.rst:116
+#: ../../source/installation-guide.rst:119
 msgid ""
 "Once the repository is properly cloned, select the version to be used by "
 "checking out the appropriate tag (do notice that the tagname has to be "
@@ -262,13 +278,9 @@ msgstr ""
 " a ser utilizada por meio da tag apropriada (note que o tagname deve ser "
 "substituído): ::"
 
-#: ../../source/installation-guide.rst:124
+#: ../../source/installation-guide.rst:127
 msgid "For instance: ::"
 msgstr "Por exemplo: ::"
-
-#: ../../source/installation-guide.rst:128
-msgid "Or if you're brave enough: ::"
-msgstr "Ou se você for muito ousado: ::"
 
 #: ../../source/installation-guide.rst:132
 msgid "That done, the environment can be brought up by: ::"
@@ -321,6 +333,13 @@ msgstr ""
 #: ../../source/installation-guide.rst:167
 msgid "Kubernetes"
 msgstr "Kubernetes"
+
+#: ../../source/installation-guide.rst:174
+msgid ""
+"In this video tutorial above, version v0.4.2 is used, but the same video "
+"is valid for the current version, it is only necessary to change to "
+"version v0.4.3"
+msgstr "Neste video tutorial acima é utilizada a versão v0.4.2, mas o mesmo video é válido para a versão atual, apenas é necessário mudar pra a versão v0.4.3"
 
 #: ../../source/installation-guide.rst:177
 msgid ""
@@ -794,4 +813,22 @@ msgstr ""
 
 #~ msgid "4GB of RAM"
 #~ msgstr "4GB de RAM"
+
+#~ msgid "TCP (incoming connections): 1883 (MQTT), 8000 (web interface access)"
+#~ msgstr ""
+#~ "TCP (conexões de entrada): 1883 (MQTT),"
+#~ " 8883 (MQTT seguro, se utilizado), "
+#~ "8000 (acesso à interface web)"
+
+#~ msgid "TLS (incoming connections): 8883 (Secure MQTT if used)"
+#~ msgstr ""
+#~ "TCP (conexões de entrada): 1883 (MQTT),"
+#~ " 8883 (MQTT seguro, se utilizado), "
+#~ "8000 (acesso à interface web)"
+
+#~ msgid "https://docs.docker.com/engine/installation/"
+#~ msgstr ""
+
+#~ msgid "Or if you're brave enough: ::"
+#~ msgstr "Ou se você for muito ousado: ::"
 

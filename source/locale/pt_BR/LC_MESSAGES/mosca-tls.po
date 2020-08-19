@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dojot 0.4.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-13 11:07-0300\n"
+"POT-Creation-Date: 2020-08-19 16:20-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,20 +17,20 @@ msgstr ""
 "Generated-By: Babel 2.8.0\n"
 
 #: ../../source/mosca-tls.rst:4
-msgid "Using MQTT over TLS"
-msgstr ""
+msgid "Using MQTT with security (TLS)"
+msgstr "Usando MQTT com segurança (TLS)"
 
 #: ../../source/mosca-tls.rst:7
 msgid "Audience: developers"
-msgstr ""
+msgstr "Público: desenvolvedores"
 
 #: ../../source/mosca-tls.rst:8
 msgid "Level: intermediate"
-msgstr ""
+msgstr "Nível: intermediário"
 
 #: ../../source/mosca-tls.rst:9
 msgid "Reading time: 15 m"
-msgstr ""
+msgstr "Tempo de leitura: 15 ms"
 
 #: ../../source/mosca-tls.rst:12
 msgid ""
@@ -250,8 +250,8 @@ msgid ""
 "MOSCA_TLS_DNS_LIST: TLS DNS list, Servers hostnames, the host to connect "
 "external (separated by a comma). Example: localhost, mydomain.com"
 msgstr ""
-"MOSCA_TLS_DNS_LIST: lista de TLS DNS, nomes de host de Servidores, o host"
-" para conectarexterno (separado por vírgula). Exemplo: localhost, "
+"MOSCA_TLS_DNS_LIST: lista de DNSs TLS, nomes de host de Servidores, o "
+"host para conectar externo (separado por vírgula). Exemplo: localhost, "
 "meudominio.com"
 
 #: ../../source/mosca-tls.rst:101
@@ -264,11 +264,10 @@ msgstr ""
 
 #: ../../source/mosca-tls.rst:104
 msgid ""
-"Note: To use Mosca without TLS too you need set "
-"ALLOW_UNSECURED_MODE='true'."
+"Note: To use Mosca without TLS too, you need set the environment variable"
+" ALLOW_UNSECURED_MODE to 'true' and to use 1883 port. **It is not "
+"recommended!**"
 msgstr ""
-"Nota: Para usar o Mosca sem TLS também é necessário "
-"definirALLOW_UNSECURED_MODE = 'verdadeiro'."
 
 #: ../../source/mosca-tls.rst:107
 msgid "Certificate retriever"
@@ -298,17 +297,17 @@ msgstr "Os parâmetros obrigatórios são:"
 
 #: ../../source/mosca-tls.rst:133
 msgid ""
-"DOJOT_HOST: where dojot is (No / at the end). Example: "
+"${DOJOT_HOST}: where dojot is (No / at the end). Example: "
 "http://localhost:8000"
 msgstr ""
-"DOJOT_HOST: onde está o dojot (Sem / no final). Exemplo: "
+"${DOJOT_HOST}: onde está o dojot (Sem / no final). Exemplo: "
 "http://localhost:8000"
 
 #: ../../source/mosca-tls.rst:134
-msgid "DEVICE_ID: device id that will get a new certificate. Example: f60c28"
+msgid "${DEVICE_ID}: device id that will get a new certificate. Example: f60c28"
 msgstr ""
-"DEVICE_ID: ID do dispositivo que receberá um novo certificado. Exemplo: "
-"f60c28"
+"${DEVICE_ID}: ID do dispositivo que receberá um novo certificado. "
+"Exemplo: f60c28"
 
 #: ../../source/mosca-tls.rst:136
 msgid ""
@@ -376,8 +375,10 @@ msgid ""
 "Before install mosquitto_pub and mosquitto_sub (from package `mosquitto-"
 "clients` on Debian-based Linux distributions) and access the folder "
 "certs, if necessary:"
-msgstr "Antes de instalar mosquitto_pub e mosquitto_sub (do pacote `mosquitto-"
-"clients` em Debian-based Linux distribuições) e acesse a pasta certs, se necessário:"
+msgstr ""
+"Antes de instalar mosquitto_pub e mosquitto_sub (do pacote `mosquitto-"
+"clients` em Debian-based Linux distribuições) e acesse a pasta certs, se "
+"necessário:"
 
 #: ../../source/mosca-tls.rst:165
 msgid ""
@@ -390,14 +391,14 @@ msgid ""
 "MQTT broker is not running before starting dojot (by running commands "
 "like ``ps aux | grep mosquitto``) to avoid port conflicts."
 msgstr ""
-"Algumas distribuições Linux, distribuições Linux baseadas em Debian em particular,"
-"tem dois pacotes para `mosquitto`_ - um contendo ferramentas para cliente "
-"(ou seja, mosquitto_pub e mosquitto_sub para publicar mensagens e"
-"assinando tópicos) e outro contendo o broker MQTT também. E"
-"neste tutorial, apenas as ferramentas do pacote `mosquitto-clients` em "
-"Distribuições Linux baseadas no Debian serão usadas. Verifique se"
-"O broker MQTT não está em execução antes de iniciar o dojot (executando comandos"
-"como` `ps aux | grep mosquitto``) para evitar conflitos de porta."
+"Algumas distribuições Linux, distribuições Linux baseadas em Debian em "
+"particular,tem dois pacotes para `mosquitto`_ - um contendo ferramentas "
+"para cliente (ou seja, mosquitto_pub e mosquitto_sub para publicar "
+"mensagens eassinando tópicos) e outro contendo o broker MQTT também. "
+"Eneste tutorial, apenas as ferramentas do pacote `mosquitto-clients` em "
+"Distribuições Linux baseadas no Debian serão usadas. Verifique se o "
+"broker MQTT não está em execução antes de iniciar o dojot (executando "
+"comandoscomo` `ps aux | grep mosquitto``) para evitar conflitos de porta."
 
 #: ../../source/mosca-tls.rst:177
 msgid "How to publish:"
@@ -414,10 +415,10 @@ msgid ""
 " a context identifier into dojot and <deviceId> is a identifier for the "
 "device in the corresponding context."
 msgstr ""
-"O <seu arquivo .crt>, <seu arquivo .key> e o cafile podem ser criados "
-"como script do `Certificate Retriever GitHub repository`_. Onde <tenant> "
-"éum identificador de contexto no dojot e <deviceId> é um identificador "
-"para odispositivo no contexto correspondente."
+"O <seu arquivo .crt>, <seu arquivo .key> e o cafile podem ser criados com"
+" o script do `Certificate Retriever GitHub repository`_. Onde <tenant> é "
+"um identificador de contexto na dojot e <deviceId> é um identificador "
+"para o dispositivo no contexto correspondente."
 
 #: ../../source/mosca-tls.rst:193
 msgid ""
@@ -425,9 +426,9 @@ msgid ""
 "attribute has the label `attr_example` and a new value 10, you need to "
 "change this for your case."
 msgstr ""
-"Nota: neste caso, a mensagem é uma publicação com um atributo, "
-"esteatributo tem o rótulo `attr_example` e um novo valor 10, você "
-"precisará mudar isso para o seu caso."
+"Nota: neste caso, a mensagem é uma publicação com um atributo, este "
+"atributo tem o rótulo `attr_example` e um novo valor 10, você precisará "
+"mudar isso para o seu caso."
 
 #: ../../source/mosca-tls.rst:197
 msgid "Important Notes"
@@ -469,4 +470,21 @@ msgid ""
 msgstr ""
 "Um arquivo de certificado pode estar em dois formatos: PEM (texto base64)"
 " ou DER(binário). O OpenSSL oferece ferramentas para ler esses formatos:"
+
+#~ msgid ""
+#~ "Note: To use Mosca without TLS too"
+#~ " you need set ALLOW_UNSECURED_MODE='true'."
+#~ msgstr ""
+#~ "Nota: Para usar o Mosca sem TLS"
+#~ " também é necessário definirALLOW_UNSECURED_MODE"
+#~ " = 'verdadeiro'."
+
+#~ msgid ""
+#~ "Note: To use Mosca without TLS "
+#~ "too, you need set ALLOW_UNSECURED_MODE='true'."
+#~ " **It is not recommended!**"
+#~ msgstr ""
+
+#~ msgid "Using MQTT over TLS"
+#~ msgstr ""
 

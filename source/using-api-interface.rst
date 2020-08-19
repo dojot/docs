@@ -1,5 +1,3 @@
-.. _Using API interface:
-
 Using API interface
 ===================
 
@@ -233,7 +231,7 @@ that, we will use mosquitto_pub and mosquitto_sub from `mosquitto`_.
 
 .. Note::
     To run `mosquitto_pub` and `mosquitto_sub` without using TLS,
-    as in the examples below, you must set ALLOW_UNSECURED_MODE with the value `'true'`
+    as in the examples below, you must set  the environment variable ALLOW_UNSECURED_MODE with the value `'true'`
     to the `iotagent-mqtt` service, that is, `ALLOW_UNSECURED_MODE='true'`.
     You can change this value in the dojot `docker-compose.yml` file
     and then kill and up the docker-compose again. **By default this value is already 'true'.**

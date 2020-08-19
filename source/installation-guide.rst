@@ -39,10 +39,11 @@ The estimated hardware requirements for 500 devices with updates every 15s are:
 
 In addition, you need:
 
-- Network access
+- **Network access**
 - The following ports should be opened:
-   - TCP (incoming connections): 1883 (MQTT), 8000 (web interface access)
-   - TLS (incoming connections): 8883 (Secure MQTT if used)
+   - **TCP**: 8000 *(web interface access)*; 1883 *(MQTT, If you are going to use MQTT)*; 5896 *(LW2M, If you are going to use LW2M file server via HTTP instead of coap, UDP)*.
+   - **TLS**: 8883 *(MQTTS, If you are going to use MQTT with TLS, in secure mode.)*.
+   - **UDP**: 5683 and 5693 *(LW2M, If you are going to use LW2M)*; 5684 and 5694 *(LW2M, If you are going to use LW2M with DTLS)*.
 
 Note: The above cores are approximately 3.5 GHz (x86-64)
 
@@ -55,6 +56,8 @@ Docker compose
     src="https://www.youtube.com/embed/aZ-Wtcd_Ydw?rel=0" frameborder="0"
     allowfullscreen></iframe><br/>
 
+In this video tutorial above, version v0.4.2 is used, but the same video is valid for the current version, it is only necessary to change to version v0.4.3.
+
 This document provides instructions on how to create a trivial deployment
 environment on single host for *dojot*, using docker-compose as the processes
 orchestration platform.
@@ -62,7 +65,7 @@ orchestration platform.
 While very simple, this deployment option is best suited to development and
 assessment of the platform and should not be used for production environments.
 
-This guide has been checked on an Ubuntu 16.04 LTS environment.
+This guide has been checked on an Ubuntu 16.04, 18.04 and 20.04 LTS environment.
 
 The following sections describe all Docker compose dependencies.
 
@@ -72,7 +75,7 @@ Docker engine
 Up to date information and installation procedures for the docker engine can be
 found at the project's documentation:
 
-https://docs.docker.com/engine/installation/
+https://docs.docker.com/engine/install/ubuntu/
 
 .. note::
 
@@ -125,9 +128,6 @@ For instance: ::
 
   git checkout v0.4.3 -b v0.4.3
 
-Or if you're brave enough: ::
-
-  git checkout development
 
 That done, the environment can be brought up by: ::
 
@@ -171,7 +171,7 @@ Kubernetes
     <iframe id="ytplayer" type="text/html" width="720" height="405"
     src="https://www.youtube.com/embed/qGUlBCmmIao?rel=0" frameborder="0"
     allowfullscreen></iframe>
-
+In this video tutorial above, version v0.4.2 is used, but the same video is valid for the current version, it is only necessary to change to version v0.4.3
 
 
 This section provides instructions on how to create a dojot deployment
