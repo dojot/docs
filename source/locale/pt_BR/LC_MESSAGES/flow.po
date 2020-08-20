@@ -373,7 +373,7 @@ msgstr ""
 "arquivo, seu nome pode ser definido configurando o campo \"Nome do "
 "arquivo\" da mesma maneira que outras variáveis de saída (ele deve se "
 "referir a uma variável definida no fluxo). A codificação do arquivo "
-"definirá o encconding do arquivo, que pode ser, por exemplo, \"base64\" "
+"definirá o *enconding* do arquivo, que pode ser, por exemplo, \"base64\" "
 "ou \"utf-8\"."
 
 #: ../../source/flow.rst:254
@@ -1205,6 +1205,8 @@ msgid ""
 "Finally, we will configure the notification node, as in image "
 ":numref:`using_cum_sum_node_noti`."
 msgstr ""
+"Finalmente, vamos configurar o nó de notificação, como na imagem"
+":numref:`using_cum_sum_node_noti`. "
 
 #: ../../source/flow.rst:942
 msgid ": Notification node configuration"

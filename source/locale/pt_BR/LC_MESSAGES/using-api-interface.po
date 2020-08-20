@@ -262,7 +262,7 @@ msgid ""
 "mosquitto_sub:"
 msgstr ""
 "Para simular o recebimento da mensagem em um dispositivo, podemos usar "
-"omosquitto_sub:"
+"o mosquitto_sub:"
 
 #: ../../source/using-api-interface.rst:269
 msgid "Triggering the sending of the message from the dojot to the device."
