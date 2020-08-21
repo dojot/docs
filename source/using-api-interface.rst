@@ -132,8 +132,8 @@ This request should give back this message:
             "template_id": "1",
             "created": "2018-01-25T12:30:42.167126+00:00",
             "label": "fan",
-            "value_type": "actuator",
-            "type": "float",
+            "type": "actuator",
+            "value_type": "float",
             "id": 2
           }
         ],
@@ -141,7 +141,7 @@ This request should give back this message:
       }
     }
 
-Note that the template ID is 1 (line 27).
+Note that the template ID is 1 (line 35), if you have already created another template this id will be different.
 
 To create a template based on it, send the following request to dojot:
 
