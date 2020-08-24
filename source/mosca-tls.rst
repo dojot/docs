@@ -2,7 +2,7 @@ Using MQTT with security (TLS)
 ==============================
 
 .. note::
-   - Audience: developers
+   - Audience: users
    - Level: intermediate
    - Reading time: 15 m
 
