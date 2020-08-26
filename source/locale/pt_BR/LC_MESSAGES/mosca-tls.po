@@ -215,13 +215,13 @@ msgstr ""
 
 #: ../../source/mosca-tls.rst:85
 msgid ""
-"Note that the URL is 'routed' by the API gateway. As in other APIs in "
+"Note that the URL is routed by the API gateway. As in other APIs in "
 "dojot, a JWT is needed. You can find how to generate and how to use such "
-"token in :ref:`Using API interface`."
+"token in :doc:`using-api-interface`."
 msgstr ""
 "Observe que a URL é 'roteado' pelo gateway da API. Como em outras APIs na"
 " dojot, é necessário um JWT. Você pode descobrir como gerar e como usar "
-"tal JWT em :ref:`Using API interface`. "
+"tal JWT em :doc:`using-api-interface`. "
 
 #: ../../source/mosca-tls.rst:89
 msgid ""

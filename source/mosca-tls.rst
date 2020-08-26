@@ -82,9 +82,8 @@ host:8000/sign/<cname>/pkcs10. CName is the end entity's name (or device). The
 payload sent with this request should be a JSON containing the end entity
 password and a CSR file (certificate intention) in base64 format.
 
-Note that the URL is 'routed' by the API gateway. As in other APIs in dojot, a
-JWT is needed. You can find how to generate and how to use such token in
-:ref:`Using API interface`.
+Note that the URL is routed by the API gateway. As in other APIs in dojot, a
+JWT is needed. You can find how to generate and how to use such token in :doc:`using-api-interface`.
 
 In order to create the CSR file and ask for a certificate signature, a user can
 use a helper script called 'Certificate Retriever', which is detailed in

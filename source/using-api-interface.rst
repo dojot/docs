@@ -296,10 +296,6 @@ topics:
 
   { "temperature" : 10.5,"pressure" : 770 }
 
-For more information on how dojot deals with data sent from devices, check the
-:doc:`integrating-physical-devices` tutorial. There you can find how to deal
-with devices that don't publish messages in such format and how to translate
-them.
 
 This examples are using MQTT without TLS, we recommend :doc:`mosca-tls`.
 
@@ -307,8 +303,8 @@ Checking historical data
 ------------------------
 
 In order to check all values that were sent from a device for a particular
-attribute, you could use the `history APIs`_. Let's first send a few other
-values to dojot so we can get a few more interesting results:
+attribute, you could use the history api, see more in :doc:`components-and-apis`.
+Let's first send a few other values to dojot so we can get a few more interesting results:
 
 
 .. code-block:: bash
@@ -331,8 +327,7 @@ The history endpoint is built from these values:
 - ``.../device/0998/...``: the device ID is ``0998`` - this is retrieved from
   the ``id`` attribute from the device
 - ``.../history?lastN=3&attr=temperature``: the requested attribute is
-  temperature and it should get the last 3 values. More operators are available
-  in `history APIs`_.
+  temperature and it should get the last 3 values.
 
   The request should result in the following message:
 
@@ -376,7 +371,6 @@ This message contains all previously sent values.
 .. _mosquitto: https://projects.eclipse.org/projects/technology.mosquitto
 .. _curl: https://curl.haxx.se/
 .. _jq: https://stedolan.github.io/jq/
-.. _history APIs: https://dojot.github.io/history-ws/apiary_latest.html
 .. _flowbroker: https://github.com/dojot/flowbroker
 .. _iotagent-mosca: https://github.com/dojot/iotagent-mosca
 .. _iotagent-nodejs: https://github.com/dojot/iotagent-nodejs
