@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dojot 0.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-12 16:30-0300\n"
+"POT-Creation-Date: 2020-08-27 10:06-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -43,26 +43,27 @@ msgstr ""
 "em alto nível e sem o objetivo de explicar os detalhes de implemenação de"
 " cada um deles. Para isso, procure a documentação própria do componente."
 
-#: ../../source/architecture.rst:19
+#: ../../source/architecture.rst:18
 msgid ":  The microservice architecture of dojot platform."
 msgstr "A arquitetura de microsserviço da plataforma dojot."
 
-#: ../../source/architecture.rst:21
+#: ../../source/architecture.rst:20
 msgid ""
 "A big picture of the whole architecture is shown in the figure above and "
 "in the following sections more details are given about each component."
-msgstr "Uma visão geral de toda a arquitetura é mostrada na figura acima e "
-"nas seções a seguir são fornecidos mais detalhes sobre cada componente."
+msgstr ""
+"Uma visão geral de toda a arquitetura é mostrada na figura acima e nas "
+"seções a seguir são fornecidos mais detalhes sobre cada componente."
 
-#: ../../source/architecture.rst:25
+#: ../../source/architecture.rst:24
 msgid "Table of Contents"
 msgstr "Índice"
 
-#: ../../source/architecture.rst:28
+#: ../../source/architecture.rst:27
 msgid "Components"
 msgstr "Componentes"
 
-#: ../../source/architecture.rst:30
+#: ../../source/architecture.rst:29
 msgid ""
 "Dojot was designed to make fast solution prototyping possible, providing "
 "a platform that's easy to use, scalable and robust. Its internal "
@@ -74,7 +75,7 @@ msgstr ""
 "arquitetura interna faz uso de muitos componentes conhecidos de código "
 "aberto e outros projetados e implementados pela equipe dojot."
 
-#: ../../source/architecture.rst:35
+#: ../../source/architecture.rst:34
 msgid ""
 "Using dojot is as follows: a user configures IoT devices through the GUI "
 "or directly using the REST APIs provided by the API Gateway. Data "
@@ -93,19 +94,19 @@ msgstr ""
 " dados externo. À medida que os dispositivos começam a enviar suas "
 "leituras para dojot, um usuário pode:"
 
-#: ../../source/architecture.rst:42
+#: ../../source/architecture.rst:41
 msgid "receive these readings in real time by socket.io channels;"
 msgstr "receba essas leituras em tempo real pelos canais socket.io;"
 
-#: ../../source/architecture.rst:43
+#: ../../source/architecture.rst:42
 msgid "consolidate all data into virtual devices;"
 msgstr "consolidar todos os dados em dispositivos virtuais;"
 
-#: ../../source/architecture.rst:44
+#: ../../source/architecture.rst:43
 msgid "gather all data from historical database, and so on."
 msgstr "reunir todos os dados do banco de dados histórico e assim por diante."
 
-#: ../../source/architecture.rst:46
+#: ../../source/architecture.rst:45
 msgid ""
 "These features can be used through REST APIs - these are the basic "
 "building blocks that any application based on dojot should use. dojot GUI"
@@ -120,7 +121,7 @@ msgstr ""
 "(usuários, dispositivos, modelos e fluxos) e também pode ser usada para "
 "verificar se tudo está funcionando bem."
 
-#: ../../source/architecture.rst:52
+#: ../../source/architecture.rst:51
 msgid ""
 "The user contexts are isolated and there are no data sharing, the access "
 "credentials are validated by the authorization service for each and every"
@@ -135,7 +136,7 @@ msgstr ""
 "dispositivos, modelos, fluxos ou quaisquer outros dados relacionados a "
 "esses recursos) de outros "
 
-#: ../../source/architecture.rst:58
+#: ../../source/architecture.rst:57
 msgid ""
 "Once devices are configured, the IoT Agent is capable of mapping the data"
 " received from devices, encapsulated on MQTT for example, and send them "
@@ -149,7 +150,7 @@ msgstr ""
 "interna. Dessa forma, os dados chegam ao serviço de persistência, por "
 "exemplo, para que possam persistir os dados em um banco de dados."
 
-#: ../../source/architecture.rst:63
+#: ../../source/architecture.rst:62
 msgid ""
 "For more information about what's going on with dojot, you should take a "
 "look at `dojot GitHub repository <https://github.com/dojot>`_. There "
@@ -159,7 +160,7 @@ msgstr ""
 "conferir os `repositórios GitHub do projeto <https://github.com/dojot>`. "
 "Lá você encontrará todos os componentes utilizados pela plataforma."
 
-#: ../../source/architecture.rst:67
+#: ../../source/architecture.rst:66
 msgid ""
 "Each one of the components that are part of the architecture are briefly "
 "described on the sub-sections below."
@@ -167,11 +168,11 @@ msgstr ""
 "Cada um dos componentes que compõem a arquitetura é brevemente descrito "
 "nas sessões subsequentes."
 
-#: ../../source/architecture.rst:71
+#: ../../source/architecture.rst:70
 msgid "Kafka + DataBroker"
 msgstr ""
 
-#: ../../source/architecture.rst:73
+#: ../../source/architecture.rst:72
 msgid ""
 "Apache Kafka is a distributed messaging platform that can be used by "
 "applications which need to stream data or consume/produce data pipelines."
@@ -187,7 +188,7 @@ msgstr ""
 "arquiteturais da *dojot* (segregação de responsabilidades, simplicidade e"
 " assim por diante)."
 
-#: ../../source/architecture.rst:79
+#: ../../source/architecture.rst:78
 msgid ""
 "In Kafka, a specialized topics structure is used to insure isolation "
 "between different users and applications data, enabling a multi-tenant "
@@ -197,7 +198,7 @@ msgstr ""
 " isolamento de dados de usuários e aplicações, viabilizando uma "
 "arquitetura multi-inquilino (*multi-tenant*)."
 
-#: ../../source/architecture.rst:82
+#: ../../source/architecture.rst:81
 msgid ""
 "The DataBroker service makes use of an in-memory database for efficiency."
 " It adds context to Apache Kafka, making it possible that internal or "
@@ -207,15 +208,16 @@ msgid ""
 msgstr ""
 "O serviço DataBroker utiliza um banco de dados na memória para obter "
 "eficiência. Ele adiciona contexto ao Apache Kafka, possibilitando que "
-"serviços internos ou externos possam consumir dados em tempo-real com base "
-"no contexto. O DataBroker também é um serviço distribuído para evitar que"
-" seja um ponto único de falha ou mesmo um gargalo para a arquitetura."
+"serviços internos ou externos possam consumir dados em tempo-real com "
+"base no contexto. O DataBroker também é um serviço distribuído para "
+"evitar que seja um ponto único de falha ou mesmo um gargalo para a "
+"arquitetura."
 
-#: ../../source/architecture.rst:89
+#: ../../source/architecture.rst:88
 msgid "DeviceManager"
 msgstr "DeviceManager"
 
-#: ../../source/architecture.rst:91
+#: ../../source/architecture.rst:90
 msgid ""
 "DeviceManager is a core entity which is responsible for keeping devices "
 "and templates data models. It is also responsible for publishing any "
@@ -224,10 +226,9 @@ msgstr ""
 "O DeviceManager é uma entidade central responsável por manter as "
 "estruturas de dados de dispositivos e modelos (templates). Também é "
 "responsável por publicar quaisquer atualizações para todos os componentes"
-" interessados "
-"através do Kafka."
+" interessados através do Kafka."
 
-#: ../../source/architecture.rst:95
+#: ../../source/architecture.rst:94
 msgid ""
 "This service is stateless, having its data persisted to a database, with "
 "data isolation for users and applications, making possible a multi-tenant"
@@ -237,11 +238,11 @@ msgstr ""
 "dados, onde suporta isolamento de dados por usuários e aplicações, "
 "viabilizando uma arquitetura de middleware com multi-tenancy."
 
-#: ../../source/architecture.rst:100
+#: ../../source/architecture.rst:99
 msgid "IoT Agent"
 msgstr "Agente IoT"
 
-#: ../../source/architecture.rst:102
+#: ../../source/architecture.rst:101
 msgid ""
 "An IoT agent is an adaptation service between physical devices and "
 "*dojot's* core components. It could be understood as a *device driver* "
@@ -253,9 +254,10 @@ msgstr ""
 "componentes principais da *dojot*. Pode ser entendido como um *driver de "
 "dispositivo* para um conjunto de dispositivos. A plataforma *dojot* pode "
 "ter vários agentes IoT, cada um deles especializado em um protocolo "
-"específico, como, por exemplo, MQTT/JSON, CoAP/LWM2M, Lora/ATC, Sigfox/WDN and HTTP/JSON."
+"específico, como, por exemplo, MQTT/JSON, CoAP/LWM2M, Lora/ATC, "
+"Sigfox/WDN and HTTP/JSON."
 
-#: ../../source/architecture.rst:108
+#: ../../source/architecture.rst:107
 msgid ""
 "It is also responsible to ensure that it communicates with devices using "
 "secure channels."
@@ -263,11 +265,11 @@ msgstr ""
 "O agente IoT também é responsável por garantir que a sua comunicação com "
 "dispositivos seja feita por meio de canais seguros."
 
-#: ../../source/architecture.rst:113
+#: ../../source/architecture.rst:112
 msgid "User Authorization Service"
 msgstr "Serviço de Autorização de Usuários"
 
-#: ../../source/architecture.rst:115
+#: ../../source/architecture.rst:114
 msgid ""
 "This service is responsible for managing user profiles and access "
 "control. Basically any API call that reaches the platform via the API "
@@ -277,7 +279,7 @@ msgstr ""
 "de acesso. Basicamente qualquer chamada de aplicação através do API "
 "Gateway é validada por este serviço."
 
-#: ../../source/architecture.rst:119
+#: ../../source/architecture.rst:118
 msgid ""
 "To be able to deal with a high volume of authorization calls, it uses "
 "caching, it is stateless and it is scalable horizontally. Its data is "
@@ -287,11 +289,11 @@ msgstr ""
 "faz uso de cache, não mantém estados e pode ser escalado horizontalmente."
 " Seus dados são mantidos em banco de dados clusterizável."
 
-#: ../../source/architecture.rst:124
+#: ../../source/architecture.rst:123
 msgid "Flowbroker (Flow builder)"
 msgstr ""
 
-#: ../../source/architecture.rst:126
+#: ../../source/architecture.rst:125
 msgid ""
 "This service provides mechanisms to build data processing flows to "
 "perform a set of actions. These flows can be extended using external "
@@ -302,11 +304,11 @@ msgstr ""
 "estendidos usando um bloco de processamento externo (que pode ser "
 "incluído utilizando APIs REST)."
 
-#: ../../source/architecture.rst:131
+#: ../../source/architecture.rst:130
 msgid "Data Manager"
 msgstr "Data Manager"
 
-#: ../../source/architecture.rst:132
+#: ../../source/architecture.rst:131
 msgid ""
 "This service manages the dojot's data configuration, making possible to "
 "import and export configuration."
@@ -314,24 +316,25 @@ msgstr ""
 "Este serviço gerencia a configuração de dados do dojot, possibilitando "
 "importar e exportar configurações."
 
-#: ../../source/architecture.rst:135
+#: ../../source/architecture.rst:134
 msgid "Cron"
 msgstr "Cron"
 
-#: ../../source/architecture.rst:136
+#: ../../source/architecture.rst:135
 msgid ""
 "Cron is a dojot's microservice that allows you to schedule events (or "
 "requests) to be emitted (done) to other microservices inside dojot "
 "platform.."
 msgstr ""
-"Cron é um microsserviço de um dojot que permite agendar eventos (ou requisições) a serem "
-"emitidos (feitas) para outros microsserviços dentro da plataforma dojot."
+"Cron é um microsserviço de um dojot que permite agendar eventos (ou "
+"requisições) a serem emitidos (feitas) para outros microsserviços dentro "
+"da plataforma dojot."
 
-#: ../../source/architecture.rst:140
+#: ../../source/architecture.rst:139
 msgid "Persister/History"
 msgstr ""
 
-#: ../../source/architecture.rst:142
+#: ../../source/architecture.rst:141
 msgid ""
 "The Persister component works as a pipeline for data and events that must"
 " be persisted on a database. The data is converted into a storage "
@@ -342,7 +345,7 @@ msgstr ""
 "uma estrutura de armazenamento que é enviada para o banco de dados "
 "correspondente."
 
-#: ../../source/architecture.rst:146
+#: ../../source/architecture.rst:145
 msgid ""
 "For internal storage, the MongoDB non-relational database is being used, "
 "it allows a Sharded Cluster configuration that may be required according "
@@ -352,17 +355,17 @@ msgstr ""
 "MongoDB que pode ser configurada em modo Sharded Cluster dependendo do "
 "caso de uso."
 
-#: ../../source/architecture.rst:150
+#: ../../source/architecture.rst:149
 msgid ""
 "The persisted data can be queried through a Rest API provided by the "
 "History microservice."
 msgstr ""
 
-#: ../../source/architecture.rst:153
+#: ../../source/architecture.rst:152
 msgid "Kong API Gateway"
 msgstr ""
 
-#: ../../source/architecture.rst:155
+#: ../../source/architecture.rst:154
 msgid ""
 "The Kong API Gateways is used as the entry point for applications and "
 "external services to reach the services that are internal to the dojot "
@@ -376,11 +379,11 @@ msgstr ""
 "facilidade na aplicação de regras sobre as chamadas de APIs como "
 "limitação de tráfego e controle de acesso."
 
-#: ../../source/architecture.rst:162
+#: ../../source/architecture.rst:161
 msgid "GUI"
 msgstr "GUI"
 
-#: ../../source/architecture.rst:164
+#: ../../source/architecture.rst:163
 msgid ""
 "The Graphical User Interface in *dojot* is responsible for providing "
 "responsive interfaces to manage the platform, including functionalities "
@@ -390,7 +393,7 @@ msgstr ""
 "provê interfaces responsivas para gerenciamento da plataforma, incluindo "
 "funcionalidades como:"
 
-#: ../../source/architecture.rst:167
+#: ../../source/architecture.rst:166
 msgid ""
 "**User Profile Management**: Define profiles and the API permission "
 "associated to those profiles"
@@ -398,7 +401,7 @@ msgstr ""
 "**Gerenciamento de perfil de usuários**: permite definir perfis e quais "
 "APIs podem ou não ser acessadas pelo respectivo perfil."
 
-#: ../../source/architecture.rst:169
+#: ../../source/architecture.rst:168
 msgid ""
 "**User Management**: Creation, Visualization, Edition and Deletion "
 "Operations"
@@ -406,7 +409,7 @@ msgstr ""
 "**Gerenciamento de usuários**: permite operações de criação, "
 "visualização, edição e remoção."
 
-#: ../../source/architecture.rst:170
+#: ../../source/architecture.rst:169
 msgid ""
 "**Templates Management**: Creation, Visualization, Edition and Deletion "
 "Operations"
@@ -414,7 +417,7 @@ msgstr ""
 "**Gerenciamento de modelos de dispositivos**: operações de criação, "
 "visualização, edição e remoção."
 
-#: ../../source/architecture.rst:172
+#: ../../source/architecture.rst:171
 msgid ""
 "**Devices Management**: Creation, Visualization (real time data), Edition"
 " and Deletion Operations"
@@ -422,7 +425,7 @@ msgstr ""
 "**Gerenciamento de dispositivos**: operações de criação, visualização "
 "(dispositivo e dados em tempo real), edição e remoção."
 
-#: ../../source/architecture.rst:174
+#: ../../source/architecture.rst:173
 msgid ""
 "**Processing Flows Management**: Creation, Visualization, Edition and "
 "Deletion Operations"
@@ -431,7 +434,7 @@ msgstr ""
 "criação, visualização, edição e remoção de fluxos de processamento de "
 "dados."
 
-#: ../../source/architecture.rst:176
+#: ../../source/architecture.rst:175
 msgid ""
 "**Notifications**: View system notifications (unified real time and "
 "history)"
@@ -439,11 +442,11 @@ msgstr ""
 "**Notificações**: visualiza as notificações do sistema (em tempo real e "
 "histórico unificados)"
 
-#: ../../source/architecture.rst:179
+#: ../../source/architecture.rst:178
 msgid "Image manager"
 msgstr "Image manager"
 
-#: ../../source/architecture.rst:181
+#: ../../source/architecture.rst:180
 msgid ""
 "This component is responsible for device (firmware) image storage and "
 "retrieval. It is used by the firmware update mechanism."
@@ -451,15 +454,39 @@ msgstr ""
 "Este componente é responsável pelo armazenamento e recuperação de imagens"
 " de firmware de dispositivos."
 
-#: ../../source/architecture.rst:185
+#: ../../source/architecture.rst:184
+msgid "X.509 Identity Management"
+msgstr "X.509 Identity Management"
+
+#: ../../source/architecture.rst:186
+msgid ""
+"This component is responsible for assigning identities to devices, such "
+"identities are represented in the form of `x.509`_ certificates. This "
+"behaves similarly to a *Certificate Authority* (`CA`_), where it is "
+"possible to submit a `CSR`_ and receive a certificate back. Once the "
+"certificate has been installed on the device, it is possible to "
+"communicate securely with the dojot platform, as the data collected by "
+"the device is transmitted over a secure (encrypted) channel and it is "
+"also possible to guarantee the integrity of the data."
+msgstr ""
+"Este componente é responsável por atribuir identidades à dispositivos, "
+"tais identidades são representadas na forma de certificados `x.509`_. "
+"Isto se comporta semelhante a uma Autoridade Certificadora (`CA`_), onde "
+"é possível submeter um `CSR`_ e receber um certificado de volta. Tendo o "
+"certificado sido instalado no dispositivo, é possível se comunicar de "
+"forma segura com a plataforma dojot, pois os dados coletados pelo "
+"dispositivo são trafegados por um canal seguro (criptografado) e também é"
+" possível garantir a integridade dos dados."
+
+#: ../../source/architecture.rst:196
 msgid "Infrastructure"
 msgstr "Infraestrutura"
 
-#: ../../source/architecture.rst:187
+#: ../../source/architecture.rst:198
 msgid "A few extra components are used in dojot,they are:"
 msgstr "Alguns outros componentes são utilizados na dojot, são eles:"
 
-#: ../../source/architecture.rst:189
+#: ../../source/architecture.rst:200
 msgid ""
 "postgres: this database is used to persist data from many components, "
 "such as Device Manager."
@@ -467,7 +494,7 @@ msgstr ""
 "postgres: esse banco de dados é utilizado para persistir informações de "
 "vários componenentes, como do gerenciador de dispositivos."
 
-#: ../../source/architecture.rst:192
+#: ../../source/architecture.rst:203
 msgid ""
 "redis: in-memory database used as cache in many components, such as "
 "service orchestrator, subscription manager, IoT agents, and so on. It is "
@@ -477,7 +504,7 @@ msgstr ""
 "componentes, como o serviço de osquestração, gerenciador de subscrição, "
 "agentes IoT e outros. É bem leve e fácil de usar."
 
-#: ../../source/architecture.rst:196
+#: ../../source/architecture.rst:207
 msgid ""
 "rabbitMQ: message broker used in service orchestrator in order to "
 "implement action flows related that should be applied to messages "
@@ -487,7 +514,7 @@ msgstr ""
 " para implementar fluxos de ações relacionados que podem ser aplicados a "
 "mensagens recebidas dos componentes."
 
-#: ../../source/architecture.rst:200
+#: ../../source/architecture.rst:211
 msgid ""
 "mongo database: widely used database solution that is easy to use and "
 "doesn't add a considerable access overhead (where it was employed in "
@@ -497,19 +524,19 @@ msgstr ""
 "é fácil de usar e não adiciona esforço de acesso considerável (nos locais"
 " onde foi empregado na dojot)."
 
-#: ../../source/architecture.rst:203
+#: ../../source/architecture.rst:214
 msgid "zookeeper: keeps replicated services within a cluster under control."
 msgstr "zookeeper: mantém sob controle serviços replicados em cluster."
 
-#: ../../source/architecture.rst:207
+#: ../../source/architecture.rst:218
 msgid "Communications"
 msgstr "Comunicação"
 
-#: ../../source/architecture.rst:209
+#: ../../source/architecture.rst:220
 msgid "All components communicate with each other in two ways:"
 msgstr "Todos os componentes se comunicam de duas maneiras:"
 
-#: ../../source/architecture.rst:211
+#: ../../source/architecture.rst:222
 msgid ""
 "Using HTTP requests: if one component needs to retrieve data from other "
 "one, say an IoT agent needs the list of currently configured devices from"
@@ -520,7 +547,7 @@ msgstr ""
 "configurados do gerenciador de dispositivos, ele pode enviar uma "
 "requisição HTTP para o componente apropriado."
 
-#: ../../source/architecture.rst:215
+#: ../../source/architecture.rst:226
 msgid ""
 "Using Kafka messages: if one component needs to send new information "
 "about a resource controlled by it (such as new devices created in Device "

@@ -341,9 +341,6 @@ dojot.
 .. _Messages - iotagent-mosca: http://dojotdocs.readthedocs.io/projects/iotagent-mosca/en/latest/operation.html#sending-messages-to-other-components-via-kafka
 .. _GitHub - iotagent-mosca: https://github.com/dojot/iotagent-mosca
 
-.. _GitHub - EJBCA-REST: https://github.com/dojot/ejbca-rest
-.. _API - EJBCA-REST: https://dojot.github.io/ejbca-rest/apiary_v0.4.3.html
-
 .. _GitHub - Data Manager: https://github.com/dojot/data-manager
 .. _API - Data Manager: https://dojot.github.io/data-manager/apiary_v0.4.3.html
 
