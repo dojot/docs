@@ -233,9 +233,6 @@ things to keep in mind:
 
   { "temperature" : 10.5, "pressure" : 770 }
 
-- VerneMQ does not need any additional configuration to permit insecure MQTT communication, unlike
-  Mosca.
-
 
 On the dashboard some attributes are shown as tables and others as charts. How are they chosen/set?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

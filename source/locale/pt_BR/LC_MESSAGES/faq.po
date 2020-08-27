@@ -451,14 +451,6 @@ msgstr ""
 "O `payload` MQTT precisa ser um JSON com cada chave sendo um atributo de "
 "um dispositivo definido na dojot, como:"
 
-#: ../../source/faq/faq.rst:235
-msgid ""
-"VerneMQ does not need any additional configuration to permit insecure "
-"MQTT communication, unlike Mosca."
-msgstr ""
-"O VerneMQ não precisa de nenhuma configuração adicional para permitir o modo inseguro "
-"de comunicação MQTT, diferentemente do Mosca."
-
 #: ../../source/faq/faq.rst:240
 msgid ""
 "On the dashboard some attributes are shown as tables and others as "
