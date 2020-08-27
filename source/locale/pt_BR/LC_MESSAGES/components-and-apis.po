@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dojot 0.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-27 10:06-0300\n"
+"POT-Creation-Date: 2020-08-27 14:14-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -484,11 +484,11 @@ msgid "/socket.io"
 msgstr ""
 
 #: ../../source/components-and-apis.rst:203
-msgid "/x509"
+msgid "/x509/v1"
 msgstr ""
 
 #: ../../source/components-and-apis.rst:204
-msgid "/api"
+msgid "/api/v1"
 msgstr ""
 
 #: ../../source/components-and-apis.rst:208
@@ -563,7 +563,7 @@ msgid "host:8000/auth"
 msgstr ""
 
 #: ../../source/components-and-apis.rst:237
-msgid "host:5000/auth/revoke"
+msgid "host:5000/revoke"
 msgstr ""
 
 #: ../../source/components-and-apis.rst:238
@@ -651,11 +651,11 @@ msgid "host:8000/socket.io"
 msgstr ""
 
 #: ../../source/components-and-apis.rst:273
-msgid "host:80/x509"
+msgid "host:3000/api/v1"
 msgstr ""
 
 #: ../../source/components-and-apis.rst:274
-msgid "host:8000/x509"
+msgid "host:8000/x509/v1"
 msgstr ""
 
 #: ../../source/components-and-apis.rst:277
@@ -1043,5 +1043,20 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "host:8000/ca"
+#~ msgstr ""
+
+#~ msgid "/x509"
+#~ msgstr ""
+
+#~ msgid "/api"
+#~ msgstr ""
+
+#~ msgid "host:5000/auth/revoke"
+#~ msgstr ""
+
+#~ msgid "host:80/x509"
+#~ msgstr ""
+
+#~ msgid "host:8000/x509"
 #~ msgstr ""
 

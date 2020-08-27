@@ -200,8 +200,8 @@ See more about how using API in :ref:`Using API interface`.
      - `API - data-broker`_
      - No
    * - X.509 Identity Management
-     - /x509
-     - /api
+     - /x509/v1
+     - /api/v1
      - `API - x509-identity-mgmt`_
      - Yes
 
@@ -234,7 +234,7 @@ TCP port 8000), see the following table.
      - host:5000/
      - host:8000/auth
    * - Auth
-     - host:5000/auth/revoke
+     - host:5000/revoke
      - host:8000/auth/revoke
    * - Auth
      - host:5000/user
@@ -270,8 +270,8 @@ TCP port 8000), see the following table.
      - host:80/socket.io
      - host:8000/socket.io
    * - X.509 Identity Management
-     - host:80/x509
-     - host:8000/x509
+     - host:3000/api/v1
+     - host:8000/x509/v1
 
 Kafka messages
 --------------
@@ -347,5 +347,5 @@ dojot.
 .. _GitHub - Cron: https://github.com/dojot/cron
 .. _API - Cron: https://dojot.github.io/cron/apiary_v0.4.3.html
 
-.. _GitHub - x509-identity-mgmt: https://github.com/dojot/dojot/tree/development/x509-identity-mgmt
-.. _API - x509-identity-mgmt: https://dojot.github.io/dojot/x509-identity-mgmt/apiary_release-v0.5.0-alpha.html
+.. _GitHub - x509-identity-mgmt: https://github.com/dojot/dojot/tree/master/x509-identity-mgmt
+.. _API - x509-identity-mgmt: https://dojot.github.io/dojot/x509-identity-mgmt/apiary_v0.5.0.html
