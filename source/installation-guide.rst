@@ -65,7 +65,7 @@ orchestration platform.
 While very simple, this deployment option is best suited to development and
 assessment of the platform and should not be used for production environments.
 
-This guide has been checked on an Ubuntu 16.04, 18.04 and 20.04 LTS environment.
+This guide has been checked on an Ubuntu 16.04 and 18.04 LTS environment.
 
 The following sections describe all Docker compose dependencies.
 

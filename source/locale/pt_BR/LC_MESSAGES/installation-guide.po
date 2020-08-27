@@ -172,10 +172,10 @@ msgstr ""
 
 #: ../../source/installation-guide.rst:68
 msgid ""
-"This guide has been checked on an Ubuntu 16.04, 18.04 and 20.04 LTS "
+"This guide has been checked on an Ubuntu 16.04 and 18.04 LTS "
 "environment."
 msgstr ""
-"Este guia foi verificado utilizando-se o sistema operacional Ubuntu 16.04, 18.04 e 20.04"
+"Este guia foi verificado utilizando-se o sistema operacional Ubuntu 16.04 e 18.04"
 " LTS."
 
 #: ../../source/installation-guide.rst:70
