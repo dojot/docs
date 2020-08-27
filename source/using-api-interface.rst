@@ -253,6 +253,9 @@ Let's send a message to dojot:
 
 If there is no output, the message was sent to MQTT broker.
 
+Note that we sent a message with the parameter ``-q 1``. This means that the message will use QoS 1,
+i.e., the message is guaranteed to be sent at least one time.
+
 
 **Also you can send a configuration message from dojot to the device to change some of its attributes.
 The target attribute must be of type “actuator”.**

@@ -214,6 +214,10 @@ humidity, and publishes them periodically through MQTT. First, you create a
 device of type MQTT with two attributes (temperature and humidity). Then you
 set your actual device to push the data to dojot.
 
+.. ATTENTION::
+  As of **v0.5.0**, you can choose the between two MQTT brokers: Mosca or VerneMQ. By default,
+  VerneMQ is used, but you can use Mosca too. Check the :doc:`../installation-guide` for more information.
+
 In order to send data to dojot via MQTT (using Mosca or VerneMQ), there are some
 things to keep in mind:
 
