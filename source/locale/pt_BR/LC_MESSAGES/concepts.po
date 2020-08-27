@@ -125,9 +125,8 @@ msgstr ""
 " de acesso na `auth documentation`_."
 
 #: ../../source/concepts.rst:51
-#, fuzzy
 msgid "Device authentication"
-msgstr "Autenticação de usuário"
+msgstr "Autenticação de dispositivo"
 
 #: ../../source/concepts.rst:53
 msgid ""
