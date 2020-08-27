@@ -78,12 +78,20 @@ must not share an attribute with the same name.
    the modification.
 
 Now the physical devices can send messages to dojot. There are few things to
-pay attention to: the MQTT topic is ``/{TENANT}/{DEVICE_ID}/attrs``.
+pay attention to: the MQTT topic is ``<tenant>:<device-id>/attrs``.
 
-Just for the sake of simplicity, we'll emulate one device using mosquitto_pub
-tool. We set the ``client-id`` parameter by using the ``-i`` flag of
+For simplicity's sake, we'll emulate one device using mosquitto_pub
+tool. We set the ``username`` parameter by using the ``-u`` flag of
 mosquitto_pub. See more about in :doc:`using-api-interface` at topic Sending Messages.
-Besides that this examples are using MQTT without TLS, we recommend :doc:`mosca-tls`.
+
+.. ATTENTION::
+    In the videos we are using Mosca as the MQTT broker, so the messages are being sent to topics in
+    the old format. If you are using VerneMQ, change them according to the forementioned pattern.
+    Check :doc:`faq/faq` for more info about the differences between them.
+
+.. NOTE::
+    The examples are using insecure MQTT. The recommended approach is to use TLS. For Mosca, check
+    the section :doc:`mosca-tls`.
 
 .. raw:: html
 
