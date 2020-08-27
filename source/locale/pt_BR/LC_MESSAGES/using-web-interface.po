@@ -179,7 +179,7 @@ msgid ""
 "The examples are using insecure MQTT. The recommended approach is to use "
 "TLS. For Mosca, check the section :doc:`mosca-tls`."
 msgstr ""
-"Os exemplos estão utilizando MQTT sem segurança. A abordagem recomendada é"
+"Os exemplos estão utilizando MQTT sem segurança. A abordagem recomendada é "
 "utilizar TLS. Para o Mosca, verifique a página :doc:`mosca-tls`."
 
 #: ../../source/using-web-interface.rst:102

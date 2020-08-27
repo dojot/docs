@@ -452,7 +452,7 @@ msgstr ""
 "id>/attrs`` (e.g.: ``admin:efac/attrs``). Além disso, você deve passar o "
 "`username` do cliente no formato ``<tenant>:<device-id>``, como "
 "``admin:efac``, sendo que este deve ser igual à mesma parte passada no "
-"tópico. Você também pode passar o ID do cliente também (opcional)."
+"tópico. Você também pode passar o ID do cliente (opcional)."
 
 #: ../../source/faq/faq.rst:233
 msgid ""
