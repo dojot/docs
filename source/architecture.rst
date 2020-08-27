@@ -177,8 +177,20 @@ interfaces to manage the platform, including functionalities like:
 Image manager
 *************
 
-This component is responsible for device (firmware) image storage and retrieval. 
+This component is responsible for device (firmware) image storage and retrieval.
 It is used by the firmware update mechanism.
+
+X.509 Identity Management
+*************************
+
+This component is responsible for assigning identities to devices, such
+identities are represented in the form of `x.509`_ certificates. This behaves
+similarly to a *Certificate Authority* (`CA`_), where it is possible to submit a
+`CSR`_ and receive a certificate back.
+Once the certificate has been installed on the device, it is possible to
+communicate securely with the dojot platform, as the data collected by the
+device is transmitted over a secure (encrypted) channel and it is also possible
+to guarantee the integrity of the data.
 
 Infrastructure
 --------------
@@ -223,3 +235,6 @@ All components communicate with each other in two ways:
 
 .. _iotagent-mosca: https://github.com/dojot/iotagent-mosca
 .. _Mosca: https://github.com/mcollina/mosca
+.. _x.509: https://en.wikipedia.org/wiki/X.509
+.. _CA: https://en.wikipedia.org/wiki/Certificate_authority
+.. _CSR: https://en.wikipedia.org/wiki/Certificate_signing_request

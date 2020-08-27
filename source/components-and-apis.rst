@@ -72,10 +72,6 @@ Components
     - `GitHub - iotagent-mosca`_
     -
     -
-  * - EJBCA-REST
-    - `GitHub - EJBCA-REST`_
-    -
-    - `API - EJBCA-REST`_
   * - Data Manager
     - `GitHub - Data Manager`_
     -
@@ -84,7 +80,10 @@ Components
     - `GitHub - Cron`_
     -
     - `API - Cron`_
-
+  * - X.509 Identity Management
+    - `GitHub - x509-identity-mgmt`_
+    -
+    - `API - x509-identity-mgmt`_
 
 
 Exposed APIs (API Gateway)
@@ -156,21 +155,6 @@ See more about how using API in :ref:`Using API interface`.
      - /
      - `API - history`_
      - Yes
-   * - EJBCA REST
-     - /sign
-     - /sign
-     - `API - EJBCA-REST`_
-     - Yes
-   * - EJBCA REST
-     - /ca
-     - /ca
-     - `API - EJBCA-REST`_
-     - Yes
-   * - EJBCA REST
-     - /user
-     - /user
-     - `API - EJBCA-REST`_
-     - Yes
    * - Data Manager
      - /import
      - /import
@@ -215,6 +199,11 @@ See more about how using API in :ref:`Using API interface`.
      - /socket.io
      - `API - data-broker`_
      - No
+   * - X.509 Identity Management
+     - /x509
+     - /api
+     - `API - x509-identity-mgmt`_
+     - Yes
 
 **NOTE: Some of the endpoints from component aren't exposed, but are used internally.**
 
@@ -256,12 +245,6 @@ TCP port 8000), see the following table.
    * - History
      - host:8000/
      - host:8000/history
-   * - EJBCA REST
-     - host:5583/sign
-     - host:8000/sign
-   * - EJBCA REST
-     - host:5583/ca
-     - host:8000/ca
    * - Data Manager
      - host:3000/import
      - host:8000/import
@@ -286,6 +269,9 @@ TCP port 8000), see the following table.
    * - Data Broker
      - host:80/socket.io
      - host:8000/socket.io
+   * - X.509 Identity Management
+     - host:80/x509
+     - host:8000/x509
 
 Kafka messages
 --------------
@@ -364,3 +350,5 @@ dojot.
 .. _GitHub - Cron: https://github.com/dojot/cron
 .. _API - Cron: https://dojot.github.io/cron/apiary_v0.4.3.html
 
+.. _GitHub - x509-identity-mgmt: https://github.com/dojot/dojot/tree/development/x509-identity-mgmt
+.. _API - x509-identity-mgmt: https://dojot.github.io/dojot/x509-identity-mgmt/apiary_release-v0.5.0-alpha.html
