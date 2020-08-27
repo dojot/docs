@@ -146,7 +146,7 @@ Note that the template ID is 1 (line 35), if you have already created another te
 To create a template based on it, send the following request to dojot:
 
 .. code-block:: bash
-    
+
     curl -X POST http://localhost:8000/device \
     -H "Authorization: Bearer ${JWT}" \
     -H 'Content-Type:application/json' \
@@ -214,27 +214,10 @@ Which should give back:
 Sending messages
 ----------------
 
-So far we got an access token and created a template and a device based on it.
-In an actual deployment, the physical device would send messages to dojot with
-all its attributes and their current values. For this tutorial we will send
-MQTT messages by hand to the platform, emulating such physical device. For
-that, we will use mosquitto_pub and mosquitto_sub from `mosquitto`_.
-
-
-.. ATTENTION::
-    Some Linux distributions, Debian-based Linux distributions in particular, have two packages for
-    `mosquitto`_ - one containing tools to access it (i.e. mosquitto_pub and
-    mosquitto_sub for publishing messages and subscribing to topics) and
-    another one containing the MQTT broker too. In this tutorial, only the tools from package `mosquitto-clients` on Debian-based Linux distributions are going to be used.
-    Please check if MQTT broker is not running before starting dojot
-    (by running commands like ``ps aux | grep mosquitto``) to avoid port conflicts.
-
-.. Note::
-    To run `mosquitto_pub` and `mosquitto_sub` without using TLS,
-    as in the examples below, you must set  the environment variable ALLOW_UNSECURED_MODE with the value `'true'`
-    to the `iotagent-mqtt` service, that is, `ALLOW_UNSECURED_MODE='true'`.
-    You can change this value in the dojot `docker-compose.yml` file
-    and then kill and up the docker-compose again. **By default this value is already 'true'.**
+So far we got an access token and created a template and a device based on it. In an actual
+deployment, the physical device would send messages to dojot with all its attributes and their
+current values. For this tutorial we will send MQTT messages by hand to the platform, emulating such
+physical device. For that, we will use mosquitto_pub and mosquitto_sub from `mosquitto`_.
 
 The default message format used by dojot is a simple key-value JSON (you could
 translate any message format to this scheme using flows, though), such as:
@@ -245,24 +228,43 @@ translate any message format to this scheme using flows, though), such as:
       "temperature" : 10.6
     }
 
-Let's send this message to dojot:
+
+.. ATTENTION::
+    Some Linux distributions, Debian-based Linux distributions in particular, have two packages for
+    `mosquitto`_ - one containing tools to access it (i.e. mosquitto_pub and mosquitto_sub for
+    publishing messages and subscribing to topics) and another one containing the MQTT broker too.
+    In this tutorial, only the tools from package `mosquitto-clients` on Debian-based Linux
+    distributions are going to be used. Please check if MQTT broker is not running before starting
+    dojot (by running commands like ``ps aux | grep mosquitto``) to avoid port conflicts.
+
+
+As of **v0.5.0**, you can choose the between two MQTT brokers: Mosca or VerneMQ. By default, VerneMQ
+is used, but you can use Mosca too. Check the :doc:`../installation-guide` for more information.
+
+Using VerneMQ
+^^^^^^^^^^^^^
+
+Let's send a message to dojot:
 
 .. code-block:: bash
 
-  mosquitto_pub -h localhost -t /admin/0998/attrs -p 1883 -i admin:0998 -m '{"temperature": 10.6}'
+  mosquitto_pub -h localhost -p 1883 -u admin:0998 -t admin:0998/attrs -m '{"temperature": 10.6}' -q 1
 
 
 If there is no output, the message was sent to MQTT broker.
+
+Note that we sent a message with the parameter ``-q 1``. This means that the message will use QoS 1,
+i.e., the message is guaranteed to be sent at least one time.
 
 
 **Also you can send a configuration message from dojot to the device to change some of its attributes.
 The target attribute must be of type “actuator”.**
 
-To simulate receiving the message on a device, we can use the mosquitto_sub:
+To simulate receiving the message on a device, we can use ``mosquitto_sub``:
 
 .. code-block:: bash
 
-  mosquitto_sub -h localhost -p 1883  -i admin:0998 -t /admin/0998/config
+  mosquitto_sub -h localhost -p 1883 -u admin:0998 -t admin:0998/config -q 1
 
 Triggering the sending of the message from the dojot to the device.
 
@@ -275,29 +277,92 @@ Triggering the sending of the message from the dojot to the device.
       -d '{"attrs": {"fan" : 100}}'
 
 
-As noted in the :doc:`../faq/faq`, there are some considerations regarding MQTT
-topics:
+As noted in the :doc:`../faq/faq`, there are some considerations regarding MQTT topics:
 
-- You can set the device ID that originates the message using the ``client-id``
-  MQTT parameter. It should follow the following pattern:
-  ``<service>:<deviceid>``, such as ``admin:efac``.
+- You must set the username that originates the message using the ``username`` MQTT parameter. It
+  should follow the following pattern: ``<tenant>:<device-id>``, such as ``admin:efac``. It must
+  match the tenant and device ID set in the topic.
 
-- If you can't do such thing, then the device should set its ID using the topic
-  used to publish messages. The topic should assume the pattern
-  ``/<service-id>/<device-id>/attrs`` (for instance: ``/admin/efac/attrs``).
+- The topic to publish messages has the pattern ``<tenant>:<device-id>/attrs``
+  (e.g.: ``admin:efac/attrs``).
 
-- The topic to subscrine should assume the pattern
-  ``/<service-id>/<device-id>/config`` (for instance: ``/admin/efac/config``).
+- The topic to subscribe should has the pattern ``<tenant>:<device-id>/config``
+  (e.g.: ``admin:efac/config``).
+
+- MQTT payload must be a JSON with each key being an attribute of the dojot device, such as:
+
+.. code-block:: javascript
+
+  { "temperature" : 10.5, "pressure" : 770 }
+
+Using Mosca (legacy)
+^^^^^^^^^^^^^^^^^^^^
+
+.. ATTENTION::
+    VerneMQ is the new default MQTT broker. Support for Mosca will be eventually dropped, so use
+    VerneMQ if possible!
+
+.. Note::
+    To run `mosquitto_pub` and `mosquitto_sub` without using TLS, as in the examples below, you must
+    set the environment variable ALLOW_UNSECURED_MODE with the value `'true'` to the `iotagent-mqtt`
+    service, that is, `ALLOW_UNSECURED_MODE='true'`. You can change this value in the dojot
+    `docker-compose.yml` file and then kill and up the docker-compose again. **By default this value
+    is already 'true'.**
+
+Let's send a message to dojot:
+
+.. code-block:: bash
+
+  mosquitto_pub -h localhost -t /admin/0998/attrs -p 1883 -m '{"temperature": 10.6}'
+
+
+If there is no output, the message was sent to MQTT broker.
+
+
+**Also you can send a configuration message from dojot to the device to change some of its attributes.
+The target attribute must be of type “actuator”.**
+
+To simulate receiving the message on a device, we can use ``mosquitto_sub``:
+
+.. code-block:: bash
+
+  mosquitto_sub -h localhost -p 1883 -t /admin/0998/config
+
+Triggering the sending of the message from the dojot to the device.
+
+.. code-block:: bash
+
+  curl -X PUT \
+      http://localhost:8000/device/0998/actuate \
+      -H "Authorization: Bearer ${JWT}" \
+      -H 'Content-Type:application/json' \
+      -d '{"attrs": {"fan" : 100}}'
+
+
+As noted in the :doc:`../faq/faq`, there are some considerations regarding MQTT topics:
+
+- You can set the device ID that originates the message using the ``client-id`` MQTT parameter. It
+  should follow the following pattern: ``<tenant>:<device-id>``, such as ``admin:efac``.
+
+- If you can't do such thing, then the device should set its ID using the topic used to publish
+  messages. The topic should assume the pattern ``/<tenant>/<device-id>/attrs``
+  (e.g.: ``/admin/efac/attrs``).
+
+- The topic to subscribe should assume the pattern ``/<tenant>/<device-id>/config``
+  (e.g.: ``/admin/efac/config``).
 
 - MQTT payload must be a JSON with each key being an attribute of the dojot
   device, such as:
 
 .. code-block:: javascript
 
-  { "temperature" : 10.5,"pressure" : 770 }
+  { "temperature" : 10.5, "pressure" : 770 }
 
+For simplicity's sake, we are not using TLS in these examples. Check :doc:`mosca-tls` for more
+information on its usage.
 
-This examples are using MQTT without TLS, we recommend :doc:`mosca-tls`.
+.. Note::
+    For the rest of the tutorial we will treat as if you are using VerneMQ.
 
 Checking historical data
 ------------------------
@@ -306,12 +371,11 @@ In order to check all values that were sent from a device for a particular
 attribute, you could use the history api, see more in :doc:`components-and-apis`.
 Let's first send a few other values to dojot so we can get a few more interesting results:
 
-
 .. code-block:: bash
 
-  mosquitto_pub -t /admin/0998/attrs -i admin:0998 -m '{"temperature": 36.5}'
-  mosquitto_pub -t /admin/0998/attrs -i admin:0998 -m '{"temperature": 15.6}'
-  mosquitto_pub -t /admin/0998/attrs -i admin:0998 -m '{"temperature": 10.6}'
+  mosquitto_pub -h localhost -p 1883 -u admin:0998 -t admin:0998/attrs -m '{"temperature": 36.5}' -q 1
+  mosquitto_pub -h localhost -p 1883 -u admin:0998 -t admin:0998/attrs -m '{"temperature": 15.6}' -q 1
+  mosquitto_pub -h localhost -p 1883 -u admin:0998 -t admin:0998/attrs -m '{"temperature": 10.6}' -q 1
 
 
 To retrieve all values sent for temperature attribute of this device:

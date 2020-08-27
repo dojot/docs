@@ -121,12 +121,13 @@ If you need another version, you could checkout a tag instead:
     v0.4.1_rc2
     v0.4.2
     v0.4.2-rc.1
+    v0.4.3
     v0.4.3-rc.1
     v0.4.3-rc.2
-    v0.4.3
+    v0.5.0
 
 
-  $ git checkout v0.4.2
+  $ git checkout v0.5.0
 
 Once in a while we'll release new versions for dojot components. They might be
 independently released (although we tend to synchronize all of them). Once we
@@ -213,20 +214,28 @@ humidity, and publishes them periodically through MQTT. First, you create a
 device of type MQTT with two attributes (temperature and humidity). Then you
 set your actual device to push the data to dojot.
 
-In order to send data to dojot via MQTT (using iotagent-mosca), there are some
+.. ATTENTION::
+  As of **v0.5.0**, you can choose the between two MQTT brokers: Mosca or VerneMQ. By default,
+  VerneMQ is used, but you can use Mosca too. Check the :doc:`../installation-guide` for more information.
+
+In order to send data to dojot via MQTT (using Mosca or VerneMQ), there are some
 things to keep in mind:
 
-- The topic should look like ``/<tenant>/<device-id>/attrs`` (for instance:
-  ``/admin/efac/attrs``). Depending on how IoT agent MQTT was started (more
-  strict), the client ID must also be set to "<tenant>:<deviceid>", such as
-  "admin:efac".
+- When using Mosca, the topic should look like ``/<tenant>/<device-id>/attrs`` (e.g.:
+  ``/admin/efac/attrs``). Depending on how IoT agent MQTT was started (more strict), the client ID
+  must also be set to ``<tenant>:<deviceid>``, such as ``admin:efac``.
+
+- When using VerneMQ, the topic should look like ``<tenant>:<device-id>/attrs`` (e.g.:
+  ``admin:efac/attrs``). You must also set the username for the client as ``<tenant>:<device-id>``, such
+  as ``admin:efac``, and it should match the same part in the topic. You can also set the client ID
+  too (not required).
 
 - MQTT payload must be a JSON with each key being an attribute of the dojot
   device, such as:
 
 .. code-block:: javascript
 
-  { "temperature" : 10.5,"pressure" : 770 }
+  { "temperature" : 10.5, "pressure" : 770 }
 
 
 On the dashboard some attributes are shown as tables and others as charts. How are they chosen/set?
