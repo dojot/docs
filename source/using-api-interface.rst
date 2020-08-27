@@ -248,7 +248,7 @@ Let's send a message to dojot:
 
 .. code-block:: bash
 
-  mosquitto_pub -h localhost -p 1883 -u admin:0998 -i admin:0998 -t admin:0998/attrs -m '{"temperature": 10.6}' -q 1
+  mosquitto_pub -h localhost -p 1883 -u admin:0998 -t admin:0998/attrs -m '{"temperature": 10.6}' -q 1
 
 
 If there is no output, the message was sent to MQTT broker.
@@ -261,7 +261,7 @@ To simulate receiving the message on a device, we can use ``mosquitto_sub``:
 
 .. code-block:: bash
 
-  mosquitto_sub -h localhost -p 1883 -i admin:0998 -u admin:0998 -t admin:0998/config -q 1
+  mosquitto_sub -h localhost -p 1883 -u admin:0998 -t admin:0998/config -q 1
 
 Triggering the sending of the message from the dojot to the device.
 
@@ -310,7 +310,7 @@ Let's send a message to dojot:
 
 .. code-block:: bash
 
-  mosquitto_pub -h localhost -t /admin/0998/attrs -p 1883 -i admin:0998 -m '{"temperature": 10.6}'
+  mosquitto_pub -h localhost -t /admin/0998/attrs -p 1883 -m '{"temperature": 10.6}'
 
 
 If there is no output, the message was sent to MQTT broker.
@@ -323,7 +323,7 @@ To simulate receiving the message on a device, we can use ``mosquitto_sub``:
 
 .. code-block:: bash
 
-  mosquitto_sub -h localhost -p 1883 -i admin:0998 -t /admin/0998/config
+  mosquitto_sub -h localhost -p 1883 -t /admin/0998/config
 
 Triggering the sending of the message from the dojot to the device.
 
@@ -370,9 +370,9 @@ Let's first send a few other values to dojot so we can get a few more interestin
 
 .. code-block:: bash
 
-  mosquitto_pub -t admin:0998/attrs -i admin:0998 -m '{"temperature": 36.5}'
-  mosquitto_pub -t admin:0998/attrs -i admin:0998 -m '{"temperature": 15.6}'
-  mosquitto_pub -t admin:0998/attrs -i admin:0998 -m '{"temperature": 10.6}'
+  mosquitto_pub -h localhost -p 1883 -u admin:0998 -t admin:0998/attrs -m '{"temperature": 36.5}' -q 1
+  mosquitto_pub -h localhost -p 1883 -u admin:0998 -t admin:0998/attrs -m '{"temperature": 15.6}' -q 1
+  mosquitto_pub -h localhost -p 1883 -u admin:0998 -t admin:0998/attrs -m '{"temperature": 10.6}' -q 1
 
 
 To retrieve all values sent for temperature attribute of this device:
