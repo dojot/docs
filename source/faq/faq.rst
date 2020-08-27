@@ -124,9 +124,10 @@ If you need another version, you could checkout a tag instead:
     v0.4.3
     v0.4.3-rc.1
     v0.4.3-rc.2
+    v0.5.0
 
 
-  $ git checkout v0.4.2
+  $ git checkout v0.5.0
 
 Once in a while we'll release new versions for dojot components. They might be
 independently released (although we tend to synchronize all of them). Once we
