@@ -31,8 +31,6 @@ oriented tutorial in :doc:`using-web-interface` tutorial.
 If you want more information on how dojot works internally, you should checkout
 the :doc:`architecture` to get acquainted with all internal components.
 
-.. _User authentication:
-
 User authentication
 *******************
 
@@ -49,6 +47,34 @@ The component responsible for user authentication is `auth`_. You can find a
 tutorial of how to authenticate a user and how to get an access token in `auth
 documentation`_.
 
+Device authentication
+*********************
+
+Device authentication is based on the use of asymmetric cryptographic keys and
+is done through x.509 certificates managed by dojot. For that, it is necessary
+to install such a certificate on the device. Dojot has a certificate issuing
+service where it is possible to obtain a certificate to be installed on the
+device.
+
+In addition to the certificate and asymmetric keys, the device must *trust* the
+dojot *Certificate Authority*, that is, it is also necessary to install the root
+certificate of the dojot platform.
+
+The certificate is requested by the administrator of the tentant to which the
+devices are registered. Once the administrator follows the necessary steps to
+obtain the certificate, (s)he will have to install the issued certificate and
+the root certificate of the dojot on the device. It is important to emphasize
+that the certificate has an asymmetric cryptographic key in its composition,
+this key is called a public key (which anyone has access to), while the private
+key must be installed on the device (a key that only the device has access to).
+
+Once the device contains the private key, the certificate (containing the public
+key) and also the root certificate of the dojot, it is possible to establish a
+secure communication channel with the dojot platform, in which the device is
+identified through its certificate.
+
+After the secure channel is established, the device is able to publish data and
+also receive data from the dojot platform as long as it is authorized to do so.
 
 Devices and templates
 *********************
@@ -94,7 +120,7 @@ associated to it - they are tightly linked to the original template so that any
 template update will reflect all associated devices.
 
 The component responsible for managing devices (both real and virtual) and
-templates is `DeviceManager`_ . 
+templates is `DeviceManager`_ .
 
 `DeviceManager documentation`_ explains in more
 depth all the available operations.
