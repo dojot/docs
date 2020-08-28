@@ -552,40 +552,40 @@ will sign a certificate and link this certificate to the device registration.
 The ``x509-identity-mgmt`` component is responsible for providing
 certificate-related services for devices.
 
-Kafka-ws
+Kafka-WS
 ---------------------
 
-Kafka WebSocket service allows the users to retrieve data from a given dojot
-topic in a Kafka cluster, this retrieval can be conditional and/or partial.
+*Kafka WebSocket* service allows the users to retrieve conditional and/or
+partial real time data from a given dojot topic in its internal Kafka cluster.
 
 Behavior when requesting a ticket and a websocket connection
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Below we can understand the behavior of the Kafka-ws service when a user
+Below we can understand the behavior of the Kafka-WS service when a user
 (through a `user agent`_) requests a ticket in order to establish a
-communication via websocket with Kafka-ws.
+communication via websocket with Kafka-WS.
 
-Note that when the user requests a new ticket, Kafka-ws extracts some
+Note that when the user requests a new ticket, Kafka-WS extracts some
 information from the *user's access token* (`JWT`_) and generates a
 *signed payload*, to be used later in the decision to authorize (or not)
-the connection via websocket. From the payload a *ticket* is generated and
-the two are stored in Redis, where the ticket is the key to obtain the payload.
-A `TTL`_ is defined by Kafka-ws, so the user has to use the ticket within the
+the websocket connection. From the payload a *ticket* is generated and
+both are stored in Redis, where the ticket is the key to obtain the payload.
+A `TTL`_ is defined by Kafka-WS, so the user has to use the ticket within the
 established time, otherwise, Redis automatically deletes the ticket and payload.
 
-After obtaining the ticket, the user makes an HTTP request to Kafka-ws
+After obtaining the ticket, the user makes an HTTP request to Kafka-WS
 requesting an upgrade to communicate via *websocket*. As the specification of
 this HTTP request limits the use of additional headers, it is necessary to send
-the ticket through the URL, so that it can be validated by Kafka-ws before
+the ticket through the URL, so that it can be validated by Kafka-WS before
 authorizing the upgrade.
 
 Since the ticket is valid, that is, it corresponds to an entry on Redis,
-Kafka-ws retrieves the payload related to the ticket, verifies the integrity
+Kafka-WS retrieves the payload related to the ticket, verifies the integrity
 of the payload and deletes that entry on Redis so that the ticket cannot be
 used again.
 
 With the payload it is possible to make the decision to authorize the upgrade
-to websocket or not. If authorization is granted, Kafka-ws opens a subscription
+to websocket or not. If authorization is granted, Kafka-WS opens a subscription
 channel based on a specific topic in Kafka. From there, the upgrade to websocket
 is established and the user starts to receive data as they are being published
 in Kafka.
@@ -596,35 +596,35 @@ in Kafka.
 
     actor User
     boundary Kong
-    control "Kafka-ws"
+    control "Kafka-WS"
     database Redis
     control Kafka
 
     group Get Ticket
         User -> Kong: GET /kafka-ws/v1/ticket\nHeaders="Authorization: JWT"
         Kong -> Kong: Checks JWT
-        Kong -> "Kafka-ws" : Request a ticket
-        "Kafka-ws" -> "Kafka-ws" : Sign the payload and\ngenerate a ticket for it
-        "Kafka-ws" -> Redis : Register the ticket and\npayload with a TTL
-        "Kafka-ws"<-- Redis : Sucess
-        User <-- "Kafka-ws" : Returns the newly generated ticket
+        Kong -> "Kafka-WS" : Request a ticket
+        "Kafka-WS" -> "Kafka-WS" : Sign the payload and\ngenerate a ticket for it
+        "Kafka-WS" -> Redis : Register the ticket and\npayload with a TTL
+        "Kafka-WS"<-- Redis : Sucess
+        User <-- "Kafka-WS" : Returns the newly generated ticket
     end
 
     group Connect via websocket
         User -> Kong: Upgrade HTTP to websocket\n(ticket in the URL)
-        Kong -> "Kafka-ws" : Forward the ticket
-        "Kafka-ws" -> Redis : Recovers payload (if any)
-        "Kafka-ws"<-- Redis : Payload found
-        "Kafka-ws" -> "Kafka-ws" : Checks the payload
-        "Kafka-ws" -> Kafka : Subscrive to kafka topic\n(Using the payload)
-        "Kafka-ws" <-- Kafka : Sucess
-        User <-- "Kafka-ws" : Upgrade to websocket accepted\nConnected!
-        "Kafka-ws" <-- Kafka : New data in the topic
-        User <-- "Kafka-ws" : Returns data
-        "Kafka-ws" <-- Kafka : [...]
-        User <-- "Kafka-ws" : [...]
-        "Kafka-ws" <-- Kafka : [...]
-        User <-- "Kafka-ws" : [...]
+        Kong -> "Kafka-WS" : Forward the ticket
+        "Kafka-WS" -> Redis : Recovers payload (if any)
+        "Kafka-WS"<-- Redis : Payload found
+        "Kafka-WS" -> "Kafka-WS" : Checks the payload
+        "Kafka-WS" -> Kafka : Subscrive to kafka topic\n(Using the payload)
+        "Kafka-WS" <-- Kafka : Sucess
+        User <-- "Kafka-WS" : Upgrade to websocket accepted\nConnected!
+        "Kafka-WS" <-- Kafka : New data in the topic
+        User <-- "Kafka-WS" : Returns data
+        "Kafka-WS" <-- Kafka : [...]
+        User <-- "Kafka-WS" : [...]
+        "Kafka-WS" <-- Kafka : [...]
+        User <-- "Kafka-WS" : [...]
     end
 
 
