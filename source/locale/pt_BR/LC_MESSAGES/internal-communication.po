@@ -734,7 +734,7 @@ msgstr ""
 
 #: ../../source/internal-communication.rst:593
 msgid "Obtaining a ticket and connecting via websocket"
-msgstr ""
+msgstr "Obtenção de ticket e conexão via websocket"
 
 #~ msgid "dojot components"
 #~ msgstr "componentes dojot"
