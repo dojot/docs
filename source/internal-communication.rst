@@ -591,7 +591,7 @@ is established and the user starts to receive data as they are being published
 in Kafka.
 
 .. uml::
-    :caption: Tenant bootstrapping
+    :caption: Obtaining a ticket and connecting via websocket
     :align: center
 
     actor User
