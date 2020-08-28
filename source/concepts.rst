@@ -60,7 +60,7 @@ In addition to the certificate and asymmetric keys, the device must *trust* the
 dojot *Certificate Authority*, that is, it is also necessary to install the root
 certificate of the dojot platform.
 
-The certificate is requested by the administrator of the tentant to which the
+The certificate is requested by the administrator of the tenant to which the
 devices are registered. Once the administrator follows the necessary steps to
 obtain the certificate, (s)he will have to install the issued certificate and
 the root certificate of the dojot on the device. It is important to emphasize
@@ -74,7 +74,7 @@ secure communication channel with the dojot platform, in which the device is
 identified through its certificate.
 
 After the secure channel is established, the device is able to publish data and
-also receive data from the dojot platform as long as it is authorized to do so.
+also receive data as long as it is authorized to do so.
 
 Devices and templates
 *********************

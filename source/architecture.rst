@@ -184,7 +184,7 @@ X.509 Identity Management
 *************************
 
 This component is responsible for assigning identities to devices, such
-identities are represented in the form of `x.509`_ certificates. This behaves
+identities are represented in the form of `x.509`_ certificates. It behaves
 similarly to a *Certificate Authority* (`CA`_), where it is possible to submit a
 `CSR`_ and receive a certificate back.
 Once the certificate has been installed on the device, it is possible to

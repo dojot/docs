@@ -641,7 +641,7 @@ msgstr ""
 "Autoridade Certificadora interna, que por sua vez, se todas as verificações "
 "passarem com sucesso, assinará um certificado e vinculará este certificado "
 "ao registro do dispositivo. O componente ``x509-identity-mgmt`` é responsável "
-"por oferecer os serviços relacionados à certificados para dispositivos."
+"por oferecer os serviços relacionados a certificados para dispositivos."
 
 
 #~ msgid "dojot components"
