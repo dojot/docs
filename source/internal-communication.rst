@@ -21,6 +21,7 @@ The main components current in dojot are shown in :numref:`dojot_components`.
     [History]
     [DataBroker]
     [FlowBroker]
+    [x509-identity-mgmt]
 
     package "Databases" {
       [mongodb]
@@ -36,10 +37,11 @@ The main components current in dojot are shown in :numref:`dojot_components`.
     [postgreSQL] <-- [Auth]
     [postgreSQL] <-- [DeviceManager]
     [postgreSQL] <- [Kong]
+    [postgreSQL] <-- [x509-identity-mgmt]
     [mongodb] <- [Persister]
     [mongodb] <-- [FlowBroker]
     [mongodb] <-- [History]
-
+    [mongodb] <-- [x509-identity-mgmt]
 
 
 They are:
@@ -537,10 +539,25 @@ more information about how to open a socket.io connection with DataBroker,
 check `DataBroker documentation`_.
 
 
+Certificate authority
+---------------------
+
+The dojot has an internal *Certificate Authority* (`CA`_) capable of issuing
+x.509 certificates so that devices can communicate with the platform through
+a secure channel (using the TLS protocol).
+When requesting a certificate for the platform, it is necessary to inform a
+`CSR`_, which will go through a series of validations until arriving at the
+internal Certificate Authority, which, in turn, if all checks pass successfully,
+will sign a certificate and link this certificate to the device registration.
+The ``x509-identity-mgmt`` component is responsible for providing
+certificate-related services for devices.
+
 .. _API - data-broker: https://dojot.github.io/data-broker/apiary_latest.html
 .. _Kafka partitions and replicas: https://sookocheff.com/post/kafka/kafka-in-a-nutshell/#what-is-kafka
 .. _DataBroker documentation: https://dojot.github.io/data-broker/apiary_latest.html
 .. _Device Manager messages: https://dojotdocs.readthedocs.io/projects/DeviceManager/en/latest/kafka-messages.html
+.. _CA: https://en.wikipedia.org/wiki/Certificate_authority
+.. _CSR: https://en.wikipedia.org/wiki/Certificate_signing_request
 .. _Kafka's official documentation: https://kafka.apache.org/documentation/
 .. _Kong's documentation: https://docs.konghq.com/0.14.x/getting-started/configuring-a-service/
 .. _Kong JWT plugin page: https://docs.konghq.com/hub/kong-inc/jwt/

@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dojot 0.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-11 15:00-0300\n"
+"POT-Creation-Date: 2020-08-27 14:48-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.7.0\n"
+"Generated-By: Babel 2.8.0\n"
 
 #: ../../source/internal-communication.rst:2
 msgid "Internal communication"
@@ -40,29 +40,29 @@ msgstr ""
 msgid "dojot components"
 msgstr "Componentes da Dojot"
 
-#: ../../source/internal-communication.rst:45
+#: ../../source/internal-communication.rst:47
 msgid "They are:"
 msgstr "Eles são:"
 
-#: ../../source/internal-communication.rst:47
+#: ../../source/internal-communication.rst:49
 msgid "Auth: authentication mechanism"
 msgstr "Auth: mecanismo de autenticação"
 
-#: ../../source/internal-communication.rst:48
+#: ../../source/internal-communication.rst:50
 msgid "DeviceManager: device and template storage."
 msgstr "DeviceManager: armazenamento de dispositivo e modelo."
 
-#: ../../source/internal-communication.rst:49
+#: ../../source/internal-communication.rst:51
 msgid "Persister: component that stores all device-generated data."
 msgstr ""
 "Persister: componente que armazena todos os dados gerados pelo "
 "dispositivo."
 
-#: ../../source/internal-communication.rst:50
+#: ../../source/internal-communication.rst:52
 msgid "History: component that exposes all device-generated data."
 msgstr "History: componente que expõe todos os dados gerados pelo dispositivo."
 
-#: ../../source/internal-communication.rst:51
+#: ../../source/internal-communication.rst:53
 msgid ""
 "DataBroker: deals with subjects and Kafka topics, as well as socket.io "
 "connections."
@@ -70,15 +70,15 @@ msgstr ""
 "DataBroker: lida com assuntos e tópicos do Kafka, além de conexões "
 "socket.io."
 
-#: ../../source/internal-communication.rst:53
+#: ../../source/internal-communication.rst:55
 msgid "Flowbroker: handles flows (both CRUD and flow execution)"
 msgstr "Flowbroker: lida com fluxos (CRUD e execução de fluxo)"
 
-#: ../../source/internal-communication.rst:54
+#: ../../source/internal-communication.rst:56
 msgid "IoT agents: agents for different protocols."
 msgstr "IoT agents: agentes para diferentes protocolos."
 
-#: ../../source/internal-communication.rst:57
+#: ../../source/internal-communication.rst:59
 msgid ""
 "Each service will be briefly described in this page. More information can"
 " be found in each component documentation."
@@ -86,11 +86,11 @@ msgstr ""
 "Cada serviço será descrito brevemente nesta página. Mais informações "
 "podem ser encontradas na documentação de cada componente."
 
-#: ../../source/internal-communication.rst:61
+#: ../../source/internal-communication.rst:63
 msgid "Messaging and authentication"
 msgstr "Mensagens e autenticação"
 
-#: ../../source/internal-communication.rst:63
+#: ../../source/internal-communication.rst:65
 msgid ""
 "There are two methods through which dojot components can talk to each "
 "other: via HTTP REST requests and via Kafka. They are intended for "
@@ -100,7 +100,7 @@ msgstr ""
 "via solicitações HTTP REST e via Kafka. Eles são destinados a diferentes "
 "propósitos."
 
-#: ../../source/internal-communication.rst:67
+#: ../../source/internal-communication.rst:69
 msgid ""
 "HTTP requests can be sent at boot time when a component want, for "
 "instance, information about particular resources, such as list of devices"
@@ -125,7 +125,7 @@ msgstr ""
 "informações para dispositivos e modelos, FlowBroker para descrições de "
 "fluxo, Histórico para dados históricos e assim por diante."
 
-#: ../../source/internal-communication.rst:77
+#: ../../source/internal-communication.rst:79
 msgid ""
 "Kafka, in the other hand, allows loosely coupled communication between "
 "instances of services. This means that a producer (whoever sends a "
@@ -151,11 +151,11 @@ msgstr ""
 "mensagens com o mesmo \"assunto\", bem como vários serviços que ingerem "
 "mensagens com o mesmo \"assunto\", sem soluções alternativas complicadas."
 
-#: ../../source/internal-communication.rst:90
+#: ../../source/internal-communication.rst:92
 msgid "Sending HTTP requests"
 msgstr "Enviando solicitações HTTP"
 
-#: ../../source/internal-communication.rst:92
+#: ../../source/internal-communication.rst:94
 msgid ""
 "In order to send requests via HTTP, a service must create an access "
 "token, described here. There is no further considerations beyond "
@@ -173,11 +173,11 @@ msgstr ""
 "essas interações são válidas apenas para componentes internos. Qualquer "
 "serviço externo deve usar o Kong como ponto de entrada."
 
-#: ../../source/internal-communication.rst:101
+#: ../../source/internal-communication.rst:103
 msgid "Initial authentication"
 msgstr "Autenticação inicial"
 
-#: ../../source/internal-communication.rst:116
+#: ../../source/internal-communication.rst:118
 msgid ""
 "In this figure, a client retrieves an access token for user `admin` whose"
 " password is `p4ssw0rd`. After that, a user can send a request to HTTP "
@@ -191,11 +191,11 @@ msgstr ""
 ":numref:`sending_requests`. Nota: o mecanismo de autorização real é "
 "detalhado `Auth + API gateway (Kong)`_."
 
-#: ../../source/internal-communication.rst:122
+#: ../../source/internal-communication.rst:124
 msgid "Sending messages to HTTP API"
 msgstr "Enviando mensagens para a API HTTP"
 
-#: ../../source/internal-communication.rst:145
+#: ../../source/internal-communication.rst:147
 msgid ""
 "In this figure, a client creates a new device using the token retrieved "
 "in :numref:`initial_authentication`. This request is analyzed by Kong, "
@@ -210,11 +210,11 @@ msgstr ""
 "Somente após a aprovação dessa solicitação, Kong a encaminhará para o "
 "DeviceManager."
 
-#: ../../source/internal-communication.rst:153
+#: ../../source/internal-communication.rst:155
 msgid "Sending Kafka messages"
 msgstr "Enviando mensagens via Kafka"
 
-#: ../../source/internal-communication.rst:155
+#: ../../source/internal-communication.rst:157
 msgid ""
 "Kafka uses a quite different approach. Each message should be associated "
 "to a subject and a tenant. This is show in :numref:`retrieving_topics`;"
@@ -223,11 +223,11 @@ msgstr ""
 " um assunto e um inquilino. Isso é mostrado na "
 ":numref:`retrieving_topics`;"
 
-#: ../../source/internal-communication.rst:159
+#: ../../source/internal-communication.rst:161
 msgid "Retrieving Kafka topics"
 msgstr "Recuperando tópicos do Kafka"
 
-#: ../../source/internal-communication.rst:199
+#: ../../source/internal-communication.rst:201
 msgid ""
 "In this example, DeviceManager needs to publish a message about a new "
 "device. In order to do so, it sends a request to DataBroker, indicating "
@@ -242,10 +242,10 @@ msgstr ""
 "indicando qual *tenant* (dentro do token JWT) e qual assunto (``dojot"
 ".device-manager.devices``) deseja usar para enviar a mensagem. O "
 "DataBroker chamará o Redis para verificar se este tópico já foi criado e "
-"se o administrador dojot criou um perfil para essa tupla "
-"específica ``{tenant, subject}``."
+"se o administrador dojot criou um perfil para essa tupla específica "
+"``{tenant, subject}``."
 
-#: ../../source/internal-communication.rst:206
+#: ../../source/internal-communication.rst:208
 msgid ""
 "The two profile schemes available are shown in :numref:`automatic_scheme`"
 " and :numref:`assigned_scheme`."
@@ -253,11 +253,11 @@ msgstr ""
 "Os dois esquemas de perfis disponíveis são mostrados na "
 ":numref:`automatic_scheme` e na :numref:`assigned_scheme`."
 
-#: ../../source/internal-communication.rst:210
+#: ../../source/internal-communication.rst:212
 msgid "Automatic scheme profile"
 msgstr "Perfil de esquema automático"
 
-#: ../../source/internal-communication.rst:219
+#: ../../source/internal-communication.rst:221
 msgid ""
 "The automatic scheme set the number of Kafka partitions to be used to the"
 " topic being created, as well as the replication factor (how many "
@@ -275,11 +275,11 @@ msgstr ""
 "conhecer um pouco mais sobre partição e réplicas. Claro que você pode "
 "conferir a `Kafka's official documentation`_."
 
-#: ../../source/internal-communication.rst:227
+#: ../../source/internal-communication.rst:229
 msgid "Assigned scheme profile"
 msgstr "Perfil de esquema atribuído"
 
-#: ../../source/internal-communication.rst:236
+#: ../../source/internal-communication.rst:238
 msgid ""
 "The assigned scheme indicates which partition will be allocated to which "
 "Kafka instance. This includes also replicas (partitions with more than "
@@ -289,11 +289,11 @@ msgstr ""
 " Kafka. Isso inclui também réplicas (partições com mais de uma instância "
 "Kafka associada)."
 
-#: ../../source/internal-communication.rst:241
+#: ../../source/internal-communication.rst:243
 msgid "Bootstrapping tenants"
 msgstr "Inicialização dos *tenants*"
 
-#: ../../source/internal-communication.rst:243
+#: ../../source/internal-communication.rst:245
 msgid ""
 "All components are interested in a set of subjects, which will be used to"
 " either send messages or receive messages from Kafka. As dojot groups "
@@ -311,7 +311,7 @@ msgstr ""
 " ou receber mensagens. Isso é feito em duas fases: tempo de inicialização"
 " do componente e tempo de execução do componente."
 
-#: ../../source/internal-communication.rst:250
+#: ../../source/internal-communication.rst:252
 msgid ""
 "In the first phase, a component asks Auth in order to retrieve all "
 "currently configured tenants. It is interested, let's say, in consuming "
@@ -329,27 +329,27 @@ msgstr ""
 "Consumidores para enviar e receber mensagens através desses tópicos. Isso"
 " é mostrado na :numref:`Tenant bootstrapping startup`."
 
-#: ../../source/internal-communication.rst:258
+#: ../../source/internal-communication.rst:260
 msgid "Tenant bootstrapping at startup"
 msgstr "Inicialização do *tenants* no início"
 
-#: ../../source/internal-communication.rst:282
+#: ../../source/internal-communication.rst:284
 msgid ""
 "The second phase starts after startup and its purpose is to process all "
 "messages received through Kafka. This will include any tenant that is "
-"created after all services are up and running. :numref:`Tenant bootstrapping`"
-" shows how to deal with these messages."
+"created after all services are up and running. :numref:`Tenant "
+"bootstrapping` shows how to deal with these messages."
 msgstr ""
 "A segunda fase inicia após a inicialização e seu objetivo é processar "
 "todas as mensagens recebidas pelo Kafka. Isso incluirá qualquer *tenant* "
-"criado após todos os serviços estarem em funcionamento. :numref:`Tenant bootstrapping`"
-" mostra como lidar com essas mensagens."
+"criado após todos os serviços estarem em funcionamento. :numref:`Tenant "
+"bootstrapping` mostra como lidar com essas mensagens."
 
-#: ../../source/internal-communication.rst:288
+#: ../../source/internal-communication.rst:290
 msgid "Tenant bootstrapping"
 msgstr "Inicialização do *tenant*"
 
-#: ../../source/internal-communication.rst:316
+#: ../../source/internal-communication.rst:318
 msgid ""
 "All services that are somehow interested in using subjects should execute"
 " this procedure in order to correctly receive all messages."
@@ -358,11 +358,11 @@ msgstr ""
 " devem executar este procedimento para receber corretamente todas as "
 "mensagens."
 
-#: ../../source/internal-communication.rst:321
+#: ../../source/internal-communication.rst:323
 msgid "Auth + API gateway (Kong)"
 msgstr ""
 
-#: ../../source/internal-communication.rst:323
+#: ../../source/internal-communication.rst:325
 msgid ""
 "Auth is a service deeply connected to Kong. It is responsible for user "
 "management, authentication and authorization. As such, it is invoked by "
@@ -376,29 +376,29 @@ msgstr ""
 "pontos de um dos endpoints. Esta seção detalha como isso é realizado e "
 "como eles funcionam juntos."
 
-#: ../../source/internal-communication.rst:329
+#: ../../source/internal-communication.rst:331
 msgid "Kong configuration"
 msgstr "Configuração do Kong"
 
-#: ../../source/internal-communication.rst:331
+#: ../../source/internal-communication.rst:333
 msgid "There are two configuration procedures when starting Kong within dojot:"
 msgstr "Existem dois procedimentos de configuração ao iniciar o Kong na dojot:"
 
-#: ../../source/internal-communication.rst:333
+#: ../../source/internal-communication.rst:335
 msgid "Migrating existing data"
 msgstr "Migrando Dados Existentes"
 
-#: ../../source/internal-communication.rst:334
+#: ../../source/internal-communication.rst:336
 msgid "Registering API endpoints and plugins."
 msgstr "Registrando endpoints e plug-ins de API."
 
-#: ../../source/internal-communication.rst:336
+#: ../../source/internal-communication.rst:338
 msgid "The first task is performed by simply invoking Kong with a special flag."
 msgstr ""
 "A primeira tarefa é realizada simplesmente invocando Kong com uma "
 "bandeira especial."
 
-#: ../../source/internal-communication.rst:338
+#: ../../source/internal-communication.rst:340
 msgid ""
 "The second one is performed by executing a configuration script "
 "`kong.config.sh`. Its only purpose is to register endpoints in Kong, such"
@@ -407,7 +407,7 @@ msgstr ""
 "O segundo é executado executando um script de configuração "
 "kong.config.sh. Seu único objetivo é registrar endpoints no Kong, como:"
 
-#: ../../source/internal-communication.rst:356
+#: ../../source/internal-communication.rst:358
 msgid ""
 "This command will register the endpoint `/device/*/latest` and "
 "`/subscription` and all requests to it are going to be forwarded to `http"
@@ -419,7 +419,7 @@ msgstr ""
 "//data-broker:80`. Você pode verificar a documentação sobre como "
 "adicionar endpoints na `Kong's documentation`_."
 
-#: ../../source/internal-communication.rst:360
+#: ../../source/internal-communication.rst:362
 msgid ""
 "For some of its registered endpoints, `kong.config.sh` will add two "
 "plugins to selected endpoints:"
@@ -427,7 +427,7 @@ msgstr ""
 "Para alguns dos endpoints registrados, o kong.config.sh adicionará dois "
 "plug-ins aos endpoints selecionados:"
 
-#: ../../source/internal-communication.rst:363
+#: ../../source/internal-communication.rst:365
 msgid ""
 "JWT generation. The documentation for this plugin is available at `Kong "
 "JWT plugin page`_."
@@ -435,7 +435,7 @@ msgstr ""
 "Geração JWT. A documentação para este plugin está disponível na `Kong JWT"
 " plugin page`_."
 
-#: ../../source/internal-communication.rst:365
+#: ../../source/internal-communication.rst:367
 msgid ""
 "Configuration a plugin which will forward all policies requests to Auth. "
 "will invoke Auth in order to authenticate requests. This plugin is "
@@ -445,23 +445,23 @@ msgstr ""
 "Auth. invocará Auth para autenticar solicitações. Este plugin está "
 "disponível no `PEP-Kong repository`_."
 
-#: ../../source/internal-communication.rst:369
+#: ../../source/internal-communication.rst:371
 msgid "The following request install these two plugins in data-broker API:"
 msgstr "A solicitação a seguir instala esses dois plug-ins na API do data-broker:"
 
-#: ../../source/internal-communication.rst:379
+#: ../../source/internal-communication.rst:381
 msgid "Emitted messages"
 msgstr "Mensagens emitidas"
 
-#: ../../source/internal-communication.rst:381
+#: ../../source/internal-communication.rst:383
 msgid "Auth will emit just one message via Kafka for tenant creation:"
 msgstr "O Auth emitirá apenas uma mensagem via Kafka para a criação do tenant:"
 
-#: ../../source/internal-communication.rst:391
+#: ../../source/internal-communication.rst:393
 msgid "Device Manager"
 msgstr "Device Manager"
 
-#: ../../source/internal-communication.rst:393
+#: ../../source/internal-communication.rst:395
 msgid ""
 "DeviceManager stores and retrieves information models for devices and "
 "templates and a few static information about them as well. Whenever a "
@@ -475,7 +475,7 @@ msgstr ""
 "publica uma mensagem no Kafka. Depende apenas do DataBroker e Kafka pelos"
 " motivos já explicados neste documento."
 
-#: ../../source/internal-communication.rst:398
+#: ../../source/internal-communication.rst:400
 msgid ""
 "All messages published by Device Manager to Kafka can be seen in `Device "
 "Manager messages`_."
@@ -483,11 +483,11 @@ msgstr ""
 "Todas as mensagens publicadas pelo Device Manager no Kafka podem ser "
 "vistas no Device Manager `Device Manager mensagens`_."
 
-#: ../../source/internal-communication.rst:402
+#: ../../source/internal-communication.rst:404
 msgid "IoT agent"
 msgstr "Agente IoT"
 
-#: ../../source/internal-communication.rst:404
+#: ../../source/internal-communication.rst:406
 msgid ""
 "IoT agents receive messages from devices and translate them into a "
 "default message to be published to other components. In order to do that,"
@@ -505,7 +505,7 @@ msgstr ""
 " não autorizados). Ele usará o assunto ``device-data`` e a inicialização "
 "de *tenants*, conforme descrito em `Inicialização dos tenants`_."
 
-#: ../../source/internal-communication.rst:411
+#: ../../source/internal-communication.rst:413
 msgid ""
 "After requesting the topics for all tenants within `device-data` subject,"
 " IoT agent will start receiving data from devices. As there are a "
@@ -524,11 +524,11 @@ msgstr ""
 "dispositivo acabou de enviar. Isso é mostrado na :numref:`IoT agent - "
 "kafka`"
 
-#: ../../source/internal-communication.rst:419
+#: ../../source/internal-communication.rst:421
 msgid "IoT agent message to Kafka"
 msgstr "Mensagem do agente de IoT para Kafka"
 
-#: ../../source/internal-communication.rst:429
+#: ../../source/internal-communication.rst:431
 msgid ""
 "The data sent by IoT agent has the structure shown in :numref:`IoT agent "
 "message`."
@@ -536,20 +536,20 @@ msgstr ""
 "Os dados enviados pelo agente de IoT têm a estrutura mostrada na "
 ":numref:`IoT agent message`."
 
-#: ../../source/internal-communication.rst:433
+#: ../../source/internal-communication.rst:435
 msgid "IoT agent message structure"
 msgstr "Estrutura de mensagens do agente IoT"
 
-#: ../../source/internal-communication.rst:451
+#: ../../source/internal-communication.rst:453
 msgid "Such message would be:"
 msgstr "Essa mensagem seria:"
 
-#: ../../source/internal-communication.rst:470
-#: ../../source/internal-communication.rst:480
+#: ../../source/internal-communication.rst:472
+#: ../../source/internal-communication.rst:482
 msgid "Persister"
 msgstr ""
 
-#: ../../source/internal-communication.rst:472
+#: ../../source/internal-communication.rst:474
 msgid ""
 "Persister is a very simple service which only purpose is to receive "
 "messages from devices (using ``device-data`` subject) and store them into"
@@ -566,16 +566,16 @@ msgstr ""
 "armazena na coleção do dispositivo. Isso é mostrado na "
 ":numref:`Persister`."
 
-#: ../../source/internal-communication.rst:493
+#: ../../source/internal-communication.rst:495
 msgid "This service is simple as it is by design."
 msgstr "Este serviço é simples, pois é por design."
 
-#: ../../source/internal-communication.rst:496
-#: ../../source/internal-communication.rst:503
+#: ../../source/internal-communication.rst:498
+#: ../../source/internal-communication.rst:505
 msgid "History"
 msgstr ""
 
-#: ../../source/internal-communication.rst:498
+#: ../../source/internal-communication.rst:500
 msgid ""
 "History is also a very simple service: whenever a user or application "
 "sends a request to it, it will query MongoDB and build a proper message "
@@ -586,11 +586,11 @@ msgstr ""
 "mensagem adequada para enviar de volta ao usuário/aplicativo. Isso é "
 "mostrado na :numref:`History`."
 
-#: ../../source/internal-communication.rst:526
+#: ../../source/internal-communication.rst:528
 msgid "Data Broker"
 msgstr ""
 
-#: ../../source/internal-communication.rst:528
+#: ../../source/internal-communication.rst:530
 msgid ""
 "DataBroker has a few more functionalities than only generating topics for"
 " ``{tenant, subject}`` pairs. It will also serve socket.io connections to"
@@ -616,6 +616,33 @@ msgstr ""
 " os dados recebidos. Para obter mais informações sobre como abrir uma "
 "conexão socket.io com o DataBroker, consulte a `Documentação do "
 "DataBroker`_."
+
+#: ../../source/internal-communication.rst:543
+msgid "Certificate authority"
+msgstr "Autoridade Certificadora"
+
+#: ../../source/internal-communication.rst:545
+msgid ""
+"The dojot has an internal *Certificate Authority* (`CA`_) capable of "
+"issuing x.509 certificates so that devices can communicate with the "
+"platform through a secure channel (using the TLS protocol). When "
+"requesting a certificate for the platform, it is necessary to inform a "
+"`CSR`_, which will go through a series of validations until arriving at "
+"the internal Certificate Authority, which, in turn, if all checks pass "
+"successfully, will sign a certificate and link this certificate to the "
+"device registration. The ``x509-identity-mgmt`` component is responsible "
+"for providing certificate-related services for devices."
+msgstr ""
+"A plataforma dojot possui internamente uma autoridade certificadora (`CA`_) "
+"capaz de emitir certificados x.509 para que os dispositivos possam se "
+"comunicar com a plataforma através de um canal seguro (usando o protocolo "
+"TLS). Ao requisitar um certificado para a plataforma, é necessário informar "
+"um `CSR`_, o qual passará por uma série de validações até chegar na "
+"Autoridade Certificadora interna, que por sua vez, se todas as verificações "
+"passarem com sucesso, assinará um certificado e vinculará este certificado "
+"ao registro do dispositivo. O componente ``x509-identity-mgmt`` é responsável "
+"por oferecer os serviços relacionados a certificados para dispositivos."
+
 
 #~ msgid "dojot components"
 #~ msgstr "componentes dojot"
