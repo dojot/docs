@@ -235,7 +235,7 @@ Ftp request
 This node sends a file to a FTP server. When uploading a
 file, its name can be set by setting the "Filename" field in the same way as
 other output variables (it should refer to a variable set in the flow). The
-file encoding will set the file enconding, which could be, for instance,
+file encoding will set the file encoding, which could be, for instance,
 "base64" or "utf-8".
 
 
@@ -598,6 +598,67 @@ Fields:
 * **Sum** *(required)*:  Variable that will receive the sum.
 * **Name** *(optional)*: Name of the node
 
+
+Publish in FTP topic
+********************
+
+.. _kafka2ftp_node:
+.. image:: images/nodes/kafka2ftp_node.png
+    :width: 20%
+    :align: left
+    :alt: kafka2ftp_node
+
+Node to forwarding messages to Apache Kafka FTP topic.
+
+It publish to the topic ``tenant.dojot.ftp`` (*tenant* is defined by which tenant the flow belongs to)
+where in which messages are produced with information about the file name,
+encoding format and file content.
+
+.. _kafka2ftp_node_cfg:
+.. figure:: images/nodes/kafka2ftp_node_cfg.png
+    :width: 50%
+    :align: center
+    :alt: kafka2ftp_node_cfg
+
+    : Publish in FTP topic configuration
+
+Fields:
+
+* **Encoding** *(required)*: Encoding the contents of the file to be sent. Valid values are: ascii, base64, hex, utf16le, utf8 and binary.
+* **Filename** *(required)*: Variable with the name of the file to be sent.
+* **Content** *(required)*: Variable with the file contents to be sent.
+* **Name** *(optional)*: Name of the node
+
+
+Example of message sent by this node below:
+
+.. code-block:: json
+
+    {
+        "metadata": {
+            "msgId": "33846252-659f-42cc-8831-e2ccb923a702",
+            "ts": 1571858674,
+            "service": "flowbroker",
+            "contentType": "application/vnd.dojot.ftp+json"
+        },
+        "data": {
+            "filename": "filename.jpg",
+            "encoding": "base64",
+            "content": "..."
+        }
+    }
+
+Where the keys above are:
+
+* msgId:  Value of type uuidv4 used to uniquely identify the message in the context of dojot.
+* ts: Timestamp in Unix Timestamp (ms) format from the moment the message was produced.
+* service: Name of the service that generated the message.
+* contentType: Type identifier of the content of the data attribute.
+* filename: Name of the file to be sent to the FTP server.
+* encoding: Encoding the contents of the file. Valid values are: ascii, base64, hex, utf16le, utf8 and binary.
+* content: File contents.
+
+This can be used with the kafka2ftp component. See more :doc:`components-and-apis`.
 
 Deprecated nodes
 ****************

@@ -84,6 +84,10 @@ Components
     - `GitHub - x509-identity-mgmt`_
     -
     - `API - x509-identity-mgmt`_
+  * - Kafka2Ftp
+    - `GitHub - Kafka2Ftp`_
+    -
+    -
 
 
 Exposed APIs (API Gateway)
@@ -311,41 +315,43 @@ dojot.
 .. _Kafka doc.: http://kafka.apache.org/documentation/
 
 
-.. _GitHub - auth: https://github.com/dojot/auth
-.. _API - auth: https://dojot.github.io/auth/apiary_v0.4.3.html
+.. _GitHub - auth: https://github.com/dojot/auth/tree/v0.5.0
+.. _API - auth: https://dojot.github.io/auth/apiary_v0.5.0.html
 .. _Auth  doc.: http://dojotdocs.readthedocs.io/projects/auth/en/latest/
 .. _Messages - auth: https://dojotdocs.readthedocs.io/projects/auth/en/latest/kafka-messages.html
 
-.. _GitHub - history: https://github.com/dojot/history
-.. _API - history: https://dojot.github.io/history/apiary_v0.4.3.html
+.. _GitHub - history: https://github.com/dojot/history/tree/v0.5.0
+.. _API - history: https://dojot.github.io/history/apiary_v0.5.0.html
 
 
-.. _GitHub - DeviceManager: https://github.com/dojot/device-manager
-.. _API - DeviceManager: https://dojot.github.io/device-manager/apiary_v0.4.3.html
+.. _GitHub - DeviceManager: https://github.com/dojot/device-manager/tree/v0.5.0
+.. _API - DeviceManager: https://dojot.github.io/device-manager/apiary_v0.5.0.html
 .. _DeviceManager doc.: http://dojotdocs.readthedocs.io/projects/DeviceManager/en/latest/
 .. _Messages - DeviceManager: http://dojotdocs.readthedocs.io/projects/DeviceManager/en/latest/kafka-messages.html
 
-.. _GitHub - image-manager: https://github.com/dojot/image-manager
-.. _API - image-manager: https://dojot.github.io/image-manager/apiary_v0.4.3.html
+.. _GitHub - image-manager: https://github.com/dojot/image-manager/tree/v0.5.0
+.. _API - image-manager: https://dojot.github.io/image-manager/apiary_v0.5.0.html
 
 
-.. _GitHub - GUI: https://github.com/dojot/gui
+.. _GitHub - GUI: https://github.com/dojot/gui/tree/v0.5.0
 
 
-.. _GitHub - flowbroker: https://github.com/dojot/flowbroker
-.. _API - flowbroker: https://dojot.github.io/flowbroker/apiary_v0.4.3.html
+.. _GitHub - flowbroker: https://github.com/dojot/flowbroker/tree/v0.5.0
+.. _API - flowbroker: https://dojot.github.io/flowbroker/apiary_v0.5.0.html
 
-.. _GitHub - data-broker: https://github.com/dojot/data-broker
-.. _API - data-broker: https://dojot.github.io/data-broker/apiary_v0.4.3.html
+.. _GitHub - data-broker: https://github.com/dojot/data-broker/tree/v0.5.0
+.. _API - data-broker: https://dojot.github.io/data-broker/apiary_v0.5.0.html
 
 .. _Messages - iotagent-mosca: http://dojotdocs.readthedocs.io/projects/iotagent-mosca/en/latest/operation.html#sending-messages-to-other-components-via-kafka
-.. _GitHub - iotagent-mosca: https://github.com/dojot/iotagent-mosca
+.. _GitHub - iotagent-mosca: https://github.com/dojot/iotagent-mosca/tree/v0.5.0
 
-.. _GitHub - Data Manager: https://github.com/dojot/data-manager
-.. _API - Data Manager: https://dojot.github.io/data-manager/apiary_v0.4.3.html
+.. _GitHub - Data Manager: https://github.com/dojot/data-manager/tree/v0.5.0
+.. _API - Data Manager: https://dojot.github.io/data-manager/apiary_v0.5.0.html
 
-.. _GitHub - Cron: https://github.com/dojot/cron
-.. _API - Cron: https://dojot.github.io/cron/apiary_v0.4.3.html
+.. _GitHub - Cron: https://github.com/dojot/cron/tree/v0.5.0
+.. _API - Cron: https://dojot.github.io/cron/apiary_v0.5.0.html
 
-.. _GitHub - x509-identity-mgmt: https://github.com/dojot/dojot/tree/master/x509-identity-mgmt
+.. _GitHub - x509-identity-mgmt: https://github.com/dojot/dojot/tree/v0.5.0/x509-identity-mgmt
 .. _API - x509-identity-mgmt: https://dojot.github.io/dojot/x509-identity-mgmt/apiary_v0.5.0.html
+
+.. _GitHub - Kafka2Ftp: https://github.com/dojot/dojot/tree/v0.5.0/connector/kafka2ftp
