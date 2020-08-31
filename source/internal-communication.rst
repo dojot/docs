@@ -552,12 +552,92 @@ will sign a certificate and link this certificate to the device registration.
 The ``x509-identity-mgmt`` component is responsible for providing
 certificate-related services for devices.
 
+Kafka-WS
+---------------------
+
+*Kafka WebSocket* service allows the users to retrieve conditional and/or
+partial real time data from a given dojot topic in its internal Kafka cluster.
+
+Behavior when requesting a ticket and a websocket connection
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Below we can understand the behavior of the Kafka-WS service when a user
+(through a `user agent`_) requests a ticket in order to establish a
+communication via websocket with Kafka-WS.
+
+Note that when the user requests a new ticket, Kafka-WS extracts some
+information from the *user's access token* (`JWT`_) and generates a
+*signed payload*, to be used later in the decision to authorize (or not)
+the websocket connection. From the payload a *ticket* is generated and
+both are stored in Redis, where the ticket is the key to obtain the payload.
+A `TTL`_ is defined by Kafka-WS, so the user has to use the ticket within the
+established time, otherwise, Redis automatically deletes the ticket and payload.
+
+After obtaining the ticket, the user makes an HTTP request to Kafka-WS
+requesting an upgrade to communicate via *websocket*. As the specification of
+this HTTP request limits the use of additional headers, it is necessary to send
+the ticket through the URL, so that it can be validated by Kafka-WS before
+authorizing the upgrade.
+
+Since the ticket is valid, that is, it corresponds to an entry on Redis,
+Kafka-WS retrieves the payload related to the ticket, verifies the integrity
+of the payload and deletes that entry on Redis so that the ticket cannot be
+used again.
+
+With the payload it is possible to make the decision to authorize the upgrade
+to websocket or not. If authorization is granted, Kafka-WS opens a subscription
+channel based on a specific topic in Kafka. From there, the upgrade to websocket
+is established and the user starts to receive data as they are being published
+in Kafka.
+
+.. uml::
+    :caption: Obtaining a ticket and connecting via websocket
+    :align: center
+
+    actor User
+    boundary Kong
+    control "Kafka-WS"
+    database Redis
+    control Kafka
+
+    group Get Ticket
+        User -> Kong: GET /kafka-ws/v1/ticket\nHeaders="Authorization: JWT"
+        Kong -> Kong: Checks JWT
+        Kong -> "Kafka-WS" : Request a ticket
+        "Kafka-WS" -> "Kafka-WS" : Sign the payload and\ngenerate a ticket for it
+        "Kafka-WS" -> Redis : Register the ticket and\npayload with a TTL
+        "Kafka-WS"<-- Redis : Sucess
+        User <-- "Kafka-WS" : Returns the newly generated ticket
+    end
+
+    group Connect via websocket
+        User -> Kong: Upgrade HTTP to websocket\n(ticket in the URL)
+        Kong -> "Kafka-WS" : Forward the ticket
+        "Kafka-WS" -> Redis : Recovers payload (if any)
+        "Kafka-WS"<-- Redis : Payload found
+        "Kafka-WS" -> "Kafka-WS" : Checks the payload
+        "Kafka-WS" -> Kafka : Subscrive to kafka topic\n(Using the payload)
+        "Kafka-WS" <-- Kafka : Sucess
+        User <-- "Kafka-WS" : Upgrade to websocket accepted\nConnected!
+        "Kafka-WS" <-- Kafka : New data in the topic
+        User <-- "Kafka-WS" : Returns data
+        "Kafka-WS" <-- Kafka : [...]
+        User <-- "Kafka-WS" : [...]
+        "Kafka-WS" <-- Kafka : [...]
+        User <-- "Kafka-WS" : [...]
+    end
+
+
+
 .. _API - data-broker: https://dojot.github.io/data-broker/apiary_latest.html
 .. _Kafka partitions and replicas: https://sookocheff.com/post/kafka/kafka-in-a-nutshell/#what-is-kafka
 .. _DataBroker documentation: https://dojot.github.io/data-broker/apiary_latest.html
 .. _Device Manager messages: https://dojotdocs.readthedocs.io/projects/DeviceManager/en/latest/kafka-messages.html
 .. _CA: https://en.wikipedia.org/wiki/Certificate_authority
 .. _CSR: https://en.wikipedia.org/wiki/Certificate_signing_request
+.. _user agent: https://en.wikipedia.org/wiki/User_agent
+.. _TTL: https://en.wikipedia.org/wiki/Time_to_live
+.. _JWT: https://en.wikipedia.org/wiki/JSON_Web_Token
 .. _Kafka's official documentation: https://kafka.apache.org/documentation/
 .. _Kong's documentation: https://docs.konghq.com/0.14.x/getting-started/configuring-a-service/
 .. _Kong JWT plugin page: https://docs.konghq.com/hub/kong-inc/jwt/
