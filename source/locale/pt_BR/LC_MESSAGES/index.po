@@ -27,6 +27,10 @@ msgid ""
 " with a more concise and integrated interaction, while benefiting for a "
 "highly customizable and efficient infrastructure."
 msgstr ""
+"Esta é a documentação de alto nível para a plataforma dojot IoT desenvolvida pelo CPqD. "
+"Esta plataforma visa proporcionar aos desenvolvedores de aplicativos e dispositivos "
+"uma interação mais concisa e integrada, ao mesmo tempo em que se beneficia de uma "
+"infraestrutura altamente personalizável e eficiente."
 
 #: ../../source/index.rst:11
 msgid "Contents:"
