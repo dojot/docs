@@ -234,9 +234,8 @@ Ftp request
 
 This node sends a file to a FTP server. When uploading a
 file, its name can be set by setting the "Filename" field in the same way as
-other output variables (it should refer to a variable set in the flow). The
-file encoding will set the file encoding, which could be, for instance,
-"base64" or "utf-8".
+other output variables (it should refer to a variable set in the flow).
+Defines the encoding of the file to be sent, for example, "base64" or "utf-8".
 
 
 .. _ftp-request-panel:
@@ -620,7 +619,7 @@ encoding format and file content.
     :align: center
     :alt: kafka2ftp_node_cfg
 
-    : Publish in FTP topic configuration
+    : *Publish in FTP topic* configuration
 
 Fields:
 
