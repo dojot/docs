@@ -351,8 +351,8 @@ msgstr ""
 #: ../../source/flow.rst:222
 msgid "**Response** *(required)*: Variable that will receive the http response."
 msgstr ""
-"**Resposta (Response)** *(obrigatório)*: variável que receberá a resposta"
-" http."
+"**Resposta (Response)** *(obrigatório)*: variável que receberá a resposta "
+"http."
 
 #: ../../source/flow.rst:223
 msgid "**Return** *(required)*: Type of the return."
@@ -493,8 +493,8 @@ msgid ""
 "**msg** *(required)*: Definition of the data structure that will be sent "
 "to the next node and will receive the value set on the *to* field"
 msgstr ""
-"**msg** *(obrigatório)*: definição da estrutura de dados que será enviada"
-" para o próximo nó e receberá o valor definido no campo para"
+"**msg** *(obrigatório)*: definição da estrutura de dados que será enviada "
+"para o próximo nó e receberá o valor definido no campo para"
 
 #: ../../source/flow.rst:323
 msgid "**to** *(required)*: Assignment or copy of values"
@@ -569,8 +569,8 @@ msgid ""
 "etc..."
 msgstr ""
 "Este nó atribuirá um valor a uma variável de destino. Este valor pode ser"
-" uma constante, o valor de um atributo que veio do dispositivo de entrada"
-" e etc."
+" uma constante, o valor de um atributo que veio do dispositivo de entrada "
+"e etc."
 
 #: ../../source/flow.rst:377
 msgid ""
