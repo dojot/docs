@@ -933,7 +933,7 @@ msgid ""
 "was produced."
 msgstr ""
 "ts: Timestamp no formato Unix Timestamp (ms) do momento em que a mensagem "
-"foi produzido."
+"foi produzida."
 
 #: ../../source/flow.rst:654
 msgid "service: Name of the service that generated the message."
