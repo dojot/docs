@@ -136,8 +136,7 @@ like templates, devices and flows.
 Cron
 ****
 
-Cron is a dojot's microservice that allows you to schedule events (or requests) to
-be emitted (done) to other microservices inside dojot platform.
+Cron is a dojot's microservice that  allows you to schedule events to be emitted - or requests to be sent - to other other microservices inside dojot platform.
 
 
 Kafka2Ftp
@@ -149,7 +148,7 @@ It subscribes to the topic ``tenant.dojot.ftp``
 (*tenant* is defined in the environment variable).
 In these topics there are messages with information about the file name,
 encoding format and file content,
-these messages being published by some service or
+these messages are published by some service or
 the `Publish in FTP topic` node from Flowbroker.
 
 

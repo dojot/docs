@@ -940,7 +940,7 @@ msgstr "service: Nome do serviço que gerou a mensagem."
 
 #: ../../source/flow.rst:655
 msgid "contentType: Type of encoding used by the file."
-msgstr ""
+msgstr "contentType: Tipo de condificação usado pelo arquivo."
 
 #: ../../source/flow.rst:656
 msgid "filename: Name of the file to be sent to the FTP server."
@@ -1143,7 +1143,7 @@ msgid ""
 "response is assigned to the attribute token of the virtual device."
 msgstr ""
 "Como visto, a resposta do servidor é *req.res* e o corpo da resposta "
-"podeser acessado em **msg.res.payload**. Portanto, as chaves do objeto "
+"pode ser acessado em **msg.res.payload**. Portanto, as chaves do objeto "
 "que veio na resposta podem ser acessadas por: **msg.res.payload.key**. Na"
 " figura :numref:`using_http_node_change`, o token que veio na resposta é "
 "atribuído ao token de atributo do dispositivo virtual."
