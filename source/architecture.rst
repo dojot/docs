@@ -146,11 +146,12 @@ Kafka2Ftp
 The kafka2ftp service provides a connector solution for
 forwarding messages from Apache Kafka to FTP servers.
 It subscribes to the topic ``tenant.dojot.ftp``
-(*tenant* is defined in the environment variable) where in
-which messages are produced with information about the file name,
-encoding format and file content. These messages are processed by
-the some service or the node `Publish in FTP topic` from Flowbroker and
-sent to the corresponding FTP server.
+(*tenant* is defined in the environment variable).
+In these topics there are messages with information about the file name,
+encoding format and file content,
+these messages being published by some service or
+the `Publish in FTP topic` node from Flowbroker.
+
 
 Persister/History
 *****************

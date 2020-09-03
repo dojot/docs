@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dojot 0.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-31 14:30-0300\n"
+"POT-Creation-Date: 2020-09-03 13:54-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -326,9 +326,9 @@ msgid ""
 "requests) to be emitted (done) to other microservices inside dojot "
 "platform."
 msgstr ""
-"Cron é um microsserviço da dojot que permite agendar eventos (ou "
-"requisições) a serem emitidos (feitas) para outros microsserviços dentro "
-"da plataforma dojot."
+"Cron é um microsserviço da dojot que permite agendar eventos a serem "
+"emitidos - ou requisições a serem feitas - para outros microsserviços "
+"dentro da plataforma dojot."
 
 #: ../../source/architecture.rst:144
 msgid "Kafka2Ftp"
@@ -338,25 +338,24 @@ msgstr ""
 msgid ""
 "The kafka2ftp service provides a connector solution for forwarding "
 "messages from Apache Kafka to FTP servers. It subscribes to the topic "
-"``tenant.dojot.ftp`` (*tenant* is defined in the environment variable) "
-"where in which messages are produced with information about the file "
-"name, encoding format and file content. These messages are processed by "
-"the some service or the node `Publish in FTP topic` from Flowbroker and "
-"sent to the corresponding FTP server."
+"``tenant.dojot.ftp`` (*tenant* is defined in the environment variable). "
+"In these topics there are messages with information about the file name, "
+"encoding format and file content, these messages being published by some "
+"service or the `Publish in FTP topic` node from Flowbroker."
 msgstr ""
-"O serviço kafka2ftp fornece uma solução de conector para encaminhamento de "
-"mensagens do Apache Kafka para servidores FTP. Ele se inscreve no tópico "
-"``tenant.dojot.ftp`` (*tenant* é definido na variável de ambiente) "
-"onde as mensagens são produzidas com informações sobre o nome do arquivo, "
-"formato de codificação e conteúdo do arquivo. Essas mensagens são enviadas por "
-"algum serviço ou o nó `Publicar no tópico FTP` do Flowbroker e "
-"enviadas para o servidor FTP correspondente."
+"O serviço kafka2ftp fornece uma solução de conector para "
+"encaminhamento de mensagens do Apache Kafka para servidores FTP. "
+"Ele se inscreve no tópico ``tenant.dojot.ftp`` (*tenant* é definido "
+"via variável de ambiente). Nestes tópicos há mensagens com informações "
+"sobre o nome do arquivo, formato de codificação e conteúdo do arquivo, "
+"sendo estas mensagens publicadas por  algum serviço ou pelo nó "
+"`Publicar no tópico FTP` do Flowbroker."
 
-#: ../../source/architecture.rst:156
+#: ../../source/architecture.rst:157
 msgid "Persister/History"
 msgstr ""
 
-#: ../../source/architecture.rst:158
+#: ../../source/architecture.rst:159
 msgid ""
 "The Persister component works as a pipeline for data and events that must"
 " be persisted on a database. The data is converted into a storage "
@@ -367,7 +366,7 @@ msgstr ""
 "uma estrutura de armazenamento que é enviada para o banco de dados "
 "correspondente."
 
-#: ../../source/architecture.rst:162
+#: ../../source/architecture.rst:163
 msgid ""
 "For internal storage, the MongoDB non-relational database is being used, "
 "it allows a Sharded Cluster configuration that may be required according "
@@ -377,19 +376,19 @@ msgstr ""
 "MongoDB que pode ser configurada em modo Sharded Cluster dependendo do "
 "caso de uso."
 
-#: ../../source/architecture.rst:166
+#: ../../source/architecture.rst:167
 msgid ""
 "The persisted data can be queried through a Rest API provided by the "
 "History microservice."
 msgstr ""
-"Os dados persistentes podem ser consultados por meio de uma API Rest fornecida pela "
-"Microsserviço *history*."
+"Os dados persistentes podem ser consultados por meio de uma API Rest "
+"fornecida pelp microsserviço *history*."
 
-#: ../../source/architecture.rst:169
+#: ../../source/architecture.rst:170
 msgid "Kong API Gateway"
 msgstr ""
 
-#: ../../source/architecture.rst:171
+#: ../../source/architecture.rst:172
 msgid ""
 "The Kong API Gateways is used as the entry point for applications and "
 "external services to reach the services that are internal to the dojot "
@@ -403,11 +402,11 @@ msgstr ""
 "facilidade na aplicação de regras sobre as chamadas de APIs como "
 "limitação de tráfego e controle de acesso."
 
-#: ../../source/architecture.rst:178
+#: ../../source/architecture.rst:179
 msgid "GUI"
 msgstr "GUI"
 
-#: ../../source/architecture.rst:180
+#: ../../source/architecture.rst:181
 msgid ""
 "The Graphical User Interface in *dojot* is responsible for providing "
 "responsive interfaces to manage the platform, including functionalities "
@@ -417,7 +416,7 @@ msgstr ""
 "provê interfaces responsivas para gerenciamento da plataforma, incluindo "
 "funcionalidades como:"
 
-#: ../../source/architecture.rst:183
+#: ../../source/architecture.rst:184
 msgid ""
 "**User Profile Management**: Define profiles and the API permission "
 "associated to those profiles"
@@ -425,7 +424,7 @@ msgstr ""
 "**Gerenciamento de perfil de usuários**: permite definir perfis e quais "
 "APIs podem ou não ser acessadas pelo respectivo perfil."
 
-#: ../../source/architecture.rst:185
+#: ../../source/architecture.rst:186
 msgid ""
 "**User Management**: Creation, Visualization, Edition and Deletion "
 "Operations"
@@ -433,7 +432,7 @@ msgstr ""
 "**Gerenciamento de usuários**: permite operações de criação, "
 "visualização, edição e remoção."
 
-#: ../../source/architecture.rst:186
+#: ../../source/architecture.rst:187
 msgid ""
 "**Templates Management**: Creation, Visualization, Edition and Deletion "
 "Operations"
@@ -441,7 +440,7 @@ msgstr ""
 "**Gerenciamento de modelos de dispositivos**: operações de criação, "
 "visualização, edição e remoção."
 
-#: ../../source/architecture.rst:188
+#: ../../source/architecture.rst:189
 msgid ""
 "**Devices Management**: Creation, Visualization (real time data), Edition"
 " and Deletion Operations"
@@ -449,7 +448,7 @@ msgstr ""
 "**Gerenciamento de dispositivos**: operações de criação, visualização "
 "(dispositivo e dados em tempo real), edição e remoção."
 
-#: ../../source/architecture.rst:190
+#: ../../source/architecture.rst:191
 msgid ""
 "**Processing Flows Management**: Creation, Visualization, Edition and "
 "Deletion Operations"
@@ -458,7 +457,7 @@ msgstr ""
 "criação, visualização, edição e remoção de fluxos de processamento de "
 "dados."
 
-#: ../../source/architecture.rst:192
+#: ../../source/architecture.rst:193
 msgid ""
 "**Notifications**: View system notifications (unified real time and "
 "history)"
@@ -466,23 +465,23 @@ msgstr ""
 "**Notificações**: visualiza as notificações do sistema (em tempo real e "
 "histórico unificados)"
 
-#: ../../source/architecture.rst:195
+#: ../../source/architecture.rst:196
 msgid "Image manager"
 msgstr "Image manager"
 
-#: ../../source/architecture.rst:197
+#: ../../source/architecture.rst:198
 msgid ""
 "This component is responsible for device (firmware) image storage and "
 "retrieval. It is used by the firmware update mechanism."
 msgstr ""
-"Este componente é responsável pelo armazenamento e recuperação de imagens "
-"de firmware de dispositivos."
+"Este componente é responsável pelo armazenamento e recuperação de imagens"
+" de firmware de dispositivos."
 
-#: ../../source/architecture.rst:201
+#: ../../source/architecture.rst:202
 msgid "X.509 Identity Management"
 msgstr "X.509 Identity Management"
 
-#: ../../source/architecture.rst:203
+#: ../../source/architecture.rst:204
 msgid ""
 "This component is responsible for assigning identities to devices, such "
 "identities are represented in the form of `x.509`_ certificates. It "
@@ -494,23 +493,23 @@ msgid ""
 "also possible to guarantee the integrity of the data."
 msgstr ""
 "Este componente é responsável por atribuir identidades a dispositivos, "
-"tais identidades são representadas na forma de certificados `x.509`_. Ele "
-"se comporta semelhante a uma Autoridade Certificadora (`CA`_), onde é "
+"tais identidades são representadas na forma de certificados `x.509`_. Ele"
+" se comporta semelhante a uma Autoridade Certificadora (`CA`_), onde é "
 "possível submeter um `CSR`_ e receber um certificado de volta. Tendo o "
 "certificado sido instalado no dispositivo, é possível se comunicar de "
 "forma segura com a plataforma dojot, pois os dados coletados pelo "
-"dispositivo são trafegados por um canal seguro (criptografado) e também é "
-"possível garantir a integridade dos dados."
+"dispositivo são trafegados por um canal seguro (criptografado) e também é"
+" possível garantir a integridade dos dados."
 
-#: ../../source/architecture.rst:213
+#: ../../source/architecture.rst:214
 msgid "Infrastructure"
 msgstr "Infraestrutura"
 
-#: ../../source/architecture.rst:215
+#: ../../source/architecture.rst:216
 msgid "A few extra components are used in dojot,they are:"
 msgstr "Alguns outros componentes são utilizados na dojot, são eles:"
 
-#: ../../source/architecture.rst:217
+#: ../../source/architecture.rst:218
 msgid ""
 "postgres: this database is used to persist data from many components, "
 "such as Device Manager."
@@ -518,7 +517,7 @@ msgstr ""
 "postgres: esse banco de dados é utilizado para persistir informações de "
 "vários componenentes, como do gerenciador de dispositivos."
 
-#: ../../source/architecture.rst:220
+#: ../../source/architecture.rst:221
 msgid ""
 "redis: in-memory database used as cache in many components, such as "
 "service orchestrator, subscription manager, IoT agents, and so on. It is "
@@ -528,7 +527,7 @@ msgstr ""
 "componentes, como o serviço de osquestração, gerenciador de subscrição, "
 "agentes IoT e outros. É bem leve e fácil de usar."
 
-#: ../../source/architecture.rst:224
+#: ../../source/architecture.rst:225
 msgid ""
 "rabbitMQ: message broker used in service orchestrator in order to "
 "implement action flows related that should be applied to messages "
@@ -538,29 +537,29 @@ msgstr ""
 " para implementar fluxos de ações relacionados que podem ser aplicados a "
 "mensagens recebidas dos componentes."
 
-#: ../../source/architecture.rst:228
+#: ../../source/architecture.rst:229
 msgid ""
 "mongo database: widely used database solution that is easy to use and "
 "doesn't add a considerable access overhead (where it was employed in "
 "dojot)."
 msgstr ""
 "Banco de dados mongo: solução de banco de dados amplamente utilizada que "
-"é fácil de usar e não adiciona esforço de acesso considerável (nos locais "
-"onde foi empregado na dojot)."
+"é fácil de usar e não adiciona esforço de acesso considerável (nos locais"
+" onde foi empregado na dojot)."
 
-#: ../../source/architecture.rst:231
+#: ../../source/architecture.rst:232
 msgid "zookeeper: keeps replicated services within a cluster under control."
 msgstr "zookeeper: mantém sob controle serviços replicados em cluster."
 
-#: ../../source/architecture.rst:235
+#: ../../source/architecture.rst:236
 msgid "Communications"
 msgstr "Comunicação"
 
-#: ../../source/architecture.rst:237
+#: ../../source/architecture.rst:238
 msgid "All components communicate with each other in two ways:"
 msgstr "Todos os componentes se comunicam de duas maneiras:"
 
-#: ../../source/architecture.rst:239
+#: ../../source/architecture.rst:240
 msgid ""
 "Using HTTP requests: if one component needs to retrieve data from other "
 "one, say an IoT agent needs the list of currently configured devices from"
@@ -571,7 +570,7 @@ msgstr ""
 "configurados do gerenciador de dispositivos, ele pode enviar uma "
 "requisição HTTP para o componente apropriado."
 
-#: ../../source/architecture.rst:243
+#: ../../source/architecture.rst:244
 msgid ""
 "Using Kafka messages: if one component needs to send new information "
 "about a resource controlled by it (such as new devices created in Device "
@@ -593,71 +592,3 @@ msgstr ""
 "gerenciador de dispositivos não sabe quais componentes precisam de suas "
 "informações e um agente IoT não necessita saber qual componente está "
 "enviando dados através de um tópico específico."
-
-#~ msgid "Flowbroker"
-#~ msgstr "Flowbroker"
-
-#~ msgid "History"
-#~ msgstr "History"
-
-#~ msgid ""
-#~ "The data may also be directed to"
-#~ " databases that are external do the"
-#~ " *dojot* platform, requiring only a "
-#~ "proper configuration of Logstash and the"
-#~ " data model to be used."
-#~ msgstr ""
-#~ "Os dados também podem ser armazenados"
-#~ " em base de dados externa à "
-#~ "plataforma dojot. Para isto, basta "
-#~ "configurar o Logstash para enviar os "
-#~ "dados para a base correspondente "
-#~ "conforme a estrutura de dados desejada."
-
-#~ msgid "Logging and Auditing Service"
-#~ msgstr "Serviço de Registro e Auditoria"
-
-#~ msgid ""
-#~ "All the services that are part of"
-#~ " the *dojot* platform can generate "
-#~ "usage metrics of its resources that "
-#~ "can be used by a logging and "
-#~ "auditing service, which process this "
-#~ "registers and summarize then based on"
-#~ " users and applications."
-#~ msgstr ""
-#~ "Todos os serviços que fazem parte "
-#~ "da plataforma dojot podem gerar métricas"
-#~ " de uso de seus recursos. Tais "
-#~ "métricas podem ser utilizadas por "
-#~ "serviços de Registro e Auditoria, que"
-#~ " processam esses dados sumarizando-os "
-#~ "por usuários e aplicativos."
-
-#~ msgid ""
-#~ "The consolidated data is presented back"
-#~ " to the services, allowing then, for"
-#~ " example, to expose this data to "
-#~ "the user via a graphical interface, "
-#~ "to limit the usage of the system"
-#~ " based on resource consumption and "
-#~ "quotas associated with users or even "
-#~ "to be used by billing services to"
-#~ " charge users for the utilization of"
-#~ " the platform."
-#~ msgstr ""
-#~ "Os dados consolidados são disponibilizados "
-#~ "para outros serviços da própria dojot,"
-#~ " permitindo-lhes, por exemplo, expor "
-#~ "esses dados através de uma interface "
-#~ "gráfica aos usuários, para limitar o "
-#~ "uso do sistema baseado no consumo "
-#~ "de recursos e cotas associadas a "
-#~ "usuários. Ainda pode ser usado por "
-#~ "serviços externos de faturamento em "
-#~ "função da utilização da plataforma por"
-#~ " usuários."
-
-#~ msgid "Such components are currently in development."
-#~ msgstr "Observação: Componentes atualmente em desenvolvimento."
-

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dojot 0.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-01 17:40-0300\n"
+"POT-Creation-Date: 2020-09-03 13:54-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -351,8 +351,8 @@ msgstr ""
 #: ../../source/flow.rst:222
 msgid "**Response** *(required)*: Variable that will receive the http response."
 msgstr ""
-"**Resposta (Response)** *(obrigatório)*: variável que receberá a resposta "
-"http."
+"**Resposta (Response)** *(obrigatório)*: variável que receberá a resposta"
+" http."
 
 #: ../../source/flow.rst:223
 msgid "**Return** *(required)*: Type of the return."
@@ -365,10 +365,9 @@ msgstr ""
 #: ../../source/flow.rst:235
 msgid ""
 "This node sends a file to a FTP server. When uploading a file, its name "
-"can be set by setting the \"Filename\" field in the same way as other "
-"output variables (it should refer to a variable set in the flow). Defines"
-" the encoding of the file to be sent, for example, \"base64\" or "
-"\"utf-8\"."
+"can be set by the \"Filename\" field in the same way as other output "
+"variables (it should refer to a variable set in the flow). The file "
+"encoding can also be set to, for example, \"base64\" or \"utf-8\"."
 msgstr ""
 "Este nó envia um arquivo para um servidor FTP. Ao fazer upload de um "
 "arquivo, seu nome pode ser definido configurando o campo \"Nome do "
@@ -493,8 +492,8 @@ msgid ""
 "**msg** *(required)*: Definition of the data structure that will be sent "
 "to the next node and will receive the value set on the *to* field"
 msgstr ""
-"**msg** *(obrigatório)*: definição da estrutura de dados que será enviada "
-"para o próximo nó e receberá o valor definido no campo para"
+"**msg** *(obrigatório)*: definição da estrutura de dados que será enviada"
+" para o próximo nó e receberá o valor definido no campo para"
 
 #: ../../source/flow.rst:323
 msgid "**to** *(required)*: Assignment or copy of values"
@@ -569,8 +568,8 @@ msgid ""
 "etc..."
 msgstr ""
 "Este nó atribuirá um valor a uma variável de destino. Este valor pode ser"
-" uma constante, o valor de um atributo que veio do dispositivo de entrada "
-"e etc."
+" uma constante, o valor de um atributo que veio do dispositivo de entrada"
+" e etc."
 
 #: ../../source/flow.rst:377
 msgid ""
@@ -850,8 +849,8 @@ msgstr ""
 
 #: ../../source/flow.rst:595
 msgid ""
-"**Target attribute** *(required)*: Variable that contains the value to be "
-"sum."
+"**Target attribute** *(required)*: Variable that contains the value to be"
+" sum."
 msgstr "**Atributo alvo** *(obrigatório)*: Variável que contém o valor a ser soma."
 
 #: ../../source/flow.rst:596
@@ -873,18 +872,18 @@ msgid "Publish in FTP topic"
 msgstr "Publicar no tópico FTP (Publish in FTP topic)"
 
 #: ../../source/flow.rst:610
-msgid "Node to forwarding messages to Apache Kafka FTP topic."
+msgid "Node to forward messages to Apache Kafka FTP topic."
 msgstr "Nó para encaminhar mensagens para o tópico de FTP do Apache Kafka."
 
 #: ../../source/flow.rst:612
 msgid ""
-"It publish to the topic ``tenant.dojot.ftp`` (*tenant* is defined by "
-"which tenant the flow belongs to) where in which messages are produced "
-"with information about the file name, encoding format and file content."
+"It publishes to the ``tenant.dojot.ftp`` topic (*tenant* is defined by "
+"which tenant the flow belongs to) in which the messages are produced with"
+" informations about the file name, encoding format and file content."
 msgstr ""
 "Publica no tópico ``tenant.dojot.ftp`` (*tenant* é definido por qual "
-"tenant o fluxo pertence) onde as mensagens são produzidas com informações "
-"sobre o nome do arquivo, formato de codificação e conteúdo do arquivo."
+"tenant o fluxo pertence) onde as mensagens são produzidas com informações"
+" sobre o nome do arquivo, codificação e conteúdo do arquivo."
 
 #: ../../source/flow.rst:622
 msgid ": *Publish in FTP topic* configuration"
@@ -892,11 +891,11 @@ msgstr ": Configurações do *Publicar no tópico FTP* "
 
 #: ../../source/flow.rst:626
 msgid ""
-"**Encoding** *(required)*: Encoding the contents of the file to be sent. "
+"**Encoding** *(required)*: The encoding that the file to be sent uses. "
 "Valid values are: ascii, base64, hex, utf16le, utf8 and binary."
 msgstr ""
-"**Codificação** *(obrigatório)*: Codificação do conteúdo do arquivo a ser "
-"enviado. Os valores válidos são: ascii, base64, hex, utf16le, utf8 e "
+"**Codificação** *(obrigatório)*: Codificação do conteúdo do arquivo a ser"
+" enviado. Os valores válidos são: ascii, base64, hex, utf16le, utf8 e "
 "binary."
 
 #: ../../source/flow.rst:627
@@ -912,8 +911,8 @@ msgstr ""
 "conter o conteúdo do arquivo a ser enviado."
 
 #: ../../source/flow.rst:632
-msgid "Example of message sent by this node below:"
-msgstr "Exemplo de mensagem enviada por este nó abaixo:"
+msgid "Example of a message sent by this node:"
+msgstr "Exemplo de mensagem enviada por este nó:"
 
 #: ../../source/flow.rst:650
 msgid "Where the keys above are:"
@@ -921,8 +920,8 @@ msgstr "Onde as chaves acima são:"
 
 #: ../../source/flow.rst:652
 msgid ""
-"msgId:  Value of type uuidv4 used to uniquely identify the message in the "
-"context of dojot."
+"msgId:  Value of type uuidv4 used to uniquely identify the message in "
+"dojot's context."
 msgstr ""
 "msgId: Valor do tipo uuidv4 usado para identificar unicamente a mensagem "
 "no contexto da dojot."
@@ -932,16 +931,16 @@ msgid ""
 "ts: Timestamp in Unix Timestamp (ms) format from the moment the message "
 "was produced."
 msgstr ""
-"ts: Timestamp no formato Unix Timestamp (ms) do momento em que a mensagem "
-"foi produzida."
+"ts: Timestamp no formato Unix Timestamp (ms) do momento em que a mensagem"
+" foi produzida."
 
 #: ../../source/flow.rst:654
 msgid "service: Name of the service that generated the message."
 msgstr "service: Nome do serviço que gerou a mensagem."
 
 #: ../../source/flow.rst:655
-msgid "contentType: Type identifier of the content of the data attribute."
-msgstr "contentType: Identificador de tipo do conteúdo dos dados."
+msgid "contentType: Type of encoding used by the file."
+msgstr ""
 
 #: ../../source/flow.rst:656
 msgid "filename: Name of the file to be sent to the FTP server."
@@ -961,10 +960,10 @@ msgstr "content: conteúdo do arquivo."
 
 #: ../../source/flow.rst:660
 msgid ""
-"This can be used with the kafka2ftp component. See more :doc:`components-"
-"and-apis`."
+"This can be used with the kafka2ftp component. See more in :doc"
+":`components-and-apis`."
 msgstr ""
-"Este nó pode ser usado com o componente kafka2ftp. Veja mais :doc"
+"Este nó pode ser usado com o componente kafka2ftp. Veja mais em :doc"
 ":`components-and-apis`."
 
 #: ../../source/flow.rst:663
@@ -1143,10 +1142,10 @@ msgid ""
 "figure :numref:`using_http_node_change` the token that came in the "
 "response is assigned to the attribute token of the virtual device."
 msgstr ""
-"Como visto, a resposta do servidor é *req.res* e o corpo da resposta pode"
-"ser acessado em **msg.res.payload**. Portanto, as chaves do objeto que "
-"veio na resposta podem ser acessadas por: **msg.res.payload.key**. Na "
-"figura :numref:`using_http_node_change`, o token que veio na resposta é "
+"Como visto, a resposta do servidor é *req.res* e o corpo da resposta "
+"podeser acessado em **msg.res.payload**. Portanto, as chaves do objeto "
+"que veio na resposta podem ser acessadas por: **msg.res.payload.key**. Na"
+" figura :numref:`using_http_node_change`, o token que veio na resposta é "
 "atribuído ao token de atributo do dispositivo virtual."
 
 #: ../../source/flow.rst:869
@@ -1230,8 +1229,8 @@ msgstr ""
 msgid ""
 "Back to the example, if the car sends a message that he is in the marked "
 "area, like ``{ \"position\": \"-22.820156,-47.2682535\" }``, the message "
-"received in device out will be \"Car is inside the marked area\", and, if "
-"it sends ``{\"position\": \"0,0\"}`` device out will receive \"Car is "
+"received in device out will be \"Car is inside the marked area\", and, if"
+" it sends ``{\"position\": \"0,0\"}`` device out will receive \"Car is "
 "out of the marked area\""
 msgstr ""
 "De volta ao exemplo, se o carro enviar uma mensagem de que ele está na "
@@ -1255,8 +1254,8 @@ msgstr "Usando os nós de soma acumulada, interruptor and notificação"
 #: ../../source/flow.rst:943
 msgid ""
 "Imagine this scenario: a device sends the level of rain, we want to "
-"generate a notification if the accumulated, sum, of the rains in the last "
-"hour is greater than 100."
+"generate a notification if the accumulated, sum, of the rains in the last"
+" hour is greater than 100."
 msgstr ""
 "Imagine este cenário: um dispositivo envia o nível de chuva, queremos "
 "gerar uma notificação se o acumulado, soma, das chuvas nas últimas horas "
@@ -1271,8 +1270,8 @@ msgid ""
 "In the `cumulative sum` node, we will accumulate the value of rain "
 "(*Target attribute*) in the 60 minute time window (*Time period*) and we "
 "will set this sum in a new attribute called `payload.data. "
-"attrs.rain60Min` (*Sum*). The *Timestamp* setting refers to the timestamp "
-"from the device or dojot, most of the time it can be set with "
+"attrs.rain60Min` (*Sum*). The *Timestamp* setting refers to the timestamp"
+" from the device or dojot, most of the time it can be set with "
 "`payload.metadata.timestamp`. See more in "
 ":numref:`using_cum_sum_node_cumulative` ."
 msgstr ""
@@ -1311,8 +1310,8 @@ msgid ""
 ":numref:`using_cum_sum_node_template`."
 msgstr ""
 "Agora, caso nosso valor seja maior que 100 precisamos gerar a "
-"notificação, para tal usaremos um nó auxiliar antes, o nó  *template*. No "
-"nó template iremos criar a mensagem que irá aparecer na notificação e "
+"notificação, para tal usaremos um nó auxiliar antes, o nó  *template*. No"
+" nó template iremos criar a mensagem que irá aparecer na notificação e "
 "definir seus metados, :numref:`using_cum_sum_node_template` "
 
 #: ../../source/flow.rst:992
@@ -1340,10 +1339,13 @@ msgstr ""
 "*dispositivo de evento* com publicação marcada) envia várias mensagens "
 "como `{\"rain\": 5}` durante a última hora e em uma dessas vezes a soma "
 "for superior a 100, uma notificação será gerada. Nota: Várias "
-"notificações podem ser geradas, desde que o valor acumulado seja superior "
-"a 100 na última hora. Veja a imagem :numref:`using_cum_sum_result`. "
+"notificações podem ser geradas, desde que o valor acumulado seja superior"
+" a 100 na última hora. Veja a imagem :numref:`using_cum_sum_result`. "
 
 #: ../../source/flow.rst:1018
 msgid ": Notification"
 msgstr "Notificação (notification)"
+
+#~ msgid "contentType: Type identifier of the content of the data attribute."
+#~ msgstr "contentType: Identificador de tipo do conteúdo dos dados."
 
