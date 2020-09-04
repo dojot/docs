@@ -1,1 +1,6 @@
-sphinxcontrib-plantuml==0.12
+Sphinx==1.8.5
+sphinx-autobuild==0.7.1
+sphinx-intl==1.0.0
+sphinx-rtd-theme==0.5.0
+sphinxcontrib-plantuml==0.18
+sphinxcontrib-websupport==1.1.2

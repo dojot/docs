@@ -1,5 +1,3 @@
-.. _Using API interface:
-
 Using API interface
 ===================
 
@@ -14,6 +12,25 @@ necessary components to properly run dojot.
    - Reading time: 15 m
 
 
+Prerequisites
+-------------
+
+It uses:
+
+- `curl`_  to access the dojot platform APIs;
+- `jq`_  to process the return JSON from the dojot platform APIs.
+- `mosquitto`_ to publish and subscribe in `iotagent-mosca`_ (or iotagent-mqtt) via MQTT.
+
+
+In Debian-based Linux distributions you can run:
+
+.. code-block:: bash
+
+  sudo apt-get install curl
+  sudo apt-get install jq
+  sudo apt-get install mosquitto-clients
+
+
 Getting access token
 --------------------
 
@@ -22,11 +39,15 @@ token. You can generate a new token by sending the following request:
 
 .. code-block:: bash
 
-  curl -X POST http://localhost:8000/auth \
-         -H 'Content-Type:application/json' \
-         -d '{"username": "admin", "passwd" : "admin"}'
+  JWT=$(curl -s -X POST http://localhost:8000/auth \
+  -H 'Content-Type:application/json' \
+  -d '{"username": "admin", "passwd" : "admin"}' | jq -r ".jwt")
 
-  {"jwt": "eyJ0eXAiOiJKV1QiL..."}
+To check:
+
+.. code-block:: bash
+
+  echo $JWT
 
 If you want to generate a token for other user, just change the username and
 password in the request payload. The token ("eyJ0eXAiOiJKV1QiL...") should be
@@ -67,6 +88,11 @@ off of a template, remember.
           "label": "temperature",
           "type": "dynamic",
           "value_type": "float"
+        },
+        {
+          "label": "fan",
+          "type": "actuator",
+          "value_type": "float"
         }
       ]
     }'
@@ -101,19 +127,26 @@ This request should give back this message:
             "value_type": "float",
             "type": "dynamic",
             "id": 1
+          },
+          {
+            "template_id": "1",
+            "created": "2018-01-25T12:30:42.167126+00:00",
+            "label": "fan",
+            "type": "actuator",
+            "value_type": "float",
+            "id": 2
           }
         ],
         "id": 1
       }
     }
 
-Note that the template ID is 1 (line 27).
+Note that the template ID is 1 (line 35), if you have already created another template this id will be different.
 
 To create a template based on it, send the following request to dojot:
 
 .. code-block:: bash
-    :linenos:
-
+    
     curl -X POST http://localhost:8000/device \
     -H "Authorization: Bearer ${JWT}" \
     -H 'Content-Type:application/json' \
@@ -136,6 +169,7 @@ To check out the configured device, just send a GET request to /device:
 Which should give back:
 
 .. code-block:: bash
+  :linenos:
 
     {
       "pagination": {
@@ -159,7 +193,15 @@ Which should give back:
                 "value_type": "float",
                 "type": "dynamic",
                 "id": 1
-              }
+              },
+              {
+                "template_id": "1",
+                "created": "2018-01-25T12:30:42.167126+00:00",
+                "label": "fan",
+                "value_type": "actuator",
+                "type": "float",
+                "id": 2
+             }
             ]
           },
           "id": "0998",
@@ -176,16 +218,23 @@ So far we got an access token and created a template and a device based on it.
 In an actual deployment, the physical device would send messages to dojot with
 all its attributes and their current values. For this tutorial we will send
 MQTT messages by hand to the platform, emulating such physical device. For
-that, we will use mosquitto_pub from Mosquitto project.
+that, we will use mosquitto_pub and mosquitto_sub from `mosquitto`_.
+
 
 .. ATTENTION::
-    Some Linux distributions, Ubuntu in particular, have two packages for
+    Some Linux distributions, Debian-based Linux distributions in particular, have two packages for
     `mosquitto`_ - one containing tools to access it (i.e. mosquitto_pub and
     mosquitto_sub for publishing messages and subscribing to topics) and
-    another one containing the MQTT broker. In this tutorial, only the tools
-    are going to be used. Please check if MQTT broker is not running before
-    starting dojot (by running commands like ``ps aux | grep mosquitto``).
+    another one containing the MQTT broker too. In this tutorial, only the tools from package `mosquitto-clients` on Debian-based Linux distributions are going to be used.
+    Please check if MQTT broker is not running before starting dojot
+    (by running commands like ``ps aux | grep mosquitto``) to avoid port conflicts.
 
+.. Note::
+    To run `mosquitto_pub` and `mosquitto_sub` without using TLS,
+    as in the examples below, you must set  the environment variable ALLOW_UNSECURED_MODE with the value `'true'`
+    to the `iotagent-mqtt` service, that is, `ALLOW_UNSECURED_MODE='true'`.
+    You can change this value in the dojot `docker-compose.yml` file
+    and then kill and up the docker-compose again. **By default this value is already 'true'.**
 
 The default message format used by dojot is a simple key-value JSON (you could
 translate any message format to this scheme using flows, though), such as:
@@ -200,10 +249,31 @@ Let's send this message to dojot:
 
 .. code-block:: bash
 
-  mosquitto_pub -t /admin/0998/attrs -m '{"temperature": 10.6}'
+  mosquitto_pub -h localhost -t /admin/0998/attrs -p 1883 -i admin:0998 -m '{"temperature": 10.6}'
 
 
 If there is no output, the message was sent to MQTT broker.
+
+
+**Also you can send a configuration message from dojot to the device to change some of its attributes.
+The target attribute must be of type “actuator”.**
+
+To simulate receiving the message on a device, we can use the mosquitto_sub:
+
+.. code-block:: bash
+
+  mosquitto_sub -h localhost -p 1883  -i admin:0998 -t /admin/0998/config
+
+Triggering the sending of the message from the dojot to the device.
+
+.. code-block:: bash
+
+  curl -X PUT \
+      http://localhost:8000/device/0998/actuate \
+      -H "Authorization: Bearer ${JWT}" \
+      -H 'Content-Type:application/json' \
+      -d '{"attrs": {"fan" : 100}}'
+
 
 As noted in the :doc:`../faq/faq`, there are some considerations regarding MQTT
 topics:
@@ -216,6 +286,9 @@ topics:
   used to publish messages. The topic should assume the pattern
   ``/<service-id>/<device-id>/attrs`` (for instance: ``/admin/efac/attrs``).
 
+- The topic to subscrine should assume the pattern
+  ``/<service-id>/<device-id>/config`` (for instance: ``/admin/efac/config``).
+
 - MQTT payload must be a JSON with each key being an attribute of the dojot
   device, such as:
 
@@ -223,24 +296,22 @@ topics:
 
   { "temperature" : 10.5,"pressure" : 770 }
 
-For more information on how dojot deals with data sent from devices, check the
-:doc:`integrating-physical-devices` tutorial. There you can find how to deal
-with devices that don't publish messages in such format and how to translate
-them.
+
+This examples are using MQTT without TLS, we recommend :doc:`mosca-tls`.
 
 Checking historical data
 ------------------------
 
 In order to check all values that were sent from a device for a particular
-attribute, you could use the `history APIs`_. Let's first send a few other
-values to dojot so we can get a few more interesting results:
+attribute, you could use the history api, see more in :doc:`components-and-apis`.
+Let's first send a few other values to dojot so we can get a few more interesting results:
 
 
 .. code-block:: bash
 
-  mosquitto_pub -t /admin/0998/attrs -m '{"temperature": 36.5}'
-  mosquitto_pub -t /admin/0998/attrs -m '{"temperature": 15.6}'
-  mosquitto_pub -t /admin/0998/attrs -m '{"temperature": 10.6}'
+  mosquitto_pub -t /admin/0998/attrs -i admin:0998 -m '{"temperature": 36.5}'
+  mosquitto_pub -t /admin/0998/attrs -i admin:0998 -m '{"temperature": 15.6}'
+  mosquitto_pub -t /admin/0998/attrs -i admin:0998 -m '{"temperature": 10.6}'
 
 
 To retrieve all values sent for temperature attribute of this device:
@@ -256,8 +327,7 @@ The history endpoint is built from these values:
 - ``.../device/0998/...``: the device ID is ``0998`` - this is retrieved from
   the ``id`` attribute from the device
 - ``.../history?lastN=3&attr=temperature``: the requested attribute is
-  temperature and it should get the last 3 values. More operators are available
-  in `history APIs`_.
+  temperature and it should get the last 3 values.
 
   The request should result in the following message:
 
@@ -299,7 +369,8 @@ This message contains all previously sent values.
 .. _DeviceManager how-to: http://dojotdocs.readthedocs.io/projects/DeviceManager/en/latest/using-device-manager.html#using-devicemanager
 .. _mashup: https://github.com/dojot/mashup
 .. _mosquitto: https://projects.eclipse.org/projects/technology.mosquitto
-.. _history APIs: https://dojot.github.io/history-ws/apiary_latest.html
+.. _curl: https://curl.haxx.se/
+.. _jq: https://stedolan.github.io/jq/
 .. _flowbroker: https://github.com/dojot/flowbroker
 .. _iotagent-mosca: https://github.com/dojot/iotagent-mosca
 .. _iotagent-nodejs: https://github.com/dojot/iotagent-nodejs

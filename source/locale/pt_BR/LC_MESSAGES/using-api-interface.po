@@ -6,20 +6,20 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dojot 0.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-09 15:44-0300\n"
+"POT-Creation-Date: 2020-08-26 09:42-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.7.0\n"
+"Generated-By: Babel 2.8.0\n"
 
-#: ../../source/using-api-interface.rst:4
+#: ../../source/using-api-interface.rst:2
 msgid "Using API interface"
 msgstr "Utilizando a API da dojot"
 
-#: ../../source/using-api-interface.rst:6
+#: ../../source/using-api-interface.rst:4
 msgid ""
 "This section provides a complete step-by-step tutorial of how to create, "
 "update, send messages to and check historical data of a device. Also, "
@@ -32,23 +32,51 @@ msgstr ""
 "compose`_ e que todos os componentes necessários estão sendo executados "
 "corretamente na dojot."
 
-#: ../../source/using-api-interface.rst:12
+#: ../../source/using-api-interface.rst:10
 msgid "Audience: developers"
 msgstr "Audiência: desenvolvedores"
 
-#: ../../source/using-api-interface.rst:13
+#: ../../source/using-api-interface.rst:11
 msgid "Level: basic"
 msgstr "Nível: básico"
 
-#: ../../source/using-api-interface.rst:14
+#: ../../source/using-api-interface.rst:12
 msgid "Reading time: 15 m"
 msgstr "Tempo de leitura: 15 minutos"
 
+#: ../../source/using-api-interface.rst:16
+msgid "Prerequisites"
+msgstr "Pré-requisitos"
+
 #: ../../source/using-api-interface.rst:18
+msgid "It uses:"
+msgstr "Vamos utilizar:"
+
+#: ../../source/using-api-interface.rst:20
+msgid "`curl`_  to access the dojot platform APIs;"
+msgstr "`curl`_  para acessar as APIs da plataforma dojot"
+
+#: ../../source/using-api-interface.rst:21
+msgid "`jq`_  to process the return JSON from the dojot platform APIs."
+msgstr "`jq`_  para processar o retorno JSON das APIs da plataforma dojot."
+
+#: ../../source/using-api-interface.rst:22
+msgid ""
+"`mosquitto`_ to publish and subscribe in `iotagent-mosca`_ (or iotagent-"
+"mqtt) via MQTT."
+msgstr ""
+"`mosquitto`_ publicar e se subscrever em `iotagent-mosca`_ (or iotagent-"
+"mqtt) via MQTT."
+
+#: ../../source/using-api-interface.rst:25
+msgid "In Debian-based Linux distributions you can run:"
+msgstr "Em distribuições Linux baseadas em Debian, você pode executar:"
+
+#: ../../source/using-api-interface.rst:35
 msgid "Getting access token"
 msgstr "Obtendo um token de acesso"
 
-#: ../../source/using-api-interface.rst:20
+#: ../../source/using-api-interface.rst:37
 msgid ""
 "As said in :ref:`User authentication`, all requests must contain a valid "
 "access token. You can generate a new token by sending the following "
@@ -58,7 +86,11 @@ msgstr ""
 " conter um token de acesso que seja válido. É possível gerar um novo "
 "token enviando a seguinte requisição:"
 
-#: ../../source/using-api-interface.rst:31
+#: ../../source/using-api-interface.rst:46
+msgid "To check:"
+msgstr "Checar:"
+
+#: ../../source/using-api-interface.rst:52
 msgid ""
 "If you want to generate a token for other user, just change the username "
 "and password in the request payload. The token (\"eyJ0eXAiOiJKV1QiL...\")"
@@ -71,7 +103,7 @@ msgstr ""
 "enviada para a dojot, colocando-o no cabeçalho da mensagem. A requisição "
 "seria algo desse tipo:"
 
-#: ../../source/using-api-interface.rst:41
+#: ../../source/using-api-interface.rst:62
 msgid ""
 "Remember that the token must be set in the request header as a whole, not"
 " parts of it. In the example only the first characters are shown for the "
@@ -85,11 +117,11 @@ msgstr ""
 "${JWT}`` que contém o token obtido da dojot (mais especificamente do "
 "componente de autorização da dojot)."
 
-#: ../../source/using-api-interface.rst:48
+#: ../../source/using-api-interface.rst:69
 msgid "Device creation"
 msgstr "Criação de dispositivo"
 
-#: ../../source/using-api-interface.rst:50
+#: ../../source/using-api-interface.rst:71
 msgid ""
 "In order to properly configure a physical device in dojot, you must first"
 " create its representation in the platform. The example presented here is"
@@ -103,7 +135,7 @@ msgstr ""
 " informações sobre esse componente, confira o documento `DeviceManager "
 "how-to`_."
 
-#: ../../source/using-api-interface.rst:55
+#: ../../source/using-api-interface.rst:76
 msgid ""
 "First of all, let's create a template for the device - all devices are "
 "based off of a template, remember."
@@ -111,21 +143,25 @@ msgstr ""
 "Primeiramente vamos criar um modelo (template) para o dispositivo, pois "
 "todos os dispositivos são baseados em modelos, não esqueça."
 
-#: ../../source/using-api-interface.rst:74
+#: ../../source/using-api-interface.rst:100
 msgid "This request should give back this message:"
 msgstr "Esta requisição deve retornar a seguinte mensagem:"
 
-#: ../../source/using-api-interface.rst:110
-msgid "Note that the template ID is 1 (line 27)."
-msgstr "Note que o ID do modelo é 1 (linha 27)"
+#: ../../source/using-api-interface.rst:144
+msgid ""
+"Note that the template ID is 1 (line 35), if you have already created "
+"another template this id will be different."
+msgstr ""
+"Note que  o template (modelo) ID é 1 (linha 35), caso você já tenha "
+"criado algum outro template este id será diferente."
 
-#: ../../source/using-api-interface.rst:112
+#: ../../source/using-api-interface.rst:146
 msgid "To create a template based on it, send the following request to dojot:"
 msgstr ""
 "Para criar um  dispositivo baseado nesse modelo (ID 1), envie a seguinte "
 "requisição para a dojot"
 
-#: ../../source/using-api-interface.rst:128
+#: ../../source/using-api-interface.rst:161
 msgid ""
 "The template ID list on line 6 contains the only template ID configured "
 "so far. To check out the configured device, just send a GET request to "
@@ -135,48 +171,68 @@ msgstr ""
 "configurado até o momento. Para conferir os dispositivos configurados, "
 "basta enviar uma requisição do tipo GET para /device:"
 
-#: ../../source/using-api-interface.rst:136
+#: ../../source/using-api-interface.rst:169
 msgid "Which should give back:"
 msgstr "Que deve retornar:"
 
-#: ../../source/using-api-interface.rst:173
+#: ../../source/using-api-interface.rst:215
 msgid "Sending messages"
 msgstr "Enviando mensagens"
 
-#: ../../source/using-api-interface.rst:175
+#: ../../source/using-api-interface.rst:217
 msgid ""
 "So far we got an access token and created a template and a device based "
 "on it. In an actual deployment, the physical device would send messages "
 "to dojot with all its attributes and their current values. For this "
 "tutorial we will send MQTT messages by hand to the platform, emulating "
-"such physical device. For that, we will use mosquitto_pub from Mosquitto "
-"project."
+"such physical device. For that, we will use mosquitto_pub and "
+"mosquitto_sub from `mosquitto`_."
 msgstr ""
 "Até o momento um token de acesso foi obtido, um modelo e um dispositivo "
 "(baseado no modelo) foram criados. Em um sistema real, o dispositivo "
 "físico envia mensagens para a dojot com todos os seus atributos contendo "
 "valores correntes. Nsse tutorial serão enviadas mensagens MQTT montadas "
 "\"na mão\" para a plataforma, emulando um dispositivo físico. Para tal, "
-"será utilizado o mosquito_pub do projeto Mosquitto."
+"será utilizado o mosquito_pub e mosquitto_sub do projeto `mosquitto`_."
 
-#: ../../source/using-api-interface.rst:182
+#: ../../source/using-api-interface.rst:225
 msgid ""
-"Some Linux distributions, Ubuntu in particular, have two packages for "
-"`mosquitto`_ - one containing tools to access it (i.e. mosquitto_pub and "
-"mosquitto_sub for publishing messages and subscribing to topics) and "
-"another one containing the MQTT broker. In this tutorial, only the tools "
-"are going to be used. Please check if MQTT broker is not running before "
-"starting dojot (by running commands like ``ps aux | grep mosquitto``)."
+"Some Linux distributions, Debian-based Linux distributions in particular,"
+" have two packages for `mosquitto`_ - one containing tools to access it "
+"(i.e. mosquitto_pub and mosquitto_sub for publishing messages and "
+"subscribing to topics) and another one containing the MQTT broker too. In"
+" this tutorial, only the tools from package `mosquitto-clients` on "
+"Debian-based Linux distributions are going to be used. Please check if "
+"MQTT broker is not running before starting dojot (by running commands "
+"like ``ps aux | grep mosquitto``) to avoid port conflicts."
 msgstr ""
-"Algumas distribuições Linux, o Ubuntu em particular, tem dois pacotes "
-"para o `mosquitto`_ - um contendo ferramentas para acessá-lo (por "
-"exemplo, mosquito_pub e mosquito_sub para publicação de mensagens e "
-"subscrição a tópicos) e outro contendo o broker MQTT. Neste tutorial, "
-"somente as ferramentas serão utilizadas. Certifique-se que o broker MQTT "
-"não está sendo executado antes de iniciar a dojot (para isso, pode-se "
-"utilizar o comando ``ps aux | grep mosquitto``)."
+"Algumas distribuições Linux, distribuições Linux baseadas em Debian em "
+"particular, tem dois pacotes para `mosquitto`_ - um contendo ferramentas "
+"para cliente (ou seja, mosquitto_pub e mosquitto_sub para publicar "
+"mensagens e se subscrever tópicos) e outro contendo o broker MQTT também."
+" E neste tutorial, apenas as ferramentas do pacote `mosquitto-clients` em"
+" Distribuições Linux baseadas no Debian serão usadas. Verifique se o "
+"broker MQTT não está em execução antes de iniciar o dojot (executando "
+"comandos como ``ps aux | grep mosquitto``) para evitar conflitos de "
+"porta."
 
-#: ../../source/using-api-interface.rst:190
+#: ../../source/using-api-interface.rst:233
+msgid ""
+"To run `mosquitto_pub` and `mosquitto_sub` without using TLS, as in the "
+"examples below, you must set  the environment variable "
+"ALLOW_UNSECURED_MODE with the value `'true'` to the `iotagent-mqtt` "
+"service, that is, `ALLOW_UNSECURED_MODE='true'`. You can change this "
+"value in the dojot `docker-compose.yml` file and then kill and up the "
+"docker-compose again. **By default this value is already 'true'.**"
+msgstr ""
+"Para executar `mosquitto_pub` e `mosquitto_sub` sem usar TLS, como "
+"noexemplos abaixo, você deve definir ALLOW_UNSECURED_MODE com o valor` "
+"'true'` para o serviço `iotagent-mqtt`, isto é, `ALLOW_UNSECURED_MODE = "
+"'true'`.Você pode alterar este valor no arquivo `docker-compose.yml`  da "
+"dojot e então matar e subir o docker-compose novamente. **Por padrão, "
+"esse valor já é 'true'.**"
+
+#: ../../source/using-api-interface.rst:239
 msgid ""
 "The default message format used by dojot is a simple key-value JSON (you "
 "could translate any message format to this scheme using flows, though), "
@@ -186,15 +242,37 @@ msgstr ""
 "valor\" JSON (é possível traduzir qualquer formato para esse esquema "
 "utilizando fluxos), como abaixo:"
 
-#: ../../source/using-api-interface.rst:199
+#: ../../source/using-api-interface.rst:248
 msgid "Let's send this message to dojot:"
 msgstr "Vamos enviar essa mensagem para a dojot:"
 
-#: ../../source/using-api-interface.rst:206
+#: ../../source/using-api-interface.rst:255
 msgid "If there is no output, the message was sent to MQTT broker."
-msgstr "Se não houver saída (output), a mensagem é enviada ao broker MQTT."
+msgstr "Se não houver saída (output), a mensagem foi enviada ao broker MQTT."
 
-#: ../../source/using-api-interface.rst:208
+#: ../../source/using-api-interface.rst:258
+msgid ""
+"**Also you can send a configuration message from dojot to the device to "
+"change some of its attributes. The target attribute must be of type "
+"“actuator”.**"
+msgstr ""
+"**Além disso, você pode enviar uma mensagem de configuração da dojot para"
+" o dispositivo. O atributo de destino deve ser do tipo “actuator” ou "
+"“atuador”.**"
+
+#: ../../source/using-api-interface.rst:261
+msgid ""
+"To simulate receiving the message on a device, we can use the "
+"mosquitto_sub:"
+msgstr ""
+"Para simular o recebimento da mensagem em um dispositivo, podemos usar o "
+"mosquitto_sub:"
+
+#: ../../source/using-api-interface.rst:267
+msgid "Triggering the sending of the message from the dojot to the device."
+msgstr "Disparando o envio da mensagem da dojot para o dispositivo."
+
+#: ../../source/using-api-interface.rst:278
 msgid ""
 "As noted in the :doc:`../faq/faq`, there are some considerations "
 "regarding MQTT topics:"
@@ -202,7 +280,7 @@ msgstr ""
 "Como descrito no :doc:`../faq/faq`, existem algumas considerações a "
 "respeito dos tópicos MQTT:"
 
-#: ../../source/using-api-interface.rst:211
+#: ../../source/using-api-interface.rst:281
 msgid ""
 "You can set the device ID that originates the message using the ``client-"
 "id`` MQTT parameter. It should follow the following pattern: "
@@ -212,7 +290,7 @@ msgstr ""
 "parâmetro MQTT ``client-id``. Deve seguir o seguinte padrão: "
 "``<service>:<deviceid>``, como em ``admin:efac``."
 
-#: ../../source/using-api-interface.rst:215
+#: ../../source/using-api-interface.rst:285
 msgid ""
 "If you can't do such thing, then the device should set its ID using the "
 "topic used to publish messages. The topic should assume the pattern "
@@ -224,7 +302,15 @@ msgstr ""
 "tópico deve assumir o padrão ``/<service-id>/<device-id>/attrs`` (por "
 "exemplo: ``/admin/efac/attrs``)."
 
-#: ../../source/using-api-interface.rst:219
+#: ../../source/using-api-interface.rst:289
+msgid ""
+"The topic to subscrine should assume the pattern ``/<service-id>/<device-"
+"id>/config`` (for instance: ``/admin/efac/config``)."
+msgstr ""
+"O tópico deve assumir o padrão ``/<service-id>/<device-id>/config`` (por "
+"exemplo: ``/admin/efac/config``)."
+
+#: ../../source/using-api-interface.rst:292
 msgid ""
 "MQTT payload must be a JSON with each key being an attribute of the dojot"
 " device, such as:"
@@ -232,45 +318,40 @@ msgstr ""
 "Os dados da mensagem MQTT (payload) deve ser um JSON com cada chave sendo"
 " um atributo do dispositivo cadastrado na dojot, como:"
 
-#: ../../source/using-api-interface.rst:226
-msgid ""
-"For more information on how dojot deals with data sent from devices, "
-"check the :doc:`integrating-physical-devices` tutorial. There you can "
-"find how to deal with devices that don't publish messages in such format "
-"and how to translate them."
+#: ../../source/using-api-interface.rst:300
+msgid "This examples are using MQTT without TLS, we recommend :doc:`mosca-tls`."
 msgstr ""
-"Para mais informações sobre como a dojot trata os dados enviados por "
-"dispositivos, veja o tutorial :doc:`integrating-physical-devices`. Lá "
-"você poderá verificar como trabalhar com dispositivos que não publicam "
-"mensagens neste formato e como traduzi-las."
+"Estes exemplos estão usando o MQTT sem TLS, nós recomendamos :doc:`mosca-"
+"tls`."
 
-#: ../../source/using-api-interface.rst:232
+#: ../../source/using-api-interface.rst:303
 msgid "Checking historical data"
 msgstr "Conferindo dados históricos"
 
-#: ../../source/using-api-interface.rst:234
+#: ../../source/using-api-interface.rst:305
 msgid ""
 "In order to check all values that were sent from a device for a "
-"particular attribute, you could use the `history APIs`_. Let's first send"
-" a few other values to dojot so we can get a few more interesting "
-"results:"
+"particular attribute, you could use the history api, see more in :doc"
+":`components-and-apis`. Let's first send a few other values to dojot so "
+"we can get a few more interesting results:"
 msgstr ""
 "A fim de se conferir todos os valores que foram enviados pelo dispositivo"
-" para um atributo particular, pode-se utilizar as `history APIs`_. Vamos,"
+" para um atributo particular, pode-se utilizar a API do History, veja mais em :doc"
+":`components-and-apis`. Vamos,"
 " então, enviar agora alguns outros valores à dojot para que possamos "
 "conseguir resultados um pouco mais interessantes:"
 
-#: ../../source/using-api-interface.rst:246
+#: ../../source/using-api-interface.rst:317
 msgid "To retrieve all values sent for temperature attribute of this device:"
 msgstr ""
 "Para recuperar todos os valores enviados do atributo temperature desse "
 "dispositivo:"
 
-#: ../../source/using-api-interface.rst:254
+#: ../../source/using-api-interface.rst:325
 msgid "The history endpoint is built from these values:"
 msgstr "O endpoint do histórico é construído por meio desses valores:"
 
-#: ../../source/using-api-interface.rst:256
+#: ../../source/using-api-interface.rst:327
 msgid ""
 "``.../device/0998/...``: the device ID is ``0998`` - this is retrieved "
 "from the ``id`` attribute from the device"
@@ -278,21 +359,19 @@ msgstr ""
 "``.../device/0998/...``: o ID do dispositivo é ``0998`` - isso é obtido "
 "do atributo ``id`` do próprio dispositivo"
 
-#: ../../source/using-api-interface.rst:258
+#: ../../source/using-api-interface.rst:329
 msgid ""
 "``.../history?lastN=3&attr=temperature``: the requested attribute is "
-"temperature and it should get the last 3 values. More operators are "
-"available in `history APIs`_."
+"temperature and it should get the last 3 values."
 msgstr ""
 "``.../history?lastN=3&attr=temperature``: o atributo requerido é "
-"temperature e deve ser recuperado os 3 últimos valores. Mais operadores "
-"são descritos em `history APIs`_."
+"temperature e deve ser recuperado os 3 últimos valores."
 
-#: ../../source/using-api-interface.rst:262
+#: ../../source/using-api-interface.rst:332
 msgid "The request should result in the following message:"
 msgstr "A requisição deve resultar na seguinte mensagem:"
 
-#: ../../source/using-api-interface.rst:288
+#: ../../source/using-api-interface.rst:358
 msgid "This message contains all previously sent values."
 msgstr ""
 "A mensagem acima contém todos os valores previamente enviados pelo "
@@ -309,4 +388,32 @@ msgstr ""
 #~ "dispositivo deve publicar seus dados em"
 #~ " tal tópico e configurar o parâmetro"
 #~ " client-id."
+
+#~ msgid ""
+#~ "Also you can send a configuration "
+#~ "message from dojot to the device "
+#~ "to change some of its attributes. "
+#~ "The target attribute must be of "
+#~ "type “actuator”."
+#~ msgstr ""
+
+#~ msgid "Note that the template ID is 1 (line 27)."
+#~ msgstr "Note que o ID do modelo é 1 (linha 27)"
+
+#~ msgid ""
+#~ "For more information on how dojot "
+#~ "deals with data sent from devices, "
+#~ "check the :doc:`integrating-physical-devices`"
+#~ " tutorial. There you can find how "
+#~ "to deal with devices that don't "
+#~ "publish messages in such format and "
+#~ "how to translate them."
+#~ msgstr ""
+#~ "Para mais informações sobre como a "
+#~ "dojot trata os dados enviados por "
+#~ "dispositivos, veja o tutorial :doc"
+#~ ":`integrating-physical-devices`. Lá você "
+#~ "poderá verificar como trabalhar com "
+#~ "dispositivos que não publicam mensagens "
+#~ "neste formato e como traduzi-las."
 

@@ -1,5 +1,3 @@
-.. _Concepts:
-
 Concepts
 ========
 

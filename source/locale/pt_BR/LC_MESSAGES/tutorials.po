@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dojot 0.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-12 16:30-0300\n"
+"POT-Creation-Date: 2020-08-10 14:53-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,6 +15,26 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
+
+#: ../../source/tutorials.rst:16
+msgid "Introdução à plataforma dojot - Instalação e configuração"
+msgstr ""
+
+#: ../../source/tutorials.rst:16
+msgid "Simulação de dispositivos na plataforma dojot"
+msgstr ""
+
+#: ../../source/tutorials.rst:16
+msgid "Configurando fluxos de processamento de dados da plataforma dojot"
+msgstr ""
+
+#: ../../source/tutorials.rst:16
+msgid "Configurando conexão segura com o uso de TLS na plataforma dojot"
+msgstr ""
+
+#: ../../source/tutorials.rst:16
+msgid "Trocando informações com uma Raspberry Pi e plataforma dojot"
+msgstr ""
 
 #: ../../source/tutorials.rst:2
 msgid "Tutorials"
@@ -686,5 +706,20 @@ msgstr ""
 #~ "your own application and to configure"
 #~ " your business logic using the Flow"
 #~ " Broker."
+#~ msgstr ""
+
+#~ msgid "Introdução à plataforma dojot - Instalação e configuração"
+#~ msgstr ""
+
+#~ msgid "Simulação de dispositivos na plataforma dojot"
+#~ msgstr ""
+
+#~ msgid "Configurando fluxos de processamento de dados da plataforma dojot"
+#~ msgstr ""
+
+#~ msgid "Configurando conexão segura com o uso de TLS na plataforma dojot"
+#~ msgstr ""
+
+#~ msgid "Trocando informações com uma Raspberry Pi e plataforma dojot"
 #~ msgstr ""
 

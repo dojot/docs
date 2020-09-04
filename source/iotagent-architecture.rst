@@ -540,4 +540,11 @@ a correlation table to properly translate this unique ID into dojot device ID
 and vice-versa.
 
 
+Libraries to assist the development of new IotAgents
+====================================================
+
+We have libraries in node.js **recommended** (https://github.com/dojot/iotagent-nodejs) and java (https://github.com/dojot/iotagent-java) to facilitate the development of an iotAgent.
+
+
+
 
