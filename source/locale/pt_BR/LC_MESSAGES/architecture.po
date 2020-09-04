@@ -323,7 +323,7 @@ msgstr "Cron"
 #: ../../source/architecture.rst:139
 msgid ""
 "Cron is a dojot's microservice that  allows you to schedule events to be "
-"emitted - or requests to be sent - to other other microservices inside "
+"emitted - or requests to be sent - to other microservices inside "
 "dojot platform."
 msgstr ""
 "Cron é um microsserviço da dojot que permite agendar eventos a serem "
