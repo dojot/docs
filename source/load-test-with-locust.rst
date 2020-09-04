@@ -452,8 +452,8 @@ General tips for the test
 - Ansible has the ``100k`` tag to prepare the environment for a 100,000 clients test. It runs a
   minified version of dojot without some services. This was made because not all services are ready
   yet to support such a load.
-- By using volumes in EJBCA pods, you can scale them up to increase the certificate creation
-  throughput.
+- By sharing a persistent volume between EJBCA pods, you can scale them up to increase the
+  certificate creation throughput.
 - The certificate creation can be distributed between all the Locust machines. In our example - with
   5 Locust machines - we can generate 20,000 certificates in each machine. This can greatly
   increase the certificate throughput if EJBCA has been scaled too.
