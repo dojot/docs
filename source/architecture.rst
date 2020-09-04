@@ -128,12 +128,29 @@ set of actions. These flows can be extended using external processing blocks
 
 Data Manager
 ************
-This service manages the dojot's data configuration, making possible to import and export configuration.
+
+This service manages the dojot's data **configuration**,
+making possible to import and export configuration
+like templates, devices and flows.
 
 Cron
-**********
-Cron is a dojot's microservice that allows you to schedule events (or requests) to
-be emitted (done) to other microservices inside dojot platform..
+****
+
+Cron is a dojot's microservice that  allows you to schedule events to be emitted - or requests to be sent - to other microservices inside dojot platform.
+
+
+Kafka2Ftp
+*********
+
+The kafka2ftp service provides a connector solution for
+forwarding messages from Apache Kafka to FTP servers.
+It subscribes to the topic ``tenant.dojot.ftp``
+(*tenant* is defined in the environment variable).
+In these topics there are messages with information about the file name,
+encoding format and file content,
+these messages are published by some service or
+the `Publish in FTP topic` node from Flowbroker.
+
 
 Persister/History
 *****************

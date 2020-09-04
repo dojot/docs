@@ -35,7 +35,7 @@ pipenv --python 3.8
 Install the dependencies via `pipenv`:
 
 ```shell
-pipenv install --all
+pipenv install
 ```
 
 Enter in the virtual environment:

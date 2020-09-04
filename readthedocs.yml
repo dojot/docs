@@ -7,6 +7,6 @@ formats:
 requirements_file: ./requirements/requirements.txt
 
 python:
-  version: 3.6
+  version: 3.8
   use_system_site_packages: false
   setup_py_install: false
