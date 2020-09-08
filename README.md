@@ -1,7 +1,7 @@
 ### See this documentation at:
 
 - English: https://dojotdocs.readthedocs.io/
-- Portuguese: Portuguese: https://dojotdocs.readthedocs.io/pt_BR/latest/index.html
+- Portuguese: https://dojotdocs.readthedocs.io/pt_BR/latest/
 
 # dojot documentation
 
