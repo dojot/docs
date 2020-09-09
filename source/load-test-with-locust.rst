@@ -1,5 +1,5 @@
-Load test using Locust
-======================
+Load testing Dojot platform
+===========================
 
 In this tutorial, will be shown how to run a load test using the dojot's Locust implementation.
 

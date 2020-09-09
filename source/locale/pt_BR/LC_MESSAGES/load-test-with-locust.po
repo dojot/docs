@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dojot 0.4.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-04 09:01-0300\n"
-"PO-Revision-Date: 2020-09-04 09:03-0300\n"
+"POT-Creation-Date: 2020-09-09 10:39-0300\n"
+"PO-Revision-Date: 2020-09-09 10:42-0300\n"
 "Last-Translator: \n"
 "Language: pt_BR\n"
 "Language-Team: \n"
@@ -20,8 +20,8 @@ msgstr ""
 "X-Generator: Poedit 2.0.6\n"
 
 #: ../../source/load-test-with-locust.rst:2
-msgid "Load test using Locust"
-msgstr "Teste de carga utilizando o Locust"
+msgid "Load testing Dojot platform"
+msgstr "Aplicando teste de carga na plataforma Dojot"
 
 #: ../../source/load-test-with-locust.rst:4
 msgid ""
