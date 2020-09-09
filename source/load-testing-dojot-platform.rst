@@ -121,13 +121,13 @@ Create the devices in dojot:
 
 You can now check that the devices are created in dojot.
 
-.. figure:: images/tutorials/load-test-with-locust/img1.png
+.. figure:: images/tutorials/load-testing-dojot-platform/img1.png
   :width: 100%
   :align: center
 
   : Some of the devices that ``generate_certs`` created in dojot.
 
-.. figure:: images/tutorials/load-test-with-locust/img2.png
+.. figure:: images/tutorials/load-testing-dojot-platform/img2.png
   :width: 100%
   :align: center
 
@@ -167,7 +167,7 @@ browser in ``localhost:8089`` (supposing you are running Locust master in ``loca
 Type ``100`` in ``Number of users to simulate``, ``10`` in ``Hatch rate`` and click in
 ``Start swarming``. This tells Locust to run 100 clients, creating 10 of them per second.
 
-.. figure:: images/tutorials/load-test-with-locust/img3.png
+.. figure:: images/tutorials/load-testing-dojot-platform/img3.png
   :width: 100%
   :align: center
 
@@ -176,7 +176,7 @@ Type ``100`` in ``Number of users to simulate``, ``10`` in ``Hatch rate`` and cl
 The default configuration is for every client to send a message each 30 seconds, so you'll have to
 wait a moment for the messages to arrive at dojot.
 
-.. figure:: images/tutorials/load-test-with-locust/img4.png
+.. figure:: images/tutorials/load-testing-dojot-platform/img4.png
   :width: 100%
   :align: center
 
@@ -184,7 +184,7 @@ wait a moment for the messages to arrive at dojot.
 
 You can go to dojot and see that the messages are arriving there.
 
-.. figure:: images/tutorials/load-test-with-locust/img5.png
+.. figure:: images/tutorials/load-testing-dojot-platform/img5.png
   :width: 100%
   :align: center
 
@@ -345,14 +345,14 @@ in the Locust master location, e.g.: ``localhost:8089``.
 Type ``1000`` in ``Number of users to simulate``, ``10`` in ``Hatch rate`` and click in
 ``Start swarming``. This tells Locust to run 1,000 clients, creating 10 of them per second.
 
-.. figure:: images/tutorials/load-test-with-locust/img6.png
+.. figure:: images/tutorials/load-testing-dojot-platform/img6.png
   :width: 100%
   :align: center
 
   : Configuring Locust to run the clients.
 
 
-.. figure:: images/tutorials/load-test-with-locust/img7.png
+.. figure:: images/tutorials/load-testing-dojot-platform/img7.png
   :width: 100%
   :align: center
 
@@ -393,13 +393,13 @@ Change the IP to the Locust master one and run the playbook. Now you can initial
 or not) test as shown in the previous sections and you should see the Locust data being sent to
 Grafana's Locust dashboard.
 
-.. figure:: images/tutorials/load-test-with-locust/img8.png
+.. figure:: images/tutorials/load-testing-dojot-platform/img8.png
   :width: 100%
   :align: center
 
   : Locust statistics in Grafana - before beginning the test.
 
-.. figure:: images/tutorials/load-test-with-locust/img9.png
+.. figure:: images/tutorials/load-testing-dojot-platform/img9.png
   :width: 100%
   :align: center
 

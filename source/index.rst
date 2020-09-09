@@ -33,7 +33,7 @@ and efficient infrastructure.
    using-api-interface
    flow
    mosca-tls
-   load-test-with-locust
+   load-testing-dojot-platform
 
 .. Indices and tables
 .. ==================
