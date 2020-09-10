@@ -33,6 +33,7 @@ and efficient infrastructure.
    using-api-interface
    flow
    mosca-tls
+   load-testing-dojot-platform
 
 .. Indices and tables
 .. ==================
