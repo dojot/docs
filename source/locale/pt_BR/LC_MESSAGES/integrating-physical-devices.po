@@ -77,8 +77,8 @@ msgstr ""
 "mensagens internos - consulte adocumentação para saber mais."
 
 #: ../../source/integrating-physical-devices.rst:29
-msgid "See more about :doc:`mosca-tls`."
-msgstr "Veja mais sobre :doc:`mosca-tls`."
+msgid "See more about :doc:`mqtt-tls`."
+msgstr "Veja mais sobre :doc:`mqtt-tls`."
 
 #~ msgid "Reading time: X m"
 #~ msgstr ""

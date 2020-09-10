@@ -16,7 +16,7 @@ This section will show how to manage device. For this tutorial we will show
 how to add two thermometers and a virtual device that will represent an alarm
 system that will monitor both sensors.
 
-As described in :ref:`Concepts`, all devices are based on a template. To
+As described in :doc:`./concepts`, all devices are based on a template. To
 create one, you should access the template tab at the left and then create one
 new template, as shown below.
 
@@ -91,7 +91,7 @@ mosquitto_pub. See more about in :doc:`using-api-interface` at topic Sending Mes
 
 .. NOTE::
     The examples are using insecure MQTT. The recommended approach is to use TLS. For Mosca, check
-    the section :doc:`mosca-tls`.
+    the section :doc:`mqtt-tls`.
 
 .. raw:: html
 

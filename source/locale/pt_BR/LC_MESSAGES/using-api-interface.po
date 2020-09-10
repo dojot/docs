@@ -81,10 +81,10 @@ msgstr "Obtendo um token de acesso"
 
 #: ../../source/using-api-interface.rst:37
 msgid ""
-"As said in :ref:`User authentication`, all requests must contain a valid "
-"access token. You can generate a new token by sending the following request:"
+"All requests must contain a valid access "
+"token. You can generate a new token by sending the following request:"
 msgstr ""
-"Como mencionado em :ref:`User authentication`, todas as requisições devem "
+"Todas as requisições devem "
 "conter um token de acesso que seja válido. É possível gerar um novo token "
 "enviando a seguinte requisição:"
 
@@ -389,10 +389,10 @@ msgstr ""
 #: ../../source/using-api-interface.rst:361
 msgid ""
 "For simplicity's sake, we are not using TLS in these examples. Check :doc:"
-"`mosca-tls` for more information on its usage."
+"`mqtt-tls` for more information on its usage."
 msgstr ""
 "Por simplicidade, nós não estamos utilizando TLS nos exemplos. Verifique o "
-"artigo :doc:`mosca-tls` para maiores esclarecimentos sobre sua utilização."
+"artigo :doc:`mqtt-tls` para maiores esclarecimentos sobre sua utilização."
 
 #: ../../source/using-api-interface.rst:365
 msgid "For the rest of the tutorial we will treat as if you are using VerneMQ."
@@ -473,7 +473,7 @@ msgstr ""
 #~ "mensagens neste formato e como traduzi-las."
 
 #~ msgid ""
-#~ "This examples are using MQTT without TLS, we recommend :doc:`mosca-tls`."
+#~ "This examples are using MQTT without TLS, we recommend :doc:`mqtt-tls`."
 #~ msgstr ""
 #~ "Os exemplos estão usando o MQTT sem TLS, porém nós recomendamos "
-#~ "utilizar  :doc:`mosca-tls`."
+#~ "utilizar  :doc:`mqtt-tls`."

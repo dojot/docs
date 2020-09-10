@@ -59,11 +59,11 @@ msgstr ""
 
 #: ../../source/using-web-interface.rst:19
 msgid ""
-"As described in :ref:`Concepts`, all devices are based on a template. To "
+"As described in :doc:`./concepts`, all devices are based on a template. To "
 "create one, you should access the template tab at the left and then "
 "create one new template, as shown below."
 msgstr ""
-"Como descrito em :ref:`Concepts`, todos os dispositivos são baseados em "
+"Como descrito em :doc:`./concepts`, todos os dispositivos são baseados em "
 "um ou mais modelos (templates). Para a criação de um modelo, você deve "
 "acessar a opção Modelos (Templates) na lateral esquerda da tela e então "
 "criar um Novo Modelo (New Template), como mostrado abaixo. "
@@ -177,10 +177,10 @@ msgstr ""
 #: ../../source/using-web-interface.rst:93
 msgid ""
 "The examples are using insecure MQTT. The recommended approach is to use "
-"TLS. For Mosca, check the section :doc:`mosca-tls`."
+"TLS. For Mosca, check the section :doc:`mqtt-tls`."
 msgstr ""
 "Os exemplos estão utilizando MQTT sem segurança. A abordagem recomendada é "
-"utilizar TLS. Para o Mosca, verifique a página :doc:`mosca-tls`."
+"utilizar TLS. Para o Mosca, verifique a página :doc:`mqtt-tls`."
 
 #: ../../source/using-web-interface.rst:102
 msgid ""

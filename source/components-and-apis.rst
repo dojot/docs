@@ -39,6 +39,14 @@ Components
     - `Kafka site`_
     - `Kafka doc.`_
     -
+  * - VerneMQ
+    - `VerneMQ site`_
+    - `VerneMQ doc.`_
+    -
+  * - Leshan
+    - `Leshan site`_
+    - `Leshan doc.`_
+    -
   * - Auth
     - `GitHub - auth`_
     - `Auth  doc.`_
@@ -67,9 +75,19 @@ Components
     - `GitHub - data-broker`_
     -
     - `API - data-broker`_
-  * - | Iotagent Mosca
-      | (MQTT)
+  * - | IotAgent VerneMQ
+      | (MQTT) - **Default**
+    - `GitHub - iotagent-vernemq`_
+    -
+    -
+  * - | IotAgent Mosca
+      | (MQTT) - **Legacy**
     - `GitHub - iotagent-mosca`_
+    -
+    -
+  * - | IotAgent Leshan
+      | (LWM2M)
+    - `GitHub - iotagent-leshan`_
     -
     -
   * - Data Manager
@@ -93,13 +111,12 @@ Components
 Exposed APIs (API Gateway)
 --------------------------
 
-
 The API gateway used in dojot reroutes some of endpoints from component.
 The following table shows which **endpoint exposed
 by the API gateway** is mapped to which **component endpoint**,
 its  **component endpoint Documentation** and
 whether the endpoint **needs authentication** when used via API Gateway.
-See more about how using API in :ref:`Using API interface`.
+See more about how using API in :doc:`./using-api-interface`.
 
 .. list-table:: Exposed endpoints
    :header-rows: 1
@@ -142,7 +159,7 @@ See more about how using API in :ref:`Using API interface`.
    * - Auth
      - **/auth**/revoke
      - /revoke
-     -
+     - `API - auth`_
      - No
    * - Auth
      - **/auth**/user
@@ -186,17 +203,17 @@ See more about how using API in :ref:`Using API interface`.
      - | /device/
        | {deviceID}
        | /latest
-     -
+     - `API - data-broker`_
      - Yes
    * - Data Broker
      - /subscription
      - /subscription
-     -
+     - `API - data-broker`_
      - Yes
    * - Data Broker
      - /stream
      - /stream
-     -
+     - `API - data-broker`_
      - Yes
    * - Data Broker
      - /socket.io
@@ -204,8 +221,8 @@ See more about how using API in :ref:`Using API interface`.
      - `API - data-broker`_
      - No
    * - X.509 Identity Management
-     - /x509/v1
-     - /api/v1
+     - **/x509/v1**
+     - **/api/v1**
      - `API - x509-identity-mgmt`_
      - Yes
 
@@ -313,7 +330,10 @@ dojot.
 .. _Zookeeper doc.: https://zookeeper.apache.org/documentation.html
 .. _Kafka site: https://kafka.apache.org/
 .. _Kafka doc.: http://kafka.apache.org/documentation/
-
+.. _VerneMQ site: https://vernemq.com/
+.. _VerneMQ doc.: https://docs.vernemq.com/
+.. _Leshan site: https://www.eclipse.org/leshan/
+.. _Leshan doc.: https://github.com/eclipse/leshan/wiki
 
 .. _GitHub - auth: https://github.com/dojot/auth/tree/v0.5.0
 .. _API - auth: https://dojot.github.io/auth/apiary_v0.5.0.html
@@ -344,6 +364,11 @@ dojot.
 
 .. _Messages - iotagent-mosca: http://dojotdocs.readthedocs.io/projects/iotagent-mosca/en/latest/operation.html#sending-messages-to-other-components-via-kafka
 .. _GitHub - iotagent-mosca: https://github.com/dojot/iotagent-mosca/tree/v0.5.0
+
+.. _GitHub - iotagent-vernemq: https://github.com/dojot/dojot/tree/v0.5.0/connector/mqtt/vernemq
+
+.. _GitHub - iotagent-leshan: https://github.com/dojot/iotagent-leshan/tree/v0.5.0
+
 
 .. _GitHub - Data Manager: https://github.com/dojot/data-manager/tree/v0.5.0
 .. _API - Data Manager: https://dojot.github.io/data-manager/apiary_v0.5.0.html

@@ -34,7 +34,7 @@ In Debian-based Linux distributions you can run:
 Getting access token
 --------------------
 
-As said in :ref:`User authentication`, all requests must contain a valid access
+All requests must contain a valid access
 token. You can generate a new token by sending the following request:
 
 .. code-block:: bash
@@ -358,7 +358,7 @@ As noted in the :doc:`../faq/faq`, there are some considerations regarding MQTT 
 
   { "temperature" : 10.5, "pressure" : 770 }
 
-For simplicity's sake, we are not using TLS in these examples. Check :doc:`mosca-tls` for more
+For simplicity's sake, we are not using TLS in these examples. Check :doc:`mqtt-tls` for more
 information on its usage.
 
 .. Note::

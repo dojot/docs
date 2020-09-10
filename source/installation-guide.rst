@@ -158,7 +158,7 @@ Usage
 
 The web interface is available at ``http://localhost:8000``. The user is
 ``admin`` and the password is ``admin``. You also can interact with platform
-using the :ref:`Components and APIs`.
+using the :doc:`./components-and-apis`.
 
 Read the :doc:`using-api-interface` and :doc:`using-web-interface` for more
 information about how to interact with the platform.
@@ -171,6 +171,7 @@ Kubernetes
     <iframe id="ytplayer" type="text/html" width="720" height="405"
     src="https://www.youtube.com/embed/qGUlBCmmIao?rel=0" frameborder="0"
     allowfullscreen></iframe>
+
 In this video tutorial above, version v0.4.2 is used, but the same video is valid for the current version, it is only necessary to change to version v0.4.3
 
 

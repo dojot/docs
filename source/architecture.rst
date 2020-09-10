@@ -250,8 +250,6 @@ All components communicate with each other in two ways:
   need to know which component is sending data through a particular topic.
 
 
-.. _iotagent-mosca: https://github.com/dojot/iotagent-mosca
-.. _Mosca: https://github.com/mcollina/mosca
 .. _x.509: https://en.wikipedia.org/wiki/X.509
 .. _CA: https://en.wikipedia.org/wiki/Certificate_authority
 .. _CSR: https://en.wikipedia.org/wiki/Certificate_signing_request
