@@ -116,7 +116,7 @@ The following table shows which **endpoint exposed
 by the API gateway** is mapped to which **component endpoint**,
 its  **component endpoint Documentation** and
 whether the endpoint **needs authentication** when used via API Gateway.
-See more about how using API in :doc:`./using-api-interface`.
+See more about how using APIs in :doc:`./using-api-interface`.
 
 .. list-table:: Exposed endpoints
    :header-rows: 1

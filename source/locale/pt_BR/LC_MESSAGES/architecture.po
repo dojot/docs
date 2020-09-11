@@ -544,7 +544,7 @@ msgid ""
 "doesn't add a considerable access overhead (where it was employed in "
 "dojot)."
 msgstr ""
-"Banco de dados mongo: solução de banco de dados amplamente utilizada que "
+"mongo: solução de banco de dados amplamente utilizada que "
 "é fácil de usar e não adiciona esforço de acesso considerável (nos locais"
 " onde foi empregado na dojot)."
 

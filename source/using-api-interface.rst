@@ -234,9 +234,17 @@ translate any message format to this scheme using flows, though), such as:
     `mosquitto`_ - one containing tools to access it (i.e. mosquitto_pub and mosquitto_sub for
     publishing messages and subscribing to topics) and another one containing the MQTT broker too.
     In this tutorial, only the tools from package `mosquitto-clients` on Debian-based Linux
-    distributions are going to be used. Please check if MQTT broker is not running before starting
+    distributions are going to be used. Please check another if MQTT broker is not running before starting
     dojot (by running commands like ``ps aux | grep mosquitto``) to avoid port conflicts.
 
+
+For simplicity's sake, we are not using TLS in the examples below. Check :doc:`mqtt-tls` for more
+information on its usage.
+
+.. Note::
+    To run `mosquitto_pub` and `mosquitto_sub` without using TLS,
+    as in the examples below, you need to configure some settings
+    (or for how to disable the mode without TLS), see more in :ref:`Unsecured mode MQTT`.
 
 As of **v0.5.0**, you can choose the between two MQTT brokers: Mosca or VerneMQ. By default, VerneMQ
 is used, but you can use Mosca too. Check the :doc:`../installation-guide` for more information.
@@ -302,13 +310,6 @@ Using Mosca (legacy)
     VerneMQ is the new default MQTT broker. Support for Mosca will be eventually dropped, so use
     VerneMQ if possible!
 
-.. Note::
-    To run `mosquitto_pub` and `mosquitto_sub` without using TLS, as in the examples below, you must
-    set the environment variable ALLOW_UNSECURED_MODE with the value `'true'` to the `iotagent-mqtt`
-    service, that is, `ALLOW_UNSECURED_MODE='true'`. You can change this value in the dojot
-    `docker-compose.yml` file and then kill and up the docker-compose again. **By default this value
-    is already 'true'.**
-
 Let's send a message to dojot:
 
 .. code-block:: bash
@@ -358,8 +359,6 @@ As noted in the :doc:`../faq/faq`, there are some considerations regarding MQTT 
 
   { "temperature" : 10.5, "pressure" : 770 }
 
-For simplicity's sake, we are not using TLS in these examples. Check :doc:`mqtt-tls` for more
-information on its usage.
 
 .. Note::
     For the rest of the tutorial we will treat as if you are using VerneMQ.

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dojot 0.4.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-09 21:17-0300\n"
+"POT-Creation-Date: 2020-09-11 14:58-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,12 +39,12 @@ msgid ""
 "`IotAgent-VerneMQ`_ or Legacy Broker MQTT `IotAgent-Mosca`_."
 msgstr ""
 "Este documento descreve como configurar a dojot e publicar/subscrever "
-"usando MQTT com TLS (MQTTS) ao usar os microsserviço *Broker* MQTT "
-"`IotAgent-VerneMQ`_ ou *Broker* MQTT legado `IotAgent-Mosca`_"
+"usando MQTT com TLS (MQTTS) ao usar o microsserviço *Broker MQTT* "
+"`IotAgent-VerneMQ`_ ou *Broker MQTT* legado `IotAgent-Mosca`_"
 
 #: ../../source/mqtt-tls.rst:17
 msgid "Table of Contents"
-msgstr ""
+msgstr "Índice"
 
 #: ../../source/mqtt-tls.rst:20
 msgid "Components"
@@ -62,7 +62,7 @@ msgid ""
 msgstr ""
 "O objetivo deste componente é fornecer identificação x.509 para entidades"
 " dojot finais, ou seja, dispositivos IoT que se comunicam com a "
-"plataforma IoT dojot. Veja mais sobre em `X.509 Identity Management`_."
+"plataforma de IoT dojot. Veja mais sobre em `X.509 Identity Management`_."
 
 #: ../../source/mqtt-tls.rst:30
 msgid "What is a certificate?"
@@ -90,13 +90,13 @@ msgstr ""
 "nomes alternativos para a entidade etc. "
 
 #: ../../source/mqtt-tls.rst:42
-msgid "Brokers MQTT"
-msgstr ""
+msgid "MQTT Brokers"
+msgstr "*MQTT Brokers*"
 
-#: ../../source/mqtt-tls.rst:45 ../../source/mqtt-tls.rst:218
-#: ../../source/mqtt-tls.rst:295
-msgid "Broker MQTT IotAgent VerneMQ (Default)"
-msgstr "Broker MQTT IotAgent VerneMQ (Padrão)"
+#: ../../source/mqtt-tls.rst:45 ../../source/mqtt-tls.rst:214
+#: ../../source/mqtt-tls.rst:294
+msgid "IotAgent VerneMQ (Default)"
+msgstr "*IotAgent VerneMQ* (Padrão)"
 
 #: ../../source/mqtt-tls.rst:47
 msgid ""
@@ -104,17 +104,17 @@ msgid ""
 "for dojot case, see more in `IotAgent-VerneMQ`_. This is the **default** "
 "Broker MQTT in dojot deployments."
 msgstr ""
-"O IotAgent VerneMQ estende o `VerneMQ`_ com alguns recursos e serviços "
-"para o caso da dojot, veja mais em `IotAgent-VerneMQ`_. Este é o Broker "
-"MQTT **padrão** em *deployments* dojot."
+"O *IotAgent VerneMQ* estende o `VerneMQ`_ com alguns recursos e serviços "
+"para o caso da dojot, veja mais em `IotAgent-VerneMQ`_. Este é o *Broker "
+"MQTT* **padrão** em *deployments* dojot."
 
 #: ../../source/mqtt-tls.rst:51
 msgid ""
 "To use IotAgent VerneMQ with TLS, you need to configure by environment "
 "variable:"
 msgstr ""
-"Para usar IotAgent VerneMQ com TLS, você precisa configurar por variável "
-"de ambiente:"
+"Para usar *IotAgent VerneMQ* com TLS, você precisa configurar por "
+"variável de ambiente:"
 
 #: ../../source/mqtt-tls.rst:53
 msgid ""
@@ -134,10 +134,10 @@ msgstr ""
 "Veja outras variáveis de ambiente em `VerneMQ Dojot - Environment "
 "variables`_."
 
-#: ../../source/mqtt-tls.rst:59 ../../source/mqtt-tls.rst:257
-#: ../../source/mqtt-tls.rst:303
-msgid "Broker MQTT IotAgent Mosca (Legacy)"
-msgstr "Broker MQTT IotAgent Mosca (Legado)"
+#: ../../source/mqtt-tls.rst:59 ../../source/mqtt-tls.rst:253
+#: ../../source/mqtt-tls.rst:302
+msgid "IotAgent Mosca (Legacy)"
+msgstr "*IotAgent Mosca* (Legado)"
 
 #: ../../source/mqtt-tls.rst:61
 msgid ""
@@ -145,17 +145,17 @@ msgid ""
 "about this service in `IotAgent-VerneMQ`_. This is the **not default** "
 "Broker MQTT in dojot deployments."
 msgstr ""
-"O IotAgent IotAgent Mosca usa `Mosca`_ que é um broker node.js mqtt, veja"
-" mais sobre este serviço em `IotAgent-VerneMQ`_. Este **não é** o Broker "
-"MQTT *padrão** em *deployments* dojot."
+"O *IotAgent Mosca* usa o `Mosca`_ que é um *broker* mqtt em node.js , "
+"veja mais sobre este serviço em `IotAgent-VerneMQ`_. Este **não é** o "
+"*Broker MQTT* **padrão** em *deployments* dojot."
 
 #: ../../source/mqtt-tls.rst:66
 msgid ""
 "To use IotAgent Mosca with TLS, you need to configure by environment "
 "variable:"
 msgstr ""
-"Para usar IotAgent Mosca com TLS, você precisa configurar por variável de"
-" ambiente:"
+"Para usar *IotAgent Mosca* com TLS, você precisa configurar por variável "
+"de ambiente:"
 
 #: ../../source/mqtt-tls.rst:68
 msgid ""
@@ -169,112 +169,118 @@ msgstr ""
 
 #: ../../source/mqtt-tls.rst:74
 msgid "About using IotAgent VerneMQ or IotAgent Mosca"
-msgstr "Sobre o uso do IotAgent VerneMQ ou IotAgent Mosca"
+msgstr "Sobre o uso do *IotAgent VerneMQ* ou *IotAgent Mosca*"
 
 #: ../../source/mqtt-tls.rst:76
 msgid ""
-"You shouldn't use the two brokers together to avoid port conflicts, or "
-"use `Broker MQTT IotAgent VerneMQ` or use `Legacy Broker MQTT IotAgent "
-"Mosca`. By default our deployments are using `IotAgent VerneMQ`."
+"You shouldn't use the two brokers together to avoid port conflicts. Use "
+"either VerneMQ (default) or Mosca (legacy). By default, our deployments "
+"are using VerneMQ."
 msgstr ""
-"Você não deve usar os dois brokers juntos para evitar conflitos de porta,"
-" ou use o `Broker MQTT IotAgent VerneMQ`, ou use `Broker MQTT IotAgent "
-"Mosca (Legado)`. Por padrão, nossos *deployments* usam `IotAgent "
-"VerneMQ`."
+"Você não deve usar os dois *brokers* juntos para evitar conflitos de "
+"porta. Use VerneMQ (padrão) ou Mosca (legado). Por padrão, nossas "
+"*deployments* estão usando VerneMQ."
 
-#: ../../source/mqtt-tls.rst:81
+#: ../../source/mqtt-tls.rst:80
+msgid "For the Ansible deployment (i.e. Kubernetes) of both brokers:"
+msgstr ""
+"Para a *Ansible deployments* (ou seja, *Kubernetes*) de ambos os "
+"*brokers*:"
+
+#: ../../source/mqtt-tls.rst:82
 msgid ""
-"In *ansible-dojot* (kubernetes deployment) there is a variable "
-"``dojot_domain_name``, if this variable is defined, you don't need to "
-"configure the environment variable mentioned in the previous topics, this"
-" is valid in both Brokers. Still in  *ansible-dojot* you can disable the "
-"`unsecured mode` by changing the variable ``dojot_insecure_mqtt`` to "
-"``false``, this is valid in both Brokers too, we will explain about the "
-"`unsecured mode` in the next topics. Check the :doc:`./installation-"
-"guide` for more info."
+"If you have defined the ``dojot_domain_name`` variable, you don't need to"
+" configure the environment variables mentioned in the previous topics."
 msgstr ""
-"Em *ansible-dojot* (deployment kubernetes), há uma variável "
-"``dojot_domain_name``, se essa variável for definida,  você não precisa "
-"configurar as variáveis de ambiente mencionada  nos tópicos anteriores, "
-"isso é válido em ambos os Brokers. Ainda no *ansible-dojot* você pode "
-"desabilitar o modo não seguro  alterando a variável "
-"``dojot_insecure_mqtt`` para ``false``,  isso é válido em ambos os "
-"Brokers também, explicaremos sobre o modo não seguro nos próximos "
-"tópicos. Verifique o :doc:`./installation-guide` para mais informações."
+"Se você definiu a variável ``dojot_domain_name``, não precisa configurar "
+"as variáveis de ambiente mencionadas nos tópicos anteriores."
 
-#: ../../source/mqtt-tls.rst:90
+#: ../../source/mqtt-tls.rst:85
+msgid ""
+"You can disable the *unsecured mode* by changing the "
+"``dojot_insecure_mode`` variable to ``false``."
+msgstr ""
+
+#: ../../source/mqtt-tls.rst:88
 msgid ""
 "In addition, you can choose between `IotAgent VerneMQ` or `IotAgent "
-"Mosca` when configuring *ansible-dojot*. In *docker-compose*, you need to"
-" uncomment and comment the services in the ``docker-compose.yml``, "
-"there's a commented explanation about that in this file. Check the :doc"
-":`./installation-guide` for more info."
+"Mosca` when configuring Ansible deployment  (i.e. Kubernetes). In Docker-"
+"compose, you need to uncomment and comment the services in the ``docker-"
+"compose.yml``, there's a commented explanation about that in this file."
 msgstr ""
-"Além disso, você pode escolher entre `IotAgent VerneMQ` ou  `IotAgent "
-"Mosca` ao configurar o *ansible-dojot*.   No *docker-compose*, você "
-"precisa descomentar   e comentar os serviços no ``docker-compose.yml``,  "
-"há uma explicação comentada sobre isso neste arquivo. Verifique o :doc:`./installation-guide` para mais informações."
+"Além disso, você pode escolher entre `IotAgent VerneMQ` ou` IotAgent "
+"Mosca` ao configurar o *deployment* do Ansible (ou seja, Kubernetes). No "
+"docker-compose, você precisa descomentar e comentar os serviços no "
+"arquivo ``docker-compose.yml``, há uma explicação comentada sobre isso "
+"neste arquivo."
+
+#: ../../source/mqtt-tls.rst:94
+msgid "Check the :doc:`./installation-guide` for more info."
+msgstr "Verifique o :doc:`./installation-guide` para mais informações."
 
 #: ../../source/mqtt-tls.rst:96
 msgid ""
-"All the certificates will be created automatically, not needing to "
-"configure manually the certificates into the brokers."
+"All the certificates will be automatically created, so there is no need "
+"to manually configure the brokers' ones."
 msgstr ""
 "Todos os certificados serão criados automaticamente, não sendo necessário"
 " configurar manualmente os certificados nos *Brokers*."
 
-#: ../../source/mqtt-tls.rst:100
+#: ../../source/mqtt-tls.rst:99
 msgid ""
 "How to connect a device with the IotAgent VerneMQ or IotAgent Mosca with "
 "mutual TLS"
 msgstr ""
-"Como conectar um dispositivo com o IotAgent VerneMQ ou IotAgent Mosca com"
-" TLS mútuo"
+"Como conectar um dispositivo com o *IotAgent VerneMQ* ou *IotAgent Mosca*"
+" com TLS mútuo"
 
-#: ../../source/mqtt-tls.rst:103
+#: ../../source/mqtt-tls.rst:102
 msgid ""
-"First of all, you will need a running dojot environment And then you need"
-" created device on the dojot and gets its identifier (ID)."
+"First of all, you will need a running dojot's environment. Then you "
+"should create a new device (or use an existing one if you prefer) and "
+"retrieve its ID."
 msgstr ""
 "Em primeiro lugar, você precisará de um ambiente da dojot em execução. "
-"Depois, será necessário criar o dispositivo na dojot e obter sua "
-"identificação (ID)."
+"Depois, será necessário criar o dispositivo na dojot (or usar um que já "
+"existe) e obter seu ID. "
 
-#: ../../source/mqtt-tls.rst:108
+#: ../../source/mqtt-tls.rst:107
 msgid "Retrieving certificate for a device"
 msgstr "Recuperando certificado para um dispositivo"
 
-#: ../../source/mqtt-tls.rst:110
+#: ../../source/mqtt-tls.rst:109
 msgid "For a device to connect using MQTT over TLS (MQTTS), it must possess:"
 msgstr ""
 "Para um dispositivo se conectar usando MQTT sobre TLS (MQTTS), ele deve "
 "possuir:"
 
-#: ../../source/mqtt-tls.rst:112
+#: ../../source/mqtt-tls.rst:111
 msgid "A key pair (.key file);"
 msgstr "Um par de chaves (arquivo .key);"
 
-#: ../../source/mqtt-tls.rst:113
+#: ../../source/mqtt-tls.rst:112
 msgid ""
-"A certificate signed by a Certificate Authority (CA) trusted by VerneMQ "
+"A certificate signed by a Certificate Authority (CA) trusted by dojot "
 "(.crt file);"
 msgstr ""
 "Um certificado assinado por uma Autoridade de Certificação (CA) confiável"
-" para VerneMQ (arquivo .crt);"
+" pela dojot (arquivo .crt);"
 
-#: ../../source/mqtt-tls.rst:115
+#: ../../source/mqtt-tls.rst:114
 msgid "The certificate of this CA (.crt file);"
 msgstr "O certificado desta CA (arquivo .crt);"
 
-#: ../../source/mqtt-tls.rst:117
+#: ../../source/mqtt-tls.rst:116
 msgid ""
-"The final objective when retrieving the certificate for a device is to "
-"obtain this three files, certificates and key pair, mentioned above."
+"The objective when retrieving the certificate for a device is to obtain "
+"these three files: the device's certificate, the device's key pair and "
+"the CA certificate."
 msgstr ""
-"O objetivo final ao recuperar o certificado para um dispositivo é obter "
-"esses três arquivos, certificados e par de chaves, mencionados acima."
+"O objetivo ao recuperar o certificado para um dispositivo é obter estes "
+"três arquivos: o certificado do dispositivo, o par de chaves do "
+"dispositivo e o certificado  da *CA*."
 
-#: ../../source/mqtt-tls.rst:121
+#: ../../source/mqtt-tls.rst:119
 msgid ""
 "There are two tools to facilitate obtaining certificates from the dojot "
 "platform:"
@@ -282,19 +288,17 @@ msgstr ""
 "Existem duas ferramentas para facilitar a obtenção  de certificados da "
 "plataforma dojot:"
 
-#: ../../source/mqtt-tls.rst:124
-msgid "There is a script, see more in `CertReq`_."
-msgstr "Existe um script, veja mais em `CertReq`_"
+#: ../../source/mqtt-tls.rst:122
+msgid "The `CertReq`_ script."
+msgstr ""
+
+#: ../../source/mqtt-tls.rst:123
+msgid ""
+"GUI's embedded certificate generation utility (more details in "
+"A_SER_CRIADO)."
+msgstr ""
 
 #: ../../source/mqtt-tls.rst:125
-msgid ""
-"And t there's a feature in the web interface (GUI) to generate "
-"certificates easily, see more in A_SER_CRIADO."
-msgstr ""
-"E há um recurso na interface web (GUI) para gerar certificados "
-"facilmente, veja mais em A_SER_CRIADO."
-
-#: ../../source/mqtt-tls.rst:128
 msgid ""
 "In addition, you can use `OpenSSL`_ to create certificates and sign using"
 " the `API - x509-identity-mgmt`_, see more  at `X.509 Identity "
@@ -304,15 +308,15 @@ msgstr ""
 "assinar usando a `API - x509-identity-mgmt`_, veja mais em `X.509 "
 "Identity Management`_."
 
-#: ../../source/mqtt-tls.rst:133
+#: ../../source/mqtt-tls.rst:130
 msgid "A brief explanation of how to use `CertReq`_:"
 msgstr "Uma breve explicação de como usar `CertReq`_:"
 
-#: ../../source/mqtt-tls.rst:135
+#: ../../source/mqtt-tls.rst:132
 msgid "As prerequisites this uses `git`_, `OpenSSL`_, `curl`_ and `jq`_ ."
 msgstr "Como pré-requisitos, ele usa `git`_, `OpenSSL`_, `curl`_ e `jq`_."
 
-#: ../../source/mqtt-tls.rst:137
+#: ../../source/mqtt-tls.rst:134
 msgid ""
 "On Debian-based Linux distributions, you can install these prerequisites "
 "by running:"
@@ -320,7 +324,7 @@ msgstr ""
 "Em distribuições Linux baseadas em Debian, você pode instalar esses "
 "pré-requisitos executando: "
 
-#: ../../source/mqtt-tls.rst:147
+#: ../../source/mqtt-tls.rst:141
 msgid ""
 "Download `CertReq`_  on your machine directly from dojot repository and "
 "switch to the corresponding version of your dojot environment:"
@@ -328,11 +332,11 @@ msgstr ""
 "Baixe `CertReq`_ em sua máquina diretamente do repositório dojot e mude "
 "para a versão correspondente do seu ambiente dojot:"
 
-#: ../../source/mqtt-tls.rst:156
+#: ../../source/mqtt-tls.rst:150
 msgid "Enter in ``certreq`` directory:"
 msgstr "Entre no diretório ``certreq``:"
 
-#: ../../source/mqtt-tls.rst:162
+#: ../../source/mqtt-tls.rst:156
 msgid ""
 "Finally, you can run the script to generate certificates and keys as "
 "follows:"
@@ -340,7 +344,7 @@ msgstr ""
 "Finalmente, você pode executar o script para gerar certificados e chaves "
 "da seguinte maneira:"
 
-#: ../../source/mqtt-tls.rst:174
+#: ../../source/mqtt-tls.rst:168
 msgid ""
 "Given a *username* ``admin`` and *password* ``admin``, this command will "
 "request a certificate with *device ID (identifier)* ``a1998e`` for the "
@@ -351,19 +355,19 @@ msgstr ""
 "``a1998e`` para a plataforma dojot *host* ``localhost`` na *porta* "
 "``8000``."
 
-#: ../../source/mqtt-tls.rst:179
+#: ../../source/mqtt-tls.rst:174
 msgid ""
-"For more understanding about parameters above, check `CertReq - "
-"Parameters`_, and for see more details about this above process access "
-"`How to connect a device with the IoTAgent-VerneMQ with mutual TLS`_ and "
-"`CertReq`_"
+"For more details about the CertReq parameters, check the `CertReq - "
+"Parameters`_ document. Other useful resources for this matter are the "
+"`How to connect a device with the IoTAgent-VerneMQ with mutual TLS`_ "
+"tutorial and the `CertReq`_ documentation."
 msgstr ""
-"Para mais compreensão sobre os parâmetros acima, verifique `CertReq - "
-"Parameters`_, e para ver mais detalhes sobre o processo acima `How to "
-"connect a device with the IoTAgent-VerneMQ with mutual TLS`_ e "
-"`CertReq`_. "
+"Para mais detalhes sobre os parâmetros do CertReq, verifique o documento "
+"`CertReq - Parameters`_. Outros recursos úteis para este assunto são o "
+"tutorial `How to connect a device with the IoTAgent-VerneMQ with mutual "
+"TLS`_ e a documentação do `CertReq`_."
 
-#: ../../source/mqtt-tls.rst:184
+#: ../../source/mqtt-tls.rst:180
 msgid ""
 "And in the end this tool will create the directories ``./ca`` and "
 "``./cert_{DEVICE_ID}`` to store the certificates and public/private keys."
@@ -372,27 +376,27 @@ msgstr ""
 "``./cert_{DISPOSTIVO_ID}`` para armazenar os certificados e chaves "
 "públicas/privadas."
 
-#: ../../source/mqtt-tls.rst:190
+#: ../../source/mqtt-tls.rst:186
 msgid "Simulating a device with mosquitto"
 msgstr "Simulando um dispositivo com mosquitto"
 
-#: ../../source/mqtt-tls.rst:192
+#: ../../source/mqtt-tls.rst:188
 msgid ""
-"You can use the mosquitto to emulate a device to publish and subscribe in"
-" dojot via MQTT."
+"We are going to use `mosquitto` to simulate a device; it will publish and"
+" subscribe in dojot via MQTT."
 msgstr ""
-"Você pode usar o mosquitto para emular um dispositivo para publicar e "
-"subscrever na dojot via MQTT."
+"Vamos usar `mosquitto` para simular um dispositivo; ele publicará e "
+"subscreverá na dojot via MQTT."
+
+#: ../../source/mqtt-tls.rst:191
+msgid ""
+"Before continuing, install `mosquitto_pub` and `mosquitto_sub` from "
+"package `mosquitto-clients` on Debian-based Linux distributions:"
+msgstr ""
+"Antes  de continuar, instale o `mosquitto_pub` e `mosquitto_sub` do "
+"pacote `mosquitto-clients` em distribuições Linux baseadas no Debian:"
 
 #: ../../source/mqtt-tls.rst:195
-msgid ""
-"Before install `mosquitto_pub` and `mosquitto_sub` from package "
-"`mosquitto-clients` on Debian-based Linux distributions:"
-msgstr ""
-"Antes instalar `mosquitto_pub` e `mosquitto_sub` do pacote `mosquitto-"
-"clients` em distribuições Linux baseadas no Debian:"
-
-#: ../../source/mqtt-tls.rst:199
 msgid ""
 "Some Linux distributions, Debian-based Linux distributions in particular,"
 " have two packages for `mosquitto`_, one containing tools to access it "
@@ -400,20 +404,20 @@ msgid ""
 "subscribing to topics) and another one containing the MQTT broker too. In"
 " this tutorial, only the tools from package `mosquitto-clients` on "
 "Debian-based Linux distributions are going to be used. Please check if "
-"MQTT broker is not running before starting dojot (by running commands "
-"like ``ps aux | grep mosquitto``) to avoid port conflicts."
+"another MQTT broker is not running before starting dojot (by running "
+"commands like ``ps aux | grep mosquitto``) to avoid port conflicts."
 msgstr ""
 "Algumas distribuições Linux, distribuições Linux baseadas em Debian em "
 "particular, tem dois pacotes para `mosquitto`_ - um contendo ferramentas "
 "para cliente (ou seja, mosquitto_pub e mosquitto_sub para publicar "
-"mensagens e se subscrever tópicos) e outro contendo o broker MQTT também."
-" E neste tutorial, apenas as ferramentas do pacote `mosquitto-clients` em"
-" Distribuições Linux baseadas no Debian serão usadas. Verifique se o "
-"broker MQTT não está em execução antes de iniciar a dojot (executando "
-"comandos como ``ps aux | grep mosquitto``) para evitar conflitos de "
-"porta."
+"mensagens e se subscrever tópicos) e outro contendo o *MQTT Brokers* "
+"também. E neste tutorial, apenas as ferramentas do pacote `mosquitto-"
+"clients` em Distribuições Linux baseadas no Debian serão usadas. "
+"Verifique se um outro *MQTT Brokers* não está em execução antes de "
+"iniciar a dojot (executando comandos como ``ps aux | grep mosquitto``) "
+"para evitar conflitos de porta."
 
-#: ../../source/mqtt-tls.rst:209
+#: ../../source/mqtt-tls.rst:205
 msgid ""
 "On Debian-based Linux distributions you can install ``mosquitto-clients``"
 "  running:"
@@ -421,33 +425,33 @@ msgstr ""
 "Em distribuições Linux baseadas em Debian, você pode instalar "
 "``mosquitto-clients`` executando:"
 
-#: ../../source/mqtt-tls.rst:220
+#: ../../source/mqtt-tls.rst:216
 msgid ""
 "To publish and subscribe using the appropriate certificates, you must "
 "have IotAgent VerneMQ Broker, V2K Bridge, K2V Bridge and the X.509 "
 "Identity Management running, see more in `IotAgent-VerneMQ`_."
 msgstr ""
 "Para publicar e subscrever usando os certificados apropriados, você deve "
-"ter IotAgent VerneMQ Broker, V2K Bridge, K2V Bridge e o X.509 Identity "
-"Management em execução, veja mais em `IotAgent-VerneMQ`_."
+"ter *IotAgent VerneMQ Broker*, *V2K Bridge*, *K2V Bridge* e o *X.509 "
+"Identity Management* em execução, veja mais em `IotAgent-VerneMQ`_."
 
-#: ../../source/mqtt-tls.rst:225
+#: ../../source/mqtt-tls.rst:221
 msgid "Simulating a device publishing with mosquitto"
 msgstr "Simulando uma publicação de dispositivo com mosquitto"
 
-#: ../../source/mqtt-tls.rst:231
+#: ../../source/mqtt-tls.rst:227
 msgid ""
 "An example of publication with the certificates and keys generated in the"
-" previous topic with tool `CertReq`_."
+" previous topic with `CertReq`_ tool."
 msgstr ""
 "Um exemplo de publicação com os certificados e chaves gerados no tópico "
 "anterior com a ferramenta `CertReq`_."
 
-#: ../../source/mqtt-tls.rst:245
+#: ../../source/mqtt-tls.rst:241
 msgid "Simulating a device subscribing with mosquitto"
 msgstr "Simulando um dispositivo subscrevendo com mosquitto"
 
-#: ../../source/mqtt-tls.rst:251
+#: ../../source/mqtt-tls.rst:247
 msgid ""
 "For more details about simulate a device see in `Simulating a device with"
 " mosquitto`_ and more about simulate a device with security in "
@@ -457,7 +461,7 @@ msgstr ""
 "`Simulating a device with mosquitto`_ e mais sobre simular um dispositivo"
 " com segurança em `Simulating a device with mosquitto with security`_."
 
-#: ../../source/mqtt-tls.rst:259
+#: ../../source/mqtt-tls.rst:255
 msgid ""
 "To publish and subscribe using the appropriated certificates, you must "
 "need to be with the IotAgent Mosca Broker and the X.509 Identity "
@@ -466,82 +470,79 @@ msgid ""
 "publish and subscribe, as follows:"
 msgstr ""
 "Para publicar e subscrever usando os certificados apropriados, você deve "
-"estar com o IotAgent Mosca Broker e o X.509 Identity Management em "
+"estar com o *IotAgent Mosca Broker* e o X.509 Identity Management em "
 "execução, veja mais em `IotAgent-Mosca`_. Além disso, você precisa usar "
 "um **tópico diferente** do VerneMQ e passar o identificador para publicar"
 " e subscrever, da seguinte maneira:"
 
-#: ../../source/mqtt-tls.rst:266
+#: ../../source/mqtt-tls.rst:262
 msgid "How to publish:"
 msgstr "Como publicar:"
 
-#: ../../source/mqtt-tls.rst:272
+#: ../../source/mqtt-tls.rst:268
 msgid "How to subscribe:"
 msgstr "Como se subscrever:"
 
-#: ../../source/mqtt-tls.rst:279
+#: ../../source/mqtt-tls.rst:276
 msgid ""
-"Note: In all those examples above, the message is a publication with an "
-"attribute, this attribute has the label `attr_example` and a new value "
-"10, you need to change this for your case."
+"In these examples, the published message has the attribute "
+"`attrs_example`. You need to change its name to comply to your device's "
+"attribute."
 msgstr ""
-"Nota: Em todos os exemplos acima, a mensagem é uma publicação com um "
-"atributo, este atributo tem o rótulo `attr_example` e um novo valor 10, "
-"você precisa mudar isso para o seu caso"
+"Nestes exemplos, a mensagem publicada possui o atributo `attrs_example`. "
+"Você precisa alterar para os atributos do seu dispositivo."
 
-#: ../../source/mqtt-tls.rst:284
+#: ../../source/mqtt-tls.rst:282
 msgid "Unsecured mode MQTT (without TLS)"
-msgstr "MQTT de modo inseguro (sem TLS)"
+msgstr "Modo inseguro do MQTT (sem TLS)"
 
-#: ../../source/mqtt-tls.rst:286
-msgid "**MQTT without security is not recommended, use this for testing only.**"
-msgstr "**MQTT sem segurança não é recomendado, use-o apenas para teste.**"
+#: ../../source/mqtt-tls.rst:285
+msgid "MQTT without security is not recommended, use this for testing only."
+msgstr "MQTT sem segurança não é recomendado, use-o apenas para teste."
 
-#: ../../source/mqtt-tls.rst:288
+#: ../../source/mqtt-tls.rst:287
 msgid ""
 "In *ansible-dojot* (kubernetes deployment)  you can disable the "
-"`unsecured mode` by changing the ``dojot_insecure_mqtt`` variable to "
+"*unsecured mode* by changing the ``dojot_insecure_mqtt`` variable to "
 "``false``, this is valid in both Brokers. Check the :doc:`./installation-"
 "guide` for more info."
 msgstr ""
 "Em *ansible-dojot* (*deployment* kubernetes), você pode desabilitar o "
 "modo não seguro alterando a variável ``dojot_insecure_mqtt`` para` "
-"`false``, isso é válido em ambos os Brokers. Verifique :doc:`./installation-"
-"guide` para mais informações."
+"`false``, isso é válido em ambos os *Brokers*. Verifique :doc"
+":`./installation-guide` para mais informações."
 
-#: ../../source/mqtt-tls.rst:297
+#: ../../source/mqtt-tls.rst:296
 msgid ""
-"You can disable the ``unsecured mode`` if you make port 1883 unavailable "
+"You can disable the *unsecured mode* if you make port 1883 unavailable "
 "for external access."
 msgstr ""
-"Você pode desabilitar o modo inseguro se você tornar a porta 1883 "
+"Você pode desabilitar o *modo inseguro* se você tornar a porta 1883 "
 "indisponível para acesso externo."
 
-#: ../../source/mqtt-tls.rst:299
+#: ../../source/mqtt-tls.rst:298
 msgid ""
-"See more about simulate a device without security in `Simulating a device"
-" with mosquitto without security`_."
+"For more details about simulating a device without security, check the "
+"`Simulating a device with mosquitto without security`_ tutorial."
 msgstr ""
 "Veja mais sobre como simular um dispositivo sem segurança em `Simulating "
 "a device with mosquitto without security`_"
 
-#: ../../source/mqtt-tls.rst:305
+#: ../../source/mqtt-tls.rst:304
 msgid ""
-"You can disable the ``unsecured mode`` in Mosca too for that you need set"
-" the environment variable ALLOW_UNSECURED_MODE to ``'false'`` or the port"
-" 1883 shouldn't to be available for external access. See more in "
-"`IotAgent-Mosca`_."
+"You can disable the *unsecured mode* in Mosca by changing the "
+"`ALLOW_UNSECURED_MODE` environment variable to ``'false'`` or by removing"
+" external access to the port `1883`. See more in `IotAgent-Mosca`_."
 msgstr ""
-"Você pode desabilitar o modo não seguro no Mosca também para isso você "
-"precisa definir a variável de ambiente ALLOW_UNSECURED_MODE para "
-"``'false'`` ou a porta 1883 não deve estar disponível para acesso "
-"externo. Veja mais em `IotAgent-Mosca`_."
+"Você pode desabilitar o *modo não seguro* no Mosca mudando a variável de "
+"ambiente `ALLOW_UNSECURED_MODE` para ``'false'`` ou removendo o acesso "
+"externo à porta `1883`. Veja mais em `IotAgent-Mosca`_."
 
-#: ../../source/mqtt-tls.rst:312
+#: ../../source/mqtt-tls.rst:309
 msgid "How to read a certificate"
 msgstr "Como ler um certificado"
 
-#: ../../source/mqtt-tls.rst:314
+#: ../../source/mqtt-tls.rst:311
 msgid ""
 "A certificate file can be in two formats: PEM (base64 text) or DER "
 "(binary). `OpenSSL`_ offers tools to read such formats:"
@@ -549,16 +550,4 @@ msgstr ""
 "Um arquivo de certificado pode estar em dois formatos: PEM (texto base64)"
 " ou DER (binário). `OpenSSL`_ oferece ferramentas para ler esses "
 "formatos:"
-
-#~ msgid "Broker MQTT IotAgent VerneMQ (Default)"
-#~ msgstr "Broker MQTT IotAgent VerneMQ (padrão)"
-
-#~ msgid "Broker MQTT IotAgent Mosca (Legacy)"
-#~ msgstr "Broker MQTT IotAgent Mosca (Legado)"
-
-#~ msgid "About using IotAgent VerneMQ or IotAgent Mosca"
-#~ msgstr "Sobre o uso do IotAgent VerneMQ ou IotAgent Mosca"
-
-#~ msgid "A brief explanation of how to use `CertReq`_:"
-#~ msgstr "Uma breve explicação de como usar `CertReq`_:"
 

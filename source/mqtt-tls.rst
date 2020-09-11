@@ -38,11 +38,11 @@ contains the information required from the entity and some information about
 the certificate use, hostnames and IPs where the certificate will reside,
 alternative names for the entity, etc.
 
-Brokers MQTT
+MQTT Brokers
 ~~~~~~~~~~~~
 
-Broker MQTT IotAgent VerneMQ (Default)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+IotAgent VerneMQ (Default)
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The IotAgent VerneMQ extends `VerneMQ`_ with some features and services
 for dojot case, see more in `IotAgent-VerneMQ`_.
@@ -55,8 +55,8 @@ To use IotAgent VerneMQ with TLS, you need to configure by environment variable:
 
 See others environment variables in `VerneMQ Dojot - Environment variables`_.
 
-Broker MQTT IotAgent Mosca (Legacy)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+IotAgent Mosca (Legacy)
+^^^^^^^^^^^^^^^^^^^^^^^
 
 The IotAgent Mosca uses `Mosca`_ that is a node.js mqtt
 broker,
@@ -73,36 +73,35 @@ To use IotAgent Mosca with TLS, you need to configure by environment variable:
 About using IotAgent VerneMQ or IotAgent Mosca
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-You shouldn't use the two brokers together to avoid port conflicts,
-or use `Broker MQTT IotAgent VerneMQ` or
-use `Legacy Broker MQTT IotAgent Mosca`.
-By default our deployments are using `IotAgent VerneMQ`.
+You shouldn't use the two brokers together to avoid port conflicts.
+Use either VerneMQ (default) or Mosca (legacy).
+By default, our deployments are using VerneMQ.
 
-In *ansible-dojot* (kubernetes deployment) there is a variable ``dojot_domain_name``,
-if this variable is defined, you don't need to configure the environment variable
-mentioned in the previous topics, this is valid in both Brokers.
-Still in  *ansible-dojot* you can disable the `unsecured mode`
-by changing the variable ``dojot_insecure_mqtt`` to ``false``,
-this is valid in both Brokers too, we will explain about the `unsecured mode`
-in the next topics.
-Check the :doc:`./installation-guide` for more info.
+For the Ansible deployment (i.e. Kubernetes) of both brokers:
+
+ - If you have defined the ``dojot_domain_name`` variable,
+   you don't need to configure the environment variables
+   mentioned in the previous topics.
+ - You can disable the *unsecured mode*
+   by changing the ``dojot_insecure_mode`` variable to ``false``.
 
 In addition, you can choose between `IotAgent VerneMQ` or `IotAgent Mosca`
-when configuring *ansible-dojot*.
-In *docker-compose*, you need to uncomment and comment the services
+when configuring Ansible deployment  (i.e. Kubernetes).
+In Docker-compose, you need to uncomment and comment the services
 in the ``docker-compose.yml``, there's a commented explanation about that in this file.
+
+
 Check the :doc:`./installation-guide` for more info.
 
-All the certificates will be created automatically,
-not needing to configure manually the certificates into the brokers.
+All the certificates will be automatically created, so there is no need to manually configure the brokers' ones.
 
 How to connect a device with the IotAgent VerneMQ or IotAgent Mosca with mutual TLS
 ------------------------------------------------------------------------------------
 
 .. ATTENTION::
-   First of all, you will need a running dojot environment
-   And then you need created device on the dojot
-   and gets its identifier (ID).
+   First of all, you will need a running dojot's environment.
+   Then you should create a new device (or use an existing one if you prefer) 
+   and retrieve its ID.
 
 Retrieving certificate for a device
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -111,19 +110,17 @@ For a device to connect using MQTT over TLS (MQTTS), it must possess:
 
 -  A key pair (.key file);
 -  A certificate signed by a Certificate Authority (CA) trusted by
-   VerneMQ (.crt file);
+   dojot (.crt file);
 -  The certificate of this CA (.crt file);
 
-The final objective when retrieving the certificate for a device is to
-obtain this three files,
-certificates and key pair, mentioned above.
+The objective when retrieving the certificate for a device is to
+obtain these three files: the device's certificate, the device's key pair and the CA certificate.
 
 There are two tools to facilitate
 obtaining certificates from the dojot platform:
 
-- There is a script, see more in `CertReq`_.
-- And t there's a feature in the web interface (GUI) to generate
-  certificates easily, see more in A_SER_CRIADO.
+- The `CertReq`_ script.
+- GUI's embedded certificate generation utility (more details in A_SER_CRIADO).
 
 In addition, you can use `OpenSSL`_ to create
 certificates and sign using the `API - x509-identity-mgmt`_,
@@ -139,10 +136,7 @@ these prerequisites by running:
 
 .. code-block:: bash
 
-  sudo apt install git
-  sudo apt-get install curl
-  sudo apt-get install jq
-  sudo apt-get install openssl
+  sudo apt install git curl jq openssl
 
 Download `CertReq`_  on your machine directly from dojot repository and switch
 to the corresponding version of your dojot environment:
@@ -176,10 +170,12 @@ this command will request a certificate
 with *device ID (identifier)* ``a1998e``
 for the dojot platform *host* ``localhost`` on *port* ``8000``.
 
-.. NOTE::  For more understanding about parameters above, check `CertReq - Parameters`_, and for
-            see more details about this above process access
-            `How to connect a device with the IoTAgent-VerneMQ with mutual TLS`_
-            and `CertReq`_
+
+.. NOTE::   For more details about the CertReq parameters, check
+            the `CertReq - Parameters`_ document.
+            Other useful resources for this matter are
+            the `How to connect a device with the IoTAgent-VerneMQ with mutual TLS`_
+            tutorial and the `CertReq`_ documentation.
 
 And in the end this tool will create the directories ``./ca`` and
 ``./cert_{DEVICE_ID}`` to store the certificates
@@ -189,10 +185,10 @@ and public/private keys.
 Simulating a device with mosquitto
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You can use the mosquitto to emulate a device to publish and
-subscribe in dojot via MQTT.
+We are going to use `mosquitto` to simulate a device;
+it will publish and subscribe in dojot via MQTT.
 
-Before install `mosquitto_pub` and `mosquitto_sub` from
+Before continuing, install `mosquitto_pub` and `mosquitto_sub` from
 package `mosquitto-clients` on Debian-based Linux distributions:
 
 .. ATTENTION::
@@ -203,7 +199,7 @@ package `mosquitto-clients` on Debian-based Linux distributions:
     another one containing the MQTT broker too. In this tutorial, only the
     tools from package `mosquitto-clients` on Debian-based Linux distributions
     are going to be used.
-    Please check if MQTT broker is not running before starting dojot
+    Please check if another MQTT broker is not running before starting dojot
     (by running commands like ``ps aux | grep mosquitto``) to avoid port conflicts.
 
 On Debian-based Linux distributions you can install
@@ -214,8 +210,8 @@ On Debian-based Linux distributions you can install
    sudo apt-get install mosquitto-clients
 
 
-Broker MQTT IotAgent VerneMQ (Default)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+IotAgent VerneMQ (Default)
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To publish and subscribe using the appropriate certificates,
 you must have IotAgent VerneMQ Broker, V2K Bridge,
@@ -229,7 +225,7 @@ Simulating a device publishing with mosquitto
    mosquitto_pub  -h localhost -p 8883 -t <tenant>:<deviceId>/attrs  -m '{"attr_example": 10}' --cert <device .crt file> --key <device .key file> --cafile <ca .crt file>
 
 An example of publication with the certificates and
-keys generated in the previous topic with tool `CertReq`_.
+keys generated in the previous topic with `CertReq`_ tool.
 
 .. code:: bash
 
@@ -253,8 +249,8 @@ in `Simulating a device with mosquitto`_
 and more about simulate a device with security
 in `Simulating a device with mosquitto with security`_.
 
-Broker MQTT IotAgent Mosca (Legacy)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+IotAgent Mosca (Legacy)
+^^^^^^^^^^^^^^^^^^^^^^^
 
 To publish and subscribe using the appropriated certificates,
 you must need to be with the IotAgent Mosca Broker and
@@ -276,37 +272,38 @@ How to subscribe:
    mosquitto_sub  -h localhost -p 8883 -t /<tenant>/<deviceId>/config -i <tenant>:<deviceId> --cert <device .crt file> --key <device .key file> --cafile <ca .crt file>
 
 
-Note: In all those examples above, the message is a publication
-with an attribute, this attribute has the label `attr_example`
-and a new value 10, you need to change this for your case.
+.. NOTE::
+   In these examples, the published message has the attribute `attrs_example`.
+   You need to change its name to comply to your device's attribute.
+
+.. _Unsecured mode MQTT:
 
 Unsecured mode MQTT (without TLS)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**MQTT without security is not recommended, use this for testing only.**
+.. ATTENTION::
+   MQTT without security is not recommended, use this for testing only.
 
-In *ansible-dojot* (kubernetes deployment)  you can disable the `unsecured mode`
+In *ansible-dojot* (kubernetes deployment)  you can disable the *unsecured mode*
 by changing the ``dojot_insecure_mqtt`` variable to ``false``,
 this is valid in both Brokers.
 Check the :doc:`./installation-guide` for more info.
 
 
-Broker MQTT IotAgent VerneMQ (Default)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+IotAgent VerneMQ (Default)
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-You can disable the ``unsecured mode`` if you make port 1883 unavailable for external access.
+You can disable the *unsecured mode* if you make port 1883 unavailable for external access.
 
-See more about simulate a device without security
-in `Simulating a device with mosquitto without security`_.
+For more details about simulating a device without security, check the
+`Simulating a device with mosquitto without security`_ tutorial.
 
-Broker MQTT IotAgent Mosca (Legacy)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+IotAgent Mosca (Legacy)
+^^^^^^^^^^^^^^^^^^^^^^^
 
-You can disable the ``unsecured mode`` in Mosca too
-for that you need set the environment variable
-ALLOW_UNSECURED_MODE to ``'false'`` or the port 1883 shouldn't to
-be available for external access.
-See more in `IotAgent-Mosca`_.
+You can disable the *unsecured mode* in Mosca by changing the
+`ALLOW_UNSECURED_MODE` environment variable to ``'false'`` or by removing external
+access to the port `1883`. See more in `IotAgent-Mosca`_.
 
 How to read a certificate
 -------------------------

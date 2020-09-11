@@ -90,7 +90,7 @@ mosquitto_pub. See more about in :doc:`using-api-interface` at topic Sending Mes
     Check :doc:`faq/faq` for more info about the differences between them.
 
 .. NOTE::
-    The examples are using insecure MQTT. The recommended approach is to use TLS. For Mosca, check
+    The examples are using insecure MQTT. The recommended approach is to use TLS. Check
     the section :doc:`mqtt-tls`.
 
 .. raw:: html
