@@ -197,7 +197,7 @@ msgid ""
 "variable to ``false``."
 msgstr ""
 "Você pode desabilitar o  *modo não seguro * mudando a variável  "
-"``dojot_insecure_mode`` para `` false``."
+"``dojot_insecure_mode`` para ``false``."
 
 #: ../../source/mqtt-tls.rst:88
 msgid ""

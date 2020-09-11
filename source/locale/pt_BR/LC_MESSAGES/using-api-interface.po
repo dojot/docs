@@ -244,7 +244,7 @@ msgstr ""
 "Para executar `mosquitto_pub` e` mosquitto_sub` sem usar TLS como nos "
 "exemplos abaixo, você precisa definir algumas configurações (ou para como "
 "desativar o modo sem TLS). Para obter mais detalhes sobre este tópico, "
-"consulte a: ref: página `MQTT do modo não seguro`."
+"consulte a página ref:`Unsecured mode MQTT`."
 
 #: ../../source/using-api-interface.rst:249
 msgid ""
