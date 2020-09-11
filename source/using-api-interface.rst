@@ -234,7 +234,7 @@ translate any message format to this scheme using flows, though), such as:
     `mosquitto`_ - one containing tools to access it (i.e. mosquitto_pub and mosquitto_sub for
     publishing messages and subscribing to topics) and another one containing the MQTT broker too.
     In this tutorial, only the tools from package `mosquitto-clients` on Debian-based Linux
-    distributions are going to be used. Please check another if MQTT broker is not running before starting
+    distributions are going to be used. Please check if another if MQTT broker is not running before starting
     dojot (by running commands like ``ps aux | grep mosquitto``) to avoid port conflicts.
 
 
@@ -242,9 +242,9 @@ For simplicity's sake, we are not using TLS in the examples below. Check :doc:`m
 information on its usage.
 
 .. Note::
-    To run `mosquitto_pub` and `mosquitto_sub` without using TLS,
+    To run `mosquitto_pub` and `mosquitto_sub` without using TLS
     as in the examples below, you need to configure some settings
-    (or for how to disable the mode without TLS), see more in :ref:`Unsecured mode MQTT`.
+    (or for how to disable the mode without TLS). For more details on this topic, please refer to the :ref:`Unsecured mode MQTT` page.
 
 As of **v0.5.0**, you can choose the between two MQTT brokers: Mosca or VerneMQ. By default, VerneMQ
 is used, but you can use Mosca too. Check the :doc:`../installation-guide` for more information.

@@ -8,13 +8,15 @@ msgstr ""
 "Project-Id-Version: dojot 0.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-09-09 21:43-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2020-09-11 16:57-0300\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: pt_BR\n"
+"X-Generator: Poedit 2.4.1\n"
 
 #: ../../source/components-and-apis.rst:2
 msgid "Components and APIs"
@@ -366,7 +368,7 @@ msgstr ""
 
 #: ../../source/components-and-apis.rst:112
 msgid "Exposed APIs (API Gateway)"
-msgstr "APIS expostas (API Gateway)"
+msgstr "APIs expostas (API Gateway)"
 
 #: ../../source/components-and-apis.rst:114
 msgid ""
@@ -377,19 +379,19 @@ msgid ""
 "used via API Gateway. See more about how using APIs in :doc:`./using-api-"
 "interface`."
 msgstr ""
-"O API gateway usado na dojot reencaminha alguns dos *endpoints* dos "
+"O *API gateway* usado na dojot reencaminha alguns dos *endpoints* dos "
 "componentes. A tabela a seguir mostra quais **endpoint exposto pelo API "
-"gateway** são mapeado para quais **endpoint dos componentes**, e suas  "
-"**endpoint componentes documentações** usado via API Gateway. Veja mais "
-"como usar APIs em :doc:`./using-api-interface`."
+"gateway** são mapeado para quais **endpoint dos componentes**, e a "
+"documentação do **endpoint** do componente usado via* API Gateway*. Veja "
+"mais sobre como usar as APIs em :doc:`./using-api-interface`."
 
 #: ../../source/components-and-apis.rst:121
 msgid "Exposed endpoints"
-msgstr "*Endpoint* esposto"
+msgstr "*Endpoint* exposto"
 
 #: ../../source/components-and-apis.rst
 msgid "Endpoint exposed"
-msgstr "*Endpoint* esposto"
+msgstr "*Endpoint* exposto"
 
 #: ../../source/components-and-apis.rst
 msgid "by the API gateway"
@@ -401,7 +403,7 @@ msgstr "*Endpoint*"
 
 #: ../../source/components-and-apis.rst
 msgid "Needs"
-msgstr "Precisa de "
+msgstr "Precisa de"
 
 #: ../../source/components-and-apis.rst
 msgid "Authentication"
@@ -553,22 +555,21 @@ msgstr ""
 
 #: ../../source/components-and-apis.rst:229
 msgid ""
-"**NOTE: Some of the endpoints from component aren't exposed, but are used"
-" internally.**"
+"**NOTE: Some of the endpoints from component aren't exposed, but are used "
+"internally.**"
 msgstr ""
-"**NOTA: Alguns endpoints não são expostos, mas são utilizados "
+"**NOTA: Alguns *endpoints* não são expostos, mas são utilizados "
 "internamente.**"
 
 #: ../../source/components-and-apis.rst:232
 msgid ""
-"In addition, the API gateway reroutes the endpoints with their ports from"
-" component, so that they become uniform: all of them are accessible "
-"through the same port (default is TCP port 8000), see the following "
-"table."
+"In addition, the API gateway reroutes the endpoints with their ports from "
+"component, so that they become uniform: all of them are accessible "
+"through the same port (default is TCP port 8000), see the following table."
 msgstr ""
 "Além disso, o gateway da API redireciona os *endpoints*  com suas "
-"repectivas portas do componente, para que se tornem uniformes:  todos "
-"eles são acessíveis pela mesma porta (o padrão é a porta TCP 8000),  "
+"respectivas portas do componente, para que se tornem uniformes: todos "
+"eles são acessíveis pela mesma porta (o padrão é a porta TCP 8000), "
 "consulte a tabela a seguir."
 
 #: ../../source/components-and-apis.rst:236
@@ -577,11 +578,11 @@ msgstr "*Endpoints* originais para o API gateway"
 
 #: ../../source/components-and-apis.rst:240
 msgid "Original endpoint"
-msgstr "Endpoints Originais"
+msgstr "*Endpoints* Originais"
 
 #: ../../source/components-and-apis.rst:241
 msgid "Gateway Endpoint"
-msgstr "Gateway Endpoint"
+msgstr "*Gateway Endpoint*"
 
 #: ../../source/components-and-apis.rst:243
 #: ../../source/components-and-apis.rst:252
@@ -725,18 +726,18 @@ msgstr "Mensagens do Kafka"
 #: ../../source/components-and-apis.rst:300
 msgid ""
 "These are the messages sent by components and their subjects. If you are "
-"developing a new internal component (such as a new IoT agent), see `API -"
-" data-broker`_ to check how to receive messages sent by other components "
+"developing a new internal component (such as a new IoT agent), see `API - "
+"data-broker`_ to check how to receive messages sent by other components "
 "in dojot."
 msgstr ""
-"Essas são as mensagens enviadas pelos componentes e seus assuntos. Se "
-"você estiver desenvolvendo um novo componente interno (como um novo "
-"agente de IoT),consulte `API - data-broker`_ para verificar como receber "
-"mensagens enviadas por outros componentes na dojot."
+"Essas são as mensagens enviadas pelos componentes e seus tópicos. Se você "
+"estiver desenvolvendo um novo componente interno (como um novo agente de "
+"IoT),consulte `API - data-broker`_ para verificar como receber mensagens "
+"enviadas por outros componentes na dojot."
 
 #: ../../source/components-and-apis.rst:305
 msgid "Original endpoints"
-msgstr "Endpoints Originais"
+msgstr "*Endpoints* Originais"
 
 #: ../../source/components-and-apis.rst:309
 msgid "Message"
@@ -783,4 +784,3 @@ msgstr "Criação/remoção de *Tenants* (`Mensagens - auth`_)"
 #: ../../source/components-and-apis.rst:319
 msgid "``dojot.tenancy``"
 msgstr ""
-

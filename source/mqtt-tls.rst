@@ -86,7 +86,7 @@ For the Ansible deployment (i.e. Kubernetes) of both brokers:
    by changing the ``dojot_insecure_mode`` variable to ``false``.
 
 In addition, you can choose between `IotAgent VerneMQ` or `IotAgent Mosca`
-when configuring Ansible deployment  (i.e. Kubernetes).
+when configuring the Ansible deployment (i.e. Kubernetes).
 In Docker-compose, you need to uncomment and comment the services
 in the ``docker-compose.yml``, there's a commented explanation about that in this file.
 
@@ -189,7 +189,7 @@ We are going to use `mosquitto` to simulate a device;
 it will publish and subscribe in dojot via MQTT.
 
 Before continuing, install `mosquitto_pub` and `mosquitto_sub` from
-package `mosquitto-clients` on Debian-based Linux distributions:
+the `mosquitto-clients` package on Debian-based Linux distributions:
 
 .. ATTENTION::
     Some Linux distributions, Debian-based Linux distributions in particular,
