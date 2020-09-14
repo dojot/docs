@@ -112,7 +112,7 @@ Exposed APIs (API Gateway)
 --------------------------
 
 The API gateway used in dojot reroutes some of endpoints from component.
-The following table shows which **endpoint exposed
+The following table shows which **Exposed endpoint
 by the API gateway** is mapped to which **component endpoint**,
 its  **component endpoint Documentation** and
 whether the endpoint **needs authentication** when used via API Gateway.
@@ -122,7 +122,7 @@ See more about how using APIs in :doc:`./using-api-interface`.
    :header-rows: 1
 
    * - | Component
-     - | Endpoint exposed
+     - | Exposed endpoint
        | by the API gateway
      - | Component
        | Endpoint
@@ -226,7 +226,7 @@ See more about how using APIs in :doc:`./using-api-interface`.
      - `API - x509-identity-mgmt`_
      - Yes
 
-**NOTE: Some of the endpoints from component aren't exposed, but are used internally.**
+**NOTE: Some of the components' endpoints aren't exposed, but are used internally.**
 
 
 In addition, the API gateway reroutes the endpoints with their ports from component, so that they
