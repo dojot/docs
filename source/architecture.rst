@@ -80,8 +80,8 @@ different users and applications data, enabling a multi-tenant infrastructure.
 
 The DataBroker service makes use of an in-memory database for efficiency. It
 adds context to Apache Kafka, making it possible that internal or even external
-services are able to consume real-time data based on context. DataBroker is
-also a distributed service to avoid it being a single point of failure or even
+services are able to consume real-time data based on context. DataBroker can also be
+a distributed service to avoid it being a single point of failure or even
 a bottleneck for the architecture.
 
 DeviceManager
