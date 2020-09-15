@@ -555,8 +555,48 @@ certificate-related services for devices.
 Kafka-WS
 ---------------------
 
-*Kafka WebSocket* service allows the users to retrieve conditional and/or
-partial real time data from a given dojot topic in its internal Kafka cluster.
+*Kafka WebSocket* allows the users to retrieve data from a given dojot 
+topic in a Kafka cluster, this retrieval can be conditional and/or partial. 
+It works with pure websocket connections, so you can create websocket 
+clients in any language you want as long as they support RFC 6455.
+
+Connecting to the service
+++++++++++++++++++++++++++
+
+The connection is done in two steps, you must first obtain a single-use ticket
+through a REST request, then, be authorized to connect to the service through
+a websocket.
+
+First step: Get the single-use ticket
+*************************************
+A ticket allows the user to subscribe to a dojot topic. To obtain it is necessary 
+to have a JWT access token that is issued by the platform's Authentication/Authorization 
+service. Ticket request must be made by REST at the endpoint <base-url>/kafka-ws/v1/ticket 
+using the HTTP GET verb. The request must contain the header Authorization and the
+JWT token as value, according to the syntax:
+
+| `POST <base-url>/v1/ticket`
+| `Authorization: Bearer [Encoded JWT]`
+
+The component responds with the following syntax:
+
+| `HTTP/1.1 200 OK`
+| `Content-type: application/json`
+.. code-block:: json
+
+  {
+    "ticket": "[an opaque ticket of 64 hexadecimal characters]"
+  }
+
+Note: In the context of a dojot deployment the JWT Token is provided by the Auth service, 
+and is validated by the API Gateway before redirecting the connection to the Kafka-WS. 
+So, no validations are done by the Kafka WS.
+
+Second step: Establish a websocket connection
+**********************************************
+The connection is done via pure websockets using the URI <base-url>/kafka-ws/v1/topics/:topic.
+You must pass the previously generated ticket as a parameter of this URI. It is also possible 
+to pass conditional and filter options as parameters of the URI.
 
 Behavior when requesting a ticket and a websocket connection
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

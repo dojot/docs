@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dojot 0.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-28 14:31-0300\n"
+"POT-Creation-Date: 2020-09-15 10:12-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -650,19 +650,83 @@ msgstr ""
 
 #: ../../source/internal-communication.rst:558
 msgid ""
-"*Kafka WebSocket* service allows the users to retrieve conditional and/or"
-" partial real time data from a given dojot topic in its internal Kafka "
-"cluster."
-msgstr ""
-"O serviço *Kafka WebSocket* permite aos usuários a recuperação parcial e/ou "
-"condicional de dados em tempo real de um determinado tópico do cluster Kafka "
-"interno da dojot."
+"*Kafka WebSocket* allows the users to retrieve data from a given dojot"
+"topic in a Kafka cluster, this retrieval can be conditional and/or partial."
+"It works with pure websocket connections, so you can create websocket"
+"clients in any language you want as long as they support RFC 6455."
 
-#: ../../source/internal-communication.rst:562
+msgstr ""
+"O serviço *Kafka WebSocket* permite aos usuários a recuperação de dados"
+"de um topico da dojot em um Cluster Kafka, essa recuperação pode ser conticional e/ou parcial."
+"Funciona com uma conexão websocket pura, para que clientes websocket possam ser criados"
+"em qualquer linguagem que tenha suporte para o RFC 6455."
+
+#: ../../source/internal-communication.rst:563
+msgid "Connecting to the service"
+msgstr "Conectando com o serviço"
+
+#: ../../source/internal-communication.rst:566
+msgid ""
+"The connection is done in two steps, you must first obtain a single-use ticket"
+"through a REST request, then, be authorized to connect to the service through"
+"a websocket."
+msgstr ""
+"A conexão é realizada em dois passos, primeiro obtendo um ticket de unico-uso"
+"mediante uma requisição REST, depois ser autorizado para conectar com o serviço via"
+"websocket"
+
+#: ../../source/internal-communication.rst:570
+msgid "First step: Get the single-use ticket"
+msgstr "Primeiro passo: obter um ticket de unico-uso"
+
+#: ../../source/internal-communication.rst:572
+msgid ""
+"A ticket allows the user to subscribe to a dojot topic. To obtain it is necessary"
+"to have a JWT access token that is issued by the platform's Authentication/Authorization"
+"service. Ticket request must be made by REST at the endpoint <base-url>/kafka-ws/v1/ticket" 
+"using the HTTP GET verb. The request must contain the header Authorization and the"
+"JWT token as value, according to the syntax:"
+msgstr ""
+"Um ticket permite que o usúario se subcsrever com um topico da dojot. Para obter o ticket é necessário"
+"ter um token JWT gerado pelo servico da plataforma Authentication/Authorization"
+"o requisição REST do ticket deve ser redirecionado para o endpoit <base-url>/kafka-ws/v1/ticket"
+"usando o verbo HTTP GET. A requisição deve ter o cabeçalho"
+"e o token JWT como valor, no seguinte formato:"
+
+
+#: ../../source/internal-communication.rst:581
+msgid "The component responds with the following syntax:"
+msgstr "O componente responde com a seguinte sintaxe:"
+
+#: ../../source/internal-communication.rst:591
+msgid ""
+"Note: In the context of a dojot deployment the JWT Token is provided by the Auth service,"
+"and is validated by the API Gateway before redirecting the connection to the *Kafka-WS.*"
+"So, no validations are done by the Kafka WS."
+msgstr ""
+"Nota: No contexto de um deployment da dojot, o token é providenciado pelo serviço de Autenticação"
+"e é validado pelo Gateway API antes de redirecionar a conexão para o *Kafka-WS.*
+"Portanto, nenhuma validação é feita pelo Kafka WebSocket"
+
+#: ../../source/internal-communication.rst:595
+msgid "Second step: Establish a websocket connection"
+msgstr: "Segundo passo: Estabelecer a conexão websocket"
+
+#: ../../source/internal-communication.rst:597
+msgid ""
+"The connection is done via pure websockets using the URI *<base-url>/kafka-ws/v1/topics/:topic*."
+"You must pass the previously generated ticket as a parameter of this URI. It is also possible"
+"to pass conditional and filter options as parameters of the URI."
+msgstr ""
+"A conexão é feita via websocket pura, usando a URI *<base-url>/kafka-ws/v1/topics/:topic*."
+"Você deve passar o ticket gerado anteriormente como parametro para esta URI. Também é possivel"
+"passar opçẽs e filtros condicionais como parametro para esta URI."
+
+#: ../../source/internal-communication.rst:601
 msgid "Behavior when requesting a ticket and a websocket connection"
 msgstr "Comportamento ao solicitar um ticket e uma conexão websocket"
 
-#: ../../source/internal-communication.rst:564
+#: ../../source/internal-communication.rst:604
 msgid ""
 "Below we can understand the behavior of the Kafka-WS service when a user "
 "(through a `user agent`_) requests a ticket in order to establish a "
@@ -672,7 +736,7 @@ msgstr ""
 "usuário (por meio de um `user agent`_) solicita um ticket para "
 "estabelecer uma comunicação via websocket com Kafka-WS."
 
-#: ../../source/internal-communication.rst:568
+#: ../../source/internal-communication.rst:608
 msgid ""
 "Note that when the user requests a new ticket, Kafka-WS extracts some "
 "information from the *user's access token* (`JWT`_) and generates a "
@@ -692,7 +756,7 @@ msgstr ""
 "deve usar o ticket dentro do tempo estabelecido, caso contrário, o Redis "
 "apaga automaticamente o ticket e o payload."
 
-#: ../../source/internal-communication.rst:576
+#: ../../source/internal-communication.rst:616
 msgid ""
 "After obtaining the ticket, the user makes an HTTP request to Kafka-WS "
 "requesting an upgrade to communicate via *websocket*. As the "
@@ -706,7 +770,7 @@ msgstr ""
 "adicionais, é necessário enviar o ticket pela URL, para que possa ser "
 "validado pelo Kafka-WS antes de autorizar o upgrade."
 
-#: ../../source/internal-communication.rst:582
+#: ../../source/internal-communication.rst:622
 msgid ""
 "Since the ticket is valid, that is, it corresponds to an entry on Redis, "
 "Kafka-WS retrieves the payload related to the ticket, verifies the "
@@ -718,7 +782,7 @@ msgstr ""
 "integridade e exclui essa entrada no Redis para que o ticket "
 "não possa ser usado novamente."
 
-#: ../../source/internal-communication.rst:587
+#: ../../source/internal-communication.rst:627
 msgid ""
 "With the payload it is possible to make the decision to authorize the "
 "upgrade to websocket or not. If authorization is granted, Kafka-WS opens "
@@ -732,7 +796,7 @@ msgstr ""
 "upgrade para websocket é estabelecido e o usuário começa a receber os "
 "dados à medida que vão sendo publicados no Kafka."
 
-#: ../../source/internal-communication.rst:593
+#: ../../source/internal-communication.rst:634
 msgid "Obtaining a ticket and connecting via websocket"
 msgstr "Obtenção de ticket e conexão via websocket"
 
