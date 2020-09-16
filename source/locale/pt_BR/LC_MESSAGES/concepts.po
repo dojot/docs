@@ -82,7 +82,7 @@ msgid ""
 "checkout the :doc:`architecture` to get acquainted with all internal "
 "components."
 msgstr ""
-"Se você quiser obter mais informações sobre como o dojot funciona "
+"Se você quiser obter mais informações sobre como a dojot funciona "
 "internamente, consulte a :doc:`architecture` para se familiarizar com "
 "todos os componentes internos."
 
