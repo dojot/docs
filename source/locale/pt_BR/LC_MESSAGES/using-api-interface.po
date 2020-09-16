@@ -225,7 +225,7 @@ msgstr ""
 "também. E neste tutorial, apenas as ferramentas do pacote `mosquitto-"
 "clients` em Distribuições Linux baseadas no Debian serão usadas. "
 "Verifique se um outro *broker* MQTT não está em execução antes de iniciar"
-" o dojot (executando comandos como ``ps aux | grep mosquitto``) para "
+" a dojot (executando comandos como ``ps aux | grep mosquitto``) para "
 "evitar conflitos de porta."
 
 #: ../../source/using-api-interface.rst:241
@@ -352,7 +352,7 @@ msgid ""
 "MQTT payload must be a JSON with each key being an attribute of the dojot"
 " device, such as:"
 msgstr ""
-"Os dados da mensagem MQTT (payload) deve ser um JSON com cada chave sendo"
+"Os dados da mensagem MQTT (payload) devem ser um JSON com cada chave sendo"
 " um atributo do dispositivo cadastrado na dojot, como:"
 
 #: ../../source/using-api-interface.rst:307

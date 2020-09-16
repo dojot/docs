@@ -141,7 +141,7 @@ msgstr ""
 "acionarão o fluxo. Por exemplo: dispositivo1 é composto pelos modelos [A, B], "
 "dispositivo2 pelo modelo A e dispositivo3 pelo modelo B. Então, nesse cenário, "
 "apenas as mensagens do dispositivo1 e do dispositivo2 iniciarão o fluxo, porque "
-"o modelo A é um dos modelos que compor esses dispositivos."
+"o modelo A é um dos modelos que compõem esses dispositivos."
 
 #: ../../source/flow.rst:102 ../../source/flow.rst:247 ../../source/flow.rst:282
 #: ../../source/flow.rst:724
@@ -188,10 +188,10 @@ msgid ""
 "device that exists only on *dojot*."
 msgstr ""
 "A saída do dispositivo determinará qual dispositivo (ou dispositivos) terá seus "
-"atributos atualizados no dojot de acordo com o resultado do fluxo. Lembre-se de "
+"atributos atualizados na dojot de acordo com o resultado do fluxo. Lembre-se de "
 "que este nó não envia mensagens para o seu dispositivo; ele atualiza apenas os "
 "atributos na plataforma. Normalmente, o dispositivo escolhido é um dispositivo "
-"virtual, que existe apenas no dojot."
+"virtual, que existe apenas na dojot."
 
 #: ../../source/flow.rst:136 ../../source/flow.rst:755
 msgid ": Device out config window"
@@ -415,7 +415,7 @@ msgstr ""
 "por uma aplicação front-end. O usuário pode definir uma mensagem estática a ser "
 "enviada ou, como outros nós de saída, configurar um conjunto de variáveis em um "
 "nó anterior que será resolvido no tempo de execução. Além disso, os metadados "
-"podem ser adicionados à mensagem: pode ser um objeto de valor-chave simples que "
+"podem ser adicionados à mensagem: pode ser um objeto de chave-valor simples que "
 "contém dados arbitrários."
 
 #: ../../source/flow.rst:287
@@ -442,7 +442,7 @@ msgid ""
 "(key-value pairs) containing the metadata to be added to the message"
 msgstr ""
 "**Metadados (Metadata)** *(obrigatório)*: referência de variável que contém um "
-"dicionário simples (pares de valores-chave) que contém os metadados a serem "
+"dicionário simples (pares de chave-valores) que contém os metadados a serem "
 "adicionados à mensagem"
 
 #: ../../source/flow.rst:297
@@ -582,7 +582,7 @@ msgid ""
 "Processing node to create/remove cron jobs. Cron allowing to schedule tasks to: "
 "send events to the data broker or execute a http request."
 msgstr ""
-"Nó de processamento para criar/remover tarefas cron. Cron permiti agendar "
+"Nó de processamento para criar/remover tarefas cron. Cron permite agendar "
 "tarefas para: enviar eventos para o data broker ou executar uma requisição http."
 
 #: ../../source/flow.rst:416
@@ -987,7 +987,7 @@ msgstr ""
 "A acionarão o fluxo. Por exemplo: *dispositivo1* é composto pelos modelos [A, "
 "B], *dispositivo2* pelo modelo A e *dispositivo3* pelo modelo B. Então, nesse "
 "cenário, apenas as mensagens do *dispositivo1* e do *dispositivo2* iniciarão o "
-"fluxo, porque o modelo A é um dos modelos que compor esses dispositivos."
+"fluxo, porque o modelo A é um dos modelos que compõem esses dispositivos."
 
 #: ../../source/flow.rst:730
 msgid ""
@@ -1010,7 +1010,7 @@ msgid ""
 "device that exists only on *dojot*."
 msgstr ""
 "A saída do dispositivo determinará qual dispositivo terá seus atributos "
-"atualizados no dojot de acordo com o resultado do fluxo. Lembre-se de que este "
+"atualizados na dojot de acordo com o resultado do fluxo. Lembre-se de que este "
 "nó não envia mensagens para o seu dispositivo; ele atualiza apenas os atributos "
 "na plataforma. Normalmente, o dispositivo escolhido é um dispositivo virtual, "
 "que existe apenas na dojot."
@@ -1021,7 +1021,7 @@ msgstr "Atuar (Actuate)"
 
 #: ../../source/flow.rst:792
 msgid "**Device** *(required)*: A real device on dojot"
-msgstr "**Dispositivo (Device)** *(obrigatório)*: um dispositivo real no dojot"
+msgstr "**Dispositivo (Device)** *(obrigatório)*: um dispositivo real na dojot"
 
 #: ../../source/flow.rst:798
 msgid "Learn by examples"
@@ -1080,7 +1080,7 @@ msgid ""
 "If UTF-8 String buffer is chosen in the return field, the body of the response "
 "body will be a string. If JSON object is chosen, the body will be an object."
 msgstr ""
-"Se o buffer UTF-8 String for escolhido no campo de retorno, o corpo do corpo da "
+"Se o buffer UTF-8 String for escolhido no campo de retorno, o corpo da "
 "resposta será uma string. Se o objeto JSON for escolhido, o corpo será um objeto."
 
 #: ../../source/flow.rst:849
@@ -1153,7 +1153,7 @@ msgid ""
 "and, if not, the execution of the branch, which has the geofence that the rule "
 "didn't match, stops."
 msgstr ""
-"Em seguida, se o dispositivo definido como dispositivo enviar uma mensagem com "
+"Em seguida, se o dispositivo definido como dispositivo de entrada enviar uma mensagem com "
 "um atributo geográfico, o nó geo referência avaliará o ponto geográfico de "
 "acordo com sua regra e se corresponder à regra, o nó encaminhará as informações "
 "para o próximo nó e, se não , a execução da ramificação, que possui a geo "

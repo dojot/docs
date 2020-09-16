@@ -49,7 +49,7 @@ msgstr "Requisitos de hardware para 500 dispositivos"
 
 #: ../../source/installation-guide.rst:18
 msgid "Deployment"
-msgstr "Implantação dojot"
+msgstr "Implantação da dojot"
 
 #: ../../source/installation-guide.rst:20
 msgid "CPU"
@@ -411,7 +411,7 @@ msgstr ""
 
 #: ../../source/installation-guide.rst:208
 msgid "dojot Deployment"
-msgstr "Implantação dojot"
+msgstr "Implantação da dojot"
 
 #: ../../source/installation-guide.rst:210
 msgid ""
@@ -419,8 +419,8 @@ msgid ""
 "developed for dojot. The playbooks and all the related code can be found "
 "on the repository `Ansible dojot`_."
 msgstr ""
-"Para implantar o dojot no Kubernetes, é recomendável o uso de *playbooks*"
-" *ansible* desenvolvidos para o dojot. Os manuais e todo o código "
+"Para implantar a dojot no Kubernetes, é recomendável o uso de *playbooks*"
+" *ansible* desenvolvidos para a dojot. Os manuais e todo o código "
 "relacionado podem ser encontrados no repositório `*Ansible* dojot`_."
 
 #: ../../source/installation-guide.rst:214
@@ -494,7 +494,7 @@ msgid ""
 msgstr ""
 "O primeiro arquivo que requer alterações é o hosts.yaml. Este arquivo "
 "descreve os nós que serão acessados pelo *ansible* para executar a "
-"implantação. Como a implantação do dojot é feita diretamente nos K8s, "
+"implantação. Como a implantação da dojot é feita diretamente nos K8s, "
 "apenas um nó com acesso ao cluster kubernetes é realmente necessário."
 
 #: ../../source/installation-guide.rst:254

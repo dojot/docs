@@ -55,7 +55,7 @@ msgstr ""
 "simples.Caso contrário, convém usar o iotagent-mosca(consulte a "
 "documentação do `iotagent-mosca`_ para verificar como fazer isso).Se "
 "estiver realmente enviando mensagens JSON de chave/valor, ele poderá "
-"enviar suas mensagens para o corretor do dojot e será reconhecido pela "
+"enviar suas mensagens para o corretor da dojot e será reconhecido pela "
 "plataforma."
 
 #: ../../source/integrating-physical-devices.rst:21

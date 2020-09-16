@@ -731,7 +731,7 @@ msgid ""
 "in dojot."
 msgstr ""
 "Essas são as mensagens enviadas pelos componentes e seus tópicos. Se você "
-"estiver desenvolvendo um novo componente interno (como um novo agente de "
+"estiver desenvolvendo um novo componente interno (como um novo agente "
 "IoT), consulte a `API - data-broker`_ para verificar como receber "
 "mensagens."
 
