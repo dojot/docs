@@ -20,12 +20,7 @@ dojot basics
 
 Before using dojot, you should be familiar with some basic operations and
 concepts. They are very simple to understand and use, but without them, all
-operations might become obscure and senseless.
-
-In the next section, there is an explanation of a few basic entities in dojot:
-devices, templates and flows. With these concepts in mind, we present a small
-tutorial to how to use them in dojot - it only covers API access. There a GUI
-oriented tutorial in :doc:`using-web-interface` tutorial.
+operations might become obscure and senseless. We will focus on explaining what devices, models and flows are in dojot.
 
 
 If you want more information on how dojot works internally, you should checkout
@@ -44,8 +39,8 @@ like (not limited to these):
 - Token expiration date
 
 The component responsible for user authentication is `auth`_. You can find a
-tutorial of how to authenticate a user and how to get an access token in `auth
-documentation`_.
+tutorial of how to authenticate a user and how to get an access token in
+:ref:`Getting access token`.
 
 Device authentication
 *********************
@@ -76,6 +71,8 @@ identified through its certificate.
 After the secure channel is established, the device is able to publish data and
 also receive data as long as it is authorized to do so.
 
+Check :doc:`mqtt-tls` for more information on its usage.
+
 Devices and templates
 *********************
 
@@ -88,7 +85,7 @@ calling it as 'physical device'.
 Consider, for instance, a physical device with temperature and humidity
 sensors; it can be represented in dojot as a device with two attributes (one
 for each sensor). We call this kind of device as regular device or by its
-communication protocol, for instance, MQTT device or CoAP device.
+communication protocol, for instance, MQTT device, CoAP device, etc.
 
 We can also create devices which don’t directly correspond to their physical
 counterparts, for instance, we can create one with higher level of information
@@ -96,13 +93,11 @@ of temperature (is becoming hotter or is becoming colder) whose values are
 inferred from temperature sensors of other devices. This kind of device is
 called virtual device.
 
-All devices are created based on a *template*, which can be thought as a model
+All devices are created based on one or more *templates*, which can be thought as a model
 of a device. As "model" we could think of part numbers or product models - one
 *prototype* from which devices are created. Templates in dojot have one label
 (any alphanumeric sequence), a list of attributes which will hold all the
-device emitted information, and optionally a few special attributes which will
-indicate how the device communicates, including transmission methods (protocol,
-ports, etc.) and message formats.
+device emitted information.
 
 In fact, templates can represent not only "device models", but it can also
 abstract a "class of devices". For instance, we could have one template to
@@ -121,10 +116,6 @@ template update will reflect all associated devices.
 
 The component responsible for managing devices (both real and virtual) and
 templates is `DeviceManager`_ .
-
-`DeviceManager documentation`_ explains in more
-depth all the available operations.
-
 
 Flows
 *****
@@ -145,15 +136,14 @@ message. It contains:
 
 The component responsible for dealing with such flows is `flowbroker`_.
 
+Check :doc:`flow` for more information on its usage.
+
 .. _YouTube channel: https://www.youtube.com/channel/UCK1iQ-d-K-O2mOLahPOoe6w
 .. _JSON Web Token: https://tools.ietf.org/html/rfc7519
 .. _jwt.io: https://jwt.io/
 .. _auth: https://github.com/dojot/auth
-.. _auth documentation: http://dojotdocs.readthedocs.io/projects/auth/
 .. _docker-compose: https://github.com/dojot/docker-compose
 .. _DeviceManager: https://github.com/dojot/device-manager
-.. _DeviceManager documentation: http://dojotdocs.readthedocs.io/projects/DeviceManager/
-.. _DeviceManager how-to: http://dojotdocs.readthedocs.io/projects/DeviceManager/en/latest/using-device-manager.html#using-devicemanager
 .. _mashup: https://github.com/dojot/mashup
 .. _mosquitto: https://projects.eclipse.org/projects/technology.mosquitto
 .. _history APIs: https://dojot.github.io/history-ws/apiary_latest.html

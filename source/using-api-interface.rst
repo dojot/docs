@@ -31,6 +31,8 @@ In Debian-based Linux distributions you can run:
   sudo apt-get install mosquitto-clients
 
 
+.. _Getting access token:
+
 Getting access token
 --------------------
 
