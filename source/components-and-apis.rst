@@ -57,7 +57,7 @@ Components
     - `API - history`_
   * - Device Manager
     - `GitHub - DeviceManager`_
-    - `DeviceManager doc.`_
+    -
     - `API - DeviceManager`_
   * - Image Manager
     - `GitHub - image-manager`_
@@ -346,8 +346,7 @@ dojot.
 
 .. _GitHub - DeviceManager: https://github.com/dojot/device-manager/tree/v0.5.0
 .. _API - DeviceManager: https://dojot.github.io/device-manager/apiary_v0.5.0.html
-.. _DeviceManager doc.: http://dojotdocs.readthedocs.io/projects/DeviceManager/en/latest/
-.. _Messages - DeviceManager: http://dojotdocs.readthedocs.io/projects/DeviceManager/en/latest/kafka-messages.html
+.. _Messages - DeviceManager: https://github.com/dojot/device-manager/tree/v0.5.0#events
 
 .. _GitHub - image-manager: https://github.com/dojot/image-manager/tree/v0.5.0
 .. _API - image-manager: https://dojot.github.io/image-manager/apiary_v0.5.0.html
