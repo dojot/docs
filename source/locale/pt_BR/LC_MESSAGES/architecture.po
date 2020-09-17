@@ -502,15 +502,29 @@ msgstr ""
 "dispositivo são trafegados por um canal seguro (criptografado) e também é"
 " possível garantir a integridade dos dados."
 
+#: ../../source/architecture.rst:212
+msgid "Kafka Websocket"
+msgstr "Kafka Websocket"
+
 #: ../../source/architecture.rst:213
+msgid ""
+"Thi component is responsible for retrieving data from Apache Kafka through pure WebSocket"
+"connections. It was designed to allow dojot users to retrieve realtime raw and/or processed"
+"data from dojot devices."
+msgstr ""
+"Este componente é responsável por obter datos do Apache Kafka via uma conexão Websocket pura."
+"Foi desenhada para permitir que usuários da dojot possam obter dados em tempo real e/ou dados"
+"processados de devices da dojot."
+
+#: ../../source/architecture.rst:218
 msgid "Infrastructure"
 msgstr "Infraestrutura"
 
-#: ../../source/architecture.rst:215
+#: ../../source/architecture.rst:221
 msgid "A few extra components are used in dojot,they are:"
 msgstr "Alguns outros componentes são utilizados na dojot, são eles:"
 
-#: ../../source/architecture.rst:217
+#: ../../source/architecture.rst:223
 msgid ""
 "postgres: this database is used to persist data from many components, "
 "such as Device Manager."
@@ -518,7 +532,7 @@ msgstr ""
 "postgres: esse banco de dados é utilizado para persistir informações de "
 "vários componenentes, como do gerenciador de dispositivos."
 
-#: ../../source/architecture.rst:220
+#: ../../source/architecture.rst:226
 msgid ""
 "redis: in-memory database used as cache in many components, such as "
 "service orchestrator, subscription manager, IoT agents, and so on. It is "
@@ -528,7 +542,7 @@ msgstr ""
 "componentes, como o serviço de osquestração, gerenciador de subscrição, "
 "agentes IoT e outros. É bem leve e fácil de usar."
 
-#: ../../source/architecture.rst:224
+#: ../../source/architecture.rst:230
 msgid ""
 "rabbitMQ: message broker used in service orchestrator in order to "
 "implement action flows related that should be applied to messages "
@@ -538,7 +552,7 @@ msgstr ""
 " para implementar fluxos de ações relacionados que podem ser aplicados a "
 "mensagens recebidas dos componentes."
 
-#: ../../source/architecture.rst:228
+#: ../../source/architecture.rst:234
 msgid ""
 "mongo database: widely used database solution that is easy to use and "
 "doesn't add a considerable access overhead (where it was employed in "
@@ -548,19 +562,19 @@ msgstr ""
 "é fácil de usar e não adiciona esforço de acesso considerável (nos locais"
 " onde foi empregado na dojot)."
 
-#: ../../source/architecture.rst:231
+#: ../../source/architecture.rst:237
 msgid "zookeeper: keeps replicated services within a cluster under control."
 msgstr "zookeeper: mantém sob controle serviços replicados em cluster."
 
-#: ../../source/architecture.rst:235
+#: ../../source/architecture.rst:240
 msgid "Communications"
 msgstr "Comunicação"
 
-#: ../../source/architecture.rst:237
+#: ../../source/architecture.rst:243
 msgid "All components communicate with each other in two ways:"
 msgstr "Todos os componentes se comunicam de duas maneiras:"
 
-#: ../../source/architecture.rst:239
+#: ../../source/architecture.rst:245
 msgid ""
 "Using HTTP requests: if one component needs to retrieve data from other "
 "one, say an IoT agent needs the list of currently configured devices from"
@@ -571,7 +585,7 @@ msgstr ""
 "configurados do gerenciador de dispositivos, ele pode enviar uma "
 "requisição HTTP para o componente apropriado."
 
-#: ../../source/architecture.rst:243
+#: ../../source/architecture.rst:249
 msgid ""
 "Using Kafka messages: if one component needs to send new information "
 "about a resource controlled by it (such as new devices created in Device "

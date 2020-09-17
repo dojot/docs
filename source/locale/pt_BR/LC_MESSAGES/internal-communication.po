@@ -656,9 +656,9 @@ msgid ""
 "clients in any language you want as long as they support RFC 6455."
 
 msgstr ""
-"O serviço *Kafka WebSocket* permite aos usuários a recuperação de dados"
-"de um topico da dojot em um Cluster Kafka, essa recuperação pode ser conticional e/ou parcial."
-"Funciona com uma conexão websocket pura, para que clientes websocket possam ser criados"
+"O serviço *Kafka WebSocket* permite aos usuários a recuperação de dados "
+"de um topico da dojot em um Cluster Kafka, essa recuperação pode ser conticional e/ou parcial. "
+"Funciona com uma conexão websocket pura, para que clientes websocket possam ser criados "
 "em qualquer linguagem que tenha suporte para o RFC 6455."
 
 #: ../../source/internal-communication.rst:563
@@ -667,30 +667,31 @@ msgstr "Conectando com o serviço"
 
 #: ../../source/internal-communication.rst:566
 msgid ""
-"The connection is done in two steps, you must first obtain a single-use ticket"
-"through a REST request, then, be authorized to connect to the service through"
-"a websocket."
+"The connection is done in two steps, you must first obtain a single-use ticket "
+"through a REST request, then, be authorized to connect to the service through "
+"a websocket. "
 msgstr ""
-"A conexão é realizada em dois passos, primeiro obtendo um ticket de unico-uso"
-"mediante uma requisição REST, depois ser autorizado para conectar com o serviço via"
+"A conexão é realizada em dois passos, primeiro obtendo um ticket de uso único "
+"mediante uma requisição REST, depois ser autorizado para conectar com o serviço via "
 "websocket"
 
 #: ../../source/internal-communication.rst:570
 msgid "First step: Get the single-use ticket"
-msgstr "Primeiro passo: obter um ticket de unico-uso"
+msgstr "Primeiro passo: obter um ticket de uso único"
 
 #: ../../source/internal-communication.rst:572
 msgid ""
-"A ticket allows the user to subscribe to a dojot topic. To obtain it is necessary"
-"to have a JWT access token that is issued by the platform's Authentication/Authorization"
-"service. Ticket request must be made by REST at the endpoint <base-url>/kafka-ws/v1/ticket" 
-"using the HTTP GET verb. The request must contain the header Authorization and the"
+"A ticket allows the user to subscribe to a dojot topic. To obtain it is necessary "
+"to have a JWT access token that is issued by the platform's Authentication/Authorization "
+"service. Ticket request must be made by REST at the endpoint <base-url>/kafka-ws/v1/ticket " 
+"using the HTTP GET verb. The request must contain the header Authorization and the "
 "JWT token as value, according to the syntax:"
 msgstr ""
-"Um ticket permite que o usúario se subcsrever com um topico da dojot. Para obter o ticket é necessário"
-"ter um token JWT gerado pelo servico da plataforma Authentication/Authorization"
-"o requisição REST do ticket deve ser redirecionado para o endpoit <base-url>/kafka-ws/v1/ticket"
-"usando o verbo HTTP GET. A requisição deve ter o cabeçalho"
+"Um ticket permite que o usúario se subscrever com um topico da dojot. Para obter o ticket é necessário "
+"ter um token JWT gerado pelo serviço de Autenticação/Autorização da plataforma. "
+"a requisição REST do ticket deve ser redirecionada para o endpoint <base-url>/kafka-ws/v1/ticket "
+"usando o verbo HTTP GET. A requisição deve ter o cabeçalho Authorization"
+
 "e o token JWT como valor, no seguinte formato:"
 
 
@@ -703,14 +704,14 @@ msgid ""
 "Note: In the context of a dojot deployment the JWT Token is provided by the Auth service,"
 "and is validated by the API Gateway before redirecting the connection to the *Kafka-WS.*"
 "So, no validations are done by the Kafka WS."
-msgstr ""
-"Nota: No contexto de um deployment da dojot, o token é providenciado pelo serviço de Autenticação"
-"e é validado pelo Gateway API antes de redirecionar a conexão para o *Kafka-WS.*
-"Portanto, nenhuma validação é feita pelo Kafka WebSocket"
+msgstr ""  
+"Nota: No contexto de um deployment da dojot, o token é providenciado pelo serviço de Autenticação "
+"e é validado pelo Gateway API antes de redirecionar a conexão para o *Kafka-WS.* "
+"Portanto, nenhuma validação é feita pelo Kafka WS."
 
 #: ../../source/internal-communication.rst:595
 msgid "Second step: Establish a websocket connection"
-msgstr: "Segundo passo: Estabelecer a conexão websocket"
+msgstr "Segundo passo: Estabelecer a conexão websocket"
 
 #: ../../source/internal-communication.rst:597
 msgid ""
@@ -718,9 +719,9 @@ msgid ""
 "You must pass the previously generated ticket as a parameter of this URI. It is also possible"
 "to pass conditional and filter options as parameters of the URI."
 msgstr ""
-"A conexão é feita via websocket pura, usando a URI *<base-url>/kafka-ws/v1/topics/:topic*."
-"Você deve passar o ticket gerado anteriormente como parametro para esta URI. Também é possivel"
-"passar opçẽs e filtros condicionais como parametro para esta URI."
+"A conexão é feita via websocket pura, usando a URI *<base-url>/kafka-ws/v1/topics/:topic*. "
+"Você deve passar o ticket gerado anteriormente como parametro para esta URI. Também é possivel "
+"passar opções e filtros condicionais como parâmetros para esta URI."
 
 #: ../../source/internal-communication.rst:601
 msgid "Behavior when requesting a ticket and a websocket connection"

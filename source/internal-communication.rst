@@ -575,7 +575,7 @@ service. Ticket request must be made by REST at the endpoint <base-url>/kafka-ws
 using the HTTP GET verb. The request must contain the header Authorization and the
 JWT token as value, according to the syntax:
 
-| `POST <base-url>/v1/ticket`
+| `POST <base-url>/kafka-ws/v1/ticket`
 | `Authorization: Bearer [Encoded JWT]`
 
 The component responds with the following syntax:
