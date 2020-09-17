@@ -213,6 +213,8 @@ Which should give back:
     }
 
 
+.. _Sending messages:
+
 Sending messages
 ----------------
 
@@ -364,6 +366,9 @@ As noted in the :doc:`../faq/faq`, there are some considerations regarding MQTT 
 
 .. Note::
     For the rest of the tutorial we will treat as if you are using VerneMQ.
+
+
+.. _Checking historical data:
 
 Checking historical data
 ------------------------

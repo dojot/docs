@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dojot 0.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-16 15:51-0300\n"
-"PO-Revision-Date: 2020-09-16 16:09-0300\n"
+"POT-Creation-Date: 2020-09-17 13:35-0300\n"
+"PO-Revision-Date: 2020-09-17 13:36-0300\n"
 "Last-Translator: \n"
 "Language: pt_BR\n"
 "Language-Team: \n"
@@ -232,14 +232,11 @@ msgstr ""
 
 #: ../../source/concepts.rst:96
 msgid ""
-"All devices are created based on one or more *template*, which can be "
+"All devices are created based on one or more *templates*, which can be "
 "thought as a model of a device. As \"model\" we could think of part numbers "
 "or product models - one *prototype* from which devices are created. "
 "Templates in dojot have one label (any alphanumeric sequence), a list of "
-"attributes which will hold all the device emitted information, and "
-"optionally a few special attributes which will indicate how the device "
-"communicates, including transmission methods (protocol, ports, etc.) and "
-"message formats."
+"attributes which will hold all the device emitted information."
 msgstr ""
 "Todos os dispositivos são criados com base em um ou mais modelos "
 "(*templates*) , que podem ser pensado como um modelo de dispositivo. Como "
@@ -248,7 +245,7 @@ msgstr ""
 "têm um rótulo (qualquer sequência alfanumérica), uma lista de atributos que "
 "conterão todas as informações emitidas pelo dispositivo."
 
-#: ../../source/concepts.rst:104
+#: ../../source/concepts.rst:102
 msgid ""
 "In fact, templates can represent not only \"device models\", but it can also "
 "abstract a \"class of devices\". For instance, we could have one template to "
@@ -271,7 +268,7 @@ msgstr ""
 "de temperatura que será enviada do dispositivo para um atributo de "
 "\"temperatura\"."
 
-#: ../../source/concepts.rst:114
+#: ../../source/concepts.rst:112
 msgid ""
 "In order to create a device, a user selects which templates are going to "
 "compose this new device. All their attributes are merged together and "
@@ -283,7 +280,7 @@ msgstr ""
 "ele - eles estão fortemente vinculados ao modelo original para que qualquer "
 "atualização de modelo reflita todos os dispositivos associados."
 
-#: ../../source/concepts.rst:119
+#: ../../source/concepts.rst:117
 msgid ""
 "The component responsible for managing devices (both real and virtual) and "
 "templates is `DeviceManager`_ ."
@@ -291,11 +288,11 @@ msgstr ""
 "O componente responsável pelo gerenciamento de dispositivos (reais e "
 "virtuais) e modelos (*templates*) é o `DeviceManager`_."
 
-#: ../../source/concepts.rst:123
+#: ../../source/concepts.rst:121
 msgid "Flows"
 msgstr "Fluxos (*Flows*)"
 
-#: ../../source/concepts.rst:125
+#: ../../source/concepts.rst:123
 msgid ""
 "A flow is a sequence of blocks that process a particular event or device "
 "message. It contains:"
@@ -303,7 +300,7 @@ msgstr ""
 "Um fluxo é uma sequência de blocos que processa um evento ou mensagem de "
 "dispositivo específica. Contém:"
 
-#: ../../source/concepts.rst:128
+#: ../../source/concepts.rst:126
 msgid ""
 "entry point: a block representing what is the trigger to start a particular "
 "flow;"
@@ -311,7 +308,7 @@ msgstr ""
 "ponto de entrada: um bloco representando qual é o gatilho para iniciar um "
 "fluxo específico;"
 
-#: ../../source/concepts.rst:130
+#: ../../source/concepts.rst:128
 msgid ""
 "processing blocks: a set of blocks that perform operations using the event. "
 "These blocks may or may not use the contents of such event to further "
@@ -326,7 +323,7 @@ msgstr ""
 "atributos de mensagens, executar operações em elementos externos e assim por "
 "diante."
 
-#: ../../source/concepts.rst:135
+#: ../../source/concepts.rst:133
 msgid ""
 "exit point: a block representing where the resulting data should be "
 "forwarded to. This block might be a database, a virtual device, an external "
@@ -336,11 +333,11 @@ msgstr ""
 "ser encaminhados. Esse bloco pode ser um banco de dados, um dispositivo "
 "virtual, um elemento externo e assim por diante."
 
-#: ../../source/concepts.rst:139
+#: ../../source/concepts.rst:137
 msgid "The component responsible for dealing with such flows is `flowbroker`_."
 msgstr "O componente responsável por lidar com esses fluxos é `flowbroker`_."
 
-#: ../../source/concepts.rst:141
+#: ../../source/concepts.rst:139
 msgid "Check :doc:`flow` for more information on its usage."
 msgstr "Verifique :doc:`flow` para mais informações sobre seu uso."
 
