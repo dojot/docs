@@ -230,13 +230,13 @@ See more about how using APIs in :doc:`./using-api-interface`.
      - `API - x509-identity-mgmt`_
      - Yes
    * - Kafka Websocket
-     - /kafka-ws/v1/ticket
-     - /kafka-ws/v1/ticket
+     - **/kafka-ws/v1/ticket**
+     -  /v1/ticket
      -
      - Yes
    * - Kafka Websocket
-     - /kafka-ws/v1/topics
-     - /kafka-ws/v1/topics
+     - **/kafka-ws/v1**
+     - /v1
      -
      - No
 
@@ -308,8 +308,8 @@ TCP port 8000), see the following table.
      - host:3000/api/v1
      - host:8000/x509/v1
    * - Kafka Websocket
-     - host:80/kafka-ws/v1/ticket
-     - host:80/kafka-ws/v1/ticket
+     - host:8080/kafka-ws/v1/ticket
+     - host:8080/kafka-ws/v1/ticket
    * - Kafka Websocket
      - host:80/kafka-ws/v1/topics
      - host:80/kafka-ws/v1/topics
