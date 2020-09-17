@@ -244,4 +244,37 @@ After you create the template with the Firmware management option enabled, you c
 Note that in each step, the status and result of image processing are shown.
 
 
+Generating certificates for devices
+------------------
+
+This section will show how to generate x509 certificates for a device, so that dojot can communicate with devices securely via TLS. To be able to send a publication, it is necessary to download the three files, the private key "admin 4302d4.key", the device certificate "admin 4302d4.crt" and the CA certificate "ca.crt".
+
+To be able to execute the command of the example video it is necessary to be in the same directory as the 3 files attached. Command used in the example:
+
+mosquitto_pub -h 10.50.11.192 -p 8883 -t admin: 4302d4 / attrs -m '{"humidity": 7}' --cert "admin 4302d4.crt" --key "admin 4302d4.key" --cafile ca. crt
+
+.. raw:: html
+
+    <iframe id="ytplayer" type="text/html" width="720" height="405"
+    src="https://www.youtube.com/embed/G1ZFfCLUT6A?rel=0" frameborder="0"
+    allowfullscreen></iframe>
+
+
+
+
+
+Generating device history report
+------------------
+
+In this section, how to generate a device history report will be lost. The report is able to show data for one or more attributes of the respective device. For this, it is necessary to select the desired attributes, define the period and click on “generate”.
+
+
+.. raw:: html
+
+    <iframe id="ytplayer" type="text/html" width="720" height="405"
+    src="https://www.youtube.com/embed/G1ZFfCLUT6A?rel=0" frameborder="0"
+    allowfullscreen></iframe>
+   
+
+
 .. _LwM2M: https://openmobilealliance.org/release/LightweightM2M/V1_1-20180710-A/OMA-TS-LightweightM2M_Core-V1_1-20180710-A.pdf

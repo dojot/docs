@@ -463,6 +463,39 @@ msgstr ""
 "Note que, em cada etapa, são exibidos o status e o resultado da aplicação"
 " da imagem. "
 
+#: ../../source/using-web-interface.rst:247
+msgid ""
+"Generating certificates for devices "
+msgstr ""
+"Gerando certificados para dispositivos"
+
+#: ../../source/using-web-interface.rst:250
+msgid ""
+"This section will show how to generate x509 certificates for a device, so that dojot can communicate with devices securely via TLS. To be able to send a publication, it is necessary to download the three files, the private key "admin 4302d4.key", the device certificate "admin 4302d4.crt" and the CA certificate "ca.crt"."
+msgstr ""
+"Nesta seção será demonstrado como gerar certificados x509 para um dispositivo, para que a dojot consiga se comunicar com os dispositivos de forma segura via TLS. Para conseguir realizar o envio de uma publicação é necessário o download dos três arquivos, sendo eles a chave privada "admin 4302d4.key", o certificado do dispositivo "admin 4302d4.crt"  e o certificado da CA “ca.crt”. "
+
+#: ../../source/using-web-interface.rst:252
+msgid ""
+"To be able to execute the command of the example video it is necessary to be in the same directory as the 3 files attached. Command used in the example:"
+msgstr ""
+"Para conseguir executar o comando do vídeo de exemplo é necessário estar  no mesmo diretório que os 3 arquivos estão. Comando utilizado no exemplo:"
+
+#: ../../source/using-web-interface.rst:266
+msgid ""
+"Generating device history report"
+msgstr ""
+"Gerando relatório de histórico de dispositivos"
+
+#: ../../source/using-web-interface.rst:269
+msgid ""
+"In this section, how to generate a device history report will be lost. The report is able to show data for one or more attributes of the respective device. For this, it is necessary to select the desired attributes, define the period and click on “generate”. "
+msgstr ""
+"Nesta seção será perdida como gerar um relatório de histórico de um dispositivo. O relatório consegue mostrar os dados de um ou mais atributos do dispositivo respectivo. Para isso, é necessário selecionar os atributos desejados, definir o período e clicar em “gerar”. "
+
+
+
+
 #~ msgid ""
 #~ "This section shows how to use the"
 #~ " Import and Export functionality. The "
