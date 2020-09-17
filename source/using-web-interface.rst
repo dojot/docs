@@ -266,7 +266,7 @@ mosquitto_pub -h 10.50.11.192 -p 8883 -t admin: 4302d4 / attrs -m '{"humidity": 
 Generating device history report
 ------------------
 
-In this section, how to generate a device history report will be lost. The report is able to show data for one or more attributes of the respective device. For this, it is necessary to select the desired attributes, define the period and click on “generate”.
+This section will demonstrate how to generate a device history report. The report is able to show data for one or more attributes of the respective device. For this, it is necessary to select the desired attributes, define the period and click on “generate”.
 
 
 .. raw:: html

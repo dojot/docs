@@ -489,9 +489,9 @@ msgstr ""
 
 #: ../../source/using-web-interface.rst:269
 msgid ""
-"In this section, how to generate a device history report will be lost. The report is able to show data for one or more attributes of the respective device. For this, it is necessary to select the desired attributes, define the period and click on “generate”. "
+"This section will demonstrate how to generate a device history report. The report is able to show data for one or more attributes of the respective device. For this, it is necessary to select the desired attributes, define the period and click on “generate”."
 msgstr ""
-"Nesta seção será perdida como gerar um relatório de histórico de um dispositivo. O relatório consegue mostrar os dados de um ou mais atributos do dispositivo respectivo. Para isso, é necessário selecionar os atributos desejados, definir o período e clicar em “gerar”. "
+"Nesta seção será demonstrado como gerar um relatório de histórico de um dispositivo. O relatório consegue mostrar os dados de um ou mais atributos do respectivo dispositivo. Para isso, é necessário selecionar os atributos desejados, definir o período e clicar em “gerar”." 
 
 
 
