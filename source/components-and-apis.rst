@@ -309,10 +309,10 @@ TCP port 8000), see the following table.
      - host:8000/x509/v1
    * - Kafka Websocket
      - host:8080/kafka-ws/v1/ticket
-     - host:8080/kafka-ws/v1/ticket
+     - host:8000/kafka-ws/v1/ticket
    * - Kafka Websocket
-     - host:80/kafka-ws/v1/topics
-     - host:80/kafka-ws/v1/topics
+     - host:8080/kafka-ws/v1/topics
+     - host:8000/kafka-ws/v1/topics
 
      
 
@@ -404,4 +404,4 @@ dojot.
 .. _GitHub - Kafka2Ftp: https://github.com/dojot/dojot/tree/v0.5.0/connector/kafka2ftp
 
 .. _GitHub - Kafka Websocket: https://github.com/dojot/dojot/tree/v0.5.0/subscription-engine/kafka-ws
-.. _API - kafka-ws https://dojot.github.io/dojot/kafka-ws/apiary_v0.5.0.html
+.. _API - kafka-ws: https://dojot.github.io/dojot/kafka-ws/apiary_v0.5.0.html
