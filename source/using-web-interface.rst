@@ -251,7 +251,9 @@ This section will show how to generate x509 certificates for a device, so that d
 
 To be able to execute the command of the example video it is necessary to be in the same directory as the 3 files attached. Command used in the example:
 
-mosquitto_pub -h 10.50.11.192 -p 8883 -t admin: 4302d4 / attrs -m '{"humidity": 7}' --cert "admin 4302d4.crt" --key "admin 4302d4.key" --cafile ca. crt
+.. code:: bash
+
+   mosquitto_pub -h 10.50.11.192 -p 8883 -t admin: 4302d4 / attrs -m '{"humidity": 7}' --cert "admin 4302d4.crt" --key "admin 4302d4.key" --cafile ca. crt
 
 .. raw:: html
 
