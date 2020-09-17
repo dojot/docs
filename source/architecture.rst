@@ -80,8 +80,8 @@ different users and applications data, enabling a multi-tenant infrastructure.
 
 The DataBroker service makes use of an in-memory database for efficiency. It
 adds context to Apache Kafka, making it possible that internal or even external
-services are able to consume real-time data based on context. DataBroker is
-also a distributed service to avoid it being a single point of failure or even
+services are able to consume real-time data based on context. DataBroker can also be
+a distributed service to avoid it being a single point of failure or even
 a bottleneck for the architecture.
 
 DeviceManager
@@ -256,8 +256,6 @@ All components communicate with each other in two ways:
   need to know which component is sending data through a particular topic.
 
 
-.. _iotagent-mosca: https://github.com/dojot/iotagent-mosca
-.. _Mosca: https://github.com/mcollina/mosca
 .. _x.509: https://en.wikipedia.org/wiki/X.509
 .. _CA: https://en.wikipedia.org/wiki/Certificate_authority
 .. _CSR: https://en.wikipedia.org/wiki/Certificate_signing_request

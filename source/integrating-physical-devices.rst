@@ -26,7 +26,7 @@ messages to the platform. There are two ways to do that:
   internal mechanisms and messages - check its documentation to know more.
 
 
-See more about :doc:`mosca-tls`.
+See more about :doc:`mqtt-tls`.
 
 .. _iotagent-mosca: https://github.com/dojot/iotagent-mosca
 .. _iotagent-nodejs: https://github.com/dojot/iotagent-nodejs

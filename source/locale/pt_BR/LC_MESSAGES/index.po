@@ -18,7 +18,7 @@ msgstr ""
 
 #: ../../source/index.rst:2
 msgid "dojot documentation"
-msgstr "Documentação do dojot"
+msgstr "Documentação da dojot"
 
 #: ../../source/index.rst:4
 msgid ""

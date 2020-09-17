@@ -121,7 +121,7 @@ Multi device out
     :align: left
     :alt: deviceout_node
 
-Device out will determine wich device (or devices) will have its attributes
+Device out will determine which device (or devices) will have its attributes
 updated on *dojot* according to the result of the flow. Bear in mind that this
 node doesn't send messages to your device, it will only update the attributes
 on the platform. Normally, the chosen device out is a *virtual device*, which
@@ -138,11 +138,11 @@ is a device that exists only on *dojot*.
 Fields:
 
 * **Name** *(optional)*: Name of the node.
-* **Action** *(required)*: Which node will receive the update. Options are:
+* **Action** *(required)*: Which device will receive the update. Options are:
    - `The device that triggered the flow`: this will update the same device
      that sent the message which triggered this flow.
-   - `Specific device(s)`: which nodes that will receive the update.
-   - `Device(s) defined during the flow`: which nodes that will receive the
+   - `Specific device(s)`: which device(s) that will receive the update.
+   - `Device(s) defined during the flow`: which device(s) that will receive the
      update. This is referenced by a list of values, just as with output
      values (msg.list_of_devices).
 * **Device** *(required)*: Select "The device that triggered the flow" will
@@ -180,8 +180,8 @@ Fields:
 * **Action** *(required)*: which device a message will be sent to. Options are:
    - `The device that triggered the flow`: this will send a message to
      the same device that sent the message which triggered this flow.
-   - `Specific device(s)`: which node the message will be sent to.
-   - `Device(s) defined during the flow`: which nodes the message will be
+   - `Specific device(s)`: which device(s) the message will be sent to.
+   - `Device(s) defined during the flow`: which device(s) the message will be
      sent to. This is referenced by a list of values, just as with output
      values (msg.list_of_devices).
 * **Device** *(required)*: Select "The device that triggered the flow" will
@@ -494,7 +494,7 @@ Geofence
     :align: left
     :alt: geofence_node
 
-Select an interest area to determine wich devices will activate the flow
+Select an interest area to determine which devices will activate the flow
 
 .. _geofence_node_cfg:
 .. figure:: images/nodes/geofence_node_cfg.png
@@ -740,7 +740,7 @@ Device out
     :align: left
     :alt: deviceout_node
 
-Device out will determine wich device will have its attributes updated on
+Device out will determine which device will have its attributes updated on
 *dojot* according to the result of the flow. Bear in mind that this node
 doesn't send messages to your device, it will only update the attributes on the
 platform. Normally, the chosen device out is a *virtual device*, which is a

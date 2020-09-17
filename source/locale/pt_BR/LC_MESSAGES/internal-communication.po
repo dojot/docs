@@ -33,7 +33,7 @@ msgid ""
 "The main components current in dojot are shown in "
 ":numref:`dojot_components`."
 msgstr ""
-"Os principais componentes atuais no dojot são mostrados em "
+"Os principais componentes atuais na dojot são mostrados em "
 ":numref:`dojot_components`."
 
 #: ../../source/internal-communication.rst:13

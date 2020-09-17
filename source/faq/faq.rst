@@ -450,7 +450,7 @@ You can check all available APIs in the `API Listing page <../components-and-api
 How can I use them?
 ^^^^^^^^^^^^^^^^^^^
 
-There is a very quick and useful tutorial in the :ref:`Using API interface`.
+There is a very quick and useful tutorial in the :doc:`./../using-api-interface`.
 
 I'm interested in integrating my application with dojot. How can I do it?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
