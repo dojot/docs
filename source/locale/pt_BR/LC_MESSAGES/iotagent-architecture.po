@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dojot 0.0.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-09-18 14:01-0300\n"
-"PO-Revision-Date: 2020-09-18 14:06-0300\n"
+"PO-Revision-Date: 2020-09-18 14:54-0300\n"
 "Last-Translator: \n"
 "Language: pt_BR\n"
 "Language-Team: \n"
@@ -821,7 +821,6 @@ msgid "Subject: `device-data`"
 msgstr "*Subject*: `device-data`"
 
 #: ../../source/iotagent-architecture.rst:474
-#, fuzzy
 msgid ""
 "This subject is tenant-sensitive. The timestamp is associated to when the "
 "attribute values were gathered by the device (this could be done by the device "

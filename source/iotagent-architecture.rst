@@ -382,7 +382,7 @@ events for a particular tenant. Its format is:
 |                    |   event => "create" / "update"             |
 |                    |   meta => service                          |
 |                    |     service => string                      |
-|                    |   data => id label templates attrs created |
+|                    |   data =>                                  |
 |                    |     id => string                           |
 |                    |     label => string                        |
 |                    |     templates => *number                   |
@@ -393,22 +393,33 @@ events for a particular tenant. Its format is:
 |                    | ::                                         |
 |                    |                                            |
 |                    |   event => "remove"                        |
-|                    |   meta => service                          |
+|                    |   meta =>                                  |
 |                    |     service => string                      |
-|                    |   data => id                               |
+|                    |   data =>                                  |
 |                    |     id => string                           |
 +--------------------+--------------------------------------------+
 | Body format (JSON) |                                            |
 |                    | ::                                         |
 |                    |                                            |
 |                    |   event => "configure"                     |
-|                    |   meta => service                          |
+|                    |   meta =>                                  |
 |                    |     service => string                      |
 |                    |     timestamp => int (epoch time em ms)    |
-|                    |   data => id                               |
+|                    |   data =>                                  |
 |                    |     id => string                           |
 |                    |     attrs => *device_attrs                 |
 +--------------------+--------------------------------------------+
+| Body format (JSON) |                                            |
+|                    | ::                                         |
+|                    |                                            |
+|                    |   event => "template.update"               |
+|                    |   meta =>                                  |
+|                    |     service => string                      |
+|                    |   data =>                                  |
+|                    |     affected => set of affected device IDs |
+|                    |     template => obj with template inform.  |
++--------------------+--------------------------------------------+
+
 
 
 The `device_attrs` attribute is a even simpler key/value JSON, such as:
