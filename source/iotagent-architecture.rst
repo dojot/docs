@@ -38,7 +38,7 @@ Using dojot involves dealing with the following entities:
      application and are used to analyze and preprocess data.
 - **subjects**: group of topics that share a common message flow. For instance,
   there might be many topics that are used to transmit device data. All of them
-  belong to the same subject "device-data".
+  belong to the same subject `device-data`.
 
 
 When a new IoT agent is created, all these entities must be taken into account
@@ -322,7 +322,7 @@ A sample response for this request is:
 .. code-block:: json
 
     {
-      "topic": "c9b2c688-9e40-4032-877a-3d262acba9d0"
+      "topic": "admin.dojot.tenancy"
     }
 
 Some subjects are "tenant-sensitive" (a different topic will be returned for
@@ -332,22 +332,21 @@ token when dealing with tenant-sensitive subjects.
 
 The following subjects should be used by IoT agents:
 
-- dojot.tenancy
-- dojot.device-manager.device-template
-- dojot.device-manager.device
-- device-data
+- `dojot.tenancy`
+- `dojot.device-manager.device`
+- `device-data`
 
 Each one will be detailed in the following sections
 
-dojot.tenancy
-^^^^^^^^^^^^^
+`dojot.tenancy`
+^^^^^^^^^^^^^^^
 
 The topic related to this subject will be used to receive tenant lifecycle
 events. Whenever a new tenant is created or delete, the following message will
 be published:
 
 +---------------------------------------------------+
-| Subject: dojot.tenancy                            |
+| *Subject*: `dojot.tenancy`                        |
 +------------------------+--------------------------+
 | Body format (JSON)     |                          |
 |                        | ::                       |
@@ -366,31 +365,15 @@ A sample message received by this topic is:
       "tenant": "new_tenant"
     }
 
-dojot.device-manager.device-template
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-+------------------------------------------------------+
-| Subject: dojot.device-manager.device-template        |
-+---------------------+--------------------------------+
-| Body format (JSON)  |                                |
-|                     | ::                             |
-|                     |                                |
-|                     |   event => "create"            |
-|                     |   data => id label attrs       |
-|                     |     id => string               |
-|                     |     label => string            |
-|                     |     attrs => [*template_attrs] |
-+---------------------+--------------------------------+
-
-
-dojot.device-manager.devices
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+`dojot.device-manager.device`
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 the topic related to this subject will be used to receive device lifecycle
 events for a particular tenant. Its format is:
 
 +-----------------------------------------------------------------+
-| Subject: dojot.device-manager.device                            |
+| Subject: `dojot.device-manager.device`                          |
 +====================+============================================+
 | Body format (JSON) |                                            |
 |                    | ::                                         |
@@ -418,30 +401,17 @@ events for a particular tenant. Its format is:
 | Body format (JSON) |                                            |
 |                    | ::                                         |
 |                    |                                            |
-|                    |   event => "actuate"                       |
+|                    |   event => "configure"                     |
 |                    |   meta => service                          |
 |                    |     service => string                      |
+|                    |     timestamp => int (epoch time em ms)    |
 |                    |   data => id                               |
 |                    |     id => string                           |
 |                    |     attrs => *device_attrs                 |
 +--------------------+--------------------------------------------+
 
-The template_attrs is a simple key/value JSON with template ID as key and the
-following structure as value:
 
-
-.. code-block:: json
-
-    {
-      "template_id": "1",
-      "created": "2018-01-05T15:41:54.840116+00:00",
-      "label": "this-is-a-sample-attribute",
-      "value_type": "float",
-      "type": "dynamic",
-      "id": 1
-    }
-
-The device_attrs attribute is a even simpler key/value JSON, such as:
+The `device_attrs` attribute is a even simpler key/value JSON, such as:
 
 .. code-block:: json
 
@@ -481,31 +451,29 @@ A sample message received by this topic is:
       }
     }
 
-device-data
-^^^^^^^^^^^
+`device-data`
+^^^^^^^^^^^^^
 
 The topic related to this subject will be used to publish data retrieved from a
 physical device to other dojot services. Its format is:
 
 
 +------------------------------------------------------------------------+
-| Subject: device-data                                                   |
+| Subject: `device-data`                                                 |
 +--------------------+---------------------------------------------------+
 | Body format (JSON) |                                                   |
 |                    | ::                                                |
 |                    |                                                   |
-|                    |   metadata => deviceid tenant timestamp recv_time |
+|                    |   metadata => deviceid tenant timestamp           |
 |                    |     deviceid => string                            |
 |                    |     tenant => string                              |
-|                    |     timestamp => unix_timestamp                   |
-|                    |     recv_time => unix_timestamp                   |
+|                    |     timestamp => int (epoch time em ms)           |
 |                    |   attrs => *device_attrs                          |
 +--------------------+---------------------------------------------------+
 
 This subject is tenant-sensitive. The timestamp is associated to when the
 attribute values were gathered by the device (this could be done by the device
-itself or by the IoT agent, if no timestamp was defined by the device). The
-recv_time attribute indicates when the message was received.
+itself or by the IoT agent, if no timestamp was defined by the device).
 
 A sample message received by this topic is:
 
@@ -516,7 +484,6 @@ A sample message received by this topic is:
         "deviceid": "c6ea4b",
         "tenant": "admin",
         "timestamp": 1528226137452,
-        "recv_time": 1528226137462
       },
       "attrs": {
         "humidity": 60
@@ -543,7 +510,8 @@ and vice-versa.
 Libraries to assist the development of new IotAgents
 ====================================================
 
-We have libraries in node.js **recommended** (https://github.com/dojot/iotagent-nodejs) and java (https://github.com/dojot/iotagent-java) to facilitate the development of an iotAgent.
+We have libraries in node.js **recommended** (https://github.com/dojot/iotagent-nodejs)
+and java (https://github.com/dojot/iotagent-java) to facilitate the development of an iotAgent.
 
 
 
