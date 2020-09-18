@@ -253,7 +253,7 @@ To be able to execute the command of the example video it is necessary to be in 
 
 .. code:: bash
 
-   mosquitto_pub -h 10.50.11.192 -p 8883 -t admin: 4302d4/attrs -m '{"humidity": 7}' --cert "admin 4302d4.crt" --key "admin 4302d4.key" --cafile ca.crt
+   mosquitto_pub -h localhost -p 8883 -t admin: 4302d4/attrs -m '{"humidity": 7}' --cert "admin 4302d4.crt" --key "admin 4302d4.key" --cafile ca.crt
 
 .. raw:: html
 
