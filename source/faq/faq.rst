@@ -44,7 +44,7 @@ Which repository is the main one?
 There are 3 main ones:
 
 - `<https://github.com/dojot/dojot>`_: this is where we keep track of all the
-  things related to this project as issues and and there are also some component codes here.
+  things related to this project as issues and there are also some component codes here.
 
 - `<https://github.com/dojot/docker-compose>`_: repository for Docker compose
   files and configurations. This is what we would recommend to use to start
@@ -309,10 +309,10 @@ device `3bb9`:
       }
     ]
 
-Check a tutorial using history in :ref:`Checking historical data`.
+For more details on data retrieval from the history, check the tutorial in :ref:`Checking historical data`.
 
-In addition, the are more operators that could be used to filter entries.
-Look for History API in :doc:`./../components-and-apis`
+In addition, there are more operators that could be used to filter entries.
+Look for the History API in :doc:`./../components-and-apis`
 documentation to check out all possible operators and other filters.
 
 
@@ -347,7 +347,7 @@ You can do things such as:
   - Create views from a particular device, by renaming, aggregating and
     changing values, etc).
   - Infer information based on switch, edge-detection and geo-fence rules.
-  - Notify through many ways like HTTP.
+  - Notify through many ways, like HTTP.
 
 The data flows component is in constantly development with new features being
 added every new release.
@@ -358,7 +358,7 @@ can I add a new node type to its menu?`_ question for more information on that.
 So, how can I use it?
 ^^^^^^^^^^^^^^^^^^^^^
 
-There is a tutorial for how to use flow, see more in :doc:`../flow`.
+For more details on how to use flows, check the tutorial in :doc:`../flow`.
 
 Can I apply the same flow to multiple devices?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -375,8 +375,7 @@ As the data flow is processed individually for each message, you need to create
 a virtual device to aggregate all attributes, then use this virtual device as
 the input of the flow.
 
-Another thing you can do is use a node that deal with contexts.
-Or you can even create a node that handles contexts.
+You can also create a node (or use an already existing one) that deals with contexts.
 
 What about a HTTP POST request, how can I send it?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -418,7 +417,7 @@ How can I add a new node type to its menu?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 There is a tutorial on how to add new nodes and two examples of node too,
-check `flowbroker library`_ for more details.
+check the `flowbroker library`_ for more details.
 
 
 Applications
@@ -442,12 +441,12 @@ This should be pretty straightforward. There are three ways that your applicatio
 could be integrated with dojot:
 
   - **Retrieving historical data**: you might want to periodically read all
-    historical data related to a device. This can be done by using *history* API
-  - **Retrieving real time data**: you might want to in real time read data related to a device.
+    historical data related to a device. This can be done by using the *history* API
+  - **Retrieving real time data**: you might want to read device-related real time data.
     This can be done by using *kafka-ws*, a *websocket* based implementation.
     To better understand how to use *kafka-ws* check :ref:`Kafka-WS Internal`.
-  - **Using flowbroker to pre-process data**: They can help process and
-    transform data so that they can
+  - **Using flowbroker to pre-process data**: for more flexible ways of data manipulation, you can use flows.
+    They can process/transform data so they can
     be properly sent to your application via HTTP request, or stored
     in a virtual device (which can be used to generate notifications as
     previously described).
@@ -455,8 +454,8 @@ could be integrated with dojot:
 
 All these endpoints should bear an access token, see more :ref:`Getting access token`.
 
-Check the documentation api for  *history* and *kafka-ws* in :doc:`./../components-and-apis`.
-And to a tutorial how to use flow check :doc:`../flow`.
+Check the documentation API for  *history* and *kafka-ws* in :doc:`./../components-and-apis`.
+And to a tutorial on how to use the flow, check :doc:`../flow`.
 
 
 .. _flowbroker library : https://github.com/dojot/flowbroker/tree/v0.5.0/lib

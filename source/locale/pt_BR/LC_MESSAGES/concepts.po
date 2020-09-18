@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dojot 0.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-17 13:35-0300\n"
-"PO-Revision-Date: 2020-09-17 13:36-0300\n"
+"POT-Creation-Date: 2020-09-18 18:35-0300\n"
+"PO-Revision-Date: 2020-09-18 18:37-0300\n"
 "Last-Translator: \n"
 "Language: pt_BR\n"
 "Language-Team: \n"
@@ -239,7 +239,7 @@ msgid ""
 "attributes which will hold all the device emitted information."
 msgstr ""
 "Todos os dispositivos são criados com base em um ou mais modelos "
-"(*templates*) , que podem ser pensado como um modelo de dispositivo. Como "
+"(*templates*), que podem ser pensados como um modelo de dispositivo. Como "
 "\"modelo\", poderíamos pensar em números de peça ou modelos de produtos - um "
 "protótipo a partir do qual os dispositivos são criados. Os modelos na dojot "
 "têm um rótulo (qualquer sequência alfanumérica), uma lista de atributos que "
@@ -288,11 +288,21 @@ msgstr ""
 "O componente responsável pelo gerenciamento de dispositivos (reais e "
 "virtuais) e modelos (*templates*) é o `DeviceManager`_."
 
-#: ../../source/concepts.rst:121
+#: ../../source/concepts.rst:120
+msgid ""
+"The `DeviceManager` documentation on GitHub ReadMe explains in more depth "
+"all the available operations. You can found the link in :doc:`./components-"
+"and-apis`."
+msgstr ""
+"A documentação do `DeviceManager` no ReadMe do GitHub explica com mais "
+"detalhes todas as operações disponíveis. Você pode encontrar o link em :doc:"
+"`./components-and-apis`."
+
+#: ../../source/concepts.rst:125
 msgid "Flows"
 msgstr "Fluxos (*Flows*)"
 
-#: ../../source/concepts.rst:123
+#: ../../source/concepts.rst:127
 msgid ""
 "A flow is a sequence of blocks that process a particular event or device "
 "message. It contains:"
@@ -300,7 +310,7 @@ msgstr ""
 "Um fluxo é uma sequência de blocos que processa um evento ou mensagem de "
 "dispositivo específica. Contém:"
 
-#: ../../source/concepts.rst:126
+#: ../../source/concepts.rst:130
 msgid ""
 "entry point: a block representing what is the trigger to start a particular "
 "flow;"
@@ -308,7 +318,7 @@ msgstr ""
 "ponto de entrada: um bloco representando qual é o gatilho para iniciar um "
 "fluxo específico;"
 
-#: ../../source/concepts.rst:128
+#: ../../source/concepts.rst:132
 msgid ""
 "processing blocks: a set of blocks that perform operations using the event. "
 "These blocks may or may not use the contents of such event to further "
@@ -323,7 +333,7 @@ msgstr ""
 "atributos de mensagens, executar operações em elementos externos e assim por "
 "diante."
 
-#: ../../source/concepts.rst:133
+#: ../../source/concepts.rst:137
 msgid ""
 "exit point: a block representing where the resulting data should be "
 "forwarded to. This block might be a database, a virtual device, an external "
@@ -333,11 +343,11 @@ msgstr ""
 "ser encaminhados. Esse bloco pode ser um banco de dados, um dispositivo "
 "virtual, um elemento externo e assim por diante."
 
-#: ../../source/concepts.rst:137
+#: ../../source/concepts.rst:141
 msgid "The component responsible for dealing with such flows is `flowbroker`_."
 msgstr "O componente responsável por lidar com esses fluxos é `flowbroker`_."
 
-#: ../../source/concepts.rst:139
+#: ../../source/concepts.rst:143
 msgid "Check :doc:`flow` for more information on its usage."
 msgstr "Verifique :doc:`flow` para mais informações sobre seu uso."
 
