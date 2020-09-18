@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dojot 0.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-17 14:19-0300\n"
+"POT-Creation-Date: 2020-09-18 08:39-0300\n"
 "PO-Revision-Date: 2020-09-14 11:33-0300\n"
 "Last-Translator: \n"
 "Language: pt_BR\n"
@@ -754,7 +754,7 @@ msgid "host:8000/x509/v1"
 msgstr ""
 
 #: ../../source/components-and-apis.rst:311
-msgid "host:8080/kafka-ws/v1/ticket"
+msgid "host:8080/v1/ticket"
 msgstr ""
 
 #: ../../source/components-and-apis.rst:312
@@ -762,7 +762,7 @@ msgid "host:8000/kafka-ws/v1/ticket"
 msgstr ""
 
 #: ../../source/components-and-apis.rst:314
-msgid "host:8080/kafka-ws/v1/topics"
+msgid "host:8080/v1/topics"
 msgstr ""
 
 #: ../../source/components-and-apis.rst:315
@@ -848,5 +848,23 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "host:80/kafka-ws/v1/topics"
+#~ msgstr ""
+
+#~ msgid "host:8080/v1/ticket"
+#~ msgstr ""
+
+#~ msgid "host:8000/kafka-ws/v1/ticket"
+#~ msgstr ""
+
+#~ msgid "host:8080/v1/topics"
+#~ msgstr ""
+
+#~ msgid "host:8000/kafka-ws/v1/topics"
+#~ msgstr ""
+
+#~ msgid "host:8000/v1/ticket"
+#~ msgstr ""
+
+#~ msgid "host:8000/v1/topics"
 #~ msgstr ""
 

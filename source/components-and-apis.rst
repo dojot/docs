@@ -308,10 +308,10 @@ TCP port 8000), see the following table.
      - host:3000/api/v1
      - host:8000/x509/v1
    * - Kafka Websocket
-     - host:8080/kafka-ws/v1/ticket
+     - host:8080/v1/ticket
      - host:8000/kafka-ws/v1/ticket
    * - Kafka Websocket
-     - host:8080/kafka-ws/v1/topics
+     - host:8080/v1/topics
      - host:8000/kafka-ws/v1/topics
 
      
