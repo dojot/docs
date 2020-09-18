@@ -409,18 +409,6 @@ events for a particular tenant. Its format is:
 |                    |     id => string                           |
 |                    |     attrs => *device_attrs                 |
 +--------------------+--------------------------------------------+
-| Body format (JSON) |                                            |
-|                    | ::                                         |
-|                    |                                            |
-|                    |   event => "template.update"               |
-|                    |   meta =>                                  |
-|                    |     service => string                      |
-|                    |   data =>                                  |
-|                    |     affected => set of affected device IDs |
-|                    |     template => obj with template inform.  |
-+--------------------+--------------------------------------------+
-
-
 
 The `device_attrs` attribute is a even simpler key/value JSON, such as:
 
