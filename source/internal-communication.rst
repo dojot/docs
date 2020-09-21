@@ -552,8 +552,10 @@ will sign a certificate and link this certificate to the device registration.
 The ``x509-identity-mgmt`` component is responsible for providing
 certificate-related services for devices.
 
+.. _Kafka-WS Internal:
+
 Kafka-WS
----------------------
+--------
 
 *Kafka WebSocket* service allows the users to retrieve conditional and/or
 partial real time data from a given dojot topic in its internal Kafka cluster.
