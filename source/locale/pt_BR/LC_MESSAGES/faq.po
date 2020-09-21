@@ -561,8 +561,8 @@ msgid ""
 "for the History API in :doc:`./../components-and-apis` documentation to check "
 "out all possible operators and other filters."
 msgstr ""
-"Há mais operadores que podem ser usados para filtrar entradas. Veja `History API "
-"<https://dojot.github.io/history/apiary_latest.html>`_ para ver todas os "
+"Há mais operadores que podem ser usados para filtrar entradas. Veja History API "
+" :doc:`./../components-and-apis` para ver todas os "
 "possíveis operadores e outros filtros."
 
 #: ../../source/faq/faq.rst:320
