@@ -564,7 +564,7 @@ msgstr "número de mensagens recebidas do dispositivo (total, por dispositivo, p
 msgid ""
 "number of published device messages to dojot (total, per device, per tenant)"
 msgstr ""
-"número de mensagens recebidas da dojot (total, por dispositivo, por "
+"número de mensagens publicadas do dispositivo para dojot (total, por dispositivo, por "
 "*tenant*)"
 
 #: ../../source/iotagent-architecture.rst:230
