@@ -118,7 +118,7 @@ The component responsible for managing devices (both real and virtual) and
 templates is `DeviceManager`_ .
 
 The `DeviceManager` documentation on GitHub ReadMe explains in more
-depth all the available operations. You can found the link
+depth all the available operations. You can find the link
 in :doc:`./components-and-apis`.
 
 Flows

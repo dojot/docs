@@ -291,7 +291,7 @@ msgstr ""
 #: ../../source/concepts.rst:120
 msgid ""
 "The `DeviceManager` documentation on GitHub ReadMe explains in more depth "
-"all the available operations. You can found the link in :doc:`./components-"
+"all the available operations. You can find the link in :doc:`./components-"
 "and-apis`."
 msgstr ""
 "A documentação do `DeviceManager` no ReadMe do GitHub explica com mais "

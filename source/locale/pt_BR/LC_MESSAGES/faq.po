@@ -833,7 +833,7 @@ msgid ""
 "components-and-apis`. And to a tutorial on how to use the flow, check :doc:`../"
 "flow`."
 msgstr ""
-"Verifique a documentação da API do *history* e *kafka-ws* em :doc:`./../"
+"Verifique a documentação da API do *history* e do *kafka-ws* em :doc:`./../"
 "components-and-apis`.  E para um tutorial de como usar o fluxo veja :doc:`../"
 "flow`."
 
