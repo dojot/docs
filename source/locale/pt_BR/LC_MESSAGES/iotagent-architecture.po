@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dojot 0.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-18 14:01-0300\n"
-"PO-Revision-Date: 2020-09-18 14:54-0300\n"
+"POT-Creation-Date: 2020-09-22 14:19-0300\n"
+"PO-Revision-Date: 2020-09-22 14:20-0300\n"
 "Last-Translator: \n"
 "Language: pt_BR\n"
 "Language-Team: \n"
@@ -40,7 +40,8 @@ msgstr "Quem deve ler isso?"
 #: ../../source/iotagent-architecture.rst:11
 msgid "Developers that want to create new IoT agents to be used with dojot."
 msgstr ""
-"Desenvolvedores que desejam criar novos agentes IoT para serem usados com a dojot."
+"Desenvolvedores que desejam criar novos agentes IoT para serem usados com a "
+"dojot."
 
 #: ../../source/iotagent-architecture.rst:14
 msgid "Introduction"
@@ -558,14 +559,16 @@ msgstr "estatísticas de transmissão"
 #: ../../source/iotagent-architecture.rst:226
 msgid ""
 "number of received device messages from device (total, per device, per tenant)"
-msgstr "número de mensagens recebidas do dispositivo (total, por dispositivo, por *tenant*)"
+msgstr ""
+"número de mensagens recebidas do dispositivo (total, por dispositivo, por "
+"*tenant*)"
 
 #: ../../source/iotagent-architecture.rst:228
 msgid ""
 "number of published device messages to dojot (total, per device, per tenant)"
 msgstr ""
-"número de mensagens publicadas do dispositivo para dojot (total, por dispositivo, por "
-"*tenant*)"
+"número de mensagens publicadas do dispositivo para dojot (total, por "
+"dispositivo, por *tenant*)"
 
 #: ../../source/iotagent-architecture.rst:230
 msgid "number of messages sent to devices (total, per device, per tenant)"
@@ -632,157 +635,163 @@ msgstr ""
 msgid "Messages"
 msgstr "Mensagens"
 
-#: ../../source/iotagent-architecture.rst:257
+#: ../../source/iotagent-architecture.rst:258
+msgid "Tenants"
+msgstr ""
+
+#: ../../source/iotagent-architecture.rst:260
 msgid ""
 "At start, all IoT agents (in fact, all services that need to receive or send "
 "messages related to devices) must know the list of configured tenants. This is "
 "the most basic piece of information that IoT agent needs to know in order to "
 "work properly. The request that should be sent to Auth service is this (all "
 "requests sent from dojot services to its own services should use the \"dojot-"
-"management\" user):"
+"management\" user and tenant):"
 msgstr ""
 "No início, todos os agentes IoT (na verdade, todos os serviços que precisam "
 "receber ou enviar mensagens relacionadas aos dispositivos) devem conhecer a "
 "lista de *tenants* configurados. Esta é a informação mais básica que o agente "
 "IoT precisa saber para funcionar corretamente. A solicitação que deve ser "
 "enviada ao serviço Auth é esta (todas as solicitações enviadas dos serviços "
-"dojot para seus próprios serviços devem usar o usuário 'dojot-management'):"
+"dojot para seus próprios serviços devem usar o usuário e *tenant* 'dojot-"
+"management' ):"
 
-#: ../../source/iotagent-architecture.rst:266
+#: ../../source/iotagent-architecture.rst:269
 msgid "Host: Auth"
 msgstr ""
 
-#: ../../source/iotagent-architecture.rst:268
+#: ../../source/iotagent-architecture.rst:271
 msgid "Endpoint: /admin/tenants"
 msgstr ""
 
-#: ../../source/iotagent-architecture.rst:268
-#: ../../source/iotagent-architecture.rst:304
+#: ../../source/iotagent-architecture.rst:271
+#: ../../source/iotagent-architecture.rst:346
 msgid "Method: GET"
 msgstr "Método: GET"
 
-#: ../../source/iotagent-architecture.rst:270
-#: ../../source/iotagent-architecture.rst:306
+#: ../../source/iotagent-architecture.rst:273
+#: ../../source/iotagent-architecture.rst:348
 msgid "Request"
 msgstr "Requisição"
 
-#: ../../source/iotagent-architecture.rst:272
-#: ../../source/iotagent-architecture.rst:276
-#: ../../source/iotagent-architecture.rst:308
-#: ../../source/iotagent-architecture.rst:312
+#: ../../source/iotagent-architecture.rst:275
+#: ../../source/iotagent-architecture.rst:279
+#: ../../source/iotagent-architecture.rst:350
+#: ../../source/iotagent-architecture.rst:354
 msgid "Headers"
 msgstr "Cabeçalhos"
 
-#: ../../source/iotagent-architecture.rst:272
-#: ../../source/iotagent-architecture.rst:308
+#: ../../source/iotagent-architecture.rst:275
+#: ../../source/iotagent-architecture.rst:350
 msgid "Authorization: Bearer ${JWT}"
 msgstr ""
 
-#: ../../source/iotagent-architecture.rst:274
-#: ../../source/iotagent-architecture.rst:310
+#: ../../source/iotagent-architecture.rst:277
+#: ../../source/iotagent-architecture.rst:352
 msgid "Response"
 msgstr "Reposta"
 
-#: ../../source/iotagent-architecture.rst:276
-#: ../../source/iotagent-architecture.rst:312
+#: ../../source/iotagent-architecture.rst:279
+#: ../../source/iotagent-architecture.rst:354
 msgid "Content-Type: application/json"
 msgstr ""
 
-#: ../../source/iotagent-architecture.rst:281
-#: ../../source/iotagent-architecture.rst:314
+#: ../../source/iotagent-architecture.rst:284
+#: ../../source/iotagent-architecture.rst:356
 msgid "Body format"
 msgstr "Formato do corpo"
 
-#: ../../source/iotagent-architecture.rst:285
-#: ../../source/iotagent-architecture.rst:320
+#: ../../source/iotagent-architecture.rst:288
+#: ../../source/iotagent-architecture.rst:361
 msgid "A sample response for this request is:"
 msgstr "Um exemplo de resposta para esta requisição:"
 
-#: ../../source/iotagent-architecture.rst:297
+#: ../../source/iotagent-architecture.rst:300
 msgid ""
-"With this list, the IoT agent can request topics for receiving device and "
-"tenant lifecycle events and for publishing new device attribute data. This is "
-"done by sending the following request to DataBroker:"
-msgstr ""
-"Com esta lista, o agente IoT pode solicitar tópicos para receber eventos do "
-"ciclo de vida do dispositivo e do *tenant* e para publicar novos dados de "
-"atributo do dispositivo. Isso é feito enviando a seguinte solicitação ao "
-"DataBroker:"
-
-#: ../../source/iotagent-architecture.rst:302
-msgid "Host: DataBroker"
+"After the bootstrap, it's necessary to subscribed to receive new creates and "
+"deletes from tenants using the kafka topic ``dojot-management.dojot.tenancy``."
 msgstr ""
 
-#: ../../source/iotagent-architecture.rst:304
-msgid "Endpoint: /topic/{subject}"
-msgstr ""
-
-#: ../../source/iotagent-architecture.rst:328
+#: ../../source/iotagent-architecture.rst:303
 msgid ""
-"Some subjects are \"tenant-sensitive\" (a different topic will be returned for "
-"different tenants) and some are not (the same topic will be returned regardless "
-"the tenant). DataBroker will use the tenant contained in the authorization "
-"token when dealing with tenant-sensitive subjects."
+"The kafka topic ``dojot-management.dojot.tenancy`` will be used to receive "
+"tenant lifecycle events. Whenever a new tenant is created or delete, the "
+"following message will be published:"
 msgstr ""
-"Alguns *subjects* são \"sensíveis ao tenant\" (um tópico diferente será "
-"retornado para diferentes *tenants*) e outros não (o mesmo tópico será "
-"retornado independentemente do *tenant*). O *DataBroker* usará o *tenant* "
-"contido no *token* de autorização ao lidar com assuntos sensíveis ao *tenant*."
+"O tópico kafka ``dojot-management.dojot.tenancy`` será usado para receber "
+"eventos de ciclo de vida dos *tenants*. Sempre que um novo *tenant* é criado ou "
+"excluído, a seguinte mensagem será publicada:"
 
-#: ../../source/iotagent-architecture.rst:333
+#: ../../source/iotagent-architecture.rst:308
+msgid "*Topic*: `dojot-management.dojot.tenancy`"
+msgstr "*Tópico*: ``dojot-management.dojot.tenancy``"
+
+#: ../../source/iotagent-architecture.rst:310
+#: ../../source/iotagent-architecture.rst:382
+#: ../../source/iotagent-architecture.rst:396
+#: ../../source/iotagent-architecture.rst:405
+#: ../../source/iotagent-architecture.rst:465
+msgid "Body format (JSON)"
+msgstr "Formato do corpo (JSON)"
+
+#: ../../source/iotagent-architecture.rst:317
+#: ../../source/iotagent-architecture.rst:426
+#: ../../source/iotagent-architecture.rst:480
+msgid "A sample message received by this topic is:"
+msgstr "Uma mensagem de exemplo recebida por este tópico é:"
+
+#: ../../source/iotagent-architecture.rst:326
+msgid ""
+"This prefix topic can be configured, see more in the `Auth` Component "
+"documentation :doc:`./components-and-apis`."
+msgstr ""
+
+#: ../../source/iotagent-architecture.rst:329
+msgid "See more about :ref:`Bootstrapping tenants` in internal communication."
+msgstr ""
+
+#: ../../source/iotagent-architecture.rst:332
+msgid "Subjects"
+msgstr ""
+
+#: ../../source/iotagent-architecture.rst:334
 msgid "The following subjects should be used by IoT agents:"
 msgstr "Os seguintes *subjects* devem ser usados pelo agente IoT:"
 
-#: ../../source/iotagent-architecture.rst:335
-#: ../../source/iotagent-architecture.rst:342
-msgid "`dojot.tenancy`"
-msgstr "*Subject*: *dojot.tenancy*"
-
 #: ../../source/iotagent-architecture.rst:336
-#: ../../source/iotagent-architecture.rst:370
+#: ../../source/iotagent-architecture.rst:374
 msgid "`dojot.device-manager.device`"
 msgstr "*Subject*: `dojot.device-manager.device`"
 
 #: ../../source/iotagent-architecture.rst:337
-#: ../../source/iotagent-architecture.rst:455
+#: ../../source/iotagent-architecture.rst:456
 msgid "`device-data`"
 msgstr "*Subject*: `device-data`"
 
 #: ../../source/iotagent-architecture.rst:339
+msgid ""
+"With the list of tenants, the IoT agent can request topics for receiving device "
+"lifecycle events and for publishing new device attribute data. This is done by "
+"sending the subjects for the following request to DataBroker:"
+msgstr ""
+"Com a lista de locatários, o agente IoT pode solicitar tópicos para receber "
+"eventos de ciclo de vida do dispositivo e para publicar novos dados de atributo "
+"do dispositivo. Isso é feito enviando os *subjects* como na seguinte "
+"solicitação ao DataBroker:"
+
+#: ../../source/iotagent-architecture.rst:344
+msgid "Host: DataBroker"
+msgstr ""
+
+#: ../../source/iotagent-architecture.rst:346
+msgid "Endpoint: /topic/{subject}"
+msgstr ""
+
+#: ../../source/iotagent-architecture.rst:370
 msgid "Each one will be detailed in the following sections"
 msgstr "Cada um desses aspectos será detalhado nas seções a seguir"
 
-#: ../../source/iotagent-architecture.rst:344
-msgid ""
-"The topic related to this subject will be used to receive tenant lifecycle "
-"events. Whenever a new tenant is created or delete, the following message will "
-"be published:"
-msgstr ""
-"O tópico relacionado a este *subject* será usado para receber eventos do ciclo "
-"de vida do *tenant*. Sempre que um novo *tenant* for criado ou excluído, a "
-"seguinte mensagem será publicada:"
-
-#: ../../source/iotagent-architecture.rst:349
-msgid "*Subject*: `dojot.tenancy`"
-msgstr "*Subject*: *dojot.tenancy*"
-
-#: ../../source/iotagent-architecture.rst:351
-#: ../../source/iotagent-architecture.rst:378
-#: ../../source/iotagent-architecture.rst:392
-#: ../../source/iotagent-architecture.rst:401
-#: ../../source/iotagent-architecture.rst:464
-msgid "Body format (JSON)"
-msgstr "Formato do corpo (JSON)"
-
-#: ../../source/iotagent-architecture.rst:358
-msgid ""
-"This subject is not tenant-sensitive. A sample message received by this topic "
-"is:"
-msgstr ""
-"Este *subject* não é sensível ao *tenant*. Uma mensagem de exemplo recebida por "
-"este tópico é:"
-
-#: ../../source/iotagent-architecture.rst:372
+#: ../../source/iotagent-architecture.rst:376
 msgid ""
 "the topic related to this subject will be used to receive device lifecycle "
 "events for a particular tenant. Its format is:"
@@ -790,25 +799,16 @@ msgstr ""
 "o tópico relacionado a este *subject* será usado para receber eventos do ciclo "
 "de vida do dispositivo para um *tenant* específico. Seu formato é:"
 
-#: ../../source/iotagent-architecture.rst:376
+#: ../../source/iotagent-architecture.rst:380
 msgid "Subject: `dojot.device-manager.device`"
 msgstr "*Subject*: `dojot.device-manager.device`"
 
-#: ../../source/iotagent-architecture.rst:414
+#: ../../source/iotagent-architecture.rst:417
 msgid "The `device_attrs` attribute is a even simpler key/value JSON, such as:"
 msgstr ""
 "O atributo `device_attrs` é um JSON de chave/valor ainda mais simples, como:"
 
-#: ../../source/iotagent-architecture.rst:423
-msgid "This subject is tenant-sensitive."
-msgstr "Este *subject* é sensível ao *tenant*."
-
-#: ../../source/iotagent-architecture.rst:425
-#: ../../source/iotagent-architecture.rst:478
-msgid "A sample message received by this topic is:"
-msgstr "Uma mensagem de exemplo recebida por este tópico é:"
-
-#: ../../source/iotagent-architecture.rst:457
+#: ../../source/iotagent-architecture.rst:458
 msgid ""
 "The topic related to this subject will be used to publish data retrieved from a "
 "physical device to other dojot services. Its format is:"
@@ -816,37 +816,42 @@ msgstr ""
 "O tópico relacionado a este *subject* será usado para publicar dados "
 "recuperados de um dispositivo físico em outros serviços da dojot. Seu formato é:"
 
-#: ../../source/iotagent-architecture.rst:462
+#: ../../source/iotagent-architecture.rst:463
 msgid "Subject: `device-data`"
 msgstr "*Subject*: `device-data`"
 
-#: ../../source/iotagent-architecture.rst:474
+#: ../../source/iotagent-architecture.rst:475
 msgid ""
-"This subject is tenant-sensitive. The timestamp is associated to when the "
-"attribute values were gathered by the device (this could be done by the device "
-"itself or by the IoT agent, if no timestamp was defined by the device)."
+"The timestamp is associated to when the attribute values were gathered by the "
+"device (this could be done by the device itself or by the IoT agent, if no "
+"timestamp was defined by the device). The timestamp should be a Unix Timestamp "
+"in milliseconds or seconds."
 msgstr ""
-"Esse *subject* é sensível ao *tenant*. O registro de data e hora está associado "
-"ao momento em que os valores do atributo foram coletados pelo dispositivo (isso "
-"pode ser feito pelo próprio dispositivo ou pelo agente IoT, se nenhum registro "
-"de data e hora foi definido pelo dispositivo)."
+"O *timestamp* está associado a quando os valores de atributo foram coletados "
+"pelo dispositivo (isso pode ser feito pelo próprio dispositivo ou pelo agente "
+"IoT, se nenhum *timestamp* foi definido pelo dispositivo). O *timestamp* deve "
+"ser um *Unix Timestamp* em milissegundos ou segundos."
 
-#: ../../source/iotagent-architecture.rst:494
+#: ../../source/iotagent-architecture.rst:496
+msgid "See more about :ref:`Sending Kafka messages` in internal communication."
+msgstr "Veja mais sobre ref:`Sending Kafka messages`  na comunicação interna."
+
+#: ../../source/iotagent-architecture.rst:499
 msgid "Firmware update"
 msgstr "Atualização de *Firmware*"
 
-#: ../../source/iotagent-architecture.rst:496
+#: ../../source/iotagent-architecture.rst:501
 msgid ""
 "An IoT agent might implement mechanisms in order to update firmware in devices."
 msgstr ""
 "Um agente IoT pode implementar mecanismos para atualizar o *firmware* nos "
 "dispositivos."
 
-#: ../../source/iotagent-architecture.rst:500
+#: ../../source/iotagent-architecture.rst:505
 msgid "Behavior"
 msgstr "Comportamento"
 
-#: ../../source/iotagent-architecture.rst:502
+#: ../../source/iotagent-architecture.rst:507
 msgid ""
 "The order in which a physical device sends its attributes must not be changed "
 "when IoT agent publishes these data to other dojot services."
@@ -854,7 +859,7 @@ msgstr ""
 "A ordem na qual um dispositivo físico envia seus atributos não deve ser "
 "alterada quando o agente IoT publica esses dados em outros serviços dojot."
 
-#: ../../source/iotagent-architecture.rst:505
+#: ../../source/iotagent-architecture.rst:510
 msgid ""
 "If the protocol imposes any unique ID to each device, the IoT agent must build "
 "a correlation table to properly translate this unique ID into dojot device ID "
@@ -864,19 +869,27 @@ msgstr ""
 "agente IoT deverá criar uma tabela de correlação para converter adequadamente "
 "esse ID único externo em ID de dispositivo dojot e vice-versa."
 
-#: ../../source/iotagent-architecture.rst:511
+#: ../../source/iotagent-architecture.rst:516
 msgid "Libraries to assist the development of new IotAgents"
 msgstr "Bibliotecas para auxiliar no desenvolvimento de novos agentes IoT"
 
-#: ../../source/iotagent-architecture.rst:513
+#: ../../source/iotagent-architecture.rst:518
 msgid ""
-"We have libraries in node.js **recommended** (https://github.com/dojot/iotagent-"
-"nodejs) and java (https://github.com/dojot/iotagent-java) to facilitate the "
-"development of an iotAgent."
+"We have libraries that abstract some points describe in previous topics to "
+"facilitate the development of an IotAgent."
 msgstr ""
-"Temos bibliotecas em node.js **recomendado** (https://github.com/dojot/iotagent-"
-"nodejs) e java (https://github.com/dojot/iotagent-java) para facilitar o "
-"desenvolvimento de um IotAgent."
+
+#: ../../source/iotagent-architecture.rst:521
+msgid "There are two libraries:"
+msgstr ""
+
+#: ../../source/iotagent-architecture.rst:523
+msgid "node.js **recommended** (https://github.com/dojot/iotagent-nodejs)"
+msgstr ""
+
+#: ../../source/iotagent-architecture.rst:524
+msgid "java (https://github.com/dojot/iotagent-java)"
+msgstr ""
 
 #~ msgid ""
 #~ "The template_attrs is a simple key/value JSON with template ID as key and "
@@ -884,3 +897,40 @@ msgstr ""
 #~ msgstr ""
 #~ "O template_attrs é um JSON de chave/valor simples com o ID do modelo como "
 #~ "chave e a seguinte estrutura como valor:"
+
+#~ msgid ""
+#~ "Some subjects are \"tenant-sensitive\" (a different topic will be returned "
+#~ "for different tenants) and some are not (the same topic will be returned "
+#~ "regardless the tenant). DataBroker will use the tenant contained in the "
+#~ "authorization token when dealing with tenant-sensitive subjects."
+#~ msgstr ""
+#~ "Alguns *subjects* são \"sensíveis ao tenant\" (um tópico diferente será "
+#~ "retornado para diferentes *tenants*) e outros não (o mesmo tópico será "
+#~ "retornado independentemente do *tenant*). O *DataBroker* usará o *tenant* "
+#~ "contido no *token* de autorização ao lidar com assuntos sensíveis ao "
+#~ "*tenant*."
+
+#~ msgid "`dojot.tenancy`"
+#~ msgstr "*Subject*: *dojot.tenancy*"
+
+#~ msgid "*Subject*: `dojot.tenancy`"
+#~ msgstr "*Subject*: *dojot.tenancy*"
+
+#~ msgid ""
+#~ "This subject is not tenant-sensitive. A sample message received by this "
+#~ "topic is:"
+#~ msgstr ""
+#~ "Este *subject* não é sensível ao *tenant*. Uma mensagem de exemplo recebida "
+#~ "por este tópico é:"
+
+#~ msgid "This subject is tenant-sensitive."
+#~ msgstr "Este *subject* é sensível ao *tenant*."
+
+#~ msgid ""
+#~ "We have libraries in node.js **recommended** (https://github.com/dojot/"
+#~ "iotagent-nodejs) and java (https://github.com/dojot/iotagent-java) to "
+#~ "facilitate the development of an iotAgent."
+#~ msgstr ""
+#~ "Temos bibliotecas em node.js **recomendado** (https://github.com/dojot/"
+#~ "iotagent-nodejs) e java (https://github.com/dojot/iotagent-java) para "
+#~ "facilitar o desenvolvimento de um IotAgent."

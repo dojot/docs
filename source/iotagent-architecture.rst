@@ -254,12 +254,15 @@ account when receiving messages from physical devices.
 Messages
 --------
 
+Tenants
+^^^^^^^
+
 At start, all IoT agents (in fact, all services that need to receive or send
 messages related to devices) must know the list of configured tenants. This is
 the most basic piece of information that IoT agent needs to know in order to
 work properly. The request that should be sent to Auth service is this (all
 requests sent from dojot services to its own services should use the
-"dojot-management" user):
+"dojot-management" user and tenant):
 
 
 +----------------------------------------------------------+
@@ -277,7 +280,7 @@ requests sent from dojot services to its own services should use the
 +--------------------------+-------------------------------+
 |                          | ::                            |
 |                          |                               |
-|                          |   tenants => *tenant          |
+|                          |   tenants =>                  |
 | Body format              |     tenant => string          |
 +--------------------------+-------------------------------+
 
@@ -294,9 +297,48 @@ A sample response for this request is:
       ]
     }
 
-With this list, the IoT agent can request topics for receiving device and
-tenant lifecycle events and for publishing new device attribute data. This is
-done by sending the following request to DataBroker:
+After the bootstrap, it's necessary to subscribed to receive new creates and deletes
+from tenants using the kafka topic ``dojot-management.dojot.tenancy``.
+
+The kafka topic ``dojot-management.dojot.tenancy`` will be used to receive tenant lifecycle
+events. Whenever a new tenant is created or delete, the following message will
+be published:
+
++---------------------------------------------------+
+| *Topic*: `dojot-management.dojot.tenancy`         |
++------------------------+--------------------------+
+| Body format (JSON)     |                          |
+|                        | ::                       |
+|                        |                          |
+|                        |   type="CREATE"/"DELETE" |
+|                        |   tenant=>string         |
++------------------------+--------------------------+
+
+A sample message received by this topic is:
+
+.. code-block:: json
+
+    {
+      "type": "CREATE",
+      "tenant": "new_tenant"
+    }
+
+This prefix topic can be configured, see more in the `Auth`
+Component documentation :doc:`./components-and-apis`.
+
+See more about :ref:`Bootstrapping tenants` in internal communication.
+
+Subjects
+^^^^^^^^
+
+The following subjects should be used by IoT agents:
+
+- `dojot.device-manager.device`
+- `device-data`
+
+With the list of tenants, the IoT agent can request topics for receiving device
+lifecycle events and for publishing new device attribute data. This is
+done by sending the subjects for the following request to DataBroker:
 
 +-------------------------------------------------------------+
 |                       Host: DataBroker                      |
@@ -316,58 +358,20 @@ done by sending the following request to DataBroker:
 |                            |   topic => string              |
 +----------------------------+--------------------------------+
 
-
 A sample response for this request is:
 
 .. code-block:: json
 
     {
-      "topic": "admin.dojot.tenancy"
+      "topic": "admin.device-data"
     }
 
-Some subjects are "tenant-sensitive" (a different topic will be returned for
-different tenants) and some are not (the same topic will be returned regardless
-the tenant). DataBroker will use the tenant contained in the authorization
-token when dealing with tenant-sensitive subjects.
-
-The following subjects should be used by IoT agents:
-
-- `dojot.tenancy`
-- `dojot.device-manager.device`
-- `device-data`
 
 Each one will be detailed in the following sections
 
-`dojot.tenancy`
-^^^^^^^^^^^^^^^
-
-The topic related to this subject will be used to receive tenant lifecycle
-events. Whenever a new tenant is created or delete, the following message will
-be published:
-
-+---------------------------------------------------+
-| *Subject*: `dojot.tenancy`                        |
-+------------------------+--------------------------+
-| Body format (JSON)     |                          |
-|                        | ::                       |
-|                        |                          |
-|                        |   type="CREATE"/"DELETE" |
-|                        |   tenant=>string         |
-+------------------------+--------------------------+
-
-This subject is not tenant-sensitive.
-A sample message received by this topic is:
-
-.. code-block:: json
-
-    {
-      "type": "CREATE",
-      "tenant": "new_tenant"
-    }
-
 
 `dojot.device-manager.device`
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+"""""""""""""""""""""""""""""
 
 the topic related to this subject will be used to receive device lifecycle
 events for a particular tenant. Its format is:
@@ -404,7 +408,7 @@ events for a particular tenant. Its format is:
 |                    |   event => "configure"                     |
 |                    |   meta =>                                  |
 |                    |     service => string                      |
-|                    |     timestamp => int (epoch time em ms)    |
+|                    |     timestamp => int (Unix Timestamp - ms) |
 |                    |   data =>                                  |
 |                    |     id => string                           |
 |                    |     attrs => *device_attrs                 |
@@ -418,8 +422,6 @@ The `device_attrs` attribute is a even simpler key/value JSON, such as:
       "temperature" : 10,
       "height" : 280
     }
-
-This subject is tenant-sensitive.
 
 A sample message received by this topic is:
 
@@ -451,7 +453,7 @@ A sample message received by this topic is:
     }
 
 `device-data`
-^^^^^^^^^^^^^
+"""""""""""""
 
 The topic related to this subject will be used to publish data retrieved from a
 physical device to other dojot services. Its format is:
@@ -466,13 +468,14 @@ physical device to other dojot services. Its format is:
 |                    |   metadata => deviceid tenant timestamp           |
 |                    |     deviceid => string                            |
 |                    |     tenant => string                              |
-|                    |     timestamp => int (epoch time em ms)           |
+|                    |     timestamp => int (Unix Timestamp - ms or s)   |
 |                    |   attrs => *device_attrs                          |
 +--------------------+---------------------------------------------------+
 
-This subject is tenant-sensitive. The timestamp is associated to when the
+The timestamp is associated to when the
 attribute values were gathered by the device (this could be done by the device
 itself or by the IoT agent, if no timestamp was defined by the device).
+The timestamp should be a Unix Timestamp in milliseconds or seconds.
 
 A sample message received by this topic is:
 
@@ -488,6 +491,9 @@ A sample message received by this topic is:
         "humidity": 60
       }
     }
+
+
+See more about :ref:`Sending Kafka messages` in internal communication.
 
 Firmware update
 ---------------
@@ -509,8 +515,13 @@ and vice-versa.
 Libraries to assist the development of new IotAgents
 ====================================================
 
-We have libraries in node.js **recommended** (https://github.com/dojot/iotagent-nodejs)
-and java (https://github.com/dojot/iotagent-java) to facilitate the development of an iotAgent.
+We have libraries that abstract some points describe in previous topics
+to facilitate the development of an IotAgent.
+
+There are two libraries:
+
+ - node.js **recommended** (https://github.com/dojot/iotagent-nodejs)
+ - java (https://github.com/dojot/iotagent-java)
 
 
 
