@@ -30,7 +30,7 @@ It takes a role as an enabler platform with:
   - Open APIs which makes the access to the platform resources easy.
   - Capacity to store large volumes of data in different formats.
   - Connectors to different types of devices.
-  - Graphical user interface with flow builder to quicly prototype IoT solutions.
+  - Graphical user interface with flow builder to quickly prototype IoT solutions.
   - Real time event processing with customizable rules.
 
 Where can I get it?
@@ -44,8 +44,7 @@ Which repository is the main one?
 There are 3 main ones:
 
 - `<https://github.com/dojot/dojot>`_: this is where we keep track of all the
-  things related to this project as a whole, such as architectural
-  enhancements.
+  things related to this project as issues and there are also some component codes here.
 
 - `<https://github.com/dojot/docker-compose>`_: repository for Docker compose
   files and configurations. This is what we would recommend to use to start
@@ -53,6 +52,8 @@ There are 3 main ones:
 
 - `<https://github.com/dojot/ansible-dojot>`_: repository for ansible (kubernetes)
   files and configurations.
+
+See how to use *docker-compose* and *ansible-dojot* repositories in :doc:`../installation-guide`.
 
 So, I found this pesky bug. How can I inform you about it?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -70,7 +71,7 @@ Usage
 How do I start it? Is it CLI-based or it has a graphical user interface?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-dojot can be accessed by a nice web-based interface and by REST APIs.
+Dojot can be accessed by a web-based interface and by REST APIs.
 Considering that you installed ``docker`` and ``docker-compose`` and cloned the
 ``docker-compose`` repository, starting it up is done by just one command:
 
@@ -124,24 +125,15 @@ If you need another version, you could checkout a tag instead:
     v0.4.3
     v0.4.3-rc.1
     v0.4.3-rc.2
+    v0.5.0-alpha.1
+    v0.5.0-alpha.2
+    v0.5.0-alpha.3
+    v0.5.0-alpha.4
+    v0.5.0-rc.1
     v0.5.0
 
 
   $ git checkout v0.5.0
-
-Once in a while we'll release new versions for dojot components. They might be
-independently released (although we tend to synchronize all of them). Once we
-end up with a stable set of component versions, we'll update the docker-compose
-repository.
-
-2 Deploy the latest docker images. This command might need ``sudo``.
-
-.. code-block:: bash
-
-  $ docker-compose pull && docker-compose up -d
-
-This procedure also applies to the available virtual machines once they do use
-docker-compose.
 
 
 Devices
@@ -237,6 +229,7 @@ things to keep in mind:
 
   { "temperature" : 10.5, "pressure" : 770 }
 
+You can use certificates with MQTT, check :doc:`../mqtt-tls` for more information.
 
 On the dashboard some attributes are shown as tables and others as charts. How are they chosen/set?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -245,7 +238,7 @@ The type of an attribute determines how the data is shown on the dashboard as
 follows:
 
   - ``Geo``: geo map.
-  - ``Boolean`` and ``Text``: table.
+  - ``Boolean``, ``Text`` and  ``JSON``: table.
   - ``Integer`` and ``Float``: line chart.
 
 I'm interested in integrating my super cool device with dojot. How can I do it?
@@ -266,8 +259,7 @@ How can I send some commands to my device through dojot?
 
 For now, you can send HTTP requests to dojot containing a few instructions
 about which device should be configured and the actuation payload itself. More
-details on that can be found in `Device-Manager how-to - sending actuation
-messages`_.
+details on that can be found :ref:`Sending messages`.
 
 
 I didn’t find the protocol supported by my device in the type list, is there anything I can do?
@@ -276,16 +268,8 @@ I didn’t find the protocol supported by my device in the type list, is there a
 There are some possibilities. The first one is to develop a proxy to translate
 your protocol to one supported by dojot. The second one is to develop a IotAgent, a
 connector, similar to the existing ones
-for MQTT, CoAP and HTTP. Take a look at https://github.com/dojot/iotagent-nodejs
+for MQTT, CoAP and HTTP. Take a look at https://github.com/dojot/iotagent-nodejs.
 
-
-I saved an attribute, but it disappeared from the device. Is it a bug?
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-You might have saved the attribute, but not the device. If you don’t click on
-the save button for the device, the added attributes will be discarded. We’re
-improving the system messages to caveat the users and remember them to save
-their configurations.
 
 How can I retrieve historical data for a particular device?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -325,8 +309,10 @@ device `3bb9`:
       }
     ]
 
-There are more operators that could be used to filter entries.
-Check `History API <https://dojot.github.io/history/apiary_latest.html>`_
+For more details on data retrieval from the history, check the tutorial in :ref:`Checking historical data`.
+
+In addition, there are more operators that could be used to filter entries.
+Look for the History API in :doc:`./../components-and-apis`
 documentation to check out all possible operators and other filters.
 
 
@@ -361,8 +347,7 @@ You can do things such as:
   - Create views from a particular device, by renaming, aggregating and
     changing values, etc).
   - Infer information based on switch, edge-detection and geo-fence rules.
-  - Notify through email.
-  - Notify through HTTP.
+  - Notify through many ways, like HTTP.
 
 The data flows component is in constantly development with new features being
 added every new release.
@@ -373,8 +358,7 @@ can I add a new node type to its menu?`_ question for more information on that.
 So, how can I use it?
 ^^^^^^^^^^^^^^^^^^^^^
 
-It follows the basic usage flow as node-RED. You can check its `documentation <https://nodered.org>`_ for more details
-about this.
+For more details on how to use flows, check the tutorial in :doc:`../flow`.
 
 Can I apply the same flow to multiple devices?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -391,10 +375,7 @@ As the data flow is processed individually for each message, you need to create
 a virtual device to aggregate all attributes, then use this virtual device as
 the input of the flow.
 
-Another thing that you could do is to build a flowbroker node to deal with
-contexts, which can be used to store and retrieve data related to a flow or
-node.
-
+You can also create a node (or use an already existing one) that deals with contexts.
 
 What about a HTTP POST request, how can I send it?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -435,8 +416,9 @@ virtual device and assigning to it the output.
 How can I add a new node type to its menu?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-And that's it! In the https://github.com/dojot/flowbroker/tree/master/lib,
-there is two examples of how to build a Docker image that could be added to flow node menu.
+There is a tutorial on how to add new nodes and two examples of node too,
+check the `flowbroker library`_ for more details.
+
 
 Applications
 ------------
@@ -445,7 +427,7 @@ Applications
 What APIs are available for applications?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-You can check all available APIs in the `API Listing page <../components-and-apis.html>`_
+You can check all available APIs in the :doc:`./../components-and-apis`.
 
 How can I use them?
 ^^^^^^^^^^^^^^^^^^^
@@ -455,23 +437,26 @@ There is a very quick and useful tutorial in the :doc:`./../using-api-interface`
 I'm interested in integrating my application with dojot. How can I do it?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This should be pretty straightforward. There are two ways that your application
+This should be pretty straightforward. There are three ways that your application
 could be integrated with dojot:
 
   - **Retrieving historical data**: you might want to periodically read all
-    historical data related to a device. This can be done by using this API
-    (one side-note: all endpoints described in this apiary should be preceded
-    by ``/history/``).
-  - **Using flowbroker to pre-process data**: if you want to do something more, you
-    could use flows. They can help process and transform data so that they can
+    historical data related to a device. This can be done by using the *history* API
+  - **Retrieving real time data**: you might want to read device-related real time data.
+    This can be done by using *kafka-ws*, a *websocket* based implementation.
+    To better understand how to use *kafka-ws* check :ref:`Kafka-WS Internal`.
+  - **Using flowbroker to pre-process data**: for more flexible ways of data manipulation, you can use flows.
+    They can process/transform data so they can
     be properly sent to your application via HTTP request, or stored
     in a virtual device (which can be used to generate notifications as
     previously described).
 
 
-All these endpoints should bear an access token, which is retrieved as
-described in the question `How can I use them?`_.
+All these endpoints should bear an access token, see more :ref:`Getting access token`.
+
+Check the documentation API for  *history* and *kafka-ws* in :doc:`./../components-and-apis`.
+And to a tutorial on how to use the flow, check :doc:`../flow`.
 
 
-.. _Device-Manager how-to - sending actuation messages: http://dojotdocs.readthedocs.io/projects/DeviceManager/en/latest/using-device-manager.html#sending-actuation-messages-to-devices
-.. _flowbroker: https://github.com/dojot/flowbroker
+.. _flowbroker library : https://github.com/dojot/flowbroker/tree/v0.5.0/lib
+

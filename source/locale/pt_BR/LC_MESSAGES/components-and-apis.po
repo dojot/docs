@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dojot 0.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-18 08:39-0300\n"
+"POT-Creation-Date: 2020-09-17 15:41-0300\n"
 "PO-Revision-Date: 2020-09-14 11:33-0300\n"
 "Last-Translator: \n"
 "Language: pt_BR\n"
@@ -206,10 +206,6 @@ msgstr ""
 
 #: ../../source/components-and-apis.rst:59
 msgid "`GitHub - DeviceManager`_"
-msgstr ""
-
-#: ../../source/components-and-apis.rst:60
-msgid "`DeviceManager doc.`_"
 msgstr ""
 
 #: ../../source/components-and-apis.rst:61
@@ -834,37 +830,3 @@ msgstr "Criação/remoção de *Tenants* (`Mensagens - auth`_)"
 #: ../../source/components-and-apis.rst:341
 msgid "``dojot.tenancy``"
 msgstr ""
-
-#~ msgid "Endpoint exposed"
-#~ msgstr "*Endpoint* exposto"
-
-#~ msgid "/kafka-ws/v1/ticket"
-#~ msgstr ""
-
-#~ msgid "/kafka-ws/v1/topics"
-#~ msgstr ""
-
-#~ msgid "host:80/kafka-ws/v1/ticket"
-#~ msgstr ""
-
-#~ msgid "host:80/kafka-ws/v1/topics"
-#~ msgstr ""
-
-#~ msgid "host:8080/v1/ticket"
-#~ msgstr ""
-
-#~ msgid "host:8000/kafka-ws/v1/ticket"
-#~ msgstr ""
-
-#~ msgid "host:8080/v1/topics"
-#~ msgstr ""
-
-#~ msgid "host:8000/kafka-ws/v1/topics"
-#~ msgstr ""
-
-#~ msgid "host:8000/v1/ticket"
-#~ msgstr ""
-
-#~ msgid "host:8000/v1/topics"
-#~ msgstr ""
-
