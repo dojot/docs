@@ -40,7 +40,7 @@ msgstr "Quem deve ler isso?"
 #: ../../source/iotagent-architecture.rst:11
 msgid "Developers that want to create new IoT agents to be used with dojot."
 msgstr ""
-"Desenvolvedores que desejam criar novos agentes IoT para serem usados com dojot."
+"Desenvolvedores que desejam criar novos agentes IoT para serem usados com a dojot."
 
 #: ../../source/iotagent-architecture.rst:14
 msgid "Introduction"
