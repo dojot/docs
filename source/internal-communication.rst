@@ -557,27 +557,27 @@ certificate-related services for devices.
 Kafka-WS
 --------
 
-*Kafka WebSocket* allows the users to retrieve data from a given dojot 
-topic in a Kafka cluster, this retrieval can be conditional and/or partial. 
+*Kafka WS* service allows users to retrieve conditional and/or
+partial real time data from a given dojot topic in a Kafka cluster.
 It works with pure websocket connections, so you can create websocket 
 clients in any language you want as long as they support RFC 6455.
 
 Connecting to the service
 ++++++++++++++++++++++++++
 
-The connection is done in two steps, you must first obtain a single-use ticket
-through a REST request, then, be authorized to connect to the service through
-a websocket.
+The connection is done in two steps: you must first obtain a single-use ticket 
+through a HTTP request, then connect to the service via websocket passing it
+as a parameter.
 
 First step: Get the single-use ticket
 *************************************
 A ticket allows the user to subscribe to a dojot topic. To obtain it is necessary 
 to have a JWT access token that is issued by the platform's Authentication/Authorization 
-service. Ticket request must be made by REST at the endpoint <base-url>/kafka-ws/v1/ticket 
-using the HTTP GET verb. The request must contain the header Authorization and the
-JWT token as value, according to the syntax:
+service. The ticket must be retrieved via a HTTP request using the GET verb to the 
+`<base-url>/kafka-ws/v1/ticket` endpoint. The request must contain the `Authorization` 
+header with the previously retrieved JWT token as a value. Example:
 
-| `POST <base-url>/kafka-ws/v1/ticket`
+| `GET <base-url>/kafka-ws/v1/ticket`
 | `Authorization: Bearer [Encoded JWT]`
 
 The component responds with the following syntax:
@@ -591,12 +591,12 @@ The component responds with the following syntax:
   }
 
 Note: In the context of a dojot deployment the JWT Token is provided by the Auth service, 
-and is validated by the API Gateway before redirecting the connection to the Kafka-WS. 
+and is validated by the API Gateway before redirecting the connection to the *Kafka-WS*. 
 So, no validations are done by the Kafka WS.
 
 Second step: Establish a websocket connection
 **********************************************
-The connection is done via pure websockets using the URI <base-url>/kafka-ws/v1/topics/:topic.
+The connection is done via pure websockets using the URI `<base-url>/kafka-ws/v1/topics/:topic`.
 You must pass the previously generated ticket as a parameter of this URI. It is also possible 
 to pass conditional and filter options as parameters of the URI.
 

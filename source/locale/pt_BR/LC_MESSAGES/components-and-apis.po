@@ -367,11 +367,11 @@ msgstr ""
 #: ../../source/components-and-apis.rst:237
 #: ../../source/components-and-apis.rst:310
 #: ../../source/components-and-apis.rst:313
-msgid "Kafka Websocket"
+msgid "Kafka WS"
 msgstr ""
 
 #: ../../source/components-and-apis.rst:110
-msgid "`GitHub - Kafka Websocket`_"
+msgid "`GitHub - Kafka WS`_"
 msgstr ""
 
 #: ../../source/components-and-apis.rst:112

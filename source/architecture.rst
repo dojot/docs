@@ -209,7 +209,7 @@ communicate securely with the dojot platform, as the data collected by the
 device is transmitted over a secure (encrypted) channel and it is also possible
 to guarantee the integrity of the data.
 
-Kafka Websocket
+Kafka WS
 ***************
 This component is responsible for retrieving data from Apache Kafka through pure WebSocket 
 connections. It was designed to allow dojot users to retrieve realtime raw and/or processed 

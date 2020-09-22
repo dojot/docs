@@ -106,8 +106,8 @@ Components
     - `GitHub - Kafka2Ftp`_
     -
     -
-  * - Kafka Websocket
-    - `GitHub - Kafka Websocket`_
+  * - Kafka WS
+    - `GitHub - Kafka WS`_
     -
     - `API - kafka-ws`_
 
@@ -229,12 +229,12 @@ See more about how using APIs in :doc:`./using-api-interface`.
      - **/api/v1**
      - `API - x509-identity-mgmt`_
      - Yes
-   * - Kafka Websocket
+   * - Kafka WS
      - **/kafka-ws/v1/ticket**
      -  /v1/ticket
      -
      - Yes
-   * - Kafka Websocket
+   * - Kafka WS
      - **/kafka-ws/v1**
      - /v1
      -
@@ -307,10 +307,10 @@ TCP port 8000), see the following table.
    * - X.509 Identity Management
      - host:3000/api/v1
      - host:8000/x509/v1
-   * - Kafka Websocket
+   * - Kafka WS
      - host:8080/v1/ticket
      - host:8000/kafka-ws/v1/ticket
-   * - Kafka Websocket
+   * - Kafka WS
      - host:8080/v1/topics
      - host:8000/kafka-ws/v1/topics
 
@@ -402,5 +402,5 @@ dojot.
 
 .. _GitHub - Kafka2Ftp: https://github.com/dojot/dojot/tree/v0.5.0/connector/kafka2ftp
 
-.. _GitHub - Kafka Websocket: https://github.com/dojot/dojot/tree/v0.5.0/subscription-engine/kafka-ws
+.. _GitHub - Kafka WS: https://github.com/dojot/dojot/tree/v0.5.0/subscription-engine/kafka-ws
 .. _API - kafka-ws: https://dojot.github.io/dojot/kafka-ws/apiary_v0.5.0.html
