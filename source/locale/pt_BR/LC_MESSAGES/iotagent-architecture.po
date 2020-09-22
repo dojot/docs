@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dojot 0.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-22 14:19-0300\n"
-"PO-Revision-Date: 2020-09-22 14:20-0300\n"
+"POT-Creation-Date: 2020-09-22 16:43-0300\n"
+"PO-Revision-Date: 2020-09-22 16:55-0300\n"
 "Last-Translator: \n"
 "Language: pt_BR\n"
 "Language-Team: \n"
@@ -637,7 +637,7 @@ msgstr "Mensagens"
 
 #: ../../source/iotagent-architecture.rst:258
 msgid "Tenants"
-msgstr ""
+msgstr "*Tenants*"
 
 #: ../../source/iotagent-architecture.rst:260
 msgid ""
@@ -689,7 +689,7 @@ msgstr ""
 #: ../../source/iotagent-architecture.rst:277
 #: ../../source/iotagent-architecture.rst:352
 msgid "Response"
-msgstr "Reposta"
+msgstr "Resposta"
 
 #: ../../source/iotagent-architecture.rst:279
 #: ../../source/iotagent-architecture.rst:354
@@ -708,17 +708,19 @@ msgstr "Um exemplo de resposta para esta requisição:"
 
 #: ../../source/iotagent-architecture.rst:300
 msgid ""
-"After the bootstrap, it's necessary to subscribed to receive new creates and "
-"deletes from tenants using the kafka topic ``dojot-management.dojot.tenancy``."
+"After the bootstrap, it's necessary to subscribe to receive tenant events using "
+"the Kafka topic ``dojot-management.dojot.tenancy``."
 msgstr ""
+"Após o *bootstrap*, é necessário se inscrever para receber eventos de *tenant* "
+"usando o tópico ``dojot-management.dojot.tenancy`` do Kafka."
 
 #: ../../source/iotagent-architecture.rst:303
 msgid ""
-"The kafka topic ``dojot-management.dojot.tenancy`` will be used to receive "
+"The Kafka topic ``dojot-management.dojot.tenancy`` will be used to receive "
 "tenant lifecycle events. Whenever a new tenant is created or delete, the "
 "following message will be published:"
 msgstr ""
-"O tópico kafka ``dojot-management.dojot.tenancy`` será usado para receber "
+"O tópico  ``dojot-management.dojot.tenancy`` do Kafka será usado para receber "
 "eventos de ciclo de vida dos *tenants*. Sempre que um novo *tenant* é criado ou "
 "excluído, a seguinte mensagem será publicada:"
 
@@ -745,14 +747,16 @@ msgid ""
 "This prefix topic can be configured, see more in the `Auth` Component "
 "documentation :doc:`./components-and-apis`."
 msgstr ""
+"Este prefixo do tópico  pode ser configurado, veja mais na documentação do "
+"componente `Auth` :doc:`./components-and-apis`."
 
 #: ../../source/iotagent-architecture.rst:329
 msgid "See more about :ref:`Bootstrapping tenants` in internal communication."
-msgstr ""
+msgstr "Veja mais sobre :ref:`Bootstrapping tenants` na comunicação interna."
 
 #: ../../source/iotagent-architecture.rst:332
 msgid "Subjects"
-msgstr ""
+msgstr "*Subjects*"
 
 #: ../../source/iotagent-architecture.rst:334
 msgid "The following subjects should be used by IoT agents:"
@@ -774,7 +778,7 @@ msgid ""
 "lifecycle events and for publishing new device attribute data. This is done by "
 "sending the subjects for the following request to DataBroker:"
 msgstr ""
-"Com a lista de locatários, o agente IoT pode solicitar tópicos para receber "
+"Com a lista de *tenants*, o agente IoT pode solicitar tópicos para receber "
 "eventos de ciclo de vida do dispositivo e para publicar novos dados de atributo "
 "do dispositivo. Isso é feito enviando os *subjects* como na seguinte "
 "solicitação ao DataBroker:"
@@ -793,10 +797,10 @@ msgstr "Cada um desses aspectos será detalhado nas seções a seguir"
 
 #: ../../source/iotagent-architecture.rst:376
 msgid ""
-"the topic related to this subject will be used to receive device lifecycle "
+"The topic related to this subject will be used to receive device lifecycle "
 "events for a particular tenant. Its format is:"
 msgstr ""
-"o tópico relacionado a este *subject* será usado para receber eventos do ciclo "
+"O tópico relacionado a este *subject* será usado para receber eventos do ciclo "
 "de vida do dispositivo para um *tenant* específico. Seu formato é:"
 
 #: ../../source/iotagent-architecture.rst:380
@@ -834,7 +838,7 @@ msgstr ""
 
 #: ../../source/iotagent-architecture.rst:496
 msgid "See more about :ref:`Sending Kafka messages` in internal communication."
-msgstr "Veja mais sobre ref:`Sending Kafka messages`  na comunicação interna."
+msgstr "Veja mais sobre :ref:`Sending Kafka messages` na comunicação interna."
 
 #: ../../source/iotagent-architecture.rst:499
 msgid "Firmware update"
@@ -878,14 +882,16 @@ msgid ""
 "We have libraries that abstract some points describe in previous topics to "
 "facilitate the development of an IotAgent."
 msgstr ""
+"Temos bibliotecas que abstraem alguns pontos descritos nos tópicos anteriores "
+"para facilitar o desenvolvimento de um Agente Iot."
 
 #: ../../source/iotagent-architecture.rst:521
 msgid "There are two libraries:"
-msgstr ""
+msgstr "Existem duas bibliotecas:"
 
 #: ../../source/iotagent-architecture.rst:523
 msgid "node.js **recommended** (https://github.com/dojot/iotagent-nodejs)"
-msgstr ""
+msgstr "node.js **recomendada** (https://github.com/dojot/iotagent-nodejs)"
 
 #: ../../source/iotagent-architecture.rst:524
 msgid "java (https://github.com/dojot/iotagent-java)"

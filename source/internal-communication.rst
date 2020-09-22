@@ -315,17 +315,17 @@ after starting Kong. Its only purpose is to register endpoints in Kong, such as:
 
 These commands will register the endpoint `/device/*/latest` and `/subscription`
 and all requests to it are going to be forwarded to `http//data-broker:80`. You
-can check the documentation on how to add endpoints in Kong's documentation
-check in  :doc:`./components-and-apis`.
+can check the documentation on how to add endpoints in Kong's documentation.
+The links are in the :doc:`./components-and-apis` page.
 
 For some of its registered endpoints, the script will add two plugins to
 selected endpoints:
 
 #. JWT generation. The documentation for this plugin is available at `Kong JWT
    plugin page`_.
-#. Configuration a plugin which will forward all policies requests to Auth.
-   will invoke Auth in order to authenticate requests. This plugin is available
-   inside repository `Kong repository`_.
+#. Configuration a plugin which will forward all policies requests to Auth
+   in order to authenticate requests. This plugin is available
+   inside the `Kong repository`_.
 
 The following request install these two plugins in data-broker API:
 
@@ -364,11 +364,11 @@ And one for tenant deletion:
      "tenant" : "XYZ"
    }
 
-By default these messages are create in
+By default these messages are created in
 kafka topic ``dojot-management.dojot.tenancy``.
 
-This prefix topic can be configured, check the `Auth`
-Component documentation :doc:`./components-and-apis`.
+This prefix topic can be configured, check the`Auth`
+component documentation :doc:`./components-and-apis`.
 
 Device Manager
 --------------
@@ -398,7 +398,7 @@ by which devices can do that, this step won't be detailed in this section (this
 is highly dependent on how each IoT agent works). It must, though, send a
 message to Kafka to inform other components of all new data that the device
 just sent. This is shown in :numref:`IoT agent - kafka`,
-in this case we are using tenant admin.
+in this case we are using the tenant `admin`.
 
 .. _IoT agent - kafka:
 .. uml::
@@ -482,7 +482,7 @@ History
 
 History is also a very simple service: whenever a user or application sends a
 request to it, it will query MongoDB and build a proper message to send back
-to the user/application. This is shown in :numref:`History` (ver se link funciona).
+to the user/application. This is shown in :numref:`History`.
 
 .. _History:
 .. uml::
@@ -521,10 +521,9 @@ interfaces) will receive a new message containing all the received data. For
 more information about how to open a socket.io connection with DataBroker,
 check DataBroker documentation in :doc:`./components-and-apis`.
 
-Note: The connections real time with socket.io via DataBroker
-will be discontinued in the next releases,
-use the service `Kafka-WS`_.
-
+.. NOTE::
+   The real time socket.io connections via Data Broker will be discontinued in
+   future releases. Use `Kafka-WS`_ instead.
 
 Certificate authority
 ---------------------

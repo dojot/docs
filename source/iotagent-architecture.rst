@@ -297,10 +297,10 @@ A sample response for this request is:
       ]
     }
 
-After the bootstrap, it's necessary to subscribed to receive new creates and deletes
-from tenants using the kafka topic ``dojot-management.dojot.tenancy``.
+After the bootstrap, it's necessary to subscribe to receive tenant events
+using the Kafka topic ``dojot-management.dojot.tenancy``.
 
-The kafka topic ``dojot-management.dojot.tenancy`` will be used to receive tenant lifecycle
+The Kafka topic ``dojot-management.dojot.tenancy`` will be used to receive tenant lifecycle
 events. Whenever a new tenant is created or delete, the following message will
 be published:
 
@@ -373,7 +373,7 @@ Each one will be detailed in the following sections
 `dojot.device-manager.device`
 """""""""""""""""""""""""""""
 
-the topic related to this subject will be used to receive device lifecycle
+The topic related to this subject will be used to receive device lifecycle
 events for a particular tenant. Its format is:
 
 +-----------------------------------------------------------------+
