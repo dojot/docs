@@ -130,6 +130,9 @@ The mandatory parameters are:
 -  ${DOJOT_HOST}: where dojot is (No / at the end). Example: http://localhost:8000
 -  ${DEVICE_ID}: device id that will get a new certificate. Example: f60c28
 
+Replace the entire variable, including $ , { and }.
+
+
 Note that authentication is performed in dojot. The script will ask for user
 credentials and will invoke user authentication automatically. The user needs
 permission for certificate signing to be able to use this script.
