@@ -308,7 +308,7 @@ after starting Kong. Its only purpose is to register endpoints in Kong, such as:
 
     #create a route to service
     curl  -sS -X PUT \
-    --url ${kong}/services/data-broker/routes/data-broker_route" \
+    --url ${kong}/services/data-broker/routes/data-broker_route \
     --data 'paths=["/device/(.*)/latest", "/subscription"]' \
     --data "strip_path=false"
 
@@ -323,8 +323,8 @@ selected endpoints:
 
 #. JWT generation. The documentation for this plugin is available at `Kong JWT
    plugin page`_.
-#. Configuration a plugin which will forward all policies requests to Auth
-   in order to authenticate requests. This plugin is available
+#. Configuration a plugin which will forward all policies requests to Auth.
+   will invoke Auth in order to authenticate requests. This plugin is available
    inside repository `Kong repository`_.
 
 The following request install these two plugins in data-broker API:
@@ -367,8 +367,8 @@ And one for tenant deletion:
 By default these messages are create in
 kafka topic ``dojot-management.dojot.tenancy``.
 
-This prefix topic can be configured, check `Auth`
-Component documentation in :doc:`./components-and-apis`.
+This prefix topic can be configured, check the `Auth`
+Component documentation :doc:`./components-and-apis`.
 
 Device Manager
 --------------
@@ -458,7 +458,8 @@ Persister is a very simple service which only purpose is to receive messages
 from devices (using ``device-data`` subject) and store them into MongoDB. For
 that, the bootstrapping procedure (detailed in `Bootstrapping tenants`_) is
 performed and, whenever a new message is received, it will create a new Mongo
-document and store it into the device's collection.
+document and store it into the device's collection. This is shown in
+:numref:`Persister`, in this case we are using tenant admin.
 
 .. _Persister:
 .. uml::
@@ -481,7 +482,7 @@ History
 
 History is also a very simple service: whenever a user or application sends a
 request to it, it will query MongoDB and build a proper message to send back
-to the user/application. This is shown in :numref:`History`.
+to the user/application. This is shown in :numref:`History` (ver se link funciona).
 
 .. _History:
 .. uml::
@@ -518,7 +519,7 @@ it to a 'room' (using socket.io vocabulary) associated to the device and to the
 associated tenant. Thus, all client connected to it (such as graphical user
 interfaces) will receive a new message containing all the received data. For
 more information about how to open a socket.io connection with DataBroker,
-check DataBroker API documentation in :doc:`./components-and-apis`.
+check DataBroker documentation in :doc:`./components-and-apis`.
 
 Note: The connections real time with socket.io via DataBroker
 will be discontinued in the next releases,
