@@ -301,7 +301,7 @@ After the bootstrap, it's necessary to subscribe to receive tenant events
 using the Kafka topic ``dojot-management.dojot.tenancy``.
 
 The Kafka topic ``dojot-management.dojot.tenancy`` will be used to receive tenant lifecycle
-events. Whenever a new tenant is created or delete, the following message will
+events. Whenever a new tenant is created or deleted, the following message will
 be published:
 
 +---------------------------------------------------+

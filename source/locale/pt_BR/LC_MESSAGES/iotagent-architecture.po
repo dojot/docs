@@ -717,7 +717,7 @@ msgstr ""
 #: ../../source/iotagent-architecture.rst:303
 msgid ""
 "The Kafka topic ``dojot-management.dojot.tenancy`` will be used to receive "
-"tenant lifecycle events. Whenever a new tenant is created or delete, the "
+"tenant lifecycle events. Whenever a new tenant is created or deleted, the "
 "following message will be published:"
 msgstr ""
 "O tópico  ``dojot-management.dojot.tenancy`` do Kafka será usado para receber "
