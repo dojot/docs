@@ -890,8 +890,8 @@ msgid "There are two libraries:"
 msgstr "Existem duas bibliotecas:"
 
 #: ../../source/iotagent-architecture.rst:523
-msgid "node.js **recommended** (https://github.com/dojot/iotagent-nodejs)"
-msgstr "node.js **recomendada** (https://github.com/dojot/iotagent-nodejs)"
+msgid "node.js **recommended** (https://www.npmjs.com/package/@dojot/iotagent-nodejs)"
+msgstr "node.js **recomendada** (https://www.npmjs.com/package/@dojot/iotagent-nodejs)"
 
 #: ../../source/iotagent-architecture.rst:524
 msgid "java (https://github.com/dojot/iotagent-java)"
