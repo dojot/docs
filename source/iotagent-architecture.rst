@@ -520,7 +520,7 @@ to facilitate the development of an IotAgent.
 
 There are two libraries:
 
- - node.js **recommended** (https://github.com/dojot/iotagent-nodejs)
+ - node.js **recommended** (https://www.npmjs.com/package/@dojot/iotagent-nodejs)
  - java (https://github.com/dojot/iotagent-java)
 
 
