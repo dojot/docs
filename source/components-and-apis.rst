@@ -51,6 +51,10 @@ Components
     - `GitHub - auth`_
     - `Auth  doc.`_
     - `API - auth`_
+  * - Dojot Kong
+    - `GitHub - Dojot Kong`_
+    -
+    -
   * - History
     - `GitHub - history`_
     -
@@ -323,7 +327,7 @@ dojot.
 .. _PostgreSQL doc.: https://www.postgresql.org/docs/
 .. _PostgreSQL site: https://www.postgresql.org
 .. _Kong site: https://konghq.com/kong-community-edition/
-.. _Kong doc.: https://getkong.org/docs/
+.. _Kong doc.: https://docs.konghq.com/2.0.x/
 .. _Redis site: https://redis.io/
 .. _Redis doc.: https://redis.io/documentation
 .. _Zookeeper site: https://zookeeper.apache.org/
@@ -339,6 +343,8 @@ dojot.
 .. _API - auth: https://dojot.github.io/auth/apiary_v0.5.0.html
 .. _Auth  doc.: http://dojotdocs.readthedocs.io/projects/auth/en/latest/
 .. _Messages - auth: https://dojotdocs.readthedocs.io/projects/auth/en/latest/kafka-messages.html
+
+.. _GitHub - Dojot Kong: https://github.com/dojot/kong/tree/v0.5.0
 
 .. _GitHub - history: https://github.com/dojot/history/tree/v0.5.0
 .. _API - history: https://dojot.github.io/history/apiary_v0.5.0.html
