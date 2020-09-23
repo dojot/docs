@@ -512,7 +512,7 @@ msgid ""
 "retrieve realtime raw and/or processed data from dojot devices."
 msgstr ""
 "Este componente é responsável por obter dados do Apache Kafka via uma "
-"conexão Websocket pura. Foi desenhado para permitir que usuários da dojot "
+"conexão Websocket puro. Foi desenhado para permitir que usuários da dojot "
 "possam obter dados em tempo real e/ou dados processados de dispositivos da "
 "dojot."
 
