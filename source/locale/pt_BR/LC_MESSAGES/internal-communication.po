@@ -143,7 +143,7 @@ msgstr ""
 "receber mensagens com um determinado assunto (*subject*) (mais sobre isso mais tarde) e os "
 "produtores enviarão mensagens para todos os componentes que estiverem "
 "interessados nele. Observe que esse mecanismo permite que vários serviços emitam "
-"mensagens com o mesmo \"assunto\" (*subject*), bem como vários serviços que consumem "
+"mensagens com o mesmo \"assunto\" (*subject*), bem como vários serviços que consomem "
 "mensagens com o mesmo \"assunto\" (*subject*), sem soluções alternativas complicadas."
 
 #: ../../source/internal-communication.rst:92
@@ -584,7 +584,7 @@ msgid ""
 "future releases. Use `Kafka-WS`_ instead."
 msgstr ""
 "As conexões socket.io em tempo real via Data Broker serão descontinuadas em "
-"versões futuras. Use `Kafka-WS`_ ao invés dele."
+"versões futuras. Use o `Kafka-WS`_ ao invés dele."
 
 #: ../../source/internal-communication.rst:529
 msgid "Certificate authority"
