@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dojot 0.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-17 15:41-0300\n"
+"POT-Creation-Date: 2020-09-22 13:47-0300\n"
 "PO-Revision-Date: 2020-09-14 11:33-0300\n"
 "Last-Translator: \n"
 "Language: pt_BR\n"
@@ -184,85 +184,102 @@ msgstr ""
 #: ../../source/components-and-apis.rst:54
 #: ../../source/components-and-apis.rst:178
 #: ../../source/components-and-apis.rst:280
-msgid "History"
+msgid "Dojot Kong"
 msgstr ""
 
 #: ../../source/components-and-apis.rst:55
+msgid "`GitHub - Dojot Kong`_"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:58
+#: ../../source/components-and-apis.rst:178
+#: ../../source/components-and-apis.rst:270
+msgid "History"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:59
 msgid "`GitHub - history`_"
 msgstr ""
 
+
 #: ../../source/components-and-apis.rst:57
+
+#: ../../source/components-and-apis.rst:61
 #: ../../source/components-and-apis.rst:181
 msgid "`API - history`_"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:58
+#: ../../source/components-and-apis.rst:62
 #: ../../source/components-and-apis.rst:143
 #: ../../source/components-and-apis.rst:148
-#: ../../source/components-and-apis.rst:259
-#: ../../source/components-and-apis.rst:262
+#: ../../source/components-and-apis.rst:249
+#: ../../source/components-and-apis.rst:252
 msgid "Device Manager"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:59
+#: ../../source/components-and-apis.rst:63
 msgid "`GitHub - DeviceManager`_"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:61
+
+#: ../../source/components-and-apis.rst:65
 #: ../../source/components-and-apis.rst:146
 #: ../../source/components-and-apis.rst:151
 msgid "`API - DeviceManager`_"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:62
+#: ../../source/components-and-apis.rst:66
 #: ../../source/components-and-apis.rst:198
-#: ../../source/components-and-apis.rst:292
+#: ../../source/components-and-apis.rst:282
 msgid "Image Manager"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:63
+#: ../../source/components-and-apis.rst:67
 msgid "`GitHub - image-manager`_"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:65
+
+#: ../../source/components-and-apis.rst:69
 #: ../../source/components-and-apis.rst:201
 msgid "`API - image-manager`_"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:66
+
+#: ../../source/components-and-apis.rst:70
 #: ../../source/components-and-apis.rst:138
-#: ../../source/components-and-apis.rst:256
+#: ../../source/components-and-apis.rst:246
 msgid "GUI"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:67
+#: ../../source/components-and-apis.rst:71
 msgid "`GitHub - GUI`_"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:70
+
+#: ../../source/components-and-apis.rst:74
 #: ../../source/components-and-apis.rst:153
-#: ../../source/components-and-apis.rst:265
+#: ../../source/components-and-apis.rst:255
 msgid "Flowbroker"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:71
+#: ../../source/components-and-apis.rst:75
 msgid "`GitHub - flowbroker`_"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:73
+#: ../../source/components-and-apis.rst:77
 #: ../../source/components-and-apis.rst:156
 msgid "`API - flowbroker`_"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:74
+#: ../../source/components-and-apis.rst:78
 msgid "Databroker"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:75
+#: ../../source/components-and-apis.rst:79
 msgid "`GitHub - data-broker`_"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:77
+#: ../../source/components-and-apis.rst:81
 #: ../../source/components-and-apis.rst:210
 #: ../../source/components-and-apis.rst:215
 #: ../../source/components-and-apis.rst:220
@@ -278,7 +295,7 @@ msgstr ""
 msgid "(MQTT) - **Default**"
 msgstr "(MQTT) - **Padrão**"
 
-#: ../../source/components-and-apis.rst:80
+#: ../../source/components-and-apis.rst:84
 msgid "`GitHub - iotagent-vernemq`_"
 msgstr ""
 
@@ -290,7 +307,7 @@ msgstr ""
 msgid "(MQTT) - **Legacy**"
 msgstr "(MQTT) - **Legado**"
 
-#: ../../source/components-and-apis.rst:85
+#: ../../source/components-and-apis.rst:89
 msgid "`GitHub - iotagent-mosca`_"
 msgstr ""
 
@@ -302,63 +319,63 @@ msgstr ""
 msgid "(LWM2M)"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:90
+#: ../../source/components-and-apis.rst:94
 msgid "`GitHub - iotagent-leshan`_"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:93
+#: ../../source/components-and-apis.rst:97
 #: ../../source/components-and-apis.rst:183
 #: ../../source/components-and-apis.rst:188
-#: ../../source/components-and-apis.rst:283
-#: ../../source/components-and-apis.rst:286
+#: ../../source/components-and-apis.rst:273
+#: ../../source/components-and-apis.rst:276
 msgid "Data Manager"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:94
+#: ../../source/components-and-apis.rst:98
 msgid "`GitHub - Data Manager`_"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:96
+#: ../../source/components-and-apis.rst:100
 #: ../../source/components-and-apis.rst:186
 #: ../../source/components-and-apis.rst:191
 msgid "`API - Data Manager`_"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:97
+#: ../../source/components-and-apis.rst:101
 #: ../../source/components-and-apis.rst:193
-#: ../../source/components-and-apis.rst:289
+#: ../../source/components-and-apis.rst:279
 msgid "Cron"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:98
+#: ../../source/components-and-apis.rst:102
 msgid "`GitHub - Cron`_"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:100
+#: ../../source/components-and-apis.rst:104
 #: ../../source/components-and-apis.rst:196
 msgid "`API - Cron`_"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:101
+#: ../../source/components-and-apis.rst:105
 #: ../../source/components-and-apis.rst:227
-#: ../../source/components-and-apis.rst:307
+#: ../../source/components-and-apis.rst:297
 msgid "X.509 Identity Management"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:102
+#: ../../source/components-and-apis.rst:106
 msgid "`GitHub - x509-identity-mgmt`_"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:104
+#: ../../source/components-and-apis.rst:108
 #: ../../source/components-and-apis.rst:230
 msgid "`API - x509-identity-mgmt`_"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:105
+#: ../../source/components-and-apis.rst:109
 msgid "Kafka2Ftp"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:106
+#: ../../source/components-and-apis.rst:110
 msgid "`GitHub - Kafka2Ftp`_"
 msgstr ""
 
@@ -528,6 +545,7 @@ msgstr ""
 #: ../../source/components-and-apis.rst:298
 #: ../../source/components-and-apis.rst:301
 #: ../../source/components-and-apis.rst:304
+
 msgid "Data Broker"
 msgstr ""
 
@@ -590,7 +608,8 @@ msgstr ""
 "**NOTA: Alguns *endpoints* de componentes não são expostos, mas são "
 "utilizados internamente.**"
 
-#: ../../source/components-and-apis.rst:246
+
+#: ../../source/components-and-apis.rst:236
 msgid ""
 "In addition, the API gateway reroutes the endpoints with their ports from"
 " component, so that they become uniform: all of them are accessible "
@@ -602,174 +621,157 @@ msgstr ""
 "eles são acessíveis pela mesma porta (o padrão é a porta TCP 8000), "
 "consulte a tabela a seguir."
 
-#: ../../source/components-and-apis.rst:250
+#: ../../source/components-and-apis.rst:240
 msgid "Original endpoints to The API gateway"
 msgstr "*Endpoints* originais para o API gateway"
 
-#: ../../source/components-and-apis.rst:254
+#: ../../source/components-and-apis.rst:244
 msgid "Original endpoint"
 msgstr "*Endpoints* Originais"
 
-#: ../../source/components-and-apis.rst:255
+#: ../../source/components-and-apis.rst:245
 msgid "Gateway Endpoint"
 msgstr "*Gateway Endpoint*"
 
-#: ../../source/components-and-apis.rst:257
-#: ../../source/components-and-apis.rst:266
+#: ../../source/components-and-apis.rst:247
+#: ../../source/components-and-apis.rst:256
 msgid "host:80/"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:258
-#: ../../source/components-and-apis.rst:281
+#: ../../source/components-and-apis.rst:248
+#: ../../source/components-and-apis.rst:271
 msgid "host:8000/"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:260
+#: ../../source/components-and-apis.rst:250
 msgid "host:5000/device"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:261
+#: ../../source/components-and-apis.rst:251
 msgid "host:8000/device"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:263
+#: ../../source/components-and-apis.rst:253
 msgid "host:5000/template"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:264
+#: ../../source/components-and-apis.rst:254
 msgid "host:8000/template"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:267
+#: ../../source/components-and-apis.rst:257
 msgid "host:8000/flows"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:269
-#: ../../source/components-and-apis.rst:293
+#: ../../source/components-and-apis.rst:259
+#: ../../source/components-and-apis.rst:283
 msgid "host:5000/"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:270
+#: ../../source/components-and-apis.rst:260
 msgid "host:8000/auth"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:272
+#: ../../source/components-and-apis.rst:262
 msgid "host:5000/revoke"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:273
+#: ../../source/components-and-apis.rst:263
 msgid "host:8000/auth/revoke"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:275
+#: ../../source/components-and-apis.rst:265
 msgid "host:5000/user"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:276
+#: ../../source/components-and-apis.rst:266
 msgid "host:8000/auth/user"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:278
+#: ../../source/components-and-apis.rst:268
 msgid "host:5000/pap"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:279
+#: ../../source/components-and-apis.rst:269
 msgid "host:8000/auth/pap"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:282
+#: ../../source/components-and-apis.rst:272
 msgid "host:8000/history"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:284
+#: ../../source/components-and-apis.rst:274
 msgid "host:3000/import"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:285
+#: ../../source/components-and-apis.rst:275
 msgid "host:8000/import"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:287
+#: ../../source/components-and-apis.rst:277
 msgid "host:3000/export"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:288
+#: ../../source/components-and-apis.rst:278
 msgid "host:8000/export"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:290
+#: ../../source/components-and-apis.rst:280
 msgid "host:5000/cron"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:291
+#: ../../source/components-and-apis.rst:281
 msgid "host:8000/cron"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:294
+#: ../../source/components-and-apis.rst:284
 msgid "host:8000/fw-image"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:296
+#: ../../source/components-and-apis.rst:286
 msgid "host:80/device/{{deviceID}}/latest"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:297
+#: ../../source/components-and-apis.rst:287
 msgid "host:8000/device/{deviceID}/latest"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:299
+#: ../../source/components-and-apis.rst:289
 msgid "host:80/subscription"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:300
+#: ../../source/components-and-apis.rst:290
 msgid "host:8000/subscription"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:302
+#: ../../source/components-and-apis.rst:292
 msgid "host:80/stream"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:303
+#: ../../source/components-and-apis.rst:293
 msgid "host:8000/stream"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:305
+#: ../../source/components-and-apis.rst:295
 msgid "host:80/socket.io"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:306
+#: ../../source/components-and-apis.rst:296
 msgid "host:8000/socket.io"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:308
+#: ../../source/components-and-apis.rst:298
 msgid "host:3000/api/v1"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:309
+#: ../../source/components-and-apis.rst:299
 msgid "host:8000/x509/v1"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:311
-msgid "host:8080/v1/ticket"
-msgstr ""
-
-#: ../../source/components-and-apis.rst:312
-msgid "host:8000/kafka-ws/v1/ticket"
-msgstr ""
-
-#: ../../source/components-and-apis.rst:314
-msgid "host:8080/v1/topics"
-msgstr ""
-
-#: ../../source/components-and-apis.rst:315
-msgid "host:8000/kafka-ws/v1/topics"
-msgstr ""
-
-#: ../../source/components-and-apis.rst:320
+#: ../../source/components-and-apis.rst:302
 msgid "Kafka messages"
 msgstr "Mensagens do Kafka"
 
-#: ../../source/components-and-apis.rst:322
 msgid ""
 "These are the messages sent by components and their subjects. If you are "
 "developing a new internal component (such as a new IoT agent), see `API -"
@@ -781,52 +783,54 @@ msgstr ""
 "IoT), consulte a `API - data-broker`_ para verificar como receber "
 "mensagens."
 
-#: ../../source/components-and-apis.rst:327
+
+#: ../../source/components-and-apis.rst:309
 msgid "Original endpoints"
 msgstr "*Endpoints* Originais"
 
-#: ../../source/components-and-apis.rst:331
+#: ../../source/components-and-apis.rst:313
 msgid "Message"
 msgstr "Mensagem"
 
-#: ../../source/components-and-apis.rst:332
+#: ../../source/components-and-apis.rst:314
 msgid "Subject"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:333
+#: ../../source/components-and-apis.rst:315
 msgid "DeviceManager"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:334
+#: ../../source/components-and-apis.rst:316
 msgid "Device CRUD (`Messages - DeviceManager`_)"
 msgstr ""
 "Dispositivo CRUD (Criar, Ler, Atualizar e Excluir) (`Mensagens - "
 "DeviceManager`_)"
 
-#: ../../source/components-and-apis.rst:335
+#: ../../source/components-and-apis.rst:317
 msgid "``dojot.device-manager.device``"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:336
+#: ../../source/components-and-apis.rst:318
 msgid "iotagent-mosca"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:337
+#: ../../source/components-and-apis.rst:319
 msgid "Device data update (`Messages - iotagent-mosca`_)"
 msgstr "Atualização de dados do dispositivo (`Mensagens - iotagent-mosca`_)"
 
-#: ../../source/components-and-apis.rst:338
+#: ../../source/components-and-apis.rst:320
 msgid "``device-data``"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:339
+#: ../../source/components-and-apis.rst:321
 msgid "auth"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:340
+#: ../../source/components-and-apis.rst:322
 msgid "Tenants creation/removal (`Messages - auth`_)"
 msgstr "Criação/remoção de *Tenants* (`Mensagens - auth`_)"
 
-#: ../../source/components-and-apis.rst:341
+#: ../../source/components-and-apis.rst:323
 msgid "``dojot.tenancy``"
 msgstr ""
+

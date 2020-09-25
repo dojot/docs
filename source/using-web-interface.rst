@@ -186,7 +186,7 @@ To perform data configuration import procedure, expand the menu in the upper rig
     History data is not part of importing and exporting!
 
 Firmware update
-------------------
+---------------
 
 During the lifetime of a device, you may need to update control software (firmware) to correct some issues you encounter while using it, or even add new features.
 Dojot currently supports the firmware upgrade procedure via the LwM2M communication protocol. For details regarding the procedure for integrating with your device please check the LwM2M protocol specification. If your device communicates via this protocol and has the firmware update procedure in place, you can follow the steps below to update your device version.
@@ -245,7 +245,7 @@ Note that in each step, the status and result of image processing are shown.
 
 
 Generating certificates for devices
-------------------
+-----------------------------------
 
 This section will show how to generate x509 certificates for a device, so that dojot can communicate with devices securely via TLS. To be able to send a publication, it is necessary to download the three files, the private key "admin 4302d4.key", the device certificate "admin 4302d4.crt" and the CA certificate "ca.crt".
 
@@ -266,7 +266,7 @@ To be able to execute the command of the example video it is necessary to be in 
 
 
 Generating device history report
-------------------
+--------------------------------
 
 This section will demonstrate how to generate a device history report. The report is able to show data for one or more attributes of the respective device. For this, it is necessary to select the desired attributes, define the period and click on “generate”.
 
@@ -276,7 +276,7 @@ This section will demonstrate how to generate a device history report. The repor
     <iframe id="ytplayer" type="text/html" width="720" height="405"
     src="https://www.youtube.com/embed/G1ZFfCLUT6A?rel=0" frameborder="0"
     allowfullscreen></iframe>
-   
+
 
 
 .. _LwM2M: https://openmobilealliance.org/release/LightweightM2M/V1_1-20180710-A/OMA-TS-LightweightM2M_Core-V1_1-20180710-A.pdf

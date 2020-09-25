@@ -151,6 +151,8 @@ to ``/device`` endpoint. Only after the approval of such request, Kong will
 forward it to DeviceManager.
 
 
+ .. _Sending Kafka messages:
+
 Sending Kafka messages
 ++++++++++++++++++++++
 
@@ -164,7 +166,6 @@ subject and a tenant. This is show in :numref:`retrieving_topics`;
 
    control DeviceManager
    control DataBroker
-   database Redis
    control Kafka
 
    DeviceManager -> DataBroker: GET /topic/dojot.device-manager.devices \nHeaders="Authorization: Bearer JWT"
@@ -175,17 +176,7 @@ subject and a tenant. This is show in :numref:`retrieving_topics`;
      (admin, for instance).
    end note
    activate DataBroker
-   DataBroker -> Redis: GET KEY\n"admin:dojot.device-manager.devices "
-   note left
-     If the key does
-     not exist, then
-     it will be
-     created.
-   end note
-   Redis --> DataBroker: 9d0352b7-d195-4852...
-   DataBroker -> Redis: GET KEY\n"profile-admin:dojot.device-manager.devices "
-   Redis --> DataBroker: { "topic-profile": { ... } }
-   DataBroker -> Kafka: CREATE TOPIC \n9d0352b7-d195-4852...\n{ "topic-profile": { ... } }
+   DataBroker -> Kafka: CREATE TOPIC \nadmin.dojot.device-manager.devices\n{ "topic-profile": { ... } }
    note left
      There's no need
      to recreate this
@@ -193,51 +184,22 @@ subject and a tenant. This is show in :numref:`retrieving_topics`;
      already created.
    end note
    Kafka -> DataBroker: OK
-   DataBroker --> DeviceManager: { "topic" : "9d0352b7-d195-4852..." }
+   DataBroker --> DeviceManager: { "topic" : "admin.dojot.device-manager.devices" }
    deactivate DataBroker
-   DeviceManager -> Kafka: SEND MESSAGE\n topic:9d0352b7-d195-4852...\ndata: {"device": "XYZ", "event": "CREATE", ...}
+   DeviceManager -> Kafka: SEND MESSAGE\n topic:admin.dojot.device-manager.devices\ndata: {"device": "XYZ", "event": "CREATE", ...}
    Kafka --> DeviceManager: OK
 
 In this example, DeviceManager needs to publish a message about a new device.
 In order to do so, it sends a request to DataBroker, indicating which tenant
 (within JWT token) and which subject (``dojot.device-manager.devices``) it
-wants to use to send the message. DataBroker will invoke Redis to check whether
-this topic is already created and check whether dojot administrator had created
-a profile to this particular tuple ``{tenant, subject}``.
+wants to use to send the message.
 
-The two profile schemes available are shown in :numref:`automatic_scheme` and
-:numref:`assigned_scheme`.
-
-.. _automatic_scheme:
-.. uml::
-   :caption: Automatic scheme profile
-   :align: center
-
-   class IAutoScheme <<interface>> {
-     + num_partitions: number;
-     + replication_factor: number;
-   }
-
-The automatic scheme set the number of Kafka partitions to be used to the topic
-being created, as well as the replication factor (how many replicas will be
-there for each topic partition). It's up to Kafka to decide which partition and
-replica will be assigned to which broker instance. You can check `Kafka
-partitions and replicas`_ in order to know a bit more about partition and
-replicas. Of course you can check `Kafka's official documentation`_.
-
-.. _assigned_scheme:
-.. uml::
-   :caption: Assigned scheme profile
-   :align: center
-
-   class IAssignedScheme <<interface>> {
-     + replica_assignment: Map<number, number[]>;
-   }
+To better understand how it all works,
+you can check the `Data Broker` documentation
+for the component and API, the links are in :doc:`./components-and-apis`.
 
 
-The assigned scheme indicates which partition will be allocated to which Kafka
-instance. This includes also replicas (partitions with more than one associated
-Kafka instance).
+ .. _Bootstrapping tenants:
 
 Bootstrapping tenants
 +++++++++++++++++++++
@@ -266,23 +228,22 @@ through those topics. This is shown by :numref:`Tenant bootstrapping startup`.
    control DataBroker
    control Kafka
 
-   Component -> DataBroker: GET /topic/dojot.tenancy \nHeaders="Authorization: JWT"
-   DataBroker --> Component: {"topic" : "eca098e7f..."}
    Component-> Auth: GET /tenants
    Auth --> Component: {"tenants" : ["admin", "tenant1"]}
-   loop each tenant
+   loop each $tenant in tenants
      Component -> DataBroker: GET /topic/device-data \nHeaders="Authorization: JWT[tenant]"
-     DataBroker --> Component: {"topic" : "890874987ef..."}
-     Component -> Kafka: SUBSCRIBE\ntopic: 890874987ef...
+     DataBroker --> Component: {"topic" : "**$tenant**.device-data"}
+     Component -> Kafka: SUBSCRIBE\ntopic:**$tenant**.device-data
      Kafka --> Component: OK
      Component -> DataBroker: GET /topic/dojot.device-manager.devices \nHeaders="Authorization: JWT[tenant]"
-     DataBroker --> Component: {"topic" : "890874987ef..."}
-     Component -> Kafka: SUBSCRIBE\ntopic: 890874987ef...
+     DataBroker --> Component: {"topic" : "**$tenant**.device-data"}
+     Component -> Kafka: SUBSCRIBE\ntopic: **$tenant**.device-data
      Kafka --> Component: OK
    end
 
 The second phase starts after startup and its purpose is to process all
-messages received through Kafka. This will include any tenant that is created
+messages received through Kafka subscribing in ``dojot-management.dojot.tenancy``.
+This will include any tenant that is created
 after all services are up and running. :numref:`Tenant bootstrapping` shows how
 to deal with these messages.
 
@@ -291,33 +252,30 @@ to deal with these messages.
    :caption: Tenant bootstrapping
    :align: center
 
-
    control Kafka
    control Component
    control DataBroker
 
-   Kafka -> Component: MESSAGE\ntopic:98797ce98af...\nmessage: {"tenant" : "new-tenant"}
+   Kafka -> Component: MESSAGE\ntopic:dojot-management.dojot.tenancy\nmessage: {"type": "CREATE", "tenant": "new-tenant"}
    Component -> DataBroker: GET /topic/device-data\nHeaders: "Authorization: Bearer JWT"
    note left
      JWT contains
-     new tenant
+     new-tenant
    end note
-   DataBroker --> Component: OK {"topic" : "876ca876g7..."}
-   Component -> Kafka: SUBSCRIBE\ntopic: 876ca876g7...
+   DataBroker --> Component: OK {"topic" : "new-tenant.device-data"}
+   Component -> Kafka: SUBSCRIBE\ntopic: new-tenant.device-data
    Kafka --> Component: OK
    Component -> DataBroker: GET /topic/dojot.device-manager.devices\nHeaders: "Authorization: Bearer JWT"
    note left
      JWT contains
      new tenant
    end note
-   DataBroker --> Component: OK {"topic" : "22432c4a..."}
-   Component -> Kafka: SUBSCRIBE\ntopic: 22432c4a...
+   DataBroker --> Component: OK {"topic" : "new-tenant.dojot.device-manager.devices"}
+   Component -> Kafka: SUBSCRIBE\ntopic: new-tenant.dojot.device-manager.devices
    Kafka --> Component: OK
-
 
 All services that are somehow interested in using subjects should execute this
 procedure in order to correctly receive all messages.
-
 
 Auth + API gateway (Kong)
 -------------------------
@@ -338,43 +296,51 @@ There are two configuration procedures when starting Kong within dojot:
 The first task is performed by simply invoking Kong with a special flag.
 
 The second one is performed by executing a configuration script
-`kong.config.sh`. Its only purpose is to register endpoints in Kong, such as:
+after starting Kong. Its only purpose is to register endpoints in Kong, such as:
 
 .. code-block:: bash
 
+    #create a service
+    curl  -sS -X PUT \
+    --url ${kong}/services/data-broker \
+    --data "name=data-broker" \
+    --data "url=http://data-broker:80"
 
-    (curl -o /dev/null ${kong}/apis -sS -X POST \
-        --header "Content-Type: application/json" \
-        -d @- ) <<PAYLOAD
-    {
-        "name": "data-broker",
-        "uris": ["/device/(.*)/latest", "/subscription"],
-        "strip_uri": false,
-        "upstream_url": "http://data-broker:80"
-    }
-    PAYLOAD
+    #create a route to service
+    curl  -sS -X PUT \
+    --url ${kong}/services/data-broker/routes/data-broker_route \
+    --data 'paths=["/device/(.*)/latest", "/subscription"]' \
+    --data "strip_path=false"
 
 
-This command will register the endpoint `/device/*/latest` and `/subscription`
+These commands will register the endpoint `/device/*/latest` and `/subscription`
 and all requests to it are going to be forwarded to `http//data-broker:80`. You
-can check the documentation on how to add endpoints in `Kong's documentation`_.
+can check the documentation on how to add endpoints in Kong's documentation.
+The links are in the :doc:`./components-and-apis` page.
 
-For some of its registered endpoints, `kong.config.sh` will add two plugins to
+For some of its registered endpoints, the script will add two plugins to
 selected endpoints:
 
 #. JWT generation. The documentation for this plugin is available at `Kong JWT
    plugin page`_.
-#. Configuration a plugin which will forward all policies requests to Auth.
-   will invoke Auth in order to authenticate requests. This plugin is available
-   in `PEP-Kong repository`_.
+#. Configuration a plugin which will forward all policies requests to Auth
+   in order to authenticate requests. This plugin is available
+   inside the `Kong repository`_.
 
 The following request install these two plugins in data-broker API:
 
-
 .. code-block:: bash
 
-  curl -o /dev/null -sS -X POST ${kong}/apis/data-broker/plugins -d "name=jwt"
-  curl -o /dev/null -sS -X POST ${kong}/apis/data-broker/plugins -d "name=pepkong" -d "config.pdpUrl=http://auth:5000/pdp"
+    #pepkong - auth
+    curl  -sS  -X POST \
+    --url ${kong}/services/data-broker/plugins/ \
+    --data "name=pepkong" \
+    --data "config.pdpUrl=http://auth:5000/pdp"
+
+    #JWT generation
+    curl  -sS  -X POST \
+    --url ${kong}/services/data-broker/plugins/ \
+    --data "name=jwt"
 
 
 Emitted messages
@@ -389,6 +355,21 @@ Auth will emit just one message via Kafka for tenant creation:
      "tenant" : "XYZ"
    }
 
+And one for tenant deletion:
+
+.. code-block:: json
+
+   {
+     "type" : "DELETE",
+     "tenant" : "XYZ"
+   }
+
+By default these messages are created in
+kafka topic ``dojot-management.dojot.tenancy``.
+
+This prefix topic can be configured, check the`Auth`
+component documentation :doc:`./components-and-apis`.
+
 Device Manager
 --------------
 
@@ -397,8 +378,9 @@ and a few static information about them as well. Whenever a device is created,
 removed or just edited, it will publish a message through Kafka. It depends
 only on DataBroker and Kafka for reasons already explained in this document.
 
-All messages published by Device Manager to Kafka can be seen in `Device
-Manager messages`_.
+The `DeviceManager` documentation on GitHub ReadMe explains in more
+depth all messages published. You can find the link
+in :doc:`./components-and-apis`.
 
 IoT agent
 ---------
@@ -415,7 +397,8 @@ agent will start receiving data from devices. As there are a plethora of ways
 by which devices can do that, this step won't be detailed in this section (this
 is highly dependent on how each IoT agent works). It must, though, send a
 message to Kafka to inform other components of all new data that the device
-just sent. This is shown in :numref:`IoT agent - kafka`.
+just sent. This is shown in :numref:`IoT agent - kafka`,
+in this case we are using the tenant `admin`.
 
 .. _IoT agent - kafka:
 .. uml::
@@ -424,7 +407,7 @@ just sent. This is shown in :numref:`IoT agent - kafka`.
 
    control Kafka
 
-   IoTAgent -> Kafka: SEND MESSAGE\n topic:890874987ef...\ndata: IoTAgentMessage
+   IoTAgent -> Kafka: SEND MESSAGE\n topic: admin.device-data...\ndata: IoTAgentMessage
    Kafka -> IoTAgent: OK
 
 
@@ -476,7 +459,7 @@ from devices (using ``device-data`` subject) and store them into MongoDB. For
 that, the bootstrapping procedure (detailed in `Bootstrapping tenants`_) is
 performed and, whenever a new message is received, it will create a new Mongo
 document and store it into the device's collection. This is shown in
-:numref:`Persister`.
+:numref:`Persister`, in this case we are using tenant admin.
 
 .. _Persister:
 .. uml::
@@ -487,7 +470,7 @@ document and store it into the device's collection. This is shown in
    control Persister
    database MongoDB
 
-   Kafka -> Persister: MESSAGE\ntopic:98797ce98af...\nmessage: IoTAgentMessage
+   Kafka -> Persister: MESSAGE\ntopic: admin.device-data \nmessage: IoTAgentMessage
    Persister -> MongoDB: NEW DOC { IoTAgentMessage }
    MongoDB --> Persister: OK
    Persister --> Kafka: COMMIT
@@ -536,8 +519,11 @@ it to a 'room' (using socket.io vocabulary) associated to the device and to the
 associated tenant. Thus, all client connected to it (such as graphical user
 interfaces) will receive a new message containing all the received data. For
 more information about how to open a socket.io connection with DataBroker,
-check `DataBroker documentation`_.
+check DataBroker documentation in :doc:`./components-and-apis`.
 
+.. NOTE::
+   The real time socket.io connections via Data Broker will be discontinued in
+   future releases. Use `Kafka-WS`_ instead.
 
 Certificate authority
 ---------------------
@@ -549,7 +535,7 @@ When requesting a certificate for the platform, it is necessary to inform a
 `CSR`_, which will go through a series of validations until arriving at the
 internal Certificate Authority, which, in turn, if all checks pass successfully,
 will sign a certificate and link this certificate to the device registration.
-The ``x509-identity-mgmt`` component is responsible for providing
+The `x509-identity-mgmt` component is responsible for providing
 certificate-related services for devices.
 
 .. _Kafka-WS Internal:
@@ -681,6 +667,5 @@ in Kafka.
 .. _TTL: https://en.wikipedia.org/wiki/Time_to_live
 .. _JWT: https://en.wikipedia.org/wiki/JSON_Web_Token
 .. _Kafka's official documentation: https://kafka.apache.org/documentation/
-.. _Kong's documentation: https://docs.konghq.com/0.14.x/getting-started/configuring-a-service/
 .. _Kong JWT plugin page: https://docs.konghq.com/hub/kong-inc/jwt/
-.. _PEP-Kong repository: https://github.com/dojot/pep-kong
+.. _Kong repository: https://github.com/dojot/kong
