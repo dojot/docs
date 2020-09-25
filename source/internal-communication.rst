@@ -669,4 +669,4 @@ in Kafka.
 .. _Kafka's official documentation: https://kafka.apache.org/documentation/
 .. _Kong JWT plugin page: https://docs.konghq.com/hub/kong-inc/jwt/
 .. _Kong repository: https://github.com/dojot/kong
-.. _dojot platform: https://github.com/dojot
+.. _dojot platform: http://dojot.com.br/
