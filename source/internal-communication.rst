@@ -7,7 +7,7 @@ This page describes how each service in dojot communicate with each other.
 Components
 ----------
 
-The main components that are currently in :numref:`dojot_components`.
+The main components that are currently in `Dojot organization`_ are:numref:`dojot_components`.
 
 .. _dojot_components:
 .. uml::
@@ -523,7 +523,7 @@ check DataBroker documentation in :doc:`./components-and-apis`.
 
 .. NOTE::
    The real time socket.io connections via Data Broker will be discontinued in
-   future releases. Use `Kafka-WS`_ instead.
+   future releases. Use `Kafka WS`_ instead.
 
 Certificate authority
 ---------------------
@@ -540,7 +540,7 @@ certificate-related services for devices.
 
 .. _Kafka-WS Internal:
 
-Kafka-WS
+Kafka WS
 --------
 
 *The Kafka WS* service allows users to retrieve conditional and/or
@@ -669,3 +669,4 @@ in Kafka.
 .. _Kafka's official documentation: https://kafka.apache.org/documentation/
 .. _Kong JWT plugin page: https://docs.konghq.com/hub/kong-inc/jwt/
 .. _Kong repository: https://github.com/dojot/kong
+.. _Dojot organization: https://github.com/dojot

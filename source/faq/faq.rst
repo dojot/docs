@@ -443,8 +443,8 @@ could be integrated with dojot:
   - **Retrieving historical data**: you might want to periodically read all
     historical data related to a device. This can be done by using the *history* API
   - **Retrieving real time data**: you might want to read device-related real time data.
-    This can be done by using *kafka WS*, a *websocket* based implementation.
-    To better understand how to use *kafka WS* check :ref:`Kafka-WS Internal`.
+    This can be done by using *Kafka WS*, a *websocket* based implementation.
+    To better understand how to use *Kafka WS* check :ref:`Kafka-WS Internal`.
   - **Using flowbroker to pre-process data**: for more flexible ways of data manipulation, you can use flows.
     They can process/transform data so they can
     be properly sent to your application via HTTP request, or stored
@@ -454,7 +454,7 @@ could be integrated with dojot:
 
 All these endpoints should bear an access token, see more :ref:`Getting access token`.
 
-Check the documentation API for  *history* and *kafka WS* in :doc:`./../components-and-apis`.
+Check the documentation API for  *history* and *Kafka WS* in :doc:`./../components-and-apis`.
 And to a tutorial on how to use the flow, check :doc:`../flow`.
 
 

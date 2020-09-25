@@ -87,7 +87,6 @@ msgid "New node Event Device In"
 msgstr "Novo Nó Evento Dispositivo (Entrada)"
 
 #: ../../source/releases.rst:29
-#, fuzzy
 msgid "New node Event Template Device"
 msgstr "Novo nó Evento de modelos de dispositivo (Entrada)"
 
