@@ -7,7 +7,7 @@ This page describes how each service in dojot communicate with each other.
 Components
 ----------
 
-The main components that are currently in `Dojot organization`_ are:numref:`dojot_components`.
+The main components that are currently in `dojot platform`_ are :numref:`dojot_components`.
 
 .. _dojot_components:
 .. uml::
@@ -669,4 +669,4 @@ in Kafka.
 .. _Kafka's official documentation: https://kafka.apache.org/documentation/
 .. _Kong JWT plugin page: https://docs.konghq.com/hub/kong-inc/jwt/
 .. _Kong repository: https://github.com/dojot/kong
-.. _Dojot organization: https://github.com/dojot
+.. _dojot platform: https://github.com/dojot
