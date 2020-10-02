@@ -302,7 +302,7 @@ dojot.
      - Message
      - Subject
    * - DeviceManager
-     - Device CRUD (`GitHub - DeviceManager`_)
+     - Device CRUD (`Messages - DeviceManager`_)
      - ``dojot.device-manager.device``
    * - iotagent-mosca
      - Device data update (`Messages - iotagent-mosca`_)
@@ -336,6 +336,7 @@ dojot.
 
 .. _GitHub - DeviceManager: https://github.com/dojot/device-manager
 .. _API - DeviceManager: https://dojot.github.io/device-manager/apiary_v0.4.3.html
+.. _Messages - DeviceManager: https://github.com/dojot/device-manager/tree/v0.4.3#events
 
 .. _GitHub - image-manager: https://github.com/dojot/image-manager
 .. _API - image-manager: https://dojot.github.io/image-manager/apiary_v0.4.3.html
