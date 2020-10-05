@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dojot 0.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-02 16:48-0300\n"
+"POT-Creation-Date: 2020-10-05 17:05-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -141,10 +141,6 @@ msgstr ""
 
 #: ../../source/components-and-apis.rst:43
 msgid "`GitHub - auth`_"
-msgstr ""
-
-#: ../../source/components-and-apis.rst:44
-msgid "`Auth  doc.`_"
 msgstr ""
 
 #: ../../source/components-and-apis.rst:45
