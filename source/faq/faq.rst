@@ -462,7 +462,3 @@ could be integrated with dojot:
 
 All these endpoints should bear an access token, which is retrieved as
 described in the question `How can I use them?`_.
-
-
-.. _Device-Manager how-to - sending actuation messages: http://dojotdocs.readthedocs.io/projects/DeviceManager/en/latest/using-device-manager.html#sending-actuation-messages-to-devices
-.. _flowbroker: https://github.com/dojot/flowbroker

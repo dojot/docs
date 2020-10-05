@@ -94,7 +94,7 @@ associated to it - they are tightly linked to the original template so that any
 template update will reflect all associated devices.
 
 The component responsible for managing devices (both real and virtual) and
-templates is `DeviceManager`_ . 
+templates is `DeviceManager`_ .
 
 `DeviceManager documentation`_ explains in more
 depth all the available operations.
@@ -123,11 +123,10 @@ The component responsible for dealing with such flows is `flowbroker`_.
 .. _JSON Web Token: https://tools.ietf.org/html/rfc7519
 .. _jwt.io: https://jwt.io/
 .. _auth: https://github.com/dojot/auth
-.. _auth documentation: http://dojotdocs.readthedocs.io/projects/auth/
 .. _docker-compose: https://github.com/dojot/docker-compose
 .. _DeviceManager: https://github.com/dojot/device-manager
-.. _DeviceManager documentation: http://dojotdocs.readthedocs.io/projects/DeviceManager/
-.. _DeviceManager how-to: http://dojotdocs.readthedocs.io/projects/DeviceManager/en/latest/using-device-manager.html#using-devicemanager
+.. _DeviceManager documentation: https://github.com/dojot/device-manager
+.. _DeviceManager how-to: https://github.com/dojot/device-manager#how-to-use
 .. _mashup: https://github.com/dojot/mashup
 .. _mosquitto: https://projects.eclipse.org/projects/technology.mosquitto
 .. _history APIs: https://dojot.github.io/history-ws/apiary_latest.html

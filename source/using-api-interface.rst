@@ -146,7 +146,7 @@ Note that the template ID is 1 (line 35), if you have already created another te
 To create a template based on it, send the following request to dojot:
 
 .. code-block:: bash
-    
+
     curl -X POST http://localhost:8000/device \
     -H "Authorization: Bearer ${JWT}" \
     -H 'Content-Type:application/json' \
@@ -362,11 +362,9 @@ This message contains all previously sent values.
 .. _JSON Web Token: https://tools.ietf.org/html/rfc7519
 .. _jwt.io: https://jwt.io/
 .. _auth: https://github.com/dojot/auth
-.. _auth documentation: http://dojotdocs.readthedocs.io/projects/auth/
 .. _docker-compose: https://github.com/dojot/docker-compose
 .. _DeviceManager: https://github.com/dojot/device-manager
-.. _DeviceManager documentation: http://dojotdocs.readthedocs.io/projects/DeviceManager/
-.. _DeviceManager how-to: http://dojotdocs.readthedocs.io/projects/DeviceManager/en/latest/using-device-manager.html#using-devicemanager
+.. _DeviceManager how-to: https://github.com/dojot/device-manager#how-to-use
 .. _mashup: https://github.com/dojot/mashup
 .. _mosquitto: https://projects.eclipse.org/projects/technology.mosquitto
 .. _curl: https://curl.haxx.se/

@@ -41,7 +41,7 @@ Components
     -
   * - Auth
     - `GitHub - auth`_
-    - `Auth  doc.`_
+    -
     - `API - auth`_
   * - History
     - `GitHub - history`_
@@ -327,8 +327,7 @@ dojot.
 
 .. _GitHub - auth: https://github.com/dojot/auth
 .. _API - auth: https://dojot.github.io/auth/apiary_v0.4.3.html
-.. _Auth  doc.: http://dojotdocs.readthedocs.io/projects/auth/en/latest/
-.. _Messages - auth: https://dojotdocs.readthedocs.io/projects/auth/en/latest/kafka-messages.html
+.. _Messages - auth: https://github.com/dojot/auth/tree/v0.4.3#kafka-messages
 
 .. _GitHub - history: https://github.com/dojot/history
 .. _API - history: https://dojot.github.io/history/apiary_v0.4.3.html

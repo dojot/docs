@@ -540,7 +540,6 @@ check `DataBroker documentation`_.
 .. _API - data-broker: https://dojot.github.io/data-broker/apiary_latest.html
 .. _Kafka partitions and replicas: https://sookocheff.com/post/kafka/kafka-in-a-nutshell/#what-is-kafka
 .. _DataBroker documentation: https://dojot.github.io/data-broker/apiary_latest.html
-.. _Device Manager messages: https://dojotdocs.readthedocs.io/projects/DeviceManager/en/latest/kafka-messages.html
 .. _Kafka's official documentation: https://kafka.apache.org/documentation/
 .. _Kong's documentation: https://docs.konghq.com/0.14.x/getting-started/configuring-a-service/
 .. _Kong JWT plugin page: https://docs.konghq.com/hub/kong-inc/jwt/
