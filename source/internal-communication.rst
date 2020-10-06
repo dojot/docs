@@ -7,7 +7,7 @@ This page describes how each service in dojot communicate with each other.
 Components
 ----------
 
-The main components current in dojot are shown in :numref:`dojot_components`.
+The main components that are currently in `dojot platform`_ are :numref:`dojot_components`.
 
 .. _dojot_components:
 .. uml::
@@ -523,7 +523,7 @@ check DataBroker documentation in :doc:`./components-and-apis`.
 
 .. NOTE::
    The real time socket.io connections via Data Broker will be discontinued in
-   future releases. Use `Kafka-WS`_ instead.
+   future releases. Use `Kafka WS`_ instead.
 
 Certificate authority
 ---------------------
@@ -540,40 +540,80 @@ certificate-related services for devices.
 
 .. _Kafka-WS Internal:
 
-Kafka-WS
+Kafka WS
 --------
 
-*Kafka WebSocket* service allows the users to retrieve conditional and/or
-partial real time data from a given dojot topic in its internal Kafka cluster.
+The *Kafka WS* service allows users to retrieve conditional and/or
+partial real time data from a given dojot topic in a Kafka cluster.
+It works with pure websocket connections, so you can create websocket 
+clients in any language you want as long as they support RFC 6455.
+
+Connecting to the service
+++++++++++++++++++++++++++
+
+The connection is done in two steps: you must first obtain a single-use ticket 
+through a HTTP request, then connect to the service via websocket passing it
+as a parameter.
+
+First step: Get the single-use ticket
+*************************************
+A ticket allows the user to subscribe to a dojot topic. To obtain it is necessary 
+to have a JWT access token that is issued by the platform's Authentication/Authorization 
+service. The ticket must be retrieved via a HTTP request using the GET verb to the 
+`<base-url>/kafka-ws/v1/ticket` endpoint. The request must contain the `Authorization` 
+header with the previously retrieved JWT token as a value. Example:
+
+| `GET <base-url>/kafka-ws/v1/ticket`
+| `Authorization: Bearer [Encoded JWT]`
+
+The component responds with the following syntax:
+
+| `HTTP/1.1 200 OK`
+| `Content-type: application/json`
+.. code-block:: json
+
+  {
+    "ticket": "[an opaque ticket of 64 hexadecimal characters]"
+  }
+
+Note: In the context of a dojot deployment the JWT Token is provided by the Auth service, 
+and is validated by the API Gateway before redirecting the connection to the *Kafka WS*. 
+So, no validations are done by the Kafka WS.
+
+Second step: Establish a websocket connection
+**********************************************
+The connection is done via pure websockets using the URI `<base-url>/kafka-ws/v1/topics/:topic`.
+You must pass the previously generated ticket as a parameter of this URI. It is also possible 
+to pass conditional and filter options as parameters of the URI.
 
 Behavior when requesting a ticket and a websocket connection
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Below we can understand the behavior of the Kafka-WS service when a user
-(through a `user agent`_) requests a ticket in order to establish a
-communication via websocket with Kafka-WS.
+Below we can understand the behavior of the Kafka WS service when a user
+(through an `user agent`_) requests a ticket in order to establish a
+communication via websocket with Kafka WS.
 
-Note that when the user requests a new ticket, Kafka-WS extracts some
+Note that when the user requests a new ticket, Kafka WS extracts some
 information from the *user's access token* (`JWT`_) and generates a
 *signed payload*, to be used later in the decision to authorize (or not)
 the websocket connection. From the payload a *ticket* is generated and
 both are stored in Redis, where the ticket is the key to obtain the payload.
-A `TTL`_ is defined by Kafka-WS, so the user has to use the ticket within the
+A `TTL`_ is defined by Kafka WS, so the user has to use the ticket within the
 established time, otherwise, Redis automatically deletes the ticket and payload.
 
-After obtaining the ticket, the user makes an HTTP request to Kafka-WS
+After obtaining the ticket, the user makes an HTTP request to Kafka WS
 requesting an upgrade to communicate via *websocket*. As the specification of
 this HTTP request limits the use of additional headers, it is necessary to send
-the ticket through the URL, so that it can be validated by Kafka-WS before
+the ticket through the URL, so that it can be validated by Kafka WS before
 authorizing the upgrade.
 
 Since the ticket is valid, that is, it corresponds to an entry on Redis,
-Kafka-WS retrieves the payload related to the ticket, verifies the integrity
+Kafka WS retrieves the payload related to the ticket, verifies the integrity
 of the payload and deletes that entry on Redis so that the ticket cannot be
 used again.
 
 With the payload it is possible to make the decision to authorize the upgrade
-to websocket or not. If authorization is granted, Kafka-WS opens a subscription
+to websocket or not. If authorization is granted, Kafka WS opens a subscription
 channel based on a specific topic in Kafka. From there, the upgrade to websocket
 is established and the user starts to receive data as they are being published
 in Kafka.
@@ -628,3 +668,4 @@ in Kafka.
 .. _Kafka's official documentation: https://kafka.apache.org/documentation/
 .. _Kong JWT plugin page: https://docs.konghq.com/hub/kong-inc/jwt/
 .. _Kong repository: https://github.com/dojot/kong
+.. _dojot platform: http://dojot.com.br/
