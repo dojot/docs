@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dojot 0.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-25 11:44-0300\n"
+"POT-Creation-Date: 2020-10-06 12:48-0300\n"
 "PO-Revision-Date: 2020-10-06 10:54-0300\n"
 "Last-Translator: \n"
 "Language: pt_BR\n"
@@ -57,8 +57,8 @@ msgstr "DeviceManager: armazenamento de dispositivo e modelo."
 #: ../../source/internal-communication.rst:51
 msgid "Persister: component that stores all device-generated data."
 msgstr ""
-"Persister: componente que armazena todos os dados gerados pelo "
-"dispositivo."
+"Persister: componente que armazena todos os dados gerados por "
+"dispositivos."
 
 #: ../../source/internal-communication.rst:52
 msgid "History: component that exposes all device-generated data."
@@ -649,12 +649,12 @@ msgstr ""
 
 #: ../../source/internal-communication.rst:546
 msgid ""
-"*The Kafka WS* service allows users to retrieve conditional and/or "
+"The *Kafka WS* service allows users to retrieve conditional and/or "
 "partial real time data from a given dojot topic in a Kafka cluster. It "
 "works with pure websocket connections, so you can create websocket "
 "clients in any language you want as long as they support RFC 6455."
 msgstr ""
-"*O serviço Kafka WS* permite que os usuários recuperem dados condicionais"
+"O serviço *Kafka WS* permite que os usuários recuperem dados condicionais"
 " e/ou parciais em tempo real de um determinado tópico da dojot em um "
 "Cluster Kafka. Ele funciona com conexões puras de websocket, para que "
 "você possa criar clientes de websocket em qualquer linguagem que você "
@@ -737,7 +737,7 @@ msgid ""
 "ticket as a parameter of this URI. It is also possible to pass "
 "conditional and filter options as parameters of the URI."
 msgstr ""
-"A conexão é feita via websocket puro, usando a URI *<base-url>/kafka-"
+"A conexão é feita via websocket pura, usando a URI *<base-url>/kafka-"
 "ws/v1/topics/:topic*. Você deve passar o ticket gerado anteriormente como"
 " parâmetro para esta URI. Também é possivel passar opções e filtros "
 "condicionais como parâmetros para esta URI."
@@ -777,7 +777,6 @@ msgstr ""
 "apaga automaticamente o ticket e o payload."
 
 #: ../../source/internal-communication.rst:604
-#, fuzzy
 msgid ""
 "After obtaining the ticket, the user makes an HTTP request to Kafka WS "
 "requesting an upgrade to communicate via *websocket*. As the "
@@ -789,7 +788,7 @@ msgstr ""
 "requisitando um *upgrade* de protocolo para se comunicar via *websocket*."
 " Como a especificação dessa solicitação HTTP limita o uso de cabeçalhos "
 "adicionais, é necessário enviar o ticket pela URL, para que possa ser "
-"validado pelo Kafka-WS antes de autorizar o upgrade."
+"validado pelo Kafka WS antes de autorizar o upgrade."
 
 #: ../../source/internal-communication.rst:610
 msgid ""
@@ -798,13 +797,12 @@ msgid ""
 "integrity of the payload and deletes that entry on Redis so that the "
 "ticket cannot be used again."
 msgstr ""
-"Dado que o ticket esteja válido ou seja, corresponde a uma entrada no "
+"Dado que o ticket esteja válido, ou seja, corresponde a uma entrada no "
 "Redis, o Kafka WS recupera o payload relacionado ao ticket, verifica sua "
 "integridade e exclui essa entrada no Redis para que o ticket não possa "
 "ser usado novamente."
 
 #: ../../source/internal-communication.rst:615
-#, fuzzy
 msgid ""
 "With the payload it is possible to make the decision to authorize the "
 "upgrade to websocket or not. If authorization is granted, Kafka WS opens "
@@ -815,22 +813,10 @@ msgstr ""
 "Com o payload é possível tomar a decisão de autorizar ou não o *upgrade* "
 "para websocket. Se a autorização for concedida, o Kafka WS abre um canal "
 "de subscrição com base em um tópico específico no Kafka. A partir daí, o "
-"upgrade para websocket é estabelecido e o usuário começa a receber os "
+"*upgrade* para websocket é estabelecido e o usuário começa a receber os "
 "dados à medida que vão sendo publicados no Kafka."
 
 #: ../../source/internal-communication.rst:621
 msgid "Obtaining a ticket and connecting via websocket"
 msgstr "Obtenção de ticket e conexão via websocket"
-
-#~ msgid "dojot components"
-#~ msgstr "componentes dojot"
-
-#~ msgid "They are:"
-#~ msgstr "Eles são:"
-
-#~ msgid "The main current dojot components are:"
-#~ msgstr "Os principais componentes que estão atualmente na dojot são:"
-
-#~ msgid "Current dojot components are shown in :numref:`dojot_components`."
-#~ msgstr ""
 

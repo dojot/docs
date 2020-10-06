@@ -828,11 +828,11 @@ msgstr ""
 
 #: ../../source/faq/faq.rst:457
 msgid ""
-"Check the documentation API for  *history* and *Kafka WS* in :doc:`./../"
+"Check the documentation API for  *History* and *Kafka WS* in :doc:`./../"
 "components-and-apis`. And to a tutorial on how to use the flow, check :doc:`../"
 "flow`."
 msgstr ""
-"Verifique a documentação da API do *history* e do *Kafka WS* em :doc:`./../"
+"Verifique a documentação da API do *History* e do *Kafka WS* em :doc:`./../"
 "components-and-apis`.  E para um tutorial de como usar o fluxo veja :doc:`../"
 "flow`."
 

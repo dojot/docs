@@ -543,7 +543,7 @@ certificate-related services for devices.
 Kafka WS
 --------
 
-*The Kafka WS* service allows users to retrieve conditional and/or
+The *Kafka WS* service allows users to retrieve conditional and/or
 partial real time data from a given dojot topic in a Kafka cluster.
 It works with pure websocket connections, so you can create websocket 
 clients in any language you want as long as they support RFC 6455.

@@ -454,7 +454,7 @@ could be integrated with dojot:
 
 All these endpoints should bear an access token, see more :ref:`Getting access token`.
 
-Check the documentation API for  *history* and *Kafka WS* in :doc:`./../components-and-apis`.
+Check the documentation API for  *History* and *Kafka WS* in :doc:`./../components-and-apis`.
 And to a tutorial on how to use the flow, check :doc:`../flow`.
 
 
