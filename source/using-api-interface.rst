@@ -63,7 +63,7 @@ would look like:
 
 Remember that the token must be set in the request header as a whole, not parts
 of it. In the example only the first characters are shown for the sake of
-simplicity. All further requests will use an evironment variable called
+simplicity. All further requests will use an environment variable called
 ``${JWT}``, which contains the token got from auth component.
 
 
@@ -73,7 +73,7 @@ Device creation
 In order to properly configure a physical device in dojot, you must first
 create its representation in the platform. The example presented here is just a
 small part of what is offered by DeviceManager. For more information, check the
-`DeviceManager how-to`_ for more detailed instructions.
+`DeviceManager documentation`_ for more detailed instructions.
 
 First of all, let's create a template for the device - all devices are based
 off of a template, remember.
@@ -234,7 +234,7 @@ translate any message format to this scheme using flows, though), such as:
 
 
 .. ATTENTION::
-    Some Linux distributions, Debian-based Linux distributions in particular, have two packages for
+    Some Linux distributions, Debian-based ones in particular, have two packages for
     `mosquitto`_ - one containing tools to access it (i.e. mosquitto_pub and mosquitto_sub for
     publishing messages and subscribing to topics) and another one containing the MQTT broker too.
     In this tutorial, only the tools from package `mosquitto-clients` on Debian-based Linux
@@ -432,11 +432,8 @@ This message contains all previously sent values.
 .. _JSON Web Token: https://tools.ietf.org/html/rfc7519
 .. _jwt.io: https://jwt.io/
 .. _auth: https://github.com/dojot/auth
-.. _auth documentation: http://dojotdocs.readthedocs.io/projects/auth/
 .. _docker-compose: https://github.com/dojot/docker-compose
-.. _DeviceManager: https://github.com/dojot/device-manager
-.. _DeviceManager documentation: http://dojotdocs.readthedocs.io/projects/DeviceManager/
-.. _DeviceManager how-to: http://dojotdocs.readthedocs.io/projects/DeviceManager/en/latest/using-device-manager.html#using-devicemanager
+.. _DeviceManager documentaion: https://github.com/dojot/device-manager
 .. _mashup: https://github.com/dojot/mashup
 .. _mosquitto: https://projects.eclipse.org/projects/technology.mosquitto
 .. _curl: https://curl.haxx.se/
