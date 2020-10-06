@@ -449,9 +449,9 @@ Such message would be:
         }
     }
 
-If you want to overwrite the date that will be stored in the History, you can send it in the
-`timestamp` parameter, in the ISO or UNIX format (both of them accept either in seconds and in
-milliseconds). Payload example:
+If you want to overwrite the date that will be stored in MongoDB, you can send it in the
+`timestamp` parameter, in ISO or UNIX format (both of them accept either seconds and milliseconds
+precision). Payload example:
 
 .. code:: javascript
 
@@ -461,7 +461,7 @@ milliseconds). Payload example:
       // Or 2020-10-06T12:58:03.000Z, if you want to use ISO.
    }
 
-All timestamps will be converted in ISO before being stored in MongoDB. Its precision is preserved.
+All timestamps will be converted in ISO before being stored in MongoDB. The precision is preserved.
 
 
 Persister
