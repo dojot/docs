@@ -449,6 +449,20 @@ Such message would be:
         }
     }
 
+If you want to overwrite the date that will be stored in MongoDB, you can send it in the
+`timestamp` parameter, in ISO or UNIX format (both of them accept either seconds and milliseconds
+precision). Payload example:
+
+.. code:: javascript
+
+   {
+      "rain": 10.1,
+      "timestamp": 1601989083000,
+      // Or 2020-10-06T12:58:03.000Z, if you want to use ISO.
+   }
+
+All timestamps will be converted in ISO before being stored in MongoDB, in which you can retrieve
+the messages via the *History* service. The precision is preserved.
 
 
 Persister
@@ -545,22 +559,22 @@ Kafka WS
 
 The *Kafka WS* service allows users to retrieve conditional and/or
 partial real time data from a given dojot topic in a Kafka cluster.
-It works with pure websocket connections, so you can create websocket 
+It works with pure websocket connections, so you can create websocket
 clients in any language you want as long as they support RFC 6455.
 
 Connecting to the service
 ++++++++++++++++++++++++++
 
-The connection is done in two steps: you must first obtain a single-use ticket 
+The connection is done in two steps: you must first obtain a single-use ticket
 through a HTTP request, then connect to the service via websocket passing it
 as a parameter.
 
 First step: Get the single-use ticket
 *************************************
-A ticket allows the user to subscribe to a dojot topic. To obtain it is necessary 
-to have a JWT access token that is issued by the platform's Authentication/Authorization 
-service. The ticket must be retrieved via a HTTP request using the GET verb to the 
-`<base-url>/kafka-ws/v1/ticket` endpoint. The request must contain the `Authorization` 
+A ticket allows the user to subscribe to a dojot topic. To obtain it is necessary
+to have a JWT access token that is issued by the platform's Authentication/Authorization
+service. The ticket must be retrieved via a HTTP request using the GET verb to the
+`<base-url>/kafka-ws/v1/ticket` endpoint. The request must contain the `Authorization`
 header with the previously retrieved JWT token as a value. Example:
 
 | `GET <base-url>/kafka-ws/v1/ticket`
@@ -576,14 +590,14 @@ The component responds with the following syntax:
     "ticket": "[an opaque ticket of 64 hexadecimal characters]"
   }
 
-Note: In the context of a dojot deployment the JWT Token is provided by the Auth service, 
-and is validated by the API Gateway before redirecting the connection to the *Kafka WS*. 
+Note: In the context of a dojot deployment the JWT Token is provided by the Auth service,
+and is validated by the API Gateway before redirecting the connection to the *Kafka WS*.
 So, no validations are done by the Kafka WS.
 
 Second step: Establish a websocket connection
 **********************************************
 The connection is done via pure websockets using the URI `<base-url>/kafka-ws/v1/topics/:topic`.
-You must pass the previously generated ticket as a parameter of this URI. It is also possible 
+You must pass the previously generated ticket as a parameter of this URI. It is also possible
 to pass conditional and filter options as parameters of the URI.
 
 Behavior when requesting a ticket and a websocket connection
