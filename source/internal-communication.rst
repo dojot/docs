@@ -660,7 +660,6 @@ in Kafka.
 .. _API - data-broker: https://dojot.github.io/data-broker/apiary_latest.html
 .. _Kafka partitions and replicas: https://sookocheff.com/post/kafka/kafka-in-a-nutshell/#what-is-kafka
 .. _DataBroker documentation: https://dojot.github.io/data-broker/apiary_latest.html
-.. _Device Manager messages: https://dojotdocs.readthedocs.io/projects/DeviceManager/en/latest/kafka-messages.html
 .. _CA: https://en.wikipedia.org/wiki/Certificate_authority
 .. _CSR: https://en.wikipedia.org/wiki/Certificate_signing_request
 .. _user agent: https://en.wikipedia.org/wiki/User_agent

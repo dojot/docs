@@ -49,7 +49,7 @@ Components
     -
   * - Auth
     - `GitHub - auth`_
-    - `Auth  doc.`_
+    -
     - `API - auth`_
   * - Dojot Kong
     - `GitHub - Dojot Kong`_
@@ -363,8 +363,7 @@ dojot.
 
 .. _GitHub - auth: https://github.com/dojot/auth/tree/v0.5.0
 .. _API - auth: https://dojot.github.io/auth/apiary_v0.5.0.html
-.. _Auth  doc.: http://dojotdocs.readthedocs.io/projects/auth/en/latest/
-.. _Messages - auth: https://dojotdocs.readthedocs.io/projects/auth/en/latest/kafka-messages.html
+.. _Messages - auth: https://github.com/dojot/auth/tree/v0.5.0#kafka-messages
 
 .. _GitHub - Dojot Kong: https://github.com/dojot/kong/tree/v0.5.0
 

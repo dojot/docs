@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dojot 0.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-25 05:56-0300\n"
+"POT-Creation-Date: 2020-10-05 17:20-0300\n"
 "PO-Revision-Date: 2020-09-14 11:33-0300\n"
 "Last-Translator: \n"
 "Language: pt_BR\n"
@@ -167,10 +167,6 @@ msgstr ""
 
 #: ../../source/components-and-apis.rst:51
 msgid "`GitHub - auth`_"
-msgstr ""
-
-#: ../../source/components-and-apis.rst:52
-msgid "`Auth  doc.`_"
 msgstr ""
 
 #: ../../source/components-and-apis.rst:53
@@ -838,4 +834,7 @@ msgstr "Criação/remoção de *Tenants* (`Mensagens - auth`_)"
 #: ../../source/components-and-apis.rst:345
 msgid "``dojot.tenancy``"
 msgstr ""
+
+#~ msgid "`Auth  doc.`_"
+#~ msgstr ""
 
