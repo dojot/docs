@@ -207,7 +207,6 @@ msgstr ""
 "utilizando fluxos), como abaixo:"
 
 #: ../../source/using-api-interface.rst:233
-#, fuzzy
 msgid ""
 "Some Linux distributions, Debian-based Linux distributions in particular,"
 " have two packages for `mosquitto`_ - one containing tools to access it "
