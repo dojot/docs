@@ -110,6 +110,10 @@ Components
     - `GitHub - Kafka2Ftp`_
     -
     -
+  * - Kafka WS
+    - `GitHub - Kafka WS`_
+    -
+    - `API - kafka-ws`_
 
 
 Exposed APIs (API Gateway)
@@ -229,6 +233,16 @@ See more about how using APIs in :doc:`./using-api-interface`.
      - **/api/v1**
      - `API - x509-identity-mgmt`_
      - Yes
+   * - Kafka WS
+     - **/kafka-ws/v1/ticket**
+     -  /v1/ticket
+     -
+     - Yes
+   * - Kafka WS
+     - **/kafka-ws/v1**
+     - /v1
+     -
+     - No
 
 **NOTE: Some of the components' endpoints aren't exposed, but are used internally.**
 
@@ -297,6 +311,14 @@ TCP port 8000), see the following table.
    * - X.509 Identity Management
      - host:3000/api/v1
      - host:8000/x509/v1
+   * - Kafka WS
+     - host:8080/v1/ticket
+     - host:8000/kafka-ws/v1/ticket
+   * - Kafka WS
+     - host:8080/v1/topics
+     - host:8000/kafka-ws/v1/topics
+
+     
 
 Kafka messages
 --------------
@@ -384,3 +406,6 @@ dojot.
 .. _API - x509-identity-mgmt: https://dojot.github.io/dojot/x509-identity-mgmt/apiary_v0.5.0.html
 
 .. _GitHub - Kafka2Ftp: https://github.com/dojot/dojot/tree/v0.5.0/connector/kafka2ftp
+
+.. _GitHub - Kafka WS: https://github.com/dojot/dojot/tree/v0.5.0/subscription-engine/kafka-ws
+.. _API - kafka-ws: https://dojot.github.io/dojot/kafka-ws/apiary_v0.5.0.html
