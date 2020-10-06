@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dojot 0.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-14 11:12-0300\n"
+"POT-Creation-Date: 2020-10-06 09:37-0300\n"
 "PO-Revision-Date: 2020-09-11 17:09-0300\n"
 "Last-Translator: \n"
 "Language: pt_BR\n"
@@ -74,11 +74,11 @@ msgstr ""
 msgid "In Debian-based Linux distributions you can run:"
 msgstr "Em distribuições Linux baseadas em Debian, você pode executar:"
 
-#: ../../source/using-api-interface.rst:35
+#: ../../source/using-api-interface.rst:37
 msgid "Getting access token"
 msgstr "Obtendo um *token* de acesso"
 
-#: ../../source/using-api-interface.rst:37
+#: ../../source/using-api-interface.rst:39
 msgid ""
 "All requests must contain a valid access token. You can generate a new "
 "token by sending the following request:"
@@ -86,11 +86,11 @@ msgstr ""
 "Todas as requisições devem conter um *token* de acesso que seja válido. É"
 " possível gerar um novo *token* enviando a seguinte requisição:"
 
-#: ../../source/using-api-interface.rst:46
+#: ../../source/using-api-interface.rst:48
 msgid "To check:"
 msgstr "Checar:"
 
-#: ../../source/using-api-interface.rst:52
+#: ../../source/using-api-interface.rst:54
 msgid ""
 "If you want to generate a token for other user, just change the username "
 "and password in the request payload. The token (\"eyJ0eXAiOiJKV1QiL...\")"
@@ -103,12 +103,12 @@ msgstr ""
 "enviada para a dojot, colocando-o no cabeçalho da mensagem. A requisição "
 "seria algo desse tipo:"
 
-#: ../../source/using-api-interface.rst:62
+#: ../../source/using-api-interface.rst:64
 msgid ""
 "Remember that the token must be set in the request header as a whole, not"
 " parts of it. In the example only the first characters are shown for the "
-"sake of simplicity. All further requests will use an evironment variable "
-"called ``${JWT}``, which contains the token got from auth component."
+"sake of simplicity. All further requests will use an environment variable"
+" called ``${JWT}``, which contains the token got from auth component."
 msgstr ""
 "É importante ressaltar que o token deve estar inteiro no cabeçalho da "
 "requisição, não apenas parte dele. No exemplo, somente os primeiros "
@@ -117,25 +117,25 @@ msgstr ""
 "${JWT}`` que contém o token obtido da dojot (mais especificamente do "
 "componente de autorização da dojot)."
 
-#: ../../source/using-api-interface.rst:69
+#: ../../source/using-api-interface.rst:71
 msgid "Device creation"
 msgstr "Criação de dispositivo"
 
-#: ../../source/using-api-interface.rst:71
+#: ../../source/using-api-interface.rst:73
 msgid ""
 "In order to properly configure a physical device in dojot, you must first"
 " create its representation in the platform. The example presented here is"
 " just a small part of what is offered by DeviceManager. For more "
-"information, check the `DeviceManager how-to`_ for more detailed "
+"information, check the `DeviceManager documentation`_ for more detailed "
 "instructions."
 msgstr ""
 "A fim de configurar um dispositivo físico na dojot, é necessário criar "
 "sua representação na plataforma. O exemplo mostrado aqui é apenas uma "
 "parte pequena do que é oferecido pelo componente DeviceManager. Para mais"
-" informações sobre esse componente, confira o documento `DeviceManager "
-"how-to`_."
+" informações sobre esse componente, confira a documentação do "
+"`DeviceManager`_."
 
-#: ../../source/using-api-interface.rst:76
+#: ../../source/using-api-interface.rst:78
 msgid ""
 "First of all, let's create a template for the device - all devices are "
 "based off of a template, remember."
@@ -143,11 +143,11 @@ msgstr ""
 "Primeiramente vamos criar um modelo (*template*) para o dispositivo, pois"
 " todos os dispositivos são baseados em modelos, não esqueça."
 
-#: ../../source/using-api-interface.rst:100
+#: ../../source/using-api-interface.rst:102
 msgid "This request should give back this message:"
 msgstr "Esta requisição deve retornar a seguinte mensagem:"
 
-#: ../../source/using-api-interface.rst:144
+#: ../../source/using-api-interface.rst:146
 msgid ""
 "Note that the template ID is 1 (line 35), if you have already created "
 "another template this id will be different."
@@ -155,13 +155,13 @@ msgstr ""
 "Note que  o *template* (modelo) ID é 1 (linha 35), caso você já tenha "
 "criado algum outro *template* este ID será diferente."
 
-#: ../../source/using-api-interface.rst:146
+#: ../../source/using-api-interface.rst:148
 msgid "To create a template based on it, send the following request to dojot:"
 msgstr ""
 "Para criar um dispositivo baseado nesse modelo (ID 1), envie a seguinte "
 "requisição para a dojot:"
 
-#: ../../source/using-api-interface.rst:161
+#: ../../source/using-api-interface.rst:163
 msgid ""
 "The template ID list on line 6 contains the only template ID configured "
 "so far. To check out the configured device, just send a GET request to "
@@ -171,15 +171,15 @@ msgstr ""
 "configurado até o momento. Para conferir os dispositivos configurados, "
 "basta enviar uma requisição do tipo GET para /device:"
 
-#: ../../source/using-api-interface.rst:169
+#: ../../source/using-api-interface.rst:171
 msgid "Which should give back:"
 msgstr "Que deve retornar:"
 
-#: ../../source/using-api-interface.rst:215
+#: ../../source/using-api-interface.rst:219
 msgid "Sending messages"
 msgstr "Enviando mensagens"
 
-#: ../../source/using-api-interface.rst:217
+#: ../../source/using-api-interface.rst:221
 msgid ""
 "So far we got an access token and created a template and a device based "
 "on it. In an actual deployment, the physical device would send messages "
@@ -196,7 +196,7 @@ msgstr ""
 "dispositivo físico. Para tal, será utilizado o *mosquito_pub* e "
 "*mosquitto_sub* do projeto `mosquitto`_."
 
-#: ../../source/using-api-interface.rst:222
+#: ../../source/using-api-interface.rst:226
 msgid ""
 "The default message format used by dojot is a simple key-value JSON (you "
 "could translate any message format to this scheme using flows, though), "
@@ -206,29 +206,27 @@ msgstr ""
 "valor\" JSON (é possível traduzir qualquer formato para esse esquema "
 "utilizando fluxos), como abaixo:"
 
-#: ../../source/using-api-interface.rst:233
-#, fuzzy
+#: ../../source/using-api-interface.rst:237
 msgid ""
-"Some Linux distributions, Debian-based Linux distributions in particular,"
-" have two packages for `mosquitto`_ - one containing tools to access it "
-"(i.e. mosquitto_pub and mosquitto_sub for publishing messages and "
-"subscribing to topics) and another one containing the MQTT broker too. In"
-" this tutorial, only the tools from package `mosquitto-clients` on "
-"Debian-based Linux distributions are going to be used. Please check  if "
-"another MQTT broker is not running before starting dojot (by running "
-"commands like ``ps aux | grep mosquitto``) to avoid port conflicts."
+"Some Linux distributions, Debian-based ones in particular, have two "
+"packages for `mosquitto`_ - one containing tools to access it (i.e. "
+"mosquitto_pub and mosquitto_sub for publishing messages and subscribing "
+"to topics) and another one containing the MQTT broker too. In this "
+"tutorial, only the tools from package `mosquitto-clients` on Debian-based"
+" Linux distributions are going to be used. Please check  if another MQTT "
+"broker is not running before starting dojot (by running commands like "
+"``ps aux | grep mosquitto``) to avoid port conflicts."
 msgstr ""
-"Algumas distribuições Linux, distribuições Linux baseadas em Debian em "
-"particular, tem dois pacotes para `mosquitto`_ - um contendo ferramentas "
-"para cliente (ou seja, mosquitto_pub e mosquitto_sub para publicar "
-"mensagens e se subscrever tópicos) e outro contendo um *broker* MQTT "
-"também. E neste tutorial, apenas as ferramentas do pacote `mosquitto-"
-"clients` em Distribuições Linux baseadas no Debian serão usadas. "
-"Verifique se um outro *broker* MQTT não está em execução antes de iniciar"
-" a dojot (executando comandos como ``ps aux | grep mosquitto``) para "
-"evitar conflitos de porta."
+"Algumas distribuições Linux, como as baseadas em Debian, têm dois pacotes "
+"para `mosquitto`_ - um contendo ferramentas para cliente (ou seja, "
+"mosquitto_pub e mosquitto_sub para publicar mensagens e se subscrever em tópicos) e"
+" outro contendo um *broker* MQTT também. Neste tutorial, apenas as "
+"ferramentas do pacote `mosquitto-clients` em Distribuições Linux baseadas no "
+"Debian serão usadas. Verifique se um outro *broker* MQTT não está em "
+"execução antes de iniciar a dojot (executando comandos como ``ps aux | "
+"grep mosquitto``) para evitar conflitos de porta."
 
-#: ../../source/using-api-interface.rst:241
+#: ../../source/using-api-interface.rst:245
 msgid ""
 "For simplicity's sake, we are not using TLS in the examples below. Check "
 ":doc:`mqtt-tls` for more information on its usage."
@@ -237,7 +235,7 @@ msgstr ""
 "Verifique o artigo :doc:`mqtt-tls` para maiores esclarecimentos sobre sua"
 " utilização."
 
-#: ../../source/using-api-interface.rst:245
+#: ../../source/using-api-interface.rst:249
 msgid ""
 "To run `mosquitto_pub` and `mosquitto_sub` without using TLS as in the "
 "examples below, you need to configure some settings (or for how to "
@@ -249,7 +247,7 @@ msgstr ""
 " desativar o modo sem TLS). Para obter mais detalhes sobre este tópico, "
 "consulte a página :ref:`Unsecured mode MQTT`."
 
-#: ../../source/using-api-interface.rst:249
+#: ../../source/using-api-interface.rst:253
 msgid ""
 "As of **v0.5.0**, you can choose the between two MQTT brokers: Mosca or "
 "VerneMQ. By default, VerneMQ is used, but you can use Mosca too. Check "
@@ -260,21 +258,21 @@ msgstr ""
 "utilizar o Mosca também. Verifique o :doc:`../installation-guide` para "
 "mais informações."
 
-#: ../../source/using-api-interface.rst:253
+#: ../../source/using-api-interface.rst:257
 msgid "Using VerneMQ"
 msgstr "Usando o VerneMQ"
 
-#: ../../source/using-api-interface.rst:255
-#: ../../source/using-api-interface.rst:313
+#: ../../source/using-api-interface.rst:259
+#: ../../source/using-api-interface.rst:317
 msgid "Let's send a message to dojot:"
 msgstr "Vamos enviar essa mensagem para a dojot:"
 
-#: ../../source/using-api-interface.rst:262
-#: ../../source/using-api-interface.rst:320
+#: ../../source/using-api-interface.rst:266
+#: ../../source/using-api-interface.rst:324
 msgid "If there is no output, the message was sent to MQTT broker."
 msgstr "Se não houver saída (output), a mensagem foi enviada ao *broker* MQTT."
 
-#: ../../source/using-api-interface.rst:264
+#: ../../source/using-api-interface.rst:268
 msgid ""
 "Note that we sent a message with the parameter ``-q 1``. This means that "
 "the message will use QoS 1, i.e., the message is guaranteed to be sent at"
@@ -284,8 +282,8 @@ msgstr ""
 "significa que a mensagem usará `QoS` 1, i.e., é garantido pelo menos um "
 "envio da mensagem."
 
-#: ../../source/using-api-interface.rst:268
-#: ../../source/using-api-interface.rst:323
+#: ../../source/using-api-interface.rst:272
+#: ../../source/using-api-interface.rst:327
 msgid ""
 "**Also you can send a configuration message from dojot to the device to "
 "change some of its attributes. The target attribute must be of type "
@@ -295,8 +293,8 @@ msgstr ""
 " o dispositivo. O atributo de destino deve ser do tipo “actuator” ou "
 "“atuador”.**"
 
-#: ../../source/using-api-interface.rst:271
-#: ../../source/using-api-interface.rst:326
+#: ../../source/using-api-interface.rst:275
+#: ../../source/using-api-interface.rst:330
 msgid ""
 "To simulate receiving the message on a device, we can use "
 "``mosquitto_sub``:"
@@ -304,13 +302,13 @@ msgstr ""
 "Para simular o recebimento da mensagem em um dispositivo, podemos usar o "
 "``mosquitto_sub``:"
 
-#: ../../source/using-api-interface.rst:277
-#: ../../source/using-api-interface.rst:332
+#: ../../source/using-api-interface.rst:281
+#: ../../source/using-api-interface.rst:336
 msgid "Triggering the sending of the message from the dojot to the device."
 msgstr "Disparando o envio da mensagem da dojot para o dispositivo."
 
-#: ../../source/using-api-interface.rst:288
-#: ../../source/using-api-interface.rst:343
+#: ../../source/using-api-interface.rst:292
+#: ../../source/using-api-interface.rst:347
 msgid ""
 "As noted in the :doc:`../faq/faq`, there are some considerations "
 "regarding MQTT topics:"
@@ -318,7 +316,7 @@ msgstr ""
 "Como descrito no :doc:`../faq/faq`, existem algumas considerações a "
 "respeito dos tópicos MQTT:"
 
-#: ../../source/using-api-interface.rst:290
+#: ../../source/using-api-interface.rst:294
 msgid ""
 "You must set the username that originates the message using the "
 "``username`` MQTT parameter. It should follow the following pattern: "
@@ -330,7 +328,7 @@ msgstr ""
 "``<tenant>:<device-id>``, como ``admin:efac``. Ele deve ser o mesmo que o"
 " colocado no tópico."
 
-#: ../../source/using-api-interface.rst:294
+#: ../../source/using-api-interface.rst:298
 msgid ""
 "The topic to publish messages has the pattern ``<tenant>:<device-"
 "id>/attrs`` (e.g.: ``admin:efac/attrs``)."
@@ -338,7 +336,7 @@ msgstr ""
 "O tópico para publicação deve assumir o padrão ``<tenant>:<device-"
 "id>/attrs`` (por exemplo: ``admin:efac/attrs``)."
 
-#: ../../source/using-api-interface.rst:297
+#: ../../source/using-api-interface.rst:301
 msgid ""
 "The topic to subscribe should has the pattern ``<tenant>:<device-"
 "id>/config`` (e.g.: ``admin:efac/config``)."
@@ -346,20 +344,20 @@ msgstr ""
 "O tópico de subscrição deve assumir o padrão ``<tenant>:<device-"
 "id>/config`` (por exemplo: ``admin:efac/config``)."
 
-#: ../../source/using-api-interface.rst:300
-#: ../../source/using-api-interface.rst:355
+#: ../../source/using-api-interface.rst:304
+#: ../../source/using-api-interface.rst:359
 msgid ""
 "MQTT payload must be a JSON with each key being an attribute of the dojot"
 " device, such as:"
 msgstr ""
-"Os dados da mensagem MQTT (payload) devem ser um JSON com cada chave sendo"
-" um atributo do dispositivo cadastrado na dojot, como:"
+"Os dados da mensagem MQTT (payload) devem ser um JSON com cada chave "
+"sendo um atributo do dispositivo cadastrado na dojot, como:"
 
-#: ../../source/using-api-interface.rst:307
+#: ../../source/using-api-interface.rst:311
 msgid "Using Mosca (legacy)"
 msgstr "Usando o Mosca (legado)"
 
-#: ../../source/using-api-interface.rst:310
+#: ../../source/using-api-interface.rst:314
 msgid ""
 "VerneMQ is the new default MQTT broker. Support for Mosca will be "
 "eventually dropped, so use VerneMQ if possible!"
@@ -367,7 +365,7 @@ msgstr ""
 "VerneMQ é o novo broker MQTT padrão. O suporte ao Mosca será "
 "eventualmente retirado, então use o VerneMQ se possível!"
 
-#: ../../source/using-api-interface.rst:345
+#: ../../source/using-api-interface.rst:349
 msgid ""
 "You can set the device ID that originates the message using the ``client-"
 "id`` MQTT parameter. It should follow the following pattern: ``<tenant"
@@ -377,7 +375,7 @@ msgstr ""
 "parâmetro MQTT ``client-id``. Deve seguir o seguinte padrão: "
 "``<service>:<deviceid>``, como em ``admin:efac``."
 
-#: ../../source/using-api-interface.rst:348
+#: ../../source/using-api-interface.rst:352
 msgid ""
 "If you can't do such thing, then the device should set its ID using the "
 "topic used to publish messages. The topic should assume the pattern "
@@ -388,7 +386,7 @@ msgstr ""
 "tópico deve assumir o padrão ``/<service-id>/<device-id>/attrs`` (e.g.: "
 "``/admin/efac/attrs``)."
 
-#: ../../source/using-api-interface.rst:352
+#: ../../source/using-api-interface.rst:356
 msgid ""
 "The topic to subscribe should assume the pattern ``/<tenant>/<device-"
 "id>/config`` (e.g.: ``/admin/efac/config``)."
@@ -396,15 +394,15 @@ msgstr ""
 "O tópico deve assumir o padrão ``/<service-id>/<device-id>/config`` (por "
 "exemplo: ``/admin/efac/config``)."
 
-#: ../../source/using-api-interface.rst:364
+#: ../../source/using-api-interface.rst:368
 msgid "For the rest of the tutorial we will treat as if you are using VerneMQ."
 msgstr "Consideraremos a utilização de VerneMQ pelo restante do tutorial."
 
-#: ../../source/using-api-interface.rst:367
+#: ../../source/using-api-interface.rst:374
 msgid "Checking historical data"
 msgstr "Conferindo dados históricos"
 
-#: ../../source/using-api-interface.rst:369
+#: ../../source/using-api-interface.rst:376
 msgid ""
 "In order to check all values that were sent from a device for a "
 "particular attribute, you could use the history api, see more in :doc"
@@ -417,17 +415,17 @@ msgstr ""
 "outros valores à dojot para que possamos conseguir resultados um pouco "
 "mais interessantes:"
 
-#: ../../source/using-api-interface.rst:380
+#: ../../source/using-api-interface.rst:387
 msgid "To retrieve all values sent for temperature attribute of this device:"
 msgstr ""
 "Para recuperar todos os valores enviados do atributo ``temperature`` "
 "desse dispositivo:"
 
-#: ../../source/using-api-interface.rst:388
+#: ../../source/using-api-interface.rst:395
 msgid "The history endpoint is built from these values:"
 msgstr "O *endpoint* do histórico é construído por meio desses valores:"
 
-#: ../../source/using-api-interface.rst:390
+#: ../../source/using-api-interface.rst:397
 msgid ""
 "``.../device/0998/...``: the device ID is ``0998`` - this is retrieved "
 "from the ``id`` attribute from the device"
@@ -435,7 +433,7 @@ msgstr ""
 "``.../device/0998/...``: o ID do dispositivo é ``0998`` - isso é obtido "
 "do atributo ``id`` do próprio dispositivo"
 
-#: ../../source/using-api-interface.rst:392
+#: ../../source/using-api-interface.rst:399
 msgid ""
 "``.../history?lastN=3&attr=temperature``: the requested attribute is "
 "temperature and it should get the last 3 values."
@@ -443,13 +441,12 @@ msgstr ""
 "``.../history?lastN=3&attr=temperature``: o atributo requerido é "
 "temperature e deve ser recuperado os 3 últimos valores."
 
-#: ../../source/using-api-interface.rst:395
+#: ../../source/using-api-interface.rst:402
 msgid "The request should result in the following message:"
 msgstr "A requisição deve resultar na seguinte mensagem:"
 
-#: ../../source/using-api-interface.rst:421
+#: ../../source/using-api-interface.rst:428
 msgid "This message contains all previously sent values."
 msgstr ""
 "A mensagem acima contém todos os valores previamente enviados pelo "
 "dispositivo."
-
