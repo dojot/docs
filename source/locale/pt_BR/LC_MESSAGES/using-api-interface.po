@@ -206,7 +206,7 @@ msgstr ""
 "valor\" JSON (é possível traduzir qualquer formato para esse esquema "
 "utilizando fluxos), como abaixo:"
 
-#: ../../source/using-api-interface.rst:233
+#: ../../source/using-api-interface.rst:237
 msgid ""
 "Some Linux distributions, Debian-based ones in particular, have two "
 "packages for `mosquitto`_ - one containing tools to access it (i.e. "
