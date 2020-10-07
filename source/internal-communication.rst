@@ -449,21 +449,6 @@ Such message would be:
         }
     }
 
-If you want to overwrite the date that will be stored in MongoDB, you can send it in the
-`timestamp` parameter, in ISO or UNIX format (both of them accept either seconds and milliseconds
-precision). Payload example:
-
-.. code:: javascript
-
-   {
-      "rain": 10.1,
-      "timestamp": 1601989083000,
-      // Or 2020-10-06T12:58:03.000Z, if you want to use ISO.
-   }
-
-All timestamps will be converted in ISO before being stored in MongoDB, in which you can retrieve
-the messages via the *History* service. The precision is preserved.
-
 
 Persister
 ---------
