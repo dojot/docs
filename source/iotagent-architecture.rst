@@ -15,7 +15,7 @@ Introduction
 
 Using dojot involves dealing with the following entities:
 
-- **physical devices**: devices that sends messages to IoT agents. They
+- **physical devices**: devices that send messages to IoT agents. They
   might have sensors and might be configurable, but this is not mandatory.
   Also, they must have some kind of connectivity to other services so that they
   can send their readings to these services.
@@ -35,7 +35,7 @@ Using dojot involves dealing with the following entities:
    - *topics*: Kafka communication channels that are used to send and receive
      messages between dojot services.
    - *flows*: Sequence of processing blocks that are created by a user or an
-     application and are used to analyze and preprocess data.
+     application and are used to analyze and pre process data.
 - **subjects**: group of topics that share a common message flow. For instance,
   there might be many topics that are used to transmit device data. All of them
   belong to the same subject `device-data`.
@@ -236,7 +236,7 @@ measured quantities. These quantities might include, but are not limited to:
 
 Many other values might be gathered. The list above is the minimum list that an
 IoT agent is expected to expose to other services. Particularly for health
-check, there is a document detailing how expose it.
+check, there is a document detailing how to expose it.
 
 IoT agent operation
 ===================
@@ -472,10 +472,10 @@ physical device to other dojot services. Its format is:
 |                    |   attrs => *device_attrs                          |
 +--------------------+---------------------------------------------------+
 
-The timestamp is associated to when the
-attribute values were gathered by the device (this could be done by the device
-itself or by the IoT agent, if no timestamp was defined by the device).
-The timestamp should be a Unix Timestamp in milliseconds or seconds.
+The timestamp is associated to when the attribute values were gathered by the device (this could be
+done by the device itself - by directly sending the `timestamp` attribute in the message - or by the
+IoT agent, if no timestamp was defined by the device). The timestamp should be in UNIX or ISO
+formats, in milliseconds or seconds.
 
 A sample message received by this topic is:
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dojot 0.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-06 15:56-0300\n"
+"POT-Creation-Date: 2020-10-07 11:00-0300\n"
 "PO-Revision-Date: 2020-10-06 15:36-0300\n"
 "Last-Translator: \n"
 "Language: pt_BR\n"
@@ -535,32 +535,12 @@ msgstr "Estrutura de mensagens do agente IoT"
 msgid "Such message would be:"
 msgstr "Essa mensagem seria:"
 
-#: ../../source/internal-communication.rst:452
-msgid ""
-"If you want to overwrite the date that will be stored in MongoDB, you can"
-" send it in the `timestamp` parameter, in ISO or UNIX format (both of "
-"them accept either seconds and milliseconds precision). Payload example:"
-msgstr ""
-"Se você quiser sobrescrever a data que será armazenada no *MongoDB*, é "
-"possível enviar o atributo `timestamp`, em formato ISO ou UNIX (ambos "
-"aceitam as precisões de segundos e milissegundos). Exemplo de *payload*:"
-
+#: ../../source/internal-communication.rst:454
 #: ../../source/internal-communication.rst:464
-msgid ""
-"All timestamps will be converted in ISO before being stored in MongoDB, "
-"in which you can retrieve the messages via the *History* service. The "
-"precision is preserved."
-msgstr ""
-"Todos os *timestamps* serão convertidos para ISO antes de serem "
-"armazenados no MongoDB, sendo que é possível recuperar as mensagens "
-"por meio do serviço *History*. Sua precisão é preservada."
-
-#: ../../source/internal-communication.rst:469
-#: ../../source/internal-communication.rst:479
 msgid "Persister"
 msgstr ""
 
-#: ../../source/internal-communication.rst:471
+#: ../../source/internal-communication.rst:456
 msgid ""
 "Persister is a very simple service which only purpose is to receive "
 "messages from devices (using ``device-data`` subject) and store them into"
@@ -577,16 +557,16 @@ msgstr ""
 "nova mensagem é recebida, ele cria um novo documento Mongo e o armazena "
 "na coleção do dispositivo."
 
-#: ../../source/internal-communication.rst:492
+#: ../../source/internal-communication.rst:477
 msgid "This service is simple as it is by design."
 msgstr "Este serviço é simples, pois é por design."
 
-#: ../../source/internal-communication.rst:495
-#: ../../source/internal-communication.rst:502
+#: ../../source/internal-communication.rst:480
+#: ../../source/internal-communication.rst:487
 msgid "History"
 msgstr ""
 
-#: ../../source/internal-communication.rst:497
+#: ../../source/internal-communication.rst:482
 msgid ""
 "History is also a very simple service: whenever a user or application "
 "sends a request to it, it will query MongoDB and build a proper message "
@@ -597,11 +577,11 @@ msgstr ""
 "mensagem adequada para enviar de volta ao usuário/aplicativo. Isso é "
 "mostrado na :numref:`History`."
 
-#: ../../source/internal-communication.rst:525
+#: ../../source/internal-communication.rst:510
 msgid "Data Broker"
 msgstr ""
 
-#: ../../source/internal-communication.rst:527
+#: ../../source/internal-communication.rst:512
 msgid ""
 "DataBroker has a few more functionalities than only generating topics for"
 " ``{tenant, subject}`` pairs. It will also serve socket.io connections to"
@@ -628,7 +608,7 @@ msgstr ""
 "uma conexão socket.io com o DataBroker, consulte a documentação da *API* "
 "do DataBroker em :doc:`./components-and-apis`."
 
-#: ../../source/internal-communication.rst:539
+#: ../../source/internal-communication.rst:524
 msgid ""
 "The real time socket.io connections via Data Broker will be discontinued "
 "in future releases. Use `Kafka WS`_ instead."
@@ -636,11 +616,11 @@ msgstr ""
 "As conexões socket.io em tempo real via Data Broker serão descontinuadas "
 "em versões futuras. Use o `Kafka WS`_ ao invés dele."
 
-#: ../../source/internal-communication.rst:543
+#: ../../source/internal-communication.rst:528
 msgid "Certificate authority"
 msgstr "Autoridade Certificadora"
 
-#: ../../source/internal-communication.rst:545
+#: ../../source/internal-communication.rst:530
 msgid ""
 "The dojot has an internal *Certificate Authority* (`CA`_) capable of "
 "issuing x.509 certificates so that devices can communicate with the "
@@ -663,11 +643,11 @@ msgstr ""
 "-identity-mgmt` é responsável por oferecer os serviços relacionados a "
 "certificados para dispositivos."
 
-#: ../../source/internal-communication.rst:558
+#: ../../source/internal-communication.rst:543
 msgid "Kafka WS"
 msgstr ""
 
-#: ../../source/internal-communication.rst:560
+#: ../../source/internal-communication.rst:545
 msgid ""
 "The *Kafka WS* service allows users to retrieve conditional and/or "
 "partial real time data from a given dojot topic in a Kafka cluster. It "
@@ -680,11 +660,11 @@ msgstr ""
 "você possa criar clientes de websocket em qualquer linguagem que você "
 "quiser, desde que eles suportem RFC 6455."
 
-#: ../../source/internal-communication.rst:566
+#: ../../source/internal-communication.rst:551
 msgid "Connecting to the service"
 msgstr "Conectando com o serviço"
 
-#: ../../source/internal-communication.rst:568
+#: ../../source/internal-communication.rst:553
 msgid ""
 "The connection is done in two steps: you must first obtain a single-use "
 "ticket through a HTTP request, then connect to the service via websocket "
@@ -694,11 +674,11 @@ msgstr ""
 "uso único via requisição HTTP, e depois o cliente se conecta ao serviço "
 "via websocket passando-o como parâmetro."
 
-#: ../../source/internal-communication.rst:573
+#: ../../source/internal-communication.rst:558
 msgid "First step: Get the single-use ticket"
 msgstr "Primeiro passo: obter um ticket de uso único"
 
-#: ../../source/internal-communication.rst:574
+#: ../../source/internal-communication.rst:559
 msgid ""
 "A ticket allows the user to subscribe to a dojot topic. To obtain it is "
 "necessary to have a JWT access token that is issued by the platform's "
@@ -714,27 +694,27 @@ msgstr ""
 ">/kafka-ws/v1/ticket`. A requisição deve ter o cabeçalho `Authorization` "
 "com o token JWT obtido anteriormente como valor. Exemplo:  "
 
-#: ../../source/internal-communication.rst:580
+#: ../../source/internal-communication.rst:565
 msgid "`GET <base-url>/kafka-ws/v1/ticket`"
 msgstr ""
 
-#: ../../source/internal-communication.rst:581
+#: ../../source/internal-communication.rst:566
 msgid "`Authorization: Bearer [Encoded JWT]`"
 msgstr ""
 
-#: ../../source/internal-communication.rst:583
+#: ../../source/internal-communication.rst:568
 msgid "The component responds with the following syntax:"
 msgstr "O componente responde com a seguinte sintaxe:"
 
-#: ../../source/internal-communication.rst:585
+#: ../../source/internal-communication.rst:570
 msgid "`HTTP/1.1 200 OK`"
 msgstr ""
 
-#: ../../source/internal-communication.rst:586
+#: ../../source/internal-communication.rst:571
 msgid "`Content-type: application/json`"
 msgstr ""
 
-#: ../../source/internal-communication.rst:593
+#: ../../source/internal-communication.rst:578
 msgid ""
 "Note: In the context of a dojot deployment the JWT Token is provided by "
 "the Auth service, and is validated by the API Gateway before redirecting "
@@ -746,11 +726,11 @@ msgstr ""
 "redirecionar a conexão para o *Kafka WS.* Portanto, nenhuma validação é "
 "feita pelo Kafka WS."
 
-#: ../../source/internal-communication.rst:598
+#: ../../source/internal-communication.rst:583
 msgid "Second step: Establish a websocket connection"
 msgstr "Segundo passo: Estabelecer a conexão websocket"
 
-#: ../../source/internal-communication.rst:599
+#: ../../source/internal-communication.rst:584
 msgid ""
 "The connection is done via pure websockets using the URI `<base-url"
 ">/kafka-ws/v1/topics/:topic`. You must pass the previously generated "
@@ -762,11 +742,11 @@ msgstr ""
 " parâmetro para esta URI. Também é possivel passar opções e filtros "
 "condicionais como parâmetros para esta URI."
 
-#: ../../source/internal-communication.rst:604
+#: ../../source/internal-communication.rst:589
 msgid "Behavior when requesting a ticket and a websocket connection"
 msgstr "Comportamento ao solicitar um ticket e uma conexão websocket"
 
-#: ../../source/internal-communication.rst:606
+#: ../../source/internal-communication.rst:591
 msgid ""
 "Below we can understand the behavior of the Kafka WS service when a user "
 "(through an `user agent`_) requests a ticket in order to establish a "
@@ -776,7 +756,7 @@ msgstr ""
 "usuário (por meio de um `user agent`_) solicita um ticket para "
 "estabelecer uma comunicação via websocket com Kafka WS."
 
-#: ../../source/internal-communication.rst:610
+#: ../../source/internal-communication.rst:595
 msgid ""
 "Note that when the user requests a new ticket, Kafka WS extracts some "
 "information from the *user's access token* (`JWT`_) and generates a "
@@ -796,7 +776,7 @@ msgstr ""
 "deve usar o ticket dentro do tempo estabelecido, caso contrário, o Redis "
 "apaga automaticamente o ticket e o payload."
 
-#: ../../source/internal-communication.rst:618
+#: ../../source/internal-communication.rst:603
 msgid ""
 "After obtaining the ticket, the user makes an HTTP request to Kafka WS "
 "requesting an upgrade to communicate via *websocket*. As the "
@@ -810,7 +790,7 @@ msgstr ""
 "adicionais, é necessário enviar o ticket pela URL, para que possa ser "
 "validado pelo Kafka WS antes de autorizar o upgrade."
 
-#: ../../source/internal-communication.rst:624
+#: ../../source/internal-communication.rst:609
 msgid ""
 "Since the ticket is valid, that is, it corresponds to an entry on Redis, "
 "Kafka WS retrieves the payload related to the ticket, verifies the "
@@ -822,7 +802,7 @@ msgstr ""
 "integridade e exclui essa entrada no Redis para que o ticket não possa "
 "ser usado novamente."
 
-#: ../../source/internal-communication.rst:629
+#: ../../source/internal-communication.rst:614
 msgid ""
 "With the payload it is possible to make the decision to authorize the "
 "upgrade to websocket or not. If authorization is granted, Kafka WS opens "
@@ -836,7 +816,6 @@ msgstr ""
 "*upgrade* para websocket é estabelecido e o usuário começa a receber os "
 "dados à medida que vão sendo publicados no Kafka."
 
-#: ../../source/internal-communication.rst:635
+#: ../../source/internal-communication.rst:620
 msgid "Obtaining a ticket and connecting via websocket"
 msgstr "Obtenção de ticket e conexão via websocket"
-
