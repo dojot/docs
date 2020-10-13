@@ -56,7 +56,7 @@ Docker compose
     src="https://www.youtube.com/embed/aZ-Wtcd_Ydw?rel=0" frameborder="0"
     allowfullscreen></iframe><br/>
 
-In this video tutorial above, version v0.4.2 is used, but the same video is valid for the current version, it is only necessary to change to version v0.4.3.
+In this video tutorial above, version v0.4.2 is used, but the same video is valid for the current version, it is only necessary to change to version v0.4.4.
 
 This document provides instructions on how to create a trivial deployment
 environment on single host for *dojot*, using docker-compose as the processes
@@ -126,7 +126,7 @@ replaced): ::
 
 For instance: ::
 
-  git checkout v0.4.3 -b v0.4.3
+  git checkout v0.4.4 -b v0.4.4
 
 
 That done, the environment can be brought up by: ::
@@ -171,7 +171,7 @@ Kubernetes
     <iframe id="ytplayer" type="text/html" width="720" height="405"
     src="https://www.youtube.com/embed/qGUlBCmmIao?rel=0" frameborder="0"
     allowfullscreen></iframe>
-In this video tutorial above, version v0.4.2 is used, but the same video is valid for the current version, it is only necessary to change to version v0.4.3
+In this video tutorial above, version v0.4.2 is used, but the same video is valid for the current version, it is only necessary to change to version v0.4.4
 
 
 This section provides instructions on how to create a dojot deployment
@@ -219,7 +219,7 @@ its playbooks.
 The first deployment step is cloning the repository. To do so,
 execute the command: ::
 
-  git clone -b v0.4.3 https://github.com/dojot/ansible-dojot
+  git clone -b v0.4.4 https://github.com/dojot/ansible-dojot
 
 2. Installing dependencies
 ..........................

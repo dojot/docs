@@ -221,7 +221,7 @@ A certificate file can be in two formats: PEM (base64 text) or DER
 
 .. _EJBCA: https://www.ejbca.org
 .. _Mosca repository: https://github.com/mcollina/mosca
-.. _Certificate Retriever GitHub repository: https://github.com/dojot/certificate-retriever/tree/v0.4.3
-.. _IotAgent-Mosca: https://github.com/dojot/iotagent-mosca/tree/v0.4.3
-.. _EJBCA-Rest: https://github.com/dojot/ejbca-rest/tree/v0.4.3
+.. _Certificate Retriever GitHub repository: https://github.com/dojot/certificate-retriever/tree/v0.4.4
+.. _IotAgent-Mosca: https://github.com/dojot/iotagent-mosca/tree/v0.4.4
+.. _EJBCA-Rest: https://github.com/dojot/ejbca-rest/tree/v0.4.4
 .. _mosquitto: https://projects.eclipse.org/projects/technology.mosquitto

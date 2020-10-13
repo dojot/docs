@@ -326,41 +326,41 @@ dojot.
 
 
 .. _GitHub - auth: https://github.com/dojot/auth
-.. _API - auth: https://dojot.github.io/auth/apiary_v0.4.3.html
+.. _API - auth: https://dojot.github.io/auth/apiary_v0.4.4.html
 .. _Auth  doc.: http://dojotdocs.readthedocs.io/projects/auth/en/latest/
 .. _Messages - auth: https://dojotdocs.readthedocs.io/projects/auth/en/latest/kafka-messages.html
 
 .. _GitHub - history: https://github.com/dojot/history
-.. _API - history: https://dojot.github.io/history/apiary_v0.4.3.html
+.. _API - history: https://dojot.github.io/history/apiary_v0.4.4.html
 
 
 .. _GitHub - DeviceManager: https://github.com/dojot/device-manager
-.. _API - DeviceManager: https://dojot.github.io/device-manager/apiary_v0.4.3.html
+.. _API - DeviceManager: https://dojot.github.io/device-manager/apiary_v0.4.4.html
 .. _DeviceManager doc.: http://dojotdocs.readthedocs.io/projects/DeviceManager/en/latest/
 .. _Messages - DeviceManager: http://dojotdocs.readthedocs.io/projects/DeviceManager/en/latest/kafka-messages.html
 
 .. _GitHub - image-manager: https://github.com/dojot/image-manager
-.. _API - image-manager: https://dojot.github.io/image-manager/apiary_v0.4.3.html
+.. _API - image-manager: https://dojot.github.io/image-manager/apiary_v0.4.4.html
 
 
 .. _GitHub - GUI: https://github.com/dojot/gui
 
 
 .. _GitHub - flowbroker: https://github.com/dojot/flowbroker
-.. _API - flowbroker: https://dojot.github.io/flowbroker/apiary_v0.4.3.html
+.. _API - flowbroker: https://dojot.github.io/flowbroker/apiary_v0.4.4.html
 
 .. _GitHub - data-broker: https://github.com/dojot/data-broker
-.. _API - data-broker: https://dojot.github.io/data-broker/apiary_v0.4.3.html
+.. _API - data-broker: https://dojot.github.io/data-broker/apiary_v0.4.4.html
 
 .. _Messages - iotagent-mosca: http://dojotdocs.readthedocs.io/projects/iotagent-mosca/en/latest/operation.html#sending-messages-to-other-components-via-kafka
 .. _GitHub - iotagent-mosca: https://github.com/dojot/iotagent-mosca
 
 .. _GitHub - EJBCA-REST: https://github.com/dojot/ejbca-rest
-.. _API - EJBCA-REST: https://dojot.github.io/ejbca-rest/apiary_v0.4.3.html
+.. _API - EJBCA-REST: https://dojot.github.io/ejbca-rest/apiary_v0.4.4.html
 
 .. _GitHub - Data Manager: https://github.com/dojot/data-manager
-.. _API - Data Manager: https://dojot.github.io/data-manager/apiary_v0.4.3.html
+.. _API - Data Manager: https://dojot.github.io/data-manager/apiary_v0.4.4.html
 
 .. _GitHub - Cron: https://github.com/dojot/cron
-.. _API - Cron: https://dojot.github.io/cron/apiary_v0.4.3.html
+.. _API - Cron: https://dojot.github.io/cron/apiary_v0.4.4.html
 

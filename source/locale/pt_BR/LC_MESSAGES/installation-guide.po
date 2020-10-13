@@ -147,8 +147,8 @@ msgstr "Docker-compose"
 msgid ""
 "In this video tutorial above, version v0.4.2 is used, but the same video "
 "is valid for the current version, it is only necessary to change to "
-"version v0.4.3."
-msgstr "Neste video tutorial acima é utilizada a versão v0.4.2, mas o mesmo video é válido para a versão atual, apenas é necessário mudar pra a versão v0.4.3"
+"version v0.4.4."
+msgstr "Neste video tutorial acima é utilizada a versão v0.4.2, mas o mesmo video é válido para a versão atual, apenas é necessário mudar para a versão v0.4.4"
 
 #: ../../source/installation-guide.rst:61
 msgid ""
@@ -338,8 +338,8 @@ msgstr "Kubernetes"
 msgid ""
 "In this video tutorial above, version v0.4.2 is used, but the same video "
 "is valid for the current version, it is only necessary to change to "
-"version v0.4.3"
-msgstr "Neste video tutorial acima é utilizada a versão v0.4.2, mas o mesmo video é válido para a versão atual, apenas é necessário mudar pra a versão v0.4.3"
+"version v0.4.4"
+msgstr "Neste video tutorial acima é utilizada a versão v0.4.2, mas o mesmo video é válido para a versão atual, apenas é necessário mudar para a versão v0.4.4"
 
 #: ../../source/installation-guide.rst:177
 msgid ""
