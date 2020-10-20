@@ -144,6 +144,11 @@ See more about how using APIs in :doc:`./using-api-interface`.
      - /
      -
      - No
+   * - Dashboard
+     - /v2
+     - /
+     -
+     - No
    * - Device Manager
      - /device
      - /device
@@ -260,6 +265,9 @@ TCP port 8000), see the following table.
    * - GUI
      - host:80/
      - host:8000/
+   * - Dashboard 
+     - host:80/
+     - host:8000/v2
    * - Device Manager
      - host:5000/device
      - host:8000/device
