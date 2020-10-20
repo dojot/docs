@@ -49,19 +49,15 @@ Components
     -
   * - Auth
     - `GitHub - auth`_
-    -
+    - `Auth  doc.`_
     - `API - auth`_
-  * - Dojot Kong
-    - `GitHub - Dojot Kong`_
-    -
-    -
   * - History
     - `GitHub - history`_
     -
     - `API - history`_
   * - Device Manager
     - `GitHub - DeviceManager`_
-    -
+    - `DeviceManager doc.`_
     - `API - DeviceManager`_
   * - Image Manager
     - `GitHub - image-manager`_
@@ -110,10 +106,6 @@ Components
     - `GitHub - Kafka2Ftp`_
     -
     -
-  * - Kafka WS
-    - `GitHub - Kafka WS`_
-    -
-    - `API - kafka-ws`_
 
 
 Exposed APIs (API Gateway)
@@ -141,6 +133,11 @@ See more about how using APIs in :doc:`./using-api-interface`.
        | Authentication
    * - GUI
      - /
+     - /
+     -
+     - No
+   * - Dashboard
+     - /v2
      - /
      -
      - No
@@ -233,16 +230,6 @@ See more about how using APIs in :doc:`./using-api-interface`.
      - **/api/v1**
      - `API - x509-identity-mgmt`_
      - Yes
-   * - Kafka WS
-     - **/kafka-ws/v1/ticket**
-     -  /v1/ticket
-     -
-     - Yes
-   * - Kafka WS
-     - **/kafka-ws/v1**
-     - /v1
-     -
-     - No
 
 **NOTE: Some of the components' endpoints aren't exposed, but are used internally.**
 
@@ -311,14 +298,6 @@ TCP port 8000), see the following table.
    * - X.509 Identity Management
      - host:3000/api/v1
      - host:8000/x509/v1
-   * - Kafka WS
-     - host:8080/v1/ticket
-     - host:8000/kafka-ws/v1/ticket
-   * - Kafka WS
-     - host:8080/v1/topics
-     - host:8000/kafka-ws/v1/topics
-
-     
 
 Kafka messages
 --------------
@@ -349,7 +328,7 @@ dojot.
 .. _PostgreSQL doc.: https://www.postgresql.org/docs/
 .. _PostgreSQL site: https://www.postgresql.org
 .. _Kong site: https://konghq.com/kong-community-edition/
-.. _Kong doc.: https://docs.konghq.com/2.0.x/
+.. _Kong doc.: https://getkong.org/docs/
 .. _Redis site: https://redis.io/
 .. _Redis doc.: https://redis.io/documentation
 .. _Zookeeper site: https://zookeeper.apache.org/
@@ -363,9 +342,8 @@ dojot.
 
 .. _GitHub - auth: https://github.com/dojot/auth/tree/v0.5.0
 .. _API - auth: https://dojot.github.io/auth/apiary_v0.5.0.html
-.. _Messages - auth: https://github.com/dojot/auth/tree/v0.5.0#kafka-messages
-
-.. _GitHub - Dojot Kong: https://github.com/dojot/kong/tree/v0.5.0
+.. _Auth  doc.: http://dojotdocs.readthedocs.io/projects/auth/en/latest/
+.. _Messages - auth: https://dojotdocs.readthedocs.io/projects/auth/en/latest/kafka-messages.html
 
 .. _GitHub - history: https://github.com/dojot/history/tree/v0.5.0
 .. _API - history: https://dojot.github.io/history/apiary_v0.5.0.html
@@ -373,7 +351,8 @@ dojot.
 
 .. _GitHub - DeviceManager: https://github.com/dojot/device-manager/tree/v0.5.0
 .. _API - DeviceManager: https://dojot.github.io/device-manager/apiary_v0.5.0.html
-.. _Messages - DeviceManager: https://github.com/dojot/device-manager/tree/v0.5.0#events
+.. _DeviceManager doc.: http://dojotdocs.readthedocs.io/projects/DeviceManager/en/latest/
+.. _Messages - DeviceManager: http://dojotdocs.readthedocs.io/projects/DeviceManager/en/latest/kafka-messages.html
 
 .. _GitHub - image-manager: https://github.com/dojot/image-manager/tree/v0.5.0
 .. _API - image-manager: https://dojot.github.io/image-manager/apiary_v0.5.0.html
@@ -406,6 +385,3 @@ dojot.
 .. _API - x509-identity-mgmt: https://dojot.github.io/dojot/x509-identity-mgmt/apiary_v0.5.0.html
 
 .. _GitHub - Kafka2Ftp: https://github.com/dojot/dojot/tree/v0.5.0/connector/kafka2ftp
-
-.. _GitHub - Kafka WS: https://github.com/dojot/dojot/tree/v0.5.0/subscription-engine/kafka-ws
-.. _API - kafka-ws: https://dojot.github.io/dojot/kafka-ws/apiary_v0.5.0.html
