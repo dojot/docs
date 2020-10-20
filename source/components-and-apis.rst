@@ -71,6 +71,10 @@ Components
     - `GitHub - GUI`_
     -
     -
+  * - Dashboard
+    - `GitHub - V2`_
+    -
+    - 
   * - Flowbroker
     - `GitHub - flowbroker`_
     -
@@ -417,3 +421,5 @@ dojot.
 
 .. _GitHub - Kafka WS: https://github.com/dojot/dojot/tree/v0.5.0/subscription-engine/kafka-ws
 .. _API - kafka-ws: https://dojot.github.io/dojot/kafka-ws/apiary_v0.5.0.html
+
+.. _GitHub - V2: https://github.com/dojot/gui-v2
