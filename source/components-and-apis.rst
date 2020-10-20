@@ -71,7 +71,7 @@ Components
     - `GitHub - GUI`_
     -
     -
-  * - Dashboard
+  * - Gui-v2
     - `GitHub - V2`_
     -
     - 

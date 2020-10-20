@@ -412,7 +412,7 @@ msgstr ""
 
 #: ../../source/components-and-apis.rst:133
 msgid "Exposed endpoints"
-msgstr ""
+msgstr "Endpoints expostos"
 
 #: ../../source/components-and-apis.rst
 msgid "Exposed endpoint"
@@ -424,7 +424,7 @@ msgstr ""
 
 #: ../../source/components-and-apis.rst
 msgid "Endpoint"
-msgstr "*Gateway Endpoint*"
+msgstr "*Endpoint*"
 
 #: ../../source/components-and-apis.rst
 msgid "Needs"
@@ -432,7 +432,7 @@ msgstr ""
 
 #: ../../source/components-and-apis.rst
 msgid "Authentication"
-msgstr "Documentação"
+msgstr "Autenticação"
 
 #: ../../source/components-and-apis.rst:147
 #: ../../source/components-and-apis.rst:148
@@ -451,7 +451,7 @@ msgstr ""
 #: ../../source/components-and-apis.rst:239
 #: ../../source/components-and-apis.rst:254
 msgid "No"
-msgstr ""
+msgstr "Não"
 
 #: ../../source/components-and-apis.rst:152
 msgid "/v2"
@@ -478,7 +478,7 @@ msgstr ""
 #: ../../source/components-and-apis.rst:244
 #: ../../source/components-and-apis.rst:249
 msgid "Yes"
-msgstr ""
+msgstr "Sim"
 
 #: ../../source/components-and-apis.rst:162
 #: ../../source/components-and-apis.rst:163
