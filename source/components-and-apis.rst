@@ -71,6 +71,10 @@ Components
     - `GitHub - GUI`_
     -
     -
+  * - GUI - V2
+    - `GitHub - V2`_
+    -
+    - 
   * - Flowbroker
     - `GitHub - flowbroker`_
     -
@@ -141,6 +145,11 @@ See more about how using APIs in :doc:`./using-api-interface`.
        | Authentication
    * - GUI
      - /
+     - /
+     -
+     - No
+   * - Dashboard
+     - /v2
      - /
      -
      - No
@@ -260,6 +269,9 @@ TCP port 8000), see the following table.
    * - GUI
      - host:80/
      - host:8000/
+   * - Dashboard 
+     - host:80/
+     - host:8000/v2
    * - Device Manager
      - host:5000/device
      - host:8000/device
@@ -409,3 +421,5 @@ dojot.
 
 .. _GitHub - Kafka WS: https://github.com/dojot/dojot/tree/v0.5.0/subscription-engine/kafka-ws
 .. _API - kafka-ws: https://dojot.github.io/dojot/kafka-ws/apiary_v0.5.0.html
+
+.. _GitHub - V2: https://github.com/dojot/gui-v2/tree/v0.5.0
