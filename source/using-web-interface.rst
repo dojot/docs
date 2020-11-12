@@ -189,7 +189,7 @@ Firmware update
 ---------------
 
 During the lifetime of a device, you may need to update control software (firmware) to correct some issues you encounter while using it, or even add new features.
-dojot currently supports the firmware upgrade procedure via the LwM2M communication protocol. For details regarding the procedure for integrating with your device please check the LwM2M protocol specification. If your device communicates via this protocol and has the firmware update procedure in place, you can follow the steps below to update your device version.
+Dojot currently supports the firmware upgrade procedure via the LwM2M communication protocol. For details regarding the procedure for integrating with your device please check the LwM2M protocol specification. If your device communicates via this protocol and has the firmware update procedure in place, you can follow the steps below to update your device version.
 
 The firmware upgrade process consists of three steps:
 

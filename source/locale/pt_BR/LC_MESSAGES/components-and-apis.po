@@ -409,16 +409,16 @@ msgstr ""
 "APIs em :doc:`./using-api-interface`."
 
 #: ../../source/components-and-apis.rst:133
-msgid "Exposed endpoints"
-msgstr "Endpoints expostos"
+msgid "*Exposed* endpoints"
+msgstr "*Endpoints* expostos"
 
 #: ../../source/components-and-apis.rst
 msgid "Exposed endpoint"
-msgstr ""
+msgstr "Endpoints expostos"
 
 #: ../../source/components-and-apis.rst
 msgid "by the API gateway"
-msgstr ""
+msgstr "pelo API *gateway*"
 
 #: ../../source/components-and-apis.rst
 msgid "Endpoint"
@@ -426,7 +426,7 @@ msgstr "*Endpoint*"
 
 #: ../../source/components-and-apis.rst
 msgid "Needs"
-msgstr ""
+msgstr "Precisa de"
 
 #: ../../source/components-and-apis.rst
 msgid "Authentication"
