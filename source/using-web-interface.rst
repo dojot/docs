@@ -199,7 +199,7 @@ The firmware upgrade process consists of three steps:
 
 The details of their implementation are as follows.
 
-In order to enable the firmware management you must create a template and, once saved, enable the firmware manager. After that, you can upload the firmware images to the Dojot repository that are associated with this template. Attention: the image extension must be ".hex".
+In order to enable the firmware management you must create a template and, once saved, enable the firmware manager. After that, you can upload the firmware images to the dojot repository that are associated with this template. Attention: the image extension must be ".hex".
 
 .. raw:: html
 
@@ -249,6 +249,9 @@ Generating certificates for devices
 
 This section will show how to generate x509 certificates for a device, so that dojot can communicate with devices securely via TLS. To be able to send a publication, it is necessary to download the three files, the private key "admin 4302d4.key", the device certificate "admin 4302d4.crt" and the CA certificate "ca.crt".
 
+.. attention::
+    The generation of certificates via the graphical interface (GUI) only works in deployments where it is possible to access the GUI via *HTTPS* or *localhost*.
+
 To be able to execute the command of the example video it is necessary to be in the same directory as the 3 files attached. Command used in the example:
 
 .. code:: bash
@@ -277,6 +280,14 @@ This section will demonstrate how to generate a device history report. The repor
     src="https://www.youtube.com/embed/G1ZFfCLUT6A?rel=0" frameborder="0"
     allowfullscreen></iframe>
 
+Performing access to the Dashboard
+--------------------------------
+
+The dashboard is part of GUI-V2, to access it you need to use another URL, in the current version just add to the end of the URL “/v2” in relation to the interface used in the previous items, for example, in the case of localhost it would be http://localhost:8000/v2, see more at :doc:`components-and-apis`.
+The login and password credentials are the same as those used in the rest of dojot. After logging in, a new screen will open and an ``ADD`` button will appear in the upper right corner, which will give you the options for various types of viewing. At this moment, the parameters will be configured, in the first “General” screen it will be necessary to add a name for the visualization and optionally a description.
+The list of devices will appear on the next screen, if you do not find the desired device, you can search by name. After selecting the device, the attributes that are linked to it will be listed, and a color can be chosen to display each attribute, it is also possible to add a caption for each attribute.
+In “retrieve records by:“ it will be possible to configure some filters, you can select the type of historical data filter as the “last records”, in “order” (minute, hours, days and months), and you can also choose an interval time, in addition you can still view the records in “Real time”, as new data is received they will be displayed in the chosen view. After everything is configured, a summary will be shown with the chosen name and attributes.
+When accessing the views, it will be possible to change the size, fix (which will disable the option to change the size) and still delete the views.
 
 
 .. _LwM2M: https://openmobilealliance.org/release/LightweightM2M/V1_1-20180710-A/OMA-TS-LightweightM2M_Core-V1_1-20180710-A.pdf
