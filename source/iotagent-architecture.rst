@@ -79,8 +79,8 @@ agent and they are categorized in the following groups:
    detect device liveness.
 
    An extra feature that an IoT agent might implement is firmware updates.
-   Depending on is underlying protocol, it might be possible to do such thing
-   in a easy, secure and reliable way.
+   Depending on its underlying protocol, it might be possible to do such thing
+   in an easy, secure and reliable way.
 
 Each one of these groups is going to be detailed in the following sections.
 
