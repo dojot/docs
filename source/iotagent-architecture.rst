@@ -520,5 +520,5 @@ to facilitate the development of an IotAgent.
 
 There are two libraries:
 
- - node.js **recommended** (https://www.npmjs.com/package/@dojot/microservice-sdk)
+ - node.js **recommended** (https://www.npmjs.com/package/@dojot/iotagent-nodejs)
  - java (https://jitpack.io/#dojot/iotagent-java)
