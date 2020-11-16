@@ -224,7 +224,7 @@ msgstr ""
 #: ../../source/iotagent-architecture.rst:81
 msgid ""
 "An extra feature that an IoT agent might implement is firmware updates. "
-"Depending on is underlying protocol, it might be possible to do such thing in a "
+"Depending on its underlying protocol, it might be possible to do such thing in an "
 "easy, secure and reliable way."
 msgstr ""
 "Um recurso extra que um agente IoT pode implementar são as atualizações de "
@@ -881,7 +881,7 @@ msgstr "Bibliotecas para auxiliar no desenvolvimento de novos agentes IoT"
 
 #: ../../source/iotagent-architecture.rst:518
 msgid ""
-"We have libraries that abstract some points describe in previous topics to "
+"We have libraries that abstract some points described in previous topics to "
 "facilitate the development of an IotAgent."
 msgstr ""
 "Temos bibliotecas que abstraem alguns pontos descritos nos tópicos anteriores "
@@ -898,5 +898,5 @@ msgstr ""
 "node.js **recomendada** (https://www.npmjs.com/package/@dojot/iotagent-nodejs)"
 
 #: ../../source/iotagent-architecture.rst:524
-msgid "java (https://github.com/dojot/iotagent-java)"
+msgid "java (https://jitpack.io/#dojot/iotagent-java)"
 msgstr ""
