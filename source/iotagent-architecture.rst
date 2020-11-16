@@ -515,14 +515,10 @@ and vice-versa.
 Libraries to assist the development of new IotAgents
 ====================================================
 
-We have libraries that abstract some points describe in previous topics
+We have libraries that abstract some points described in previous topics
 to facilitate the development of an IotAgent.
 
 There are two libraries:
 
- - node.js **recommended** (https://www.npmjs.com/package/@dojot/iotagent-nodejs)
- - java (https://github.com/dojot/iotagent-java)
-
-
-
-
+ - node.js **recommended** (https://www.npmjs.com/package/@dojot/microservice-sdk)
+ - java (https://jitpack.io/#dojot/iotagent-java)
