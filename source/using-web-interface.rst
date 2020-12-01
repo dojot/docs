@@ -261,7 +261,7 @@ To be able to execute the command of the example video it is necessary to be in 
 .. raw:: html
 
     <iframe id="ytplayer" type="text/html" width="720" height="405"
-    src="https://www.youtube.com/embed/G1ZFfCLUT6A?rel=0" frameborder="0"
+    src="https://www.youtube.com/embed/Tfp5xxMCEp8?rel=0" frameborder="0"
     allowfullscreen></iframe>
 
 
@@ -277,7 +277,7 @@ This section will demonstrate how to generate a device history report. The repor
 .. raw:: html
 
     <iframe id="ytplayer" type="text/html" width="720" height="405"
-    src="https://www.youtube.com/embed/G1ZFfCLUT6A?rel=0" frameborder="0"
+    src="https://www.youtube.com/embed/ZMhfwEocTDE?rel=0" frameborder="0"
     allowfullscreen></iframe>
 
 Performing access to the Dashboard
@@ -288,6 +288,12 @@ The login and password credentials are the same as those used in the rest of doj
 The list of devices will appear on the next screen, if you do not find the desired device, you can search by name. After selecting the device, the attributes that are linked to it will be listed, and a color can be chosen to display each attribute, it is also possible to add a caption for each attribute.
 In “retrieve records by:“ it will be possible to configure some filters, you can select the type of historical data filter as the “last records”, in “order” (minute, hours, days and months), and you can also choose an interval time, in addition you can still view the records in “Real time”, as new data is received they will be displayed in the chosen view. After everything is configured, a summary will be shown with the chosen name and attributes.
 When accessing the views, it will be possible to change the size, fix (which will disable the option to change the size) and still delete the views.
+
+.. raw:: html
+
+    <iframe id="ytplayer" type="text/html" width="720" height="405"
+    src="https://www.youtube.com/embed/UR-KcG1EFwU?rel=0" frameborder="0"
+    allowfullscreen></iframe>
 
 
 .. _LwM2M: https://openmobilealliance.org/release/LightweightM2M/V1_1-20180710-A/OMA-TS-LightweightM2M_Core-V1_1-20180710-A.pdf
