@@ -7,17 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dojot 0.4.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-09 10:39-0300\n"
-"PO-Revision-Date: 2020-09-09 10:42-0300\n"
+"POT-Creation-Date: 2020-12-08 21:12-0300\n"
+"PO-Revision-Date: 2020-12-08 21:10-0300\n"
 "Last-Translator: \n"
 "Language: pt_BR\n"
 "Language-Team: \n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.8.0\n"
-"X-Generator: Poedit 2.0.6\n"
+"Generated-By: Babel 2.9.0\n"
 
 #: ../../source/load-testing-dojot-platform.rst:2
 msgid "Load testing Dojot platform"
@@ -33,11 +32,11 @@ msgstr ""
 
 #: ../../source/load-testing-dojot-platform.rst:7
 msgid ""
-"Locust was created to work with VerneMQ. Tests with Mosca are not guaranteed "
-"to work."
+"Locust was created to work with VerneMQ. Tests with Mosca are not "
+"guaranteed to work."
 msgstr ""
-"A implementação do Locust foi feita para realizar testes com o VerneMQ. Testes "
-"com o Mosca não têm garantia de funcionamento."
+"A implementação do Locust foi feita para realizar testes com o VerneMQ. "
+"Testes com o Mosca não têm garantia de funcionamento."
 
 #: ../../source/load-testing-dojot-platform.rst:11
 msgid "Table of Contents"
@@ -49,19 +48,17 @@ msgstr "Preparando o ambiente"
 
 #: ../../source/load-testing-dojot-platform.rst:16
 msgid ""
-"First of all, you will need a running dojot environment. Check the :doc:`./"
-"installation-guide` for more info."
+"First of all, you will need a running dojot environment. Check the :doc"
+":`./installation-guide` for more info."
 msgstr ""
-"Primeiramente, você precisa de um ambiente dojot rodando. Verifique o :doc:`./"
-"installation-guide` para mais informações."
+"Primeiramente, você precisa de um ambiente dojot rodando. Verifique o "
+":doc:`./installation-guide` para mais informações."
 
 #: ../../source/load-testing-dojot-platform.rst:19
 msgid ""
-"Download dojot's Locust implementation in your machine directly from dojot's "
-"repository and change to the corresponding version of your dojot environment:"
+"To access the Locust implementation, download the dojot repository on "
+"your machine and switch to the same version as your current environment:"
 msgstr ""
-"Baixe o Locust do repositório da dojot na sua máquina e mude para a versão "
-"correspondente ao seu ambiente:"
 
 #: ../../source/load-testing-dojot-platform.rst:28
 msgid "Enter in Locust directory:"
@@ -72,698 +69,759 @@ msgid "Running a simple test"
 msgstr "Rodando um teste simples"
 
 #: ../../source/load-testing-dojot-platform.rst:38
+#, fuzzy
 msgid ""
-"In this section, will be shown how to configure and run Locust and generate "
-"certs script in order to execute the load test. This is a simple test where "
-"will be created 100 clients to send messages to dojot."
+"In this section, it will be shown how to configure and run Locust, and "
+"also how to generate certificates with the generate_certs script in order"
+" to execute the load test. This is a simple test where will be created "
+"100 clients to send messages to dojot."
 msgstr ""
-"Nesta seção, será demonstrado como configurar e rodar o Locust, além de como "
-"gerar certificados com o script ``generate_certs`` que serão utilizados para "
-"rodar o teste. Este é um teste simples em que serão criados 100 clientes que "
-"enviarão mensagens à dojot."
+"Nesta seção, será demonstrado como configurar e rodar o Locust, além de "
+"como gerar certificados com o script ``generate_certs`` que serão "
+"utilizados para executar o teste de carga. Este é um teste simples, onde "
+"serão criados 100 clientes que irão enviar mensagens à dojot.Antes de "
+"rodar os testes"
 
-#: ../../source/load-testing-dojot-platform.rst:44
+#: ../../source/load-testing-dojot-platform.rst:43
 msgid "Configuration"
 msgstr "Configuração"
 
-#: ../../source/load-testing-dojot-platform.rst:47
+#: ../../source/load-testing-dojot-platform.rst:46
 msgid ""
-"Make sure to check the README included in Locust directory to learn more about "
-"the architecture and configurations. In this tutorial we will only cover the "
-"most important configurations."
+"Make sure to check the README included in Locust directory to learn more "
+"about the architecture and configurations. In this tutorial we will only "
+"cover the most important configurations."
 msgstr ""
-"Verifique o README incluído no diretório do Locust para aprender mais sobre a "
-"arquitetura e configurações. Neste tutorial serão cobertas somente as "
-"configurações mais importantes."
+"Verifique o README incluído no diretório do Locust para aprender mais "
+"sobre a arquitetura e configurações. Neste tutorial serão cobertas "
+"somente as configurações mais importantes."
 
-#: ../../source/load-testing-dojot-platform.rst:50
+#: ../../source/load-testing-dojot-platform.rst:49
 msgid ""
-"Before running the tests, there must be changed some configurations in Locust "
-"docker compose files."
+"Before running the tests, there must be changed some configurations in "
+"Locust docker compose files."
 msgstr ""
-"Antes de rodar os testes, deve-se mudar algumas configurações nos arquivos de "
-"docker compose do Locust."
+"Antes de rodar os testes, algumas configurações nos arquivos de docker "
+"compose do Locust precisam ser alteradas."
 
-#: ../../source/load-testing-dojot-platform.rst:52
+#: ../../source/load-testing-dojot-platform.rst:51
 msgid ""
-"Open ``Docker/docker-compose-master.yml`` and change the following environment "
-"variables:"
+"Open ``Docker/docker-compose-master.yml`` and change the following "
+"environment variables:"
 msgstr ""
 "Abra o arquivo ``Docker/docker-compose-master.yml`` e mude as seguintes "
 "variáveis de ambiente:"
 
-#: ../../source/load-testing-dojot-platform.rst:64
-#: ../../source/load-testing-dojot-platform.rst:247
+#: ../../source/load-testing-dojot-platform.rst:63
+#: ../../source/load-testing-dojot-platform.rst:245
 msgid ""
-"Open ``Docker/docker-compose-slave.yml`` and change the following environment "
-"variables:"
+"Open ``Docker/docker-compose-slave.yml`` and change the following "
+"environment variables:"
 msgstr ""
 "Abra o arquivo ``Docker/docker-compose-slave.yml`` e mude as seguintes "
 "variáveis de ambiente:"
 
-#: ../../source/load-testing-dojot-platform.rst:77
+#: ../../source/load-testing-dojot-platform.rst:76
 msgid ""
-"We are assuming you are running the master and the slave in the same machine, "
-"i.e. in *non-distributed mode*. Later on will be shown how to distribute "
-"slaves between multiple machines."
+"We are assuming you are running the master and the slave in the same "
+"machine, i.e. in *non-distributed mode*. Later on will be shown how to "
+"distribute slaves between multiple machines."
 msgstr ""
 "Estamos assumindo que você está rodando o *master* e o *slave* na mesma "
-"máquina, i.e. no *modo não distribuído*. Mais à frente será mostrado como "
-"distribuir os *slaves* em múltiplas máquinas."
+"máquina, i.e. no *modo não distribuído*. Mais à frente será mostrado como"
+" distribuir os *slaves* em múltiplas máquinas."
 
-#: ../../source/load-testing-dojot-platform.rst:81
-#: ../../source/load-testing-dojot-platform.rst:267
+#: ../../source/load-testing-dojot-platform.rst:80
+#: ../../source/load-testing-dojot-platform.rst:265
 msgid ""
 "Open ``Docker/scripts/generate_certs/docker-compose.yml`` and change the "
 "following environment variables:"
 msgstr ""
-"Abra o arquivo ``Docker/scripts/generate_certs/docker-compose.yml`` e mude as "
-"seguintes variáveis de ambiente:"
+"Abra o arquivo ``Docker/scripts/generate_certs/docker-compose.yml`` e "
+"mude as seguintes variáveis de ambiente:"
 
-#: ../../source/load-testing-dojot-platform.rst:91
+#: ../../source/load-testing-dojot-platform.rst:90
 msgid "Generating the certificates"
 msgstr "Gerando os certificados"
 
-#: ../../source/load-testing-dojot-platform.rst:93
+#: ../../source/load-testing-dojot-platform.rst:92
+#, fuzzy
 msgid ""
-"As said before, the communication from Locust to dojot is secure, so there is "
-"the need to create certificates."
+"As said before, the communication from Locust to dojot is secure, then, "
+"it is necessary to use certificates."
 msgstr ""
-"Como dito anteriormente, a comunicação entre Locust e dojot é segura, portanto "
-"é necessário o uso de certificados."
+"Como dito anteriormente, a comunicação entre Locust e dojot é segura, "
+"portanto é necessário o uso de certificados."
 
-#: ../../source/load-testing-dojot-platform.rst:96
+#: ../../source/load-testing-dojot-platform.rst:94
 msgid ""
-"There are two ways of simulating devices: you can create fake devices (will "
-"not show up in dojot's GUI) or real devices. In this part of the tutorial, we "
-"will create real devices, so you can check the sent messages in the GUI."
+"There are two ways of simulating devices: you can create fake devices "
+"(will not show up in dojot's GUI) or real devices. In this part of the "
+"tutorial, we will create real devices, so you can check the sent messages"
+" in the GUI."
 msgstr ""
 "Existem duas maneiras de se simular os dispositivos: você pode criar "
 "dispositivos falsos (que não aparecerão na GUI da dojot) ou dispositivos "
-"reais. Nesta parte do tutorial serão criados os dispositivos reais para que "
-"você possa verificar a chegada das mensagens na GUI."
+"reais. Nesta parte do tutorial serão criados os dispositivos reais para "
+"que você possa verificar a chegada das mensagens na GUI."
 
-#: ../../source/load-testing-dojot-platform.rst:100
+#: ../../source/load-testing-dojot-platform.rst:98
 msgid ""
-"Before running the script, we need to initialize the Locust master. Inside "
-"Locust repository, run:"
+"Before running the script, we need to initialize the Locust master. "
+"Inside Locust repository, run:"
 msgstr ""
-"Antes de rodar o script, é necessário inicializar o Locust master. Dentro do "
-"repositório do Locust, rode:"
+"Antes de rodar o script, é necessário inicializar o Locust master. Dentro"
+" do repositório do Locust, rode:"
 
-#: ../../source/load-testing-dojot-platform.rst:107
+#: ../../source/load-testing-dojot-platform.rst:105
 msgid ""
-"After its initialization, run the ``generate_certs`` script docker compose and "
-"enter in it:"
+"After its initialization, run the ``generate_certs`` script docker "
+"compose and enter in it:"
 msgstr ""
-"Após sua inicialização, rode o contêiner do script ``generate_certs`` e entre "
-"nele:"
+"Após sua inicialização, rode o contêiner do script ``generate_certs`` e "
+"entre nele:"
 
-#: ../../source/load-testing-dojot-platform.rst:115
+#: ../../source/load-testing-dojot-platform.rst:113
 msgid "Create the devices in dojot:"
 msgstr "Crie os dispositivos na dojot:"
 
-#: ../../source/load-testing-dojot-platform.rst:122
+#: ../../source/load-testing-dojot-platform.rst:120
 msgid "You can now check that the devices are created in dojot."
 msgstr "Agora é possível verificar que os dispositivos foram criados na dojot."
 
-#: ../../source/load-testing-dojot-platform.rst:128
+#: ../../source/load-testing-dojot-platform.rst:126
 msgid ": Some of the devices that ``generate_certs`` created in dojot."
 msgstr ": Alguns dos dispositivos que o ``generate_certs`` criou na dojot."
 
-#: ../../source/load-testing-dojot-platform.rst:134
+#: ../../source/load-testing-dojot-platform.rst:132
 msgid ": The template used by ``generate_certs`` to create devices."
 msgstr ": O *template* usado pelo ``generate_certs`` para criar os dispositivos."
 
-#: ../../source/load-testing-dojot-platform.rst:137
+#: ../../source/load-testing-dojot-platform.rst:135
 msgid "Generate the certificates for them:"
 msgstr "Gere os certificados para eles:"
 
-#: ../../source/load-testing-dojot-platform.rst:144
+#: ../../source/load-testing-dojot-platform.rst:142
 msgid ""
-"The certificates are exported to the ``cert`` directory. Now the test can be "
-"initialized!"
+"The certificates are exported to the ``cert`` directory. Now the test can"
+" be initialized!"
 msgstr ""
-"Os certificados são exportados para a pasta ``cert``. Agora o teste pode ser "
-"inicializado!"
+"Os certificados são exportados para a pasta ``cert``. Agora o teste pode "
+"ser inicializado!"
 
-#: ../../source/load-testing-dojot-platform.rst:148
+#: ../../source/load-testing-dojot-platform.rst:146
 msgid "Initializing the slaves"
 msgstr "Inicializando os slaves"
 
-#: ../../source/load-testing-dojot-platform.rst:150
+#: ../../source/load-testing-dojot-platform.rst:148
 msgid ""
-"Locust master does nothing by itself. The one who does all the work of sending "
-"requests is the Locust slave container. Initialize it by running:"
+"Locust master does nothing by itself. The one who does all the work of "
+"sending requests is the Locust slave container. Initialize it by running:"
 msgstr ""
-"O Locust *master* não faz nada por si só. Quem realmente faz todo o trabalho "
-"de enviar as requisições é o contêiner do Locust *slave*. Para inicializá-lo, "
-"rode:"
+"O Locust *master* não faz nada por si só. Quem realmente faz todo o "
+"trabalho de enviar as requisições é o contêiner do Locust *slave*. Para "
+"inicializá-lo, rode:"
 
-#: ../../source/load-testing-dojot-platform.rst:158
+#: ../../source/load-testing-dojot-platform.rst:156
 msgid ""
-"You should see a message in the Locust master log saying that one slave has "
-"connected to him."
+"You should see a message in the Locust master log saying that one slave "
+"has connected to him."
 msgstr ""
 "Você deve ver no Locust *master* uma mensagem dizendo que há um *slave* "
 "conectado a ele."
 
-#: ../../source/load-testing-dojot-platform.rst:162
+#: ../../source/load-testing-dojot-platform.rst:160
 msgid "Running the test"
 msgstr "Rodando o teste"
 
-#: ../../source/load-testing-dojot-platform.rst:164
+#: ../../source/load-testing-dojot-platform.rst:162
 msgid ""
-"You are all set to begin the test. To run it, you need to access the Locust "
-"interface in your browser in ``localhost:8089`` (supposing you are running "
-"Locust master in ``localhost``)."
+"You are all set to begin the test. To run it, you need to access the "
+"Locust interface in your browser in ``localhost:8089`` (supposing you are"
+" running Locust master in ``localhost``)."
 msgstr ""
-"Está tudo pronto para inicializar o teste. Para rodá-lo, é preciso acessar a "
-"interface do Locust em seu navegador no endereço ``localhost:8089`` (supondo "
-"que você está rodando o Locust *master* no ``localhost``)."
+"Está tudo pronto para inicializar o teste. Para rodá-lo, é preciso "
+"acessar a interface do Locust em seu navegador no endereço "
+"``localhost:8089`` (supondo que você está rodando o Locust *master* no "
+"``localhost``)."
 
-#: ../../source/load-testing-dojot-platform.rst:167
+#: ../../source/load-testing-dojot-platform.rst:165
 msgid ""
-"Type ``100`` in ``Number of users to simulate``, ``10`` in ``Hatch rate`` and "
-"click in ``Start swarming``. This tells Locust to run 100 clients, creating 10 "
-"of them per second."
+"Type ``100`` in ``Number of users to simulate``, ``10`` in ``Hatch rate``"
+" and click in ``Start swarming``. This tells Locust to run 100 clients, "
+"creating 10 of them per second."
 msgstr ""
-"Digite ``100`` em ``Number of users to simulate``, ``10`` em ``Hatch rate`` e "
-"clique em ``Start swarming``. Isso dirá ao Locust para rodar 100 clientes, "
-"criando 10 deles por segundo."
+"Digite ``100`` em ``Number of users to simulate``, ``10`` em ``Hatch "
+"rate`` e clique em ``Start swarming``. Isso dirá ao Locust para rodar 100"
+" clientes, criando 10 deles por segundo."
 
-#: ../../source/load-testing-dojot-platform.rst:174
-#: ../../source/load-testing-dojot-platform.rst:352
+#: ../../source/load-testing-dojot-platform.rst:172
+#: ../../source/load-testing-dojot-platform.rst:348
 msgid ": Configuring Locust to run the clients."
 msgstr ": Configurando o Locust para rodar os clientes."
 
-#: ../../source/load-testing-dojot-platform.rst:176
+#: ../../source/load-testing-dojot-platform.rst:174
 msgid ""
 "The default configuration is for every client to send a message each 30 "
-"seconds, so you'll have to wait a moment for the messages to arrive at dojot."
+"seconds, so you'll have to wait a moment for the messages to arrive at "
+"dojot."
 msgstr ""
 "A configuração padrão dita que cada cliente mande uma mensagem a cada 30 "
-"segundos, então você deverá aguardar um pouco para ver as mensagens chegando "
-"na dojot."
+"segundos, então você deverá aguardar um pouco para ver as mensagens "
+"chegando na dojot."
 
-#: ../../source/load-testing-dojot-platform.rst:183
-#: ../../source/load-testing-dojot-platform.rst:359
+#: ../../source/load-testing-dojot-platform.rst:181
+#: ../../source/load-testing-dojot-platform.rst:355
 msgid ": Locust statistics after running for a few minutes."
 msgstr ": As estatísticas do Locust após rodar os testes por alguns minutos."
 
-#: ../../source/load-testing-dojot-platform.rst:185
+#: ../../source/load-testing-dojot-platform.rst:183
 msgid "You can go to dojot and see that the messages are arriving there."
 msgstr "Você pode ir até a dojot e ver as mensagens chegando por lá."
 
-#: ../../source/load-testing-dojot-platform.rst:191
+#: ../../source/load-testing-dojot-platform.rst:189
 msgid ": An example device receiving messages."
 msgstr ": Um dispositivo de exemplo recebendo mensagens."
 
-#: ../../source/load-testing-dojot-platform.rst:195
+#: ../../source/load-testing-dojot-platform.rst:193
 msgid "Running a distributed test"
 msgstr "Rodando um teste distribuído"
 
-#: ../../source/load-testing-dojot-platform.rst:197
+#: ../../source/load-testing-dojot-platform.rst:195
 msgid ""
-"For small tests, the forementioned procedure might be sufficient, but if you "
-"really want to force dojot, you might encounter some barriers when using only "
-"one slave and/or one machine. As a solution for this problem, Locust has a "
-"**distributed mode**, permitting you to initialize multiple slaves in multiple "
-"machines, limiting Locust performance to the amount of processing power (and "
-"budget!) you got."
+"For small tests, the forementioned procedure might be sufficient, but if "
+"you really want to force dojot, you might encounter some barriers when "
+"using only one slave and/or one machine. As a solution for this problem, "
+"Locust has a **distributed mode**, permitting you to initialize multiple "
+"slaves in multiple machines, limiting Locust performance to the amount of"
+" processing power (and budget!) you got."
 msgstr ""
-"Para testes pequenos, o procedimento supracitado deve ser o suficiente, mas se "
-"você deseja realmente forçar a dojot, barreiras serão encontradas ao usar "
-"somente um *slave* e/ou uma máquina. Para solucionar este problema, o Locust "
-"provê o **modo distribuído**, permitindo a inicialização de múltiplos *slaves* "
-"em múltiplas máquinas, limitando o desempenho do Locust ao montante de poder "
-"de processamento (e orçamento!) que você tem."
+"Para testes pequenos, o procedimento supracitado deve ser o suficiente, "
+"mas se você deseja realmente forçar a dojot, barreiras serão encontradas "
+"ao usar somente um *slave* e/ou uma máquina. Para solucionar este "
+"problema, o Locust provê o **modo distribuído**, permitindo a "
+"inicialização de múltiplos *slaves* em múltiplas máquinas, limitando o "
+"desempenho do Locust ao montante de poder de processamento (e orçamento!)"
+" que você tem."
 
-#: ../../source/load-testing-dojot-platform.rst:203
+#: ../../source/load-testing-dojot-platform.rst:201
 msgid ""
-"We are going to use two virtual machines to run 4 slaves (2 in each VM) and 1 "
-"master (in one of them) to create 1,000 fake devices. We will refer to the "
-"machine with the master as **primary** and the other as **secondary**."
+"We are going to use two virtual machines to run 4 slaves (2 in each VM) "
+"and 1 master (in one of them) to create 1,000 fake devices. We will refer"
+" to the machine with the master as **primary** and the other as "
+"**secondary**."
 msgstr ""
-"Serão utilizadas duas máquinas virtuais rodando 4 *slaves* (2 em cada VM) e 1 "
-"*master* (em uma das VMs) para criar os 1.000 dispositivos falsos. Vamos nos "
-"referir à máquina com o *master* como **primária** e à outra como "
-"**secundária**."
+"Serão utilizadas duas máquinas virtuais rodando 4 *slaves* (2 em cada VM)"
+" e 1 *master* (em uma das VMs) para criar os 1.000 dispositivos falsos. "
+"Vamos nos referir à máquina com o *master* como **primária** e à outra "
+"como **secundária**."
 
-#: ../../source/load-testing-dojot-platform.rst:208
+#: ../../source/load-testing-dojot-platform.rst:206
 msgid ""
-"There is no correlation between the chosen numbers: the amount of clients that "
-"each slave supports depends on various variables, such as the number of "
-"available CPU cores."
+"There is no correlation between the chosen numbers: the amount of clients"
+" that each slave supports depends on various variables, such as the "
+"number of available CPU cores."
 msgstr ""
-"Não há uma correlação entre os números escolhidos: o número de clientes que "
-"cada *slave* suporta é dependente de diversas variáveis, como o número de "
-"núcleos de CPU disponíveis."
+"Não há uma correlação entre os números escolhidos: o número de clientes "
+"que cada *slave* suporta é dependente de diversas variáveis, como o "
+"número de núcleos de CPU disponíveis."
 
-#: ../../source/load-testing-dojot-platform.rst:212
+#: ../../source/load-testing-dojot-platform.rst:210
 msgid ""
-"We advice you to run 1 slave per CPU core you have in the machine, i.e. if you "
-"have a VM with 4 CPUs, run 4 slaves."
+"We advice you to run 1 slave per CPU core you have in the machine, i.e. "
+"if you have a VM with 4 CPUs, run 4 slaves."
 msgstr ""
-"Recomendamos que você rode 1 *slave* por núcleo da CPU de sua máquina, i.e. se "
-"você tem uma VM com 4 CPUs, rode 4 *slaves*."
+"Recomendamos que você rode 1 *slave* por núcleo da CPU de sua máquina, "
+"i.e. se você tem uma VM com 4 CPUs, rode 4 *slaves*."
 
-#: ../../source/load-testing-dojot-platform.rst:217
+#: ../../source/load-testing-dojot-platform.rst:215
 msgid "Configuration for the distributed case"
 msgstr "Configuração para o modo distribuído"
 
-#: ../../source/load-testing-dojot-platform.rst:219
+#: ../../source/load-testing-dojot-platform.rst:217
 msgid ""
-"Before running the tests, there must be changes to be made in some Locust "
-"docker compose files. Note that you must clone the dojot repository in each "
-"machine that you will use for Locust."
+"Before running the tests, there must be changes to be made in some Locust"
+" docker compose files. Note that you must clone the dojot repository in "
+"each machine that you will use for Locust."
 msgstr ""
-"Antes de rodar os testes, há mudanças a serem feitas nos docker compose do "
-"Locust. Note que você deve clonar o repositório da dojot em cada máquina em "
-"que o Locust rodará."
+"Antes de rodar os testes, há mudanças a serem feitas nos docker compose "
+"do Locust. Note que você deve clonar o repositório da dojot em cada "
+"máquina em que o Locust rodará."
 
-#: ../../source/load-testing-dojot-platform.rst:223
+#: ../../source/load-testing-dojot-platform.rst:221
 msgid ""
-"Since the configurations can be the same for the slaves and the generate_certs "
-"script, you can share them between machines by using ``sshfs``. Assuming you "
-"are in the Locust directory in the secondary machine, run the following "
-"command:"
+"Since the configurations can be the same for the slaves and the "
+"generate_certs script, you can share them between machines by using "
+"``sshfs``. Assuming you are in the Locust directory in the secondary "
+"machine, run the following command:"
 msgstr ""
-"Como as configurações podem ser as mesmas para os *slaves* e para o script "
-"*generate_certs*, você pode os compartilhar entre máquinas usando o ``sshfs``. "
-"Assumindo que você esteja na pasta do Locust na máquina secundária, rode o "
-"comando:"
+"Como as configurações podem ser as mesmas para os *slaves* e para o "
+"script *generate_certs*, você pode os compartilhar entre máquinas usando "
+"o ``sshfs``. Assumindo que você esteja na pasta do Locust na máquina "
+"secundária, rode o comando:"
 
-#: ../../source/load-testing-dojot-platform.rst:231
+#: ../../source/load-testing-dojot-platform.rst:229
 msgid "Check the `sshfs`_ documentation for more details."
 msgstr "Verifique a documentação do `sshfs`_ para mais detalhes."
 
-#: ../../source/load-testing-dojot-platform.rst:234
+#: ../../source/load-testing-dojot-platform.rst:232
 msgid ""
-"Open ``Docker/docker-compose-master.yml`` in the primary machine and change "
-"the following environment variables:"
+"Open ``Docker/docker-compose-master.yml`` in the primary machine and "
+"change the following environment variables:"
 msgstr ""
-"Abra o arquivo ``Docker/docker-compose-master.yml`` na máquina primária e mude "
-"as seguintes variáveis de ambiente:"
+"Abra o arquivo ``Docker/docker-compose-master.yml`` na máquina primária e"
+" mude as seguintes variáveis de ambiente:"
 
-#: ../../source/load-testing-dojot-platform.rst:281
+#: ../../source/load-testing-dojot-platform.rst:279
+#, fuzzy
 msgid ""
-"As you can see, the configurations changed a little bit, with the changes "
-"being only about the master and Redis location."
+"As you can see, the configurations have changed a little bit, with the "
+"changes being only about the master and Redis location."
 msgstr ""
-"Como pode-se ver, as configurações mudaram pouco, sendo que as principais "
-"mudanças são somente na localização do Redis e do *master*."
+"Como pode-se ver, as configurações mudaram pouco, sendo que as principais"
+" mudanças são somente na localização do Redis e do *master*."
 
-#: ../../source/load-testing-dojot-platform.rst:286
+#: ../../source/load-testing-dojot-platform.rst:284
 msgid "Generating certificates"
 msgstr "Gerando os certificados"
 
-#: ../../source/load-testing-dojot-platform.rst:288
+#: ../../source/load-testing-dojot-platform.rst:286
 msgid ""
-"In this part of the tutorial, we will create fake devices that, unlike in the "
-"simple test, won't appear in dojot GUI."
+"In this part of the tutorial, we will create fake devices that, unlike in"
+" the simple test, won't appear in dojot GUI."
 msgstr ""
-"Nesta parte do tutorial, serão criados dispositivos falsos que, ao contrário "
-"do teste simples, não aparecerão na GUI da dojot."
+"Nesta parte do tutorial, serão criados dispositivos falsos que, ao "
+"contrário do teste simples, não aparecerão na GUI da dojot."
 
-#: ../../source/load-testing-dojot-platform.rst:291
+#: ../../source/load-testing-dojot-platform.rst:289
 msgid ""
-"Before running the script, we need to initialize the Locust master. Inside "
-"Locust directory in your **primary** machine, run:"
+"Before running the script, we need to initialize the Locust master. "
+"Inside Locust directory in your **primary** machine, run:"
 msgstr ""
-"Antes de rodar o script, precismos inicializar o Locust *master*. Dentro da "
-"pasta do Locust na máquina primária, rode:"
+"Antes de rodar o script, precismos inicializar o Locust *master*. Dentro "
+"da pasta do Locust na máquina primária, rode:"
 
-#: ../../source/load-testing-dojot-platform.rst:299
+#: ../../source/load-testing-dojot-platform.rst:296
+#, fuzzy
 msgid ""
-"After its initialization, initialize the ``generate_certs`` script docker "
-"compose in the **primary** machine and go inside it:"
+"After its initialization, initialize the docker compose "
+"``generate_certs`` script in the **primary** machine and enter in it:"
 msgstr ""
-"Após a inicialização, rode o docker compose do ``generate_certs`` na máquina "
-"**primária** e entre nela:"
+"Após a inicialização, rode o docker compose do ``generate_certs`` na "
+"máquina **primária** e entre nela:"
 
-#: ../../source/load-testing-dojot-platform.rst:308
+#: ../../source/load-testing-dojot-platform.rst:304
 msgid "Create the certificates:"
 msgstr "Crie os certificados:"
 
-#: ../../source/load-testing-dojot-platform.rst:315
+#: ../../source/load-testing-dojot-platform.rst:311
 msgid "The fake devices are simulated as certificates."
 msgstr "Os dispositivos falsos são simulados como certificados."
 
-#: ../../source/load-testing-dojot-platform.rst:317
+#: ../../source/load-testing-dojot-platform.rst:313
 msgid ""
-"Now go to your **secondary** machine, initialize the ``generate_certs`` and "
-"inside it, run:"
+"Now go to your **secondary** machine, initialize the ``generate_certs`` "
+"and inside it, run:"
 msgstr ""
-"Agora entre em sua máquina **secundária**, inicialize o ``generate_certs`` e, "
-"dentro dele, rode:"
+"Agora entre em sua máquina **secundária**, inicialize o "
+"``generate_certs`` e, dentro dele, rode:"
 
-#: ../../source/load-testing-dojot-platform.rst:323
+#: ../../source/load-testing-dojot-platform.rst:319
 msgid ""
-"Since the certificates are stored in Redis, you can simply export them with "
-"the shown command in any machine, preventing the tedious job of copying in "
-"each VM the ``cert`` directory with the certificates."
+"Since the certificates are stored in Redis, you can simply export them "
+"with the shown command in any machine, preventing the tedious job of "
+"copying in each VM the ``cert`` directory with the certificates."
 msgstr ""
-"Como os certificados são armazenados no Redis, você pode simplesmente exportá-"
-"los com o comando mostrado em qualquer máquina, prevenindo o trabalho tedioso "
-"de copiar em cada VM a pasta ``cert`` com os certificados."
+"Como os certificados são armazenados no Redis, você pode simplesmente "
+"exportá-los com o comando mostrado em qualquer máquina, prevenindo o "
+"trabalho tedioso de copiar em cada VM a pasta ``cert`` com os "
+"certificados."
 
-#: ../../source/load-testing-dojot-platform.rst:328
+#: ../../source/load-testing-dojot-platform.rst:324
 msgid "Slave initialization"
 msgstr "Inicialização do slave"
 
-#: ../../source/load-testing-dojot-platform.rst:330
+#: ../../source/load-testing-dojot-platform.rst:326
 msgid "Run in your **primary** and **secondary** machines:"
 msgstr "Rode em suas máquinas **primária** e **secundária**:"
 
-#: ../../source/load-testing-dojot-platform.rst:336
+#: ../../source/load-testing-dojot-platform.rst:332
 msgid ""
-"This command creates two Locust slave containers in each machine. You should "
-"see in the Locust master log a message for each slave that connects to it."
+"This command creates two Locust slave containers in each machine. You "
+"should see in the Locust master log a message for each slave that "
+"connects to it."
 msgstr ""
-"Este comando criará dois contêineres do Locust *slave* em cada máquina. Você "
-"deverá notar no Locust *master* mensagens confirmando a conexão de cada "
-"*slave*."
+"Este comando criará dois contêineres do Locust *slave* em cada máquina. "
+"Você deverá notar no Locust *master* mensagens confirmando a conexão de "
+"cada *slave*."
 
-#: ../../source/load-testing-dojot-platform.rst:340
+#: ../../source/load-testing-dojot-platform.rst:336
 msgid "Running the distributed test"
 msgstr "Rodando o teste distribuído"
 
-#: ../../source/load-testing-dojot-platform.rst:342
+#: ../../source/load-testing-dojot-platform.rst:338
 msgid ""
-"We are all set to begin the test. To run it, you need to access the Locust "
-"interface in your browser in the Locust master location, e.g.: "
+"We are all set to begin the test. To run it, you need to access the "
+"Locust interface in your browser in the Locust master location, e.g.: "
 "``localhost:8089``."
 msgstr ""
-"Está tudo pronto para a realização do teste. Para iniciá-lo, você deve acessar "
-"a interface do Locust no seu navegador através do domínio do Locust *master*, "
-"e.g. ``localhost:8089``."
+"Está tudo pronto para a realização do teste. Para iniciá-lo, você deve "
+"acessar a interface do Locust no seu navegador através do domínio do "
+"Locust *master*, e.g. ``localhost:8089``."
 
-#: ../../source/load-testing-dojot-platform.rst:345
+#: ../../source/load-testing-dojot-platform.rst:341
 msgid ""
-"Type ``1000`` in ``Number of users to simulate``, ``10`` in ``Hatch rate`` and "
-"click in ``Start swarming``. This tells Locust to run 1,000 clients, creating "
-"10 of them per second."
+"Type ``1000`` in ``Number of users to simulate``, ``10`` in ``Hatch "
+"rate`` and click in ``Start swarming``. This tells Locust to run 1,000 "
+"clients, creating 10 of them per second."
 msgstr ""
-"Digite ``1000`` em ``Number of users to simulate``, ``10`` em ``Hatch rate`` e "
-"clique em ``Start swarming``. Isso dirá ao Locust para rodar 1.000 clientes, "
-"criando 10 deles por segundo."
+"Digite ``1000`` em ``Number of users to simulate``, ``10`` em ``Hatch "
+"rate`` e clique em ``Start swarming``. Isso dirá ao Locust para rodar "
+"1.000 clientes, criando 10 deles por segundo."
 
-#: ../../source/load-testing-dojot-platform.rst:362
+#: ../../source/load-testing-dojot-platform.rst:358
 msgid "Using Grafana's Locust dashboard"
 msgstr "Usando o dashboard do Locust no Grafana"
 
-#: ../../source/load-testing-dojot-platform.rst:364
+#: ../../source/load-testing-dojot-platform.rst:360
+#, fuzzy
 msgid ""
-"The Locust web interface is easy to use and simple, but there are some "
-"downsides. The major one is the persistence: it does not store any data if you "
-"exit the page, even refreshing it removes all of its history."
+"The Locust web interface is easy and simple to use, but there are some "
+"downsides. The major one is the persistence: The history data will be "
+"deleted as soon as you close or refresh the page."
 msgstr ""
-"A interface web do Locust é simples e fácil de se usar, porém ela tem alguns "
-"pontos negativos. O maior deles é a persistência de dados: os dados do "
-"histórico são apagados assim que você fecha ou atualiza a página."
+"A interface web do Locust é simples e fácil de se usar, porém ela tem "
+"alguns pontos negativos. O maior deles é a persistência de dados: os "
+"dados do histórico são apagados assim que você fecha ou atualiza a "
+"página."
 
-#: ../../source/load-testing-dojot-platform.rst:368
+#: ../../source/load-testing-dojot-platform.rst:363
 msgid ""
-"To solve this problem, we chose to add the Locust Exporter image to the master "
-"docker compose file, allowing us to export all of its metrics in a Prometheus-"
-"compatible format. That way we can persist this information in Prometheus and "
-"centralize all the dashboards in Grafana. Unfortunately, we still need the "
-"Locust web interface to initialize tests."
+"To solve this problem, we chose to add the Locust Exporter image to the "
+"master docker compose file, allowing us to export all of its metrics in a"
+" Prometheus-compatible format. That way we can persist this information "
+"in Prometheus and centralize all the dashboards in Grafana. "
+"Unfortunately, we still need the Locust web interface to initialize "
+"tests."
 msgstr ""
-"Para resolver este problema, foi adicionada a imagem Locust Exporter no docker "
-"compose do Locust *master*, permitindo a exportação das métricas em um formato "
-"compatível com o Prometheus. Desta forma, é possível armazenar estas "
-"informações no Prometheus e centralizar todos os dashboards no Grafana. "
-"Infelizmente ainda é necessário acessar a interface web do Locust para começar "
-"o teste."
+"Para resolver este problema, foi adicionada a imagem Locust Exporter no "
+"docker compose do Locust *master*, permitindo a exportação das métricas "
+"em um formato compatível com o Prometheus. Desta forma, é possível "
+"armazenar estas informações no Prometheus e centralizar todos os "
+"dashboards no Grafana. Infelizmente ainda é necessário acessar a "
+"interface web do Locust para começar o teste."
 
-#: ../../source/load-testing-dojot-platform.rst:374
+#: ../../source/load-testing-dojot-platform.rst:369
 msgid ""
 "Since the Grafana/Prometheus stack is available only in the Kubernetes "
-"installation, this part is not applicable to docker compose installations. We "
-"encourage you to check the :doc:`./installation-guide` for more information on "
-"dojot's installation methods."
+"installation, this part is not applicable to docker compose "
+"installations. We encourage you to check the :doc:`./installation-guide` "
+"for more information on dojot's installation methods."
 msgstr ""
-"Como a stack Grafana/Prometheus só está disponível na instalação por meio de "
-"Kubernetes, esta seção não é aplicável para a instalação por meio de docker "
-"compose. Nós o encorajamos a verificar o :doc:`./installation-guide` para mais "
-"informações sobre os métodos de instalação da dojot."
+"Como a stack Grafana/Prometheus só está disponível na instalação por meio"
+" de Kubernetes, esta seção não é aplicável para a instalação por meio de "
+"docker compose. Nós o encorajamos a verificar o :doc:`./installation-"
+"guide` para mais informações sobre os métodos de instalação da dojot."
 
-#: ../../source/load-testing-dojot-platform.rst:380
+#: ../../source/load-testing-dojot-platform.rst:375
 msgid "Ansible configuration"
 msgstr "Configuração do Ansible"
 
-#: ../../source/load-testing-dojot-platform.rst:382
+#: ../../source/load-testing-dojot-platform.rst:377
 msgid ""
-"You need to decide where your Locust master will be beforehand to be able to "
-"initialize the Ansible playbook. The Ansible configurations that you need to "
-"change to link Locust Exporter to Prometheus are:"
+"You need to decide where your Locust master will be beforehand to be able"
+" to initialize the Ansible playbook. The Ansible configurations that you "
+"need to change to link Locust Exporter to Prometheus are:"
 msgstr ""
-"Você deve decidir onde o seu Locust *master* estará de antemão antes de rodar "
-"o *playbook* do Ansible. As configurações do Ansible que você precisa "
-"modificar para conectar o Locust Exporter com o Prometheus são:"
+"Você deve decidir onde o seu Locust *master* estará de antemão antes de "
+"rodar o *playbook* do Ansible. As configurações do Ansible que você "
+"precisa modificar para conectar o Locust Exporter com o Prometheus são:"
 
-#: ../../source/load-testing-dojot-platform.rst:392
+#: ../../source/load-testing-dojot-platform.rst:387
 msgid ""
 "Change the IP to the Locust master one and run the playbook. Now you can "
-"initialize a (distributed or not) test as shown in the previous sections and "
-"you should see the Locust data being sent to Grafana's Locust dashboard."
+"initialize a (distributed or not) test as shown in the previous sections "
+"and you should see the Locust data being sent to Grafana's Locust "
+"dashboard."
 msgstr ""
 "Mude o IP para o do Locust *master* e rode o *playbook*. Agora você pode "
-"inicializar um teste (distribuído ou não) como mostrado nas seções anteriores "
-"e deverá ver os dados do Locust sendo enviados ao dashboard do Locust no "
-"Grafana."
+"inicializar um teste (distribuído ou não) como mostrado nas seções "
+"anteriores e deverá ver os dados do Locust sendo enviados ao dashboard do"
+" Locust no Grafana."
 
-#: ../../source/load-testing-dojot-platform.rst:400
+#: ../../source/load-testing-dojot-platform.rst:395
 msgid ": Locust statistics in Grafana - before beginning the test."
 msgstr "Estatísticas do Locust no Grafana - antes de começar o teste."
 
-#: ../../source/load-testing-dojot-platform.rst:406
+#: ../../source/load-testing-dojot-platform.rst:401
 msgid ": Locust statistics in Grafana - after the test has begun."
 msgstr "Estatísticas do Locust no Grafana - depois da inicialização do teste."
 
-#: ../../source/load-testing-dojot-platform.rst:410
+#: ../../source/load-testing-dojot-platform.rst:405
 msgid "Requisites for a 100,000 clients test"
 msgstr "Requisitos para um teste com 100.000 clientes"
 
+#: ../../source/load-testing-dojot-platform.rst:407
+msgid ""
+"Now that you know how to run distributed tests using Locust, you are able"
+" to execute a 100,000 clients test. For this, you will need a lot of "
+"computational power and multiple machines, both for dojot and for Locust."
+" The goal is to reach 100,000 simultaneous MQTTS connections with a rate "
+"of ~3,333 RPS (for both publish and receive), i.e. a message each 30 "
+"seconds for each connected client."
+msgstr ""
+"Agora que você sabe como rodar testes distribuídos utilizando o Locust, "
+"você consegue executar o teste com 100.000 clientes. Para tal, você "
+"precisará de bastante poder computacional e múltiplas máquinas, tanto "
+"para a dojot como para o Locust, O objectivo é chegar a 100.000 conexões "
+"MQTTS simultâneas com taxa de ~3.333 RPS (tanto para publicação quanto "
+"para recepção), i.e. uma mensagem a cada 30 segundos para cada cliente "
+"conectado."
+
 #: ../../source/load-testing-dojot-platform.rst:412
 msgid ""
-"Now that you know how to run distributed tests using Locust, you are able to "
-"execute a 100,000 clients test. For this, you will need a lot of computational "
-"power and multiple machines, both for dojot and for Locust. The goal is to "
-"reach 100,000 simultaneous MQTTS connections with a rate of ~3,333 RPS (for "
-"both publish and receive), i.e. a message each 30 seconds for each connected "
-"client."
+"Since this is only a special case of the distributed test, we will only "
+"cover the specifications and some tips for the test, since the procedure "
+"to configure it is the same as we've already done."
 msgstr ""
-"Agora que você sabe como rodar testes distribuídos utilizando o Locust, você "
-"consegue executar o teste com 100.000 clientes. Para tal, você precisará de "
-"bastante poder computacional e múltiplas máquinas, tanto para a dojot como "
-"para o Locust, O objectivo é chegar a 100.000 conexões MQTTS simultâneas com "
-"taxa de ~3.333 RPS (tanto para publicação quanto para recepção), i.e. uma "
-"mensagem a cada 30 segundos para cada cliente conectado."
+"Como este é somente um caso especial de teste distribuído, cobriremos "
+"somente as especificações e algumas dicas para o teste, já que o "
+"procedimento para configuração é o mesmo que nós já fizemos."
 
 #: ../../source/load-testing-dojot-platform.rst:417
-msgid ""
-"Since this is only a special case of the distributed test, we will only cover "
-"the specifications and some tips for the test, since the procedure to "
-"configure it is the same as we've already done."
-msgstr ""
-"Como este é somente um caso especial de teste distribuído, cobriremos somente "
-"as especificações e algumas dicas para o teste, já que o procedimento para "
-"configuração é o mesmo que nós já fizemos."
-
-#: ../../source/load-testing-dojot-platform.rst:422
 msgid ""
 "As you might already know, this test is only possible in the Kubernetes "
 "installation of dojot."
 msgstr ""
-"Como você já deve saber, este teste só é possível na instalação via Kubernetes "
-"da dojot."
+"Como você já deve saber, este teste só é possível na instalação via "
+"Kubernetes da dojot."
 
-#: ../../source/load-testing-dojot-platform.rst:426
+#: ../../source/load-testing-dojot-platform.rst:421
 msgid "Hardware specifications"
 msgstr "Especificações de hardware"
 
-#: ../../source/load-testing-dojot-platform.rst:428
+#: ../../source/load-testing-dojot-platform.rst:423
 msgid "For dojot platform:"
 msgstr "Para a plataforma dojot:"
 
-#: ../../source/load-testing-dojot-platform.rst:431
+#: ../../source/load-testing-dojot-platform.rst:426
 msgid "Machine name"
 msgstr "Nome da máquina"
 
-#: ../../source/load-testing-dojot-platform.rst:431
+#: ../../source/load-testing-dojot-platform.rst:426
 msgid "Hosted services"
 msgstr "Serviços presentes"
 
-#: ../../source/load-testing-dojot-platform.rst:431
+#: ../../source/load-testing-dojot-platform.rst:426
 msgid "CPU"
 msgstr ""
 
-#: ../../source/load-testing-dojot-platform.rst:431
+#: ../../source/load-testing-dojot-platform.rst:426
 msgid "RAM"
 msgstr ""
 
-#: ../../source/load-testing-dojot-platform.rst:433
+#: ../../source/load-testing-dojot-platform.rst:428
 msgid "dojot-verne-1"
 msgstr ""
 
-#: ../../source/load-testing-dojot-platform.rst:433
-#: ../../source/load-testing-dojot-platform.rst:435
-#: ../../source/load-testing-dojot-platform.rst:437
+#: ../../source/load-testing-dojot-platform.rst:428
+#: ../../source/load-testing-dojot-platform.rst:430
+#: ../../source/load-testing-dojot-platform.rst:432
 msgid "VerneMQ, K2V and V2K"
 msgstr "VerneMQ, K2V e V2K"
 
-#: ../../source/load-testing-dojot-platform.rst:433
-#: ../../source/load-testing-dojot-platform.rst:435
-#: ../../source/load-testing-dojot-platform.rst:437
-msgid "7"
+#: ../../source/load-testing-dojot-platform.rst:428
+#: ../../source/load-testing-dojot-platform.rst:430
+#: ../../source/load-testing-dojot-platform.rst:432
+msgid "8"
 msgstr ""
 
-#: ../../source/load-testing-dojot-platform.rst:433
-#: ../../source/load-testing-dojot-platform.rst:435
-#: ../../source/load-testing-dojot-platform.rst:437
-msgid "16GB"
-msgstr ""
-
-#: ../../source/load-testing-dojot-platform.rst:435
-msgid "dojot-verne-2"
-msgstr ""
-
-#: ../../source/load-testing-dojot-platform.rst:437
-msgid "dojot-verne-3"
-msgstr ""
-
-#: ../../source/load-testing-dojot-platform.rst:439
-msgid "dojot-ejbca"
-msgstr ""
-
-#: ../../source/load-testing-dojot-platform.rst:439
-msgid "x509 identity manager"
-msgstr ""
-
-#: ../../source/load-testing-dojot-platform.rst:439
-#: ../../source/load-testing-dojot-platform.rst:441
-#: ../../source/load-testing-dojot-platform.rst:443
-msgid "6"
-msgstr ""
-
-#: ../../source/load-testing-dojot-platform.rst:439
-#: ../../source/load-testing-dojot-platform.rst:443
+#: ../../source/load-testing-dojot-platform.rst:428
+#: ../../source/load-testing-dojot-platform.rst:430
+#: ../../source/load-testing-dojot-platform.rst:432
 msgid "8GB"
 msgstr ""
 
-#: ../../source/load-testing-dojot-platform.rst:441
+#: ../../source/load-testing-dojot-platform.rst:430
+msgid "dojot-verne-2"
+msgstr ""
+
+#: ../../source/load-testing-dojot-platform.rst:432
+msgid "dojot-verne-3"
+msgstr ""
+
+#: ../../source/load-testing-dojot-platform.rst:434
+msgid "dojot-x509"
+msgstr ""
+
+#: ../../source/load-testing-dojot-platform.rst:434
+msgid "x509 identity manager"
+msgstr ""
+
+#: ../../source/load-testing-dojot-platform.rst:434
+#: ../../source/load-testing-dojot-platform.rst:438
+#: ../../source/load-testing-dojot-platform.rst:440
+msgid "4"
+msgstr ""
+
+#: ../../source/load-testing-dojot-platform.rst:434
+#: ../../source/load-testing-dojot-platform.rst:438
+#: ../../source/load-testing-dojot-platform.rst:440
+msgid "4GB"
+msgstr ""
+
+#: ../../source/load-testing-dojot-platform.rst:436
 msgid "dojot-kafka"
 msgstr ""
 
-#: ../../source/load-testing-dojot-platform.rst:441
+#: ../../source/load-testing-dojot-platform.rst:436
 msgid "Kafka and Zookeeper"
 msgstr "Kafka e Zookeeper"
 
-#: ../../source/load-testing-dojot-platform.rst:441
-msgid "12GB"
+#: ../../source/load-testing-dojot-platform.rst:436
+msgid "6"
 msgstr ""
 
-#: ../../source/load-testing-dojot-platform.rst:443
-msgid "dojot-main"
+#: ../../source/load-testing-dojot-platform.rst:436
+msgid "6GB"
 msgstr ""
 
-#: ../../source/load-testing-dojot-platform.rst:443
+#: ../../source/load-testing-dojot-platform.rst:438
+msgid "dojot-dojot"
+msgstr ""
+
+#: ../../source/load-testing-dojot-platform.rst:438
 msgid "The rest of the services"
 msgstr "O restante dos serviços"
 
-#: ../../source/load-testing-dojot-platform.rst:446
-msgid ""
-"For Locust, we will use 5 replicas of the same machine, with **14GB** of RAM "
-"and **9** CPUs."
+#: ../../source/load-testing-dojot-platform.rst:440
+msgid "haproxy"
 msgstr ""
-"Para o Locust, usaremos 5 réplicas da mesma máquina, com **14GB** de RAM e "
-"**9** CPUs."
 
-#: ../../source/load-testing-dojot-platform.rst:450
+#: ../../source/load-testing-dojot-platform.rst:440
+msgid "Load balancer"
+msgstr ""
+
+#: ../../source/load-testing-dojot-platform.rst:443
+msgid ""
+"For Locust, we will use 5 replicas of the same machine, with **14GB** of "
+"RAM and **9** CPUs."
+msgstr ""
+"Para o Locust, usaremos 5 réplicas da mesma máquina, com **14GB** de RAM "
+"e **9** CPUs."
+
+#: ../../source/load-testing-dojot-platform.rst:447
 msgid "General tips for the test"
 msgstr "Dicas gerais para o teste"
 
-#: ../../source/load-testing-dojot-platform.rst:452
+#: ../../source/load-testing-dojot-platform.rst:449
 msgid ""
-"Ansible has the ``100k`` tag to prepare the environment for a 100,000 clients "
-"test. It runs a minified version of dojot without some services. This was made "
-"because not all services are ready yet to support such a load."
+"Ansible has the ``100k`` tag to prepare the environment for a 100,000 "
+"clients test. It runs a minified version of dojot without some services. "
+"This was made because not all services are ready yet to support such a "
+"load."
 msgstr ""
 "O Ansible tem a tag ``100k`` para preparar o ambiente para um teste com "
-"100.000 clientes. Isto roda uma versão minificada da dojot, excluindo alguns "
-"serviços; tal estratégia foi adotada pois nem todos os serviços da dojot "
-"suportam tamanha carga."
+"100.000 clientes. Isto roda uma versão minificada da dojot, excluindo "
+"alguns serviços; tal estratégia foi adotada pois nem todos os serviços da"
+" dojot suportam tamanha carga."
 
-#: ../../source/load-testing-dojot-platform.rst:455
+#: ../../source/load-testing-dojot-platform.rst:452
 msgid ""
-"By sharing a persistent volume between EJBCA pods, you can scale them up to "
-"increase the certificate creation throughput."
+"By sharing a persistent volume between EJBCA pods, you can scale them up "
+"to increase the certificate creation throughput."
 msgstr ""
-"Ao compartilhar um volume persistente entre *pods* da EJBCA, é possível escalá-"
-"la para aumentar a velocidade de criação de certificados."
+"Ao compartilhar um volume persistente entre *pods* da EJBCA, é possível "
+"escalá-la para aumentar a velocidade de criação de certificados."
+
+#: ../../source/load-testing-dojot-platform.rst:454
+msgid ""
+"The certificate creation can be distributed between all the Locust "
+"machines. In our example - with 5 Locust machines - we can generate "
+"20,000 certificates in each machine. This can greatly increase the "
+"certificate throughput if EJBCA has been scaled too."
+msgstr ""
+"A criação de certificados pode ser distribuída entre todas as máquinas de"
+" Locust. Em nosso exemplo - com 5 máquinas para o Locust - nós "
+"conseguimos gerar 20.000 certificados em cada máquina. Isso aumenta "
+"substancialmente a velocidade de criação de certificados quando aliado ao"
+" aumento de instâncias da EJBCA rodando."
 
 #: ../../source/load-testing-dojot-platform.rst:457
 msgid ""
-"The certificate creation can be distributed between all the Locust machines. "
-"In our example - with 5 Locust machines - we can generate 20,000 certificates "
-"in each machine. This can greatly increase the certificate throughput if EJBCA "
-"has been scaled too."
+"After generating the certificates, make sure that all machines have all "
+"the certificates. You can export them by running ``generate_certs redis "
+"--export`` inside ``generate_certs`` container."
 msgstr ""
-"A criação de certificados pode ser distribuída entre todas as máquinas de "
-"Locust. Em nosso exemplo - com 5 máquinas para o Locust - nós conseguimos "
-"gerar 20.000 certificados em cada máquina. Isso aumenta substancialmente a "
-"velocidade de criação de certificados quando aliado ao aumento de instâncias "
-"da EJBCA rodando."
+"Após gerar os certificados, confirme que todas as máquinas estão com "
+"todos os certificados. Você pode os exportar rodando o comando "
+"``generate_certs redis --export`` dentro do contêiner do "
+"``generate_certs``."
 
-#: ../../source/load-testing-dojot-platform.rst:460
-msgid ""
-"After generating the certificates, make sure that all machines have all the "
-"certificates. You can export them by running ``generate_certs redis --export`` "
-"inside ``generate_certs`` container."
-msgstr ""
-"Após gerar os certificados, confirme que todas as máquinas estão com todos os "
-"certificados. Você pode os exportar rodando o comando ``generate_certs redis --"
-"export`` dentro do contêiner do ``generate_certs``."
-
-#: ../../source/load-testing-dojot-platform.rst:462
+#: ../../source/load-testing-dojot-platform.rst:459
 msgid "To check the number of certificates, run:"
 msgstr "Para verificar o número de certificados, rode:"
 
-#: ../../source/load-testing-dojot-platform.rst:468
+#: ../../source/load-testing-dojot-platform.rst:465
 msgid ""
-"The returned value should be ``200,003``. This number includes a key and a "
-"certificate for each device, the CA certificate and the ``renew`` and "
+"The returned value should be ``200,003``. This number includes a key and "
+"a certificate for each device, the CA certificate and the ``renew`` and "
 "``revoke`` directories."
 msgstr ""
 "O valor retornado deve ser ``200.003``. Este número inclui a chave e o "
-"certificado de cada dispositivo, o certificado da CA e as pastas ``renew`` e "
-"``revoke``."
+"certificado de cada dispositivo, o certificado da CA e as pastas "
+"``renew`` e ``revoke``."
 
-#: ../../source/load-testing-dojot-platform.rst:471
+#: ../../source/load-testing-dojot-platform.rst:468
 msgid ""
-"It is strongly recommended to run one slave per CPU core, totalizing 45 slaves "
-"in this example."
+"It is strongly recommended to run one slave per CPU core, totalizing 45 "
+"slaves in this example."
 msgstr ""
-"É altamente recomendado rodar um *slave* por núcleo, totalizando 45 *slaves* "
-"neste exemplo."
+"É altamente recomendado rodar um *slave* por núcleo, totalizando 45 "
+"*slaves* neste exemplo."
+
+#: ../../source/load-testing-dojot-platform.rst:469
+msgid ""
+"Since the Locust web interface does not persist any data, use Grafana's "
+"Locust dashboard to keep track of your test. Check the previous section "
+"for more info on how to configure the Locust exporter."
+msgstr ""
+"Como a interface web do Locust não persiste nenhum dado, use o dashboard "
+"do Locust no Grafana para monitorar o seu teste. Verifique a seção "
+"anterior para mais informações sobre como configurar o Locust Exporter."
 
 #: ../../source/load-testing-dojot-platform.rst:472
-msgid ""
-"Since the Locust web interface does not persist any data, use Grafana's Locust "
-"dashboard to keep track of your test. Check the previous section for more info "
-"on how to configure the Locust exporter."
-msgstr ""
-"Como a interface web do Locust não persiste nenhum dado, use o dashboard do "
-"Locust no Grafana para monitorar o seu teste. Verifique a seção anterior para "
-"mais informações sobre como configurar o Locust Exporter."
-
-#: ../../source/load-testing-dojot-platform.rst:475
 msgid ""
 "You can also run the test with ``revoke`` and ``renew``. Check the "
 "repository's README for more configurations' details."
 msgstr ""
-"Você também pode rodar o teste com ``revoke`` e ``renew``. Verifique o README "
-"do repositório para mais detalhes de configuração."
+"Você também pode rodar o teste com ``revoke`` e ``renew``. Verifique o "
+"README do repositório para mais detalhes de configuração."
+
+#~ msgid ""
+#~ "Download dojot's Locust implementation in "
+#~ "your machine directly from dojot's "
+#~ "repository and change to the "
+#~ "corresponding version of your dojot "
+#~ "environment:"
+#~ msgstr ""
+#~ "Para acessar a implementação do Locust,"
+#~ " baixe em sua máquina o repositório"
+#~ " da dojot e mude para a mesma"
+#~ " versão do seu ambiente atual:"
+
+#~ msgid "7"
+#~ msgstr ""
+
+#~ msgid "16GB"
+#~ msgstr ""
+
+#~ msgid "dojot-ejbca"
+#~ msgstr ""
+
+#~ msgid "12GB"
+#~ msgstr ""
+
+#~ msgid "dojot-main"
+#~ msgstr ""
+

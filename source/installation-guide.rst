@@ -10,7 +10,8 @@ This page contains information about how to deploy dojot using Docker Compose an
 Hardware requirements
 ---------------------
 
-The estimated hardware requirements for 500 devices with updates every 15s are:
+When choosing hardware configurations for Dojot *deployment*, the number of devices and the message interval they will be 
+configured with should be considered. As an example, the estimated hardware requirements for 500 devices with a message interval every 15s are:
 
 .. list-table:: Hardware requirements for 500 devices
    :header-rows: 1

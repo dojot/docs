@@ -6,14 +6,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dojot 0.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-09 21:28-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2020-12-08 18:55-0300\n"
+"PO-Revision-Date: 2020-12-08 18:25-0300\n"
+"Last-Translator: \n"
+"Language: pt_BR\n"
+"Language-Team: \n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.8.0\n"
+"Generated-By: Babel 2.9.0\n"
 
 #: ../../source/installation-guide.rst:2
 msgid "Installation Guide"
@@ -37,157 +39,164 @@ msgstr "Requisitos de hardware"
 
 #: ../../source/installation-guide.rst:13
 msgid ""
-"The estimated hardware requirements for 500 devices with updates every "
-"15s are:"
+"When choosing hardware configurations for Dojot *deployment*, the number "
+"of devices and the message interval they will be configured with should "
+"be considered. As an example, the estimated hardware requirements for 500"
+" devices with a message interval every 15s are:"
 msgstr ""
-"Os requisitos de hardware estimados para 500 dispositivos com "
-"atualizações a cada 15s são:"
 
-#: ../../source/installation-guide.rst:15
+#: ../../source/installation-guide.rst:16
 msgid "Hardware requirements for 500 devices"
 msgstr "Requisitos de hardware para 500 dispositivos"
 
-#: ../../source/installation-guide.rst:18
+#: ../../source/installation-guide.rst:19
 msgid "Deployment"
 msgstr "Implantação da dojot"
 
-#: ../../source/installation-guide.rst:20
+#: ../../source/installation-guide.rst:21
 msgid "CPU"
 msgstr ""
 
-#: ../../source/installation-guide.rst:21
+#: ../../source/installation-guide.rst:22
 msgid "RAM"
 msgstr ""
 
-#: ../../source/installation-guide.rst:22
+#: ../../source/installation-guide.rst:23
 msgid "Free disk space"
 msgstr "Espaço livre em disco"
 
-#: ../../source/installation-guide.rst:23
+#: ../../source/installation-guide.rst:24
 msgid "**Docker Compose**"
 msgstr "**Docker Compose**"
 
-#: ../../source/installation-guide.rst:25
-#: ../../source/installation-guide.rst:35
+#: ../../source/installation-guide.rst:26
+#: ../../source/installation-guide.rst:36
 msgid "4 Cores"
 msgstr "4 Núcleos"
 
-#: ../../source/installation-guide.rst:26
-#: ../../source/installation-guide.rst:36
+#: ../../source/installation-guide.rst:27
+#: ../../source/installation-guide.rst:37
 msgid "6GB"
 msgstr ""
 
-#: ../../source/installation-guide.rst:27
-#: ../../source/installation-guide.rst:37
+#: ../../source/installation-guide.rst:28
 msgid "20GB"
 msgstr ""
 
-#: ../../source/installation-guide.rst:28
-#: ../../source/installation-guide.rst:33
+#: ../../source/installation-guide.rst:29
+#: ../../source/installation-guide.rst:34
+#: ../../source/installation-guide.rst:39
 msgid "**Kubernetes**"
 msgstr "**Kubernetes**"
 
-#: ../../source/installation-guide.rst:29
+#: ../../source/installation-guide.rst:30
 msgid "Master"
 msgstr ""
 
-#: ../../source/installation-guide.rst:30
+#: ../../source/installation-guide.rst:31
 msgid "2 Cores"
 msgstr "2 Núcleos"
 
-#: ../../source/installation-guide.rst:31
 #: ../../source/installation-guide.rst:32
 msgid "2GB"
 msgstr ""
 
-#: ../../source/installation-guide.rst:34
+#: ../../source/installation-guide.rst:33
+msgid "30GB"
+msgstr ""
+
+#: ../../source/installation-guide.rst:35
 msgid "Worker"
 msgstr ""
 
-#: ../../source/installation-guide.rst:39
-msgid "Balancer"
+#: ../../source/installation-guide.rst:38
+msgid "40GB"
 msgstr ""
 
 #: ../../source/installation-guide.rst:40
+msgid "Balancer"
+msgstr ""
+
+#: ../../source/installation-guide.rst:41
 msgid "1 Core"
 msgstr "1 Núcleo"
 
-#: ../../source/installation-guide.rst:45
+#: ../../source/installation-guide.rst:42
+msgid "1GB"
+msgstr ""
+
+#: ../../source/installation-guide.rst:43
+msgid "10GB"
+msgstr ""
+
+#: ../../source/installation-guide.rst:46
 msgid "In addition, you need:"
 msgstr "Além disso, são necessários:"
 
-#: ../../source/installation-guide.rst:47
+#: ../../source/installation-guide.rst:48
 msgid "**Network access**"
 msgstr "**Acesso à rede**"
 
-#: ../../source/installation-guide.rst:49
+#: ../../source/installation-guide.rst:53
 msgid "The following ports should be opened for Docker Compose deployment:"
-msgstr "As seguintes portas devem estar abertas para a instalação com Docker Compose:"
+msgstr ""
+"As seguintes portas devem estar abertas para a instalação com Docker "
+"Compose:"
 
-#: ../../source/installation-guide.rst:50
+#: ../../source/installation-guide.rst:51
 msgid ""
 "**TCP**: 8000 *(web interface access)*; 1883 *(MQTT, If you are going to "
 "use MQTT)*; 5896 *(LWM2M, If you are going to use LWM2M file server via "
 "HTTP instead of coap, UDP)*."
 msgstr ""
-"**TCP**: 8000 *(acesso a interface web)*; 1883 *(MQTT, se você irá usar MQTT)*; "
-"5896 *(LWM2M, se você irá usar o serviço de arquivos LWM2M por HTTP ao invés do "
-"protocolo coap, UDP)*."
+"**TCP**: 8000 *(acesso a interface web)*; 1883 *(MQTT, se você irá usar "
+"MQTT)*; 5896 *(LWM2M, se você irá usar o serviço de arquivos LWM2M por "
+"HTTP ao invés do protocolo coap, UDP)*."
 
-#: ../../source/installation-guide.rst:51
+#: ../../source/installation-guide.rst:52
+#: ../../source/installation-guide.rst:57
 msgid ""
 "**TLS**: 8883 *(MQTTS, If you are going to use MQTT with TLS, in secure "
 "mode.)*."
-msgstr ""
-"**TLS**: 8883 *(MQTTS, se você irá usar MQTT com TLS, no modo seguro)*."
+msgstr "**TLS**: 8883 *(MQTTS, se você irá usar MQTT com TLS, no modo seguro)*."
 
-#: ../../source/installation-guide.rst:52
+#: ../../source/installation-guide.rst:53
+#: ../../source/installation-guide.rst:58
 msgid ""
-"**UDP**: 5683 and 5693 *(LWM2M, If you are going to use LWM2M)*; 5684 and "
-"5694 *(LWM2M, If you are going to use LWM2M with DTLS)*."
+"**UDP**: 5683 and 5693 *(LWM2M, If you are going to use LWM2M)*; 5684 and"
+" 5694 *(LWM2M, If you are going to use LWM2M with DTLS)*."
 msgstr ""
-"**UDP**: 5683 e 5693 *(LWM2M, se você irá usar LWM2M)*; 5684 e 5694 *(LWM2M, "
-"se você irá usar LWM2M com DTLS)*."
+"**UDP**: 5683 e 5693 *(LWM2M, se você irá usar LWM2M)*; 5684 e 5694 "
+"*(LWM2M, se você irá usar LWM2M com DTLS)*."
 
-#: ../../source/installation-guide.rst:54
-msgid "The following ports should be opened on load balancer for Kubernetes deployment:"
-msgstr "As seguintes portas devem estar abertas no balanceador de carga para a instalação com Kubernetes:"
+#: ../../source/installation-guide.rst:58
+msgid ""
+"The following ports should be opened on load balancer for Kubernetes "
+"deployment:"
+msgstr ""
+"As seguintes portas devem estar abertas no balanceador de carga para a "
+"instalação com Kubernetes:"
 
-#: ../../source/installation-guide.rst:55
+#: ../../source/installation-guide.rst:56
 msgid ""
 "**TCP**: 80 *(web interface access)*; 1883 *(MQTT, If you are going to "
 "use MQTT)*; 5896 *(LWM2M, If you are going to use LWM2M file server via "
 "HTTP instead of coap, UDP)*."
 msgstr ""
-"**TCP**: 80 *(acesso a interface web)*; 1883 *(MQTT, se você irá usar MQTT)*; "
-"5896 *(LWM2M, se você irá usar o serviço de arquivos LWM2M por HTTP ao invés do "
-"protocolo coap, UDP)*."
+"**TCP**: 80 *(acesso a interface web)*; 1883 *(MQTT, se você irá usar "
+"MQTT)*; 5896 *(LWM2M, se você irá usar o serviço de arquivos LWM2M por "
+"HTTP ao invés do protocolo coap, UDP)*."
 
-#: ../../source/installation-guide.rst:56
-msgid ""
-"**TLS**: 8883 *(MQTTS, If you are going to use MQTT with TLS, in secure "
-"mode.)*."
-msgstr ""
-"**TLS**: 8883 *(MQTTS, se você irá usar MQTT com TLS, no modo seguro)*."
-
-#: ../../source/installation-guide.rst:57
-msgid ""
-"**UDP**: 5683 and 5693 *(LWM2M, If you are going to use LWM2M)*; 5684 and "
-"5694 *(LWM2M, If you are going to use LWM2M with DTLS)*."
-msgstr ""
-"**UDP**: 5683 e 5693 *(LWM2M, se você irá usar LWM2M)*; 5684 e 5694 *(LWM2M, "
-"se você irá usar LWM2M com DTLS)*."
-
-
-#: ../../source/installation-guide.rst:59
+#: ../../source/installation-guide.rst:60
 msgid "Note: The above cores are approximately 3.5 GHz (x86-64)"
 msgstr "Nota: Os núcles acima são de aproximadamente 3.5 GHz (x86-64)"
 
-#: ../../source/installation-guide.rst:61
+#: ../../source/installation-guide.rst:63
+#: ../../source/installation-guide.rst:107
 msgid "Docker Compose"
 msgstr "Docker Compose"
 
-#: ../../source/installation-guide.rst:70
+#: ../../source/installation-guide.rst:71
 msgid ""
 "In this video tutorial above, version v0.4.2 is used, but the same video "
 "is valid for the current version, it is only necessary to change to "
@@ -197,17 +206,17 @@ msgstr ""
 " é válido para a versão atual, apenas é necessário mudar pra a versão "
 "v0.5.0"
 
-#: ../../source/installation-guide.rst:72
+#: ../../source/installation-guide.rst:73
 msgid ""
 "This document provides instructions on how to create a trivial deployment"
-" environment on single host for *dojot*, using Compose as the "
-"processes orchestration platform."
+" environment on single host for *dojot*, using Compose as the processes "
+"orchestration platform."
 msgstr ""
 "Este documento contém instruções de como criar um ambiente para "
-"instalação trivial da dojot em um único host utilizando o Compose "
-"como o processo de orquestração da plataforma."
+"instalação trivial da dojot em um único host utilizando o Compose como o "
+"processo de orquestração da plataforma."
 
-#: ../../source/installation-guide.rst:76
+#: ../../source/installation-guide.rst:77
 msgid ""
 "While very simple, this deployment option is best suited to development "
 "and assessment of the platform and should not be used for production "
@@ -217,24 +226,25 @@ msgstr ""
 "desenvolvimento e verificação da plataforma dojot, mas não é aconselhável"
 " para ambientes de produção."
 
-#: ../../source/installation-guide.rst:79
+#: ../../source/installation-guide.rst:80
 msgid "This guide has been checked on an Ubuntu 18.04 LTS environment."
 msgstr ""
-"Este guia foi verificado utilizando-se o sistema operacional Ubuntu 18.04 LTS."
+"Este guia foi verificado utilizando-se o sistema operacional Ubuntu 18.04"
+" LTS."
 
-#: ../../source/installation-guide.rst:81
+#: ../../source/installation-guide.rst:82
 msgid "The following sections describe all Docker Compose dependencies."
 msgstr "As seções seguintes descrevem todas as dependências do Docker Compose."
 
-#: ../../source/installation-guide.rst:83
+#: ../../source/installation-guide.rst:85
 msgid "Docker Engine"
 msgstr "Docker Engine (motor do Docker)"
 
-#: ../../source/installation-guide.rst:86
+#: ../../source/installation-guide.rst:87
 msgid "This guide has been checked using Docker Engine 19.03"
 msgstr "Este guia foi verificado utilizando o Docker Engine na versão 19.03"
 
-#: ../../source/installation-guide.rst:88
+#: ../../source/installation-guide.rst:89
 msgid ""
 "Up to date information and installation procedures for the Docker Engine "
 "can be found at the project's documentation:"
@@ -242,11 +252,11 @@ msgstr ""
 "Informações atualizadas e procedimentos de instalação para o Docker "
 "Engine podem ser encontrados na documentação do projeto:"
 
-#: ../../source/installation-guide.rst:91
+#: ../../source/installation-guide.rst:92
 msgid "https://docs.docker.com/engine/install/ubuntu/"
 msgstr ""
 
-#: ../../source/installation-guide.rst:95
+#: ../../source/installation-guide.rst:96
 msgid ""
 "An optional step on the installation and configuration process of Docker "
 "on any given machine is the setting of who is eligible for "
@@ -256,46 +266,43 @@ msgstr ""
 "um determinado equipamento é definir quem será elegível para "
 "criar/iniciar instâncias do Docker."
 
-#: ../../source/installation-guide.rst:99
+#: ../../source/installation-guide.rst:100
 msgid ""
 "Should the post-installation steps (more specifically the \"Manage Docker"
-" as non-root user\") have not been run, all Docker and Compose "
-"commands should be run by the super user (root), or as sudo."
+" as non-root user\") have not been run, all Docker and Compose commands "
+"should be run by the super user (root), or as sudo."
 msgstr ""
 "Caso os passos pós-instalação não tiverem sido executados (mais "
 "especificamente o \"Manage Docker como usuário não-root\"), todos os "
-"comandos do Docker e do Compose devem ser executados pelo super "
-"usuário (root), ou invocando o sudo."
+"comandos do Docker e do Compose devem ser executados pelo super usuário "
+"(root), ou invocando o sudo."
 
-#: ../../source/installation-guide.rst:103
+#: ../../source/installation-guide.rst:104
+#: ../../source/installation-guide.rst:170
 msgid "https://docs.docker.com/engine/installation/linux/linux-postinstall/"
 msgstr ""
 
-#: ../../source/installation-guide.rst:105
-msgid "Docker Compose"
-msgstr "Docker Compose"
-
-#: ../../source/installation-guide.rst:108
+#: ../../source/installation-guide.rst:109
 msgid "This guide has been checked using Compose 1.27"
 msgstr "Este guia foi verificado utilizando o Compose na versão 1.27"
 
-#: ../../source/installation-guide.rst:110
+#: ../../source/installation-guide.rst:111
 msgid ""
-"Up to date information and installation procedures for the Compose"
-" can be found at the project's documentation:"
+"Up to date information and installation procedures for the Compose can be"
+" found at the project's documentation:"
 msgstr ""
-"Informações atualizadas sobre procedimentos de instalação para o "
-"Compose podem ser encontradas na documentação do projeto:"
+"Informações atualizadas sobre procedimentos de instalação para o Compose "
+"podem ser encontradas na documentação do projeto:"
 
-#: ../../source/installation-guide.rst:113
+#: ../../source/installation-guide.rst:114
 msgid "https://docs.docker.com/compose/install/"
 msgstr ""
 
-#: ../../source/installation-guide.rst:116
+#: ../../source/installation-guide.rst:118
 msgid "Installation"
 msgstr "Instalação"
 
-#: ../../source/installation-guide.rst:119
+#: ../../source/installation-guide.rst:120
 msgid ""
 "To setup the environment, merely clone the deployment repository and run "
 "the commands below."
@@ -303,7 +310,7 @@ msgstr ""
 "Para construir o ambiente, simplesmente clone o repositório e execute os "
 "comandos abaixo."
 
-#: ../../source/installation-guide.rst:122
+#: ../../source/installation-guide.rst:123
 msgid ""
 "The Docker Compose enabled deployment scripts and configuration "
 "repository can be found at:"
@@ -311,33 +318,33 @@ msgstr ""
 "O repositório com os scripts de instalação e configuração do Docker "
 "Compose pode ser encontrados em:"
 
-#: ../../source/installation-guide.rst:125
+#: ../../source/installation-guide.rst:126
 msgid "https://github.com/dojot/docker-compose"
 msgstr ""
 
-#: ../../source/installation-guide.rst:127
+#: ../../source/installation-guide.rst:128
 msgid "or as git clone command: ::"
 msgstr "ou com o comando git clone:"
 
-#: ../../source/installation-guide.rst:134
+#: ../../source/installation-guide.rst:135
 msgid ""
 "Once the repository is properly cloned, select the version to be used by "
 "checking out the appropriate tag (do notice that the tag_name has to be "
 "replaced): ::"
 msgstr ""
 "Uma vez que o repositório esteja propriamente clonado, selecione a versão"
-" a ser utilizada por meio da tag apropriada (note que o tag_name deve ser "
-"substituído): ::"
+" a ser utilizada por meio da tag apropriada (note que o tag_name deve ser"
+" substituído): ::"
 
-#: ../../source/installation-guide.rst:142
+#: ../../source/installation-guide.rst:143
 msgid "For instance: ::"
 msgstr "Por exemplo: ::"
 
-#: ../../source/installation-guide.rst:147
+#: ../../source/installation-guide.rst:148
 msgid "That done, the environment can be brought up by: ::"
 msgstr "Feito isso, o ambiente pode ser iniciado assim: ::"
 
-#: ../../source/installation-guide.rst:154
+#: ../../source/installation-guide.rst:155
 msgid ""
 "To check individual container status, Docker's commands may be used, for "
 "instance: ::"
@@ -345,13 +352,13 @@ msgstr ""
 "Para verificar o estado de um container individual, comandos do Docker "
 "podem ser utilizados, como por exemplo: ::"
 
-#: ../../source/installation-guide.rst:165
+#: ../../source/installation-guide.rst:166
 msgid "All Docker, Docker Compose commands may need sudo to work."
 msgstr ""
 "Todos os comandos para Docker e Docker Compose podem requerer credenciais"
 " de super usuário (root) ou sudo."
 
-#: ../../source/installation-guide.rst:167
+#: ../../source/installation-guide.rst:168
 msgid ""
 "To allow non-root users to manage Docker, please check Docker's "
 "documentation:"
@@ -359,55 +366,61 @@ msgstr ""
 "Para permitir usuários \"não-root\" gerenciar o Docker, confira a "
 "documentação do Docker:"
 
-#: ../../source/installation-guide.rst:171
+#: ../../source/installation-guide.rst:173
 msgid "Volumes"
 msgstr "Volumes"
 
-#: ../../source/installation-guide.rst:174
+#: ../../source/installation-guide.rst:175
 msgid ""
-"When we deploy dojot with the command 'docker-compose up -d' the volumes are enabled and created "
-"by default."
+"When we deploy dojot with the command 'docker-compose up -d' the volumes "
+"are enabled and created by default."
 msgstr ""
-"Quando fazemos o deploy da dojot com o comando 'docker-compose up -d', por padrão, os volumes são "
-"habilitados e criados."
+"Quando fazemos o deploy da dojot com o comando 'docker-compose up -d', "
+"por padrão, os volumes são habilitados e criados."
 
-#: ../../source/installation-guide.rst:177
+#: ../../source/installation-guide.rst:178
 msgid ""
-"The volumes of microservices that Dojot uses can be incompatible between dojot versions. This means "
-"that you are unable to use dojot v0.4.x volumes in dojot v0.5.0 and vice versa."
+"The volumes of microservices that Dojot uses can be incompatible between "
+"dojot versions. This means that you are unable to use dojot v0.4.x "
+"volumes in dojot v0.5.0 and vice versa."
 msgstr ""
-"Os volumes dos microsserviços que a dojot utiliza podem ser incompatíveis entre as versões da dojot. Isso "
-"significa que não é possível usar os volumes da dojot v0.4.x na dojot v0.5.0 e vice versa"
+"Os volumes dos microsserviços que a dojot utiliza podem ser incompatíveis"
+" entre as versões da dojot. Isso significa que não é possível usar os "
+"volumes da dojot v0.4.x na dojot v0.5.0 e vice versa"
 
 #: ../../source/installation-guide.rst:181
 msgid ""
-"To use different versions of dojot in the same environment, you must first drop the volumes of the other version."
+"To use different versions of dojot in the same environment, you must "
+"first drop the volumes of the other version."
 msgstr ""
-"Para usar diferentes versões da dojot no mesmo ambiente, você primeiramente deve derrubar os volumes da outra versão."
+"Para usar diferentes versões da dojot no mesmo ambiente, você "
+"primeiramente deve derrubar os volumes da outra versão."
 
 #: ../../source/installation-guide.rst:185
 msgid ""
-"If you drop the dojot volumes you will also lose all data that you have collected on the platform "
-"so far."
+"If you drop the dojot volumes you will also lose all data that you have "
+"collected on the platform so far."
 msgstr ""
-"Se você derrubar os volumes da dojot, você perderá totos os dados coletados na plataforma até o momento."
+"Se você derrubar os volumes da dojot, você perderá totos os dados "
+"coletados na plataforma até o momento."
 
 #: ../../source/installation-guide.rst:188
 msgid ""
-"To drop the volumes just pass the '-v' parameter in the 'docker-compose down' command as "
-"displayed below: ::"
+"To drop the volumes just pass the '-v' parameter in the 'docker-compose "
+"down' command as displayed below: ::"
 msgstr ""
-"Para derrubar os volumes basta passar o parâmetro '-v' no comando 'docker-compose down' "
-"como exibido abaixo:"
+"Para derrubar os volumes basta passar o parâmetro '-v' no comando "
+"'docker-compose down' como exibido abaixo:"
 
 #: ../../source/installation-guide.rst:193
 msgid ""
-"That way volumes and dojot will be dropped and you will be able to deploy a different dojot version."
+"That way volumes and dojot will be dropped and you will be able to deploy"
+" a different dojot version."
 msgstr ""
-"Dessa forma, a dojot e os volumes serão derrubados e você será capaz de fazer deploy de uma versão "
-"diferente da dojot."
+"Dessa forma, a dojot e os volumes serão derrubados e você será capaz de "
+"fazer deploy de uma versão diferente da dojot."
 
-#: ../../source/installation-guide.rst:195
+#: ../../source/installation-guide.rst:196
 msgid "Usage"
 msgstr "Utilização"
 
@@ -429,24 +442,41 @@ msgstr ""
 "Leia o :doc:`using-api-interface` e :doc:`using-web-interface` para "
 "maiores informações sobre como interagir com a plataforma dojot."
 
-#: ../../source/installation-guide.rst:205
+#: ../../source/installation-guide.rst:206
 msgid "Kubernetes"
 msgstr "Kubernetes"
 
 #: ../../source/installation-guide.rst:208
-msgid ""
-"For installation with kubernetes please check the pdf below."
-msgstr ""
-"Para a instalação com kubernetes por favor, verifique o pdf abaixo"
+msgid "For installation with kubernetes please check the pdf below."
+msgstr "Para a instalação com kubernetes por favor, verifique o pdf abaixo"
 
 #: ../../source/installation-guide.rst:210
+#, fuzzy
 msgid ""
-"click here to access the dojot installation guide with kubernetes"
-msgstr ""
-"Clique aqui para acessar o guia de instalação da dojot com kubernetes"
+":download:`click here to access the dojot installation guide with "
+"kubernetes <pdf/Dojot-Installation-Guide.pdf>`"
+msgstr "Clique aqui para acessar o guia de instalação da dojot com kubernetes"
 
 #: ../../source/installation-guide.rst:214
 msgid ""
-"Unfortunately in this tutorial we do not have support for the English language yet."
+"Unfortunately in this tutorial we do not have support for the English "
+"language yet."
 msgstr ""
-"Infelizmente ainda não possuimos suporte para língua inglesa nesse tutorial"
+"Infelizmente ainda não possuimos suporte para língua inglesa nesse "
+"tutorial"
+
+#~ msgid ""
+#~ "The estimated hardware requirements for "
+#~ "500 devices with updates every 15s "
+#~ "are:"
+#~ msgstr ""
+#~ "Para a escolha das configurações de "
+#~ "hardware para o *deployment* da Dojot"
+#~ " devem ser considerados principalmente a"
+#~ " quantidade de dispositivos e o "
+#~ "intervalo de mensagens que eles irão "
+#~ "estar configurados. Como exemplo, os "
+#~ "requisitos de hardware estimados para "
+#~ "500 dispositivos com intervalo de "
+#~ "mensagens a cada 15s são:"
+

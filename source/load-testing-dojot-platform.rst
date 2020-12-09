@@ -16,8 +16,8 @@ Setting the environment up
 First of all, you will need a running dojot environment. Check the :doc:`./installation-guide` for
 more info.
 
-Download dojot's Locust implementation in your machine directly from dojot's repository and change
-to the corresponding version of your dojot environment:
+To access the Locust implementation, download the dojot repository on your machine and switch to 
+the same version as your current environment:
 
 .. code:: shell
 
@@ -35,10 +35,9 @@ Enter in Locust directory:
 Running a simple test
 ---------------------
 
-In this section, will be shown how to configure and run Locust and generate certs script in order
-to execute the load test. This is a simple test where will be created 100 clients to send messages
-to dojot.
-
+In this section, it will be shown how to configure and run Locust, and also how to generate 
+certificates with the generate_certs script in order to execute the load test. This is a simple 
+test where will be created 100 clients to send messages to dojot.
 
 Configuration
 ^^^^^^^^^^^^^
@@ -90,8 +89,7 @@ variables:
 Generating the certificates
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-As said before, the communication from Locust to dojot is secure, so there is the need to create
-certificates.
+As said before, the communication from Locust to dojot is secure, then, it is necessary to use certificates.
 
 There are two ways of simulating devices: you can create fake devices (will not show up in
 dojot's GUI) or real devices. In this part of the tutorial, we will create real devices, so you can
@@ -278,8 +276,8 @@ variables:
   REDIS_PORT: "6379"
 
 
-As you can see, the configurations changed a little bit, with the changes being only about the
-master and Redis location.
+As you can see, the configurations have changed a little bit, with the changes 
+being only about the master and Redis location.
 
 
 Generating certificates
@@ -295,9 +293,7 @@ Before running the script, we need to initialize the Locust master. Inside Locus
 
   docker-compose -f Docker/docker-compose-master.yml up
 
-
-After its initialization, initialize the ``generate_certs`` script docker compose in the **primary**
-machine and go inside it:
+After its initialization, initialize the docker compose ``generate_certs`` script in the **primary** machine and enter in it:
 
 .. code:: shell
 
@@ -361,9 +357,8 @@ Type ``1000`` in ``Number of users to simulate``, ``10`` in ``Hatch rate`` and c
 Using Grafana's Locust dashboard
 --------------------------------
 
-The Locust web interface is easy to use and simple, but there are some downsides. The major one is
-the persistence: it does not store any data if you exit the page, even refreshing it removes all of
-its history.
+The Locust web interface is easy and simple to use, but there are some downsides. The major 
+one is the persistence: The history data will be deleted as soon as you close or refresh the page.
 
 To solve this problem, we chose to add the Locust Exporter image to the master docker compose file,
 allowing us to export all of its metrics in a Prometheus-compatible format. That way we can persist
@@ -430,17 +425,19 @@ For dojot platform:
 +---------------+--------------------------+------+------+
 | Machine name  | Hosted services          | CPU  | RAM  |
 +===============+==========================+======+======+
-| dojot-verne-1 | VerneMQ, K2V and V2K     | 7    | 16GB |
+| dojot-verne-1 | VerneMQ, K2V and V2K     | 8    | 8GB  |
 +---------------+--------------------------+------+------+
-| dojot-verne-2 | VerneMQ, K2V and V2K     | 7    | 16GB |
+| dojot-verne-2 | VerneMQ, K2V and V2K     | 8    | 8GB  |
 +---------------+--------------------------+------+------+
-| dojot-verne-3 | VerneMQ, K2V and V2K     | 7    | 16GB |
+| dojot-verne-3 | VerneMQ, K2V and V2K     | 8    | 8GB  |
 +---------------+--------------------------+------+------+
-| dojot-ejbca   | x509 identity manager    | 6    | 8GB  |
+| dojot-x509    | x509 identity manager    | 4    | 4GB  |
 +---------------+--------------------------+------+------+
-| dojot-kafka   | Kafka and Zookeeper      | 6    | 12GB |
+| dojot-kafka   | Kafka and Zookeeper      | 6    | 6GB  |
 +---------------+--------------------------+------+------+
-| dojot-main    | The rest of the services | 6    | 8GB  |
+| dojot-dojot   | The rest of the services | 4    | 4GB  |
++---------------+--------------------------+------+------+
+| haproxy       | Load balancer            | 4    | 4GB  |
 +---------------+--------------------------+------+------+
 
 For Locust, we will use 5 replicas of the same machine, with **14GB** of RAM and **9** CPUs.

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dojot 0.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-11 10:07-0300\n"
+"POT-Creation-Date: 2020-12-04 16:39-0300\n"
 "PO-Revision-Date: 2020-09-14 11:33-0300\n"
 "Last-Translator: \n"
 "Language: pt_BR\n"
@@ -16,7 +16,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.4.0\n"
+"Generated-By: Babel 2.9.0\n"
 
 #: ../../source/components-and-apis.rst:2
 msgid "Components and APIs"
@@ -244,7 +244,7 @@ msgid "`GitHub - GUI`_"
 msgstr ""
 
 #: ../../source/components-and-apis.rst:74
-msgid "Gui-v2"
+msgid "GUI - V2"
 msgstr ""
 
 #: ../../source/components-and-apis.rst:75
@@ -409,8 +409,9 @@ msgstr ""
 "APIs em :doc:`./using-api-interface`."
 
 #: ../../source/components-and-apis.rst:133
-msgid "*Exposed* endpoints"
-msgstr "*Endpoints* expostos"
+#, fuzzy
+msgid "Exposed endpoints"
+msgstr "Endpoints expostos"
 
 #: ../../source/components-and-apis.rst
 msgid "Exposed endpoint"
@@ -972,4 +973,10 @@ msgstr ""
 
 #~ msgid "`_GitHub - V2`_"
 #~ msgstr ""
+
+#~ msgid "Gui-v2"
+#~ msgstr ""
+
+#~ msgid "*Exposed* endpoints"
+#~ msgstr "*Endpoints* expostos"
 
