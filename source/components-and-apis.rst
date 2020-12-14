@@ -333,7 +333,7 @@ TCP port 8000), see the following table.
 Libraries
 --------------
 
-Dojot also has several libraries used used in their own components. These libraries are listed below:
+Dojot also has several libraries used in their own components. These libraries are listed below:
 
 .. list-table:: Libraries Componentes by Language
    :header-rows: 1
