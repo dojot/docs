@@ -330,7 +330,49 @@ TCP port 8000), see the following table.
      - host:8080/v1/topics
      - host:8000/kafka-ws/v1/topics
 
-     
+Libraries
+--------------
+
+Dojot also has several libraries used used in their own components. These libraries are listed below:
+
+.. list-table:: Libraries Componentes by Language
+   :header-rows: 1
+
+   * - Components
+     - Language
+     - Libraries
+   * - Module
+     - Python
+     - | https://github.com/dojot/dojot-module-python 
+       | https://pypi.org/project/dojot.module/
+   * - Module
+     - Java
+     - | https://github.com/dojot/dojot-module-java
+       | https://jitpack.io/#dojot/dojot-module-java
+   * - Module
+     - Node JS
+     - | https://github.com/dojot/dojot-module-nodejs
+       | https://www.npmjs.com/package/@dojot/dojot-module
+   * - IoT Agent
+     - Java
+     - | https://github.com/dojot/iotagent-java
+       | https://jitpack.io/#dojot/iotagent-java
+   * - IoT Agent
+     - Node JS
+     - | https://github.com/dojot/iotagent-nodejs
+       | https://www.npmjs.com/package/@dojot/iotagent-nodejs
+   * - Module Logger
+     - Node JS
+     - | https://github.com/dojot/dojot-module-logger-nodejs
+       | https://www.npmjs.com/package/@dojot/dojot-module-logger
+   * - Helthcheck
+     - Node JS
+     - | https://github.com/dojot/healthcheck-nodejs
+       | https://www.npmjs.com/package/@dojot/healthcheck
+   * - Microservice SDK
+     - Node JS
+     - | https://github.com/dojot/dojot-microservice-sdk-js
+       | https://www.npmjs.com/package/@dojot/microservice-sdk
 
 Kafka messages
 --------------
