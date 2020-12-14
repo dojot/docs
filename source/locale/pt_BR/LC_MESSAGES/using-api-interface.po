@@ -173,7 +173,7 @@ msgstr "Que deve retornar:"
 
 #: ../../source/using-api-interface.rst:219
 msgid "Sending messages"
-msgstr "Publicando mensagens"
+msgstr "Enviando mensagens"
 
 #: ../../source/using-api-interface.rst:221
 msgid ""
