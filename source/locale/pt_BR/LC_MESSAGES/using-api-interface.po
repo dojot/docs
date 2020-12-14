@@ -176,7 +176,6 @@ msgid "Sending messages"
 msgstr "Publicando mensagens"
 
 #: ../../source/using-api-interface.rst:221
-#, fuzzy
 msgid ""
 "So far we got an access token and created a template and a device based on it. "
 "In an actual deployment, the physical device would publish messages to dojot "
@@ -254,7 +253,6 @@ msgid "Using VerneMQ"
 msgstr "Usando o VerneMQ"
 
 #: ../../source/using-api-interface.rst:259
-#, fuzzy
 msgid "Let's publish the following message:"
 msgstr "A requisição deve resultar na seguinte mensagem:"
 
@@ -264,7 +262,6 @@ msgid "If there is no output, the message was sent to MQTT broker."
 msgstr "Se não houver saída (output), a mensagem foi enviada ao *broker* MQTT."
 
 #: ../../source/using-api-interface.rst:268
-#, fuzzy
 msgid ""
 "Note that we publish a message with the parameter ``-q 1``. This means that the "
 "message will use QoS 1, i.e., the message is guaranteed to be sent at least one "
@@ -275,7 +272,6 @@ msgstr ""
 "da mensagem."
 
 #: ../../source/using-api-interface.rst:272
-#, fuzzy
 msgid ""
 "**Also you can publish a configuration message from dojot to the device to "
 "change some of its attributes. The target attribute must be of type “actuator”."
@@ -293,7 +289,6 @@ msgstr ""
 "``mosquitto_sub``:"
 
 #: ../../source/using-api-interface.rst:281
-#, fuzzy
 msgid "Triggering the publishing of the message from the dojot to the device."
 msgstr "Disparando a publicação da mensagem da dojot para o dispositivo."
 
@@ -407,7 +402,6 @@ msgid "Checking historical data"
 msgstr "Conferindo dados históricos"
 
 #: ../../source/using-api-interface.rst:376
-#, fuzzy
 msgid ""
 "In order to check all values that were published from a device for a particular "
 "attribute, you could use the history api, see more in :doc:`components-and-"
@@ -420,7 +414,6 @@ msgstr ""
 "dojot para que possamos conseguir resultados um pouco mais interessantes:"
 
 #: ../../source/using-api-interface.rst:387
-#, fuzzy
 msgid "To retrieve all values published for temperature attribute of this device:"
 msgstr ""
 "Para recuperar todos os valores publicados do atributo ``temperature`` desse "
