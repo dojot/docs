@@ -215,7 +215,6 @@ msgid "After you create the template with the Firmware management option enabled
 msgstr "Após criar o modelo com a opção de gerenciamento de firmware habilitada, é preciso associá-lo a um dispositivo. Assim é possível transferir uma imagem e aplicá-la no dispositivo, conforme o vídeo abaixo:"
 
 #: ../../source/using-web-interface.rst:244
-#, fuzzy
 msgid "Note that in each step, the status and result of image processing are shown."
 msgstr "Observe que em cada etapa, o status e o resultado do processamento da imagem são mostrados."
 
