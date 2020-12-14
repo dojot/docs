@@ -451,7 +451,6 @@ msgid "For installation with kubernetes please check the pdf below."
 msgstr "Para a instalação com kubernetes por favor, verifique o pdf abaixo"
 
 #: ../../source/installation-guide.rst:210
-#, fuzzy
 msgid ""
 ":download:`click here to access the dojot installation guide with "
 "kubernetes <pdf/Dojot-Installation-Guide.pdf>`"

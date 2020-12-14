@@ -233,7 +233,6 @@ msgstr ""
 "específico e detectar o estado do dispositivo."
 
 #: ../../source/iotagent-architecture.rst:81
-#, fuzzy
 msgid ""
 "An extra feature that an IoT agent might implement is firmware updates. "
 "Depending on its underlying protocol, it might be possible to do such "
@@ -917,7 +916,6 @@ msgid "Libraries to assist the development of new IotAgents"
 msgstr "Bibliotecas para auxiliar no desenvolvimento de novos agentes IoT"
 
 #: ../../source/iotagent-architecture.rst:518
-#, fuzzy
 msgid ""
 "We have libraries that abstract some points described in previous topics "
 "to facilitate the development of an IotAgent."

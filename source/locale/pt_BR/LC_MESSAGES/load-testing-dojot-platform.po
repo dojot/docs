@@ -69,7 +69,6 @@ msgid "Running a simple test"
 msgstr "Rodando um teste simples"
 
 #: ../../source/load-testing-dojot-platform.rst:38
-#, fuzzy
 msgid ""
 "In this section, it will be shown how to configure and run Locust, and "
 "also how to generate certificates with the generate_certs script in order"
@@ -145,7 +144,6 @@ msgid "Generating the certificates"
 msgstr "Gerando os certificados"
 
 #: ../../source/load-testing-dojot-platform.rst:92
-#, fuzzy
 msgid ""
 "As said before, the communication from Locust to dojot is secure, then, "
 "it is necessary to use certificates."
@@ -373,7 +371,6 @@ msgstr ""
 " mude as seguintes variáveis de ambiente:"
 
 #: ../../source/load-testing-dojot-platform.rst:279
-#, fuzzy
 msgid ""
 "As you can see, the configurations have changed a little bit, with the "
 "changes being only about the master and Redis location."
@@ -402,7 +399,6 @@ msgstr ""
 "da pasta do Locust na máquina primária, rode:"
 
 #: ../../source/load-testing-dojot-platform.rst:296
-#, fuzzy
 msgid ""
 "After its initialization, initialize the docker compose "
 "``generate_certs`` script in the **primary** machine and enter in it:"
@@ -484,7 +480,6 @@ msgid "Using Grafana's Locust dashboard"
 msgstr "Usando o dashboard do Locust no Grafana"
 
 #: ../../source/load-testing-dojot-platform.rst:360
-#, fuzzy
 msgid ""
 "The Locust web interface is easy and simple to use, but there are some "
 "downsides. The major one is the persistence: The history data will be "

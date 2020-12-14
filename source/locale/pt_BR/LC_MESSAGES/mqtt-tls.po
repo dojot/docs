@@ -314,7 +314,6 @@ msgstr ""
 "Management`_."
 
 #: ../../source/mqtt-tls.rst:130
-#, fuzzy
 msgid "A brief explanation of how to use `CertReq`_"
 msgstr "Uma breve explicação de como usar `CertReq`_"
 

@@ -126,7 +126,6 @@ msgstr ""
 "melhorias e aqui também existem códigos de alguns componentes."
 
 #: ../../source/faq/faq.rst:49
-#, fuzzy
 msgid ""
 "`<https://github.com/dojot/docker-compose>`_: repository with the files "
 "and settings"
@@ -141,7 +140,6 @@ msgid ""
 msgstr ""
 
 #: ../../source/faq/faq.rst:53
-#, fuzzy
 msgid ""
 "`<https://github.com/dojot/ansible-dojot>`_: repository with files and "
 "settings to perform"
@@ -423,7 +421,6 @@ msgstr ""
 "existem alguns pontos a se ter em mente:"
 
 #: ../../source/faq/faq.rst:216
-#, fuzzy
 msgid ""
 "When using Mosca, the topic should look like ``/<tenant>/<device-"
 "id>/attrs`` (e.g.: ``/admin/efac/attrs``). Depending on how IoT agent "
@@ -794,7 +791,6 @@ msgid "How can I add a new node type to its menu?"
 msgstr "Como eu posso adicionar um novo tipo de nó no menu?"
 
 #: ../../source/faq/faq.rst:419
-#, fuzzy
 msgid ""
 "There is a tutorial on how to add new nodes and two examples of node too,"
 " check the `GitHub flowbroker repository`_ for more details."

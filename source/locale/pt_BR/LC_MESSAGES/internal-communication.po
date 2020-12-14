@@ -315,7 +315,6 @@ msgid "Auth + API gateway (Kong)"
 msgstr ""
 
 #: ../../source/internal-communication.rst:283
-#, fuzzy
 msgid ""
 "Auth is a service deeply connected to Kong. It is responsible for user "
 "management, authentication and authorization. As such, it is invoked by Kong "
@@ -359,7 +358,6 @@ msgstr ""
 "registrar *endpoints* no Kong, tal como:"
 
 #: ../../source/internal-communication.rst:316
-#, fuzzy
 msgid ""
 "These commands will register the endpoint `/device/*/latest` and `/subscription` "
 "and all requests to it are going to be forwarded to `http://data-broker:80`. You "
@@ -388,7 +386,6 @@ msgstr ""
 "plugin page`_."
 
 #: ../../source/internal-communication.rst:326
-#, fuzzy
 msgid ""
 "Configures a plugin which will forward all policies requests to Auth in order to "
 "authenticate requests. This plugin is available inside the `Kong repository`_."
@@ -521,7 +518,6 @@ msgid "Persister"
 msgstr ""
 
 #: ../../source/internal-communication.rst:456
-#, fuzzy
 msgid ""
 "Persister is a very simple service which only purpose is to receive messages "
 "from devices (using ``device-data`` subject) and store them into MongoDB. For "
