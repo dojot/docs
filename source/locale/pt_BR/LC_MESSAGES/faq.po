@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dojot 0.0.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-12-08 18:55-0300\n"
-"PO-Revision-Date: 2020-12-14 11:08-0300\n"
+"PO-Revision-Date: 2020-12-14 16:30-0300\n"
 "Last-Translator: \n"
 "Language: pt_BR\n"
 "Language-Team: \n"
@@ -61,7 +61,7 @@ msgstr ""
 
 #: ../../source/faq/faq.rst:28
 msgid "The dojot acts as a facilitating platform with:"
-msgstr ""
+msgstr "A dojot atua como uma plataforma facilitadora com:"
 
 #: ../../source/faq/faq.rst:30
 msgid "Open APIs which makes the access to the platform resources easy."
