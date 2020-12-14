@@ -266,7 +266,7 @@ Let's publish the following message:
 If there is no output, the message was sent to MQTT broker.
 
 Note that we publish a message with the parameter ``-q 1``. This means that the message will use QoS 1,
-i.e., the message is guaranteed to be sent at least one time.
+i.e., the message is guaranteed to be send at least one time.
 
 
 **Also you can publish a configuration message from dojot to the device to change some of its attributes.
@@ -278,7 +278,7 @@ To simulate receiving the message on a device, we can use ``mosquitto_sub``:
 
   mosquitto_sub -h localhost -p 1883 -u admin:0998 -t admin:0998/config -q 1
 
-Triggering the publishing of the message from the dojot to the device.
+Triggering the sending of the message from the dojot to the device.
 
 .. code-block:: bash
 
@@ -373,7 +373,7 @@ As noted in the :doc:`../faq/faq`, there are some considerations regarding MQTT 
 Checking historical data
 ------------------------
 
-In order to check all values that were published from a device for a particular
+In order to check all values that were sent from a device for a particular
 attribute, you could use the history api, see more in :doc:`components-and-apis`.
 Let's first send a few other values to dojot so we can get a few more interesting results:
 
@@ -384,7 +384,7 @@ Let's first send a few other values to dojot so we can get a few more interestin
   mosquitto_pub -h localhost -p 1883 -u admin:0998 -t admin:0998/attrs -m '{"temperature": 10.6}' -q 1
 
 
-To retrieve all values published for temperature attribute of this device:
+To retrieve all values sent for temperature attribute of this device:
 
 .. code-block:: bash
 
