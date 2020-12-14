@@ -409,7 +409,6 @@ msgstr ""
 "APIs em :doc:`./using-api-interface`."
 
 #: ../../source/components-and-apis.rst:133
-#, fuzzy
 msgid "Exposed endpoints"
 msgstr "Endpoints expostos"
 
