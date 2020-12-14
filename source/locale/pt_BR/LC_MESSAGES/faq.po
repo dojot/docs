@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dojot 0.0.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-12-08 18:55-0300\n"
-"PO-Revision-Date: 2020-12-14 11:06-0300\n"
+"PO-Revision-Date: 2020-12-14 11:08-0300\n"
 "Last-Translator: \n"
 "Language: pt_BR\n"
 "Language-Team: \n"
@@ -146,7 +146,7 @@ msgstr ""
 
 #: ../../source/faq/faq.rst:54
 msgid "dojot in * Kubernetes * environment."
-msgstr ""
+msgstr "dojot no ambiente * Kubernetes *."
 
 #: ../../source/faq/faq.rst:56
 msgid ""
