@@ -79,7 +79,6 @@ msgstr ""
 "aberto, e outros projetados e implementados pela equipe dojot."
 
 #: ../../source/architecture.rst:34
-#, fuzzy
 msgid ""
 "Using dojot is as follows: a user configures IoT devices through the GUI "
 "or directly using the REST APIs provided by the API Gateway. Data "
@@ -99,7 +98,6 @@ msgstr ""
 "leituras para dojot, um usuário pode:"
 
 #: ../../source/architecture.rst:41
-#, fuzzy
 msgid "receive these readings in real time by socket.io or websocket channels;"
 msgstr "receber essas leituras em tempo real pelos canais *socket.io*;"
 
@@ -128,7 +126,6 @@ msgstr ""
 "bem."
 
 #: ../../source/architecture.rst:51
-#, fuzzy
 msgid ""
 "The tenant contexts are isolated and there are no data sharing, the "
 "access credentials are validated by the authorization service for each "
@@ -196,7 +193,6 @@ msgstr ""
 "responsabilidade, simplicidade e assim por diante)."
 
 #: ../../source/architecture.rst:78
-#, fuzzy
 msgid ""
 "In Kafka, a specialized topics structure is used to insure isolation "
 "among different tenants and applications data, enabling a multi-tenant "
@@ -237,7 +233,6 @@ msgstr ""
 " interessados através do Kafka."
 
 #: ../../source/architecture.rst:94
-#, fuzzy
 msgid ""
 "This service is stateless, having its data persisted to a database, with "
 "data isolation for tenants and applications, making possible a multi-"
