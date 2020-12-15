@@ -269,7 +269,7 @@ Note that we publish a message with the parameter ``-q 1``. This means that the 
 i.e., the message is guaranteed to be send at least one time.
 
 
-**Also you can publish a configuration message from dojot to the device to change some of its attributes.
+**Also you can send a configuration message from dojot to the device to change some of its attributes.
 The target attribute must be of type “actuator”.**
 
 To simulate receiving the message on a device, we can use ``mosquitto_sub``:

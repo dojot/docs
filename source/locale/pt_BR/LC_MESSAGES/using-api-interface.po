@@ -358,7 +358,7 @@ msgid ""
 "**Also you can send a configuration message from dojot to the device to change "
 "some of its attributes. The target attribute must be of type “actuator”.**"
 msgstr ""
-"**Além disso, você pode publicar uma mensagem de configuração da dojot para o "
+"**Além disso, você pode enviar uma mensagem de configuração da dojot para o "
 "dispositivo. O atributo de destino deve ser do tipo “actuator” ou “atuador”.**"
 
 #: ../../source/using-api-interface.rst:336
