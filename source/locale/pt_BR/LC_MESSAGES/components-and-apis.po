@@ -776,7 +776,7 @@ msgstr ""
 #: ../../source/components-and-apis.rst:334
 #: ../../source/components-and-apis.rst:343
 msgid "Libraries"
-msgstr ""
+msgstr "Bibliotecas"
 
 #: ../../source/components-and-apis.rst:336
 msgid "Dojot also has several libraries used in their own components. These libraries are listed below:"
