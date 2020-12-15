@@ -80,7 +80,7 @@ msgstr "Agora os dispositivos físicos podem enviar mensagens para dojot. Há al
 
 #: ../../source/using-web-interface.rst:83
 msgid "For simplicity's sake, we'll emulate one device using mosquitto_pub tool. We set the ``username`` parameter by using the ``-u`` flag of mosquitto_pub. See more about in :doc:`using-api-interface` at topic Sending Messages."
-msgstr "Por questão de simplicidade, será emulado um dispositivo utilizando-se a ferramenta mosquito_pub. O parâmetro ``username`` será configurado utilizando a opção ``-u`` do mosquito_pub. Veja mais sobre em  :doc:`using-api-interface` no tópico Enviandos Mensagens."
+msgstr "Por questão de simplicidade, será emulado um dispositivo utilizando-se a ferramenta ``mosquito_pub``. O parâmetro ``username`` será configurado utilizando a opção ``-u`` do mosquito_pub. Veja mais sobre em  :doc:`using-api-interface` no tópico Enviandos Mensagens."
 
 #: ../../source/using-web-interface.rst:88
 msgid "In the videos we are using Mosca as the MQTT broker, so the messages are being sent to topics in the old format. If you are using VerneMQ, change them according to the forementioned pattern. Check :doc:`faq/faq` for more info about the differences between them."
@@ -120,7 +120,7 @@ msgstr "Importar e Exportar"
 
 #: ../../source/using-web-interface.rst:163
 msgid "This section shows how to use the Import and Export features. These options allow your configuration data to be saved to a file, for Export, and loaded to dojot, for Import. This file has the JSON format and it contains the data from templates, devices, flows, remote nodes, and scheduling tasks that were entered in your tenant. To perform data configuration export procedure, expand the menu at the top right of the page, click “Import / Export” and then “Export” as shown below:"
-msgstr "Essa seção mostra como usar as funcionalidades Importar e Exportar. Tais opções permitem que seus dados de configuração sejam salvos em um arquivo , no caso de uma exportação, e carregados na dojot, no caso de Importação. Esse arquivo possui o formato *JSON* e contém os dados de modelos, dispositivos, fluxos, nós remotos e tarefas de agendamento que foram cadastrados na sua organização.Para executar o procedimento de exportação dos dados de configurações, expanda o menu no canto superior direito da página, clique em \\“Import/Export (Import./Exportação)\\”  e então, em \\“Export (Exportar)\\”, conforme ilustrado no vídeo a seguir:"
+msgstr "Essa seção mostra como usar as funcionalidades Importar e Exportar. Tais opções permitem que seus dados de configuração sejam salvos em um arquivo, no caso de uma exportação, e carregados na dojot, no caso de Importação. Esse arquivo possui o formato *JSON* e contém os dados de modelos, dispositivos, fluxos, nós remotos e tarefas de agendamento que foram cadastrados na sua organização. Para executar o procedimento de exportação dos dados de configurações, expanda o menu no canto superior direito da página, clique em \\“Import/Export (Import./Exportação)\\”  e então, em \\“Export (Exportar)\\”, conforme ilustrado no vídeo a seguir:"
 
 #: ../../source/using-web-interface.rst:174
 msgid "The exported file can be stored as a backup and later imported back into Dojot."
