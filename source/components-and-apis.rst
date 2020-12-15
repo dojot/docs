@@ -335,7 +335,7 @@ Libraries
 
 Dojot also has several libraries used in their own components. These libraries are listed below:
 
-.. list-table:: Libraries Componentes by Language
+.. list-table:: Component Libraries by Language
    :header-rows: 1
 
    * - Components

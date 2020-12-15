@@ -7,16 +7,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dojot 0.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-15 13:29-0300\n"
-"PO-Revision-Date: 2020-09-14 11:33-0300\n"
+"POT-Creation-Date: 2020-12-15 13:44-0300\n"
+"PO-Revision-Date: 2020-12-15 13:46-0300\n"
 "Last-Translator: \n"
 "Language: pt_BR\n"
 "Language-Team: \n"
-"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.0\n"
+"X-Generator: Poedit 2.4.2\n"
 
 #: ../../source/components-and-apis.rst:2
 msgid "Components and APIs"
@@ -396,18 +397,8 @@ msgid "Exposed APIs (API Gateway)"
 msgstr "APIs expostas (API Gateway)"
 
 #: ../../source/components-and-apis.rst:126
-msgid ""
-"The API gateway used in dojot reroutes some of endpoints from component. "
-"The following table shows which **Exposed endpoint by the API gateway** "
-"is mapped to which **component endpoint**, its  **component endpoint "
-"Documentation** and whether the endpoint **needs authentication** when "
-"used via API Gateway. See more about how using APIs in :doc:`./using-api-"
-"interface`."
-msgstr ""
-"O *API gateway* usado na dojot reencaminha alguns dos *endpoints* dos "
-"componentes. A tabela a seguir mostra o mapeamento entre **endpoints "
-"expostos** e **endpoints de componentes**. Veja mais sobre como usar as "
-"APIs em :doc:`./using-api-interface`."
+msgid "The API gateway used in dojot reroutes some of endpoints from component. The following table shows which **Exposed endpoint by the API gateway** is mapped to which **component endpoint**, its  **component endpoint Documentation** and whether the endpoint **needs authentication** when used via API Gateway. See more about how using APIs in :doc:`./using-api-interface`."
+msgstr "O *API gateway* usado na dojot reencaminha alguns dos *endpoints* dos componentes. A tabela a seguir mostra o mapeamento entre **endpoints expostos** e **endpoints de componentes**. Veja mais sobre como usar as APIs em :doc:`./using-api-interface`."
 
 #: ../../source/components-and-apis.rst:133
 msgid "Exposed endpoints"
@@ -607,24 +598,12 @@ msgid "/v1"
 msgstr ""
 
 #: ../../source/components-and-apis.rst:256
-msgid ""
-"**NOTE: Some of the components' endpoints aren't exposed, but are used "
-"internally.**"
-msgstr ""
-"**NOTA: Alguns *endpoints* de componentes não são expostos, mas são "
-"utilizados internamente.**"
+msgid "**NOTE: Some of the components' endpoints aren't exposed, but are used internally.**"
+msgstr "**NOTA: Alguns *endpoints* de componentes não são expostos, mas são utilizados internamente.**"
 
 #: ../../source/components-and-apis.rst:259
-msgid ""
-"In addition, the API gateway reroutes the endpoints with their ports from"
-" component, so that they become uniform: all of them are accessible "
-"through the same port (default is TCP port 8000), see the following "
-"table."
-msgstr ""
-"Além disso, o *API gateway* redireciona os *endpoints*  com suas "
-"respectivas portas do componente, para que se tornem uniformes: todos "
-"eles são acessíveis pela mesma porta (o padrão é a porta TCP 8000), "
-"consulte a tabela a seguir."
+msgid "In addition, the API gateway reroutes the endpoints with their ports from component, so that they become uniform: all of them are accessible through the same port (default is TCP port 8000), see the following table."
+msgstr "Além disso, o *API gateway* redireciona os *endpoints*  com suas respectivas portas do componente, para que se tornem uniformes: todos eles são acessíveis pela mesma porta (o padrão é a porta TCP 8000), consulte a tabela a seguir."
 
 #: ../../source/components-and-apis.rst:263
 msgid "Original endpoints to The API gateway"
@@ -800,14 +779,12 @@ msgid "Libraries"
 msgstr ""
 
 #: ../../source/components-and-apis.rst:336
-msgid ""
-"Dojot also has several libraries used in their own components. These "
-"libraries are listed below:"
+msgid "Dojot also has several libraries used in their own components. These libraries are listed below:"
 msgstr ""
 
 #: ../../source/components-and-apis.rst:338
-msgid "Libraries Componentes by Language"
-msgstr ""
+msgid "Component Libraries by Language"
+msgstr "Bibliotecas dos Componentes por Linguagem"
 
 #: ../../source/components-and-apis.rst:342
 msgid "Language"
@@ -922,16 +899,8 @@ msgid "Kafka messages"
 msgstr "Mensagens do Kafka"
 
 #: ../../source/components-and-apis.rst:380
-msgid ""
-"These are the messages sent by components and their subjects. If you are "
-"developing a new internal component (such as a new IoT agent), see `API -"
-" data-broker`_ to check how to receive messages sent by other components "
-"in dojot."
-msgstr ""
-"Essas são as mensagens enviadas pelos componentes e seus tópicos. Se você"
-" estiver desenvolvendo um novo componente interno (como um novo agente "
-"IoT), consulte a `API - data-broker`_ para verificar como receber "
-"mensagens."
+msgid "These are the messages sent by components and their subjects. If you are developing a new internal component (such as a new IoT agent), see `API - data-broker`_ to check how to receive messages sent by other components in dojot."
+msgstr "Essas são as mensagens enviadas pelos componentes e seus tópicos. Se você estiver desenvolvendo um novo componente interno (como um novo agente IoT), consulte a `API - data-broker`_ para verificar como receber mensagens."
 
 #: ../../source/components-and-apis.rst:385
 msgid "Original endpoints"
@@ -951,9 +920,7 @@ msgstr ""
 
 #: ../../source/components-and-apis.rst:392
 msgid "Device CRUD (`Messages - DeviceManager`_)"
-msgstr ""
-"Dispositivo CRUD (Criar, Ler, Atualizar e Excluir) (`Mensagens - "
-"DeviceManager`_)"
+msgstr "Dispositivo CRUD (Criar, Ler, Atualizar e Excluir) (`Mensagens - DeviceManager`_)"
 
 #: ../../source/components-and-apis.rst:393
 msgid "``dojot.device-manager.device``"
@@ -1103,3 +1070,5 @@ msgstr ""
 #~ msgid "*Exposed* endpoints"
 #~ msgstr "*Endpoints* expostos"
 
+#~ msgid "Libraries Componentes by Language"
+#~ msgstr ""
