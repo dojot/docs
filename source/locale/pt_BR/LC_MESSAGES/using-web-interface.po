@@ -60,7 +60,7 @@ msgstr "Note que, quando um modelo é selecionado no painel direito da tela de c
 
 #: ../../source/using-web-interface.rst:47
 msgid "As devices are tightly associated to templates, if you want to remove a template, you should remove all its associated devices first. If such thing happens the following error message will appear:"
-msgstr "Os dispositivos são fortemente atrelados aos a modelos. Para remover um modelo, deve-se remover primeiro todos os dispositivos a ele associados. Caso contrário, a seguinte mensagem aparecerá:"
+msgstr "Como os dispositivos estão fortemente associados aos modelos, caso queira remover um modelo, primeiramente dave-se remover todos os seus dispositivos associados. Caso isso ocorra, a seguinte mensagem de erro aparecerá:"
 
 #: ../../source/using-web-interface.rst:58
 msgid "You can add and remove attributes from templates and they will be immediately available to devices. In case of new attributes being added, though, you should keep in mind that there must not be any device with templates which have attributes with same name. If such thing happens, the following message will appear:"
