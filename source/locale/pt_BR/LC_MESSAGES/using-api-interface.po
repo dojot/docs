@@ -272,7 +272,6 @@ msgid "If there is no output, the message was sent to MQTT broker."
 msgstr "Se não houver saída (output), a mensagem foi enviada ao *broker* MQTT."
 
 #: ../../source/using-api-interface.rst:268
-#, fuzzy
 msgid ""
 "Note that we publish a message with the parameter ``-q 1``. This means "
 "that the message will use QoS 1, i.e., the message is guaranteed to be "
@@ -407,7 +406,6 @@ msgid "Checking historical data"
 msgstr "Conferindo dados históricos"
 
 #: ../../source/using-api-interface.rst:376
-#, fuzzy
 msgid ""
 "In order to check all values that were sent from a device for a "
 "particular attribute, you could use the history api, see more in :doc"
@@ -421,7 +419,6 @@ msgstr ""
 "resultados um pouco mais interessantes:"
 
 #: ../../source/using-api-interface.rst:387
-#, fuzzy
 msgid "To retrieve all values sent for temperature attribute of this device:"
 msgstr ""
 "Para recuperar todos os valores enviados dos atributos ``temperature`` "
