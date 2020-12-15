@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dojot 0.0.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-12-04 16:39-0300\n"
-"PO-Revision-Date: 2020-12-14 11:03-0300\n"
+"PO-Revision-Date: 2020-12-15 15:11-0300\n"
 "Last-Translator: \n"
 "Language: pt_BR\n"
 "Language-Team: \n"
@@ -98,7 +98,8 @@ msgstr ""
 
 #: ../../source/architecture.rst:41
 msgid "receive these readings in real time by socket.io or websocket channels;"
-msgstr "receber essas leituras em tempo real pelos canais *socket.io*;"
+msgstr ""
+"receber essas leituras em tempo real pelos canais *socket.io* ou websocket;"
 
 #: ../../source/architecture.rst:42
 msgid "consolidate all data into virtual devices;"
