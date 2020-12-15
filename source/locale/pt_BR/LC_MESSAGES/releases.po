@@ -74,7 +74,7 @@ msgstr "Ferramenta para criação de dashboard customizável com:"
 
 #: ../../source/releases.rst:30
 msgid "Graphics of various formats"
-msgstr "Gráficos de diversas formatos"
+msgstr "Gráficos de diversos formatos"
 
 #: ../../source/releases.rst:31
 msgid "Tables"
