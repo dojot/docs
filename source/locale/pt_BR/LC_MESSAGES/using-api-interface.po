@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: dojot 0.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-12-08 20:45-0300\n"
-"PO-Revision-Date: 2020-12-15 13:26-0300\n"
+"PO-Revision-Date: 2020-12-15 13:27-0300\n"
 "Last-Translator: \n"
 "Language: pt_BR\n"
 "Language-Team: \n"
@@ -416,7 +416,7 @@ msgstr ""
 #: ../../source/using-api-interface.rst:387
 msgid "To retrieve all values published for temperature attribute of this device:"
 msgstr ""
-"Para recuperar todos os valores publicados do atributo ``temperature`` desse "
+"Para recuperar todos os valores enviados dos atributos ``temperature`` desse "
 "dispositivo:"
 
 #: ../../source/using-api-interface.rst:395
