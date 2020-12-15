@@ -304,7 +304,7 @@ msgstr ""
 #: ../../source/using-api-interface.rst:281
 #: ../../source/using-api-interface.rst:336
 msgid "Triggering the sending of the message from the dojot to the device."
-msgstr "Disparando a publicação da mensagem da dojot para o dispositivo."
+msgstr "Disparando o envio da mensagem da dojot para o dispositivo."
 
 #: ../../source/using-api-interface.rst:292
 #: ../../source/using-api-interface.rst:347
