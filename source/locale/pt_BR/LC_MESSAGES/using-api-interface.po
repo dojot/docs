@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: dojot 0.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-12-08 20:45-0300\n"
-"PO-Revision-Date: 2020-12-14 16:31-0300\n"
+"PO-Revision-Date: 2020-12-15 13:26-0300\n"
 "Last-Translator: \n"
 "Language: pt_BR\n"
 "Language-Team: \n"
@@ -290,7 +290,7 @@ msgstr ""
 
 #: ../../source/using-api-interface.rst:281
 msgid "Triggering the publishing of the message from the dojot to the device."
-msgstr "Disparando a publicação da mensagem da dojot para o dispositivo."
+msgstr "Disparando envio de mensagens da dojot para o dispositivo."
 
 #: ../../source/using-api-interface.rst:292
 #: ../../source/using-api-interface.rst:347
