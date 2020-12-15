@@ -36,7 +36,7 @@ Running a simple test
 ---------------------
 
 In this section, it will be shown how to configure and run Locust, and also how to generate 
-certificates with the generate_certs script in order to execute the load test. This is a simple 
+certificates with the "generate_certs" script in order to execute the load test. This is a simple 
 test where will be created 100 clients to send messages to dojot.
 
 Configuration
