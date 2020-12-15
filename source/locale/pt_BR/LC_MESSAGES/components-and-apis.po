@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dojot 0.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-04 16:39-0300\n"
+"POT-Creation-Date: 2020-12-15 13:29-0300\n"
 "PO-Revision-Date: 2020-09-14 11:33-0300\n"
 "Last-Translator: \n"
 "Language: pt_BR\n"
@@ -24,12 +24,13 @@ msgstr "Componentes e APIs"
 
 #: ../../source/components-and-apis.rst:5
 #: ../../source/components-and-apis.rst:7
+#: ../../source/components-and-apis.rst:341
 msgid "Components"
 msgstr "Componentes"
 
 #: ../../source/components-and-apis.rst
 #: ../../source/components-and-apis.rst:266
-#: ../../source/components-and-apis.rst:346
+#: ../../source/components-and-apis.rst:388
 msgid "Component"
 msgstr "Componentes"
 
@@ -793,11 +794,134 @@ msgstr ""
 msgid "host:8000/kafka-ws/v1/topics"
 msgstr ""
 
+#: ../../source/components-and-apis.rst:334
+#: ../../source/components-and-apis.rst:343
+msgid "Libraries"
+msgstr ""
+
 #: ../../source/components-and-apis.rst:336
+msgid ""
+"Dojot also has several libraries used in their own components. These "
+"libraries are listed below:"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:338
+msgid "Libraries Componentes by Language"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:342
+msgid "Language"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:344
+#: ../../source/components-and-apis.rst:348
+#: ../../source/components-and-apis.rst:352
+msgid "Module"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:345
+msgid "Python"
+msgstr ""
+
+#: ../../source/components-and-apis.rst
+msgid "https://github.com/dojot/dojot-module-python"
+msgstr ""
+
+#: ../../source/components-and-apis.rst
+msgid "https://pypi.org/project/dojot.module/"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:349
+#: ../../source/components-and-apis.rst:357
+msgid "Java"
+msgstr ""
+
+#: ../../source/components-and-apis.rst
+msgid "https://github.com/dojot/dojot-module-java"
+msgstr ""
+
+#: ../../source/components-and-apis.rst
+msgid "https://jitpack.io/#dojot/dojot-module-java"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:353
+#: ../../source/components-and-apis.rst:361
+#: ../../source/components-and-apis.rst:365
+#: ../../source/components-and-apis.rst:369
+#: ../../source/components-and-apis.rst:373
+msgid "Node JS"
+msgstr ""
+
+#: ../../source/components-and-apis.rst
+msgid "https://github.com/dojot/dojot-module-nodejs"
+msgstr ""
+
+#: ../../source/components-and-apis.rst
+msgid "https://www.npmjs.com/package/@dojot/dojot-module"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:356
+#: ../../source/components-and-apis.rst:360
+msgid "IoT Agent"
+msgstr ""
+
+#: ../../source/components-and-apis.rst
+msgid "https://github.com/dojot/iotagent-java"
+msgstr ""
+
+#: ../../source/components-and-apis.rst
+msgid "https://jitpack.io/#dojot/iotagent-java"
+msgstr ""
+
+#: ../../source/components-and-apis.rst
+msgid "https://github.com/dojot/iotagent-nodejs"
+msgstr ""
+
+#: ../../source/components-and-apis.rst
+msgid "https://www.npmjs.com/package/@dojot/iotagent-nodejs"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:364
+msgid "Module Logger"
+msgstr ""
+
+#: ../../source/components-and-apis.rst
+msgid "https://github.com/dojot/dojot-module-logger-nodejs"
+msgstr ""
+
+#: ../../source/components-and-apis.rst
+msgid "https://www.npmjs.com/package/@dojot/dojot-module-logger"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:368
+msgid "Helthcheck"
+msgstr ""
+
+#: ../../source/components-and-apis.rst
+msgid "https://github.com/dojot/healthcheck-nodejs"
+msgstr ""
+
+#: ../../source/components-and-apis.rst
+msgid "https://www.npmjs.com/package/@dojot/healthcheck"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:372
+msgid "Microservice SDK"
+msgstr ""
+
+#: ../../source/components-and-apis.rst
+msgid "https://github.com/dojot/dojot-microservice-sdk-js"
+msgstr ""
+
+#: ../../source/components-and-apis.rst
+msgid "https://www.npmjs.com/package/@dojot/microservice-sdk"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:378
 msgid "Kafka messages"
 msgstr "Mensagens do Kafka"
 
-#: ../../source/components-and-apis.rst:338
+#: ../../source/components-and-apis.rst:380
 msgid ""
 "These are the messages sent by components and their subjects. If you are "
 "developing a new internal component (such as a new IoT agent), see `API -"
@@ -809,53 +933,53 @@ msgstr ""
 "IoT), consulte a `API - data-broker`_ para verificar como receber "
 "mensagens."
 
-#: ../../source/components-and-apis.rst:343
+#: ../../source/components-and-apis.rst:385
 msgid "Original endpoints"
 msgstr "*Endpoints* Originais"
 
-#: ../../source/components-and-apis.rst:347
+#: ../../source/components-and-apis.rst:389
 msgid "Message"
 msgstr "Mensagem"
 
-#: ../../source/components-and-apis.rst:348
+#: ../../source/components-and-apis.rst:390
 msgid "Subject"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:349
+#: ../../source/components-and-apis.rst:391
 msgid "DeviceManager"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:350
+#: ../../source/components-and-apis.rst:392
 msgid "Device CRUD (`Messages - DeviceManager`_)"
 msgstr ""
 "Dispositivo CRUD (Criar, Ler, Atualizar e Excluir) (`Mensagens - "
 "DeviceManager`_)"
 
-#: ../../source/components-and-apis.rst:351
+#: ../../source/components-and-apis.rst:393
 msgid "``dojot.device-manager.device``"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:352
+#: ../../source/components-and-apis.rst:394
 msgid "iotagent-mosca"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:353
+#: ../../source/components-and-apis.rst:395
 msgid "Device data update (`Messages - iotagent-mosca`_)"
 msgstr "Atualização de dados do dispositivo (`Mensagens - iotagent-mosca`_)"
 
-#: ../../source/components-and-apis.rst:354
+#: ../../source/components-and-apis.rst:396
 msgid "``device-data``"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:355
+#: ../../source/components-and-apis.rst:397
 msgid "auth"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:356
+#: ../../source/components-and-apis.rst:398
 msgid "Tenants creation/removal (`Messages - auth`_)"
 msgstr "Criação/remoção de *Tenants* (`Mensagens - auth`_)"
 
-#: ../../source/components-and-apis.rst:357
+#: ../../source/components-and-apis.rst:399
 msgid "``dojot.tenancy``"
 msgstr ""
 
