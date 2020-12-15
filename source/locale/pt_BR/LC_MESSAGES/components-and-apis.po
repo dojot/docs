@@ -794,7 +794,7 @@ msgstr "linguagem"
 #: ../../source/components-and-apis.rst:348
 #: ../../source/components-and-apis.rst:352
 msgid "Module"
-msgstr ""
+msgstr "Módulo"
 
 #: ../../source/components-and-apis.rst:345
 msgid "Python"
