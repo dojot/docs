@@ -38,7 +38,7 @@ Kafka-WS
 Kafka2FTP
 ^^^^^^^^^
 
-      - New Kafka messaging service to an FTP server
+      - New Kafka messaging service to a FTP server
 
 X.509 Identity Management
 ^^^^^^^^^^^^^^^^^^^^^^^^^
