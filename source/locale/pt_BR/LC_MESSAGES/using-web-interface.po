@@ -24,7 +24,7 @@ msgstr "Usando a interface WEB"
 
 #: ../../source/using-web-interface.rst:4
 msgid "This tutorial will show how to do basic operations in dojot, such as creating devices, checking its attributes and creating flows, import/export and firmware update."
-msgstr "Este tutorial descreve as operações básicas na dojot, como criar dispositivos, conferir seus atributos e criar fluxos, importar/exportar e atualizar firmware."
+msgstr "Este tutorial descreve as operações básicas na dojot, como criar dispositivos, conferir seus atributos e criar fluxos, importar/exportar e atualização de firmware."
 
 #: ../../source/using-web-interface.rst:8
 msgid "Who is this for: entry-level users"
