@@ -829,8 +829,7 @@ msgstr ""
 "**Usando o flowbroker para pré-processar dados**: eles podem ajudar a processar "
 "e transformar os dados para que possam ser enviados corretamente para o seu "
 "aplicativo por meio de solicitação HTTP ou armazenados em um dispositivo virtual "
-"(que pode ser usado para gerar notificações conforme descrito anteriormente "
-"Todos esses endpoints devem ter um token de acesso,)."
+"(que pode ser usado para gerar notificações conforme descrito anteriormente). "
 
 #: ../../source/faq/faq.rst:455
 msgid ""
