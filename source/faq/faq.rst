@@ -47,11 +47,11 @@ There are 3 main ones:
   things related to this project as issues and there are also some component codes here.
 
 - `<https://github.com/dojot/docker-compose>`_: repository with the files and settings 
-to perform dojot in a Docker environment using the * docker-compose * tool. This is the 
+to perform dojot in a Docker environment using the *docker-compose* tool. This is the 
 repository we recommend to start with dojot.
 
 - `<https://github.com/dojot/ansible-dojot>`_: repository with files and settings to perform 
-dojot in * Kubernetes * environment.
+dojot in *Kubernetes* environment.
 
 See how to use *docker-compose* and *ansible-dojot* repositories in :doc:`../installation-guide`.
 
