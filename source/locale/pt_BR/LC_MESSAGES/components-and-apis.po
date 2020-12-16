@@ -780,7 +780,7 @@ msgstr "Bibliotecas"
 
 #: ../../source/components-and-apis.rst:336
 msgid "Dojot also has several libraries used in their own components. These libraries are listed below:"
-msgstr "O Dojot também possui diversas bibliotecas usadas em seus próprios componentes. Essas bibliotecas são listadas abaixo:"
+msgstr "A Dojot também possui diversas bibliotecas usadas em seus próprios componentes. Essas bibliotecas são listadas abaixo:"
 
 #: ../../source/components-and-apis.rst:338
 msgid "Component Libraries by Language"
