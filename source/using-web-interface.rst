@@ -1,8 +1,9 @@
 Using web interface
 ===================
 
-This tutorial will show how to do basic operations in dojot, such as creating
-devices, checking its attributes and creating flows, import/export and firmware update.
+This tutorial will show how to do basic operations in dojot, such as creating devices, 
+checking its attributes and creating flows, import/export, firmware update, generating 
+certificates and device history report.
 
 .. note::
    - Who is this for: entry-level users
@@ -71,11 +72,10 @@ must not share an attribute with the same name.
    templates was created and, afterwards a new attribute also called ``level``
    was added to ``ThermTemplate``.
 
-   When this happens, no modification is applied to the template (no attribute
-   named "level" related to the "ThermTemplate" is created). However, it
-   remains in the template card so the user can figure out what is happening.
-   If the user refreshes the page, it will be reverted to what it was before
-   the modification.
+  When this happens, no modification is applied to the template (no attribute named 
+  “level” related to the “ThermTemplate” is created). However, it remains in the 
+  template configuration so the user can figure out what is happening. If the user 
+  refreshes the page, it will be reverted to what it was before the modification.
 
 Now the physical devices can send messages to dojot. There are few things to
 pay attention to: the MQTT topic is ``<tenant>:<device-id>/attrs``.
@@ -122,13 +122,13 @@ Flow configuration
 ------------------
 
 
-Once we've created the virtual device, we can add a flow to implement the logic
-behind the alarm generation. The idea is: if the temperature reading is less
-than 40, then the alarm system will be updated with a notification of severity
-4 (mildly important) and a message indicating that the kitchen is OK.
-Otherwise, if the temperature is higher than 40, then a notification is sent
-with severity 1 (highest severity) and a message indicating that the kitchen is
-on fire. This is done as shown belown.
+Once we’ve created the virtual device, we can add a flow to implement the 
+logic behind the alarm generation. The idea is: if the temperature reading 
+is less than 40, then the alarm system will be updated with a message of 
+severity 4 (mildly important) and a message indicating that the kitchen is OK. 
+Otherwise, if the temperature is higher than 40, then a message is sent with 
+severity 1 (highest severity) and a message indicating that the kitchen is on fire. 
+This is done as shown below.
 
 .. raw:: html
 
@@ -284,7 +284,7 @@ Performing access to the Dashboard
 --------------------------------
 
 The dashboard is part of GUI-V2, to access it you need to use another URL, in the current version just add to the end of the URL “/v2” in relation to the interface used in the previous items, for example, in the case of localhost it would be http://localhost:8000/v2, see more at :doc:`components-and-apis`.
-The login and password credentials are the same as those used in the rest of dojot. After logging in, a new screen will open and an ``ADD`` button will appear in the upper right corner, which will give you the options for various types of viewing. At this moment, the parameters will be configured, in the first “General” screen it will be necessary to add a name for the visualization and optionally a description.
+The login and password credentials are the same as those used in the rest of dojot. After logging in, a new screen will open and an ``ADD`` button will appear in the upper right corner, which will give you the options for various types of viewing. At this moment, in the first “General” screen it will be necessary to add a name for the visualization and optionally a description.
 The list of devices will appear on the next screen, if you do not find the desired device, you can search by name. After selecting the device, the attributes that are linked to it will be listed, and a color can be chosen to display each attribute, it is also possible to add a caption for each attribute.
 In “retrieve records by:“ it will be possible to configure some filters, you can select the type of historical data filter as the “last records”, in “order” (minute, hours, days and months), and you can also choose an interval time, in addition you can still view the records in “Real time”, as new data is received they will be displayed in the chosen view. After everything is configured, a summary will be shown with the chosen name and attributes.
 When accessing the views, it will be possible to change the size, fix (which will disable the option to change the size) and still delete the views.

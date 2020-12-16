@@ -281,9 +281,9 @@ Auth + API gateway (Kong)
 -------------------------
 
 Auth is a service deeply connected to Kong. It is responsible for user
-management, authentication and authorization. As such, it is invoked by Kong
-whenever an request is received by one of its registered endpoints. This
-section will detail how this is performed and how they work together.
+management, authentication and authorization. As such, it is invoked by 
+Kong whenever a request is received by one of its registered endpoints. 
+This section will detail how this is performed and how they work together.
 
 Kong configuration
 ++++++++++++++++++
@@ -314,7 +314,7 @@ after starting Kong. Its only purpose is to register endpoints in Kong, such as:
 
 
 These commands will register the endpoint `/device/*/latest` and `/subscription`
-and all requests to it are going to be forwarded to `http//data-broker:80`. You
+and all requests to it are going to be forwarded to `http://data-broker:80`. You
 can check the documentation on how to add endpoints in Kong's documentation.
 The links are in the :doc:`./components-and-apis` page.
 
@@ -323,7 +323,7 @@ selected endpoints:
 
 #. JWT generation. The documentation for this plugin is available at `Kong JWT
    plugin page`_.
-#. Configuration a plugin which will forward all policies requests to Auth
+#. Configures a plugin which will forward all policies requests to Auth
    in order to authenticate requests. This plugin is available
    inside the `Kong repository`_.
 
@@ -457,8 +457,8 @@ Persister is a very simple service which only purpose is to receive messages
 from devices (using ``device-data`` subject) and store them into MongoDB. For
 that, the bootstrapping procedure (detailed in `Bootstrapping tenants`_) is
 performed and, whenever a new message is received, it will create a new Mongo
-document and store it into the device's collection. This is shown in
-:numref:`Persister`, in this case we are using tenant admin.
+document and store it into the device's collection. The following image in
+:numref:`Persister`, shows an example of this flow using the.
 
 .. _Persister:
 .. uml::

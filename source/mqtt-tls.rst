@@ -126,7 +126,7 @@ In addition, you can use `OpenSSL`_ to create
 certificates and sign using the `API - x509-identity-mgmt`_,
 see more  at `X.509 Identity Management`_.
 
-A brief explanation of how to use `CertReq`_:
+A brief explanation of how to use `CertReq`_
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 As prerequisites this uses `git`_, `OpenSSL`_, `curl`_ and `jq`_ .

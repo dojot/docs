@@ -219,8 +219,8 @@ Sending messages
 ----------------
 
 So far we got an access token and created a template and a device based on it. In an actual
-deployment, the physical device would send messages to dojot with all its attributes and their
-current values. For this tutorial we will send MQTT messages by hand to the platform, emulating such
+deployment, the physical device would publish messages to dojot with all its attributes and their
+current values. For this tutorial we will publish MQTT messages by hand to the platform, emulating such
 physical device. For that, we will use mosquitto_pub and mosquitto_sub from `mosquitto`_.
 
 The default message format used by dojot is a simple key-value JSON (you could
@@ -256,7 +256,7 @@ is used, but you can use Mosca too. Check the :doc:`../installation-guide` for m
 Using VerneMQ
 ^^^^^^^^^^^^^
 
-Let's send a message to dojot:
+Let's publish the following message:
 
 .. code-block:: bash
 
@@ -265,8 +265,8 @@ Let's send a message to dojot:
 
 If there is no output, the message was sent to MQTT broker.
 
-Note that we sent a message with the parameter ``-q 1``. This means that the message will use QoS 1,
-i.e., the message is guaranteed to be sent at least one time.
+Note that we publish a message with the parameter ``-q 1``. This means that the message will use QoS 1,
+i.e., the message is guaranteed to be send at least one time.
 
 
 **Also you can send a configuration message from dojot to the device to change some of its attributes.

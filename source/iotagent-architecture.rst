@@ -78,9 +78,9 @@ agent and they are categorized in the following groups:
    able to enable or disable message processing from a particular device and
    detect device liveness.
 
-   An extra feature that an IoT agent might implement is firmware updates.
-   Depending on is underlying protocol, it might be possible to do such thing
-   in a easy, secure and reliable way.
+   An extra feature that an IoT agent might implement is firmware updates. 
+   Depending on its underlying protocol, it might be possible to do such 
+   thing in an easy, secure and reliable way.
 
 Each one of these groups is going to be detailed in the following sections.
 
@@ -515,13 +515,13 @@ and vice-versa.
 Libraries to assist the development of new IotAgents
 ====================================================
 
-We have libraries that abstract some points describe in previous topics
+We have libraries that abstract some points described in previous topics
 to facilitate the development of an IotAgent.
 
 There are two libraries:
 
  - node.js **recommended** (https://www.npmjs.com/package/@dojot/iotagent-nodejs)
- - java (https://github.com/dojot/iotagent-java)
+ - java (https://jitpack.io/#dojot/iotagent-java)
 
 
 

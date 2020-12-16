@@ -25,7 +25,7 @@ It’s a brazilian IoT platform launched as open source software with aims to
 ease the development of solutions and the IoT ecosystem with local resources
 geared towards brazilians needs.
 
-It takes a role as an enabler platform with:
+The dojot acts as a facilitating platform with:
 
   - Open APIs which makes the access to the platform resources easy.
   - Capacity to store large volumes of data in different formats.
@@ -46,12 +46,12 @@ There are 3 main ones:
 - `<https://github.com/dojot/dojot>`_: this is where we keep track of all the
   things related to this project as issues and there are also some component codes here.
 
-- `<https://github.com/dojot/docker-compose>`_: repository for Docker compose
-  files and configurations. This is what we would recommend to use to start
-  with.
+- `<https://github.com/dojot/docker-compose>`_: repository with the files and settings 
+to perform dojot in a Docker environment using the *docker-compose* tool. This is the 
+repository we recommend to start with dojot.
 
-- `<https://github.com/dojot/ansible-dojot>`_: repository for ansible (kubernetes)
-  files and configurations.
+- `<https://github.com/dojot/ansible-dojot>`_: repository with files and settings to perform 
+dojot in *Kubernetes* environment.
 
 See how to use *docker-compose* and *ansible-dojot* repositories in :doc:`../installation-guide`.
 
@@ -215,7 +215,7 @@ things to keep in mind:
 
 - When using Mosca, the topic should look like ``/<tenant>/<device-id>/attrs`` (e.g.:
   ``/admin/efac/attrs``). Depending on how IoT agent MQTT was started (more strict), the client ID
-  must also be set to ``<tenant>:<deviceid>``, such as ``admin:efac``.
+  must also be set to ``<tenant>:<device-id>``, such as ``admin:efac``.
 
 - When using VerneMQ, the topic should look like ``<tenant>:<device-id>/attrs`` (e.g.:
   ``admin:efac/attrs``). You must also set the username for the client as ``<tenant>:<device-id>``, such
@@ -417,7 +417,7 @@ How can I add a new node type to its menu?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 There is a tutorial on how to add new nodes and two examples of node too,
-check the `flowbroker library`_ for more details.
+check the `GitHub flowbroker repository`_ for more details.
 
 
 Applications

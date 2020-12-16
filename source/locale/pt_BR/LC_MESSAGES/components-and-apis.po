@@ -7,16 +7,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dojot 0.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-11 10:07-0300\n"
-"PO-Revision-Date: 2020-09-14 11:33-0300\n"
+"POT-Creation-Date: 2020-12-15 13:44-0300\n"
+"PO-Revision-Date: 2020-12-15 13:46-0300\n"
 "Last-Translator: \n"
 "Language: pt_BR\n"
 "Language-Team: \n"
-"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.4.0\n"
+"Generated-By: Babel 2.9.0\n"
+"X-Generator: Poedit 2.4.2\n"
 
 #: ../../source/components-and-apis.rst:2
 msgid "Components and APIs"
@@ -24,12 +25,13 @@ msgstr "Componentes e APIs"
 
 #: ../../source/components-and-apis.rst:5
 #: ../../source/components-and-apis.rst:7
+#: ../../source/components-and-apis.rst:341
 msgid "Components"
 msgstr "Componentes"
 
 #: ../../source/components-and-apis.rst
 #: ../../source/components-and-apis.rst:266
-#: ../../source/components-and-apis.rst:346
+#: ../../source/components-and-apis.rst:388
 msgid "Component"
 msgstr "Componentes"
 
@@ -244,7 +246,7 @@ msgid "`GitHub - GUI`_"
 msgstr ""
 
 #: ../../source/components-and-apis.rst:74
-msgid "Gui-v2"
+msgid "GUI - V2"
 msgstr ""
 
 #: ../../source/components-and-apis.rst:75
@@ -395,22 +397,12 @@ msgid "Exposed APIs (API Gateway)"
 msgstr "APIs expostas (API Gateway)"
 
 #: ../../source/components-and-apis.rst:126
-msgid ""
-"The API gateway used in dojot reroutes some of endpoints from component. "
-"The following table shows which **Exposed endpoint by the API gateway** "
-"is mapped to which **component endpoint**, its  **component endpoint "
-"Documentation** and whether the endpoint **needs authentication** when "
-"used via API Gateway. See more about how using APIs in :doc:`./using-api-"
-"interface`."
-msgstr ""
-"O *API gateway* usado na dojot reencaminha alguns dos *endpoints* dos "
-"componentes. A tabela a seguir mostra o mapeamento entre **endpoints "
-"expostos** e **endpoints de componentes**. Veja mais sobre como usar as "
-"APIs em :doc:`./using-api-interface`."
+msgid "The API gateway used in dojot reroutes some of endpoints from component. The following table shows which **Exposed endpoint by the API gateway** is mapped to which **component endpoint**, its  **component endpoint Documentation** and whether the endpoint **needs authentication** when used via API Gateway. See more about how using APIs in :doc:`./using-api-interface`."
+msgstr "O *API gateway* usado na dojot reencaminha alguns dos *endpoints* dos componentes. A tabela a seguir mostra o mapeamento entre **endpoints expostos** e **endpoints de componentes**. Veja mais sobre como usar as APIs em :doc:`./using-api-interface`."
 
 #: ../../source/components-and-apis.rst:133
-msgid "*Exposed* endpoints"
-msgstr "*Endpoints* expostos"
+msgid "Exposed endpoints"
+msgstr "Endpoints expostos"
 
 #: ../../source/components-and-apis.rst
 msgid "Exposed endpoint"
@@ -606,24 +598,12 @@ msgid "/v1"
 msgstr ""
 
 #: ../../source/components-and-apis.rst:256
-msgid ""
-"**NOTE: Some of the components' endpoints aren't exposed, but are used "
-"internally.**"
-msgstr ""
-"**NOTA: Alguns *endpoints* de componentes não são expostos, mas são "
-"utilizados internamente.**"
+msgid "**NOTE: Some of the components' endpoints aren't exposed, but are used internally.**"
+msgstr "**NOTA: Alguns *endpoints* de componentes não são expostos, mas são utilizados internamente.**"
 
 #: ../../source/components-and-apis.rst:259
-msgid ""
-"In addition, the API gateway reroutes the endpoints with their ports from"
-" component, so that they become uniform: all of them are accessible "
-"through the same port (default is TCP port 8000), see the following "
-"table."
-msgstr ""
-"Além disso, o *API gateway* redireciona os *endpoints*  com suas "
-"respectivas portas do componente, para que se tornem uniformes: todos "
-"eles são acessíveis pela mesma porta (o padrão é a porta TCP 8000), "
-"consulte a tabela a seguir."
+msgid "In addition, the API gateway reroutes the endpoints with their ports from component, so that they become uniform: all of them are accessible through the same port (default is TCP port 8000), see the following table."
+msgstr "Além disso, o *API gateway* redireciona os *endpoints*  com suas respectivas portas do componente, para que se tornem uniformes: todos eles são acessíveis pela mesma porta (o padrão é a porta TCP 8000), consulte a tabela a seguir."
 
 #: ../../source/components-and-apis.rst:263
 msgid "Original endpoints to The API gateway"
@@ -793,69 +773,180 @@ msgstr ""
 msgid "host:8000/kafka-ws/v1/topics"
 msgstr ""
 
+#: ../../source/components-and-apis.rst:334
+#: ../../source/components-and-apis.rst:343
+msgid "Libraries"
+msgstr "Bibliotecas"
+
 #: ../../source/components-and-apis.rst:336
-msgid "Kafka messages"
-msgstr "Mensagens do Kafka"
+msgid "Dojot also has several libraries used in their own components. These libraries are listed below:"
+msgstr "A Dojot também possui diversas bibliotecas usadas em seus próprios componentes. Essas bibliotecas são listadas abaixo:"
 
 #: ../../source/components-and-apis.rst:338
-msgid ""
-"These are the messages sent by components and their subjects. If you are "
-"developing a new internal component (such as a new IoT agent), see `API -"
-" data-broker`_ to check how to receive messages sent by other components "
-"in dojot."
-msgstr ""
-"Essas são as mensagens enviadas pelos componentes e seus tópicos. Se você"
-" estiver desenvolvendo um novo componente interno (como um novo agente "
-"IoT), consulte a `API - data-broker`_ para verificar como receber "
-"mensagens."
+msgid "Component Libraries by Language"
+msgstr "Bibliotecas dos Componentes por Linguagem"
 
-#: ../../source/components-and-apis.rst:343
-msgid "Original endpoints"
-msgstr "*Endpoints* Originais"
+#: ../../source/components-and-apis.rst:342
+msgid "Language"
+msgstr "linguagem"
 
-#: ../../source/components-and-apis.rst:347
-msgid "Message"
-msgstr "Mensagem"
-
+#: ../../source/components-and-apis.rst:344
 #: ../../source/components-and-apis.rst:348
-msgid "Subject"
+#: ../../source/components-and-apis.rst:352
+msgid "Module"
+msgstr "Módulo"
+
+#: ../../source/components-and-apis.rst:345
+msgid "Python"
+msgstr ""
+
+#: ../../source/components-and-apis.rst
+msgid "https://github.com/dojot/dojot-module-python"
+msgstr ""
+
+#: ../../source/components-and-apis.rst
+msgid "https://pypi.org/project/dojot.module/"
 msgstr ""
 
 #: ../../source/components-and-apis.rst:349
-msgid "DeviceManager"
+#: ../../source/components-and-apis.rst:357
+msgid "Java"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:350
-msgid "Device CRUD (`Messages - DeviceManager`_)"
-msgstr ""
-"Dispositivo CRUD (Criar, Ler, Atualizar e Excluir) (`Mensagens - "
-"DeviceManager`_)"
-
-#: ../../source/components-and-apis.rst:351
-msgid "``dojot.device-manager.device``"
+#: ../../source/components-and-apis.rst
+msgid "https://github.com/dojot/dojot-module-java"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:352
-msgid "iotagent-mosca"
+#: ../../source/components-and-apis.rst
+msgid "https://jitpack.io/#dojot/dojot-module-java"
 msgstr ""
 
 #: ../../source/components-and-apis.rst:353
-msgid "Device data update (`Messages - iotagent-mosca`_)"
-msgstr "Atualização de dados do dispositivo (`Mensagens - iotagent-mosca`_)"
-
-#: ../../source/components-and-apis.rst:354
-msgid "``device-data``"
+#: ../../source/components-and-apis.rst:361
+#: ../../source/components-and-apis.rst:365
+#: ../../source/components-and-apis.rst:369
+#: ../../source/components-and-apis.rst:373
+msgid "Node JS"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:355
-msgid "auth"
+#: ../../source/components-and-apis.rst
+msgid "https://github.com/dojot/dojot-module-nodejs"
+msgstr ""
+
+#: ../../source/components-and-apis.rst
+msgid "https://www.npmjs.com/package/@dojot/dojot-module"
 msgstr ""
 
 #: ../../source/components-and-apis.rst:356
+#: ../../source/components-and-apis.rst:360
+msgid "IoT Agent"
+msgstr ""
+
+#: ../../source/components-and-apis.rst
+msgid "https://github.com/dojot/iotagent-java"
+msgstr ""
+
+#: ../../source/components-and-apis.rst
+msgid "https://jitpack.io/#dojot/iotagent-java"
+msgstr ""
+
+#: ../../source/components-and-apis.rst
+msgid "https://github.com/dojot/iotagent-nodejs"
+msgstr ""
+
+#: ../../source/components-and-apis.rst
+msgid "https://www.npmjs.com/package/@dojot/iotagent-nodejs"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:364
+msgid "Module Logger"
+msgstr ""
+
+#: ../../source/components-and-apis.rst
+msgid "https://github.com/dojot/dojot-module-logger-nodejs"
+msgstr ""
+
+#: ../../source/components-and-apis.rst
+msgid "https://www.npmjs.com/package/@dojot/dojot-module-logger"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:368
+msgid "Helthcheck"
+msgstr ""
+
+#: ../../source/components-and-apis.rst
+msgid "https://github.com/dojot/healthcheck-nodejs"
+msgstr ""
+
+#: ../../source/components-and-apis.rst
+msgid "https://www.npmjs.com/package/@dojot/healthcheck"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:372
+msgid "Microservice SDK"
+msgstr ""
+
+#: ../../source/components-and-apis.rst
+msgid "https://github.com/dojot/dojot-microservice-sdk-js"
+msgstr ""
+
+#: ../../source/components-and-apis.rst
+msgid "https://www.npmjs.com/package/@dojot/microservice-sdk"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:378
+msgid "Kafka messages"
+msgstr "Mensagens do Kafka"
+
+#: ../../source/components-and-apis.rst:380
+msgid "These are the messages sent by components and their subjects. If you are developing a new internal component (such as a new IoT agent), see `API - data-broker`_ to check how to receive messages sent by other components in dojot."
+msgstr "Essas são as mensagens enviadas pelos componentes e seus tópicos. Se você estiver desenvolvendo um novo componente interno (como um novo agente IoT), consulte a `API - data-broker`_ para verificar como receber mensagens."
+
+#: ../../source/components-and-apis.rst:385
+msgid "Original endpoints"
+msgstr "*Endpoints* Originais"
+
+#: ../../source/components-and-apis.rst:389
+msgid "Message"
+msgstr "Mensagem"
+
+#: ../../source/components-and-apis.rst:390
+msgid "Subject"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:391
+msgid "DeviceManager"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:392
+msgid "Device CRUD (`Messages - DeviceManager`_)"
+msgstr "Dispositivo CRUD (Criar, Ler, Atualizar e Excluir) (`Mensagens - DeviceManager`_)"
+
+#: ../../source/components-and-apis.rst:393
+msgid "``dojot.device-manager.device``"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:394
+msgid "iotagent-mosca"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:395
+msgid "Device data update (`Messages - iotagent-mosca`_)"
+msgstr "Atualização de dados do dispositivo (`Mensagens - iotagent-mosca`_)"
+
+#: ../../source/components-and-apis.rst:396
+msgid "``device-data``"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:397
+msgid "auth"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:398
 msgid "Tenants creation/removal (`Messages - auth`_)"
 msgstr "Criação/remoção de *Tenants* (`Mensagens - auth`_)"
 
-#: ../../source/components-and-apis.rst:357
+#: ../../source/components-and-apis.rst:399
 msgid "``dojot.tenancy``"
 msgstr ""
 
@@ -973,3 +1064,11 @@ msgstr ""
 #~ msgid "`_GitHub - V2`_"
 #~ msgstr ""
 
+#~ msgid "Gui-v2"
+#~ msgstr ""
+
+#~ msgid "*Exposed* endpoints"
+#~ msgstr "*Endpoints* expostos"
+
+#~ msgid "Libraries Componentes by Language"
+#~ msgstr ""
