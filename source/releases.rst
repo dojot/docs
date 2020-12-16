@@ -1,80 +1,165 @@
 Release history
 ===============
 
-carate - 2019.09.11
------------------------
+Defendu - 2020.12
+------------------
 
-- IoT agents:
+Services
+++++++++++
 
-  - Support for
-    `LWM2M devices <https://github.com/dojot/iotagent-leshan>`_
+New Services
+************
 
-- GUI:
+Dojot Locust
+^^^^^^^^^^^^
 
-  - New interface for devices management
-  - New interface for templates management
-  - Attribute Metadata Management
-  - Import and export
-  - Firmware update
-  - Profiles
-  - Notifications
-  - Internationalization
-  - View details with Actuator Attributes
-  - Devices Filter on Map
+      - New tool using the Locust framework (https://locust.io/) for load testing in the dojot with the MQTT protocol
 
+IotAgent MQTT VerneMQ
+^^^^^^^^^^^^^^^^^^^^^
 
-- Flows:
+      - New scalable MQTT IotAgent using the VerneMQ broker (https://vernemq.com/) and auxiliary integration services (V2K and K2V)
 
-  - New node Event Device In 
-  - New node Event Template Device
-  - New node FTP
-  - New node Multi Device Out
-  - New node Notification
-  - New node Multi Actuate
-  - New node Cron
-  - New node Cron Batch
-  - New node Cumulative Sum
-  - New node Merge data
-  - Node email has been removed
-  - Internacionalization
-  - Support to handlebars template on template node
+Gui-V2
+^^^^^^
 
-- History:
+      - New graphical interface service, still under development, providing:
 
-  - New endpoint to query notifications
+        - Tool for creating a customizable dashboard with:
 
-- ImageManager:
+          - Graphics of various formats
+          - Tables
 
-  - Improvements to support Firmware Update
+Kafka-WS
+^^^^^^^^
 
-- DataBroker:
+      - New Kafka “real time” data consumption service via websocket with filters and partial data return
 
-  - Support notifications in socket-io
+Kafka2FTP
+^^^^^^^^^
 
-- DataManager:
+      - New Kafka messaging service to a FTP server
 
-  - It's new a dojot's microservice that manages
-    the dojot's data configuration,
-    making possible to import and export configuration.
+X.509 Identity Management
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
+      - New dojot x509 certificate service using EJBCA (https://www.ejbca.org/)
 
-- Cron:
+Improvements and fixes
+**********************
 
-  - It's new a dojot's microservice that allows
-    you to schedule events to be emitted
-    to other microservices.
+Auth
+^^^^
 
+      - Documentation improvements
 
-- New libraries:
+Cron
+^^^^
 
-  - To accelerate development:
-    `Dojot Module Java <https://github.com/dojot/dojot-module-java>`_
-    and `Dojot Module Python <https://github.com/dojot/dojot-module-python>`_
-  - HealthCheck:
-    `HealthCheck Python <https://github.com/dojot/healthcheck-python>`_
-    e `Healthcheck NodeJs <https://github.com/dojot/healthcheck-nodejs>`_
-  - IoTAgent:
-    `IoTAgent Java <https://github.com/dojot/iotagent-java>`_
+      - Documentation improvements
+
+Data-Broker
+^^^^^^^^^^^
+
+      - Documentation improvements
+      - Several code improvements
+      - Removal of topic mapping from kafka by id via Redis, it is now possible to use the topic name directly
 
 
+Data-Manager
+^^^^^^^^^^^^
 
+      - Documentation improvements
+
+Device-Manager
+^^^^^^^^^^^^^^
+
+      - Documentation improvements
+      - Performance improvements in code
+
+Flowbroker
+^^^^^^^^^^
+
+      - Documentation improvements
+      - Various code performance improvements including better parallelization of processing queues
+      - Minor bug fixes
+      - Support for Kubernetes 17 with remote nodes
+      - New “Publish FTP” node
+
+Image-Manager
+^^^^^^^^^^^^^
+
+      - Documentation improvements
+
+IotAgent-Leshan
+^^^^^^^^^^^^^^^
+
+      - Documentation improvements
+      - Minor bug fixes
+
+IotAgent Mosca
+^^^^^^^^^^^^^^
+
+      - Added CRL support
+      - Added control of maximum active and inactivity connection time
+      - Integration with the new X.509 Identity Management service
+      - Minor bug fixes
+
+GUI
+^^^
+
+      - Added historical reporting option by device
+      - Added x509 certificate generation option for a device
+      - Base url route customization
+      - Minor bug fixes
+
+History
+^^^^^^^
+
+      - Documentation improvements
+      - New “First N” filter option that returns the first N data that is currently persisted
+      - Improvements to data indexing in MongoDB
+      - Minor bug fixes
+
+Kong
+^^^^
+
+      - Migration to Kong Gateway version 2 (https://konghq.com/kong/)
+
+Deployments
++++++++++++
+
+Docker-compose
+***************
+
+    - Upgrade to docker-compose version 3.8
+    - Update version of external services
+    - Added new services
+
+Ansible-dojot
+*************
+
+    - Several improvements mainly aimed at scalability and simplification of the installation process
+    - Update to version 17 of kubernetes
+    - Added Load Balancer - Nginx
+    - Added Prometheus and Grafana to monitor part of the infrastructure (VMs, VerneMQ, Kubernetes, etc.)
+    - Documentation improvements
+
+Libraries
++++++++++
+
+dojot-module-nodejs
+*******************
+
+   - Minor bug fixes
+
+dojot-microservice-sdk-js
+*************************
+
+  - New dojot library in node.js with:
+
+    - Kafka Handlers -  Module responsible for Consumer (can use regular expressions in topics) and Producer
+    - Config Manager -  Module responsible for creating the standardized configuration file for the services
+    - Service State Manager - Module to define graceful shutdown and health check for the service
+    - WebUtils - Module for creating a server and a web structure (Express.js) to handle HTTP (S) requests.
+    - Logger - Log module to be used in services in a standardized way

@@ -7,255 +7,466 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dojot 0.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-17 11:00-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2020-12-15 14:28-0300\n"
+"PO-Revision-Date: 2020-12-15 14:28-0300\n"
+"Last-Translator: \n"
+"Language: pt_BR\n"
+"Language-Team: \n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.7.0\n"
+"Generated-By: Babel 2.8.0\n"
 
 #: ../../source/releases.rst:2
 msgid "Release history"
 msgstr "Histórico de lançamento"
 
 #: ../../source/releases.rst:5
-msgid "carate - 2019.09.11"
-msgstr ""
+msgid "Defendu - 2020.12"
+msgstr "Defendu - 2020.12"
 
-#: ../../source/releases.rst:7
-msgid "IoT agents:"
-msgstr "Agentes IoT:"
+#: ../../source/releases.rst:8
+msgid "Services"
+msgstr "Serviços"
 
-#: ../../source/releases.rst:9
-msgid "Support for `LWM2M devices <https://github.com/dojot/iotagent-leshan>`_"
-msgstr ""
-"Suporte para `dispositivos LWM2M <https://github.com/dojot/iotagent-"
-"leshan>`_"
-
-#: ../../source/releases.rst:12
-msgid "GUI:"
-msgstr ""
+#: ../../source/releases.rst:11
+msgid "New Services"
+msgstr "Novos serviços"
 
 #: ../../source/releases.rst:14
-msgid "New interface for devices management"
-msgstr "Nova interface para gerenciamento de dispositivos"
-
-#: ../../source/releases.rst:15
-msgid "New interface for templates management"
-msgstr "Nova interface para gerenciamento de modelos de dispositivos"
+msgid "Dojot Locust"
+msgstr ""
 
 #: ../../source/releases.rst:16
-msgid "Attribute Metadata Management"
-msgstr "Gerenciamento de metadados de atributo"
-
-#: ../../source/releases.rst:17
-msgid "Import and export"
-msgstr "Importar e exportar"
-
-#: ../../source/releases.rst:18
-msgid "Firmware update"
-msgstr "Atualização de Firmware"
+msgid ""
+"New tool using the Locust framework (https://locust.io/) for load testing"
+" in the dojot with the MQTT protocol"
+msgstr ""
+"Nova ferramenta utilizando o framework Locust (https://locust.io/) para "
+"testes de carga na dojot com o protocolo MQTT"
 
 #: ../../source/releases.rst:19
-msgid "Profiles"
-msgstr "Perfis"
-
-#: ../../source/releases.rst:20
-msgid "Notifications"
-msgstr "Notificações"
+msgid "IotAgent MQTT VerneMQ"
+msgstr ""
 
 #: ../../source/releases.rst:21
-msgid "Internationalization"
-msgstr "Internacionalização"
+msgid ""
+"New scalable MQTT IotAgent using the VerneMQ broker "
+"(https://vernemq.com/) and auxiliary integration services (V2K and K2V)"
+msgstr ""
+"Novo IotAgent MQTT escalável utilizando o broker VerneMQ "
+"(https://vernemq.com/) e serviços auxiliares de integração (V2K e K2V)"
 
-#: ../../source/releases.rst:22
-msgid "View details with Actuator Attributes"
-msgstr "Exibir detalhes de atributos de atuação"
-
-#: ../../source/releases.rst:23
-msgid "Devices Filter on Map"
-msgstr "Filtro de dispositivos no mapa"
+#: ../../source/releases.rst:24
+msgid "Gui-V2"
+msgstr ""
 
 #: ../../source/releases.rst:26
-msgid "Flows:"
+msgid "New graphical interface service, still under development, providing:"
 msgstr ""
+"Novo serviço de interface gráfica, ainda em desenvolvimento, "
+"disponibilizando:"
 
 #: ../../source/releases.rst:28
-msgid "New node Event Device In"
-msgstr "Novo Nó Evento Dispositivo (Entrada)"
-
-#: ../../source/releases.rst:29
-msgid "New node Event Template Device"
-msgstr "Novo nó Evento de modelos de dispositivo (Entrada)"
+msgid "Tool for creating a customizable dashboard with:"
+msgstr "Ferramenta para criação de dashboard customizável com:"
 
 #: ../../source/releases.rst:30
-msgid "New node FTP"
-msgstr "Novo nó FTP"
+msgid "Graphics of various formats"
+msgstr "Gráficos de diversos formatos"
 
 #: ../../source/releases.rst:31
-msgid "New node Multi Device Out"
-msgstr "Novo nó de Saída para vários dispositivos (Multi Device Out)"
-
-#: ../../source/releases.rst:32
-msgid "New node Notification"
-msgstr "Novo nó de Notificações"
-
-#: ../../source/releases.rst:33
-msgid "New node Multi Actuate"
-msgstr "Novo nó de atuação para vários dispositivos (Multi Actuate)"
+msgid "Tables"
+msgstr "Tabelas"
 
 #: ../../source/releases.rst:34
-msgid "New node Cron"
-msgstr "Novo nó Cron"
-
-#: ../../source/releases.rst:35
-msgid "New node Cron Batch"
-msgstr "Novo nó Cron Batch"
+msgid "Kafka-WS"
+msgstr ""
 
 #: ../../source/releases.rst:36
-msgid "New node Cumulative Sum"
-msgstr "Novo nó de Soma acumulada"
-
-#: ../../source/releases.rst:37
-msgid "New node Merge data"
-msgstr "Novo nó de Mesclar dados "
-
-#: ../../source/releases.rst:38
-msgid "Node email has been removed"
-msgstr "Nó de email foi removido"
+msgid ""
+"New Kafka “real time” data consumption service via websocket with filters"
+" and partial data return"
+msgstr ""
+"Novo serviço para consumo de dados em “tempo real” do Kafka via websocket"
+" com filtros e retorno parcial de dados"
 
 #: ../../source/releases.rst:39
-msgid "Internacionalization"
-msgstr "Internacionalização"
+msgid "Kafka2FTP"
+msgstr ""
 
-#: ../../source/releases.rst:40
-msgid "Support to handlebars template on template node"
-msgstr "Suporte a *handlebars template*  no nó de template"
-
-#: ../../source/releases.rst:42
-msgid "History:"
-msgstr "History:"
+#: ../../source/releases.rst:41
+msgid "New Kafka messaging service to an FTP server"
+msgstr "Novo serviço de envio de mensagens do Kafka para um servidor FTP"
 
 #: ../../source/releases.rst:44
-msgid "New endpoint to query notifications"
-msgstr "Novo endpoint para consultar notificações"
+msgid "X.509 Identity Management"
+msgstr ""
 
 #: ../../source/releases.rst:46
-msgid "ImageManager:"
-msgstr "ImageManager:"
-
-#: ../../source/releases.rst:48
-msgid "Improvements to support Firmware Update"
-msgstr "Melhorias para dar suporte à atualização de firmware"
-
-#: ../../source/releases.rst:50
-msgid "DataBroker:"
+msgid "New dojot x509 certificate service using EJBCA (https://www.ejbca.org/)"
 msgstr ""
+"Novo serviço de certificados x509 da dojot utilizando a EJBCA "
+"(https://www.ejbca.org/)"
+
+#: ../../source/releases.rst:49
+msgid "Improvements and fixes"
+msgstr "Melhorias e correções"
 
 #: ../../source/releases.rst:52
-msgid "Support notifications in socket-io"
-msgstr "Suporte a Notificações no socket-io"
-
-#: ../../source/releases.rst:54
-msgid "DataManager:"
+msgid "Auth"
 msgstr ""
 
-#: ../../source/releases.rst:56
+#: ../../source/releases.rst:54 ../../source/releases.rst:59
+#: ../../source/releases.rst:64 ../../source/releases.rst:72
+#: ../../source/releases.rst:77 ../../source/releases.rst:83
+#: ../../source/releases.rst:92 ../../source/releases.rst:97
+#: ../../source/releases.rst:119 ../../source/releases.rst:146
+msgid "Documentation improvements"
+msgstr "Melhorias na documentação"
+
+#: ../../source/releases.rst:57
+msgid "Cron"
+msgstr ""
+
+#: ../../source/releases.rst:62
+msgid "Data-Broker"
+msgstr ""
+
+#: ../../source/releases.rst:65
+msgid "Several code improvements"
+msgstr "Diversas melhorias de código"
+
+#: ../../source/releases.rst:66
 msgid ""
-"It's new a dojot's microservice that manages the dojot's data "
-"configuration, making possible to import and export configuration."
+"Removal of topic mapping from kafka by id via Redis, it is now possible "
+"to use the topic name directly"
 msgstr ""
-"É um novo microsserviço da dojot que gerencia a configuração de dados da "
-"dojot, tornando possível importar e exportar as configurações."
-
-#: ../../source/releases.rst:61
-msgid "Cron:"
-msgstr ""
-
-#: ../../source/releases.rst:63
-msgid ""
-"It's new a dojot's microservice that allows you to schedule events to be "
-"emitted to other microservices."
-msgstr ""
-"É um novo microsserviço da dojot que permite agendar eventos a serem "
-"emitidos para outros microsserviços."
-
-#: ../../source/releases.rst:68
-msgid "New libraries:"
-msgstr "Novas bibliotecas:"
+"Remoção do mapeamento de tópicos do kafka por id via Redis, agora é "
+"possível utilizar o nome do tópico diretamente"
 
 #: ../../source/releases.rst:70
+msgid "Data-Manager"
+msgstr ""
+
+#: ../../source/releases.rst:75
+msgid "Device-Manager"
+msgstr ""
+
+#: ../../source/releases.rst:78
+msgid "Performance improvements in code"
+msgstr "Melhorias de performance no código"
+
+#: ../../source/releases.rst:81
+msgid "Flowbroker"
+msgstr ""
+
+#: ../../source/releases.rst:84
 msgid ""
-"To accelerate development: `Dojot Module Java <https://github.com/dojot"
-"/dojot-module-java>`_ and `Dojot Module Python <https://github.com/dojot"
-"/dojot-module-python>`_"
+"Various code performance improvements including better parallelization of"
+" processing queues"
 msgstr ""
-"Para acelerar o desenvolvimento: `Dojot Module Java "
-"<https://github.com/dojot/dojot-module-java>`_ e `Dojot Module Python "
-"<https://github.com/dojot/dojot-module-python>`_"
+"Diversas melhorias de performance no código incluindo uma melhor "
+"paralelização das filas de processamento"
 
-#: ../../source/releases.rst:73
+#: ../../source/releases.rst:85 ../../source/releases.rst:98
+#: ../../source/releases.rst:106 ../../source/releases.rst:114
+#: ../../source/releases.rst:122 ../../source/releases.rst:154
+msgid "Minor bug fixes"
+msgstr "Correção de pequenos bugs"
+
+#: ../../source/releases.rst:86
+msgid "Support for Kubernetes 17 with remote nodes"
+msgstr "Suporte ao Kubernetes 17 com nós remotos"
+
+#: ../../source/releases.rst:87
+msgid "New “Publish FTP” node"
+msgstr "Novo nó “Publish FTP”"
+
+#: ../../source/releases.rst:90
+msgid "Image-Manager"
+msgstr "Image-Manager"
+
+#: ../../source/releases.rst:95
+msgid "IotAgent-Leshan"
+msgstr ""
+
+#: ../../source/releases.rst:101
+msgid "IotAgent Mosca"
+msgstr ""
+
+#: ../../source/releases.rst:103
+msgid "Added CRL support"
+msgstr "Adicionado suporte a CRL"
+
+#: ../../source/releases.rst:104
+msgid "Added control of maximum active and inactivity connection time"
+msgstr "Adicionado controle de tempo de conexão máxima ativa e por inatividade"
+
+#: ../../source/releases.rst:105
+msgid "Integration with the new X.509 Identity Management service"
+msgstr "Integração com o novo serviço X.509 Identity Management"
+
+#: ../../source/releases.rst:109
+msgid "GUI"
+msgstr ""
+
+#: ../../source/releases.rst:111
+msgid "Added historical reporting option by device"
+msgstr "Adicionada opção de relatório de histórico por dispositivo"
+
+#: ../../source/releases.rst:112
+msgid "Added x509 certificate generation option for a device"
+msgstr "Adicionada opção de geração de certificados x509 para um dispositivo"
+
+#: ../../source/releases.rst:113
+msgid "Base url route customization"
+msgstr "Customização de rota da url base"
+
+#: ../../source/releases.rst:117
+msgid "History"
+msgstr ""
+
+#: ../../source/releases.rst:120
 msgid ""
-"HealthCheck: `HealthCheck Python <https://github.com/dojot/healthcheck-"
-"python>`_ e `Healthcheck NodeJs <https://github.com/dojot/healthcheck-"
-"nodejs>`_"
+"New “First N” filter option that returns the first N data that is "
+"currently persisted"
+msgstr ""
+"Nova opção de filtro “First N” que retorna os N primeiros dados que estão"
+" persistidos atualmente"
+
+#: ../../source/releases.rst:121
+msgid "Improvements to data indexing in MongoDB"
+msgstr "Melhorias na indexação dos dados no MongoDB"
+
+#: ../../source/releases.rst:125
+msgid "Kong"
 msgstr ""
 
-#: ../../source/releases.rst:76
-msgid "IoTAgent: `IoTAgent Java <https://github.com/dojot/iotagent-java>`_"
+#: ../../source/releases.rst:127
+msgid "Migration to Kong Gateway version 2 (https://konghq.com/kong/)"
+msgstr "Migração para  a versão 2 do Kong Gateway (https://konghq.com/kong/)"
+
+#: ../../source/releases.rst:130
+msgid "Deployments"
+msgstr "Implantações"
+
+#: ../../source/releases.rst:133
+msgid "Docker-compose"
 msgstr ""
 
-#~ msgid "Flows:"
-#~ msgstr ""
+#: ../../source/releases.rst:135
+msgid "Upgrade to docker-compose version 3.8"
+msgstr "Atualização para a versão 3.8 do docker-compose"
+
+#: ../../source/releases.rst:136
+msgid "Update version of external services"
+msgstr "Atualização de versão de serviços externos"
+
+#: ../../source/releases.rst:137
+msgid "Added new services"
+msgstr "Adicionado novos serviços"
+
+#: ../../source/releases.rst:140
+msgid "Ansible-dojot"
+msgstr ""
+
+#: ../../source/releases.rst:142
+msgid ""
+"Several improvements mainly aimed at scalability and simplification of "
+"the installation process"
+msgstr ""
+"Diversas melhorias principalmente visando escalabilidade e simplificação "
+"do processo de instalação"
+
+#: ../../source/releases.rst:143
+msgid "Update to version 17 of kubernetes"
+msgstr "Atualização para a versão 17 de kubernetes"
+
+#: ../../source/releases.rst:144
+msgid "Added Load Balancer - Nginx"
+msgstr "Adicionado Load Balancer - Nginx"
+
+#: ../../source/releases.rst:145
+msgid ""
+"Added Prometheus and Grafana to monitor part of the infrastructure (VMs, "
+"VerneMQ, Kubernetes, etc.)"
+msgstr ""
+"Adicionado Prometheus e Grafana para monitorar parte da infraestrutura "
+"(VMs, VerneMQ, Kubernetes, etc)"
+
+#: ../../source/releases.rst:149
+msgid "Libraries"
+msgstr "Bibliotecas"
+
+#: ../../source/releases.rst:152
+msgid "dojot-module-nodejs"
+msgstr ""
+
+#: ../../source/releases.rst:157
+msgid "dojot-microservice-sdk-js"
+msgstr ""
+
+#: ../../source/releases.rst:159
+msgid "New dojot library in node.js with:"
+msgstr "Nova biblioteca dojot em node.js com:"
+
+#: ../../source/releases.rst:161
+msgid ""
+"Kafka Handlers -  Module responsible for Consumer (can use regular "
+"expressions in topics) and Producer"
+msgstr ""
+"Kafka Handlers - Módulo responsável pelo Consumer  (podendo utilizar "
+"expressões regulares nos tópicos) e Producer"
+
+#: ../../source/releases.rst:162
+msgid ""
+"Config Manager -  Module responsible for creating the standardized "
+"configuration file for the services"
+msgstr ""
+"Config Manager - Módulo responsável pela criação do arquivo de "
+"configuração padronizada para o serviços"
+
+#: ../../source/releases.rst:163
+msgid ""
+"Service State Manager - Module to define graceful shutdown and health "
+"check for the service"
+msgstr ""
+"Service State Manager -  Módulo para definir graceful shutdown e health "
+"check para o serviço"
+
+#: ../../source/releases.rst:164
+msgid ""
+"WebUtils - Module for creating a server and a web structure (Express.js) "
+"to handle HTTP (S) requests."
+msgstr ""
+"WebUtils - Módulo para a criação de um servidor e uma estrutura web "
+"(Express.js) para lidar com solicitações HTTP(S)."
+
+#: ../../source/releases.rst:165
+msgid "Logger - Log module to be used in services in a standardized way"
+msgstr ""
+"Logger - Módulo de log  para ser utilizado nos serviços de forma "
+"padronizada"
 
 #~ msgid "New node Event Device"
 #~ msgstr "Novo nó evento do dispositivo"
 
 #~ msgid "New node Event Template Device"
-#~ msgstr "Novo nó Modelo do dispositivo (eventos)"
+#~ msgstr "Novo nó Evento de modelos de dispositivo (Entrada)"
 
 #~ msgid "New node FTP"
 #~ msgstr "Novo nó FTP"
 
 #~ msgid "New node Multi Device Out"
-#~ msgstr "Novo nó Multi dispositivo Out"
+#~ msgstr "Novo nó de Saída para vários dispositivos (Multi Device Out)"
 
 #~ msgid "New node Notification"
-#~ msgstr "Novo nó Notificação"
+#~ msgstr "Novo nó de Notificações"
 
 #~ msgid "New node Multi Actuate"
-#~ msgstr "Novo nó  multi atuador"
+#~ msgstr "Novo nó de atuação para vários dispositivos (Multi Actuate)"
 
 #~ msgid "New node Cron"
-#~ msgstr "Novo nó Cron "
+#~ msgstr "Novo nó Cron"
 
 #~ msgid "New node Cron Batch"
 #~ msgstr "Novo nó Cron Batch"
 
 #~ msgid "New node Cumulative Sum"
-#~ msgstr "Novo nó valor acumulado"
+#~ msgstr "Novo nó de Soma acumulada"
 
 #~ msgid "New node Merge data"
-#~ msgstr "Novo nó mesclar dados"
+#~ msgstr "Novo nó de Mesclar dados "
 
 #~ msgid "Internacionalization"
 #~ msgstr "Internacionalização"
 
 #~ msgid "Support to handlebars template on template node"
-#~ msgstr "Suporte a *handlebars* no nó de modelo"
+#~ msgstr "Suporte a *handlebars template*  no nó de template"
+
+#~ msgid "IoT agents:"
+#~ msgstr "Agentes IoT:"
+
+#~ msgid "Support for `LWM2M devices <https://github.com/dojot/iotagent-leshan>`_"
+#~ msgstr ""
+#~ "Suporte para `dispositivos LWM2M "
+#~ "<https://github.com/dojot/iotagent-leshan>`_"
+
+#~ msgid "New interface for devices management"
+#~ msgstr "Nova interface para gerenciamento de dispositivos"
+
+#~ msgid "New interface for templates management"
+#~ msgstr "Nova interface para gerenciamento de modelos de dispositivos"
+
+#~ msgid "Attribute Metadata Management"
+#~ msgstr "Gerenciamento de metadados de atributo"
+
+#~ msgid "Import and export"
+#~ msgstr "Importar e exportar"
+
+#~ msgid "Firmware update"
+#~ msgstr "Atualização de Firmware"
+
+#~ msgid "Profiles"
+#~ msgstr "Perfis"
+
+#~ msgid "Notifications"
+#~ msgstr "Notificações"
+
+#~ msgid "Internationalization"
+#~ msgstr "Internacionalização"
+
+#~ msgid "View details with Actuator Attributes"
+#~ msgstr "Exibir detalhes de atributos de atuação"
+
+#~ msgid "Devices Filter on Map"
+#~ msgstr "Filtro de dispositivos no mapa"
+
+#~ msgid "New node Event Device In"
+#~ msgstr "Novo Nó Evento Dispositivo (Entrada)"
+
+#~ msgid "Node email has been removed"
+#~ msgstr "Nó de email foi removido"
+
+#~ msgid "New endpoint to query notifications"
+#~ msgstr "Novo endpoint para consultar notificações"
+
+#~ msgid "Improvements to support Firmware Update"
+#~ msgstr "Melhorias para dar suporte à atualização de firmware"
+
+#~ msgid "Support notifications in socket-io"
+#~ msgstr "Suporte a Notificações no socket-io"
 
 #~ msgid ""
-#~ "Flows: - New node Event Device In"
-#~ " - New node Event Template Device "
-#~ "- New node FTP - New node "
-#~ "Multi Device Out - New node "
-#~ "Notification - New node Multi Actuate"
-#~ " - New node Cron - New node "
-#~ "Cron Batch - New node Cumulative "
-#~ "Sum - New node Merge data - "
-#~ "Internacionalization - Support to handlebars"
-#~ " template on template node"
+#~ "It's new a dojot's microservice that "
+#~ "manages the dojot's data configuration, "
+#~ "making possible to import and export "
+#~ "configuration."
 #~ msgstr ""
+#~ "É um novo microsserviço da dojot "
+#~ "que gerencia a configuração de dados "
+#~ "da dojot, tornando possível importar e"
+#~ " exportar as configurações."
+
+#~ msgid ""
+#~ "It's new a dojot's microservice that "
+#~ "allows you to schedule events to "
+#~ "be emitted to other microservices."
+#~ msgstr ""
+#~ "É um novo microsserviço da dojot "
+#~ "que permite agendar eventos a serem "
+#~ "emitidos para outros microsserviços."
+
+#~ msgid ""
+#~ "To accelerate development: `Dojot Module "
+#~ "Java <https://github.com/dojot/dojot-module-java>`_"
+#~ " and `Dojot Module Python "
+#~ "<https://github.com/dojot/dojot-module-python>`_"
+#~ msgstr ""
+#~ "Para acelerar o desenvolvimento: `Dojot "
+#~ "Module Java <https://github.com/dojot/dojot-"
+#~ "module-java>`_ e `Dojot Module Python "
+#~ "<https://github.com/dojot/dojot-module-python>`_"
 
