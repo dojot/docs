@@ -449,7 +449,9 @@ msgstr "Para a instalação com kubernetes por favor, verifique o pdf abaixo"
 msgid ""
 ":download:`click here to access the dojot installation guide with kubernetes "
 "<pdf/Dojot-Installation-Guide.pdf>`"
-msgstr "Clique aqui para acessar o guia de instalação da dojot com kubernetes"
+msgstr ""
+":download:`Clique aqui para acessar o guia de instalação da dojot com kubernetes "
+"<pdf/Dojot-Installation-Guide.pdf>`"
 
 #: ../../source/installation-guide.rst:214
 msgid ""
