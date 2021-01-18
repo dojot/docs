@@ -134,7 +134,6 @@ msgstr ""
 "e configurações para executar a dojot em ambiente *Kubernetes*."
 
 #: ../../source/faq/faq.rst:50
-#, fuzzy
 msgid ""
 "to perform dojot in a Docker environment using the *docker-compose* tool."
 " This is the repository we recommend to start with dojot."
@@ -151,7 +150,6 @@ msgstr ""
 "e configurações para executar a dojot em ambiente *Kubernetes*."
 
 #: ../../source/faq/faq.rst:54
-#, fuzzy
 msgid "dojot in *Kubernetes* environment."
 msgstr "dojot no ambiente * Kubernetes *."
 
