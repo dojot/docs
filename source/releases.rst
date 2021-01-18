@@ -1,7 +1,7 @@
 Release history
 ===============
 
-Defendu - 2020.12
+Defendu - 2021.01
 ------------------
 
 Services
@@ -44,6 +44,12 @@ X.509 Identity Management
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
       - New dojot x509 certificate service using EJBCA (https://www.ejbca.org/)
+
+InfluxDB Storer and Retriever
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+      - InfluxDB Storer is responsible for consuming Kafka data and writing it to InfluxDB
+      - InfluxDB Retriever retrieves data that were written by InfluxDB Storer in InfluxDB via API REST
 
 Improvements and fixes
 **********************

@@ -281,7 +281,7 @@ This section will demonstrate how to generate a device history report. The repor
     allowfullscreen></iframe>
 
 Performing access to the Dashboard
---------------------------------
+----------------------------------
 
 The dashboard is part of GUI-V2, to access it you need to use another URL, in the current version just add to the end of the URL “/v2” in relation to the interface used in the previous items, for example, in the case of localhost it would be http://localhost:8000/v2, see more at :doc:`components-and-apis`.
 The login and password credentials are the same as those used in the rest of dojot. After logging in, a new screen will open and an ``ADD`` button will appear in the upper right corner, which will give you the options for various types of viewing. At this moment, in the first “General” screen it will be necessary to add a name for the visualization and optionally a description.
