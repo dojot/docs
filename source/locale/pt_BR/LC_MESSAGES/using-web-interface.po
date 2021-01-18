@@ -23,7 +23,6 @@ msgid "Using web interface"
 msgstr "Usando a interface WEB"
 
 #: ../../source/using-web-interface.rst:4
-#, fuzzy
 msgid ""
 "This tutorial will show how to do basic operations in dojot, such as "
 "creating devices, checking its attributes and creating flows, "
@@ -134,7 +133,6 @@ msgstr ""
 "também chamado ``level`` foi adicionado ao modelo ``ThermTemplate``."
 
 #: ../../source/using-web-interface.rst:75
-#, fuzzy
 msgid ""
 "When this happens, no modification is applied to the template (no "
 "attribute named “level” related to the “ThermTemplate” is created). "
@@ -225,7 +223,6 @@ msgid "Flow configuration"
 msgstr "Configuração de fluxo"
 
 #: ../../source/using-web-interface.rst:125
-#, fuzzy
 msgid ""
 "Once we’ve created the virtual device, we can add a flow to implement the"
 " logic behind the alarm generation. The idea is: if the temperature "
@@ -528,7 +525,6 @@ msgid "Performing access to the Dashboard"
 msgstr "Realizando acesso ao Dashboard"
 
 #: ../../source/using-web-interface.rst:286
-#, fuzzy
 msgid ""
 "The dashboard is part of GUI-V2, to access it you need to use another "
 "URL, in the current version just add to the end of the URL “/v2” in "
