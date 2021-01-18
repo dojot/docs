@@ -71,7 +71,6 @@ msgid "Running a simple test"
 msgstr "Rodando um teste simples"
 
 #: ../../source/load-testing-dojot-platform.rst:38
-#, fuzzy
 msgid ""
 "In this section, it will be shown how to configure and run Locust, and "
 "also how to generate certificates with the ``generate_certs`` script in "
