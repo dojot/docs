@@ -494,38 +494,3 @@ msgstr "Todos esses *endpoints* devem ter um *token* de acesso. Para isso, confi
 #: ../../source/faq/faq.rst:458
 msgid "Check the documentation API for  *History* and *Kafka WS* in :doc:`./../components-and-apis`. And to a tutorial on how to use the flow, check :doc:`../flow`."
 msgstr "Verifique a documentação da API do *History* e do *Kafka WS* em :doc:`./../components-and-apis`.  E para um tutorial de como usar o fluxo veja :doc:`../flow`."
-
-#~ msgid "Check a tutorial using history in :ref:`Checking historical data`."
-#~ msgstr "Veja um tutorial usando o *history* :ref:`Checking historical data`."
-
-#~ msgid "It takes a role as an enabler platform with:"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "`<https://github.com/dojot/docker-compose>`_: repository"
-#~ " for Docker compose files and "
-#~ "configurations. This is what we would"
-#~ " recommend to use to start with."
-#~ msgstr ""
-#~ "`<https://github.com/dojot/ansible-dojot>`_: repositório"
-#~ " com os arquivos e configurações para"
-#~ " executar a dojot em ambiente "
-#~ "*Kubernetes*."
-
-#~ msgid "The dojot acts as a facilitating platform with:"
-#~ msgstr "A dojot atua como uma plataforma facilitadora com:"
-
-#~ msgid ""
-#~ "to perform dojot in a Docker "
-#~ "environment using the *docker-compose* "
-#~ "tool. This is the repository we "
-#~ "recommend to start with dojot."
-#~ msgstr ""
-#~ "para utilizar a dojot em um "
-#~ "ambiente Docker usando a ferramenta "
-#~ "*docker-compose*. Este é o repositório "
-#~ "que recomendamos para iniciar com a "
-#~ "dojot."
-
-#~ msgid "dojot in *Kubernetes* environment."
-#~ msgstr "dojot no ambiente * Kubernetes *."

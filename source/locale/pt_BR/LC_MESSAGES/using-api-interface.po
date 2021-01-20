@@ -255,22 +255,3 @@ msgstr "A requisição deve resultar na seguinte mensagem:"
 #: ../../source/using-api-interface.rst:428
 msgid "This message contains all previously sent values."
 msgstr "A mensagem acima contém todos os valores previamente enviados pelo dispositivo."
-
-#~ msgid ""
-#~ "**Also you can publish a configuration"
-#~ " message from dojot to the device "
-#~ "to change some of its attributes. "
-#~ "The target attribute must be of "
-#~ "type “actuator”.**"
-#~ msgstr ""
-#~ "**Além disso, você pode publicar uma "
-#~ "mensagem de configuração da dojot para"
-#~ " o dispositivo. O atributo de destino"
-#~ " deve ser do tipo “actuator” ou "
-#~ "“atuador”.**"
-
-#~ msgid "Triggering the publishing of the message from the dojot to the device."
-#~ msgstr "Disparando envio de mensagens da dojot para o dispositivo."
-
-#~ msgid "Let's publish the following message:"
-#~ msgstr "A requisição deve resultar na seguinte mensagem:"

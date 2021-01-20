@@ -1283,6 +1283,3 @@ msgstr ""
 #: ../../source/flow.rst:1018
 msgid ": Notification"
 msgstr "Notificação (notification)"
-
-#~ msgid "contentType: Type identifier of the content of the data attribute."
-#~ msgstr "contentType: Identificador de tipo do conteúdo dos dados."
