@@ -60,7 +60,7 @@ IotAgent Mosca (Legacy)
 
 The IotAgent Mosca uses `Mosca`_ that is a node.js mqtt
 broker,
-see more about this service in `IotAgent-VerneMQ`_.
+see more about this service in `IotAgent-Mosca`_.
 This is the **not default** Broker MQTT in dojot deployments.
 
 To use IotAgent Mosca with TLS, you need to configure by environment variable:
@@ -145,7 +145,7 @@ to the corresponding version of your dojot environment:
 
   git clone https://github.com/dojot/dojot.git
   cd dojot
-  git checkout v0.5.0
+  git checkout v0.5.1
 
 Enter in ``certreq`` directory:
 
@@ -321,18 +321,18 @@ A certificate file can be in two formats: PEM (base64 text) or DER
 .. _jq: https://stedolan.github.io/jq/
 .. _git: https://git-scm.com/
 .. _VerneMQ: https://vernemq.com/
-.. _IotAgent-VerneMQ: https://github.com/dojot/dojot/tree/v0.5.0/connector/mqtt/vernemq
-.. _X.509 Identity Management: https://github.com/dojot/dojot/tree/v0.5.0/x509-identity-mgmt
-.. _VerneMQ Dojot - Environment variables: https://github.com/dojot/dojot/tree/v0.5.0/connector/mqtt/vernemq/broker#environment-variables
+.. _IotAgent-VerneMQ: https://github.com/dojot/dojot/tree/v0.5.1/connector/mqtt/vernemq
+.. _X.509 Identity Management: https://github.com/dojot/dojot/tree/v0.5.1/x509-identity-mgmt
+.. _VerneMQ Dojot - Environment variables: https://github.com/dojot/dojot/tree/v0.5.1/connector/mqtt/vernemq/broker#environment-variables
 .. _mosquitto: https://projects.eclipse.org/projects/technology.mosquitto
-.. _How to connect a device with the IoTAgent-VerneMQ with mutual TLS: https://github.com/dojot/dojot/tree/v0.5.0/connector/mqtt/vernemq#how-to-connect-a-device-with-the-iot-agent-mqtt-with-mutual-tls
-.. _Simulating a device with mosquitto: https://github.com/dojot/dojot/tree/v0.5.0/connector/mqtt/vernemq#simulating-a-device-with-mosquitto
-.. _Simulating a device with mosquitto with security: https://github.com/dojot/dojot/tree/v0.5.0/connector/mqtt/vernemq#with-security
-.. _Simulating a device with mosquitto without security: https://github.com/dojot/dojot/blob/v0.5.0/connector/mqtt/vernemq/README.md#without-security
-.. _API - x509-identity-mgmt: https://dojot.github.io/dojot/x509-identity-mgmt/apiary_v0.5.0.html
-.. _CertReq: https://github.com/dojot/dojot/tree/v0.5.0/tools/certreq
-.. _CertReq - Parameters: https://github.com/dojot/dojot/tree/v0.5.0/tools/certreq#parameters
-.. _IotAgent-Mosca: https://github.com/dojot/iotagent-mosca/tree/v0.5.0
+.. _How to connect a device with the IoTAgent-VerneMQ with mutual TLS: https://github.com/dojot/dojot/tree/v0.5.1/connector/mqtt/vernemq#how-to-connect-a-device-with-the-iot-agent-mqtt-with-mutual-tls
+.. _Simulating a device with mosquitto: https://github.com/dojot/dojot/tree/v0.5.1/connector/mqtt/vernemq#simulating-a-device-with-mosquitto
+.. _Simulating a device with mosquitto with security: https://github.com/dojot/dojot/tree/v0.5.1/connector/mqtt/vernemq#with-security
+.. _Simulating a device with mosquitto without security: https://github.com/dojot/dojot/blob/v0.5.1/connector/mqtt/vernemq/README.md#without-security
+.. _API - x509-identity-mgmt: https://dojot.github.io/dojot/x509-identity-mgmt/apiary_v0.5.1.html
+.. _CertReq: https://github.com/dojot/dojot/tree/v0.5.1/tools/certreq
+.. _CertReq - Parameters: https://github.com/dojot/dojot/tree/v0.5.1/tools/certreq#parameters
+.. _IotAgent-Mosca: https://github.com/dojot/iotagent-mosca/tree/v0.5.1
 .. _Mosca: https://github.com/mcollina/mosca
 
 

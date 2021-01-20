@@ -131,9 +131,10 @@ If you need another version, you could checkout a tag instead:
     v0.5.0-alpha.4
     v0.5.0-rc.1
     v0.5.0
+    v0.5.1
 
 
-  $ git checkout v0.5.0
+  $ git checkout v0.5.1
 
 
 Devices

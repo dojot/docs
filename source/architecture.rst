@@ -134,7 +134,7 @@ like templates, devices and flows.
 Cron
 ****
 
-Cron is a dojot's microservice that  allows you to schedule events to be emitted - or requests to be sent - to other microservices inside dojot platform.
+Cron is a dojot's microservice that allows you to schedule events to be emitted - or requests to be sent - to other microservices inside dojot platform.
 
 
 Kafka2Ftp
@@ -158,6 +158,16 @@ allows a Sharded Cluster configuration that may be required according to the
 use case.
 
 The persisted data can be queried through a Rest API provided by the History microservice.
+
+
+InfluxDB Storer and Retriever
+*****************************
+
+The services InfluxDB Storer and InfluxDB Retriever work together,
+the InfluxDB Storer is responsible for consuming Kafka data from dojot
+devices and writing it to InfluxDB, while the InfluxDB Retriever has
+the role of obtaining the data that were written by InfluxDB Storer
+in InfluxDB via API REST.
 
 Kong API Gateway
 ****************
