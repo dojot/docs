@@ -160,7 +160,7 @@ msgid "Cron"
 msgstr "Cron"
 
 #: ../../source/architecture.rst:137
-msgid "Cron is a dojot's microservice that  allows you to schedule events to be emitted - or requests to be sent - to other microservices inside dojot platform."
+msgid "Cron is a dojot's microservice that allows you to schedule events to be emitted - or requests to be sent - to other microservices inside dojot platform."
 msgstr "Cron é um microsserviço da dojot que permite agendar eventos a serem emitidos - ou requisições a serem feitas - para outros microsserviços dentro da plataforma dojot."
 
 #: ../../source/architecture.rst:141
@@ -209,7 +209,7 @@ msgstr "GUI"
 
 #: ../../source/architecture.rst:184
 msgid "The Graphical User Interface in *dojot* is responsible for providing responsive interfaces to manage the platform, including functionalities like:"
-msgstr "A Interface Gráfica de Usuário (GUI) na *dojot* é uma aplicação WEB  que provê interfaces responsivas para gerenciamento da plataforma, incluindo funcionalidades como:"
+msgstr "A Interface Gráfica de Usuário (GUI) na *dojot* é uma aplicação WEB que provê interfaces responsivas para gerenciamento da plataforma, incluindo funcionalidades como:"
 
 #: ../../source/architecture.rst:187
 msgid "**User Profile Management**: Define profiles and the API permission associated to those profiles"
