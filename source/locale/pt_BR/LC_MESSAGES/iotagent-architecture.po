@@ -934,3 +934,7 @@ msgid ""
 msgstr ""
 "node.js **recomendada** (https://www.npmjs.com/package/@dojot/iotagent-"
 "nodejs)"
+
+#: ../../source/iotagent-architecture.rst:524
+msgid "java (https://jitpack.io/#dojot/iotagent-java)"
+msgstr ""
