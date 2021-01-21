@@ -236,8 +236,8 @@ msgid "Let’s take as example a weather station which measures temperature and 
 msgstr "Tomemos como exemplo uma estação meteorológica que monitora temperatura e umidade e publica essas medidas via MQTT periodicamente. Inicialmente, cria-se um dispositivo do tipo MQTT com dois atributos (temperatura e umidade) e, em seguida, configura-se a estação meteorológica para publicar os dados para a dojot."
 
 #: ../../source/faq/faq.rst:211
-msgid "As of **v0.5.1**, you can choose the between two MQTT brokers: Mosca or VerneMQ. By default, VerneMQ is used, but you can use Mosca too. Check the :doc:`../installation-guide` for more information."
-msgstr "A partir da versão **v0.5.1**, você pode escolher entre dois *brokers* MQTT: Mosca ou VerneMQ. Por padrão, o VerneMQ é utilizado, mas você pode utilizar o Mosca também. Verifique o :doc:`../installation-guide` para mais informações."
+msgid "As of **v0.5.2**, you can choose the between two MQTT brokers: Mosca or VerneMQ. By default, VerneMQ is used, but you can use Mosca too. Check the :doc:`../installation-guide` for more information."
+msgstr "A partir da versão **v0.5.2**, você pode escolher entre dois *brokers* MQTT: Mosca ou VerneMQ. Por padrão, o VerneMQ é utilizado, mas você pode utilizar o Mosca também. Verifique o :doc:`../installation-guide` para mais informações."
 
 #: ../../source/faq/faq.rst:214
 msgid "In order to send data to dojot via MQTT (using Mosca or VerneMQ), there are some things to keep in mind:"

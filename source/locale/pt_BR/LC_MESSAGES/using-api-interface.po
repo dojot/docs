@@ -139,8 +139,8 @@ msgid "To run `mosquitto_pub` and `mosquitto_sub` without using TLS as in the ex
 msgstr "Para executar `mosquitto_pub` e` mosquitto_sub` sem usar TLS como nos exemplos abaixo, você precisa definir algumas configurações (ou para como desativar o modo sem TLS). Para obter mais detalhes sobre este tópico, consulte a página :ref:`Unsecured mode MQTT`."
 
 #: ../../source/using-api-interface.rst:253
-msgid "As of **v0.5.1**, you can choose the between two MQTT brokers: Mosca or VerneMQ. By default, VerneMQ is used, but you can use Mosca too. Check the :doc:`../installation-guide` for more information."
-msgstr "A partir da versão **v0.5.1**, você pode escolher entre dois brokers MQTT: Mosca ou VerneMQ. Por padrão, o VerneMQ é utilizado, mas você pode utilizar o Mosca também. Verifique o :doc:`../installation-guide` para mais informações."
+msgid "As of **v0.5.2**, you can choose the between two MQTT brokers: Mosca or VerneMQ. By default, VerneMQ is used, but you can use Mosca too. Check the :doc:`../installation-guide` for more information."
+msgstr "A partir da versão **v0.5.2**, você pode escolher entre dois brokers MQTT: Mosca ou VerneMQ. Por padrão, o VerneMQ é utilizado, mas você pode utilizar o Mosca também. Verifique o :doc:`../installation-guide` para mais informações."
 
 #: ../../source/using-api-interface.rst:257
 msgid "Using VerneMQ"

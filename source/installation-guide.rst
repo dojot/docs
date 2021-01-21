@@ -68,7 +68,7 @@ Docker Compose
     src="https://www.youtube.com/embed/aZ-Wtcd_Ydw?rel=0" frameborder="0"
     allowfullscreen></iframe><br/>
 
-In this video tutorial above, version v0.4.2 is used, but the same video is valid for the current version, it is only necessary to change to version v0.5.1.
+In this video tutorial above, version v0.4.2 is used, but the same video is valid for the current version, it is only necessary to change to version v0.5.2.
 
 This document provides instructions on how to create a trivial deployment
 environment on single host for *dojot*, using Compose as the processes
@@ -142,7 +142,7 @@ replaced): ::
 
 For instance: ::
 
-  git checkout v0.5.1 -b v0.5.1
+  git checkout v0.5.2 -b v0.5.2
 
 
 That done, the environment can be brought up by: ::
@@ -176,7 +176,7 @@ When we deploy dojot with the command 'docker-compose up -d' the volumes are ena
 by default.
 
 The volumes of microservices that Dojot uses can be incompatible between dojot versions. This means
-that you are unable to use dojot v0.4.x volumes in dojot v0.5.1 and vice versa.
+that you are unable to use dojot v0.4.x volumes in dojot v0.5.2 and vice versa.
 
 To use different versions of dojot in the same environment, you must first drop the volumes of the other version.
 

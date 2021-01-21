@@ -435,57 +435,57 @@ dojot.
 .. _Leshan site: https://www.eclipse.org/leshan/
 .. _Leshan doc.: https://github.com/eclipse/leshan/wiki
 
-.. _GitHub - auth: https://github.com/dojot/auth/tree/v0.5.1
-.. _API - auth: https://dojot.github.io/auth/apiary_v0.5.1.html
-.. _Messages - auth: https://github.com/dojot/auth/tree/v0.5.1#kafka-messages
+.. _GitHub - auth: https://github.com/dojot/auth/tree/v0.5.2
+.. _API - auth: https://dojot.github.io/auth/apiary_v0.5.2.html
+.. _Messages - auth: https://github.com/dojot/auth/tree/v0.5.2#kafka-messages
 
-.. _GitHub - Dojot Kong: https://github.com/dojot/kong/tree/v0.5.1
+.. _GitHub - Dojot Kong: https://github.com/dojot/kong/tree/v0.5.2
 
-.. _GitHub - history: https://github.com/dojot/history/tree/v0.5.1
-.. _API - history: https://dojot.github.io/history/apiary_v0.5.1.html
-
-
-.. _GitHub - DeviceManager: https://github.com/dojot/device-manager/tree/v0.5.1
-.. _API - DeviceManager: https://dojot.github.io/device-manager/apiary_v0.5.1.html
-.. _Messages - DeviceManager: https://github.com/dojot/device-manager/tree/v0.5.1#events
-
-.. _GitHub - image-manager: https://github.com/dojot/image-manager/tree/v0.5.1
-.. _API - image-manager: https://dojot.github.io/image-manager/apiary_v0.5.1.html
+.. _GitHub - history: https://github.com/dojot/history/tree/v0.5.2
+.. _API - history: https://dojot.github.io/history/apiary_v0.5.2.html
 
 
-.. _GitHub - GUI: https://github.com/dojot/gui/tree/v0.5.1
+.. _GitHub - DeviceManager: https://github.com/dojot/device-manager/tree/v0.5.2
+.. _API - DeviceManager: https://dojot.github.io/device-manager/apiary_v0.5.2.html
+.. _Messages - DeviceManager: https://github.com/dojot/device-manager/tree/v0.5.2#events
+
+.. _GitHub - image-manager: https://github.com/dojot/image-manager/tree/v0.5.2
+.. _API - image-manager: https://dojot.github.io/image-manager/apiary_v0.5.2.html
 
 
-.. _GitHub - flowbroker: https://github.com/dojot/flowbroker/tree/v0.5.1
-.. _API - flowbroker: https://dojot.github.io/flowbroker/apiary_v0.5.1.html
+.. _GitHub - GUI: https://github.com/dojot/gui/tree/v0.5.2
 
-.. _GitHub - data-broker: https://github.com/dojot/data-broker/tree/v0.5.1
-.. _API - data-broker: https://dojot.github.io/data-broker/apiary_v0.5.1.html
+
+.. _GitHub - flowbroker: https://github.com/dojot/flowbroker/tree/v0.5.2
+.. _API - flowbroker: https://dojot.github.io/flowbroker/apiary_v0.5.2.html
+
+.. _GitHub - data-broker: https://github.com/dojot/data-broker/tree/v0.5.2
+.. _API - data-broker: https://dojot.github.io/data-broker/apiary_v0.5.2.html
 
 .. _Messages - iotagent-mosca: http://dojotdocs.readthedocs.io/projects/iotagent-mosca/en/latest/operation.html#sending-messages-to-other-components-via-kafka
-.. _GitHub - iotagent-mosca: https://github.com/dojot/iotagent-mosca/tree/v0.5.1
+.. _GitHub - iotagent-mosca: https://github.com/dojot/iotagent-mosca/tree/v0.5.2
 
-.. _GitHub - iotagent-vernemq: https://github.com/dojot/dojot/tree/v0.5.1/connector/mqtt/vernemq
+.. _GitHub - iotagent-vernemq: https://github.com/dojot/dojot/tree/v0.5.2/connector/mqtt/vernemq
 
-.. _GitHub - iotagent-leshan: https://github.com/dojot/iotagent-leshan/tree/v0.5.1
-
-
-.. _GitHub - Data Manager: https://github.com/dojot/data-manager/tree/v0.5.1
-.. _API - Data Manager: https://dojot.github.io/data-manager/apiary_v0.5.1.html
-
-.. _GitHub - Cron: https://github.com/dojot/cron/tree/v0.5.1
-.. _API - Cron: https://dojot.github.io/cron/apiary_v0.5.1.html
-
-.. _GitHub - x509-identity-mgmt: https://github.com/dojot/dojot/tree/v0.5.1/x509-identity-mgmt
-.. _API - x509-identity-mgmt: https://dojot.github.io/dojot/x509-identity-mgmt/apiary_v0.5.1.html
-
-.. _GitHub - Kafka2Ftp: https://github.com/dojot/dojot/tree/v0.5.1/connector/kafka2ftp
-
-.. _GitHub - Kafka WS: https://github.com/dojot/dojot/tree/v0.5.1/subscription-engine/kafka-ws
-.. _API - kafka-ws: https://dojot.github.io/dojot/kafka-ws/apiary_v0.5.1.html
-
-.. _GitHub - V2: https://github.com/dojot/gui-v2/tree/v0.5.1
+.. _GitHub - iotagent-leshan: https://github.com/dojot/iotagent-leshan/tree/v0.5.2
 
 
-.. _GitHub - InfluxDB Storer and Retriever: https://github.com/dojot/dojot/tree/v0.5.1/storage/time-series/influxdb
-.. _API - InfluxDB-Retriever: https://dojot.github.io/dojot/storage/time-series/influxdb/retriever/doc.html?version=v0.5.1
+.. _GitHub - Data Manager: https://github.com/dojot/data-manager/tree/v0.5.2
+.. _API - Data Manager: https://dojot.github.io/data-manager/apiary_v0.5.2.html
+
+.. _GitHub - Cron: https://github.com/dojot/cron/tree/v0.5.2
+.. _API - Cron: https://dojot.github.io/cron/apiary_v0.5.2.html
+
+.. _GitHub - x509-identity-mgmt: https://github.com/dojot/dojot/tree/v0.5.2/x509-identity-mgmt
+.. _API - x509-identity-mgmt: https://dojot.github.io/dojot/x509-identity-mgmt/apiary_v0.5.2.html
+
+.. _GitHub - Kafka2Ftp: https://github.com/dojot/dojot/tree/v0.5.2/connector/kafka2ftp
+
+.. _GitHub - Kafka WS: https://github.com/dojot/dojot/tree/v0.5.2/subscription-engine/kafka-ws
+.. _API - kafka-ws: https://dojot.github.io/dojot/kafka-ws/apiary_v0.5.2.html
+
+.. _GitHub - V2: https://github.com/dojot/gui-v2/tree/v0.5.2
+
+
+.. _GitHub - InfluxDB Storer and Retriever: https://github.com/dojot/dojot/tree/v0.5.2/storage/time-series/influxdb
+.. _API - InfluxDB-Retriever: https://dojot.github.io/dojot/storage/time-series/influxdb/retriever/doc.html?version=v0.5.2

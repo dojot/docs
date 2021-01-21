@@ -166,8 +166,8 @@ msgid "Docker Compose"
 msgstr "Docker Compose"
 
 #: ../../source/installation-guide.rst:71
-msgid "In this video tutorial above, version v0.4.2 is used, but the same video is valid for the current version, it is only necessary to change to version v0.5.1."
-msgstr "Neste video tutorial acima é utilizada a versão v0.4.2, mas o mesmo video é válido para a versão atual, apenas é necessário mudar pra a versão v0.5.1"
+msgid "In this video tutorial above, version v0.4.2 is used, but the same video is valid for the current version, it is only necessary to change to version v0.5.2."
+msgstr "Neste video tutorial acima é utilizada a versão v0.4.2, mas o mesmo video é válido para a versão atual, apenas é necessário mudar pra a versão v0.5.2"
 
 #: ../../source/installation-guide.rst:73
 msgid "This document provides instructions on how to create a trivial deployment environment on single host for *dojot*, using Compose as the processes orchestration platform."
@@ -279,8 +279,8 @@ msgid "When we deploy dojot with the command 'docker-compose up -d' the volumes 
 msgstr "Quando fazemos o deploy da dojot com o comando 'docker-compose up -d', por padrão, os volumes são habilitados e criados."
 
 #: ../../source/installation-guide.rst:178
-msgid "The volumes of microservices that Dojot uses can be incompatible between dojot versions. This means that you are unable to use dojot v0.4.x volumes in dojot v0.5.1 and vice versa."
-msgstr "Os volumes dos microsserviços que a dojot utiliza podem ser incompatíveis entre as versões da dojot. Isso significa que não é possível usar os volumes da dojot v0.4.x na dojot v0.5.1 e vice versa"
+msgid "The volumes of microservices that Dojot uses can be incompatible between dojot versions. This means that you are unable to use dojot v0.4.x volumes in dojot v0.5.2 and vice versa."
+msgstr "Os volumes dos microsserviços que a dojot utiliza podem ser incompatíveis entre as versões da dojot. Isso significa que não é possível usar os volumes da dojot v0.4.x na dojot v0.5.2 e vice versa"
 
 #: ../../source/installation-guide.rst:181
 msgid "To use different versions of dojot in the same environment, you must first drop the volumes of the other version."
