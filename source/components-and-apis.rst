@@ -47,6 +47,10 @@ Components
     - `Leshan site`_
     - `Leshan doc.`_
     -
+  * - InfluxDB
+    - `InfluxDB site`_
+    - `InfluxDB doc.`_
+    -
   * - Auth
     - `GitHub - auth`_
     -
@@ -434,6 +438,8 @@ dojot.
 .. _VerneMQ doc.: https://docs.vernemq.com/
 .. _Leshan site: https://www.eclipse.org/leshan/
 .. _Leshan doc.: https://github.com/eclipse/leshan/wiki
+.. _InfluxDB site: https://www.influxdata.com/
+.. _InfluxDB doc.: https://docs.influxdata.com/
 
 .. _GitHub - auth: https://github.com/dojot/auth/tree/v0.5.2
 .. _API - auth: https://dojot.github.io/auth/apiary_v0.5.2.html
