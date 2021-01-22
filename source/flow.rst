@@ -554,7 +554,7 @@ Merge data
     :align: left
     :alt: merge_data_node
 
-This node allows objects to be merged in the context.
+This node allows objects to be merged in the **flow** context.
 
 .. _merge_data_node_cfg:
 .. figure:: images/nodes/merge-data-node-config.png
@@ -579,7 +579,7 @@ Cumulative sum
     :align: left
     :alt: cumulative_sum_node
 
-The cumulative sum node accumulates the data for an attribute in a temporal window and keeping this in  the context.
+The cumulative sum node accumulates the data for an attribute in a temporal window and keeping this in the **flow** context.
 
 .. _cumulative_sum_node_cfg:
 .. figure:: images/nodes/cum-sum-node-config.png
