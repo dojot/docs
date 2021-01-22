@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dojot 0.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-18 13:50-0300\n"
+"POT-Creation-Date: 2021-01-22 09:15-0300\n"
 "PO-Revision-Date: 2020-12-15 13:46-0300\n"
 "Last-Translator: \n"
 "Language: pt_BR\n"
@@ -24,13 +24,13 @@ msgstr "Componentes e APIs"
 
 #: ../../source/components-and-apis.rst:5
 #: ../../source/components-and-apis.rst:7
-#: ../../source/components-and-apis.rst:361
+#: ../../source/components-and-apis.rst:365
 msgid "Components"
 msgstr "Componentes"
 
 #: ../../source/components-and-apis.rst
-#: ../../source/components-and-apis.rst:280
-#: ../../source/components-and-apis.rst:408
+#: ../../source/components-and-apis.rst:284
+#: ../../source/components-and-apis.rst:412
 msgid "Component"
 msgstr "Componentes"
 
@@ -155,131 +155,143 @@ msgid "`Leshan doc.`_"
 msgstr ""
 
 #: ../../source/components-and-apis.rst:50
-#: ../../source/components-and-apis.rst:175
-#: ../../source/components-and-apis.rst:180
-#: ../../source/components-and-apis.rst:185
-#: ../../source/components-and-apis.rst:190
-#: ../../source/components-and-apis.rst:298
-#: ../../source/components-and-apis.rst:301
-#: ../../source/components-and-apis.rst:304
-#: ../../source/components-and-apis.rst:307
-msgid "Auth"
+msgid "InfluxDB"
 msgstr ""
 
 #: ../../source/components-and-apis.rst:51
-msgid "`GitHub - auth`_"
+msgid "`InfluxDB site`_"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:53
-#: ../../source/components-and-apis.rst:178
-#: ../../source/components-and-apis.rst:183
-#: ../../source/components-and-apis.rst:188
-#: ../../source/components-and-apis.rst:193
-msgid "`API - auth`_"
+#: ../../source/components-and-apis.rst:52
+msgid "`InfluxDB doc.`_"
 msgstr ""
 
 #: ../../source/components-and-apis.rst:54
-msgid "Dojot Kong"
+#: ../../source/components-and-apis.rst:179
+#: ../../source/components-and-apis.rst:184
+#: ../../source/components-and-apis.rst:189
+#: ../../source/components-and-apis.rst:194
+#: ../../source/components-and-apis.rst:302
+#: ../../source/components-and-apis.rst:305
+#: ../../source/components-and-apis.rst:308
+#: ../../source/components-and-apis.rst:311
+msgid "Auth"
 msgstr ""
 
 #: ../../source/components-and-apis.rst:55
-msgid "`GitHub - Dojot Kong`_"
+msgid "`GitHub - auth`_"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:57
+#: ../../source/components-and-apis.rst:182
+#: ../../source/components-and-apis.rst:187
+#: ../../source/components-and-apis.rst:192
+#: ../../source/components-and-apis.rst:197
+msgid "`API - auth`_"
 msgstr ""
 
 #: ../../source/components-and-apis.rst:58
-#: ../../source/components-and-apis.rst:195
-#: ../../source/components-and-apis.rst:310
-msgid "History"
+msgid "Dojot Kong"
 msgstr ""
 
 #: ../../source/components-and-apis.rst:59
-msgid "`GitHub - history`_"
-msgstr ""
-
-#: ../../source/components-and-apis.rst:61
-#: ../../source/components-and-apis.rst:198
-msgid "`API - history`_"
+msgid "`GitHub - Dojot Kong`_"
 msgstr ""
 
 #: ../../source/components-and-apis.rst:62
-#: ../../source/components-and-apis.rst:160
-#: ../../source/components-and-apis.rst:165
-#: ../../source/components-and-apis.rst:289
-#: ../../source/components-and-apis.rst:292
-msgid "Device Manager"
+#: ../../source/components-and-apis.rst:199
+#: ../../source/components-and-apis.rst:314
+msgid "History"
 msgstr ""
 
 #: ../../source/components-and-apis.rst:63
-msgid "`GitHub - DeviceManager`_"
+msgid "`GitHub - history`_"
 msgstr ""
 
 #: ../../source/components-and-apis.rst:65
-#: ../../source/components-and-apis.rst:163
-#: ../../source/components-and-apis.rst:168
-msgid "`API - DeviceManager`_"
+#: ../../source/components-and-apis.rst:202
+msgid "`API - history`_"
 msgstr ""
 
 #: ../../source/components-and-apis.rst:66
-#: ../../source/components-and-apis.rst:215
-#: ../../source/components-and-apis.rst:322
-msgid "Image Manager"
+#: ../../source/components-and-apis.rst:164
+#: ../../source/components-and-apis.rst:169
+#: ../../source/components-and-apis.rst:293
+#: ../../source/components-and-apis.rst:296
+msgid "Device Manager"
 msgstr ""
 
 #: ../../source/components-and-apis.rst:67
-msgid "`GitHub - image-manager`_"
+msgid "`GitHub - DeviceManager`_"
 msgstr ""
 
 #: ../../source/components-and-apis.rst:69
-#: ../../source/components-and-apis.rst:218
-msgid "`API - image-manager`_"
+#: ../../source/components-and-apis.rst:167
+#: ../../source/components-and-apis.rst:172
+msgid "`API - DeviceManager`_"
 msgstr ""
 
 #: ../../source/components-and-apis.rst:70
-#: ../../source/components-and-apis.rst:150
-#: ../../source/components-and-apis.rst:283
-msgid "GUI"
+#: ../../source/components-and-apis.rst:219
+#: ../../source/components-and-apis.rst:326
+msgid "Image Manager"
 msgstr ""
 
 #: ../../source/components-and-apis.rst:71
-msgid "`GitHub - GUI`_"
+msgid "`GitHub - image-manager`_"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:73
+#: ../../source/components-and-apis.rst:222
+msgid "`API - image-manager`_"
 msgstr ""
 
 #: ../../source/components-and-apis.rst:74
-msgid "GUI - V2"
+#: ../../source/components-and-apis.rst:154
+#: ../../source/components-and-apis.rst:287
+msgid "GUI"
 msgstr ""
 
 #: ../../source/components-and-apis.rst:75
-msgid "`GitHub - V2`_"
+msgid "`GitHub - GUI`_"
 msgstr ""
 
 #: ../../source/components-and-apis.rst:78
-#: ../../source/components-and-apis.rst:170
-#: ../../source/components-and-apis.rst:295
-msgid "Flowbroker"
+msgid "GUI - V2"
 msgstr ""
 
 #: ../../source/components-and-apis.rst:79
-msgid "`GitHub - flowbroker`_"
-msgstr ""
-
-#: ../../source/components-and-apis.rst:81
-#: ../../source/components-and-apis.rst:173
-msgid "`API - flowbroker`_"
+msgid "`GitHub - V2`_"
 msgstr ""
 
 #: ../../source/components-and-apis.rst:82
-msgid "Databroker"
+#: ../../source/components-and-apis.rst:174
+#: ../../source/components-and-apis.rst:299
+msgid "Flowbroker"
 msgstr ""
 
 #: ../../source/components-and-apis.rst:83
-msgid "`GitHub - data-broker`_"
+msgid "`GitHub - flowbroker`_"
 msgstr ""
 
 #: ../../source/components-and-apis.rst:85
-#: ../../source/components-and-apis.rst:227
-#: ../../source/components-and-apis.rst:232
-#: ../../source/components-and-apis.rst:237
-#: ../../source/components-and-apis.rst:242
+#: ../../source/components-and-apis.rst:177
+msgid "`API - flowbroker`_"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:86
+msgid "Databroker"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:87
+msgid "`GitHub - data-broker`_"
+msgstr ""
+
+#: ../../source/components-and-apis.rst:89
+#: ../../source/components-and-apis.rst:231
+#: ../../source/components-and-apis.rst:236
+#: ../../source/components-and-apis.rst:241
+#: ../../source/components-and-apis.rst:246
 msgid "`API - data-broker`_"
 msgstr ""
 
@@ -291,7 +303,7 @@ msgstr ""
 msgid "(MQTT) - **Default**"
 msgstr "(MQTT) - **Padrão**"
 
-#: ../../source/components-and-apis.rst:88
+#: ../../source/components-and-apis.rst:92
 msgid "`GitHub - iotagent-vernemq`_"
 msgstr ""
 
@@ -303,7 +315,7 @@ msgstr ""
 msgid "(MQTT) - **Legacy**"
 msgstr "(MQTT) - **Legado**"
 
-#: ../../source/components-and-apis.rst:93
+#: ../../source/components-and-apis.rst:97
 msgid "`GitHub - iotagent-mosca`_"
 msgstr ""
 
@@ -315,99 +327,99 @@ msgstr ""
 msgid "(LWM2M)"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:98
+#: ../../source/components-and-apis.rst:102
 msgid "`GitHub - iotagent-leshan`_"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:101
-#: ../../source/components-and-apis.rst:200
-#: ../../source/components-and-apis.rst:205
-#: ../../source/components-and-apis.rst:313
-#: ../../source/components-and-apis.rst:316
+#: ../../source/components-and-apis.rst:105
+#: ../../source/components-and-apis.rst:204
+#: ../../source/components-and-apis.rst:209
+#: ../../source/components-and-apis.rst:317
+#: ../../source/components-and-apis.rst:320
 msgid "Data Manager"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:102
+#: ../../source/components-and-apis.rst:106
 msgid "`GitHub - Data Manager`_"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:104
-#: ../../source/components-and-apis.rst:203
-#: ../../source/components-and-apis.rst:208
+#: ../../source/components-and-apis.rst:108
+#: ../../source/components-and-apis.rst:207
+#: ../../source/components-and-apis.rst:212
 msgid "`API - Data Manager`_"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:105
-#: ../../source/components-and-apis.rst:210
-#: ../../source/components-and-apis.rst:319
+#: ../../source/components-and-apis.rst:109
+#: ../../source/components-and-apis.rst:214
+#: ../../source/components-and-apis.rst:323
 msgid "Cron"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:106
+#: ../../source/components-and-apis.rst:110
 msgid "`GitHub - Cron`_"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:108
-#: ../../source/components-and-apis.rst:213
+#: ../../source/components-and-apis.rst:112
+#: ../../source/components-and-apis.rst:217
 msgid "`API - Cron`_"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:109
-#: ../../source/components-and-apis.rst:244
-#: ../../source/components-and-apis.rst:337
+#: ../../source/components-and-apis.rst:113
+#: ../../source/components-and-apis.rst:248
+#: ../../source/components-and-apis.rst:341
 msgid "X.509 Identity Management"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:110
+#: ../../source/components-and-apis.rst:114
 msgid "`GitHub - x509-identity-mgmt`_"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:112
-#: ../../source/components-and-apis.rst:247
+#: ../../source/components-and-apis.rst:116
+#: ../../source/components-and-apis.rst:251
 msgid "`API - x509-identity-mgmt`_"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:113
+#: ../../source/components-and-apis.rst:117
 msgid "Kafka2Ftp"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:114
+#: ../../source/components-and-apis.rst:118
 msgid "`GitHub - Kafka2Ftp`_"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:117
-#: ../../source/components-and-apis.rst:249
-#: ../../source/components-and-apis.rst:254
-#: ../../source/components-and-apis.rst:340
-#: ../../source/components-and-apis.rst:343
+#: ../../source/components-and-apis.rst:121
+#: ../../source/components-and-apis.rst:253
+#: ../../source/components-and-apis.rst:258
+#: ../../source/components-and-apis.rst:344
+#: ../../source/components-and-apis.rst:347
 msgid "Kafka WS"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:118
+#: ../../source/components-and-apis.rst:122
 msgid "`GitHub - Kafka WS`_"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:120
+#: ../../source/components-and-apis.rst:124
 msgid "`API - kafka-ws`_"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:121
+#: ../../source/components-and-apis.rst:125
 msgid "InfluxDB Storer and Retriever"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:122
+#: ../../source/components-and-apis.rst:126
 msgid "`GitHub - InfluxDB Storer and Retriever`_"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:124
+#: ../../source/components-and-apis.rst:128
 msgid "`API - InfluxDB-Retriever`_"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:128
+#: ../../source/components-and-apis.rst:132
 msgid "Exposed APIs (API Gateway)"
 msgstr "APIs expostas (API Gateway)"
 
-#: ../../source/components-and-apis.rst:130
+#: ../../source/components-and-apis.rst:134
 msgid ""
 "The API gateway used in dojot reroutes some of endpoints from component. "
 "The following table shows which **Exposed endpoint by the API gateway** "
@@ -421,7 +433,7 @@ msgstr ""
 "expostos** e **endpoints de componentes**. Veja mais sobre como usar as "
 "APIs em :doc:`./using-api-interface`."
 
-#: ../../source/components-and-apis.rst:137
+#: ../../source/components-and-apis.rst:141
 msgid "Exposed endpoints"
 msgstr "Endpoints expostos"
 
@@ -445,127 +457,127 @@ msgstr "Precisa de"
 msgid "Authentication"
 msgstr "Autenticação"
 
-#: ../../source/components-and-apis.rst:151
-#: ../../source/components-and-apis.rst:152
-#: ../../source/components-and-apis.rst:157
-#: ../../source/components-and-apis.rst:172
-#: ../../source/components-and-apis.rst:177
-#: ../../source/components-and-apis.rst:197
-#: ../../source/components-and-apis.rst:217
+#: ../../source/components-and-apis.rst:155
+#: ../../source/components-and-apis.rst:156
+#: ../../source/components-and-apis.rst:161
+#: ../../source/components-and-apis.rst:176
+#: ../../source/components-and-apis.rst:181
+#: ../../source/components-and-apis.rst:201
+#: ../../source/components-and-apis.rst:221
 msgid "/"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:154
-#: ../../source/components-and-apis.rst:159
-#: ../../source/components-and-apis.rst:179
-#: ../../source/components-and-apis.rst:184
-#: ../../source/components-and-apis.rst:243
-#: ../../source/components-and-apis.rst:258
-#: ../../source/components-and-apis.rst:268
+#: ../../source/components-and-apis.rst:158
+#: ../../source/components-and-apis.rst:163
+#: ../../source/components-and-apis.rst:183
+#: ../../source/components-and-apis.rst:188
+#: ../../source/components-and-apis.rst:247
+#: ../../source/components-and-apis.rst:262
+#: ../../source/components-and-apis.rst:272
 msgid "No"
 msgstr "Não"
 
-#: ../../source/components-and-apis.rst:155
-#: ../../source/components-and-apis.rst:286
+#: ../../source/components-and-apis.rst:159
+#: ../../source/components-and-apis.rst:290
 msgid "Dashboard"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:156
+#: ../../source/components-and-apis.rst:160
 msgid "/v2"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:161
-#: ../../source/components-and-apis.rst:162
+#: ../../source/components-and-apis.rst:165
+#: ../../source/components-and-apis.rst:166
 msgid "/device"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:164
-#: ../../source/components-and-apis.rst:169
-#: ../../source/components-and-apis.rst:174
-#: ../../source/components-and-apis.rst:189
-#: ../../source/components-and-apis.rst:194
-#: ../../source/components-and-apis.rst:199
-#: ../../source/components-and-apis.rst:204
-#: ../../source/components-and-apis.rst:209
-#: ../../source/components-and-apis.rst:214
-#: ../../source/components-and-apis.rst:219
-#: ../../source/components-and-apis.rst:228
-#: ../../source/components-and-apis.rst:233
-#: ../../source/components-and-apis.rst:238
-#: ../../source/components-and-apis.rst:248
-#: ../../source/components-and-apis.rst:253
-#: ../../source/components-and-apis.rst:263
+#: ../../source/components-and-apis.rst:168
+#: ../../source/components-and-apis.rst:173
+#: ../../source/components-and-apis.rst:178
+#: ../../source/components-and-apis.rst:193
+#: ../../source/components-and-apis.rst:198
+#: ../../source/components-and-apis.rst:203
+#: ../../source/components-and-apis.rst:208
+#: ../../source/components-and-apis.rst:213
+#: ../../source/components-and-apis.rst:218
+#: ../../source/components-and-apis.rst:223
+#: ../../source/components-and-apis.rst:232
+#: ../../source/components-and-apis.rst:237
+#: ../../source/components-and-apis.rst:242
+#: ../../source/components-and-apis.rst:252
+#: ../../source/components-and-apis.rst:257
+#: ../../source/components-and-apis.rst:267
 msgid "Yes"
 msgstr "Sim"
 
-#: ../../source/components-and-apis.rst:166
-#: ../../source/components-and-apis.rst:167
+#: ../../source/components-and-apis.rst:170
+#: ../../source/components-and-apis.rst:171
 msgid "/template"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:171
+#: ../../source/components-and-apis.rst:175
 msgid "**/flows**"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:176
+#: ../../source/components-and-apis.rst:180
 msgid "**/auth**"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:181
+#: ../../source/components-and-apis.rst:185
 msgid "**/auth**/revoke"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:182
+#: ../../source/components-and-apis.rst:186
 msgid "/revoke"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:186
+#: ../../source/components-and-apis.rst:190
 msgid "**/auth**/user"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:187
+#: ../../source/components-and-apis.rst:191
 msgid "/user"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:191
+#: ../../source/components-and-apis.rst:195
 msgid "**/auth**/pap"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:192
+#: ../../source/components-and-apis.rst:196
 msgid "/pap"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:196
+#: ../../source/components-and-apis.rst:200
 msgid "**/history**"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:201
-#: ../../source/components-and-apis.rst:202
+#: ../../source/components-and-apis.rst:205
+#: ../../source/components-and-apis.rst:206
 msgid "/import"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:206
-#: ../../source/components-and-apis.rst:207
+#: ../../source/components-and-apis.rst:210
+#: ../../source/components-and-apis.rst:211
 msgid "/export"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:211
-#: ../../source/components-and-apis.rst:212
+#: ../../source/components-and-apis.rst:215
+#: ../../source/components-and-apis.rst:216
 msgid "/cron"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:216
+#: ../../source/components-and-apis.rst:220
 msgid "**/fw-image**"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:220
-#: ../../source/components-and-apis.rst:229
-#: ../../source/components-and-apis.rst:234
-#: ../../source/components-and-apis.rst:239
-#: ../../source/components-and-apis.rst:325
-#: ../../source/components-and-apis.rst:328
-#: ../../source/components-and-apis.rst:331
-#: ../../source/components-and-apis.rst:334
+#: ../../source/components-and-apis.rst:224
+#: ../../source/components-and-apis.rst:233
+#: ../../source/components-and-apis.rst:238
+#: ../../source/components-and-apis.rst:243
+#: ../../source/components-and-apis.rst:329
+#: ../../source/components-and-apis.rst:332
+#: ../../source/components-and-apis.rst:335
+#: ../../source/components-and-apis.rst:338
 msgid "Data Broker"
 msgstr ""
 
@@ -581,66 +593,66 @@ msgstr ""
 msgid "/latest"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:230
-#: ../../source/components-and-apis.rst:231
+#: ../../source/components-and-apis.rst:234
+#: ../../source/components-and-apis.rst:235
 msgid "/subscription"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:235
-#: ../../source/components-and-apis.rst:236
+#: ../../source/components-and-apis.rst:239
+#: ../../source/components-and-apis.rst:240
 msgid "/stream"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:240
-#: ../../source/components-and-apis.rst:241
+#: ../../source/components-and-apis.rst:244
+#: ../../source/components-and-apis.rst:245
 msgid "/socket.io"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:245
+#: ../../source/components-and-apis.rst:249
 msgid "**/x509/v1**"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:246
+#: ../../source/components-and-apis.rst:250
 msgid "**/api/v1**"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:250
+#: ../../source/components-and-apis.rst:254
 msgid "**/kafka-ws/v1/ticket**"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:251
+#: ../../source/components-and-apis.rst:255
 msgid "/v1/ticket"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:255
+#: ../../source/components-and-apis.rst:259
 msgid "**/kafka-ws/v1**"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:256
+#: ../../source/components-and-apis.rst:260
 msgid "/v1"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:259
-#: ../../source/components-and-apis.rst:346
+#: ../../source/components-and-apis.rst:263
+#: ../../source/components-and-apis.rst:350
 msgid "InfluxDB Retriever"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:260
-#: ../../source/components-and-apis.rst:261
+#: ../../source/components-and-apis.rst:264
+#: ../../source/components-and-apis.rst:265
 msgid "/tss/v1/"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:264
-#: ../../source/components-and-apis.rst:349
+#: ../../source/components-and-apis.rst:268
+#: ../../source/components-and-apis.rst:353
 msgid "InfluxDB Retriever - Documentation"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:265
-#: ../../source/components-and-apis.rst:266
+#: ../../source/components-and-apis.rst:269
+#: ../../source/components-and-apis.rst:270
 msgid "/tss/v1/api-docs"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:270
+#: ../../source/components-and-apis.rst:274
 msgid ""
 "**NOTE: Some of the components' endpoints aren't exposed, but are used "
 "internally.**"
@@ -648,7 +660,7 @@ msgstr ""
 "**NOTA: Alguns *endpoints* de componentes não são expostos, mas são "
 "utilizados internamente.**"
 
-#: ../../source/components-and-apis.rst:273
+#: ../../source/components-and-apis.rst:277
 msgid ""
 "In addition, the API gateway reroutes the endpoints with their ports from"
 " component, so that they become uniform: all of them are accessible "
@@ -660,216 +672,216 @@ msgstr ""
 "eles são acessíveis pela mesma porta (o padrão é a porta TCP 8000), "
 "consulte a tabela a seguir."
 
-#: ../../source/components-and-apis.rst:277
+#: ../../source/components-and-apis.rst:281
 msgid "Original endpoints to The API gateway"
 msgstr "*Endpoints* originais para o API gateway"
 
-#: ../../source/components-and-apis.rst:281
+#: ../../source/components-and-apis.rst:285
 msgid "Original endpoint"
 msgstr "*Endpoints* Originais"
 
-#: ../../source/components-and-apis.rst:282
+#: ../../source/components-and-apis.rst:286
 msgid "Gateway Endpoint"
 msgstr "*Gateway Endpoint*"
 
-#: ../../source/components-and-apis.rst:284
-#: ../../source/components-and-apis.rst:287
-#: ../../source/components-and-apis.rst:296
+#: ../../source/components-and-apis.rst:288
+#: ../../source/components-and-apis.rst:291
+#: ../../source/components-and-apis.rst:300
 msgid "host:80/"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:285
-#: ../../source/components-and-apis.rst:311
+#: ../../source/components-and-apis.rst:289
+#: ../../source/components-and-apis.rst:315
 msgid "host:8000/"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:288
+#: ../../source/components-and-apis.rst:292
 msgid "host:8000/v2"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:290
+#: ../../source/components-and-apis.rst:294
 msgid "host:5000/device"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:291
+#: ../../source/components-and-apis.rst:295
 msgid "host:8000/device"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:293
+#: ../../source/components-and-apis.rst:297
 msgid "host:5000/template"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:294
+#: ../../source/components-and-apis.rst:298
 msgid "host:8000/template"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:297
+#: ../../source/components-and-apis.rst:301
 msgid "host:8000/flows"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:299
-#: ../../source/components-and-apis.rst:323
+#: ../../source/components-and-apis.rst:303
+#: ../../source/components-and-apis.rst:327
 msgid "host:5000/"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:300
+#: ../../source/components-and-apis.rst:304
 msgid "host:8000/auth"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:302
+#: ../../source/components-and-apis.rst:306
 msgid "host:5000/revoke"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:303
+#: ../../source/components-and-apis.rst:307
 msgid "host:8000/auth/revoke"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:305
+#: ../../source/components-and-apis.rst:309
 msgid "host:5000/user"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:306
+#: ../../source/components-and-apis.rst:310
 msgid "host:8000/auth/user"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:308
+#: ../../source/components-and-apis.rst:312
 msgid "host:5000/pap"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:309
+#: ../../source/components-and-apis.rst:313
 msgid "host:8000/auth/pap"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:312
+#: ../../source/components-and-apis.rst:316
 msgid "host:8000/history"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:314
+#: ../../source/components-and-apis.rst:318
 msgid "host:3000/import"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:315
+#: ../../source/components-and-apis.rst:319
 msgid "host:8000/import"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:317
+#: ../../source/components-and-apis.rst:321
 msgid "host:3000/export"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:318
+#: ../../source/components-and-apis.rst:322
 msgid "host:8000/export"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:320
+#: ../../source/components-and-apis.rst:324
 msgid "host:5000/cron"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:321
+#: ../../source/components-and-apis.rst:325
 msgid "host:8000/cron"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:324
+#: ../../source/components-and-apis.rst:328
 msgid "host:8000/fw-image"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:326
+#: ../../source/components-and-apis.rst:330
 msgid "host:80/device/{{deviceID}}/latest"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:327
+#: ../../source/components-and-apis.rst:331
 msgid "host:8000/device/{deviceID}/latest"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:329
+#: ../../source/components-and-apis.rst:333
 msgid "host:80/subscription"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:330
+#: ../../source/components-and-apis.rst:334
 msgid "host:8000/subscription"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:332
+#: ../../source/components-and-apis.rst:336
 msgid "host:80/stream"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:333
+#: ../../source/components-and-apis.rst:337
 msgid "host:8000/stream"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:335
+#: ../../source/components-and-apis.rst:339
 msgid "host:80/socket.io"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:336
+#: ../../source/components-and-apis.rst:340
 msgid "host:8000/socket.io"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:338
+#: ../../source/components-and-apis.rst:342
 msgid "host:3000/api/v1"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:339
+#: ../../source/components-and-apis.rst:343
 msgid "host:8000/x509/v1"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:341
+#: ../../source/components-and-apis.rst:345
 msgid "host:8080/v1/ticket"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:342
+#: ../../source/components-and-apis.rst:346
 msgid "host:8000/kafka-ws/v1/ticket"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:344
+#: ../../source/components-and-apis.rst:348
 msgid "host:8080/v1/topics"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:345
+#: ../../source/components-and-apis.rst:349
 msgid "host:8000/kafka-ws/v1/topics"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:347
+#: ../../source/components-and-apis.rst:351
 msgid "host:3000/tss/v1/"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:348
+#: ../../source/components-and-apis.rst:352
 msgid "host:8000/tss/v1/"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:350
+#: ../../source/components-and-apis.rst:354
 msgid "host:3000/tss/v1/api-docs"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:351
+#: ../../source/components-and-apis.rst:355
 msgid "host:8000/tss/v1/api-docs"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:354
-#: ../../source/components-and-apis.rst:363
+#: ../../source/components-and-apis.rst:358
+#: ../../source/components-and-apis.rst:367
 msgid "Libraries"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:356
+#: ../../source/components-and-apis.rst:360
 msgid ""
 "Dojot also has several libraries used in their own components. These "
 "libraries are listed below:"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:358
+#: ../../source/components-and-apis.rst:362
 msgid "Component Libraries by Language"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:362
+#: ../../source/components-and-apis.rst:366
 msgid "Language"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:364
 #: ../../source/components-and-apis.rst:368
 #: ../../source/components-and-apis.rst:372
+#: ../../source/components-and-apis.rst:376
 msgid "Module"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:365
+#: ../../source/components-and-apis.rst:369
 msgid "Python"
 msgstr ""
 
@@ -881,8 +893,8 @@ msgstr ""
 msgid "https://pypi.org/project/dojot.module/"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:369
-#: ../../source/components-and-apis.rst:377
+#: ../../source/components-and-apis.rst:373
+#: ../../source/components-and-apis.rst:381
 msgid "Java"
 msgstr ""
 
@@ -894,11 +906,11 @@ msgstr ""
 msgid "https://jitpack.io/#dojot/dojot-module-java"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:373
-#: ../../source/components-and-apis.rst:381
+#: ../../source/components-and-apis.rst:377
 #: ../../source/components-and-apis.rst:385
 #: ../../source/components-and-apis.rst:389
 #: ../../source/components-and-apis.rst:393
+#: ../../source/components-and-apis.rst:397
 msgid "Node JS"
 msgstr ""
 
@@ -910,8 +922,8 @@ msgstr ""
 msgid "https://www.npmjs.com/package/@dojot/dojot-module"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:376
 #: ../../source/components-and-apis.rst:380
+#: ../../source/components-and-apis.rst:384
 msgid "IoT Agent"
 msgstr ""
 
@@ -931,7 +943,7 @@ msgstr ""
 msgid "https://www.npmjs.com/package/@dojot/iotagent-nodejs"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:384
+#: ../../source/components-and-apis.rst:388
 msgid "Module Logger"
 msgstr ""
 
@@ -943,7 +955,7 @@ msgstr ""
 msgid "https://www.npmjs.com/package/@dojot/dojot-module-logger"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:388
+#: ../../source/components-and-apis.rst:392
 msgid "Helthcheck"
 msgstr ""
 
@@ -955,7 +967,7 @@ msgstr ""
 msgid "https://www.npmjs.com/package/@dojot/healthcheck"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:392
+#: ../../source/components-and-apis.rst:396
 msgid "Microservice SDK"
 msgstr ""
 
@@ -967,11 +979,11 @@ msgstr ""
 msgid "https://www.npmjs.com/package/@dojot/microservice-sdk"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:398
+#: ../../source/components-and-apis.rst:402
 msgid "Kafka messages"
 msgstr "Mensagens do Kafka"
 
-#: ../../source/components-and-apis.rst:400
+#: ../../source/components-and-apis.rst:404
 msgid ""
 "These are the messages sent by components and their subjects. If you are "
 "developing a new internal component (such as a new IoT agent), see `API -"
@@ -983,52 +995,53 @@ msgstr ""
 "IoT), consulte a `API - data-broker`_ para verificar como receber "
 "mensagens."
 
-#: ../../source/components-and-apis.rst:405
+#: ../../source/components-and-apis.rst:409
 msgid "Original endpoints"
 msgstr "*Endpoints* Originais"
 
-#: ../../source/components-and-apis.rst:409
+#: ../../source/components-and-apis.rst:413
 msgid "Message"
 msgstr "Mensagem"
 
-#: ../../source/components-and-apis.rst:410
+#: ../../source/components-and-apis.rst:414
 msgid "Subject"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:411
+#: ../../source/components-and-apis.rst:415
 msgid "DeviceManager"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:412
+#: ../../source/components-and-apis.rst:416
 msgid "Device CRUD (`Messages - DeviceManager`_)"
 msgstr ""
 "Dispositivo CRUD (Criar, Ler, Atualizar e Excluir) (`Mensagens - "
 "DeviceManager`_)"
 
-#: ../../source/components-and-apis.rst:413
+#: ../../source/components-and-apis.rst:417
 msgid "``dojot.device-manager.device``"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:414
+#: ../../source/components-and-apis.rst:418
 msgid "iotagent-mosca"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:415
+#: ../../source/components-and-apis.rst:419
 msgid "Device data update (`Messages - iotagent-mosca`_)"
 msgstr "Atualização de dados do dispositivo (`Mensagens - iotagent-mosca`_)"
 
-#: ../../source/components-and-apis.rst:416
+#: ../../source/components-and-apis.rst:420
 msgid "``device-data``"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:417
+#: ../../source/components-and-apis.rst:421
 msgid "auth"
 msgstr ""
 
-#: ../../source/components-and-apis.rst:418
+#: ../../source/components-and-apis.rst:422
 msgid "Tenants creation/removal (`Messages - auth`_)"
 msgstr "Criação/remoção de *Tenants* (`Mensagens - auth`_)"
 
-#: ../../source/components-and-apis.rst:419
+#: ../../source/components-and-apis.rst:423
 msgid "``dojot.tenancy``"
 msgstr ""
+
