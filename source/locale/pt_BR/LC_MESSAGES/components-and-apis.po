@@ -8,15 +8,16 @@ msgstr ""
 "Project-Id-Version: dojot 0.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-01-22 09:15-0300\n"
-"PO-Revision-Date: 2020-12-15 13:46-0300\n"
+"PO-Revision-Date: 2021-01-22 14:39-0300\n"
 "Last-Translator: \n"
 "Language: pt_BR\n"
 "Language-Team: \n"
-"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
+"X-Generator: Poedit 2.4.2\n"
 
 #: ../../source/components-and-apis.rst:2
 msgid "Components and APIs"
@@ -662,10 +663,9 @@ msgstr ""
 
 #: ../../source/components-and-apis.rst:277
 msgid ""
-"In addition, the API gateway reroutes the endpoints with their ports from"
-" component, so that they become uniform: all of them are accessible "
-"through the same port (default is TCP port 8000), see the following "
-"table."
+"In addition, the API gateway reroutes the endpoints with their ports from "
+"component, so that they become uniform: all of them are accessible "
+"through the same port (default is TCP port 8000), see the following table."
 msgstr ""
 "Além disso, o *API gateway* redireciona os *endpoints*  com suas "
 "respectivas portas do componente, para que se tornem uniformes: todos "
@@ -859,13 +859,15 @@ msgstr ""
 #: ../../source/components-and-apis.rst:358
 #: ../../source/components-and-apis.rst:367
 msgid "Libraries"
-msgstr ""
+msgstr "Bibliotecas"
 
 #: ../../source/components-and-apis.rst:360
 msgid ""
 "Dojot also has several libraries used in their own components. These "
 "libraries are listed below:"
 msgstr ""
+"Dojot também possui várias bibliotecas usadas em seus próprios "
+"componentes. Essas bibliotecas estão abaixo listadas:"
 
 #: ../../source/components-and-apis.rst:362
 msgid "Component Libraries by Language"
@@ -873,7 +875,7 @@ msgstr ""
 
 #: ../../source/components-and-apis.rst:366
 msgid "Language"
-msgstr ""
+msgstr "Linguagem"
 
 #: ../../source/components-and-apis.rst:368
 #: ../../source/components-and-apis.rst:372
@@ -986,12 +988,12 @@ msgstr "Mensagens do Kafka"
 #: ../../source/components-and-apis.rst:404
 msgid ""
 "These are the messages sent by components and their subjects. If you are "
-"developing a new internal component (such as a new IoT agent), see `API -"
-" data-broker`_ to check how to receive messages sent by other components "
+"developing a new internal component (such as a new IoT agent), see `API - "
+"data-broker`_ to check how to receive messages sent by other components "
 "in dojot."
 msgstr ""
-"Essas são as mensagens enviadas pelos componentes e seus tópicos. Se você"
-" estiver desenvolvendo um novo componente interno (como um novo agente "
+"Essas são as mensagens enviadas pelos componentes e seus tópicos. Se você "
+"estiver desenvolvendo um novo componente interno (como um novo agente "
 "IoT), consulte a `API - data-broker`_ para verificar como receber "
 "mensagens."
 
@@ -1044,4 +1046,3 @@ msgstr "Criação/remoção de *Tenants* (`Mensagens - auth`_)"
 #: ../../source/components-and-apis.rst:423
 msgid "``dojot.tenancy``"
 msgstr ""
-
