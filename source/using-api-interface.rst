@@ -206,16 +206,16 @@ Which should give back:
              }
             ]
           },
-          "id": "0998", # <-- this is the device id 
+          "id": "0998", # <-- this is the device-id 
           "label": "device_0"
         }
       ]
     }
 
-The `device id` used in the next steps must be changed as returned in
+The `device-id` used in the next steps must be changed as returned in
 the creation of the device.
 In the above run the `id` returned was *0998* on line 34.
-Therefore, all places with references to *0998* must be changed.
+Therefore, all places in the next steps with references to *0998* must be changed.
 
 .. _Sending messages:
 
