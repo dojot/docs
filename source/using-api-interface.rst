@@ -206,7 +206,7 @@ Which should give back:
              }
             ]
           },
-          "id": "0998",
+          "id": "0998", #this is the device-id
           "label": "device_0"
         }
       ]
@@ -256,6 +256,25 @@ is used, but you can use Mosca too. Check the :doc:`../installation-guide` for m
 Using VerneMQ
 ^^^^^^^^^^^^^
 
+As noted in the :doc:`../faq/faq`, there are some considerations regarding MQTT topics:
+
+- You must set the username that originates the message using the ``username`` MQTT parameter. It
+  should follow the following pattern: ``<tenant>:<device-id>``, such as ``admin:efac``. It must
+  match the tenant and device ID set in the topic.
+
+- The topic to publish messages has the pattern ``<tenant>:<device-id>/attrs``
+  (e.g.: ``admin:efac/attrs``).
+
+- The topic to subscribe should has the pattern ``<tenant>:<device-id>/config``
+  (e.g.: ``admin:efac/config``).
+
+- MQTT payload must be a JSON with each key being an attribute of the dojot device, such as:
+
+.. code-block:: javascript
+
+  { "temperature" : 10.5, "pressure" : 770 }
+
+
 Let's publish the following message:
 
 .. code-block:: bash
@@ -289,26 +308,27 @@ Triggering the sending of the message from the dojot to the device.
       -d '{"attrs": {"fan" : 100}}'
 
 
+Using Mosca (legacy)
+^^^^^^^^^^^^^^^^^^^^
+
 As noted in the :doc:`../faq/faq`, there are some considerations regarding MQTT topics:
 
-- You must set the username that originates the message using the ``username`` MQTT parameter. It
-  should follow the following pattern: ``<tenant>:<device-id>``, such as ``admin:efac``. It must
-  match the tenant and device ID set in the topic.
+- You can set the device ID that originates the message using the ``client-id`` MQTT parameter. It
+  should follow the following pattern: ``<tenant>:<device-id>``, such as ``admin:efac``.
 
-- The topic to publish messages has the pattern ``<tenant>:<device-id>/attrs``
-  (e.g.: ``admin:efac/attrs``).
+- If you can't do such thing, then the device should set its ID using the topic used to publish
+  messages. The topic should assume the pattern ``/<tenant>/<device-id>/attrs``
+  (e.g.: ``/admin/efac/attrs``).
 
-- The topic to subscribe should has the pattern ``<tenant>:<device-id>/config``
-  (e.g.: ``admin:efac/config``).
+- The topic to subscribe should assume the pattern ``/<tenant>/<device-id>/config``
+  (e.g.: ``/admin/efac/config``).
 
-- MQTT payload must be a JSON with each key being an attribute of the dojot device, such as:
+- MQTT payload must be a JSON with each key being an attribute of the dojot
+  device, such as:
 
 .. code-block:: javascript
 
   { "temperature" : 10.5, "pressure" : 770 }
-
-Using Mosca (legacy)
-^^^^^^^^^^^^^^^^^^^^
 
 .. ATTENTION::
     VerneMQ is the new default MQTT broker. Support for Mosca will be eventually dropped, so use
@@ -342,26 +362,6 @@ Triggering the sending of the message from the dojot to the device.
       -H "Authorization: Bearer ${JWT}" \
       -H 'Content-Type:application/json' \
       -d '{"attrs": {"fan" : 100}}'
-
-
-As noted in the :doc:`../faq/faq`, there are some considerations regarding MQTT topics:
-
-- You can set the device ID that originates the message using the ``client-id`` MQTT parameter. It
-  should follow the following pattern: ``<tenant>:<device-id>``, such as ``admin:efac``.
-
-- If you can't do such thing, then the device should set its ID using the topic used to publish
-  messages. The topic should assume the pattern ``/<tenant>/<device-id>/attrs``
-  (e.g.: ``/admin/efac/attrs``).
-
-- The topic to subscribe should assume the pattern ``/<tenant>/<device-id>/config``
-  (e.g.: ``/admin/efac/config``).
-
-- MQTT payload must be a JSON with each key being an attribute of the dojot
-  device, such as:
-
-.. code-block:: javascript
-
-  { "temperature" : 10.5, "pressure" : 770 }
 
 
 .. Note::
