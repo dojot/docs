@@ -177,11 +177,11 @@ msgstr "Que deve retornar:"
 
 #: ../../source/using-api-interface.rst:215
 msgid ""
-"The `device id` used in the next steps must be changed as returned in the"
+"The `device-id` used in the next steps must be changed as returned in the"
 " creation of the device. In the above run the `id` returned was *0998* on"
-" line 34. Therefore, all places with references to *0998* must be "
+" line 34. Therefore, all places in the next steps with references to *0998* must be "
 "changed."
-msgstr "O `device id` utilizado nos próximos passos deve ser alterado  conforme o retornado na criação do device. Na execução acima o `id` retornado foi *0998* na linha 34. Portanto, todos os lugares com referencias a *0998*  deve ser alterados. "
+msgstr "O `device id` utilizado nos próximos passos deve ser alterado conforme o retornado na criação do device. Na execução acima o `id` retornado foi *0998* na linha 34. Portanto, todos os lugares nos próximos passos com referencias a *0998*  deve ser alterados. "
 
 #: ../../source/using-api-interface.rst:223
 msgid "Sending messages"
