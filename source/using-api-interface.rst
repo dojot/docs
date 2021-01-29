@@ -102,8 +102,8 @@ off of a template, remember.
 This request should give back this message:
 
 
-.. code-block:: json
-   :linenos:
+.. code-block:: bash
+  :linenos:
 
     {
       "result": "ok",
@@ -206,12 +206,16 @@ Which should give back:
              }
             ]
           },
-          "id": "0998", #this is the device-id
+          "id": "0998", # <-- this is the device-id 
           "label": "device_0"
         }
       ]
     }
 
+The `device-id` used in the next steps must be changed as returned in
+the creation of the device.
+In the above run the `id` returned was *0998* on line 34.
+Therefore, all places in the next steps with references to *0998* must be changed.
 
 .. _Sending messages:
 
@@ -237,8 +241,8 @@ translate any message format to this scheme using flows, though), such as:
     Some Linux distributions, Debian-based ones in particular, have two packages for
     `mosquitto`_ - one containing tools to access it (i.e. mosquitto_pub and mosquitto_sub for
     publishing messages and subscribing to topics) and another one containing the MQTT broker too.
-    In this tutorial, only the tools from package `mosquitto-clients` on Debian-based Linux
-    distributions are going to be used. Please check  if another MQTT broker is not running before starting
+    In this tutorial, **only the tools from package `mosquitto-clients` on Debian-based Linux
+    distributions are going to be used**. Please check  if another MQTT broker **is not running** before starting
     dojot (by running commands like ``ps aux | grep mosquitto``) to avoid port conflicts.
 
 
