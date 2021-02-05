@@ -1,0 +1,52 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, CPqD
+# This file is distributed under the same license as the dojot package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: dojot v0.5.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-02-05 15:36-0300\n"
+"PO-Revision-Date: 2021-02-05 15:42-0300\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: pt_BR\n"
+"X-Generator: Poedit 2.4.2\n"
+
+#: ../../source/copyright-and-license.rst:2
+msgid "Copyright and License"
+msgstr "*Copyright* e licença"
+
+#: ../../source/copyright-and-license.rst:4
+msgid ""
+"The dojot IoT Platform is based on well-known open source software such as "
+"`Apache Kafka`_, `RabbitMQ`_, `PostgreSQL`_, `MongoDB`_, `Redis`_, `Kong "
+"Gateway`_, and `VerneMQ`_, which have their own licenses."
+msgstr ""
+"A plataforma dojot IoT é baseada em softwares de código aberto conhecidos como "
+"`Apache Kafka`_, `RabbitMQ`_, `PostgreSQL`_, `MongoDB`_, `Redis`_, `Kong "
+"Gateway`_, and `VerneMQ`_,  que têm suas próprias licenças."
+
+#: ../../source/copyright-and-license.rst:13
+msgid ""
+"The services developed by the dojot team to integrate these open-source "
+"software components and implement the business logics are copyrighted by "
+"`CPQD`_ and till release v0.5.1 were licensed under the `GPLv3`_. From release "
+"v0.5.2 onwards, these services are being licensed under the `Apache License, "
+"Version 2.0`_."
+msgstr ""
+"Os serviços desenvolvidos pela equipe dojot para integrar esses componentes de "
+"software de código aberto e implementar as lógicas de negócios são protegidos "
+"por direitos autorais pelo `CPQD`_ e até o lançamento v0.5.1 foram licenciados "
+"sob o `GPLv3`_. A partir do lançamento v0.5.2 em diante, esses serviços estão "
+"sendo licenciados sob a `Apache License, Version 2.0`_."
+
+#: ../../source/copyright-and-license.rst:20
+msgid "You can use and/or modify the software for free (no license costs apply)."
+msgstr ""
+"Você pode usar e/ou modificar o software gratuitamente (sem custos de licença)."

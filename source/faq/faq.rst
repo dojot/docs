@@ -43,15 +43,9 @@ Which repository is the main one?
 
 There are 3 main ones:
 
-- `<https://github.com/dojot/dojot>`_: this is where we keep track of all the
-  things related to this project as issues and there are also some component codes here.
-
-- `<https://github.com/dojot/docker-compose>`_: repository with the files and settings 
-to perform dojot in a Docker environment using the *docker-compose* tool. This is the 
-repository we recommend to start with dojot.
-
-- `<https://github.com/dojot/ansible-dojot>`_: repository with files and settings to perform 
-dojot in *Kubernetes* environment.
+- `<https://github.com/dojot/dojot>`_: this is where we keep track of all the things related to this project as issues and there are also some component codes here.
+- `<https://github.com/dojot/docker-compose>`_: repository with the files and settings to perform dojot in a Docker environment using the *docker-compose* tool. This is the repository we recommend to start with dojot.
+- `<https://github.com/dojot/ansible-dojot>`_: repository with files and settings to perform dojot in *Kubernetes* environment.
 
 See how to use *docker-compose* and *ansible-dojot* repositories in :doc:`../installation-guide`.
 
@@ -209,7 +203,7 @@ device of type MQTT with two attributes (temperature and humidity). Then you
 set your actual device to push the data to dojot.
 
 .. ATTENTION::
-  As of **v0.5.0**, you can choose the between two MQTT brokers: Mosca or VerneMQ. By default,
+  As of **v0.5.2**, you can choose the between two MQTT brokers: Mosca or VerneMQ. By default,
   VerneMQ is used, but you can use Mosca too. Check the :doc:`../installation-guide` for more information.
 
 In order to send data to dojot via MQTT (using Mosca or VerneMQ), there are some
@@ -419,7 +413,7 @@ How can I add a new node type to its menu?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 There is a tutorial on how to add new nodes and two examples of node too,
-check the `GitHub flowbroker repository`_ for more details.
+check the `flowbroker library`_ for more details.
 
 
 Applications
@@ -460,5 +454,5 @@ Check the documentation API for  *History* and *Kafka WS* in :doc:`./../componen
 And to a tutorial on how to use the flow, check :doc:`../flow`.
 
 
-.. _flowbroker library : https://github.com/dojot/flowbroker/tree/v0.5.0/lib
+.. _flowbroker library : https://github.com/dojot/flowbroker/tree/v0.5.2/lib
 

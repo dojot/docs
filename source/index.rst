@@ -21,6 +21,7 @@ and efficient infrastructure.
    internal-communication
    installation-guide
    faq/faq
+   copyright-and-license
    releases
 
 .. toctree::

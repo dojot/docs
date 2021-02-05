@@ -1,8 +1,14 @@
 Release history
 ===============
 
-Defendu - 2021.01
+Defendu - 2021.02
 ------------------
+
+
+Copyright and license
++++++++++++++++++++++
+
+ - From release v0.5.2 onwards, the services developed by the dojot team are being licensed under the Apache License, Version 2.0.
 
 Services
 ++++++++++
