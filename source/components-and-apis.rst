@@ -253,22 +253,22 @@ See more about how using APIs in :doc:`./using-api-interface`.
    * - Kafka WS
      - **/kafka-ws/v1/ticket**
      -  /v1/ticket
-     -
+     - `API - kafka-ws`_
      - Yes
    * - Kafka WS
      - **/kafka-ws/v1**
      - /v1
-     -
+     - `API - kafka-ws`_
      - No
    * - InfluxDB Retriever
      - /tss/v1/
      - /tss/v1/
-     -
+     - `API - InfluxDB-Retriever`_
      - Yes
    * - InfluxDB Retriever - Documentation
      - /tss/v1/api-docs
      - /tss/v1/api-docs
-     -
+     - `API - InfluxDB-Retriever`_
      - No
 
 **NOTE: Some of the components' endpoints aren't exposed, but are used internally.**
@@ -287,7 +287,7 @@ TCP port 8000), see the following table.
    * - GUI
      - host:80/
      - host:8000/
-   * - Dashboard 
+   * - Dashboard
      - host:80/
      - host:8000/v2
    * - Device Manager

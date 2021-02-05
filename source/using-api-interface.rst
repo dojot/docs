@@ -437,7 +437,7 @@ This message contains all previously sent values.
 .. _jwt.io: https://jwt.io/
 .. _auth: https://github.com/dojot/auth
 .. _docker-compose: https://github.com/dojot/docker-compose
-.. _DeviceManager documentaion: https://github.com/dojot/device-manager
+.. _DeviceManager documentation: https://github.com/dojot/device-manager
 .. _mashup: https://github.com/dojot/mashup
 .. _mosquitto: https://projects.eclipse.org/projects/technology.mosquitto
 .. _curl: https://curl.haxx.se/

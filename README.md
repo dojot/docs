@@ -68,7 +68,7 @@ To update the documentation, follow the steps below:
 2. Extract translatable messages from the english version:
 
 ```shell
-make gettext
+
 ```
 
 3. Update the message catalog (PO Files) for pt_BR language:
