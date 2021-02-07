@@ -488,7 +488,7 @@ dojot.
 .. _GitHub - Kafka2Ftp: https://github.com/dojot/dojot/tree/v0.5.2/connector/kafka2ftp
 
 .. _GitHub - Kafka WS: https://github.com/dojot/dojot/tree/v0.5.2/subscription-engine/kafka-ws
-.. _API - kafka-ws: https://dojot.github.io/dojot/kafka-ws/apiary_v0.5.2.html
+.. _API - kafka-ws: https://dojot.github.io/dojot/subscription-engine/kafka-ws/apiary_v0.5.2.html
 
 .. _GitHub - V2: https://github.com/dojot/gui-v2/tree/v0.5.2
 
