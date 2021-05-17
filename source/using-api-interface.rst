@@ -254,7 +254,7 @@ information on its usage.
     as in the examples below, you need to configure some settings
     (or for how to disable the mode without TLS). For more details on this topic, please refer to the :ref:`Unsecured mode MQTT` page.
 
-As of **v0.5.2**, you can choose the between two MQTT brokers: Mosca or VerneMQ. By default, VerneMQ
+As of **v0.6.0**, you can choose the between two MQTT brokers: Mosca or VerneMQ. By default, VerneMQ
 is used, but you can use Mosca too. Check the :doc:`../installation-guide` for more information.
 
 Using VerneMQ

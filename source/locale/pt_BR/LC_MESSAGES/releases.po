@@ -23,361 +23,90 @@ msgstr ""
 msgid "Release history"
 msgstr "Histórico de lançamento"
 
-#: ../../source/releases.rst:5
-msgid "Defendu - 2021.02"
-msgstr "Defendu - 2021.02"
-
-#: ../../source/releases.rst:9
-msgid "Copyright and license"
-msgstr "*Copyright* e licença"
-
-#: ../../source/releases.rst:11
-msgid ""
-"From release v0.5.2 onwards, the services developed by the dojot team are "
-"being licensed under the Apache License, Version 2.0."
-msgstr ""
-"Da *release* v0.5.2 em diante, os serviços desenvolvidos pela equipe dojot "
-"estão sendo licenciados sob a Licença Apache, Versão 2.0."
-
-#: ../../source/releases.rst:14
+#: ../../source/releases.rst:7
 msgid "Services"
 msgstr "Serviços"
 
-#: ../../source/releases.rst:17
-msgid "New Services"
-msgstr "Novos serviços"
-
-#: ../../source/releases.rst:20
-msgid "Dojot Locust"
-msgstr ""
-
-#: ../../source/releases.rst:22
-msgid ""
-"New tool using the Locust framework (https://locust.io/) for load testing in "
-"the dojot with the MQTT protocol"
-msgstr ""
-"Nova ferramenta utilizando o framework Locust (https://locust.io/) para "
-"testes de carga na dojot com o protocolo MQTT"
-
-#: ../../source/releases.rst:25
-msgid "IotAgent MQTT VerneMQ"
-msgstr ""
-
-#: ../../source/releases.rst:27
-msgid ""
-"New scalable MQTT IotAgent using the VerneMQ broker (https://vernemq.com/) "
-"and auxiliary integration services (V2K and K2V)"
-msgstr ""
-"Novo IotAgent MQTT escalável utilizando o broker VerneMQ (https://vernemq."
-"com/) e serviços auxiliares de integração (V2K e K2V)"
-
-#: ../../source/releases.rst:30
-msgid "Gui-V2"
-msgstr ""
-
-#: ../../source/releases.rst:32
-msgid "New graphical interface service, still under development, providing:"
-msgstr ""
-"Novo serviço de interface gráfica, ainda em desenvolvimento, "
-"disponibilizando:"
-
-#: ../../source/releases.rst:34
-msgid "Tool for creating a customizable dashboard with:"
-msgstr "Ferramenta para criação de dashboard customizável com:"
-
-#: ../../source/releases.rst:36
-msgid "Graphics of various formats"
-msgstr "Gráficos de diversos formatos"
-
-#: ../../source/releases.rst:37
-msgid "Tables"
-msgstr "Tabelas"
-
-#: ../../source/releases.rst:40
-msgid "Kafka-WS"
-msgstr ""
-
-#: ../../source/releases.rst:42
-msgid ""
-"New Kafka “real time” data consumption service via websocket with filters "
-"and partial data return"
-msgstr ""
-"Novo serviço para consumo de dados em “tempo real” do Kafka via websocket "
-"com filtros e retorno parcial de dados"
-
-#: ../../source/releases.rst:45
-msgid "Kafka2FTP"
-msgstr ""
-
-#: ../../source/releases.rst:47
-msgid "New Kafka messaging service to a FTP server"
-msgstr "Novo serviço de envio de mensagens do Kafka para um servidor FTP"
-
-#: ../../source/releases.rst:50
-msgid "X.509 Identity Management"
-msgstr ""
-
-#: ../../source/releases.rst:52
-msgid "New dojot x509 certificate service using EJBCA (https://www.ejbca.org/)"
-msgstr ""
-"Novo serviço de certificados x509 da dojot utilizando a EJBCA (https://www."
-"ejbca.org/)"
-
-#: ../../source/releases.rst:55
-msgid "InfluxDB Storer and Retriever"
-msgstr "InfluxDB Storer e Retriever"
-
-#: ../../source/releases.rst:57
-msgid ""
-"InfluxDB Storer is responsible for consuming Kafka data and writing it to "
-"InfluxDB"
-msgstr ""
-"O InfluxDB Storer é responsável por consumir dados do Kafka e gravá-los no "
-"InfluxDB"
-
-#: ../../source/releases.rst:58
-msgid ""
-"InfluxDB Retriever retrieves data that were written by InfluxDB Storer in "
-"InfluxDB via API REST"
-msgstr ""
-"InfluxDB Retriever obtem os dados que foram gravados pelo InfluxDB Storer no "
-"InfluxDB via API REST"
-
-#: ../../source/releases.rst:61
+#: ../../source/releases.rst:10
 msgid "Improvements and fixes"
 msgstr "Melhorias e correções"
 
-#: ../../source/releases.rst:64
-msgid "Auth"
+#: ../../source/releases.rst:13
+msgid "V2k-Bridge"
 msgstr ""
 
-#: ../../source/releases.rst:66 ../../source/releases.rst:71
-#: ../../source/releases.rst:76 ../../source/releases.rst:84
-#: ../../source/releases.rst:89 ../../source/releases.rst:95
-#: ../../source/releases.rst:104 ../../source/releases.rst:109
-#: ../../source/releases.rst:131 ../../source/releases.rst:158
-msgid "Documentation improvements"
-msgstr "Melhorias na documentação"
+#: ../../source/releases.rst:16
+msgid "Added graceful shutdown and health check for the service"
+msgstr "Adicionado graceful shutdown e health check para o serviço"
 
-#: ../../source/releases.rst:69
-msgid "Cron"
+#: ../../source/releases.rst:18
+msgid "K2v-Bridge"
 msgstr ""
 
-#: ../../source/releases.rst:74
-msgid "Data-Broker"
+#: ../../source/releases.rst:21
+msgid "Added graceful shutdown and health check for the service"
+msgstr "Adicionado graceful shutdown e health check para o serviço"
+
+#: ../../source/releases.rst:23
+msgid "Kafka-WS"
 msgstr ""
 
-#: ../../source/releases.rst:77
-msgid "Several code improvements"
-msgstr "Diversas melhorias de código"
+#: ../../source/releases.rst:26
+msgid "Added graceful shutdown and health check for the service"
+msgstr "Adicionado graceful shutdown e health check para o serviço"
 
-#: ../../source/releases.rst:78
-msgid ""
-"Removal of topic mapping from kafka by id via Redis, it is now possible to "
-"use the topic name directly"
-msgstr ""
-"Remoção do mapeamento de tópicos do kafka por id via Redis, agora é possível "
-"utilizar o nome do tópico diretamente"
-
-#: ../../source/releases.rst:82
-msgid "Data-Manager"
+#: ../../source/releases.rst:28
+msgid "Influxdb-Retriever"
 msgstr ""
 
-#: ../../source/releases.rst:87
-msgid "Device-Manager"
+#: ../../source/releases.rst:31
+msgid "Added graceful shutdown and health check for the service"
+msgstr "Adicionado graceful shutdown e health check para o serviço"
+
+#: ../../source/releases.rst:33
+msgid "Influxdb-Storer"
 msgstr ""
 
-#: ../../source/releases.rst:90
-msgid "Performance improvements in code"
-msgstr "Melhorias de performance no código"
+#: ../../source/releases.rst:36
+msgid "Added graceful shutdown and health check for the service"
+msgstr "Adicionado graceful shutdown e health check para o serviço"
 
-#: ../../source/releases.rst:93
-msgid "Flowbroker"
-msgstr ""
+#: ../../source/releases.rst:38
+msgid "Others"
+msgstr "Outros"
 
-#: ../../source/releases.rst:96
-msgid ""
-"Various code performance improvements including better parallelization of "
-"processing queues"
-msgstr ""
-"Diversas melhorias de performance no código incluindo uma melhor "
-"paralelização das filas de processamento"
-
-#: ../../source/releases.rst:97 ../../source/releases.rst:110
-#: ../../source/releases.rst:118 ../../source/releases.rst:126
-#: ../../source/releases.rst:134 ../../source/releases.rst:166
+#: ../../source/releases.rst:41
 msgid "Minor bug fixes"
 msgstr "Correção de pequenos bugs"
 
-#: ../../source/releases.rst:98
-msgid "Support for Kubernetes 17 with remote nodes"
-msgstr "Suporte ao Kubernetes 17 com nós remotos"
-
-#: ../../source/releases.rst:99
-msgid "New “Publish FTP” node"
-msgstr "Novo nó “Publish FTP”"
-
-#: ../../source/releases.rst:102
-msgid "Image-Manager"
-msgstr "Image-Manager"
-
-#: ../../source/releases.rst:107
-msgid "IotAgent-Leshan"
-msgstr ""
-
-#: ../../source/releases.rst:113
-msgid "IotAgent Mosca"
-msgstr ""
-
-#: ../../source/releases.rst:115
-msgid "Added CRL support"
-msgstr "Adicionado suporte a CRL"
-
-#: ../../source/releases.rst:116
-msgid "Added control of maximum active and inactivity connection time"
-msgstr "Adicionado controle de tempo de conexão máxima ativa e por inatividade"
-
-#: ../../source/releases.rst:117
-msgid "Integration with the new X.509 Identity Management service"
-msgstr "Integração com o novo serviço X.509 Identity Management"
-
-#: ../../source/releases.rst:121
-msgid "GUI"
-msgstr ""
-
-#: ../../source/releases.rst:123
-msgid "Added historical reporting option by device"
-msgstr "Adicionada opção de relatório de histórico por dispositivo"
-
-#: ../../source/releases.rst:124
-msgid "Added x509 certificate generation option for a device"
-msgstr "Adicionada opção de geração de certificados x509 para um dispositivo"
-
-#: ../../source/releases.rst:125
-msgid "Base url route customization"
-msgstr "Customização de rota da url base"
-
-#: ../../source/releases.rst:129
-msgid "History"
-msgstr ""
-
-#: ../../source/releases.rst:132
-msgid ""
-"New “First N” filter option that returns the first N data that is currently "
-"persisted"
-msgstr ""
-"Nova opção de filtro “First N” que retorna os N primeiros dados que estão "
-"persistidos atualmente"
-
-#: ../../source/releases.rst:133
-msgid "Improvements to data indexing in MongoDB"
-msgstr "Melhorias na indexação dos dados no MongoDB"
-
-#: ../../source/releases.rst:137
-msgid "Kong"
-msgstr ""
-
-#: ../../source/releases.rst:139
-msgid "Migration to Kong Gateway version 2 (https://konghq.com/kong/)"
-msgstr "Migração para  a versão 2 do Kong Gateway (https://konghq.com/kong/)"
-
-#: ../../source/releases.rst:142
+#: ../../source/releases.rst:43
 msgid "Deployments"
 msgstr "Implantações"
 
-#: ../../source/releases.rst:145
+#: ../../source/releases.rst:49
 msgid "Docker-compose"
 msgstr ""
 
-#: ../../source/releases.rst:147
-msgid "Upgrade to docker-compose version 3.8"
-msgstr "Atualização para a versão 3.8 do docker-compose"
+#: ../../source/releases.rst:41
+msgid "Minor bug fixes"
+msgstr "Correção de pequenos bugs"
 
-#: ../../source/releases.rst:148
-msgid "Update version of external services"
-msgstr "Atualização de versão de serviços externos"
-
-#: ../../source/releases.rst:149
-msgid "Added new services"
-msgstr "Adicionado novos serviços"
-
-#: ../../source/releases.rst:152
+#: ../../source/releases.rst:51
 msgid "Ansible-dojot"
 msgstr ""
 
-#: ../../source/releases.rst:154
-msgid ""
-"Several improvements mainly aimed at scalability and simplification of the "
-"installation process"
-msgstr ""
-"Diversas melhorias principalmente visando escalabilidade e simplificação do "
-"processo de instalação"
+#: ../../source/releases.rst:54
+msgid "The docker and containerd version was defined in the kubernetes playbook"
+msgstr "A versão do docker e do containerd foi fixada no playbook do kubernetes"
 
-#: ../../source/releases.rst:155
-msgid "Update to version 17 of kubernetes"
-msgstr "Atualização para a versão 17 de kubernetes"
+#: ../../source/releases.rst:55
+msgid "Bug fixes in Kafka-WS Readiness and Liveness Probe"
+msgstr "Correção de bugs no Readiness e Liveness Probe do Kafka-WS"
 
-#: ../../source/releases.rst:156
-msgid "Added Load Balancer - Nginx"
-msgstr "Adicionado Load Balancer - Nginx"
+#: ../../source/releases.rst:56
+msgid "Bug fixes in Nginx"
+msgstr "Correção de bugs no Nginx"
 
-#: ../../source/releases.rst:157
-msgid ""
-"Added Prometheus and Grafana to monitor part of the infrastructure (VMs, "
-"VerneMQ, Kubernetes, etc.)"
-msgstr ""
-"Adicionado Prometheus e Grafana para monitorar parte da infraestrutura (VMs, "
-"VerneMQ, Kubernetes, etc)"
-
-#: ../../source/releases.rst:161
-msgid "Libraries"
-msgstr "Bibliotecas"
-
-#: ../../source/releases.rst:164
-msgid "dojot-module-nodejs"
-msgstr ""
-
-#: ../../source/releases.rst:169
-msgid "dojot-microservice-sdk-js"
-msgstr ""
-
-#: ../../source/releases.rst:171
-msgid "New dojot library in node.js with:"
-msgstr "Nova biblioteca dojot em node.js com:"
-
-#: ../../source/releases.rst:173
-msgid ""
-"Kafka Handlers -  Module responsible for Consumer (can use regular "
-"expressions in topics) and Producer"
-msgstr ""
-"Kafka Handlers - Módulo responsável pelo Consumer  (podendo utilizar "
-"expressões regulares nos tópicos) e Producer"
-
-#: ../../source/releases.rst:174
-msgid ""
-"Config Manager -  Module responsible for creating the standardized "
-"configuration file for the services"
-msgstr ""
-"Config Manager - Módulo responsável pela criação do arquivo de configuração "
-"padronizada para o serviços"
-
-#: ../../source/releases.rst:175
-msgid ""
-"Service State Manager - Module to define graceful shutdown and health check "
-"for the service"
-msgstr ""
-"Service State Manager -  Módulo para definir graceful shutdown e health "
-"check para o serviço"
-
-#: ../../source/releases.rst:176
-msgid ""
-"WebUtils - Module for creating a server and a web structure (Express.js) to "
-"handle HTTP (S) requests."
-msgstr ""
-"WebUtils - Módulo para a criação de um servidor e uma estrutura web (Express."
-"js) para lidar com solicitações HTTP(S)."
-
-#: ../../source/releases.rst:177
-msgid "Logger - Log module to be used in services in a standardized way"
-msgstr ""
-"Logger - Módulo de log  para ser utilizado nos serviços de forma padronizada"
+#: ../../source/releases.rst:57
+msgid "Documentation improvements"
+msgstr "Melhorias na documentação"

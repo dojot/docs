@@ -380,11 +380,11 @@ msgstr ""
 
 #: ../../source/faq/faq.rst:206
 msgid ""
-"As of **v0.5.2**, you can choose the between two MQTT brokers: Mosca or VerneMQ. "
+"As of **v0.6.0**, you can choose the between two MQTT brokers: Mosca or VerneMQ. "
 "By default, VerneMQ is used, but you can use Mosca too. Check the :doc:`../"
 "installation-guide` for more information."
 msgstr ""
-"A partir da versão **v0.5.2**, você pode escolher entre dois *brokers* MQTT: "
+"A partir da versão **v0.6.0**, você pode escolher entre dois *brokers* MQTT: "
 "Mosca ou VerneMQ. Por padrão, o VerneMQ é utilizado, mas você pode utilizar o "
 "Mosca também. Verifique o :doc:`../installation-guide` para mais informações."
 
