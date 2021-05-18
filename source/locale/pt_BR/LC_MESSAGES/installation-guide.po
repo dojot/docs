@@ -326,10 +326,18 @@ msgstr ":download:`Clique aqui para acessar o guia de instalação da dojot com 
 msgid "If you want to install a more robust Dojot that supports up to 100k devices, check the pdf below."
 msgstr "Se você deseja instalar uma Dojot mais robusta que suporte até 100k dispositivos, verifique o pdf abaixo."
 
-#: ../../source/installation-guide.rst:214
+#: ../../source/installation-guide.rst:215
+msgid ""
+"In the 100k environment, dojot does not process or store messages sent by devices. "
+"This environment will only work for load tests and only a few dojot components will be available."
+msgstr ""
+"No ambiente 100k, a dojot não processa e nem armazena as mensagens enviadas pelos dispositivos. "
+"Esse ambiente só irá funcionar para testes de carga e apenas alguns componentes da dojot estarão disponíveis."
+
+#: ../../source/installation-guide.rst:219
 msgid ":download:`click here to access the dojot 100k installation guide with kubernetes <pdf/Dojot-100k-Installation-Guide.pdf>`"
 msgstr ":download:`Clique aqui para acessar o guia de instalação da dojot 100k com kubernetes <pdf/Dojot-100k-Installation-Guide.pdf>`"
 
-#: ../../source/installation-guide.rst:218
+#: ../../source/installation-guide.rst:223
 msgid "Unfortunately in this tutorial we do not have support for the English language yet."
 msgstr "Infelizmente ainda não possuímos suporte para língua inglesa nesse tutorial"

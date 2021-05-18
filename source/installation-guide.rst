@@ -211,6 +211,11 @@ For simple installation with kubernetes please check the pdf below.
 
 If you want to install a more robust Dojot that supports up to 100k devices, check the pdf below.
 
+.. note::
+
+  In the 100k environment, dojot does not process or store messages sent by devices.
+  This environment will only work for load tests and only a few dojot components will be available.
+
 :download:`click here to access the dojot 100k installation guide with kubernetes <pdf/Dojot-100k-Installation-Guide.pdf>`
 
 .. note::

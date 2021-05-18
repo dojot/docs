@@ -120,7 +120,7 @@ There are two tools to facilitate
 obtaining certificates from the dojot platform:
 
 - The `CertReq`_ script.
-- GUI's embedded certificate generation utility (more details in A_SER_CRIADO).
+- GUI's embedded certificate generation utility (more details in :ref:`Generating certificates for devices`).
 
 In addition, you can use `OpenSSL`_ to create
 certificates and sign using the `API - x509-identity-mgmt`_,

@@ -14,7 +14,7 @@ The services developed by the dojot team to integrate these open-source
 software components and implement the business logics are copyrighted by
 `CPQD`_ and till release v0.5.1 were
 licensed under the `GPLv3`_.
-From release v0.6.0 onwards, these services are being licensed
+From release v0.5.2 onwards, these services are being licensed
 under the `Apache License, Version 2.0`_.
 
 You can use and/or modify the software for free (no license costs apply).
