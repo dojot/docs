@@ -23,7 +23,7 @@ the same version as your current environment:
 
   git clone https://github.com/dojot/dojot.git
   cd dojot
-  git checkout v0.5.2
+  git checkout v0.6.0
 
 Enter in Locust directory:
 

@@ -569,6 +569,7 @@ The component responds with the following syntax:
 
 | `HTTP/1.1 200 OK`
 | `Content-type: application/json`
+
 .. code-block:: json
 
   {

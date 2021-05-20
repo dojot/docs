@@ -257,7 +257,7 @@ msgstr ""
 
 #: ../../source/using-api-interface.rst:257
 msgid ""
-"As of **v0.5.2**, you can choose the between two MQTT brokers: Mosca or "
+"Since version **v0.5.2**, you can choose the between two MQTT brokers: Mosca or "
 "VerneMQ. By default, VerneMQ is used, but you can use Mosca too. Check "
 "the :doc:`../installation-guide` for more information."
 msgstr ""
