@@ -243,6 +243,7 @@ After you create the template with the Firmware management option enabled, you c
 
 Note that in each step, the status and result of image processing are shown.
 
+.. _Generating certificates for devices:
 
 Generating certificates for devices
 -----------------------------------

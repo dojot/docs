@@ -299,10 +299,10 @@ msgstr "O  *script* `CertReq`_ ."
 #: ../../source/mqtt-tls.rst:123
 msgid ""
 "GUI's embedded certificate generation utility (more details in "
-"A_SER_CRIADO)."
+":ref:`Generating certificates for devices`)."
 msgstr ""
 "Utilitário de geração de certificado embutido da GUI (mais detalhes em "
-"A_SER_CRIADO)."
+":ref:`Generating certificates for devices`)."
 
 #: ../../source/mqtt-tls.rst:125
 msgid ""

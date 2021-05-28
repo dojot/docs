@@ -6,16 +6,20 @@ The following tutorials show you how to use the core features of IoT dojot Platf
 .. toctree::
    :maxdepth: 2
    :numbered:
+   :glob:
 
    using-web-interface
    using-api-interface
    flow
+   mqtt-tls
+   load-testing-dojot-platform
 
 There are also other tutorials (in portuguese only)  hosted outside the Read The Docs that you can also use to learn more about dojot:
 
 .. toctree::
    :maxdepth: 2
    :numbered:
+   :glob:
 
    Introdução à plataforma dojot - Instalação e configuração <https://www.embarcados.com.br/introducao-a-plataforma-dojot>
    Simulação de dispositivos na plataforma dojot <https://www.embarcados.com.br/simulacao-de-dispositivos-na-plataforma-dojot>

@@ -68,7 +68,7 @@ Docker Compose
     src="https://www.youtube.com/embed/aZ-Wtcd_Ydw?rel=0" frameborder="0"
     allowfullscreen></iframe><br/>
 
-In this video tutorial above, version v0.4.2 is used, but the same video is valid for the current version, it is only necessary to change to version v0.5.2.
+In this video tutorial above, version v0.4.2 is used, but the same video is valid for the current version, it is only necessary to change to version v0.6.0.
 
 This document provides instructions on how to create a trivial deployment
 environment on single host for *dojot*, using Compose as the processes
@@ -142,7 +142,7 @@ replaced): ::
 
 For instance: ::
 
-  git checkout v0.5.2 -b v0.5.2
+  git checkout v0.6.0 -b v0.6.0
 
 
 That done, the environment can be brought up by: ::
@@ -176,7 +176,7 @@ When we deploy dojot with the command 'docker-compose up -d' the volumes are ena
 by default.
 
 The volumes of microservices that Dojot uses can be incompatible between dojot versions. This means
-that you are unable to use dojot v0.4.x volumes in dojot v0.5.2 and vice versa.
+that you are unable to use dojot v0.4.x volumes in dojot v0.5.x or above and vice versa.
 
 To use different versions of dojot in the same environment, you must first drop the volumes of the other version.
 
@@ -205,9 +205,18 @@ information about how to interact with the platform.
 Kubernetes
 ----------
 
-For installation with kubernetes please check the pdf below.
+For simple installation with kubernetes please check the pdf below.
 
 :download:`click here to access the dojot installation guide with kubernetes <pdf/Dojot-Installation-Guide.pdf>`
+
+If you want to install a more robust Dojot that supports up to 100k devices, check the pdf below.
+
+.. note::
+
+  In the 100k environment, dojot does not process or store messages sent by devices.
+  This environment will only work for load tests and only a few dojot components will be available.
+
+:download:`click here to access the dojot 100k installation guide with kubernetes <pdf/Dojot-100k-Installation-Guide.pdf>`
 
 .. note::
 
