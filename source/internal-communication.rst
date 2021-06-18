@@ -15,7 +15,7 @@ The main components that are currently in `dojot platform`_ are :numref:`dojot_c
     :align: center
 
 
-    [Auth]
+    [Keycloak]
     [DeviceManager]
     [Persister]
     [History]
@@ -34,7 +34,7 @@ The main components that are currently in `dojot platform`_ are :numref:`dojot_c
       [IoT RabbitMQ]
     }
 
-    [postgreSQL] <-- [Auth]
+    [postgreSQL] <-- [Keycloak]
     [postgreSQL] <-- [DeviceManager]
     [postgreSQL] <- [Kong]
     [postgreSQL] <-- [x509-identity-mgmt]
@@ -46,7 +46,7 @@ The main components that are currently in `dojot platform`_ are :numref:`dojot_c
 
 They are:
 
-- Auth: authentication mechanism
+- Keycloak: an open source identity and access management solution.
 - DeviceManager: device and template storage.
 - Persister: component that stores all device-generated data.
 - History: component that exposes all device-generated data.
@@ -56,7 +56,7 @@ They are:
 - IoT agents: agents for different protocols.
 
 
-Each service will be briefly described in this page. More information can be
+Some services will be briefly described in this page. More information can be
 found in each component documentation.
 
 Messaging and authentication
@@ -91,34 +91,9 @@ that this mechanism allows multiple services to emit messages with the same
 Sending HTTP requests
 +++++++++++++++++++++
 
-In order to send requests via HTTP, a service must create an access token,
-described here. There is no further considerations beyond following the API
-description associated to each service. This can be seen in figure
-:numref:`initial_authentication`. Note that all interactions depicted here are
-abstractions of the actual ones. Also, it should be noted that these interactions
-are valid only for internal components. Any external service should use Kong
-as entrypoint.
-
-.. _initial_authentication:
-.. uml::
-   :caption: Initial authentication
-   :align: center
-
-   actor Client
-   boundary Kong
-   control Auth
-
-   Client -> Kong: POST /auth \nBody={"admin", "p4ssw0rD"}
-   activate Kong
-   Kong -> Auth: POST /user \nBody={"admin", "p4ssw0rD"}
-   Auth --> Kong: JWT="873927dab"
-   Kong --> Client: JWT="873927dab"
-   deactivate Kong
-
-In this figure, a client retrieves an access token for user `admin` whose
-password is `p4ssw0rd`. After that, a user can send a request to HTTP APIs
-using it. This is shown in :numref:`sending_requests`. Note: the actual authorization
-mechanism is detailed in `Auth + API gateway (Kong)`_.
+In order to send requests via HTTP, a service must :ref:`Getting Access Token JWT`.
+What is shown :numref:`sending_requests` is after obtaining authorization.
+Note: the actual authorization mechanism is detailed in `Keycloak + API gateway (Kong)`_.
 
 .. _sending_requests:
 .. uml::
@@ -133,8 +108,8 @@ mechanism is detailed in `Auth + API gateway (Kong)`_.
 
    Client -> Kong: POST /device \nHeaders="Authorization: Bearer JWT"\nBody={ device }
    activate Kong
-   Kong -> Auth: POST /pep \nBody={"admin", "/device"}
-   Auth --> Kong: OK 200
+   Kong -> Keycloak
+   Keycloak --> Kong: OK 200
    Kong -> DeviceManager: POST /device \nHeaders="Authorization: JWT" \nBody={ "device" : "XYZ" }
    activate DeviceManager
    DeviceManager -> PostgreSQL: INSERT INTO ....
@@ -144,9 +119,9 @@ mechanism is detailed in `Auth + API gateway (Kong)`_.
    Kong --> Client: OK 200
    deactivate Kong
 
-In this figure, a client creates a new device using the token retrieved in
-:numref:`initial_authentication`. This request is analyzed by Kong, which will
-invoke Auth to check whether the user set in the token is allowed to ``POST``
+In this figure, a client creates a new device using the token retrieved.
+This request is analyzed by Kong, which will
+invoke Keycloak to check whether the user set in the token is allowed to ``POST``
 to ``/device`` endpoint. Only after the approval of such request, Kong will
 forward it to DeviceManager.
 
@@ -208,41 +183,11 @@ All components are interested in a set of subjects, which will be used to
 either send messages or receive messages from Kafka. As dojot groups Kafka
 topics and tenants into subjects (a subject will be composed by one or more
 Kafka topics, each one transmitting messages for a particular tenant), the
-component must bootstrap each tenant before sending or receiving messages. This
-is done in two phases: component boot time and component runtime.
+component must bootstrap each tenant before sending or receiving messages.
 
-In the first phase, a component asks Auth in order to retrieve all currently
-configured tenants. It is interested, let's say, in consuming messages from
-`device-data` and `dojot.device-manager.devices` subjects. Therefore, it will
-request DataBroker a topic for each tenant for each subject. With that list of
-topics, it can create Producers and Consumers to send and receives messages
-through those topics. This is shown by :numref:`Tenant bootstrapping startup`.
-
-.. _Tenant bootstrapping startup:
-.. uml::
-   :caption: Tenant bootstrapping at startup
-   :align: center
-
-   control Component
-   control Auth
-   control DataBroker
-   control Kafka
-
-   Component-> Auth: GET /tenants
-   Auth --> Component: {"tenants" : ["admin", "tenant1"]}
-   loop each $tenant in tenants
-     Component -> DataBroker: GET /topic/device-data \nHeaders="Authorization: JWT[tenant]"
-     DataBroker --> Component: {"topic" : "**$tenant**.device-data"}
-     Component -> Kafka: SUBSCRIBE\ntopic:**$tenant**.device-data
-     Kafka --> Component: OK
-     Component -> DataBroker: GET /topic/dojot.device-manager.devices \nHeaders="Authorization: JWT[tenant]"
-     DataBroker --> Component: {"topic" : "**$tenant**.device-data"}
-     Component -> Kafka: SUBSCRIBE\ntopic: **$tenant**.device-data
-     Kafka --> Component: OK
-   end
-
-The second phase starts after startup and its purpose is to process all
+Its purpose is to process all
 messages received through Kafka subscribing in ``dojot-management.dojot.tenancy``.
+Our custom keycloak provider that publishes tenant creation and deletion messages to kafka.
 This will include any tenant that is created
 after all services are up and running. :numref:`Tenant bootstrapping` shows how
 to deal with these messages.
@@ -277,76 +222,24 @@ to deal with these messages.
 All services that are somehow interested in using subjects should execute this
 procedure in order to correctly receive all messages.
 
-Auth + API gateway (Kong)
--------------------------
+Keycloak + API gateway (Kong)
+-----------------------------
 
-Auth is a service deeply connected to Kong. It is responsible for user
-management, authentication and authorization. As such, it is invoked by 
-Kong whenever a request is received by one of its registered endpoints. 
+Keycloak is a service deeply connected to Kong. It is responsible for user
+management, authentication and authorization. As such, it is invoked by
+Kong whenever a request is received by one of its registered endpoints.
 This section will detail how this is performed and how they work together.
 
-Kong configuration
-++++++++++++++++++
-
-There are two configuration procedures when starting Kong within dojot:
-
-#. Migrating existing data
-#. Registering API endpoints and plugins.
-
-The first task is performed by simply invoking Kong with a special flag.
-
-The second one is performed by executing a configuration script
-after starting Kong. Its only purpose is to register endpoints in Kong, such as:
-
-.. code-block:: bash
-
-    #create a service
-    curl  -sS -X PUT \
-    --url ${kong}/services/data-broker \
-    --data "name=data-broker" \
-    --data "url=http://data-broker:80"
-
-    #create a route to service
-    curl  -sS -X PUT \
-    --url ${kong}/services/data-broker/routes/data-broker_route \
-    --data 'paths=["/device/(.*)/latest", "/subscription"]' \
-    --data "strip_path=false"
+Veja mais em `Kong + Keycloak`_  and  `Keycloak Dojot Provider`_.
 
 
-These commands will register the endpoint `/device/*/latest` and `/subscription`
-and all requests to it are going to be forwarded to `http://data-broker:80`. You
-can check the documentation on how to add endpoints in Kong's documentation.
-The links are in the :doc:`./components-and-apis` page.
+.. _Emitted messages from custom keycloak provider:
 
-For some of its registered endpoints, the script will add two plugins to
-selected endpoints:
-
-#. JWT generation. The documentation for this plugin is available at `Kong JWT
-   plugin page`_.
-#. Configures a plugin which will forward all policies requests to Auth
-   in order to authenticate requests. This plugin is available
-   inside the `Kong repository`_.
-
-The following request install these two plugins in data-broker API:
-
-.. code-block:: bash
-
-    #pepkong - auth
-    curl  -sS  -X POST \
-    --url ${kong}/services/data-broker/plugins/ \
-    --data "name=pepkong" \
-    --data "config.pdpUrl=http://auth:5000/pdp"
-
-    #JWT generation
-    curl  -sS  -X POST \
-    --url ${kong}/services/data-broker/plugins/ \
-    --data "name=jwt"
+Emitted messages from custom keycloak provider
+++++++++++++++++++++++++++++++++++++++++++++++
 
 
-Emitted messages
-****************
-
-Auth will emit just one message via Kafka for tenant creation:
+Keycloak Dojot Provider will emit just one message via Kafka for tenant creation:
 
 .. code-block:: json
 
@@ -367,9 +260,6 @@ And one for tenant deletion:
 By default these messages are created in
 kafka topic ``dojot-management.dojot.tenancy``.
 
-This prefix topic can be configured, check the`Auth`
-component documentation :doc:`./components-and-apis`.
-
 Device Manager
 --------------
 
@@ -381,6 +271,8 @@ only on DataBroker and Kafka for reasons already explained in this document.
 The `DeviceManager` documentation on GitHub ReadMe explains in more
 depth all messages published. You can find the link
 in :doc:`./components-and-apis`.
+
+.. _Internal communication - IoT agent:
 
 IoT agent
 ---------
@@ -449,62 +341,6 @@ Such message would be:
         }
     }
 
-
-Persister
----------
-
-Persister is a very simple service which only purpose is to receive messages
-from devices (using ``device-data`` subject) and store them into MongoDB. For
-that, the bootstrapping procedure (detailed in `Bootstrapping tenants`_) is
-performed and, whenever a new message is received, it will create a new Mongo
-document and store it into the device's collection. The following image in
-:numref:`Persister`, shows an example of this flow using the.
-
-.. _Persister:
-.. uml::
-   :caption: Persister
-   :align: center
-
-   control Kafka
-   control Persister
-   database MongoDB
-
-   Kafka -> Persister: MESSAGE\ntopic: admin.device-data \nmessage: IoTAgentMessage
-   Persister -> MongoDB: NEW DOC { IoTAgentMessage }
-   MongoDB --> Persister: OK
-   Persister --> Kafka: COMMIT
-
-This service is simple as it is by design.
-
-History
--------
-
-History is also a very simple service: whenever a user or application sends a
-request to it, it will query MongoDB and build a proper message to send back
-to the user/application. This is shown in :numref:`History`.
-
-.. _History:
-.. uml::
-   :caption: History
-   :align: center
-
-   actor User
-   boundary Kong
-   control History
-   database MongoDB
-
-   User -> Kong: GET /device/history/efac?attr=temperature\nHeaders="Authorization: JWT"
-   activate Kong
-   Kong -> Kong: authorize
-   Kong -> History: GET /history/efac?attr=temperature\nHeaders="Authorization: JWT"
-   activate History
-   History -> MongoDB: db.efac.find({attr=temperature})
-   MongoDB --> History: doc1, doc2
-   History -> History: processDocs([doc1, doc2])
-   History --> Kong: OK\n{"efac":[\n\t{"temperature" : 10},\n\t{"temperature": 20}\n]}
-   deactivate History
-   Kong -> User: OK\n{"efac":[\n\t{"temperature" : 10},\n\t{"temperature": 20}\n]}
-   deactivate Kong
 
 Data Broker
 -----------
@@ -669,3 +505,7 @@ in Kafka.
 .. _Kong JWT plugin page: https://docs.konghq.com/hub/kong-inc/jwt/
 .. _Kong repository: https://github.com/dojot/kong
 .. _dojot platform: http://dojot.com.br/
+
+
+.. _Kong + Keycloak: https://github.com/dojot/dojot/tree/v0.8.0/api-gateway/kong#readme
+.. _Keycloak Dojot Provider: https://github.com/dojot/dojot/tree/v0.8.0iam/keycloak/dojot-provider#readme

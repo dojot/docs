@@ -37,60 +37,31 @@ contains the information required from the entity and some information about
 the certificate use, hostnames and IPs where the certificate will reside,
 alternative names for the entity, etc.
 
-MQTT Brokers
-~~~~~~~~~~~~
+MQTT Broker
+~~~~~~~~~~~
 
-IotAgent VerneMQ (Default)
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+IotAgent VerneMQ
+^^^^^^^^^^^^^^^^
 
 The IotAgent VerneMQ extends `VerneMQ`_ with some features and services
 for dojot case, see more in `IotAgent-VerneMQ`_.
 This is the **default** Broker MQTT in dojot deployments.
 
-To use IotAgent VerneMQ with TLS, you need to set it by environment variable in the sidecar associated ``CERT_SC_CERTS_HOSTNAMES``.
-
-IotAgent Mosca (Legacy)
-^^^^^^^^^^^^^^^^^^^^^^^
-
-The IotAgent Mosca uses `Mosca`_ that is a node.js mqtt
-broker,
-see more about this service in `IotAgent-Mosca`_.
-This is the **not default** Broker MQTT in dojot deployments.
-
-To use IotAgent Mosca with TLS, you need to configure by environment variable:
-
- - MOSCA_TLS_DNS_LIST: Server hostnames/ip,
-   the host to which the device connects externally (separated by a comma).
-   Example: localhost, mydomain.com
-
-
-About using IotAgent VerneMQ or IotAgent Mosca
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-You shouldn't use the two brokers together to avoid port conflicts.
-Use either VerneMQ (default) or Mosca (legacy).
-By default, our deployments are using VerneMQ.
-
-For the Ansible deployment (i.e. Kubernetes) of both brokers:
-
- - If you have defined the ``dojot_domain_name`` variable,
-   you don't need to configure the environment variables
-   mentioned in the previous topics.
- - You can disable the *unsecured mode*
-   by changing the ``dojot_insecure_mode`` variable to ``false``.
-
-In addition, you can choose between `IotAgent VerneMQ` or `IotAgent Mosca`
-when configuring the Ansible deployment (i.e. Kubernetes).
-In Docker-compose, you need to uncomment and comment the services
-in the ``docker-compose.yml``, there's a commented explanation about that in this file.
-
-
-Check the :doc:`./installation-guide` for more info.
-
 All the certificates will be automatically created, so there is no need to manually configure the brokers' ones.
 
-How to connect a device with the IotAgent VerneMQ or IotAgent Mosca with mutual TLS
-------------------------------------------------------------------------------------
+.. ATTENTION::
+   In order for TLS to work correctly it is necessary
+   to configure the domain in which the ``deployment`` is running.
+   In `ansible (Kubernetes)`  this can be set in the ``dojot_domain_name`` variable
+   and in `docker-compose` in the ``DOJOT_DOMAIN_NAME`` variable in *.env*.
+   In `ansible (Kubernetes)` you can disable the *unsecured mode* by changing
+   the ``dojot_insecure_mode`` variable to ``false``
+   and in `docker-compose` unmapping to port 1883 in the `iotagent-mqtt` service.
+   Check the :doc:`./installation-guide` for more info.
+
+
+How to connect a device with the IotAgent VerneMQ
+-------------------------------------------------
 
 .. ATTENTION::
    First of all, you will need a running dojot's environment.
@@ -125,6 +96,12 @@ A brief explanation of how to use `CertReq`_
 
 As prerequisites this uses `git`_, `OpenSSL`_, `curl`_ and `jq`_ .
 
+.. NOTE::
+   You need to enable the `dev-test-cli` client in the keycloak. For
+   security reasons it is disabled by default, after use it is
+   recommended to disable it again :ref:`How to enable and disable *client* `dev-test-cli``.
+
+
 On Debian-based Linux distributions, you can install
 these prerequisites by running:
 
@@ -139,7 +116,7 @@ to the corresponding version of your dojot environment:
 
   git clone https://github.com/dojot/dojot.git
   cd dojot
-  git checkout v0.7.0
+  git checkout v0.8.0
 
 Enter in ``certreq`` directory:
 
@@ -156,13 +133,14 @@ certificates and keys as follows:
          -h http://localhost \
          -p 8000 \
          -i 'a1998e' \
+         -t 'admin' \
          -u 'admin' \
          -s 'admin'
 
-Given a *username* ``admin`` and *password* ``admin``,
+Given a *username* ``admin``,  *password* ``admin`` and *tenant* ``admin``,
 this command will request a certificate
 with *device ID (identifier)* ``a1998e``
-for the dojot platform *host* ``localhost`` on *port* ``8000``.
+for the dojot platform *host* ``http://localhost`` on *port* ``8000``.
 
 
 .. NOTE::   For more details about the CertReq parameters, check
@@ -278,26 +256,6 @@ Unsecured mode MQTT (without TLS)
 .. ATTENTION::
    MQTT without security is not recommended, use this for testing only.
 
-In *ansible-dojot* (kubernetes deployment)  you can disable the *unsecured mode*
-by changing the ``dojot_insecure_mqtt`` variable to ``false``,
-this is valid in both Brokers.
-Check the :doc:`./installation-guide` for more info.
-
-
-IotAgent VerneMQ (Default)
-^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-You can disable the *unsecured mode* if you make port 1883 unavailable for external access.
-
-For more details about simulating a device without security, check the
-`Simulating a device with mosquitto without security`_ tutorial.
-
-IotAgent Mosca (Legacy)
-^^^^^^^^^^^^^^^^^^^^^^^
-
-You can disable the *unsecured mode* in Mosca by changing the
-`ALLOW_UNSECURED_MODE` environment variable to ``'false'`` or by removing external
-access to the port `1883`. See more in `IotAgent-Mosca`_.
 
 How to read a certificate
 -------------------------
@@ -323,18 +281,18 @@ Getting certificate fingerprint:
 .. _jq: https://stedolan.github.io/jq/
 .. _git: https://git-scm.com/
 .. _VerneMQ: https://vernemq.com/
-.. _IotAgent-VerneMQ: https://github.com/dojot/dojot/tree/v0.7.0/connector/mqtt/vernemq
-.. _X.509 Identity Management: https://github.com/dojot/dojot/tree/v0.7.0/x509-identity-mgmt
-.. _VerneMQ Dojot - Environment variables: https://github.com/dojot/dojot/tree/v0.7.0/connector/mqtt/vernemq/broker#environment-variables
+.. _IotAgent-VerneMQ: https://github.com/dojot/dojot/tree/v0.8.0/connector/mqtt/vernemq
+.. _X.509 Identity Management: https://github.com/dojot/dojot/tree/v0.8.0/x509-identity-mgmt
+.. _VerneMQ Dojot - Environment variables: https://github.com/dojot/dojot/tree/v0.8.0/connector/mqtt/vernemq/broker#environment-variables
 .. _mosquitto: https://projects.eclipse.org/projects/technology.mosquitto
-.. _How to connect a device with the IoTAgent-VerneMQ with mutual TLS: https://github.com/dojot/dojot/tree/v0.7.0/connector/mqtt/vernemq#how-to-connect-a-device-with-the-iot-agent-mqtt-with-mutual-tls
-.. _Simulating a device with mosquitto: https://github.com/dojot/dojot/tree/v0.7.0/connector/mqtt/vernemq#simulating-a-device-with-mosquitto
-.. _Simulating a device with mosquitto with security: https://github.com/dojot/dojot/tree/v0.7.0/connector/mqtt/vernemq#with-security
-.. _Simulating a device with mosquitto without security: https://github.com/dojot/dojot/blob/v0.7.0/connector/mqtt/vernemq/README.md#without-security
-.. _API - x509-identity-mgmt: https://dojot.github.io/dojot/x509-identity-mgmt/apiary_v0.7.0.html
-.. _CertReq: https://github.com/dojot/dojot/tree/v0.7.0/tools/certreq
-.. _CertReq - Parameters: https://github.com/dojot/dojot/tree/v0.7.0/tools/certreq#parameters
-.. _IotAgent-Mosca: https://github.com/dojot/iotagent-mosca/tree/v0.7.0
+.. _How to connect a device with the IoTAgent-VerneMQ with mutual TLS: https://github.com/dojot/dojot/tree/v0.8.0/connector/mqtt/vernemq#how-to-connect-a-device-with-the-iot-agent-mqtt-with-mutual-tls
+.. _Simulating a device with mosquitto: https://github.com/dojot/dojot/tree/v0.8.0/connector/mqtt/vernemq#simulating-a-device-with-mosquitto
+.. _Simulating a device with mosquitto with security: https://github.com/dojot/dojot/tree/v0.8.0/connector/mqtt/vernemq#with-security
+.. _Simulating a device with mosquitto without security: https://github.com/dojot/dojot/blob/v0.8.0/connector/mqtt/vernemq/README.md#without-security
+.. _API - x509-identity-mgmt: https://dojot.github.io/dojot/x509-identity-mgmt/apiary_v0.8.0.html
+.. _CertReq: https://github.com/dojot/dojot/tree/v0.8.0/tools/certreq
+.. _CertReq - Parameters: https://github.com/dojot/dojot/tree/v0.8.0/tools/certreq#parameters
+.. _IotAgent-Mosca: https://github.com/dojot/iotagent-mosca/tree/v0.8.0
 .. _Mosca: https://github.com/mcollina/mosca
 
 

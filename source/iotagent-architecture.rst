@@ -257,47 +257,7 @@ Messages
 Tenants
 ^^^^^^^
 
-At start, all IoT agents (in fact, all services that need to receive or send
-messages related to devices) must know the list of configured tenants. This is
-the most basic piece of information that IoT agent needs to know in order to
-work properly. The request that should be sent to Auth service is this (all
-requests sent from dojot services to its own services should use the
-"dojot-management" user and tenant):
-
-
-+----------------------------------------------------------+
-| Host: Auth                                               |
-+========================+=+===============================+
-| Endpoint: /admin/tenants | Method: GET                   |
-+--------------------------+-------------------------------+
-|                       Request                            |
-+--------------------------+-------------------------------+
-| Headers                  | Authorization: Bearer ${JWT}  |
-+--------------------------+-------------------------------+
-| Response                                                 |
-+--------------------------+-------------------------------+
-| Headers                  | Content-Type: application/json|
-+--------------------------+-------------------------------+
-|                          | ::                            |
-|                          |                               |
-|                          |   tenants =>                  |
-| Body format              |     tenant => string          |
-+--------------------------+-------------------------------+
-
-
-A sample response for this request is:
-
-.. code-block:: json
-
-    {
-      "tenants": [
-        "admin",
-        "users",
-        "system"
-      ]
-    }
-
-After the bootstrap, it's necessary to subscribe to receive tenant events
+It's necessary to subscribe to receive tenant events
 using the Kafka topic ``dojot-management.dojot.tenancy``.
 
 The Kafka topic ``dojot-management.dojot.tenancy`` will be used to receive tenant lifecycle
@@ -323,8 +283,6 @@ A sample message received by this topic is:
       "tenant": "new_tenant"
     }
 
-This prefix topic can be configured, see more in the `Auth`
-Component documentation :doc:`./components-and-apis`.
 
 See more about :ref:`Bootstrapping tenants` in internal communication.
 

@@ -29,18 +29,8 @@ the :doc:`architecture` to get acquainted with all internal components.
 User authentication
 *******************
 
-All HTTP requests supported by dojot are sent to the API gateway. In order to
-control which user should access which endpoints and resources, dojot makes
-uses of `JSON Web Token`_ (a useful tool is `jwt.io`_) which encodes things
-like (not limited to these):
-
-- User identity
-- Validation data
-- Token expiration date
-
-The component responsible for user authentication is `auth`_. You can find a
-tutorial of how to authenticate a user and how to get an access token in
-:ref:`Getting access token`.
+The dojot platform is integrated with keycloak. Each keycloak realm is
+equivalent to one dojot tenant. See more in :doc:`./using-keycloak`.
 
 Device authentication
 *********************
@@ -55,7 +45,7 @@ In addition to the certificate and asymmetric keys, the device must *trust* the
 dojot *Certificate Authority*, that is, it is also necessary to install the root
 certificate of the dojot platform.
 
-The certificate is requested by the administrator of the tenant to which the
+The certificate is requested by to which the
 devices are registered. Once the administrator follows the necessary steps to
 obtain the certificate, (s)he will have to install the issued certificate and
 the root certificate of the dojot on the device. It is important to emphasize

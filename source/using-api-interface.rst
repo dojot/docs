@@ -37,22 +37,15 @@ Getting access token
 --------------------
 
 All requests must contain a valid access
-token. You can generate a new token by sending the following request:
+token.  See a way to get a token in :ref:`Getting Access Token JWT from *username* and *password*`.
 
-.. code-block:: bash
-
-  JWT=$(curl -s -X POST http://localhost:8000/auth \
-  -H 'Content-Type:application/json' \
-  -d '{"username": "admin", "passwd" : "admin"}' | jq -r ".jwt")
-
-To check:
+To check the token:
 
 .. code-block:: bash
 
   echo $JWT
 
-If you want to generate a token for other user, just change the username and
-password in the request payload. The token ("eyJ0eXAiOiJKV1QiL...") should be
+The token ("eyJ0eXAiOiJKV1QiL...") inside ``$JWT`` should be
 used in every HTTP request sent to dojot in a special header. Such request
 would look like:
 

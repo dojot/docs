@@ -48,13 +48,13 @@ In addition, you need:
 - **Network access**
 
 - The following ports should be opened for Docker Compose deployment:
-   - **TCP**: 8000 *(web interface access)*; 1883 *(MQTT, If you are going to use MQTT)*; 5896 *(LWM2M, If you are going to use LWM2M file server via HTTP instead of coap, UDP)*.
-   - **TLS**: 8883 *(MQTTS, If you are going to use MQTT with TLS, in secure mode.)*.
+   - **TCP**: 80 *(web interface access)*; 1883 *(MQTT, If you are going to use MQTT)*; 5896 *(LWM2M, If you are going to use LWM2M file server via HTTP instead of coap, UDP)*.
+   - **TLS**: 443 *(web interface access)*; 8883 *(MQTTS, If you are going to use MQTT with TLS, in secure mode.)*.
    - **UDP**: 5683 and 5693 *(LWM2M, If you are going to use LWM2M)*; 5684 and 5694 *(LWM2M, If you are going to use LWM2M with DTLS)*.
 
 - The following ports should be opened on load balancer for Kubernetes deployment:
    - **TCP**: 80 *(web interface access)*; 1883 *(MQTT, If you are going to use MQTT)*; 5896 *(LWM2M, If you are going to use LWM2M file server via HTTP instead of coap, UDP)*.
-   - **TLS**: 8883 *(MQTTS, If you are going to use MQTT with TLS, in secure mode.)*.
+   - **TLS**: 443 *(web interface access)*; 8883 *(MQTTS, If you are going to use MQTT with TLS, in secure mode.)*.
    - **UDP**: 5683 and 5693 *(LWM2M, If you are going to use LWM2M)*; 5684 and 5694 *(LWM2M, If you are going to use LWM2M with DTLS)*.
 
 Note: The above cores are approximately 3.5 GHz (x86-64)
@@ -62,15 +62,24 @@ Note: The above cores are approximately 3.5 GHz (x86-64)
 Docker Compose
 --------------
 
+Video
+^^^^^
+
+.. attention::
+   In this bellow video tutorial the dojot version v0.4.2 is used, but the same
+   video is valid for the current version only when use
+   in **localhost** and the required step in `docker-compose dojot`_ about passwords is done.
+   See more at `docker-compose dojot`_.
+
 .. raw:: html
 
     <iframe id="ytplayer" type="text/html" width="720" height="405"
     src="https://www.youtube.com/embed/aZ-Wtcd_Ydw?rel=0" frameborder="0"
     allowfullscreen></iframe><br/>
 
-In this video tutorial above, version v0.4.2 is used, but the same video is valid for the current version, it is only necessary to change to version v0.7.0.
 
-For a guide on how to use **HTTPS** go to this link: https://github.com/dojot/docker-compose/tree/v0.7.0#how-to-secure-dojot-with-nginx-and-lets-encrypt
+Instructions
+^^^^^^^^^^^^
 
 This document provides instructions on how to create a trivial deployment
 environment on single host for *dojot*, using Compose as the processes
@@ -79,7 +88,7 @@ orchestration platform.
 While very simple, this deployment option is best suited to development and
 assessment of the platform and should not be used for production environments.
 
-This guide has been checked on an Ubuntu 18.04 LTS environment.
+This guide has been checked on an Ubuntu 18.04 and 20.04 LTS environment.
 
 The following sections describe all Docker Compose dependencies.
 
@@ -144,15 +153,16 @@ replaced): ::
 
 For instance: ::
 
-  git checkout v0.7.0 -b v0.7.0
+  git checkout v0.8.0 -b v0.8.0
 
 
-That done, the environment can be brought up by: ::
+That done, the environment
+can be brought up by following
+this documentation `docker-compose dojot`_.
 
-  # Must be run from the root of the deployment repo.
-  # May need sudo to work: sudo docker-compose up -d
-  docker-compose up -d
+Stop environment without cleaning volumes: ::
 
+  docker-compose down
 
 To check individual container status, Docker's commands may be used, for
 instance: ::
@@ -197,11 +207,7 @@ That way volumes and dojot will be dropped and you will be able to deploy a diff
 Usage
 ^^^^^
 
-The web interface is available at ``http://localhost:8000``. The user is
-``admin`` and the password is ``admin``. You also can interact with platform
-using the :doc:`./components-and-apis`.
-
-Read the :doc:`using-api-interface` and :doc:`using-web-interface` for more
+Read the :doc:`using-api-interface`,  :doc:`using-keycloak` and :doc:`using-web-interface` for more
 information about how to interact with the platform.
 
 Kubernetes
@@ -223,3 +229,7 @@ If you want to install a more robust Dojot that supports up to 100k devices, che
 .. note::
 
   Unfortunately in this tutorial we do not have support for the English language yet.
+
+
+
+.. _docker-compose dojot: https://github.com/dojot/docker-compose/tree/v0.8.0#readme

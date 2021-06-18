@@ -13,6 +13,12 @@ In this tutorial, will be shown how to run a load test using the dojot's Locust 
 Setting the environment up
 --------------------------
 
+.. NOTE::
+   You need to enable the `dev-test-cli` client in the keycloak. For
+   security reasons it is disabled by default, after use it is
+   recommended to disable it again :ref:`How to enable and disable *client* `dev-test-cli``.
+
+
 First of all, you will need a running dojot environment. Check the :doc:`./installation-guide` for
 more info.
 
@@ -23,7 +29,7 @@ the same version as your current environment:
 
   git clone https://github.com/dojot/dojot.git
   cd dojot
-  git checkout v0.7.0
+  git checkout v0.8.0
 
 Enter in Locust directory:
 

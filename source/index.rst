@@ -33,6 +33,7 @@ and efficient infrastructure.
    using-web-interface
    using-api-interface
    flow
+   using-keycloak
    mqtt-tls
    load-testing-dojot-platform
 

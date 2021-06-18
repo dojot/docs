@@ -1,8 +1,8 @@
 Using web interface
 ===================
 
-This tutorial will show how to do basic operations in dojot, such as creating devices, 
-checking its attributes and creating flows, import/export, firmware update, generating 
+This tutorial will show how to do basic operations in dojot, such as creating devices,
+checking its attributes and creating flows, import/export, firmware update, generating
 certificates and device history report.
 
 .. note::
@@ -289,6 +289,12 @@ The login and password credentials are the same as those used in the rest of doj
 The list of devices will appear on the next screen, if you do not find the desired device, you can search by name. After selecting the device, the attributes that are linked to it will be listed, and a color can be chosen to display each attribute, it is also possible to add a caption for each attribute.
 In “retrieve records by:“ it will be possible to configure some filters, you can select the type of historical data filter as the “last records”, in “order” (minute, hours, days and months), and you can also choose an interval time, in addition you can still view the records in “Real time”, as new data is received they will be displayed in the chosen view. After everything is configured, a summary will be shown with the chosen name and attributes.
 When accessing the views, it will be possible to change the size, fix (which will disable the option to change the size) and still delete the views.
+
+Note: Since v0.8 there have been some changes to the login screen.
+
+.. note::
+   Since v0.8 there have been some changes to the login screen,
+   but they are not present in the video below.
 
 .. raw:: html
 

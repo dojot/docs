@@ -1,7 +1,7 @@
 Release history
 ===============
 
-Full Contact - 2021.07
+Gatka - 2021.08
 ------------------
 
 Services
@@ -10,47 +10,14 @@ Services
 New Services
 ************
 
-Certificate ACL
-^^^^^^^^^^^^^^^
-      - The certificate-acl is responsible for keeping in memory an association between certificates'
-        fingerprint and their owners so that dojot services that needs this information can query it
-        instead of x509-identity-mgmt service, which keeps this information only on disk.
-
-Cert-sidecar
-^^^^^^^^^^^^
-      - The Cert-Sidecar, certificate sidecar, is a service utility for managing
-        x509-identity-mgmt certificates for use with TLS connections.
-
+Keycloak
+^^^^^^^^
+ - The old service has been removed and we now use Keycloak.
 
 Improvements and fixes
 **********************
 
-IotAgent MQTT VerneMQ
-^^^^^^^^^^^^^^^^^^^^^
-
-      - Integration with Cert-sidecar
-      - Integration with Certificate ACL
-
-V2k-Bridge
-~~~~~~~~~~
-
-      - Integration with Cert-sidecar
-
-K2v-Bridge
-~~~~~~~~~~
-
-      - Integration with Cert-sidecar
-
-Kakfa-ws
-^^^^^^^^
-
-      - Improvements in the service's health check
-
-
-X.509 Identity Management
-^^^^^^^^^^^^^^^^^^^^^^^^^
-
-      -  Support for external certificates
+ - Changes were made to several services to make them work with keycloak.
 
 
 Others
@@ -63,7 +30,7 @@ Deployments
 
 Docker-compose
 ***************
-
+    - Documentation improvements
     - Minor bug fixes
 
 Ansible-dojot
@@ -71,3 +38,8 @@ Ansible-dojot
 
     - Documentation improvements
     - Minor bug fixes
+
+Libraries
++++++++++
+
+ - Changes were made to dojo-module-nodejs, iot agent-nodejs, dojot-module-python, dojot-module-java, iotagent-jav libs to work with keycloak.

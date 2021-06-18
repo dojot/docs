@@ -11,7 +11,7 @@ description does not explain (or aims to explain) the minutiae of each
 component's implementation. For that, please refer to each component's own
 documentation.
 
-.. figure:: images/arqui_carate_v04.png
+.. figure:: images/arq_simple_08.png
     :width: 100%
     :align: center
 
@@ -49,7 +49,7 @@ platform (users, devices, templates and flows) and can also be used to check if
 everything is working fine.
 
 The tenant contexts are isolated and there are no data sharing, the access
-credentials are validated by the authorization service for each and every
+credentials are validated by the authorization service (keycloak) for each and every
 operation (API Request). Therefore, a user belonging to a particular context
 (tenant) cannot reach any data (including devices, templates, flows or any
 other data related to these resources) from other ones.
@@ -106,16 +106,6 @@ CoAP/LWM2M, Lora/ATC, Sigfox/WDN and HTTP/JSON.
 
 Communication via secure channels with devices is also the responsibility of IoT agents.
 
-User Authorization Service
-**************************
-
-This service is responsible for managing user profiles and access control.
-Basically any API call that reaches the platform via the API Gateway is
-validated by this service.
-
-To be able to deal with a high volume of authorization calls, it uses caching,
-it is stateless and it is scalable horizontally. Its data is stored on a
-database.
 
 Flowbroker (Flow builder)
 *************************
@@ -140,9 +130,9 @@ Cron is a dojot's microservice that allows you to schedule events to be emitted 
 Kafka2Ftp
 *********
 
-The kafka2ftp service allows forwarding messages from Apache Kafka 
-to FTP servers. It subscribes to Kafka’s topic ``tenant.dojot.ftp``, where the 
-messages must follow a specific schema. Messages can be redirected to these 
+The kafka2ftp service allows forwarding messages from Apache Kafka
+to FTP servers. It subscribes to Kafka’s topic ``tenant.dojot.ftp``, where the
+messages must follow a specific schema. Messages can be redirected to these
 topics using a specific node in the flowbroker.
 
 
@@ -214,15 +204,17 @@ device is transmitted over a secure (encrypted) channel and it is also possible
 to guarantee the integrity of the data.
 
 Kafka WS
-***************
-This component is responsible for retrieving data from Apache Kafka through pure WebSocket 
-connections. It was designed to allow dojot users to retrieve realtime raw and/or processed 
+********
+This component is responsible for retrieving data from Apache Kafka through pure WebSocket
+connections. It was designed to allow dojot users to retrieve realtime raw and/or processed
 data from dojot devices.
 
 Infrastructure
 --------------
 
 A few extra components are used in dojot,they are:
+
+- keycloak: an open source software product to allow single sign-on with Identity and Access Management aimed at modern applications and services.
 
 - postgres: this database is used to persist data from many components, such as
   Device Manager.

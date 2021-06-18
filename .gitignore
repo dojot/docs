@@ -7,3 +7,6 @@ _*
 
 # Pipenv files
 .doctrees
+
+#local history
+.history
