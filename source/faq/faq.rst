@@ -128,9 +128,10 @@ If you need another version, you could checkout a tag instead:
     v0.5.1
     v0.5.2
     v0.6.0
+    v0.7.0
 
 
-  $ git checkout v0.6.0
+  $ git checkout v0.7.0
 
 
 Devices
@@ -455,5 +456,5 @@ Check the documentation API for  *History* and *Kafka WS* in :doc:`./../componen
 And to a tutorial on how to use the flow, check :doc:`../flow`.
 
 
-.. _flowbroker library : https://github.com/dojot/flowbroker/tree/v0.6.0/lib
+.. _flowbroker library : https://github.com/dojot/flowbroker/tree/master/lib
 

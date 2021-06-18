@@ -747,13 +747,12 @@ msgid "How can I add a new node type to its menu?"
 msgstr "Como eu posso adicionar um novo tipo de nó no menu?"
 
 #: ../../source/faq/faq.rst:415
-#, fuzzy
 msgid ""
 "There is a tutorial on how to add new nodes and two examples of node too, check "
 "the `flowbroker library`_ for more details."
 msgstr ""
 "Há um tutorial sobre como adicionar novos nós e dois exemplos de nós também, "
-"verifique o repositório GitHub flowbroker para mais detalhes."
+"verifique `flowbroker library`_ para mais detalhes."
 
 #: ../../source/faq/faq.rst:420
 msgid "Applications"
