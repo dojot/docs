@@ -188,7 +188,7 @@ msgstr "`Dispositivo(s) definido(s) durante o fluxo (Device(s) defined during th
 #: ../../source/flow.rst:305 ../../source/flow.rst:344
 #: ../../source/flow.rst:917
 msgid "**Device** *(required)*: Select \"The device that triggered the flow\" will make the device that was the entry-point be the end-point of the flow. \"Specific device\" any chosen device wil be the output of the flow and \"a device defined during the flow\" will make a device that the flow selected during the execution the endpoint."
-msgstr "**Dispositivo (Device)** *(obrigatório)*: selecione \"O dispositivo que acionou o fluxo\" fará com que o dispositivo que foi o ponto de entrada seja o ponto final do fluxo. \"Dispositivo específico\" qualquer dispositivo escolhido será a saída do fluxo e \"um dispositivo definido durante o fluxo\" tornará um dispositivo que o fluxo selecionou durante a execução o ponto final."
+msgstr "**Dispositivo (Device)** *(obrigatório)*: selecione \"O dispositivo que acionou o fluxo\" fará com que o dispositivo que foi o ponto de entrada seja o ponto final do fluxo. \"Dispositivo específico\" qualquer dispositivo escolhido será a saída do fluxo e \"um dispositivo definido durante o fluxo\" tornará um dispositivo que o fluxo selecionou durante a execução o *endpoint*."
 
 #: ../../source/flow.rst:310 ../../source/flow.rst:349
 #: ../../source/flow.rst:922 ../../source/flow.rst:950

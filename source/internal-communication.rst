@@ -229,8 +229,7 @@ Keycloak is a service deeply connected to Kong. It is responsible for user
 management, authentication and authorization. As such, it is invoked by
 Kong whenever a request is received by one of its registered endpoints.
 This section will detail how this is performed and how they work together.
-
-Veja mais em `Kong + Keycloak`_  and  `Keycloak Dojot Provider`_.
+See more at `Kong + Keycloak`_  and  `Keycloak Dojot Provider`_.
 
 
 .. _Emitted messages from custom keycloak provider:

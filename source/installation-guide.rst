@@ -66,10 +66,10 @@ Video
 ^^^^^
 
 .. attention::
-   In this bellow video tutorial the dojot version v0.4.2 is used, but the same
-   video is valid for the current version only when use
-   in **localhost** and the required step in `docker-compose dojot`_ about passwords is done.
-   See more at `docker-compose dojot`_.
+   In this video tutorial below, version dojot v0.4.2 was used,
+   but the same video is still valid for the current version if
+   it is for use in **localhost** and the required step in
+   `docker-compose dojot`_ about passwords has been performed.
 
 .. raw:: html
 

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dojot 0.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-18 18:35-0300\n"
-"PO-Revision-Date: 2020-09-18 18:37-0300\n"
+"POT-Creation-Date: 2021-06-21 14:03-0300\n"
+"PO-Revision-Date: 2021-06-21 14:19-0300\n"
 "Last-Translator: \n"
 "Language: pt_BR\n"
 "Language-Team: \n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
-"X-Generator: Poedit 2.4.1\n"
+"X-Generator: Poedit 2.3\n"
 
 #: ../../source/concepts.rst:2
 msgid "Concepts"
@@ -81,43 +81,17 @@ msgstr "Autenticação de usuário"
 
 #: ../../source/concepts.rst:32
 msgid ""
-"All HTTP requests supported by dojot are sent to the API gateway. In order "
-"to control which user should access which endpoints and resources, dojot "
-"makes uses of `JSON Web Token`_ (a useful tool is `jwt.io`_) which encodes "
-"things like (not limited to these):"
+"The dojot platform is integrated with keycloak. Each keycloak realm is "
+"equivalent to one dojot tenant. See more in :doc:`./using-keycloak`."
 msgstr ""
-"Todas as solicitações HTTP suportadas pela dojot são enviadas para o *API "
-"gateway*. Para controlar qual usuário deve acessar quais *endpoints* e "
-"recursos, a dojot utiliza  `JSON Web Token`_ (uma ferramenta útil é o `jwt."
-"io`_) que codifica coisas como (não se limitando a isso):"
+"A plataforma dojot é integrada ao keycloak. Cada domínio keycloak é "
+"equivalente a um *tenant* na dojot. Veja mais em :doc:`./using-keycloak`."
 
-#: ../../source/concepts.rst:37
-msgid "User identity"
-msgstr "Identidade do usuário"
-
-#: ../../source/concepts.rst:38
-msgid "Validation data"
-msgstr "Dados de validação"
-
-#: ../../source/concepts.rst:39
-msgid "Token expiration date"
-msgstr "Data de validade do *token*"
-
-#: ../../source/concepts.rst:41
-msgid ""
-"The component responsible for user authentication is `auth`_. You can find a "
-"tutorial of how to authenticate a user and how to get an access token in :"
-"ref:`Getting access token`."
-msgstr ""
-"O componente responsável pela autenticação do usuário é `auth`_. Você pode "
-"encontrar um tutorial de como autenticar um usuário e obter um token de "
-"acesso em :ref:`Getting access token`."
-
-#: ../../source/concepts.rst:46
+#: ../../source/concepts.rst:36
 msgid "Device authentication"
 msgstr "Autenticação de dispositivo"
 
-#: ../../source/concepts.rst:48
+#: ../../source/concepts.rst:38
 msgid ""
 "Device authentication is based on the use of asymmetric cryptographic keys "
 "and is done through x.509 certificates managed by dojot. For that, it is "
@@ -131,7 +105,7 @@ msgstr ""
 "certificado. A dojot possui um serviço de emissão de certificados onde é "
 "possível obter o certificado para ser instalado no dispositivo."
 
-#: ../../source/concepts.rst:54
+#: ../../source/concepts.rst:44
 msgid ""
 "In addition to the certificate and asymmetric keys, the device must *trust* "
 "the dojot *Certificate Authority*, that is, it is also necessary to install "
@@ -141,27 +115,25 @@ msgstr ""
 "*confiar* na *Autoridade Certificadora* da dojot, ou seja, também é preciso "
 "instalar o certificado raiz da plataforma dojot."
 
-#: ../../source/concepts.rst:58
+#: ../../source/concepts.rst:48
 msgid ""
-"The certificate is requested by the administrator of the tenant to which the "
-"devices are registered. Once the administrator follows the necessary steps "
-"to obtain the certificate, (s)he will have to install the issued certificate "
-"and the root certificate of the dojot on the device. It is important to "
-"emphasize that the certificate has an asymmetric cryptographic key in its "
-"composition, this key is called a public key (which anyone has access to), "
-"while the private key must be installed on the device (a key that only the "
-"device has access to)."
+"The certificate is requested by to which the devices are registered. Once "
+"the administrator follows the necessary steps to obtain the certificate, "
+"(s)he will have to install the issued certificate and the root certificate "
+"of the dojot on the device. It is important to emphasize that the "
+"certificate has an asymmetric cryptographic key in its composition, this key "
+"is called a public key (which anyone has access to), while the private key "
+"must be installed on the device (a key that only the device has access to)."
 msgstr ""
-"O certificado é requisitado pelo administrador do tenant ao qual os "
-"dispositivos estão cadastrados. Uma vez que o administrador siga os passos "
-"necessários para a obtenção do certificado, ele terá que instalar no "
-"dispositivo o certificado emitido e o certificado raiz da dojot. É "
-"importante ressaltar que o certificado possui em sua composição uma chave "
-"criptográfica assimétrica, esta chave é chamada de chave pública (que "
-"qualquer um tem acesso), enquanto que no dispositivo deve ser instalada a "
-"chave privada (chave que só o dispositivo tem acesso)."
+"O certificado é solicitado pelo qual os dispositivos são registrados. Depois "
+"que o administrador seguir as etapas necessárias para obter o certificado, "
+"ele terá que instalar o certificado emitido e o certificado raiz do dojot no "
+"dispositivo. É importante ressaltar que o certificado possui uma chave "
+"criptográfica assimétrica em sua composição, esta chave é chamada de chave "
+"pública (a qual qualquer pessoa tem acesso), enquanto a chave privada deve "
+"estar instalada no aparelho (chave que só o aparelho possui acesso a)."
 
-#: ../../source/concepts.rst:66
+#: ../../source/concepts.rst:56
 msgid ""
 "Once the device contains the private key, the certificate (containing the "
 "public key) and also the root certificate of the dojot, it is possible to "
@@ -173,7 +145,7 @@ msgstr ""
 "estabelecer um canal de comunicação seguro com a plataforma dojot, na qual o "
 "dispositivo é identificado através do seu certificado."
 
-#: ../../source/concepts.rst:71
+#: ../../source/concepts.rst:61
 msgid ""
 "After the secure channel is established, the device is able to publish data "
 "and also receive data as long as it is authorized to do so."
@@ -181,15 +153,15 @@ msgstr ""
 "Após o canal seguro ser estabelecido, o dispositivo é capaz de publicar "
 "dados e também receber dados desde que ele esteja autorizado a isso."
 
-#: ../../source/concepts.rst:74
+#: ../../source/concepts.rst:64
 msgid "Check :doc:`mqtt-tls` for more information on its usage."
 msgstr "Verifique :doc:`mqtt-tls` para mais informações sobre seu uso."
 
-#: ../../source/concepts.rst:77
+#: ../../source/concepts.rst:67
 msgid "Devices and templates"
 msgstr "Dispositivos e modelos (templates)"
 
-#: ../../source/concepts.rst:79
+#: ../../source/concepts.rst:69
 msgid ""
 "In dojot, a device is a digital representation of an actual device or "
 "gateway with one or more sensors or of a virtual one with sensors/attributes "
@@ -203,7 +175,7 @@ msgstr ""
 "dispositivo será chamado simplesmente de \"dispositivo\". Se o dispositivo "
 "real precisar ser referenciado, nós o chamaremos de \"dispositivo físico\"."
 
-#: ../../source/concepts.rst:85
+#: ../../source/concepts.rst:75
 msgid ""
 "Consider, for instance, a physical device with temperature and humidity "
 "sensors; it can be represented in dojot as a device with two attributes (one "
@@ -216,7 +188,7 @@ msgstr ""
 "dispositivo normal ou por seu protocolo de comunicação, por exemplo, "
 "dispositivo MQTT, dispositivo CoAP, etc."
 
-#: ../../source/concepts.rst:90
+#: ../../source/concepts.rst:80
 msgid ""
 "We can also create devices which don’t directly correspond to their physical "
 "counterparts, for instance, we can create one with higher level of "
@@ -230,7 +202,7 @@ msgstr ""
 "valores são inferidos a partir de sensores de temperatura de outros "
 "dispositivos. Esse tipo de dispositivo é chamado de dispositivo virtual."
 
-#: ../../source/concepts.rst:96
+#: ../../source/concepts.rst:86
 msgid ""
 "All devices are created based on one or more *templates*, which can be "
 "thought as a model of a device. As \"model\" we could think of part numbers "
@@ -245,7 +217,7 @@ msgstr ""
 "têm um rótulo (qualquer sequência alfanumérica), uma lista de atributos que "
 "conterão todas as informações emitidas pelo dispositivo."
 
-#: ../../source/concepts.rst:102
+#: ../../source/concepts.rst:92
 msgid ""
 "In fact, templates can represent not only \"device models\", but it can also "
 "abstract a \"class of devices\". For instance, we could have one template to "
@@ -268,7 +240,7 @@ msgstr ""
 "de temperatura que será enviada do dispositivo para um atributo de "
 "\"temperatura\"."
 
-#: ../../source/concepts.rst:112
+#: ../../source/concepts.rst:102
 msgid ""
 "In order to create a device, a user selects which templates are going to "
 "compose this new device. All their attributes are merged together and "
@@ -280,7 +252,7 @@ msgstr ""
 "ele - eles estão fortemente vinculados ao modelo original para que qualquer "
 "atualização de modelo reflita todos os dispositivos associados."
 
-#: ../../source/concepts.rst:117
+#: ../../source/concepts.rst:107
 msgid ""
 "The component responsible for managing devices (both real and virtual) and "
 "templates is `DeviceManager`_ ."
@@ -288,7 +260,7 @@ msgstr ""
 "O componente responsável pelo gerenciamento de dispositivos (reais e "
 "virtuais) e modelos (*templates*) é o `DeviceManager`_."
 
-#: ../../source/concepts.rst:120
+#: ../../source/concepts.rst:110
 msgid ""
 "The `DeviceManager` documentation on GitHub ReadMe explains in more depth "
 "all the available operations. You can find the link in :doc:`./components-"
@@ -298,11 +270,11 @@ msgstr ""
 "detalhes todas as operações disponíveis. Você pode encontrar o link em :doc:"
 "`./components-and-apis`."
 
-#: ../../source/concepts.rst:125
+#: ../../source/concepts.rst:115
 msgid "Flows"
 msgstr "Fluxos (*Flows*)"
 
-#: ../../source/concepts.rst:127
+#: ../../source/concepts.rst:117
 msgid ""
 "A flow is a sequence of blocks that process a particular event or device "
 "message. It contains:"
@@ -310,7 +282,7 @@ msgstr ""
 "Um fluxo é uma sequência de blocos que processa um evento ou mensagem de "
 "dispositivo específica. Contém:"
 
-#: ../../source/concepts.rst:130
+#: ../../source/concepts.rst:120
 msgid ""
 "entry point: a block representing what is the trigger to start a particular "
 "flow;"
@@ -318,7 +290,7 @@ msgstr ""
 "ponto de entrada: um bloco representando qual é o gatilho para iniciar um "
 "fluxo específico;"
 
-#: ../../source/concepts.rst:132
+#: ../../source/concepts.rst:122
 msgid ""
 "processing blocks: a set of blocks that perform operations using the event. "
 "These blocks may or may not use the contents of such event to further "
@@ -333,7 +305,7 @@ msgstr ""
 "atributos de mensagens, executar operações em elementos externos e assim por "
 "diante."
 
-#: ../../source/concepts.rst:137
+#: ../../source/concepts.rst:127
 msgid ""
 "exit point: a block representing where the resulting data should be "
 "forwarded to. This block might be a database, a virtual device, an external "
@@ -343,11 +315,11 @@ msgstr ""
 "ser encaminhados. Esse bloco pode ser um banco de dados, um dispositivo "
 "virtual, um elemento externo e assim por diante."
 
-#: ../../source/concepts.rst:141
+#: ../../source/concepts.rst:131
 msgid "The component responsible for dealing with such flows is `flowbroker`_."
 msgstr "O componente responsável por lidar com esses fluxos é `flowbroker`_."
 
-#: ../../source/concepts.rst:143
+#: ../../source/concepts.rst:133
 msgid "Check :doc:`flow` for more information on its usage."
 msgstr "Verifique :doc:`flow` para mais informações sobre seu uso."
 
@@ -370,3 +342,32 @@ msgstr "Verifique :doc:`flow` para mais informações sobre seu uso."
 #~ msgstr ""
 #~ "A `DeviceManager documentação`_ explica mais detalhadamente todas as "
 #~ "operações disponíveis."
+
+#~ msgid ""
+#~ "All HTTP requests supported by dojot are sent to the API gateway. In "
+#~ "order to control which user should access which endpoints and resources, "
+#~ "dojot makes uses of `JSON Web Token`_ (a useful tool is `jwt.io`_) which "
+#~ "encodes things like (not limited to these):"
+#~ msgstr ""
+#~ "Todas as solicitações HTTP suportadas pela dojot são enviadas para o *API "
+#~ "gateway*. Para controlar qual usuário deve acessar quais *endpoints* e "
+#~ "recursos, a dojot utiliza  `JSON Web Token`_ (uma ferramenta útil é o "
+#~ "`jwt.io`_) que codifica coisas como (não se limitando a isso):"
+
+#~ msgid "User identity"
+#~ msgstr "Identidade do usuário"
+
+#~ msgid "Validation data"
+#~ msgstr "Dados de validação"
+
+#~ msgid "Token expiration date"
+#~ msgstr "Data de validade do *token*"
+
+#~ msgid ""
+#~ "The component responsible for user authentication is `auth`_. You can "
+#~ "find a tutorial of how to authenticate a user and how to get an access "
+#~ "token in :ref:`Getting access token`."
+#~ msgstr ""
+#~ "O componente responsável pela autenticação do usuário é `auth`_. Você "
+#~ "pode encontrar um tutorial de como autenticar um usuário e obter um token "
+#~ "de acesso em :ref:`Getting access token`."

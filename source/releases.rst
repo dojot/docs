@@ -12,7 +12,7 @@ New Services
 
 Keycloak
 ^^^^^^^^
- - The old service has been removed and we now use Keycloak.
+ - The old service `auth` has been removed and we now use Keycloak.
 
 Improvements and fixes
 **********************
