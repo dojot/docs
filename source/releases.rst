@@ -1,39 +1,57 @@
 Release history
 ===============
 
-Eskrima - 2021.05
-------------------
+Full Contact - 2021.07
+----------------------
 
 Services
-++++++++++
++++++++++
+
+New Services
+************
+
+Certificate ACL
+^^^^^^^^^^^^^^^
+      - The certificate-acl is responsible for keeping in memory an association between certificates
+        fingerprint and their owners so that dojot services that needs this information can query it
+        instead of x509-identity-mgmt service, which keeps this information only on disk.
+
+Cert-sidecar
+^^^^^^^^^^^^
+      - The Cert-Sidecar, certificate sidecar, is a service utility for managing
+        x509-identity-mgmt certificates for use with TLS connections.
+
 
 Improvements and fixes
 **********************
 
-V2k-Bridge
-^^^^^^^^^^
+IotAgent MQTT VerneMQ
+^^^^^^^^^^^^^^^^^^^^^
 
-      - Added graceful shutdown and health check for the service
+      - Integration with Cert-sidecar
+      - Integration with Certificate ACL
+
+V2k-Bridge
+~~~~~~~~~~
+
+      - Integration with Cert-sidecar
 
 K2v-Bridge
-^^^^^^^^^^
+~~~~~~~~~~
 
-      - Added graceful shutdown and health check for the service
+      - Integration with Cert-sidecar
 
-Kafka-WS
+Kakfa-ws
 ^^^^^^^^
 
-      - Added graceful shutdown and health check for the service
+      - Improvements in the service's health check
 
-Influxdb-Retriever
-^^^^^^^^^^^^^^^^^^
 
-      - Added graceful shutdown and health check for the service
+X.509 Identity Management
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Influxdb-Storer
-^^^^^^^^^^^^^^^
+      -  Support for external certificates
 
-      - Added graceful shutdown and health check for the service
 
 Others
 ^^^^^^
@@ -51,7 +69,9 @@ Docker-compose
 Ansible-dojot
 *************
 
-    - The docker and containerd version was defined in the kubernetes playbook
-    - Bug fixes in Kafka-WS Readiness and Liveness Probe
-    - Bug fixes in Nginx
     - Documentation improvements
+    - Volumes feature
+    - Labels feature
+    - Docker log files rotation
+    - Update Kubernetes version to 1.19.8
+    - Minor bug fixes

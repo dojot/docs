@@ -68,7 +68,9 @@ Docker Compose
     src="https://www.youtube.com/embed/aZ-Wtcd_Ydw?rel=0" frameborder="0"
     allowfullscreen></iframe><br/>
 
-In this video tutorial above, version v0.4.2 is used, but the same video is valid for the current version, it is only necessary to change to version v0.6.0.
+In this video tutorial above, version v0.4.2 is used, but the same video is valid for the current version, it is only necessary to change to version v0.7.0.
+
+For a guide on how to use **HTTPS** go to this link: https://github.com/dojot/docker-compose/tree/v0.7.0#how-to-secure-dojot-with-nginx-and-lets-encrypt
 
 This document provides instructions on how to create a trivial deployment
 environment on single host for *dojot*, using Compose as the processes
@@ -142,7 +144,7 @@ replaced): ::
 
 For instance: ::
 
-  git checkout v0.6.0 -b v0.6.0
+  git checkout v0.7.0 -b v0.7.0
 
 
 That done, the environment can be brought up by: ::
