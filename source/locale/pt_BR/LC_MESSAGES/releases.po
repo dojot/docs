@@ -89,6 +89,22 @@ msgstr ""
 "Mudanças foram feitas nas bibliotecas dojo-module-nodejs, iot agent-nodejs, "
 "dojot-module-python, dojot-module-java, iotagent-jav para trabalhar com keycloak."
 
+#: ../../source/releases.rst:73
+msgid "Volumes feature"
+msgstr "Recurso de volumes"
+
+#: ../../source/releases.rst:74
+msgid "Labels feature"
+msgstr "Recurso de *Labels*"
+
+#: ../../source/releases.rst:75
+msgid "Docker log files rotation"
+msgstr "Rotação de arquivos de log do Docker"
+
+#: ../../source/releases.rst:76
+msgid "Update Kubernetes version to 1.19.8"
+msgstr "Atualiza a versão do Kubernetes para 1.19.8"
+
 #~ msgid "Added graceful shutdown and health check for the service"
 #~ msgstr "Adicionado graceful shutdown e health check para o serviço"
 

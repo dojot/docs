@@ -37,6 +37,10 @@ Ansible-dojot
 *************
 
     - Documentation improvements
+    - Volumes feature
+    - Labels feature
+    - Docker log files rotation
+    - Update Kubernetes version to 1.19.8
     - Minor bug fixes
 
 Libraries
