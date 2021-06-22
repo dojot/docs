@@ -2,7 +2,7 @@ Release history
 ===============
 
 Full Contact - 2021.07
-------------------
+----------------------
 
 Services
 +++++++++
@@ -12,7 +12,7 @@ New Services
 
 Certificate ACL
 ^^^^^^^^^^^^^^^
-      - The certificate-acl is responsible for keeping in memory an association between certificates'
+      - The certificate-acl is responsible for keeping in memory an association between certificates
         fingerprint and their owners so that dojot services that needs this information can query it
         instead of x509-identity-mgmt service, which keeps this information only on disk.
 
@@ -70,4 +70,8 @@ Ansible-dojot
 *************
 
     - Documentation improvements
+    - Volumes feature
+    - Labels feature
+    - Docker log files rotation
+    - Update Kubernetes version to 1.19.8
     - Minor bug fixes

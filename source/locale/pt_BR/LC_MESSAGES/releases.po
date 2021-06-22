@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dojot 0.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-18 13:02-0300\n"
-"PO-Revision-Date: 2021-06-18 13:29-0300\n"
+"POT-Creation-Date: 2021-06-22 11:00-0300\n"
+"PO-Revision-Date: 2021-06-22 11:02-0300\n"
 "Last-Translator: \n"
 "Language: pt_BR\n"
 "Language-Team: \n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
-"X-Generator: Poedit 2.0.6\n"
+"X-Generator: Poedit 2.3\n"
 
 #: ../../source/releases.rst:2
 msgid "Release history"
@@ -42,9 +42,9 @@ msgstr ""
 #: ../../source/releases.rst:15
 msgid ""
 "The certificate-acl is responsible for keeping in memory an association between "
-"certificates' fingerprint and their owners so that dojot services that needs "
-"this information can query it instead of x509-identity-mgmt service, which keeps "
-"this information only on disk."
+"certificates fingerprint and their owners so that dojot services that needs this "
+"information can query it instead of x509-identity-mgmt service, which keeps this "
+"information only on disk."
 msgstr ""
 "O certificate-acl é responsável por manter na memória uma associação entre a "
 "`fingerprint` dos certificados e seus proprietários para que os serviços dojot "
@@ -109,7 +109,7 @@ msgid "Others"
 msgstr "Outros"
 
 #: ../../source/releases.rst:59 ../../source/releases.rst:67
-#: ../../source/releases.rst:73
+#: ../../source/releases.rst:77
 msgid "Minor bug fixes"
 msgstr "Correção de pequenos bugs"
 
@@ -128,6 +128,22 @@ msgstr ""
 #: ../../source/releases.rst:72
 msgid "Documentation improvements"
 msgstr "Melhorias na documentação"
+
+#: ../../source/releases.rst:73
+msgid "Volumes feature"
+msgstr "Recurso de volumes"
+
+#: ../../source/releases.rst:74
+msgid "Labels feature"
+msgstr "Recurso de *Labels*"
+
+#: ../../source/releases.rst:75
+msgid "Docker log files rotation"
+msgstr "Rotação de arquivos de log do Docker"
+
+#: ../../source/releases.rst:76
+msgid "Update Kubernetes version to 1.19.8"
+msgstr "Atualiza a versão do Kubernetes para 1.19.8"
 
 #~ msgid "Added graceful shutdown and health check for the service"
 #~ msgstr "Adicionado graceful shutdown e health check para o serviço"
