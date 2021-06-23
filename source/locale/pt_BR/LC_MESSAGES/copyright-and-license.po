@@ -29,7 +29,7 @@ msgid ""
 "`Apache Kafka`_, `RabbitMQ`_, `PostgreSQL`_, `MongoDB`_, `Redis`_, `Kong "
 "Gateway`_, `Keycloak`_, and `VerneMQ`_, which have their own licenses."
 msgstr ""
-"A plataforma IoT dojot é baseada em software de código aberto conhecido como  "
+"A plataforma IoT dojot é baseada em softwares de código aberto conhecidos como  "
 "`Apache Kafka`_, `RabbitMQ`_, `PostgreSQL`_, `MongoDB`_, `Redis`_, `Kong "
 "Gateway`_, `Keycloak`_, e `VerneMQ`_, que têm suas próprias licenças."
 
