@@ -62,22 +62,6 @@ Note: The above cores are approximately 3.5 GHz (x86-64)
 Docker Compose
 --------------
 
-Video
-^^^^^
-
-.. attention::
-   In this video tutorial below, version dojot v0.4.2 was used,
-   but the same video is still valid for the current version if
-   it is for use in **localhost** and the required step in
-   `docker-compose dojot`_ about passwords has been performed.
-
-.. raw:: html
-
-    <iframe id="ytplayer" type="text/html" width="720" height="405"
-    src="https://www.youtube.com/embed/aZ-Wtcd_Ydw?rel=0" frameborder="0"
-    allowfullscreen></iframe><br/>
-
-
 Instructions
 ^^^^^^^^^^^^
 
