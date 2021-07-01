@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dojot 0.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-18 13:02-0300\n"
-"PO-Revision-Date: 2021-06-18 13:06-0300\n"
+"POT-Creation-Date: 2021-07-01 13:25-0300\n"
+"PO-Revision-Date: 2021-07-01 13:26-0300\n"
 "Last-Translator: \n"
 "Language: pt_BR\n"
 "Language-Team: \n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
-"X-Generator: Poedit 2.0.6\n"
+"X-Generator: Poedit 2.3\n"
 
 #: ../../source/installation-guide.rst:2
 msgid "Installation Guide"
@@ -190,30 +190,11 @@ msgstr ""
 msgid "Note: The above cores are approximately 3.5 GHz (x86-64)"
 msgstr "Nota: Os núcles acima são de aproximadamente 3.5 GHz (x86-64)"
 
-#: ../../source/installation-guide.rst:63
-#: ../../source/installation-guide.rst:109
+#: ../../source/installation-guide.rst:63 ../../source/installation-guide.rst:99
 msgid "Docker Compose"
 msgstr "Docker Compose"
 
-#: ../../source/installation-guide.rst:71
-msgid ""
-"In this video tutorial above, version v0.4.2 is used, but the same video is "
-"valid for the current version, it is only necessary to change to version "
-"v0.7.0."
-msgstr ""
-"Neste video tutorial acima é utilizada a versão v0.4.2, mas o mesmo video é "
-"válido para a versão atual, apenas é necessário mudar pra a versão v0.7.0"
-
-#: ../../source/installation-guide.rst:73
-msgid ""
-"For a guide on how to use **HTTPS** go to this link: https://github.com/dojot/"
-"docker-compose/tree/v0.7.0#how-to-secure-dojot-with-nginx-and-lets-encrypt"
-msgstr ""
-"Para obter um guia sobre como usar **HTTPS**, acesse este link: https://"
-"github.com/dojot/docker-compose/tree/v0.7.0#how-to-secure-dojot-with-nginx-"
-"and-lets-encrypt"
-
-#: ../../source/installation-guide.rst:75
+#: ../../source/installation-guide.rst:65
 msgid ""
 "This document provides instructions on how to create a trivial deployment "
 "environment on single host for *dojot*, using Compose as the processes "
@@ -223,7 +204,7 @@ msgstr ""
 "trivial da dojot em um único host utilizando o Compose como o processo de "
 "orquestração da plataforma."
 
-#: ../../source/installation-guide.rst:79
+#: ../../source/installation-guide.rst:69
 msgid ""
 "While very simple, this deployment option is best suited to development and "
 "assessment of the platform and should not be used for production environments."
@@ -232,24 +213,24 @@ msgstr ""
 "desenvolvimento e verificação da plataforma dojot, mas não é aconselhável "
 "para ambientes de produção."
 
-#: ../../source/installation-guide.rst:82
+#: ../../source/installation-guide.rst:72
 msgid "This guide has been checked on an Ubuntu 18.04 LTS environment."
 msgstr ""
 "Este guia foi verificado utilizando-se o sistema operacional Ubuntu 18.04 LTS."
 
-#: ../../source/installation-guide.rst:84
+#: ../../source/installation-guide.rst:74
 msgid "The following sections describe all Docker Compose dependencies."
 msgstr "As seções seguintes descrevem todas as dependências do Docker Compose."
 
-#: ../../source/installation-guide.rst:87
+#: ../../source/installation-guide.rst:77
 msgid "Docker Engine"
 msgstr "Docker Engine (motor do Docker)"
 
-#: ../../source/installation-guide.rst:89
+#: ../../source/installation-guide.rst:79
 msgid "This guide has been checked using Docker Engine 19.03"
 msgstr "Este guia foi verificado utilizando o Docker Engine na versão 19.03"
 
-#: ../../source/installation-guide.rst:91
+#: ../../source/installation-guide.rst:81
 msgid ""
 "Up to date information and installation procedures for the Docker Engine can "
 "be found at the project's documentation:"
@@ -257,11 +238,11 @@ msgstr ""
 "Informações atualizadas e procedimentos de instalação para o Docker Engine "
 "podem ser encontrados na documentação do projeto:"
 
-#: ../../source/installation-guide.rst:94
+#: ../../source/installation-guide.rst:84
 msgid "https://docs.docker.com/engine/install/ubuntu/"
 msgstr ""
 
-#: ../../source/installation-guide.rst:98
+#: ../../source/installation-guide.rst:88
 msgid ""
 "An optional step on the installation and configuration process of Docker on "
 "any given machine is the setting of who is eligible for creating/spawning "
@@ -271,7 +252,7 @@ msgstr ""
 "determinado equipamento é definir quem será elegível para criar/iniciar "
 "instâncias do Docker."
 
-#: ../../source/installation-guide.rst:102
+#: ../../source/installation-guide.rst:92
 msgid ""
 "Should the post-installation steps (more specifically the \"Manage Docker as "
 "non-root user\") have not been run, all Docker and Compose commands should be "
@@ -282,16 +263,16 @@ msgstr ""
 "do Docker e do Compose devem ser executados pelo super usuário (root), ou "
 "invocando o sudo."
 
-#: ../../source/installation-guide.rst:106
-#: ../../source/installation-guide.rst:172
+#: ../../source/installation-guide.rst:96
+#: ../../source/installation-guide.rst:170
 msgid "https://docs.docker.com/engine/installation/linux/linux-postinstall/"
 msgstr ""
 
-#: ../../source/installation-guide.rst:111
+#: ../../source/installation-guide.rst:101
 msgid "This guide has been checked using Compose 1.27"
 msgstr "Este guia foi verificado utilizando o Compose na versão 1.27"
 
-#: ../../source/installation-guide.rst:113
+#: ../../source/installation-guide.rst:103
 msgid ""
 "Up to date information and installation procedures for the Compose can be "
 "found at the project's documentation:"
@@ -299,15 +280,15 @@ msgstr ""
 "Informações atualizadas sobre procedimentos de instalação para o Compose "
 "podem ser encontradas na documentação do projeto:"
 
-#: ../../source/installation-guide.rst:116
+#: ../../source/installation-guide.rst:106
 msgid "https://docs.docker.com/compose/install/"
 msgstr ""
 
-#: ../../source/installation-guide.rst:120
+#: ../../source/installation-guide.rst:110
 msgid "Installation"
 msgstr "Instalação"
 
-#: ../../source/installation-guide.rst:122
+#: ../../source/installation-guide.rst:112
 msgid ""
 "To setup the environment, merely clone the deployment repository and run the "
 "commands below."
@@ -315,7 +296,7 @@ msgstr ""
 "Para construir o ambiente, simplesmente clone o repositório e execute os "
 "comandos abaixo."
 
-#: ../../source/installation-guide.rst:125
+#: ../../source/installation-guide.rst:115
 msgid ""
 "The Docker Compose enabled deployment scripts and configuration repository "
 "can be found at:"
@@ -323,15 +304,15 @@ msgstr ""
 "O repositório com os scripts de instalação e configuração do Docker Compose "
 "pode ser encontrados em:"
 
-#: ../../source/installation-guide.rst:128
+#: ../../source/installation-guide.rst:118
 msgid "https://github.com/dojot/docker-compose"
 msgstr ""
 
-#: ../../source/installation-guide.rst:130
+#: ../../source/installation-guide.rst:120
 msgid "or as git clone command: ::"
 msgstr "ou com o comando git clone:"
 
-#: ../../source/installation-guide.rst:137
+#: ../../source/installation-guide.rst:127
 msgid ""
 "Once the repository is properly cloned, select the version to be used by "
 "checking out the appropriate tag (do notice that the tag_name has to be "
@@ -341,15 +322,40 @@ msgstr ""
 "ser utilizada por meio da tag apropriada (note que o tag_name deve ser "
 "substituído): ::"
 
-#: ../../source/installation-guide.rst:145
+#: ../../source/installation-guide.rst:135
 msgid "For instance: ::"
 msgstr "Por exemplo: ::"
 
-#: ../../source/installation-guide.rst:150
+#: ../../source/installation-guide.rst:140
+msgid ""
+"For a guide on how to use **HTTPS** go to this link: https://github.com/dojot/"
+"docker-compose/tree/v0.7.0#how-to-secure-dojot-with-nginx-and-lets-encrypt"
+msgstr ""
+"Para obter um guia sobre como usar **HTTPS**, acesse este link: https://"
+"github.com/dojot/docker-compose/tree/v0.7.0#how-to-secure-dojot-with-nginx-"
+"and-lets-encrypt"
+
+#: ../../source/installation-guide.rst:144
+msgid ""
+"Before running the command below, it is necessary to define your domain or IP "
+"in the ``.env`` file in the variable ``DOJOT_DOMAIN_NAME``."
+msgstr ""
+"Antes de executar o comando abaixo, é necessário definir seu domínio ou IP no "
+"arquivo ``.env`` na variável ``DOJOT_DOMAIN_NAME``."
+
+#: ../../source/installation-guide.rst:146
 msgid "That done, the environment can be brought up by: ::"
 msgstr "Feito isso, o ambiente pode ser iniciado assim: ::"
 
-#: ../../source/installation-guide.rst:157
+#: ../../source/installation-guide.rst:153
+msgid ""
+"To get completely ready, **healthy**, all services in this `docker-compose` "
+"take an average of at least 12 minutes."
+msgstr ""
+"Para ficar completamente pronto, **saudável**, todos os serviços neste "
+"`docker-compose` levam em média pelo menos 12 minutos."
+
+#: ../../source/installation-guide.rst:155
 msgid ""
 "To check individual container status, Docker's commands may be used, for "
 "instance: ::"
@@ -357,24 +363,24 @@ msgstr ""
 "Para verificar o estado de um container individual, comandos do Docker podem "
 "ser utilizados, como por exemplo: ::"
 
-#: ../../source/installation-guide.rst:168
+#: ../../source/installation-guide.rst:166
 msgid "All Docker, Docker Compose commands may need sudo to work."
 msgstr ""
 "Todos os comandos para Docker e Docker Compose podem requerer credenciais de "
 "super usuário (root) ou sudo."
 
-#: ../../source/installation-guide.rst:170
+#: ../../source/installation-guide.rst:168
 msgid ""
 "To allow non-root users to manage Docker, please check Docker's documentation:"
 msgstr ""
 "Para permitir usuários \"não-root\" gerenciar o Docker, confira a "
 "documentação do Docker:"
 
-#: ../../source/installation-guide.rst:175
+#: ../../source/installation-guide.rst:173
 msgid "Volumes"
 msgstr "Volumes"
 
-#: ../../source/installation-guide.rst:177
+#: ../../source/installation-guide.rst:175
 msgid ""
 "When we deploy dojot with the command 'docker-compose up -d' the volumes are "
 "enabled and created by default."
@@ -382,7 +388,7 @@ msgstr ""
 "Quando fazemos o deploy da dojot com o comando 'docker-compose up -d', por "
 "padrão, os volumes são habilitados e criados."
 
-#: ../../source/installation-guide.rst:180
+#: ../../source/installation-guide.rst:178
 msgid ""
 "The volumes of microservices that Dojot uses can be incompatible between "
 "dojot versions. This means that you are unable to use dojot v0.4.x volumes in "
@@ -390,9 +396,9 @@ msgid ""
 msgstr ""
 "Os volumes dos microsserviços que a dojot utiliza podem ser incompatíveis "
 "entre as versões da dojot. Isso significa que não é possível usar os volumes "
-"da dojot v0.4.x na dojot v0.5.x ou acima e vice versa"
+"da dojot v0.4.x na dojot v0.5.x ou acima e vice versa."
 
-#: ../../source/installation-guide.rst:183
+#: ../../source/installation-guide.rst:181
 msgid ""
 "To use different versions of dojot in the same environment, you must first "
 "drop the volumes of the other version."
@@ -400,7 +406,7 @@ msgstr ""
 "Para usar diferentes versões da dojot no mesmo ambiente, você primeiramente "
 "deve derrubar os volumes da outra versão."
 
-#: ../../source/installation-guide.rst:187
+#: ../../source/installation-guide.rst:185
 msgid ""
 "If you drop the dojot volumes you will also lose all data that you have "
 "collected on the platform so far."
@@ -408,7 +414,7 @@ msgstr ""
 "Se você derrubar os volumes da dojot, você perderá totos os dados coletados "
 "na plataforma até o momento."
 
-#: ../../source/installation-guide.rst:190
+#: ../../source/installation-guide.rst:188
 msgid ""
 "To drop the volumes just pass the '-v' parameter in the 'docker-compose down' "
 "command as displayed below: ::"
@@ -416,7 +422,7 @@ msgstr ""
 "Para derrubar os volumes basta passar o parâmetro '-v' no comando 'docker-"
 "compose down' como exibido abaixo:"
 
-#: ../../source/installation-guide.rst:195
+#: ../../source/installation-guide.rst:193
 msgid ""
 "That way volumes and dojot will be dropped and you will be able to deploy a "
 "different dojot version."
@@ -424,11 +430,11 @@ msgstr ""
 "Dessa forma, a dojot e os volumes serão derrubados e você será capaz de fazer "
 "deploy de uma versão diferente da dojot."
 
-#: ../../source/installation-guide.rst:198
+#: ../../source/installation-guide.rst:196
 msgid "Usage"
 msgstr "Utilização"
 
-#: ../../source/installation-guide.rst:200
+#: ../../source/installation-guide.rst:198
 msgid ""
 "The web interface is available at ``http://localhost:8000``. The user is "
 "``admin`` and the password is ``admin``. You also can interact with platform "
@@ -438,7 +444,15 @@ msgstr ""
 "``admin`` e a senha é ``admin``. Você também pode interagir com a plataforma "
 "utilizando o :doc:`./components-and-apis`."
 
-#: ../../source/installation-guide.rst:204
+#: ../../source/installation-guide.rst:203
+msgid ""
+"Always change the ``admin`` user password to a suitable password and keep it "
+"safe."
+msgstr ""
+"Sempre altere a senha do usuário \"admin\" para uma senha adequada e mantenha-"
+"a segura."
+
+#: ../../source/installation-guide.rst:205
 msgid ""
 "Read the :doc:`using-api-interface` and :doc:`using-web-interface` for more "
 "information about how to interact with the platform."
@@ -446,16 +460,16 @@ msgstr ""
 "Leia o :doc:`using-api-interface` e :doc:`using-web-interface` para maiores "
 "informações sobre como interagir com a plataforma dojot."
 
-#: ../../source/installation-guide.rst:208
+#: ../../source/installation-guide.rst:209
 msgid "Kubernetes"
 msgstr "Kubernetes"
 
-#: ../../source/installation-guide.rst:210
+#: ../../source/installation-guide.rst:211
 msgid "For simple installation with kubernetes please check the pdf below."
 msgstr ""
 "Para uma instalação simples com kubernetes por favor, verifique o pdf abaixo."
 
-#: ../../source/installation-guide.rst:212
+#: ../../source/installation-guide.rst:213
 msgid ""
 ":download:`click here to access the dojot installation guide with kubernetes "
 "<pdf/Dojot-Installation-Guide.pdf>`"
@@ -463,7 +477,7 @@ msgstr ""
 ":download:`Clique aqui para acessar o guia de instalação da dojot com "
 "kubernetes <pdf/Dojot-Installation-Guide.pdf>`"
 
-#: ../../source/installation-guide.rst:214
+#: ../../source/installation-guide.rst:215
 msgid ""
 "If you want to install a more robust Dojot that supports up to 100k devices, "
 "check the pdf below."
@@ -471,7 +485,7 @@ msgstr ""
 "Se você deseja instalar uma Dojot mais robusta que suporte até 100k "
 "dispositivos, verifique o pdf abaixo."
 
-#: ../../source/installation-guide.rst:218
+#: ../../source/installation-guide.rst:219
 msgid ""
 "In the 100k environment, dojot does not process or store messages sent by "
 "devices. This environment will only work for load tests and only a few dojot "
@@ -481,7 +495,7 @@ msgstr ""
 "pelos dispositivos. Esse ambiente só irá funcionar para testes de carga e "
 "apenas alguns componentes da dojot estarão disponíveis."
 
-#: ../../source/installation-guide.rst:221
+#: ../../source/installation-guide.rst:222
 msgid ""
 ":download:`click here to access the dojot 100k installation guide with "
 "kubernetes <pdf/Dojot-100k-Installation-Guide.pdf>`"
@@ -489,9 +503,17 @@ msgstr ""
 ":download:`Clique aqui para acessar o guia de instalação da dojot 100k com "
 "kubernetes <pdf/Dojot-100k-Installation-Guide.pdf>`"
 
-#: ../../source/installation-guide.rst:225
+#: ../../source/installation-guide.rst:226
 msgid ""
 "Unfortunately in this tutorial we do not have support for the English "
 "language yet."
 msgstr ""
-"Infelizmente ainda não possuímos suporte para língua inglesa nesse tutorial"
+"Infelizmente ainda não possuímos suporte para língua inglesa nesse tutorial."
+
+#~ msgid ""
+#~ "In this video tutorial above, version v0.4.2 is used, but the same video "
+#~ "is valid for the current version, it is only necessary to change to "
+#~ "version v0.7.0."
+#~ msgstr ""
+#~ "Neste video tutorial acima é utilizada a versão v0.4.2, mas o mesmo video "
+#~ "é válido para a versão atual, apenas é necessário mudar pra a versão v0.7.0"
