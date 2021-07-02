@@ -47,22 +47,13 @@ The IotAgent VerneMQ extends `VerneMQ`_ with some features and services
 for dojot case, see more in `IotAgent-VerneMQ`_.
 This is the **default** Broker MQTT in dojot deployments.
 
-To use IotAgent VerneMQ with TLS, you need to set it by environment variable in the sidecar associated ``CERT_SC_CERTS_HOSTNAMES``.
 
 IotAgent Mosca (Legacy)
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 The IotAgent Mosca uses `Mosca`_ that is a node.js mqtt
-broker,
-see more about this service in `IotAgent-Mosca`_.
+broker, see more about this service in `IotAgent-Mosca`_.
 This is the **not default** Broker MQTT in dojot deployments.
-
-To use IotAgent Mosca with TLS, you need to configure by environment variable:
-
- - MOSCA_TLS_DNS_LIST: Server hostnames/ip,
-   the host to which the device connects externally (separated by a comma).
-   Example: localhost, mydomain.com
-
 
 About using IotAgent VerneMQ or IotAgent Mosca
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -71,19 +62,24 @@ You shouldn't use the two brokers together to avoid port conflicts.
 Use either VerneMQ (default) or Mosca (legacy).
 By default, our deployments are using VerneMQ.
 
-For the Ansible deployment (i.e. Kubernetes) of both brokers:
+**It is necessary to configure the domain in which the broker will be accessible:**
 
- - If you have defined the ``dojot_domain_name`` variable,
-   you don't need to configure the environment variables
-   mentioned in the previous topics.
- - You can disable the *unsecured mode*
-   by changing the ``dojot_insecure_mode`` variable to ``false``.
+For the Ansible deployment:
+
+ - It is necessary to configure the variable ``dojot_domain_name``
+   before starting with the domain or the ip that will be used to
+   communicate with MQTT via TLS.
+
+For the Docker-compose deployment:
+
+ - It is necessary to configure the variable ``DOJOT_DOMAIN_NAME``
+   in the `.env` file. before starting with the domain or the ip that will be used to
+   communicate with MQTT via TLS.
 
 In addition, you can choose between `IotAgent VerneMQ` or `IotAgent Mosca`
 when configuring the Ansible deployment (i.e. Kubernetes).
 In Docker-compose, you need to uncomment and comment the services
 in the ``docker-compose.yml``, there's a commented explanation about that in this file.
-
 
 Check the :doc:`./installation-guide` for more info.
 

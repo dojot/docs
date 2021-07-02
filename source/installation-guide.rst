@@ -62,16 +62,6 @@ Note: The above cores are approximately 3.5 GHz (x86-64)
 Docker Compose
 --------------
 
-.. raw:: html
-
-    <iframe id="ytplayer" type="text/html" width="720" height="405"
-    src="https://www.youtube.com/embed/aZ-Wtcd_Ydw?rel=0" frameborder="0"
-    allowfullscreen></iframe><br/>
-
-In this video tutorial above, version v0.4.2 is used, but the same video is valid for the current version, it is only necessary to change to version v0.7.0.
-
-For a guide on how to use **HTTPS** go to this link: https://github.com/dojot/docker-compose/tree/v0.7.0#how-to-secure-dojot-with-nginx-and-lets-encrypt
-
 This document provides instructions on how to create a trivial deployment
 environment on single host for *dojot*, using Compose as the processes
 orchestration platform.
@@ -146,6 +136,12 @@ For instance: ::
 
   git checkout v0.7.0 -b v0.7.0
 
+.. note::
+   For a guide on how to use **HTTPS** go to this link: https://github.com/dojot/docker-compose/tree/v0.7.0#how-to-secure-dojot-with-nginx-and-lets-encrypt
+
+
+.. attention::
+   Before running the command below, it is necessary to define your domain or IP in the ``.env`` file in the variable ``DOJOT_DOMAIN_NAME``.
 
 That done, the environment can be brought up by: ::
 
@@ -153,6 +149,8 @@ That done, the environment can be brought up by: ::
   # May need sudo to work: sudo docker-compose up -d
   docker-compose up -d
 
+.. note::
+   To get completely ready, **healthy**, all services in this `docker-compose` take an average of at least 12 minutes.
 
 To check individual container status, Docker's commands may be used, for
 instance: ::
@@ -200,6 +198,9 @@ Usage
 The web interface is available at ``http://localhost:8000``. The user is
 ``admin`` and the password is ``admin``. You also can interact with platform
 using the :doc:`./components-and-apis`.
+
+.. attention::
+   Always change the ``admin`` user password to a suitable password and keep it safe.
 
 Read the :doc:`using-api-interface` and :doc:`using-web-interface` for more
 information about how to interact with the platform.
