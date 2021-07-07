@@ -39,6 +39,7 @@ pipenv install
 ```
 
 Enter in the virtual environment:
+
 ```shell
 pipenv shell
 ```

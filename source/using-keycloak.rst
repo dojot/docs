@@ -39,7 +39,7 @@ Recommendations
 Accessing the Administrative Panel
 ----------------------------------
 
-**Replace <url> and <real> for your case**
+**Replace <url> and <realm> for your case**
 
 Using the master realm
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -76,7 +76,7 @@ can select the realm of interest, as highlighted in the image below:
 Accessing an Account Settings
 -----------------------------
 
-**Replace <url> and <real> for your case**
+**Replace <url> and <realm> for your case**
 
 To access your account and make changes like enable 2-factor
 authentication, change password, change email,
@@ -94,7 +94,7 @@ In the left bar menu select the `Users` option and then click `Add User`.
 Now let's create the user, first fill in **Username**. It is recommended to fill in
 the **Email** field and in **Required User Actions** Add the ``Update Password`` and
 ``Verify Email`` options, but for ``Verify Email`` to make sense it is necessary
-to have the SMTP configured for the Realm of interest, if you do not want to
+to have the SMTP configured for the Realm of interest. If you do not want to
 configure SMTP do not put ``Verify Email``. Another point is that if an SMTP
 has not been configured, it is necessary to create a temporary password
 and provide the user, to do so, access the **Credentials** tab after creating in **Save**.
@@ -117,6 +117,8 @@ Access the Administrative panel as explained in the topic :ref:`Accessing the Ad
 In the menu on the left bar select the option **Realm Settings** and
 then select the tab **Email** and make the necessary settings.
 
+
+.. _Setting HTTPs as required by the graphical interface:
 
 Setting HTTPs as required by the graphical interface
 ----------------------------------------------------
@@ -311,7 +313,7 @@ Setting HTTPs as required via environment variables
 
 Note: These values are only applied when the *realm* is created,
 it will not affect existing realms.
-For existing reals see `Configuring HTTPs as required`
+For existing realms see :ref:`Setting HTTPs as required by the graphical interface`.
 
 Docker compose
 ^^^^^^^^^^^^^^
@@ -359,7 +361,7 @@ available in the older libraries, namely `dojot-module-nodejs`_,
 However, it is important to point out that our *deployments* for
 both *docker-compose* and *ansible (kubernetes)* are already prepared
 for this and it is only necessary to configure the passwords as described
-in the topic `Setting Passwords (Required) via environment variables`.
+in the topic :ref:`Setting Passwords (Required) via Environment Variables`.
 
 Configuring new routes, services, resources,on keycloak to use authorization
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

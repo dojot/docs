@@ -37,7 +37,7 @@ Getting access token
 --------------------
 
 All requests must contain a valid access
-token.  See a way to get a token in :ref:`Getting Access Token JWT from *username* and *password*`.
+token. See ways to get a token in :ref:`Getting Access Token JWT`.
 
 To check the token:
 

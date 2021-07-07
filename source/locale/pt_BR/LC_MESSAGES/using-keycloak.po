@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dojot v0.8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-21 14:03-0300\n"
+"POT-Creation-Date: 2021-07-07 16:47-0300\n"
 "PO-Revision-Date: 2021-06-21 14:48-0300\n"
+"Last-Translator: \n"
+"Language: pt_BR\n"
+"Language-Team: \n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: pt_BR\n"
-"X-Generator: Poedit 2.3\n"
 
 #: ../../source/using-keycloak.rst:2
 msgid "Using Keycloak in dojot"
@@ -24,21 +24,21 @@ msgstr "Usando keycloak na dojot"
 
 #: ../../source/using-keycloak.rst:4
 msgid ""
-"As of version v0.8.0, dojot started using `keycloak`_ and removed the use of "
-"the old *auth* service. Keycloak is an open source identity and access "
-"management solution."
+"As of version v0.8.0, dojot started using `keycloak`_ and removed the use"
+" of the old *auth* service. Keycloak is an open source identity and "
+"access management solution."
 msgstr ""
-"A partir da versão v0.8.0, a dojot começou a utilizar o `keycloak`_ e removeu "
-"a utilização do antigo serviço *auth*. Keycloak é uma solução de gerenciamento "
-"de acesso e identidade de código aberto."
+"A partir da versão v0.8.0, a dojot começou a utilizar o `keycloak`_ e "
+"removeu a utilização do antigo serviço *auth*. Keycloak é uma solução de "
+"gerenciamento de acesso e identidade de código aberto."
 
 #: ../../source/using-keycloak.rst:8
 msgid ""
-"In this tutorial, we will explain some important points of setting up and "
-"using keycloak with dojot."
+"In this tutorial, we will explain some important points of setting up and"
+" using keycloak with dojot."
 msgstr ""
-"Neste tutorial, vamos explicar alguns pontos importantes de configuração e uso "
-"do keycloak com a dojot."
+"Neste tutorial, vamos explicar alguns pontos importantes de configuração "
+"e uso do keycloak com a dojot."
 
 #: ../../source/using-keycloak.rst:12
 msgid "Audience: users and administrators"
@@ -66,11 +66,12 @@ msgstr "Requerido"
 
 #: ../../source/using-keycloak.rst:25
 msgid ""
-"If you are starting a *deployment*, installing a dojot, see :ref:`Setting "
-"Passwords (Required) via Environment Variables`."
+"If you are starting a *deployment*, installing a dojot, see :ref:`Setting"
+" Passwords (Required) via Environment Variables`."
 msgstr ""
-"Caso você esteja inicializando um *deployment*, instalando uma dojot, veja o "
-"tópico :ref:`Setting Passwords (Required) via Environment Variables`."
+"Caso você esteja inicializando um *deployment*, instalando uma dojot, "
+"veja o tópico :ref:`Setting Passwords (Required) via Environment "
+"Variables`."
 
 #: ../../source/using-keycloak.rst:28
 msgid "Recommendations"
@@ -82,12 +83,13 @@ msgstr "Sempre utilize HTTPs"
 
 #: ../../source/using-keycloak.rst:31
 msgid ""
-"Use strong passwords, by default the minimum required are passwords with 8 "
-"characters, one number, one uppercase letter, one lowercase letter and one "
-"special character."
+"Use strong passwords, by default the minimum required are passwords with "
+"8 characters, one number, one uppercase letter, one lowercase letter and "
+"one special character."
 msgstr ""
-"Use senhas fortes, por default o mínimo exigido são senhas com 8 caracteres, "
-"um número, uma letra maiúscula, uma letra minúscula e um caracter especial"
+"Use senhas fortes, por default o mínimo exigido são senhas com 8 "
+"caracteres, um número, uma letra maiúscula, uma letra minúscula e um "
+"caracter especial"
 
 #: ../../source/using-keycloak.rst:34
 msgid "Configure SMTP"
@@ -98,7 +100,7 @@ msgid "Accessing the Administrative Panel"
 msgstr "Acessando o Painel Administrativo"
 
 #: ../../source/using-keycloak.rst:42 ../../source/using-keycloak.rst:79
-msgid "**Replace <url> and <real> for your case**"
+msgid "**Replace <url> and <realm> for your case**"
 msgstr "**Substitua <url> e <realm> para seu caso**"
 
 #: ../../source/using-keycloak.rst:45
@@ -111,11 +113,12 @@ msgstr "Só é possível acessar esta página utilizando **localhost** ou **http
 
 #: ../../source/using-keycloak.rst:50
 msgid ""
-"Using a user who belongs to the Realm master and can control all realms, go to "
-"``<url>/auth/``, eg ``https://dojot.com.br/auth``."
+"Using a user who belongs to the Realm master and can control all realms, "
+"go to ``<url>/auth/``, eg ``https://dojot.com.br/auth``."
 msgstr ""
-"Para usar um usuário que pertence ao Realm master e pode controlar todos os "
-"realms, acesse `<url>/auth/`` , por exemplo  ``https://dojot.com.br/auth``."
+"Para usar um usuário que pertence ao Realm master e pode controlar todos "
+"os realms, acesse `<url>/auth/`` , por exemplo  "
+"``https://dojot.com.br/auth``."
 
 #: ../../source/using-keycloak.rst:55
 msgid "Using a user with role of *admin*"
@@ -123,13 +126,13 @@ msgstr "Utilizando um usuário com papel (*role*) de *admin*"
 
 #: ../../source/using-keycloak.rst:57
 msgid ""
-"Using a user who belongs to a realm can only control this realm, go to ``<url>/"
-"auth/admin/<realm>/console``, eg ``https://dojot.com.br/auth/admin/admin/"
-"console``."
+"Using a user who belongs to a realm can only control this realm, go to "
+"``<url>/auth/admin/<realm>/console``, eg "
+"``https://dojot.com.br/auth/admin/admin/console``."
 msgstr ""
-"Para usar um usuário que pertence a um realm  pode controlar somente este "
-"realm, acesse ``<url>/auth/admin/<realm>/console`` , por exemplo, ``https://"
-"dojot.com.br/auth/admin/admin/console``."
+"Para usar um usuário que pertence a um realm  pode controlar somente este"
+" realm, acesse ``<url>/auth/admin/<realm>/console`` , por exemplo, "
+"``https://dojot.com.br/auth/admin/admin/console``."
 
 #: ../../source/using-keycloak.rst:62
 msgid "Checking selected realm"
@@ -137,15 +140,15 @@ msgstr "Verificando realm selecionado "
 
 #: ../../source/using-keycloak.rst:64
 msgid ""
-"After accessing the keycloak administrative interface using one of the paths "
-"above, make sure you have the realm you want to use selected, in the left "
-"sidebar you can select the realm of interest, as highlighted in the image "
-"below:"
+"After accessing the keycloak administrative interface using one of the "
+"paths above, make sure you have the realm you want to use selected, in "
+"the left sidebar you can select the realm of interest, as highlighted in "
+"the image below:"
 msgstr ""
-"Após acessar a interface administrativa do keycloak utilizando um dos caminhos "
-"acima certifique que você está com o realm que quer utilizar selecionado, na "
-"barra lateral esquerda é possível selecionar o realm de interesse, como "
-"destacado na imagem abaixo:"
+"Após acessar a interface administrativa do keycloak utilizando um dos "
+"caminhos acima certifique que você está com o realm que quer utilizar "
+"selecionado, na barra lateral esquerda é possível selecionar o realm de "
+"interesse, como destacado na imagem abaixo:"
 
 #: ../../source/using-keycloak.rst:77
 msgid "Accessing an Account Settings"
@@ -153,75 +156,70 @@ msgstr "Acessando Configurações de uma Conta "
 
 #: ../../source/using-keycloak.rst:81
 msgid ""
-"To access your account and make changes like enable 2-factor authentication, "
-"change password, change email, go to the ``<url>/auth/realms/<realm>/"
-"account``, eg ``https://dojot.com.br/auth/realms/admin/account``."
+"To access your account and make changes like enable 2-factor "
+"authentication, change password, change email, go to the "
+"``<url>/auth/realms/<realm>/account``, eg "
+"``https://dojot.com.br/auth/realms/admin/account``."
 msgstr ""
-"Para acessar sua conta  e fazer mudanças como habilitar autenticação de 2 "
-"fatores, mudar senha, mudar e-mail, acesse o link ``<url>/auth/realms/<realm>/"
-"account``, por exemplo, ``https://dojot.com.br/auth/realms/admin/account``"
+"Para acessar sua conta  e fazer mudanças como habilitar autenticação de 2"
+" fatores, mudar senha, mudar e-mail, acesse o link "
+"``<url>/auth/realms/<realm>/account``, por exemplo, "
+"``https://dojot.com.br/auth/realms/admin/account``"
 
 #: ../../source/using-keycloak.rst:88
 msgid "Creating a new user"
 msgstr "Criando um novo usuário"
 
 #: ../../source/using-keycloak.rst:90 ../../source/using-keycloak.rst:115
-#: ../../source/using-keycloak.rst:127 ../../source/using-keycloak.rst:170
+#: ../../source/using-keycloak.rst:129 ../../source/using-keycloak.rst:172
 msgid ""
-"Access the Administrative panel as explained in the topic :ref:`Accessing the "
-"Administrative Panel`."
+"Access the Administrative panel as explained in the topic :ref:`Accessing"
+" the Administrative Panel`."
 msgstr ""
-"Acesse o painel administrativo como explicado no tópico :ref:`Accessing the "
-"Administrative Panel`."
+"Acesse o painel administrativo como explicado no tópico :ref:`Accessing "
+"the Administrative Panel`."
 
 #: ../../source/using-keycloak.rst:92
 msgid "In the left bar menu select the `Users` option and then click `Add User`."
 msgstr ""
-"No menu da barra à esquerda selecione a opção `Users` e em seguida clique em "
-"`Add User`."
+"No menu da barra à esquerda selecione a opção `Users` e em seguida clique"
+" em `Add User`."
 
 #: ../../source/using-keycloak.rst:94
 msgid ""
-"Now let's create the user, first fill in **Username**. It is recommended to "
-"fill in the **Email** field and in **Required User Actions** Add the ``Update "
-"Password`` and ``Verify Email`` options, but for ``Verify Email`` to make "
-"sense it is necessary to have the SMTP configured for the Realm of interest, "
-"if you do not want to configure SMTP do not put ``Verify Email``. Another "
-"point is that if an SMTP has not been configured, it is necessary to create a "
-"temporary password and provide the user, to do so, access the **Credentials** "
-"tab after creating in **Save**."
+"Now let's create the user, first fill in **Username**. It is recommended "
+"to fill in the **Email** field and in **Required User Actions** Add the "
+"``Update Password`` and ``Verify Email`` options, but for ``Verify "
+"Email`` to make sense it is necessary to have the SMTP configured for the"
+" Realm of interest. If you do not want to configure SMTP do not put "
+"``Verify Email``. Another point is that if an SMTP has not been "
+"configured, it is necessary to create a temporary password and provide "
+"the user, to do so, access the **Credentials** tab after creating in "
+"**Save**."
 msgstr ""
-"Agora vamos criar o usuário, primeiramente preenchemos **Username**. É "
-"recomendado preencher o campo **Email**  e em **Required User Actions** "
-"Adicionar as opções `Update Password`` e ``Verify Email``, porém para que o "
-"``Verify Email`` faça sentido é necessário ter configurado o SMTP para o Realm "
-"de interesse, caso não pretenda configurar o SMTP não coloque ``Verify "
-"Email``.  Outro ponto é que caso não tenha sido configurado um SMTP, é "
-"necessário criar uma senha temporária e fornecer ao usuário, para tal acesse a "
-"aba `Credentials` após criar em **Save**."
 
 #: ../../source/using-keycloak.rst:102
 msgid ""
 "Furthermore, it is important to define the **Role** of this user in your "
-"Realm, without this it cannot be used. After clicking ``Save`` one of the tabs "
-"will be **Role Mapping**, click on it to define the role of the user. In the "
-"**Role Mapping** tab in the **Available Roles** box there will be the "
-"``admin`` and ``user`` options (if no other *Roles* are created). A user with "
-"role ``admin`` has access to all APIs and also the Administrator Panel of your "
-"realm while a user with Role ``user`` has access to the API but cannot access "
-"the Administrator Panel. Select the Role that fits this new user and add it to "
-"the **Assigned Roles** Box."
+"Realm, without this it cannot be used. After clicking ``Save`` one of the"
+" tabs will be **Role Mapping**, click on it to define the role of the "
+"user. In the **Role Mapping** tab in the **Available Roles** box there "
+"will be the ``admin`` and ``user`` options (if no other *Roles* are "
+"created). A user with role ``admin`` has access to all APIs and also the "
+"Administrator Panel of your realm while a user with Role ``user`` has "
+"access to the API but cannot access the Administrator Panel. Select the "
+"Role that fits this new user and add it to the **Assigned Roles** Box."
 msgstr ""
-"Além disso é importante definir o **papel**(**role**) deste usuário no seu "
-"Realm, sem isso ele não poderá ser utilizado. Após clicar em ` `Save` ` uma "
-"das abas será a **Role Mapping**, clique sobre ela para definir o papel do "
-"usuário. Na aba **Role Mapping** na caixa **Available Roles** haverá as opções "
-"` `admin` ` e ` `user` ` (caso não forem criados outros *Roles*) . Um usuário "
-"com o role ` `admin` ` tem acesso a todas as APIs e também ao Painel "
-"Administrativo do seu realm enquanto que um usuário com o Role  ` `user` ` tem "
-"acesso a API, mas não pode acessar o painel administrativo. Selecione o "
-"**Role** (Papel) que se encaixa a esse novo usuário e o adicione na Caixa "
-"**Assigned Roles**."
+"Além disso é importante definir o **papel**(**role**) deste usuário no "
+"seu Realm, sem isso ele não poderá ser utilizado. Após clicar em ` `Save`"
+" ` uma das abas será a **Role Mapping**, clique sobre ela para definir o "
+"papel do usuário. Na aba **Role Mapping** na caixa **Available Roles** "
+"haverá as opções ` `admin` ` e ` `user` ` (caso não forem criados outros "
+"*Roles*) . Um usuário com o role ` `admin` ` tem acesso a todas as APIs e"
+" também ao Painel Administrativo do seu realm enquanto que um usuário com"
+" o Role  ` `user` ` tem acesso a API, mas não pode acessar o painel "
+"administrativo. Selecione o **Role** (Papel) que se encaixa a esse novo "
+"usuário e o adicione na Caixa **Assigned Roles**."
 
 #: ../../source/using-keycloak.rst:113
 msgid "Configuring SMTP through the graphical interface"
@@ -229,396 +227,444 @@ msgstr "Configurando SMTP pela interface gráfica"
 
 #: ../../source/using-keycloak.rst:117
 msgid ""
-"In the menu on the left bar select the option **Realm Settings** and then "
-"select the tab **Email** and make the necessary settings."
+"In the menu on the left bar select the option **Realm Settings** and then"
+" select the tab **Email** and make the necessary settings."
 msgstr ""
-"No menu da barra à esquerda selecione a opção **Realm Settings** e em seguida "
-"selecione a aba **Email** e faça as configurações necessárias."
+"No menu da barra à esquerda selecione a opção **Realm Settings** e em "
+"seguida selecione a aba **Email** e faça as configurações necessárias."
 
-#: ../../source/using-keycloak.rst:122
+#: ../../source/using-keycloak.rst:124
 msgid "Setting HTTPs as required by the graphical interface"
 msgstr "Configurando HTTPs como requerido pela interface gráfica"
 
-#: ../../source/using-keycloak.rst:125
+#: ../../source/using-keycloak.rst:127
 msgid "You must be using a *deployment* with HTTPs configured."
 msgstr "Você deve estar utilizando um *deployment* com HTTPs configurado. "
 
-#: ../../source/using-keycloak.rst:130
+#: ../../source/using-keycloak.rst:132
 msgid ""
-"In the menu on the left bar select the **Realm Settings** option and then "
-"select the **Login** tab, under **Require SSL** select the ``external "
+"In the menu on the left bar select the **Realm Settings** option and then"
+" select the **Login** tab, under **Require SSL** select the ``external "
 "requests`` option and click **Save**."
 msgstr ""
-"No menu da barra à esquerda selecione a opção **Realm Settings** e em seguida "
-"selecione a aba  **Login**, em **Require SSL** selecione a opção  ``external "
-"requests`` e clique em `Save`"
+"No menu da barra à esquerda selecione a opção **Realm Settings** e em "
+"seguida selecione a aba  **Login**, em **Require SSL** selecione a opção"
+"  ``external requests`` e clique em `Save`"
 
-#: ../../source/using-keycloak.rst:136
+#: ../../source/using-keycloak.rst:138
 msgid "Creating a new realm (tenant in the dojot)"
 msgstr "Criando um novo realm (tenant na dojot)"
 
-#: ../../source/using-keycloak.rst:138
+#: ../../source/using-keycloak.rst:140
 msgid ""
-"Access the administrative panel as explained in the topic :ref:`Accessing the "
-"Administrative Panel`, but necessarily **using the master realm**."
+"Access the administrative panel as explained in the topic :ref:`Accessing"
+" the Administrative Panel`, but necessarily **using the master realm**."
 msgstr ""
-"Acesse o painel administrativo como explicado no tópico :ref:`Accessing the "
-"Administrative Panel`, porém necessariamente **utilizando o realm master**."
+"Acesse o painel administrativo como explicado no tópico :ref:`Accessing "
+"the Administrative Panel`, porém necessariamente **utilizando o realm "
+"master**."
 
-#: ../../source/using-keycloak.rst:141
+#: ../../source/using-keycloak.rst:143
 msgid ""
-"On the left side menu, hover over the current Realm name and an **Add realm** "
-"option will appear, click on it."
+"On the left side menu, hover over the current Realm name and an **Add "
+"realm** option will appear, click on it."
 msgstr ""
-"No menu lateral à esquerda, passe o mouse em cima do nome do Realm corrente e "
-"irá aparecer uma opção **Add realm**, clique sobre ela. "
+"No menu lateral à esquerda, passe o mouse em cima do nome do Realm "
+"corrente e irá aparecer uma opção **Add realm**, clique sobre ela. "
 
-#: ../../source/using-keycloak.rst:145
+#: ../../source/using-keycloak.rst:147
 msgid ""
-"The realm created here will be based on the file passed as the base for the "
-"keycloak, see more in :ref:`Base keycloak configuration file`."
+"The realm created here will be based on the file passed as the base for "
+"the keycloak, see more in :ref:`Base keycloak configuration file`."
 msgstr ""
-"O realm criado aqui será baseado no arquivo passado como base para o keycloak, "
-"veja mais em :ref:`Base keycloak configuration file`."
+"O realm criado aqui será baseado no arquivo passado como base para o "
+"keycloak, veja mais em :ref:`Base keycloak configuration file`."
 
-#: ../../source/using-keycloak.rst:151
+#: ../../source/using-keycloak.rst:153
 msgid "Getting Access Token (Access Token JWT)"
 msgstr "Obtendo Token de Acesso (Access Token JWT)"
 
-#: ../../source/using-keycloak.rst:156
+#: ../../source/using-keycloak.rst:158
 msgid "From *username* and  *password* in a realm **(Not recommended)**"
 msgstr "A partir de **username** e uma **senha** em um realm (Não recomendado)"
 
-#: ../../source/using-keycloak.rst:158
+#: ../../source/using-keycloak.rst:160
 msgid ""
-"We have a *client* created in keycloak configured and disabled with the name "
-"``dev-test-cli`` which allows getting a JWT from a login and password in a "
-"realm."
+"We have a *client* created in keycloak configured and disabled with the "
+"name ``dev-test-cli`` which allows getting a JWT from a login and "
+"password in a realm."
 msgstr ""
-"Nós temos um *cliente* criado no keycloak configurado e desabilitado com o "
-"nome ``dev-test-cli`` que permite obter um JWT a partir de um login e senha em "
-"um realm. "
+"Nós temos um *cliente* criado no keycloak configurado e desabilitado com "
+"o nome ``dev-test-cli`` que permite obter um JWT a partir de um login e "
+"senha em um realm. "
 
-#: ../../source/using-keycloak.rst:162
+#: ../../source/using-keycloak.rst:164
 msgid ""
-"For security reasons it is disabled by default, after use it is recommended to "
-"disable it again."
+"For security reasons it is disabled by default, after use it is "
+"recommended to disable it again."
 msgstr ""
 "Por motivos de segurança ele é desativado por padrão, após o uso, é "
 "recomendável desativá-lo novamente."
 
-#: ../../source/using-keycloak.rst:168
+#: ../../source/using-keycloak.rst:170
 msgid "How to enable and disable client ``dev-test-cli``"
 msgstr "Como habilitar e desabilitar o *cliente*  ``dev-test-cli``"
 
-#: ../../source/using-keycloak.rst:172
+#: ../../source/using-keycloak.rst:174
 msgid ""
 "Select the option **Clients** in the left side menu, it will load a new "
-"screen, in it there will be the list of clients. Look for the ``dev-test-cli`` "
-"client, click on it, it will open a new screen with several options, one of "
-"them will be the **Enabled** option which will have the value ``OFF`` change "
-"to the value ``ON``, go to the end of the page and click ``Save``."
+"screen, in it there will be the list of clients. Look for the ``dev-test-"
+"cli`` client, click on it, it will open a new screen with several "
+"options, one of them will be the **Enabled** option which will have the "
+"value ``OFF`` change to the value ``ON``, go to the end of the page and "
+"click ``Save``."
 msgstr ""
-"Selecione no menu lateral esquerdo a opção**Clients** , irá carregar uma nova "
-"tela, nela haverá a lista de clientes. Procure pelo cliente ``dev-test-cli``, "
-"clique sobre ele, abrirá uma nova tela com várias opções, uma delas será a "
-"opção**Enabled** que estará com o valor ``OFF`` mude para o valor ``ON`, vá "
-"até o final da página e clique em ``Save``."
+"Selecione no menu lateral esquerdo a opção**Clients** , irá carregar uma "
+"nova tela, nela haverá a lista de clientes. Procure pelo cliente ``dev-"
+"test-cli``, clique sobre ele, abrirá uma nova tela com várias opções, uma"
+" delas será a opção**Enabled** que estará com o valor ``OFF`` mude para o"
+" valor ``ON`, vá até o final da página e clique em ``Save``."
 
-#: ../../source/using-keycloak.rst:180
+#: ../../source/using-keycloak.rst:182
 msgid ""
-"Remember to disable this client after use by setting the **Enabled** value to "
-"``OFF`` and saving, for security reasons."
+"Remember to disable this client after use by setting the **Enabled** "
+"value to ``OFF`` and saving, for security reasons."
 msgstr ""
 "Lembre-se de desabilitar este cliente após utilização voltando o valor "
-"**Enabled** para valor ``OFF``e salvando, por questões de segurança."
+"**Enabled** para valor ``OFF`` e salvando, por questões de segurança."
 
-#: ../../source/using-keycloak.rst:184
+#: ../../source/using-keycloak.rst:186
 msgid ""
 "To use the command below to obtain the JWT you must already have access "
-"through the graphical interface the keycloak once and defined a password. If "
-"you haven't done this yet, please follow the previous topic :ref:`Accessing an "
-"Account Settings` before continuing. Also it is necessary to have `curl`_ and "
-"`jq`_. In Debian-based Linux distributions you can run: ``sudo apt-get install "
-"curl jq``"
+"through the graphical interface the keycloak once and defined a password."
+" If you haven't done this yet, please follow the previous topic "
+":ref:`Accessing an Account Settings` before continuing. Also it is "
+"necessary to have `curl`_ and `jq`_. In Debian-based Linux distributions "
+"you can run: ``sudo apt-get install curl jq``"
 msgstr ""
-"Para utilizar o comando abaixo  de obtenção do JWT você já deve ter acesso "
-"pela interface gráfica o keycloak uma vez e definido uma senha. Caso você não "
-"tenha feito isso ainda, siga o tópico anterior:ref:`Accessing an Account "
-"Settings` antes de continuar. Além disso é necessário ter `curl`_ e `jq`_. In "
-"Debian-based Linux distributions you can run: ``sudo apt-get install curl jq``"
+"Para utilizar o comando abaixo  de obtenção do JWT você já deve ter "
+"acesso pela interface gráfica o keycloak uma vez e definido uma senha. "
+"Caso você não tenha feito isso ainda, siga o tópico "
+"anterior:ref:`Accessing an Account Settings` antes de continuar. Além "
+"disso é necessário ter `curl`_ e `jq`_. In Debian-based Linux "
+"distributions you can run: ``sudo apt-get install curl jq``"
 
-#: ../../source/using-keycloak.rst:191
+#: ../../source/using-keycloak.rst:193
 msgid ""
-"After enabling the ``dev-test-cli`` client it will be possible to obtain a "
-"token using login and password. As in the curl command below using the "
-"keycloak API, change the values of ``DOJOT_URL``, ``REALM``, ``USERNAME`` and "
-"``PASSWORD`` according to your case:"
+"After enabling the ``dev-test-cli`` client it will be possible to obtain "
+"a token using login and password. As in the curl command below using the "
+"keycloak API, change the values of ``DOJOT_URL``, ``REALM``, ``USERNAME``"
+" and ``PASSWORD`` according to your case:"
 msgstr ""
 "Após habilitar o cliente  ``dev-test-cli`` será possível obter um token "
-"utilizando login e senha. Como no comando curl abaixo utilizando a API do "
-"keycloak, altere os valores de ``DOJOT_URL``,``REALM``, ``USERNAME`` e "
+"utilizando login e senha. Como no comando curl abaixo utilizando a API do"
+" keycloak, altere os valores de ``DOJOT_URL``, ``REALM``, ``USERNAME`` e "
 "``PASSWORD`` de acordo com o seu caso :"
 
-#: ../../source/using-keycloak.rst:210
+#: ../../source/using-keycloak.rst:212
 msgid ""
-"If everything works out, the token will be available in the JWT variable, to "
-"get the variable's value use the command below:"
+"If everything works out, the token will be available in the JWT variable,"
+" to get the variable's value use the command below:"
 msgstr ""
-"Se tudo der certo o  token estará disponível na variável JWT, para checar o "
-"valor da variável utilize o comando abaixo: "
+"Se tudo der certo o  token estará disponível na variável JWT, para checar"
+" o valor da variável utilize o comando abaixo: "
 
-#: ../../source/using-keycloak.rst:218
+#: ../../source/using-keycloak.rst:220
 msgid ""
-"The lifetime of this access token is not very long, this process returns a "
-"*refresh token* which can be used to get a new access token."
+"The lifetime of this access token is not very long, this process returns "
+"a *refresh token* which can be used to get a new access token."
 msgstr ""
 "O tempo de vida deste token de acesso não é muito grande,  este processo "
-"retorna um *refresh token* que é pode ser utilizado para obter um novo access "
-"token. "
+"retorna um *refresh token* que é pode ser utilizado para obter um novo "
+"access token. "
 
-#: ../../source/using-keycloak.rst:222
+#: ../../source/using-keycloak.rst:224
 msgid "For a backend application"
 msgstr "Para uma aplicação backend"
 
-#: ../../source/using-keycloak.rst:224
+#: ../../source/using-keycloak.rst:226
 msgid ""
-"To use the Access Token in a backend application it is recommended to create a "
-"new `Client` for the realm of interest or the realms of interest, remember to "
-"configure them in **Client Protocol** with the value ``openid-connect``, "
-"**Access Type** with the value ``Confidential`` and using the `Secret` "
-"obtained from the **Credentials** tab, there are several possible "
-"configurations. It is important to follow the currently established security "
-"standards for OAuth 2 and OpenIDConnect. There are several keycloak libraries "
-"in various languages that can help with this development."
+"To use the Access Token in a backend application it is recommended to "
+"create a new `Client` for the realm of interest or the realms of "
+"interest, remember to configure them in **Client Protocol** with the "
+"value ``openid-connect``, **Access Type** with the value ``Confidential``"
+" and using the `Secret` obtained from the **Credentials** tab, there are "
+"several possible configurations. It is important to follow the currently "
+"established security standards for OAuth 2 and OpenIDConnect. There are "
+"several keycloak libraries in various languages that can help with this "
+"development."
 msgstr ""
-"Para utilizar o Token de Acesso em uma aplicação backend recomenda-se criar um "
-"novo `Cliente` para o realm the interesse ou os realms de interesse, lembre-se "
-"de configuração-los em **Client Protocol** com o valor ``openid-connect``, "
-"**Access Type** com o valor ``Confidential``  e utilizar o `Secret` obtido na "
-"aba **Credentials**, existem várias maneiras de configurações possíveis.  É "
-"importante seguir os padrões estabelecidos de segurança atualmente para o "
-"OAuth 2 e o OpenIDConnect. Há várias bibliotecas para keycloak em várias "
-"linguagens que podem auxiliar neste desenvolvimento. "
+"Para utilizar o Token de Acesso em uma aplicação backend recomenda-se "
+"criar um novo `Cliente` para o realm the interesse ou os realms de "
+"interesse, lembre-se de configuração-los em **Client Protocol** com o "
+"valor ``openid-connect``, **Access Type** com o valor ``Confidential``  e"
+" utilizar o `Secret` obtido na aba **Credentials**, existem várias "
+"maneiras de configurações possíveis.  É importante seguir os padrões "
+"estabelecidos de segurança atualmente para o OAuth 2 e o OpenIDConnect. "
+"Há várias bibliotecas para keycloak em várias linguagens que podem "
+"auxiliar neste desenvolvimento. "
 
-#: ../../source/using-keycloak.rst:237
+#: ../../source/using-keycloak.rst:239
 msgid "For a frontend application"
 msgstr "Para uma aplicação frontend "
 
-#: ../../source/using-keycloak.rst:239
+#: ../../source/using-keycloak.rst:241
 msgid ""
 "We have a microservice in order to help the development to ensure more "
-"security for using keycloak with dojot, see more about `Backstage`_. You can "
-"use keycloak directly with `PKCE`_ and OpenID Connect as well. It is important "
-"to follow  the currently established security standards for OAuth 2 and "
-"OpenIDConnect."
+"security for using keycloak with dojot, see more about `Backstage`_. You "
+"can use keycloak directly with `PKCE`_ and OpenID Connect as well. It is "
+"important to follow  the currently established security standards for "
+"OAuth 2 and OpenIDConnect."
 msgstr ""
 "Nós temos um microsserviço com o intuito de ajudar no desenvolvimento a "
-"assegurar mais segurança para utilização do keycloak com a dojot, veja mais "
-"sobre em `Backstage`_. Há como utilizar o keycloak diretamente com  `PKCE`_e "
-"OpenID Connect também. É importante seguir os padrões estabelecidos de "
-"segurança atualmente para o OAuth 2 e o OpenIDConnect."
+"assegurar mais segurança para utilização do keycloak com a dojot, veja "
+"mais sobre em `Backstage`_. Há como utilizar o keycloak diretamente com  "
+"`PKCE`_e OpenID Connect também. É importante seguir os padrões "
+"estabelecidos de segurança atualmente para o OAuth 2 e o OpenIDConnect."
 
-#: ../../source/using-keycloak.rst:246
+#: ../../source/using-keycloak.rst:248
 msgid "For a mobile application"
 msgstr "Para uma aplicação mobile"
 
-#: ../../source/using-keycloak.rst:248
+#: ../../source/using-keycloak.rst:250
 msgid ""
 "We don't have use cases, but it's important to follow the currently "
-"established security standards for OAuth 2 and OpenIDConnect. Some starting "
-"points to pay attention to would be to create a new Client with the Access "
-"Type `public` and use `PKCE`_."
+"established security standards for OAuth 2 and OpenIDConnect. Some "
+"starting points to pay attention to would be to create a new Client with "
+"the Access Type `public` and use `PKCE`_."
 msgstr ""
-"Nós não temos casos de uso, mas é importante seguir os padrões estabelecidos "
-"de segurança atualmente para o OAuth 2 e o OpenIDConnect. Alguns pontos "
-"iniciais seriam para prestar a atenção seriam criar um Cliente novo com o "
-"Access Type `public` e utilizar `PKCE`_.."
+"Nós não temos casos de uso, mas é importante seguir os padrões "
+"estabelecidos de segurança atualmente para o OAuth 2 e o OpenIDConnect. "
+"Alguns pontos iniciais seriam para prestar a atenção seriam criar um "
+"Cliente novo com o Access Type `public` e utilizar `PKCE`_.."
 
-#: ../../source/using-keycloak.rst:254
+#: ../../source/using-keycloak.rst:256
 msgid "Deployment Settings"
 msgstr "Configurações de *Deployment*"
 
-#: ../../source/using-keycloak.rst:259
+#: ../../source/using-keycloak.rst:261
 msgid "Setting Passwords (Required) via Environment Variables"
 msgstr "Configurando Senhas (Requerido) via variáveis de ambiente "
 
-#: ../../source/using-keycloak.rst:261
+#: ../../source/using-keycloak.rst:263
 msgid ""
-"The dojot deployments (**Docker compose and Ansible - kubernetes**) do not "
-"come with passwords set for the ``admin`` and ``master`` users and it is "
-"necessary to set these passwords so that the *deployments* will start up "
-"correctly, if not configured services will not start and dojot will be "
-"unavailable. But beware these values are only applied when the keycloak starts "
-"for the first time and the *realm* are created, it will not affect the "
-"existing realms."
+"The dojot deployments (**Docker compose and Ansible - kubernetes**) do "
+"not come with passwords set for the ``admin`` and ``master`` users and it"
+" is necessary to set these passwords so that the *deployments* will start"
+" up correctly, if not configured services will not start and dojot will "
+"be unavailable. But beware these values are only applied when the "
+"keycloak starts for the first time and the *realm* are created, it will "
+"not affect the existing realms."
 msgstr ""
-"Os *deployments* (**Docker compose e Ansible - kubernetes **) da dojot não vem "
-"com senhas definidas para os usuário ``admin``  e ``master`` e é necessário "
-"configurar essas senhas para que os *deployments* inicializem corretamente, "
-"caso não configurados os serviços não irão inicializar e a dojot ficará "
-"indisponível.  Mas atenção esses valores só são aplicados quando o keycloak "
-"inicializar pela primeira vez e os *realm* são criados, não afetará os realms "
-"já existentes."
+"Os *deployments* (**Docker compose e Ansible - kubernetes **) da dojot "
+"não vem com senhas definidas para os usuário ``admin``  e ``master`` e é "
+"necessário configurar essas senhas para que os *deployments* inicializem "
+"corretamente, caso não configurados os serviços não irão inicializar e a "
+"dojot ficará indisponível.  Mas atenção esses valores só são aplicados "
+"quando o keycloak inicializar pela primeira vez e os *realm* são criados,"
+" não afetará os realms já existentes."
 
-#: ../../source/using-keycloak.rst:269
+#: ../../source/using-keycloak.rst:271
 msgid ""
-"When configuring use strong passwords, by default the minimum required are "
-"passwords with 8 characters, one number, one uppercase letter, one lowercase "
-"letter and one special character."
+"When configuring use strong passwords, by default the minimum required "
+"are passwords with 8 characters, one number, one uppercase letter, one "
+"lowercase letter and one special character."
 msgstr ""
-"Ao configurar use senhas fortes, por default o mínimo exigido são senhas com 8 "
-"caracteres, um número, uma letra maiúscula, uma letra minúscula e um caracter "
-"especial. "
+"Ao configurar use senhas fortes, por default o mínimo exigido são senhas "
+"com 8 caracteres, um número, uma letra maiúscula, uma letra minúscula e "
+"um caracter especial. "
 
-#: ../../source/using-keycloak.rst:275 ../../source/using-keycloak.rst:300
-#: ../../source/using-keycloak.rst:317 ../../source/using-keycloak.rst:342
+#: ../../source/using-keycloak.rst:277 ../../source/using-keycloak.rst:302
+#: ../../source/using-keycloak.rst:319 ../../source/using-keycloak.rst:344
 msgid "Docker compose"
 msgstr ""
 
-#: ../../source/using-keycloak.rst:277
+#: ../../source/using-keycloak.rst:279
 msgid ""
 "You need to set a password value in the *.env* file for the "
-"``KEYCLOAK_MASTER_PASSWORD`` and ``KEYCLOAK_ADMIN_PASSWORD_TEMP`` variables. "
-"The ``KEYCLOAK_ADMIN_PASSWORD_TEMP`` value will be the *admin* user password "
-"of all realms when created. See more at `settings required`_."
+"``KEYCLOAK_MASTER_PASSWORD`` and ``KEYCLOAK_ADMIN_PASSWORD_TEMP`` "
+"variables. The ``KEYCLOAK_ADMIN_PASSWORD_TEMP`` value will be the *admin*"
+" user password of all realms when created. See more at `settings "
+"required`_."
 msgstr ""
-"É necessário definir um valor de senha no arquivo *.env* para as variáveis "
-"``KEYCLOAK_MASTER_PASSWORD `` e  ``KEYCLOAK_ADMIN_PASSWORD_TEMP ``. O valor  "
-"``KEYCLOAK_ADMIN_PASSWORD_TEMP `` será a senha do usuário *admin* de todos os "
-"realms quando criado. Veja mais em `settings required`_."
-
-#: ../../source/using-keycloak.rst:285 ../../source/using-keycloak.rst:305
-#: ../../source/using-keycloak.rst:323 ../../source/using-keycloak.rst:347
-msgid "Ansible (kubernetes)"
-msgstr ""
+"É necessário definir um valor de senha no arquivo *.env* para as "
+"variáveis ``KEYCLOAK_MASTER_PASSWORD `` e  ``KEYCLOAK_ADMIN_PASSWORD_TEMP"
+" ``. O valor  ``KEYCLOAK_ADMIN_PASSWORD_TEMP `` será a senha do usuário "
+"*admin* de todos os realms quando criado. Veja mais em `settings "
+"required`_."
 
 #: ../../source/using-keycloak.rst:287 ../../source/using-keycloak.rst:307
 #: ../../source/using-keycloak.rst:325 ../../source/using-keycloak.rst:349
+msgid "Ansible (kubernetes)"
+msgstr ""
+
+#: ../../source/using-keycloak.rst:289 ../../source/using-keycloak.rst:309
+#: ../../source/using-keycloak.rst:327 ../../source/using-keycloak.rst:351
 msgid "*Work in progress*"
 msgstr "*Trabalho em progresso*"
 
-#: ../../source/using-keycloak.rst:290
+#: ../../source/using-keycloak.rst:292
 msgid "Setting SMTP via environment variables"
 msgstr "Configurando SMTP via variáveis de ambiente "
 
-#: ../../source/using-keycloak.rst:292
+#: ../../source/using-keycloak.rst:294
 msgid ""
-"It is possible to configure SMTP via environment variables, but beware these "
-"values are only applied when the *realm* is created, it will not affect the "
-"existing realms. To configure a *realm* that already exists, see `Configuring "
-"SMTP through the graphical interface`."
+"It is possible to configure SMTP via environment variables, but beware "
+"these values are only applied when the *realm* is created, it will not "
+"affect the existing realms. To configure a *realm* that already exists, "
+"see `Configuring SMTP through the graphical interface`."
 msgstr ""
 "É possível configurar SMTP via variáveis de ambiente, mas atenção esses "
-"valores só são aplicados quando o *realm* é criado, não afetará os realms já "
-"existentes. Para configurar um *realm* que já existe veja `Configurando SMTP "
-"pela interface gráfica`."
+"valores só são aplicados quando o *realm* é criado, não afetará os realms"
+" já existentes. Para configurar um *realm* que já existe veja "
+"`Configurando SMTP pela interface gráfica`."
 
-#: ../../source/using-keycloak.rst:302
+#: ../../source/using-keycloak.rst:304
 msgid "See more at `configuring SMTP`_."
 msgstr "Veja mais em `configuring SMTP`_."
 
-#: ../../source/using-keycloak.rst:310
+#: ../../source/using-keycloak.rst:312
 msgid "Setting HTTPs as required via environment variables"
 msgstr "Configurando HTTPs como requerido via variáveis de ambiente "
 
-#: ../../source/using-keycloak.rst:312
+#: ../../source/using-keycloak.rst:314
 msgid ""
-"Note: These values are only applied when the *realm* is created, it will not "
-"affect existing realms. For existing reals see `Configuring HTTPs as required`"
+"Note: These values are only applied when the *realm* is created, it will "
+"not affect existing realms. For existing realms see :ref:`Setting HTTPs "
+"as required by the graphical interface`."
 msgstr ""
 "Esses valores só são aplicados quando o *realm* é criado, não afetará os "
-"realms já existentes e o realm master. Para reals já existentes veja "
-"`Configurando HTTPs como requerido pela interface gráfica`. "
+"realms já existentes e o realm master. Para realms já existentes veja :ref:`Setting HTTPs "
+"as required by the graphical interface`."
 
-#: ../../source/using-keycloak.rst:319
+#: ../../source/using-keycloak.rst:321
 msgid ""
 "You need to set the **EXTERNAL** value in the *.env* file to the "
 "``KEYCLOAK_REALM_SSL_MODE`` variable. See more at `configuring HTTPs`_."
 msgstr ""
-"É necessário definir o valor **EXTERNAL** no arquivo *.env* para a variável "
-"``KEYCLOAK_REALM_SSL_MODE`` .  Veja mais em `configuring HTTPs`_."
+"É necessário definir o valor **EXTERNAL** no arquivo *.env* para a "
+"variável ``KEYCLOAK_REALM_SSL_MODE`` .  Veja mais em `configuring "
+"HTTPs`_."
 
-#: ../../source/using-keycloak.rst:330
+#: ../../source/using-keycloak.rst:332
 msgid "Base keycloak configuration file for creating realms"
 msgstr "Arquivo de configuração do keycloak base para criação de realms"
 
-#: ../../source/using-keycloak.rst:332
+#: ../../source/using-keycloak.rst:334
 msgid ""
-"Configuration file used as the basis for creating realms in keycloak. It is "
-"the file exported from a realm by the full keycloak. This file is configured "
-"using the ``DOJOT_CUSTOM_REALM_REP_FILE`` environment variable in the keycloak "
-"service. When creating a new realm the identifiers (*ids*) and realm name in "
-"this file are ignored. However, it is important to point out that our "
-"*deployments* for both *docker-compose* and *ansible (kubernetes)* already "
-"have a file with the necessary settings to use dojot."
+"Configuration file used as the basis for creating realms in keycloak. It "
+"is the file exported from a realm by the full keycloak. This file is "
+"configured using the ``DOJOT_CUSTOM_REALM_REP_FILE`` environment variable"
+" in the keycloak service. When creating a new realm the identifiers "
+"(*ids*) and realm name in this file are ignored. However, it is important"
+" to point out that our *deployments* for both *docker-compose* and "
+"*ansible (kubernetes)* already have a file with the necessary settings to"
+" use dojot."
 msgstr ""
-"Arquivo de configuração usado como base para criação dos realms no keycloak. É "
-"o arquivo exportado de um realm pelo keycloak completo. Este arquivo é "
-"configurado usando a variável de ambiente ``DOJOT_CUSTOM_REALM_REP_FILE`` no "
-"serviço do keycloak. Ao criar um novo realm os identificadores (*ids*) e nome "
-"do realm neste arquivo são ignorados. Porém é importante salientar que nossos "
-"*deployments* tanto para *docker-compose* quanto para *ansible (kubernetes)* "
-"Já possuem um arquivo com as configurações necessárias para utilização da "
-"dojot."
+"Arquivo de configuração usado como base para criação dos realms no "
+"keycloak. É o arquivo exportado de um realm pelo keycloak completo. Este "
+"arquivo é configurado usando a variável de ambiente "
+"``DOJOT_CUSTOM_REALM_REP_FILE`` no serviço do keycloak. Ao criar um novo "
+"realm os identificadores (*ids*) e nome do realm neste arquivo são "
+"ignorados. Porém é importante salientar que nossos *deployments* tanto "
+"para *docker-compose* quanto para *ansible (kubernetes)* Já possuem um "
+"arquivo com as configurações necessárias para utilização da dojot."
 
-#: ../../source/using-keycloak.rst:344
+#: ../../source/using-keycloak.rst:346
 msgid ""
-"In the case of docker-compose this file is in `keycloak/"
-"customRealmRepresentation.json`"
+"In the case of docker-compose this file is in "
+"`keycloak/customRealmRepresentation.json`"
 msgstr ""
-"No caso do docker-compose este arquivo encontra-se em `keycloak/"
-"customRealmRepresentation.json`"
+"No caso do docker-compose este arquivo encontra-se em "
+"`keycloak/customRealmRepresentation.json`"
 
-#: ../../source/using-keycloak.rst:352
+#: ../../source/using-keycloak.rst:354
 msgid "Old libraries"
 msgstr "Bibliotecas antigas "
 
-#: ../../source/using-keycloak.rst:354
+#: ../../source/using-keycloak.rst:356
 msgid ""
-"To maintain compatibility with dojot it is necessary to provide the login and "
-"password of the master or a user who can get the list of realms available in "
-"the older libraries, namely `dojot-module-nodejs`_, `iotagent-nodejs`_, `dojot-"
-"module-python`_,  `dojot-module-java`_, `iotagent-java`_, see more in their "
-"respective documentation. However, it is important to point out that our "
-"*deployments* for both *docker-compose* and *ansible (kubernetes)* are already "
-"prepared for this and it is only necessary to configure the passwords as "
-"described in the topic `Setting Passwords (Required) via environment "
-"variables`."
+"To maintain compatibility with dojot it is necessary to provide the login"
+" and password of the master or a user who can get the list of realms "
+"available in the older libraries, namely `dojot-module-nodejs`_, "
+"`iotagent-nodejs`_, `dojot-module-python`_,  `dojot-module-java`_, "
+"`iotagent-java`_, see more in their respective documentation. However, it"
+" is important to point out that our *deployments* for both *docker-"
+"compose* and *ansible (kubernetes)* are already prepared for this and it "
+"is only necessary to configure the passwords as described in the topic "
+":ref:`Setting Passwords (Required) via Environment Variables`."
 msgstr ""
-"Para manter compatibilidade com a dojot é necessário fornecer o login e senha "
-"do master ou de um usuário que consiga obter a lista de realms disponíveis nas "
-"bibliotecas antigas, sendo elas `dojot-module-nodejs`_, `iotagent-nodejs`_, "
-"`dojot-module-python`_,  `dojot-module-java`_, `iotagent-java`_, veja mais nas "
-"suas respectivas documentações. Porém é importante salientar que nossos "
-"*deployments* tanto para *docker-compose* quanto para *ansible (kubernetes)* "
-"já estão preparados para isso e é apenas necessário configurar as senhas como "
-"descrito no tópico  `Configurando Senhas (Requerido) via variáveis de ambiente "
-"`."
+"Para manter compatibilidade com a dojot é necessário fornecer o login e "
+"senha do master ou de um usuário que consiga obter a lista de realms "
+"disponíveis nas bibliotecas antigas, sendo elas `dojot-module-nodejs`_, "
+"`iotagent-nodejs`_, `dojot-module-python`_,  `dojot-module-java`_, "
+"`iotagent-java`_, veja mais nas suas respectivas documentações. Porém é "
+"importante salientar que nossos *deployments* tanto para *docker-compose*"
+" quanto para *ansible (kubernetes)* já estão preparados para isso e é "
+"apenas necessário configurar as senhas como descrito no tópico  "
+":ref:`Setting Passwords (Required) via Environment Variables`."
 
-#: ../../source/using-keycloak.rst:365
+#: ../../source/using-keycloak.rst:367
 msgid ""
-"Configuring new routes, services, resources,on keycloak to use authorization"
+"Configuring new routes, services, resources,on keycloak to use "
+"authorization"
 msgstr ""
 "Configurando novas rotas, serviços, recursos, no keycloak para utilizar "
 "autorização"
 
-#: ../../source/using-keycloak.rst:367
+#: ../../source/using-keycloak.rst:369
 msgid ""
 "In `keycloak settings example`_ there is a basic case of configuration "
 "example, you can use it as basis for new settings."
 msgstr ""
-"Em `keycloak settings example`_ há um caso básico de exemplo de configuração, "
-"você pode utilizá-lo como base para novas configurações.  "
+"Em `keycloak settings example`_ há um caso básico de exemplo de "
+"configuração, você pode utilizá-lo como base para novas configurações.  "
 
-#: ../../source/using-keycloak.rst:370
+#: ../../source/using-keycloak.rst:372
 msgid "Configuring keycloak with Nginx"
 msgstr "Configurando keycloak com Nginx"
 
-#: ../../source/using-keycloak.rst:372
+#: ../../source/using-keycloak.rst:374
 msgid ""
-"In `how to use keycloak with a nginx proxy`_ there is an example with the "
-"necessary settings."
+"In `how to use keycloak with a nginx proxy`_ there is an example with the"
+" necessary settings."
 msgstr ""
 "Em `how to use keycloak with a nginx proxy`_ há um exemplo com as "
 "configurações necessárias. "
+
+#~ msgid ""
+#~ "Now let's create the user, first "
+#~ "fill in **Username**. It is recommended"
+#~ " to fill in the **Email** field "
+#~ "and in **Required User Actions** Add "
+#~ "the ``Update Password`` and ``Verify "
+#~ "Email`` options, but for ``Verify "
+#~ "Email`` to make sense it is "
+#~ "necessary to have the SMTP configured"
+#~ " for the Realm of interest, if "
+#~ "you do not want to configure SMTP"
+#~ " do not put ``Verify Email``. Another"
+#~ " point is that if an SMTP has"
+#~ " not been configured, it is necessary"
+#~ " to create a temporary password and"
+#~ " provide the user, to do so, "
+#~ "access the **Credentials** tab after "
+#~ "creating in **Save**."
+#~ msgstr ""
+#~ "Agora vamos criar o usuário, "
+#~ "primeiramente preenchemos **Username**. É "
+#~ "recomendado preencher o campo **Email**  "
+#~ "e em **Required User Actions** Adicionar"
+#~ " as opções `Update Password`` e "
+#~ "``Verify Email``, porém para que o "
+#~ "``Verify Email`` faça sentido é "
+#~ "necessário ter configurado o SMTP para"
+#~ " o Realm de interesse, caso não "
+#~ "pretenda configurar o SMTP não coloque"
+#~ " ``Verify Email``.  Outro ponto é que"
+#~ " caso não tenha sido configurado um"
+#~ " SMTP, é necessário criar uma senha"
+#~ " temporária e fornecer ao usuário, "
+#~ "para tal acesse a aba `Credentials` "
+#~ "após criar em **Save**."
+
