@@ -44,7 +44,7 @@ msgid ""
 " through a gateway. In it's case, the messages are sent via HTTP with "
 "JSON payloads."
 msgstr ""
-"O IoTAgent HTTP é capaz de receber mensagens de dispotivos físcos, diretamente "
+"O IoTAgent HTTP é capaz de receber mensagens de dispositivos físcos, diretamente "
 "ou por meio de um gateway. Nesse caso, as mensagens são enviadas via HTTP com "
 "cargas JSON."
 
