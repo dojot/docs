@@ -1,7 +1,7 @@
 Release history
 ===============
 
-Full Contact - 2021.07
+Full Contact - 2022.02
 ----------------------
 
 Services
@@ -10,48 +10,40 @@ Services
 New Services
 ************
 
-Certificate ACL
+IotAgent HTTP
 ^^^^^^^^^^^^^^^
-      - The certificate-acl is responsible for keeping in memory an association between certificates
-        fingerprint and their owners so that dojot services that needs this information can query it
-        instead of x509-identity-mgmt service, which keeps this information only on disk.
-
-Cert-sidecar
-^^^^^^^^^^^^
-      - The Cert-Sidecar, certificate sidecar, is a service utility for managing
-        x509-identity-mgmt certificates for use with TLS connections.
-
+      - The IotAgent HTTP can receive messages from physical devices, directly
+        or through a gateway. In it's case, the messages are sent via HTTP with
+        JSON payloads.
 
 Improvements and fixes
 **********************
 
-IotAgent MQTT VerneMQ
-^^^^^^^^^^^^^^^^^^^^^
+History
+^^^^^^^
 
-      - Integration with Cert-sidecar
-      - Integration with Certificate ACL
+      - Support for getting data in CSV format.
+      - Fix TTL error - Now data is stored for 7 days by default.
 
-V2k-Bridge
-~~~~~~~~~~
-
-      - Integration with Cert-sidecar
-
-K2v-Bridge
-~~~~~~~~~~
-
-      - Integration with Cert-sidecar
-
-Kakfa-ws
+InfluxDB
 ^^^^^^^^
 
-      - Improvements in the service's health check
+      - Support for getting data in CSV format.
 
+GUI
+^^^
 
-X.509 Identity Management
-^^^^^^^^^^^^^^^^^^^^^^^^^
+      - Support for export data in CSV format.
 
-      -  Support for external certificates
+GUI-V2
+^^^^^^
 
+      - Support for export data in CSV format.
+
+Cron
+^^^^
+
+      - Support for using SDK library
 
 Others
 ^^^^^^
@@ -64,14 +56,18 @@ Deployments
 Docker-compose
 ***************
 
+    - IotAgent HTTP Deployment
+    - Monitoring feature with Prometheus and Grafana for services:
+         - InfluxDB
+         - MongoDB
+         - Kong
+         - Kafka
+         - VerneMQ
     - Minor bug fixes
 
 Ansible-dojot
 *************
 
-    - Documentation improvements
-    - Volumes feature
-    - Labels feature
-    - Docker log files rotation
-    - Update Kubernetes version to 1.19.8
+    - IotAgent HTTP Deployment
+    - Change Kubernetes container runtime to Containerd
     - Minor bug fixes
