@@ -62,6 +62,15 @@ Note: The above cores are approximately 3.5 GHz (x86-64)
 Docker Compose
 --------------
 
+.. raw:: html
+
+    <iframe id="ytplayer" type="text/html" width="720" height="405"
+    src="https://www.youtube.com/embed/dWq0mYf8GQ0?rel=0" frameborder="0"
+    allowfullscreen></iframe><br/>
+
+In this video tutorial above, version v0.7.1 is used, but the same video
+is valid for the current version.
+
 This document provides instructions on how to create a trivial deployment
 environment on single host for *dojot*, using Compose as the processes
 orchestration platform.
@@ -134,10 +143,10 @@ replaced): ::
 
 For instance: ::
 
-  git checkout v0.7.0 -b v0.7.0
+  git checkout v0.7.1 -b v0.7.1
 
 .. note::
-   For a guide on how to use **HTTPS** go to this link: https://github.com/dojot/docker-compose/tree/v0.7.0#how-to-secure-dojot-with-nginx-and-lets-encrypt
+   For a guide on how to use **HTTPS** go to this link: https://github.com/dojot/docker-compose/tree/v0.7.1#how-to-secure-dojot-with-nginx-and-lets-encrypt
 
 
 .. attention::
@@ -207,6 +216,15 @@ information about how to interact with the platform.
 
 Kubernetes
 ----------
+
+.. raw:: html
+
+    <iframe id="ytplayer" type="text/html" width="720" height="405"
+    src="https://www.youtube.com/embed/zJBQXisBWh8?rel=0" frameborder="0"
+    allowfullscreen></iframe><br/>
+
+In this video tutorial above, version v0.7.1 is used, but the same video
+is valid for the current version.
 
 For simple installation with kubernetes please check the pdf below.
 

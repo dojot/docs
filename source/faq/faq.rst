@@ -129,9 +129,10 @@ If you need another version, you could checkout a tag instead:
     v0.5.2
     v0.6.0
     v0.7.0
+    v0.7.1
 
 
-  $ git checkout v0.7.0
+  $ git checkout v0.7.1
 
 
 Devices
