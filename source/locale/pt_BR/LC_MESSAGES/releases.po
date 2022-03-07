@@ -5,26 +5,25 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: dojot 0.4.0\n"
+"Project-Id-Version: dojot v0.7.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-22 11:00-0300\n"
+"POT-Creation-Date: 2022-02-10 11:02-0300\n"
 "PO-Revision-Date: 2021-06-22 11:02-0300\n"
 "Last-Translator: \n"
 "Language: pt_BR\n"
 "Language-Team: \n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
-"X-Generator: Poedit 2.3\n"
 
 #: ../../source/releases.rst:2
 msgid "Release history"
 msgstr "Histórico de lançamento"
 
 #: ../../source/releases.rst:5
-msgid "Full Contact - 2021.07"
+msgid "Full Contact - 2022.02"
 msgstr ""
 
 #: ../../source/releases.rst:8
@@ -36,123 +35,105 @@ msgid "New Services"
 msgstr "Novos Serviços"
 
 #: ../../source/releases.rst:14
-msgid "Certificate ACL"
+msgid "IotAgent HTTP"
 msgstr ""
 
 #: ../../source/releases.rst:15
 msgid ""
-"The certificate-acl is responsible for keeping in memory an association between "
-"certificates fingerprint and their owners so that dojot services that needs this "
-"information can query it instead of x509-identity-mgmt service, which keeps this "
-"information only on disk."
+"The IotAgent HTTP can receive messages from physical devices, directly or"
+" through a gateway. In it's case, the messages are sent via HTTP with "
+"JSON payloads."
 msgstr ""
-"O certificate-acl é responsável por manter na memória uma associação entre a "
-"`fingerprint` dos certificados e seus proprietários para que os serviços dojot "
-"que precisam dessas informações possam consultá-la em vez do serviço x509-"
-"identity-mgmt, que mantém essas informações apenas no disco."
+"O IoTAgent HTTP é capaz de receber mensagens de dispositivos físicos, diretamente "
+"ou por meio de um gateway. Nesse caso, as mensagens são enviadas via HTTP com "
+"cargas JSON."
 
 #: ../../source/releases.rst:20
-msgid "Cert-sidecar"
-msgstr ""
-
-#: ../../source/releases.rst:21
-msgid ""
-"The Cert-Sidecar, certificate sidecar, is a service utility for managing x509-"
-"identity-mgmt certificates for use with TLS connections."
-msgstr ""
-"O Cert-Sidecar, certificate sidecar, é um utilitário de serviço para gerenciar "
-"certificados do x509-identity-mgmt para uso com conexões TLS."
-
-#: ../../source/releases.rst:26
 msgid "Improvements and fixes"
 msgstr "Melhorias e correções"
 
-#: ../../source/releases.rst:29
-msgid "IotAgent MQTT VerneMQ"
+#: ../../source/releases.rst:23
+#, fuzzy
+msgid "History"
+msgstr "Histórico de lançamento"
+
+#: ../../source/releases.rst:25 ../../source/releases.rst:31
+msgid "Support for getting data in CSV format."
+msgstr "Suporte para recebimento de dados no formato CSV"
+
+#: ../../source/releases.rst:26
+msgid "Fix TTL error - Now data is stored for 7 days by default."
+msgstr "Correção do erro de TTL - Agora os dados são armazenados durante 7 dias por padrão."
+
+#: ../../source/releases.rst:29 ../../source/releases.rst:61
+msgid "InfluxDB"
 msgstr ""
 
-#: ../../source/releases.rst:31 ../../source/releases.rst:37
-#: ../../source/releases.rst:42
-msgid "Integration with Cert-sidecar"
-msgstr "Integração com Cert-sidecar"
-
-#: ../../source/releases.rst:32
-msgid "Integration with Certificate ACL"
-msgstr "Integração com Certificate ACL"
-
-#: ../../source/releases.rst:35
-msgid "V2k-Bridge"
+#: ../../source/releases.rst:34
+msgid "GUI"
 msgstr ""
 
-#: ../../source/releases.rst:40
-msgid "K2v-Bridge"
+#: ../../source/releases.rst:36 ../../source/releases.rst:41
+msgid "Support for export data in CSV format."
+msgstr "Suporte para exportação de dados no formato CSV"
+
+#: ../../source/releases.rst:39
+msgid "GUI-V2"
 msgstr ""
 
-#: ../../source/releases.rst:45
-msgid "Kakfa-ws"
+#: ../../source/releases.rst:44
+msgid "Cron"
 msgstr ""
 
-#: ../../source/releases.rst:47
-msgid "Improvements in the service's health check"
-msgstr "Melhorias na verificação de `health check`"
+#: ../../source/releases.rst:46
+msgid "Support for using SDK library"
+msgstr "Suporte para o uso da biblioteca SDK"
 
-#: ../../source/releases.rst:51
-msgid "X.509 Identity Management"
-msgstr ""
-
-#: ../../source/releases.rst:53
-msgid "Support for external certificates"
-msgstr "Suporte para certificados externos"
-
-#: ../../source/releases.rst:57
+#: ../../source/releases.rst:49
 msgid "Others"
 msgstr "Outros"
 
-#: ../../source/releases.rst:59 ../../source/releases.rst:67
-#: ../../source/releases.rst:77
+#: ../../source/releases.rst:51 ../../source/releases.rst:66
+#: ../../source/releases.rst:73
 msgid "Minor bug fixes"
 msgstr "Correção de pequenos bugs"
 
-#: ../../source/releases.rst:62
+#: ../../source/releases.rst:54
 msgid "Deployments"
 msgstr "Implantações"
 
-#: ../../source/releases.rst:65
+#: ../../source/releases.rst:57
 msgid "Docker-compose"
 msgstr ""
 
-#: ../../source/releases.rst:70
+#: ../../source/releases.rst:59 ../../source/releases.rst:71
+msgid "IotAgent HTTP Deployment"
+msgstr "Implantação do IotAgent HTTP"
+
+#: ../../source/releases.rst:64
+msgid "Monitoring feature with Prometheus and Grafana for services:"
+msgstr "Feature de monitoramento com Prometheus e Grafana para os serviços:"
+
+#: ../../source/releases.rst:62
+msgid "MongoDB"
+msgstr ""
+
+#: ../../source/releases.rst:63
+msgid "Kong"
+msgstr ""
+
+#: ../../source/releases.rst:64
+msgid "Kafka"
+msgstr ""
+
+#: ../../source/releases.rst:65
+msgid "VerneMQ"
+msgstr ""
+
+#: ../../source/releases.rst:69
 msgid "Ansible-dojot"
 msgstr ""
 
 #: ../../source/releases.rst:72
-msgid "Documentation improvements"
-msgstr "Melhorias na documentação"
-
-#: ../../source/releases.rst:73
-msgid "Volumes feature"
-msgstr "Recurso de volumes"
-
-#: ../../source/releases.rst:74
-msgid "Labels feature"
-msgstr "Recurso de *Labels*"
-
-#: ../../source/releases.rst:75
-msgid "Docker log files rotation"
-msgstr "Rotação de arquivos de log do Docker"
-
-#: ../../source/releases.rst:76
-msgid "Update Kubernetes version to 1.19.8"
-msgstr "Atualiza a versão do Kubernetes para 1.19.8"
-
-#~ msgid "Added graceful shutdown and health check for the service"
-#~ msgstr "Adicionado graceful shutdown e health check para o serviço"
-
-#~ msgid "The docker and containerd version was defined in the kubernetes playbook"
-#~ msgstr "A versão do docker e do containerd foi fixada no playbook do kubernetes"
-
-#~ msgid "Bug fixes in Kafka-WS Readiness and Liveness Probe"
-#~ msgstr "Correção de bugs no Readiness e Liveness Probe do Kafka-WS"
-
-#~ msgid "Bug fixes in Nginx"
-#~ msgstr "Correção de bugs no Nginx"
+msgid "Change Kubernetes container runtime to Containerd"
+msgstr "Alteração do container runtime do Kubernetes para o Containerd"
