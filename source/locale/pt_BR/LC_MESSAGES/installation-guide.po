@@ -205,7 +205,7 @@ msgstr "Docker Compose"
 #: ../../source/installation-guide.rst:226
 #, fuzzy
 msgid ""
-"In this video tutorial above, version v0.8.0 is used, but the same video "
+"In this video tutorial above, version v0.7.1 is used, but the same video "
 "is valid for the current version."
 msgstr ""
 "Nesse tutorial acima, a versão utilizada foi a v0.7.1, mas o mesmo video "
