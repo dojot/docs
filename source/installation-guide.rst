@@ -68,7 +68,7 @@ Docker Compose
     src="https://www.youtube.com/embed/dWq0mYf8GQ0?rel=0" frameborder="0"
     allowfullscreen></iframe><br/>
 
-In this video tutorial above, version v0.7.1 is used, but the same video
+In this video tutorial above, version v0.8.0 is used, but the same video
 is valid for the current version.
 
 This document provides instructions on how to create a trivial deployment
@@ -143,10 +143,10 @@ replaced): ::
 
 For instance: ::
 
-  git checkout v0.7.1 -b v0.7.1
+  git checkout v0.8.0 -b v0.8.0
 
 .. note::
-   For a guide on how to use **HTTPS** go to this link: https://github.com/dojot/docker-compose/tree/v0.7.1#how-to-secure-dojot-with-nginx-and-lets-encrypt
+   For a guide on how to use **HTTPS** go to this link: https://github.com/dojot/docker-compose/tree/v0.8.0#how-to-secure-dojot-with-nginx-and-lets-encrypt
 
 
 .. attention::
@@ -223,7 +223,7 @@ Kubernetes
     src="https://www.youtube.com/embed/zJBQXisBWh8?rel=0" frameborder="0"
     allowfullscreen></iframe><br/>
 
-In this video tutorial above, version v0.7.1 is used, but the same video
+In this video tutorial above, version v0.8.0 is used, but the same video
 is valid for the current version.
 
 For simple installation with kubernetes please check the pdf below.

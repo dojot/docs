@@ -204,10 +204,10 @@ msgstr "Docker Compose"
 #: ../../source/installation-guide.rst:71
 #: ../../source/installation-guide.rst:226
 msgid ""
-"In this video tutorial above, version v0.7.1 is used, but the same video "
+"In this video tutorial above, version v0.8.0 is used, but the same video "
 "is valid for the current version."
 msgstr ""
-"Nesse tutorial acima, a versão utilizada foi a v0.7.1, mas o mesmo video "
+"Nesse tutorial acima, a versão utilizada foi a v0.8.0, mas o mesmo video "
 "é valido para a versão atual."
 
 #: ../../source/installation-guide.rst:74
@@ -347,11 +347,11 @@ msgstr "Por exemplo: ::"
 #: ../../source/installation-guide.rst:149
 msgid ""
 "For a guide on how to use **HTTPS** go to this link: "
-"https://github.com/dojot/docker-compose/tree/v0.7.1#how-to-secure-dojot-"
+"https://github.com/dojot/docker-compose/tree/v0.8.0#how-to-secure-dojot-"
 "with-nginx-and-lets-encrypt"
 msgstr ""
 "Para obter um guia sobre como usar **HTTPS**, acesse este link: "
-"https://github.com/dojot/docker-compose/tree/v0.7.1#how-to-secure-dojot-"
+"https://github.com/dojot/docker-compose/tree/v0.8.0#how-to-secure-dojot-"
 "with-nginx-and-lets-encrypt"
 
 #: ../../source/installation-guide.rst:153

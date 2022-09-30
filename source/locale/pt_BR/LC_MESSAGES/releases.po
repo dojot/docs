@@ -5,9 +5,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: dojot v0.7.1\n"
+"Project-Id-Version: dojot v0.8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-10 11:02-0300\n"
+"POT-Creation-Date: 2022-09-30 14:10-0300\n"
 "PO-Revision-Date: 2021-06-22 11:02-0300\n"
 "Last-Translator: \n"
 "Language: pt_BR\n"
@@ -23,7 +23,7 @@ msgid "Release history"
 msgstr "Histórico de lançamento"
 
 #: ../../source/releases.rst:5
-msgid "Full Contact - 2022.02"
+msgid "Gatka - 2022.09"
 msgstr ""
 
 #: ../../source/releases.rst:8
@@ -35,105 +35,184 @@ msgid "New Services"
 msgstr "Novos Serviços"
 
 #: ../../source/releases.rst:14
-msgid "IotAgent HTTP"
+msgid "Basic-Auth"
 msgstr ""
 
 #: ../../source/releases.rst:15
 msgid ""
-"The IotAgent HTTP can receive messages from physical devices, directly or"
-" through a gateway. In it's case, the messages are sent via HTTP with "
-"JSON payloads."
-msgstr ""
-"O IoTAgent HTTP é capaz de receber mensagens de dispositivos físicos, diretamente "
-"ou por meio de um gateway. Nesse caso, as mensagens são enviadas via HTTP com "
-"cargas JSON."
+"The basic-auth service is responsible for generating credentials to "
+"authenticate the devices when sending messages through the agents."
+msgstr "O serviço de autenticação básica é responsável por gerar credenciais para "
+"autenticação dos dispositivos ao enviar mensagens através dos agentes"
 
-#: ../../source/releases.rst:20
+#: ../../source/releases.rst:18
+msgid "File-Mgmt"
+msgstr ""
+
+#: ../../source/releases.rst:19
+msgid ""
+"The file management is responsible for managing the resources of MinIO on"
+" the Dojot platform, allowing the storage and handling of files in "
+"various extensions."
+msgstr "O gerenciamento de arquivos é responsável por gerenciar os recursos do MinIO na "
+"plataforma Dojot, permitindo o armazenamento e manuseio de arquivos em várias extensões."
+
+#: ../../source/releases.rst:22
 msgid "Improvements and fixes"
 msgstr "Melhorias e correções"
 
-#: ../../source/releases.rst:23
+#: ../../source/releases.rst:25
+msgid "Http-Agent"
+msgstr ""
+
+#: ../../source/releases.rst:27
+msgid "Insecure route mapped in kong"
+msgstr "Mapeamento da rota insegura no kong"
+
+#: ../../source/releases.rst:30
+msgid "InfluxDB"
+msgstr ""
+
+#: ../../source/releases.rst:32
+msgid "Support for influxdb chronograph"
+msgstr "Suporte Influxdb Chronograph"
+
+#: ../../source/releases.rst:35
+msgid "GUI"
+msgstr ""
+
+#: ../../source/releases.rst:37
+msgid "Feature device id creation"
+msgstr "Funcionalidade de criação do ID do dispositivo"
+
+#: ../../source/releases.rst:40
 #, fuzzy
 msgid "History"
 msgstr "Histórico de lançamento"
 
-#: ../../source/releases.rst:25 ../../source/releases.rst:31
-msgid "Support for getting data in CSV format."
-msgstr "Suporte para recebimento de dados no formato CSV"
+#: ../../source/releases.rst:42
+msgid "MongoDB - Allow changing data expiration time"
+msgstr "MongoDB - Permitir alteração no tempo de expiração dos dados"
 
-#: ../../source/releases.rst:26
-msgid "Fix TTL error - Now data is stored for 7 days by default."
-msgstr "Correção do erro de TTL - Agora os dados são armazenados durante 7 dias por padrão."
-
-#: ../../source/releases.rst:29 ../../source/releases.rst:61
-msgid "InfluxDB"
-msgstr ""
-
-#: ../../source/releases.rst:34
-msgid "GUI"
-msgstr ""
-
-#: ../../source/releases.rst:36 ../../source/releases.rst:41
-msgid "Support for export data in CSV format."
-msgstr "Suporte para exportação de dados no formato CSV"
-
-#: ../../source/releases.rst:39
-msgid "GUI-V2"
-msgstr ""
-
-#: ../../source/releases.rst:44
-msgid "Cron"
-msgstr ""
-
-#: ../../source/releases.rst:46
-msgid "Support for using SDK library"
-msgstr "Suporte para o uso da biblioteca SDK"
-
-#: ../../source/releases.rst:49
+#: ../../source/releases.rst:45
 msgid "Others"
 msgstr "Outros"
 
-#: ../../source/releases.rst:51 ../../source/releases.rst:66
+#: ../../source/releases.rst:47 ../../source/releases.rst:59
 #: ../../source/releases.rst:73
 msgid "Minor bug fixes"
 msgstr "Correção de pequenos bugs"
 
-#: ../../source/releases.rst:54
+#: ../../source/releases.rst:50
 msgid "Deployments"
 msgstr "Implantações"
 
-#: ../../source/releases.rst:57
+#: ../../source/releases.rst:53
 msgid "Docker-compose"
 msgstr ""
 
-#: ../../source/releases.rst:59 ../../source/releases.rst:71
-msgid "IotAgent HTTP Deployment"
-msgstr "Implantação do IotAgent HTTP"
+#: ../../source/releases.rst:55
+msgid "Add profile feature"
+msgstr "Adicionado funcionalidade de perfil do docker"
 
-#: ../../source/releases.rst:64
-msgid "Monitoring feature with Prometheus and Grafana for services:"
-msgstr "Feature de monitoramento com Prometheus e Grafana para os serviços:"
+#: ../../source/releases.rst:56 ../../source/releases.rst:64
+msgid "Grafana and Prometeus Improvements"
+msgstr "Melhorias Grafana e Prometeus"
+
+#: ../../source/releases.rst:57 ../../source/releases.rst:65
+msgid "Suport for Self Signed Certificate Nginx"
+msgstr "Suporte para Certificado auto-assinado no NGINX"
+
+#: ../../source/releases.rst:58 ../../source/releases.rst:68
+msgid "Suport for Loki"
+msgstr "Suporte para o Loki"
 
 #: ../../source/releases.rst:62
-msgid "MongoDB"
-msgstr ""
-
-#: ../../source/releases.rst:63
-msgid "Kong"
-msgstr ""
-
-#: ../../source/releases.rst:64
-msgid "Kafka"
-msgstr ""
-
-#: ../../source/releases.rst:65
-msgid "VerneMQ"
-msgstr ""
-
-#: ../../source/releases.rst:69
 msgid "Ansible-dojot"
 msgstr ""
 
+#: ../../source/releases.rst:66
+msgid "Suport for HTTPS in the NGINX"
+msgstr "Suporte para HTTPS no NGINX"
+
+#: ../../source/releases.rst:67
+msgid "Suport for Keda"
+msgstr "Suporte para o Keda"
+
+#: ../../source/releases.rst:69
+msgid "Suport for K3S"
+msgstr "Suporte para o K3S"
+
+#: ../../source/releases.rst:70
+msgid "Suport for EKS"
+msgstr "Suporte para o EKS"
+
+#: ../../source/releases.rst:71
+msgid "Suport for GKE"
+msgstr "Suporte para o GKE"
+
 #: ../../source/releases.rst:72
-msgid "Change Kubernetes container runtime to Containerd"
-msgstr "Alteração do container runtime do Kubernetes para o Containerd"
+msgid "Suport for OKE"
+msgstr "Suporte para o OKE"
+
+#~ msgid "Full Contact - 2022.02"
+#~ msgstr ""
+
+#~ msgid "IotAgent HTTP"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The IotAgent HTTP can receive messages"
+#~ " from physical devices, directly or "
+#~ "through a gateway. In it's case, "
+#~ "the messages are sent via HTTP "
+#~ "with JSON payloads."
+#~ msgstr ""
+#~ "O IoTAgent HTTP é capaz de receber"
+#~ " mensagens de dispositivos físicos, "
+#~ "diretamente ou por meio de um "
+#~ "gateway. Nesse caso, as mensagens são"
+#~ " enviadas via HTTP com cargas JSON."
+
+#~ msgid "Support for getting data in CSV format."
+#~ msgstr "Suporte para recebimento de dados no formato CSV"
+
+#~ msgid "Fix TTL error - Now data is stored for 7 days by default."
+#~ msgstr ""
+#~ "Correção do erro de TTL - Agora"
+#~ " os dados são armazenados durante 7"
+#~ " dias por padrão."
+
+#~ msgid "Support for export data in CSV format."
+#~ msgstr "Suporte para exportação de dados no formato CSV"
+
+#~ msgid "GUI-V2"
+#~ msgstr ""
+
+#~ msgid "Cron"
+#~ msgstr ""
+
+#~ msgid "Support for using SDK library"
+#~ msgstr "Suporte para o uso da biblioteca SDK"
+
+#~ msgid "IotAgent HTTP Deployment"
+#~ msgstr "Implantação do IotAgent HTTP"
+
+#~ msgid "Monitoring feature with Prometheus and Grafana for services:"
+#~ msgstr "Feature de monitoramento com Prometheus e Grafana para os serviços:"
+
+#~ msgid "MongoDB"
+#~ msgstr ""
+
+#~ msgid "Kong"
+#~ msgstr ""
+
+#~ msgid "Kafka"
+#~ msgstr ""
+
+#~ msgid "VerneMQ"
+#~ msgstr ""
+
+#~ msgid "Change Kubernetes container runtime to Containerd"
+#~ msgstr "Alteração do container runtime do Kubernetes para o Containerd"
+

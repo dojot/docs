@@ -130,9 +130,10 @@ If you need another version, you could checkout a tag instead:
     v0.6.0
     v0.7.0
     v0.7.1
+    v0.8.0
 
 
-  $ git checkout v0.7.1
+  $ git checkout v0.8.0
 
 
 Devices
