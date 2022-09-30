@@ -130,7 +130,14 @@ Components
     - `GitHub - InfluxDB Storer and Retriever`_
     -
     - `API - InfluxDB-Retriever`_
-
+  * - File-mgmt
+    - `GitHub - File-mgmt`_
+    -
+    - `API - File-mgmt`_
+  * - Basic-auth
+    - `GitHub - Basic-auth`_
+    -
+    -
 
 Exposed APIs (API Gateway)
 --------------------------
@@ -500,3 +507,8 @@ dojot.
 
 .. _GitHub - InfluxDB Storer and Retriever: https://github.com/dojot/dojot/tree/v0.8.0/storage/time-series/influxdb
 .. _API - InfluxDB-Retriever: https://dojot.github.io/dojot/storage/time-series/influxdb/retriever/doc.html?version=v0.8.0
+
+.. _GitHub - File-mgmt: https://github.com/dojot/dojot/tree/release/v0.8.0/storage/file/minio/file-mgmt
+.. _API - File-mgmt: https://dojot.github.io/dojot/storage/file/minio/file-mgmt/doc.html?version=v0.8.0
+
+.. _GitHub - Basic-auth: https://github.com/dojot/dojot/tree/release/v0.8.0/iam/device-basic-authentication

@@ -42,7 +42,7 @@ msgstr ""
 msgid ""
 "The basic-auth service is responsible for generating credentials to "
 "authenticate the devices when sending messages through the agents."
-msgstr "O serviço de autenticação básica é responsável por gerar credenciais para "
+msgstr "O serviço basic-auth é responsável por gerar credenciais para "
 "autenticação dos dispositivos ao enviar mensagens através dos agentes"
 
 #: ../../source/releases.rst:18
@@ -54,7 +54,7 @@ msgid ""
 "The file management is responsible for managing the resources of MinIO on"
 " the Dojot platform, allowing the storage and handling of files in "
 "various extensions."
-msgstr "O gerenciamento de arquivos é responsável por gerenciar os recursos do MinIO na "
+msgstr "O file management é responsável por gerenciar os recursos do MinIO na "
 "plataforma Dojot, permitindo o armazenamento e manuseio de arquivos em várias extensões."
 
 #: ../../source/releases.rst:22
@@ -88,7 +88,7 @@ msgstr "Funcionalidade de criação do ID do dispositivo"
 #: ../../source/releases.rst:40
 #, fuzzy
 msgid "History"
-msgstr "Histórico de lançamento"
+msgstr "History"
 
 #: ../../source/releases.rst:42
 msgid "MongoDB - Allow changing data expiration time"
@@ -154,65 +154,3 @@ msgstr "Suporte para o GKE"
 #: ../../source/releases.rst:72
 msgid "Suport for OKE"
 msgstr "Suporte para o OKE"
-
-#~ msgid "Full Contact - 2022.02"
-#~ msgstr ""
-
-#~ msgid "IotAgent HTTP"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The IotAgent HTTP can receive messages"
-#~ " from physical devices, directly or "
-#~ "through a gateway. In it's case, "
-#~ "the messages are sent via HTTP "
-#~ "with JSON payloads."
-#~ msgstr ""
-#~ "O IoTAgent HTTP é capaz de receber"
-#~ " mensagens de dispositivos físicos, "
-#~ "diretamente ou por meio de um "
-#~ "gateway. Nesse caso, as mensagens são"
-#~ " enviadas via HTTP com cargas JSON."
-
-#~ msgid "Support for getting data in CSV format."
-#~ msgstr "Suporte para recebimento de dados no formato CSV"
-
-#~ msgid "Fix TTL error - Now data is stored for 7 days by default."
-#~ msgstr ""
-#~ "Correção do erro de TTL - Agora"
-#~ " os dados são armazenados durante 7"
-#~ " dias por padrão."
-
-#~ msgid "Support for export data in CSV format."
-#~ msgstr "Suporte para exportação de dados no formato CSV"
-
-#~ msgid "GUI-V2"
-#~ msgstr ""
-
-#~ msgid "Cron"
-#~ msgstr ""
-
-#~ msgid "Support for using SDK library"
-#~ msgstr "Suporte para o uso da biblioteca SDK"
-
-#~ msgid "IotAgent HTTP Deployment"
-#~ msgstr "Implantação do IotAgent HTTP"
-
-#~ msgid "Monitoring feature with Prometheus and Grafana for services:"
-#~ msgstr "Feature de monitoramento com Prometheus e Grafana para os serviços:"
-
-#~ msgid "MongoDB"
-#~ msgstr ""
-
-#~ msgid "Kong"
-#~ msgstr ""
-
-#~ msgid "Kafka"
-#~ msgstr ""
-
-#~ msgid "VerneMQ"
-#~ msgstr ""
-
-#~ msgid "Change Kubernetes container runtime to Containerd"
-#~ msgstr "Alteração do container runtime do Kubernetes para o Containerd"
-

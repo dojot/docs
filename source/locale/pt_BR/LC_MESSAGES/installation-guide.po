@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dojot 0.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-10 10:01-0300\n"
+"POT-Creation-Date: 2022-09-30 14:10-0300\n"
 "PO-Revision-Date: 2021-07-01 13:26-0300\n"
 "Last-Translator: \n"
 "Language: pt_BR\n"
@@ -203,11 +203,12 @@ msgstr "Docker Compose"
 
 #: ../../source/installation-guide.rst:71
 #: ../../source/installation-guide.rst:226
+#, fuzzy
 msgid ""
 "In this video tutorial above, version v0.8.0 is used, but the same video "
 "is valid for the current version."
 msgstr ""
-"Nesse tutorial acima, a versão utilizada foi a v0.8.0, mas o mesmo video "
+"Nesse tutorial acima, a versão utilizada foi a v0.7.1, mas o mesmo video "
 "é valido para a versão atual."
 
 #: ../../source/installation-guide.rst:74

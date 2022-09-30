@@ -68,7 +68,7 @@ Docker Compose
     src="https://www.youtube.com/embed/dWq0mYf8GQ0?rel=0" frameborder="0"
     allowfullscreen></iframe><br/>
 
-In this video tutorial above, version v0.8.0 is used, but the same video
+In this video tutorial above, version v0.7.1 is used, but the same video
 is valid for the current version.
 
 This document provides instructions on how to create a trivial deployment
@@ -223,7 +223,7 @@ Kubernetes
     src="https://www.youtube.com/embed/zJBQXisBWh8?rel=0" frameborder="0"
     allowfullscreen></iframe><br/>
 
-In this video tutorial above, version v0.8.0 is used, but the same video
+In this video tutorial above, version v0.7.1 is used, but the same video
 is valid for the current version.
 
 For simple installation with kubernetes please check the pdf below.
