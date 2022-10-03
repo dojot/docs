@@ -1,7 +1,7 @@
 Release history
 ===============
 
-Full Contact - 2022.02
+Gatka - 2022.09
 ----------------------
 
 Services
@@ -10,40 +10,36 @@ Services
 New Services
 ************
 
-IotAgent HTTP
-^^^^^^^^^^^^^^^
-      - The IotAgent HTTP can receive messages from physical devices, directly
-        or through a gateway. In it's case, the messages are sent via HTTP with
-        JSON payloads.
+Basic-Auth
+^^^^^^^^^^
+      - The basic-auth service is responsible for generating credentials to authenticate the devices when sending messages through the agents.
+
+File-Mgmt
+^^^^^^^^^
+      - The file management is responsible for managing the resources of MinIO on the Dojot platform, allowing the storage and handling of files in various extensions.
 
 Improvements and fixes
 **********************
 
-History
-^^^^^^^
+Http-Agent
+^^^^^^^^^^
 
-      - Support for getting data in CSV format.
-      - Fix TTL error - Now data is stored for 7 days by default.
+      - Insecure route mapped in kong
 
 InfluxDB
 ^^^^^^^^
 
-      - Support for getting data in CSV format.
+      - Support for influxdb chronograph
 
 GUI
 ^^^
 
-      - Support for export data in CSV format.
+      - Feature device id creation
 
-GUI-V2
-^^^^^^
+History
+^^^^^^^
 
-      - Support for export data in CSV format.
-
-Cron
-^^^^
-
-      - Support for using SDK library
+      - MongoDB - Allow changing data expiration time
 
 Others
 ^^^^^^
@@ -56,18 +52,22 @@ Deployments
 Docker-compose
 ***************
 
-    - IotAgent HTTP Deployment
-    - Monitoring feature with Prometheus and Grafana for services:
-         - InfluxDB
-         - MongoDB
-         - Kong
-         - Kafka
-         - VerneMQ
+    - Add profile feature
+    - Grafana and Prometeus Improvements
+    - Suport for Self Signed Certificate Nginx
+    - Suport for Loki
     - Minor bug fixes
 
 Ansible-dojot
 *************
 
-    - IotAgent HTTP Deployment
-    - Change Kubernetes container runtime to Containerd
+    - Grafana and Prometeus Improvements
+    - Suport for Self Signed Certificate Nginx
+    - Suport for HTTPS in the NGINX
+    - Suport for Keda
+    - Suport for Loki
+    - Suport for K3S
+    - Suport for EKS
+    - Suport for GKE
+    - Suport for OKE
     - Minor bug fixes
