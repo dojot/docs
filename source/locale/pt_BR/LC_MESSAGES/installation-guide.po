@@ -348,11 +348,11 @@ msgstr "Por exemplo: ::"
 #: ../../source/installation-guide.rst:149
 msgid ""
 "For a guide on how to use **HTTPS** go to this link: "
-"https://github.com/dojot/docker-compose/tree/v0.8.0#how-to-secure-dojot-"
+"https://github.com/dojot/docker-compose/tree/v0.8.1#how-to-secure-dojot-"
 "with-nginx-and-lets-encrypt"
 msgstr ""
 "Para obter um guia sobre como usar **HTTPS**, acesse este link: "
-"https://github.com/dojot/docker-compose/tree/v0.8.0#how-to-secure-dojot-"
+"https://github.com/dojot/docker-compose/tree/v0.8.1#how-to-secure-dojot-"
 "with-nginx-and-lets-encrypt"
 
 #: ../../source/installation-guide.rst:153
