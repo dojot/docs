@@ -143,10 +143,10 @@ replaced): ::
 
 For instance: ::
 
-  git checkout v0.8.0 -b v0.8.0
+  git checkout v0.8.1 -b v0.8.1
 
 .. note::
-   For a guide on how to use **HTTPS** go to this link: https://github.com/dojot/docker-compose/tree/v0.8.0#how-to-secure-dojot-with-nginx-and-lets-encrypt
+   For a guide on how to use **HTTPS** go to this link: https://github.com/dojot/docker-compose/tree/v0.8.1#how-to-secure-dojot-with-nginx-and-lets-encrypt
 
 
 .. attention::
